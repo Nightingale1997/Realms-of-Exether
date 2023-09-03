@@ -1,0 +1,30 @@
+﻿COUNTRIES = {
+	c:PND = {
+		ig:ig_landowners = {
+			add_ruling_interest_group = yes
+		}
+		ig:ig_devout = {
+			add_ruling_interest_group = yes
+		}
+		ig:ig_rural_folk = {
+			add_ruling_interest_group = yes
+		}
+		effect_starting_technology_tier_3_tech = yes
+		
+		add_taxed_goods = g:liquor
+		add_taxed_goods = g:fish
+		
+		effect_starting_politics_traditional = yes
+
+		activate_law = law_type:law_presidential_republic
+		activate_law = law_type:law_oligarchy
+		activate_law = law_type:law_racial_segregation
+		activate_law = law_type:law_denominational_exclusion
+		activate_law = law_type:law_consumption_based_taxation
+		activate_law = law_type:law_homesteading
+		activate_law = law_type:law_censorship
+		activate_law = law_type:law_no_migration_controls
+
+		set_tax_level = medium
+	}
+}

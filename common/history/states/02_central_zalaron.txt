@@ -264,12 +264,12 @@ s:STATE_GIANTS_STRIDE = {
 add_homeland = dumonian
 }
 
-s:STATE_ROTENSCHLAMM = {
+s:STATE_ROZANGAR = {
     create_state = {
-        country = c:STR
+        country = c:ICA
         owned_provinces = { "x3BEAE4" "x52C4E2" "x53F4C4" "x74D4F8" "x8889F5" "x9EBB9C" "xAEF9C5" "xB5C0E8" "xB5E37E" "xBB94F5" "xCE64F4" "xD06ED8" "xD3C6BA" "xD8A4FC" "xDBC5BE" "xE6CCF2" "xE6EB27" "xEAD447" "xF98AA5" "xFD53C6" }
 }
-add_homeland = morastlinge
+add_homeland = nuzaptan
 }
 
 s:STATE_COBALT_KEEP = {
@@ -286,6 +286,7 @@ s:STATE_EIREKS_WASH = {
         owned_provinces = { "x65CDE9" "x68EEED" "x6FD7D4" "x7BB6E9" "x99C5ED" "xB4F45F" "xBA68D6" "xC3F176" "xC5B68A" "xD3E044" "xE5B2CE" "xE5D939" "xE6B99F" "xE6EFC0" "xEFF942" }
 }
 add_homeland = morastlinge
+add_homeland = nuzaptan
 }
 
 s:STATE_ELDAMARA = {
@@ -306,18 +307,21 @@ add_homeland = morastlinge
 
 s:STATE_DROWNED_LANDS = {
     create_state = {
-        country = c:STR
+        country = c:DMS
         owned_provinces = { "x59F2BF" "x5CEAB6" "x9299E6" "xA4FC9C" "xB05BF6" "xBEBDC8" "xCE9CA4" "xCFEB75" "xD1ECB3" "xD4CCC9" "xD9B177" "xDF7EA8" "xE1F5FA" "xEB89AE" "xF5F57E" "xFAD26B" }
 }
-add_homeland = morastlinge
+add_homeland = nuzaptan
+add_claim = c:ICA
+add_claim = c:STR
 }
 
 s:STATE_CARGOMIRE = {
     create_state = {
-        country = c:PND
+        country = c:DMS
         owned_provinces = { "x57E9DF" "x6EE9F6" "x71A3E9" "x74C2CA" "x88D5EF" "x8CC9F4" "x8FD0EC" "xA2DCDA" "xB299E6" "xC5C1BC" "xC8F267" "xCA93FD" "xCE92BF" "xD1F83F" "xD2CD70" "xE6DB5B" "xEE56DA" "xF8BFBB" "xFDC63D" }
 }
-add_homeland = morastlinge
+add_homeland = nuzaptan
+add_claim = c:ICA
 }
 
 s:STATE_ZALDUA = {
@@ -330,10 +334,11 @@ add_homeland = nuzaptan
 
 s:STATE_EARTHCHURN = {
     create_state = {
-        country = c:PND
+        country = c:DMS
         owned_provinces = { "x36FAD6" "x4AE0DD" "x7DE1B8" "x84AFCA" "x8FD7C8" "x93F4DE" "x9DCFE0" "xA4C5BA" "xA993E2" "xB4DFEE" "xC3E8AD" "xC4B0F5" "xC667EF" "xC696D4" "xC6CE6D" "xCABFBD" "xCBE7EA" "xD765D4" "xD9C682" "xD9E87F" "xDEFEEB" "xE294E7" "xE462DF" "xEAEF26" "xEBE9C6" "xEE7D92" "xF18186" "xF3A3B6" "xFA7EC9" "xFC74AE" "xFC96EC" "xFCFEB3" }
 }
-add_homeland = morastlinge
+add_homeland = nuzaptan
+add_claim = c:ICA
 }
 
 s:STATE_BEARTZUNGUL = {
@@ -362,10 +367,10 @@ add_homeland = morastlinge
 
 s:STATE_SOUTHERN_DRAIN = {
     create_state = {
-        country = c:DUM
+        country = c:PND
         owned_provinces = { "x61D3FA" "x70ACEA" "x89C7DD" "x8AD3CE" "x94C7DD" "xA8F7AE" "xACE6BE" "xADA4DD" "xC1C4EE" "xC7CEA1" "xCDA8DD" "xD2DA9A" "xDAE69D" "xF7E22E" "xF8E443" "xFDDDA3" }
 }
-add_homeland = dumonian
+add_homeland = morastlinge
 }
 
 s:STATE_ANWARTH = {
@@ -378,26 +383,29 @@ add_homeland = dumonian
 
 s:STATE_AHORNAU = {
     create_state = {
-        country = c:DUM
+        country = c:DMS
         owned_provinces = { "x34F6EC" "x5EE0C8" "x71E7B5" "x77F99F" "x7CE79E" "x87E4F6" "x97C5C6" "xAEACCD" "xAF85E4" "xB7C0DB" "xBFECDB" "xC5F44C" "xCAEEDB" "xCD5BEE" "xEDDE7B" }
 }
-add_homeland = dumonian
+add_homeland = nuzaptan
+add_claim = c:PND
 }
 
 s:STATE_THE_WHITE = {
     create_state = {
-        country = c:DUM
+        country = c:DMS
         owned_provinces = { "x52CBF7" "x6AD8D2" "x79EAE1" "xAAEFD1" "xB2B9F2" "xB6C77F" "xBBDDC1" "xBCF65D" "xC3EA94" "xC75CE3" "xCB76C5" "xCBA2AB" "xE174E5" "xE9B0DC" "xEAB073" "xFBB06F" }
 }
-add_homeland = dumonian
+add_homeland = nuzaptan
+add_claim = c:ICA
 }
 
 s:STATE_NORTHERN_DRAIN = {
     create_state = {
-        country = c:DUM
+        country = c:DMS
         owned_provinces = { "x6EFDCF" "x6FF6DA" "x8FF4D7" "xB1CEA9" "xB5A5DC" "xB6A5F7" "xCBECAD" "xD185E2" "xD770E3" "xDC73D4" "xDD65E5" "xE760D3" "xED8A91" "xEEB2EE" "xF2B5CE" "xF796C2" "xFB73D4" "xFCBA6F" }
 }
-add_homeland = dumonian
+add_homeland = nuzaptan
+add_claim = c:PND
 }
 
 s:STATE_STEINZULO = {
