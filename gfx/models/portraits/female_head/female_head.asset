@@ -1,0 +1,726 @@
+pdxmesh = {
+	name = "female_head_mesh"
+	file = "female_head.mesh"
+	scale = 1.0
+
+	#### Additive Animations ####
+
+	additive_animation = { id = "head_infant_proportions" 		type = "female_head_infant_proportions.anim" }
+	additive_animation = { id = "head_height" 		type = "female_head_height.anim" }
+
+    #### Additive Animations for facial features ####
+    
+    additive_animation = { id = "head_chin_forward"					type = "female_head_chin_forward.anim" }	
+    additive_animation = { id = "head_chin_height"					type = "female_head_chin_height.anim" }
+    additive_animation = { id = "head_chin_width"					type = "female_head_chin_width.anim" }		
+    additive_animation = { id = "head_eye_angle"					type = "female_head_eye_angle.anim" }	
+    additive_animation = { id = "head_eye_depth"					type = "female_head_eye_depth.anim" }	
+    additive_animation = { id = "head_eye_distance"					type = "female_head_eye_distance.anim" }	
+    additive_animation = { id = "head_eye_height"					type = "female_head_eye_height.anim" }	
+    additive_animation = { id = "head_eye_shut"					type = "female_head_eye_shut.anim" }	
+    additive_animation = { id = "head_forehead_angle"					type = "female_head_forehead_angle.anim" }	
+    additive_animation = { id = "head_forehead_brow_height"					type = "female_head_forehead_brow_height.anim" }	
+    additive_animation = { id = "head_forehead_height"					type = "female_head_forehead_height.anim" }	
+    additive_animation = { id = "head_forehead_roundness"					type = "female_head_forehead_roundness.anim" }	
+    additive_animation = { id = "head_forehead_width"					type = "female_head_forehead_width.anim" }	
+    additive_animation = { id = "head_head_height"					type = "female_head_head_height.anim" }
+    additive_animation = { id = "head_head_profile"					type = "female_head_head_profile.anim" }	
+    additive_animation = { id = "head_head_top_height"					type = "female_head_head_top_height.anim" }
+    additive_animation = { id = "head_head_top_width"					type = "female_head_head_top_width.anim" }
+    additive_animation = { id = "head_head_width"					type = "female_head_head_width.anim" }	
+    additive_animation = { id = "head_jaw_angle"					type = "female_head_jaw_angle.anim" }		
+    additive_animation = { id = "head_jaw_forward"					type = "female_head_jaw_forward.anim" }	
+    additive_animation = { id = "head_jaw_height"					type = "female_head_jaw_height.anim" }	
+    additive_animation = { id = "head_jaw_width"					type = "female_head_jaw_width.anim" }	
+    additive_animation = { id = "head_mouth_corner_height"					type = "female_head_mouth_corner_height.anim" }	
+    additive_animation = { id = "head_mouth_forward"					type = "female_head_mouth_forward.anim" }	
+    additive_animation = { id = "head_mouth_height"					type = "female_head_mouth_height.anim" }
+    additive_animation = { id = "head_mouth_open"					type = "female_head_mouth_open.anim" }	
+    additive_animation = { id = "head_mouth_lower_lip_size"					type = "female_head_mouth_lower_lip_size.anim" }	
+    additive_animation = { id = "head_mouth_upper_lip_size"					type = "female_head_mouth_upper_lip_size.anim" }		
+    additive_animation = { id = "head_mouth_width"					type = "female_head_mouth_width.anim" }
+    additive_animation = { id = "head_neck_length"					type = "female_head_neck_length.anim" }
+    additive_animation = { id = "head_neck_width"					type = "female_head_neck_width.anim" }
+
+	#### Blend Shapes ####
+
+	#From CK3
+	blend_shape = { id = "female_bs_neutral"		type = "blendshapes/female_bs_neutral.mesh" }
+
+	#From EK
+	blend_shape = { id = "race_mer_ears_01"		type = "blendshapes/race_mer_ears_01.mesh" }
+	blend_shape = { id = "race_mer_ears_02"		type = "blendshapes/race_mer_ears_02.mesh" }
+	blend_shape = { id = "race_mer_ears_03"		type = "blendshapes/race_mer_ears_03.mesh" }
+	blend_shape = { id = "race_mer_eyebrows"		type = "blendshapes/race_mer_eyebrows.mesh" }
+
+	blend_shape = { id = "female_orc_teeth_lips"		type = "blendshapes/female_orc_teeth_lips.mesh" }
+
+	#Vanilla Start
+	blend_shape = { id = "female_head_bs_fat_head"	type = "blendshapes/female_head_bs_fat_head.mesh"  }
+	blend_shape = { id = "female_head_bs_fat_body"	type = "blendshapes/female_head_bs_fat_body.mesh"  }
+	blend_shape = { id = "female_head_bs_gaunt_head"	type = "blendshapes/female_head_bs_gaunt_head.mesh"  }
+	blend_shape = { id = "female_head_bs_gaunt_body"	type = "blendshapes/female_head_bs_gaunt_body.mesh"  }
+	blend_shape = { id = "female_head_bs_infant_head"	type = "blendshapes/female_head_bs_infant_head.mesh"  }
+	blend_shape = { id = "female_head_bs_infant_body"	type = "blendshapes/female_head_bs_infant_body.mesh"  }
+	blend_shape = { id = "female_head_bs_old_1"	type = "blendshapes/female_head_bs_old_1.mesh"  }
+
+	# Old Age Facial Features
+	blend_shape = { id = "female_head_bs_old_ears_01"	type = "blendshapes/female_head_bs_old_ears_01.mesh"  }
+	blend_shape = { id = "female_head_bs_old_eyes_01"	type = "blendshapes/female_head_bs_old_eyes_01.mesh"  }
+	blend_shape = { id = "female_head_bs_old_eyes_02"	type = "blendshapes/female_head_bs_old_eyes_02.mesh"  }
+	blend_shape = { id = "female_head_bs_old_eyes_03"	type = "blendshapes/female_head_bs_old_eyes_03.mesh"  }
+	blend_shape = { id = "female_head_bs_old_forehead_01"	type = "blendshapes/female_head_bs_old_forehead_01.mesh"  }
+	blend_shape = { id = "female_head_bs_old_forehead_02"	type = "blendshapes/female_head_bs_old_forehead_02.mesh"  }
+	blend_shape = { id = "female_head_bs_old_forehead_03"	type = "blendshapes/female_head_bs_old_forehead_03.mesh"  }
+	blend_shape = { id = "female_head_bs_old_mouth_01"	type = "blendshapes/female_head_bs_old_mouth_01.mesh"  }
+	blend_shape = { id = "female_head_bs_old_mouth_02"	type = "blendshapes/female_head_bs_old_mouth_02.mesh"  }
+	blend_shape = { id = "female_head_bs_old_mouth_03"	type = "blendshapes/female_head_bs_old_mouth_03.mesh"  }
+	blend_shape = { id = "female_head_bs_old_nose_01"	type = "blendshapes/female_head_bs_old_nose_01.mesh"  }
+	blend_shape = { id = "female_head_bs_old_nose_02"	type = "blendshapes/female_head_bs_old_nose_02.mesh"  }
+	blend_shape = { id = "female_head_bs_old_nose_03"	type = "blendshapes/female_head_bs_old_nose_03.mesh"  }
+
+	# Head Deformations Blends
+	blend_shape = { id = "female_head_bs_cheek_fat_max" type = "blendshapes/female_head_bs_cheek_fat_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_cheek_fat_min" type = "blendshapes/female_head_bs_cheek_fat_min.mesh"  } 
+	blend_shape = { id = "female_head_bs_cheek_forward_max" type = "blendshapes/female_head_bs_cheek_forward_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_ear_lower_bend_max" type = "blendshapes/female_head_bs_ear_lower_bend_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_ear_angle_max" type = "blendshapes/female_head_bs_ear_angle_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_cheek_width_max" type = "blendshapes/female_head_bs_cheek_width_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_cheek_prom_max" type = "blendshapes/female_head_bs_cheek_prom_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_cheek_height_max" type = "blendshapes/female_head_bs_cheek_height_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_ear_upper_bend_max" type = "blendshapes/female_head_bs_ear_upper_bend_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_ear_size_max" type = "blendshapes/female_head_bs_ear_size_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_ear_out_max" type = "blendshapes/female_head_bs_ear_out_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_ear_inner_shape_max" type = "blendshapes/female_head_bs_ear_inner_shape_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_eye_size_max" type = "blendshapes/female_head_bs_eye_size_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_eye_corner_depth_min" type = "blendshapes/female_head_bs_eye_corner_depth_min.mesh"  } 
+	blend_shape = { id = "female_head_bs_eye_corner_def_max" type = "blendshapes/female_head_bs_eye_corner_def_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_eye_size_min" type = "blendshapes/female_head_bs_eye_size_min.mesh"  } 
+	blend_shape = { id = "female_head_bs_eye_fold_shape_max" type = "blendshapes/female_head_bs_eye_fold_shape_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_eye_fold_droop_max" type = "blendshapes/female_head_bs_eye_fold_droop_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_eye_upper_lid_size_max" type = "blendshapes/female_head_bs_eye_upper_lid_size_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_forehead_brow_curve_max" type = "blendshapes/female_head_bs_forehead_brow_curve_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_eye_upper_lid_size_min" type = "blendshapes/female_head_bs_eye_upper_lid_size_min.mesh"  } 
+	blend_shape = { id = "female_head_bs_forehead_brow_inner_height_max" type = "blendshapes/female_head_bs_forehead_brow_inner_height_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_forehead_brow_forward_max" type = "blendshapes/female_head_bs_forehead_brow_forward_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_forehead_roundness_max" type = "blendshapes/female_head_bs_forehead_roundness_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_forehead_brow_width_max" type = "blendshapes/female_head_bs_forehead_brow_width_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_forehead_brow_outer_height_max" type = "blendshapes/female_head_bs_forehead_brow_outer_height_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_mouth_lower_lip_def_max" type = "blendshapes/female_head_bs_mouth_lower_lip_def_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_jaw_def_max" type = "blendshapes/female_head_bs_jaw_def_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_mouth_lower_lip_pads_max" type = "blendshapes/female_head_bs_mouth_lower_lip_pads_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_mouth_lower_lip_full_max" type = "blendshapes/female_head_bs_mouth_lower_lip_full_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_mouth_philtrum_def_max" type = "blendshapes/female_head_bs_mouth_philtrum_def_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_mouth_lower_lip_width_max" type = "blendshapes/female_head_bs_mouth_lower_lip_width_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_mouth_philtrum_width_max" type = "blendshapes/female_head_bs_mouth_philtrum_width_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_mouth_philtrum_curve_max" type = "blendshapes/female_head_bs_mouth_philtrum_curve_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_mouth_upper_lip_full_max" type = "blendshapes/female_head_bs_mouth_upper_lip_full_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_mouth_upper_lip_def_max" type = "blendshapes/female_head_bs_mouth_upper_lip_def_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_nose_forward_max" type = "blendshapes/female_head_bs_nose_forward_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_mouth_upper_lip_width_max" type = "blendshapes/female_head_bs_mouth_upper_lip_width_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_mouth_upper_lip_curve_max" type = "blendshapes/female_head_bs_mouth_upper_lip_curve_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_nose_length_max" type = "blendshapes/female_head_bs_nose_length_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_nose_hawk_max" type = "blendshapes/female_head_bs_nose_hawk_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_nose_height_max" type = "blendshapes/female_head_bs_nose_height_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_nose_nostril_height_max" type = "blendshapes/female_head_bs_nose_nostril_height_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_nose_nostril_angle_max" type = "blendshapes/female_head_bs_nose_nostril_angle_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_nose_nostril_width_max" type = "blendshapes/female_head_bs_nose_nostril_width_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_nose_curve_max" type = "blendshapes/female_head_bs_nose_curve_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_nose_ridge_def_max" type = "blendshapes/female_head_bs_nose_ridge_def_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_nose_ridge_angle_max" type = "blendshapes/female_head_bs_nose_ridge_angle_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_nose_ridge_def_min" type = "blendshapes/female_head_bs_nose_ridge_def_min.mesh"  } 
+	blend_shape = { id = "female_head_bs_nose_size_max" type = "blendshapes/female_head_bs_nose_size_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_nose_ridge_width_max" type = "blendshapes/female_head_bs_nose_ridge_width_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_nose_tip_forward_max" type = "blendshapes/female_head_bs_nose_tip_forward_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_nose_tip_angle_max" type = "blendshapes/female_head_bs_nose_tip_angle_max.mesh"  } 
+	blend_shape = { id = "female_head_bs_nose_tip_width_max" type = "blendshapes/female_head_bs_nose_tip_width_max.mesh"  } 
+
+	# Expressions 
+	blend_shape = { id = "female_head_bs_crowfeet_01"	type = "blendshapes/female_head_bs_crowfeet_01.mesh"  }
+	blend_shape = { id = "female_head_bs_crowfeet_02"	type = "blendshapes/female_head_bs_crowfeet_02.mesh"  }
+	blend_shape = { id = "female_head_bs_crowfeet_03"	type = "blendshapes/female_head_bs_crowfeet_03.mesh"  }
+	blend_shape = { id = "female_head_bs_frown_01"	type = "blendshapes/female_head_bs_frown_01.mesh"  }
+	blend_shape = { id = "female_head_bs_frown_02"	type = "blendshapes/female_head_bs_frown_02.mesh"  }
+	blend_shape = { id = "female_head_bs_frown_03"	type = "blendshapes/female_head_bs_frown_03.mesh"  }
+	blend_shape = { id = "female_head_bs_surprise_01"	type = "blendshapes/female_head_bs_surprise_01.mesh"  }
+	blend_shape = { id = "female_head_bs_surprise_02"	type = "blendshapes/female_head_bs_surprise_02.mesh"  }
+	blend_shape = { id = "female_head_bs_surprise_03"	type = "blendshapes/female_head_bs_surprise_03.mesh"  }
+
+
+	#### Animations ####
+
+	animation = { id = "head_bind_pose"					type = "female_head_bind_pose.anim" }
+
+	animation = { id = "head_idle1_1"					type = "female_head_idle1_1.anim" }
+	animation = { id = "head_idle1_2"					type = "female_head_idle1_2.anim" }
+
+	animation = { id = "head_idle2_1"					type = "female_head_idle2_1.anim" }
+	animation = { id = "head_idle2_2"					type = "female_head_idle2_2.anim" }
+
+	animation = { id = "head_idle3_1"					type = "female_head_idle3_1.anim" }
+	animation = { id = "head_idle3_2"					type = "female_head_idle3_2.anim" }
+	animation = { id = "head_idle3_3"					type = "female_head_idle3_3.anim" }
+
+	animation = { id = "head_idle4_1"					type = "female_head_idle4_1.anim" }
+	animation = { id = "head_idle4_2"					type = "female_head_idle4_2.anim" }
+
+	animation = { id = "head_idle5_1"					type = "female_head_idle5_1.anim" }
+	animation = { id = "head_idle5_2"					type = "female_head_idle5_2.anim" }
+
+	animation = { id = "head_idle6_1"					type = "female_head_idle6_1.anim" }
+	animation = { id = "head_idle6_2"					type = "female_head_idle6_2.anim" }
+
+	animation = { id = "head_idle7_1"					type = "female_head_idle7_1.anim" }
+	animation = { id = "head_idle7_2"					type = "female_head_idle7_2.anim" }
+
+	animation = { id = "head_idle8_1"					type = "female_head_idle8_1.anim" }
+	animation = { id = "head_idle8_2"					type = "female_head_idle8_2.anim" }
+
+	animation = { id = "head_aristocrat1"					type = "female_head_idle8_1.anim" }
+	animation = { id = "head_capitalist1"					type = "female_head_idle8_1.anim" }
+	animation = { id = "head_capitalist2"					type = "female_head_idle8_1.anim" }
+	animation = { id = "head_officer1"						type = "female_head_idle8_1.anim" }
+	animation = { id = "head_engineer1"					type = "female_head_idle8_1.anim" }
+	animation = { id = "head_serviceman1"					type = "female_head_idle8_1.anim" }
+	animation = { id = "head_peasant1"						type = "female_head_idlePeasant1_1.anim" }
+	animation = { id = "head_clergyman1"					type = "female_head_idleClergyman1_1.anim" }
+	animation = { id = "head_academician1"					type = "female_head_idle8_1.anim" }
+	animation = { id = "head_bureaucrat1"					type = "female_head_idle8_1.anim" }
+	animation = { id = "head_clerk1"						type = "female_head_idle8_1.anim" }
+	animation = { id = "head_farmer1"						type = "female_head_idle8_1.anim" }
+	animation = { id = "head_mechanic1"					type = "female_head_idle8_1.anim" }
+	animation = { id = "head_shopkeeper1"					type = "female_head_idle8_1.anim" }
+	animation = { id = "head_labourer1"					type = "female_head_idle8_1.anim" }
+	animation = { id = "head_slave1"						type = "female_head_idle8_1.anim" }
+	
+
+#### Pop Middling-Affluent Animations ####
+
+		animation = { id = "head_idle_saber"						type = "female_head_saber_idle.anim" }
+
+	animation = { id = "head_idle_holyscripture"				type = "female_head_holyscripture_idle.anim" }
+	
+	animation = { id = "head_idle_basket"						type = "female_head_basket_idle.anim" }
+	
+	animation = { id = "head_idle_umbrella"						type = "female_head_umbrella_idle.anim" }
+	
+	animation = { id = "head_idle_rifle"						type = "female_head_rifle_idle.anim" }
+	
+	animation = { id = "head_idle_parasol"						type = "female_head_parasol_idle.anim" }	
+	
+	animation = { id = "head_idle_shovels"						type = "female_head_shovels_idle.anim" }	
+	
+	animation = { id = "head_idle_flowers"						type = "female_head_flowers_idle.anim" }	
+	
+	animation = { id = "head_idle_shackles"						type = "female_head_shackles_idle.anim" }	
+		
+	animation = { id = "head_idle_crudehoe"						type = "female_head_crudehoe_idle.anim" }		
+	
+	animation = { id = "head_idle_pitchfork"					type = "female_head_pitchfork_idle.anim" }			
+	
+	animation = { id = "head_idle_fan"							type = "female_head_fan_idle.anim" }			
+	
+	animation = { id = "head_idle_walkingcane"					type = "female_head_walkingcane_idle.anim" }			
+		
+	animation = { id = "head_idle_wrench"						type = "female_head_wrench_idle.anim" }			
+			
+	animation = { id = "head_idle_butcher"						type = "female_head_butcher_idle.anim" }			
+	
+	animation = { id = "head_idle_ledger"						type = "female_head_ledger_idle.anim" }				
+	
+	animation = { id = "head_idle_calipers"						type = "female_head_calipers_idle.anim" }				
+	
+	animation = { id = "head_idle_sack"							type = "female_head_sack_idle.anim" }	
+
+	animation = { id = "head_idle_apron"						type = "female_head_apron_idle.anim" }	
+
+	
+	
+	animation = { id = "head_idle_hattop"						type = "female_head_hattop_idle.anim" }	
+	
+	animation = { id = "head_idle_hatacademic"					type = "female_head_hatacademic_idle.anim" }	
+	
+	animation = { id = "head_idle_hatmonocle"					type = "female_head_hatmonocle_idle.anim" }	
+	
+	
+		#### Pop Staving-Struggle Animations ####
+	
+			animation = { id = "head_struggle_idle_saber"					type = "female_head_struggle_saber_idle.anim" }
+
+	animation = { id = "head_struggle_idle_holyscripture"				type = "female_head_struggle_holyscripture_idle.anim" }
+	
+	animation = { id = "head_struggle_idle_basket"						type = "female_head_struggle_basket_idle.anim" }
+	
+	animation = { id = "head_struggle_idle_umbrella"					type = "female_head_struggle_umbrella_idle.anim" }
+	
+	animation = { id = "head_struggle_idle_rifle"						type = "female_head_struggle_rifle_idle.anim" }
+	
+	animation = { id = "head_struggle_idle_parasol"						type = "female_head_struggle_parasol_idle.anim" }	
+	
+	animation = { id = "head_struggle_idle_shovels"						type = "female_head_struggle_shovels_idle.anim" }	
+	
+	animation = { id = "head_struggle_idle_flowers"						type = "female_head_struggle_flowers_idle.anim" }	
+	
+
+		
+	animation = { id = "head_struggle_idle_crudehoe"					type = "female_head_struggle_crudehoe_idle.anim" }		
+	
+	animation = { id = "head_struggle_idle_pitchfork"					type = "female_head_struggle_pitchfork_idle.anim" }			
+	
+	animation = { id = "head_struggle_idle_fan"							type = "female_head_struggle_fan_idle.anim" }			
+	
+	animation = { id = "head_struggle_idle_walkingcane"					type = "female_head_struggle_walkingcane_idle.anim" }			
+		
+	animation = { id = "head_struggle_idle_wrench"						type = "female_head_struggle_wrench_idle.anim" }			
+			
+	animation = { id = "head_struggle_idle_butcher"						type = "female_head_struggle_butcher_idle.anim" }			
+	
+	animation = { id = "head_struggle_idle_ledger"						type = "female_head_struggle_ledger_idle.anim" }				
+	
+	animation = { id = "head_struggle_idle_calipers"					type = "female_head_struggle_calipers_idle.anim" }				
+	
+
+
+	animation = { id = "head_struggle_idle_apron"						type = "female_head_struggle_apron_idle.anim" }		
+	
+	animation = { id = "head_struggle_idle_hattop"						type = "female_head_struggle_hattop_idle.anim" }	
+	
+	animation = { id = "head_struggle_idle_hatacademic"					type = "female_head_struggle_hatacademic_idle.anim" }	
+	
+	animation = { id = "head_struggle_idle_hatmonocle"					type = "female_head_struggle_hatmonocle_idle.anim" }
+	
+	
+		
+		
+		
+		#### Generals VS screen ####
+		
+		#### Generals VS screen ####
+	
+	
+		animation = { id = "head_General_VS_Left_Saber"						type = "female_head_General_VS_Left_Saber.anim" }		
+	
+		animation = { id = "head_General_VS_Left_Point"						type = "female_head_General_VS_Left_Point.anim" }		
+		
+		animation = { id = "head_General_VS_Left_Fist"						type = "female_head_General_VS_Left_Fist.anim" }	
+	
+		animation = { id = "head_General_VS_Left_Cross"						type = "female_head_General_VS_Left_Cross.anim" }	
+		
+
+		animation = { id = "head_General_VS_Right_Saber"					type = "female_head_General_VS_Right_Saber.anim" }
+		
+		animation = { id = "head_General_VS_Right_Point"					type = "female_head_General_VS_Right_Point.anim" }
+		
+		animation = { id = "head_General_VS_Right_Fist"						type = "female_head_General_VS_Right_Fist.anim" }
+		
+		animation = { id = "head_General_VS_Right_Cross"					type = "female_head_General_VS_Right_Cross.anim" }	
+		
+		animation = { id = "head_General_VS_Right_HandsHips"					type = "female_head_General_VS_Right_HandsHips.anim" }	
+		
+		
+		
+		#### General Emotions Animations ####
+
+		animation = { id = "head_emotions_happy"					type = "female_head_emotions_idleHappy.anim" }
+		animation = { id = "head_emotions_scheming"					type = "female_head_emotions_idleScheming.anim" }
+		animation = { id = "head_emotions_boastful"					type = "female_head_emotions_idleBoastful.anim" }
+		animation = { id = "head_emotions_proud"					type = "female_head_emotions_idleProud.anim" }
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	meshsettings = {
+		name = "female_headShape"
+		index = 0
+		texture_diffuse = "female_head_01_diffuse.dds"
+		texture_normal = "female_head_01_normal.dds"
+		texture_specular = "female_head_01_properties.dds"
+		texture = { file = "female_head_01_ssao_color.dds" index = 3 }
+		
+		shader = "portrait_skin_face"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+
+}
+
+
+entity = {
+	name = "female_head_entity"
+	pdxmesh = "female_head_mesh"
+    game_data = {
+        portrait_entity_user_data = {
+            color_mask_remap_interval = {
+                interval = {0.0 1.0}
+            }
+	        portrait_decal = {
+	            body_part = head
+	        }
+        }
+    }		
+
+    #### Additive Animations ####
+
+    attribute = { name = "head_infant_proportions"					additive_animation = "head_infant_proportions" default = 0.5 }	
+    attribute = { name = "head_height"					additive_animation = "head_height" default = 0.5 }	
+    
+    #### Additive Animations for facial features ####
+
+    attribute = { name = "head_chin_forward"					additive_animation = "head_chin_forward" default = 0.5 }	
+    attribute = { name = "head_chin_height"					additive_animation = "head_chin_height" default = 0.5 }
+    attribute = { name = "head_chin_width"					additive_animation = "head_chin_width" default = 0.5 }		
+    attribute = { name = "head_eye_angle"					additive_animation = "head_eye_angle" default = 0.5 }	
+    attribute = { name = "head_eye_depth"					additive_animation = "head_eye_depth" default = 0.5 }	
+    attribute = { name = "head_eye_distance"					additive_animation = "head_eye_distance" default = 0.5 }	
+    attribute = { name = "head_eye_height"					additive_animation = "head_eye_height" default = 0.5 }	
+    attribute = { name = "head_eye_shut"					additive_animation = "head_eye_shut" default = 0.5 }	
+    attribute = { name = "head_forehead_angle"					additive_animation = "head_forehead_angle" default = 0.5 }	
+    attribute = { name = "head_forehead_brow_height"					additive_animation = "head_forehead_brow_height" default = 0.5 }	
+    attribute = { name = "head_forehead_height"					additive_animation = "head_forehead_height" default = 0.5 }	
+    attribute = { name = "head_forehead_roundness"					additive_animation = "head_forehead_roundness" default = 0.5 }	
+    attribute = { name = "head_forehead_width"					additive_animation = "head_forehead_width" default = 0.5 }	
+    attribute = { name = "head_head_height"					additive_animation = "head_head_height" default = 0.5 }
+    attribute = { name = "head_head_profile"					additive_animation = "head_head_profile" default = 0.5 }	
+    attribute = { name = "head_head_top_height"					additive_animation = "head_head_top_height" default = 0.5 }
+    attribute = { name = "head_head_top_width"					additive_animation = "head_head_top_width" default = 0.5 }
+    attribute = { name = "head_head_width"					additive_animation = "head_head_width" default = 0.5 }	
+    attribute = { name = "head_jaw_angle"					additive_animation = "head_jaw_angle" default = 0.5 }		
+    attribute = { name = "head_jaw_forward"					additive_animation = "head_jaw_forward" default = 0.5 }	
+    attribute = { name = "head_jaw_height"					additive_animation = "head_jaw_height" default = 0.5 }	
+    attribute = { name = "head_jaw_width"					additive_animation = "head_jaw_width" default = 0.5 }	
+    attribute = { name = "head_mouth_corner_height"					additive_animation = "head_mouth_corner_height" default = 0.5 }	
+    attribute = { name = "head_mouth_forward"					additive_animation = "head_mouth_forward" default = 0.5 }	
+    attribute = { name = "head_mouth_height"					additive_animation = "head_mouth_height" default = 0.5 }
+    attribute = { name = "head_mouth_open"					additive_animation = "head_mouth_open" default = 0.5 }	
+    attribute = { name = "head_mouth_lower_lip_size"					additive_animation = "head_mouth_lower_lip_size" default = 0.5 }	
+	attribute = { name = "head_mouth_upper_lip_size"					additive_animation = "head_mouth_upper_lip_size" default = 0.5 }		
+    attribute = { name = "head_mouth_width"					additive_animation = "head_mouth_width" default = 0.5 }
+    attribute = { name = "head_neck_length"					additive_animation = "head_neck_length" default = 0.5 }
+    attribute = { name = "head_neck_width"					additive_animation = "head_neck_width" default = 0.5 }
+
+
+	#### BLEND SHAPES ####
+
+	#From EK
+	attribute = { name = "race_mer_ears_01_bs"					blend_shape = "race_mer_ears_01" }
+	attribute = { name = "race_mer_ears_02_bs"					blend_shape = "race_mer_ears_02" }
+	attribute = { name = "race_mer_ears_03_bs"					blend_shape = "race_mer_ears_03" }
+	attribute = { name = "race_mer_eyebrows_bs"					blend_shape = "race_mer_eyebrows" }
+
+	attribute = { name = "bs_orc_teeth_bottom_teeth_size"					blend_shape = "female_bs_neutral" }
+	attribute = { name = "bs_orc_teeth_broken_left"					blend_shape = "female_bs_neutral" }
+	attribute = { name = "bs_orc_teeth_broken_right"					blend_shape = "female_bs_neutral" }
+	attribute = { name = "bs_orc_teeth_tusk_size"					blend_shape = "female_bs_neutral" }
+	attribute = { name = "bs_orc_teeth_tusks_forward"					blend_shape = "female_bs_neutral" }
+	attribute = { name = "bs_orc_teeth_tusks_outward"					blend_shape = "female_bs_neutral" }
+
+	attribute = { name = "bs_orc_teeth_lips"					blend_shape = "female_orc_teeth_lips" }
+
+	attribute = { name = "head_bs_fat_head"					blend_shape = "female_head_bs_fat_head" }
+	attribute = { name = "head_bs_fat_body"					blend_shape = "female_head_bs_fat_body" }
+	attribute = { name = "head_bs_gaunt_head"					blend_shape = "female_head_bs_gaunt_head" }
+	attribute = { name = "head_bs_gaunt_body"					blend_shape = "female_head_bs_gaunt_body" }
+	attribute = { name = "head_bs_infant_head"					blend_shape = "female_head_bs_infant_head" }
+	attribute = { name = "head_bs_infant_body"					blend_shape = "female_head_bs_infant_body" }
+	attribute = { name = "head_bs_old_1"					blend_shape = "female_head_bs_old_1" }
+
+	# Old Age Facial Features
+	attribute = { name = "head_bs_old_ears_01"					blend_shape = "female_head_bs_old_ears_01" }
+	attribute = { name = "head_bs_old_eyes_01"					blend_shape = "female_head_bs_old_eyes_01" }
+	attribute = { name = "head_bs_old_eyes_02"					blend_shape = "female_head_bs_old_eyes_02" }
+	attribute = { name = "head_bs_old_eyes_03"					blend_shape = "female_head_bs_old_eyes_03" }
+	attribute = { name = "head_bs_old_forehead_01"					blend_shape = "female_head_bs_old_forehead_01" }
+	attribute = { name = "head_bs_old_forehead_02"					blend_shape = "female_head_bs_old_forehead_02" }
+	attribute = { name = "head_bs_old_forehead_03"					blend_shape = "female_head_bs_old_forehead_03" }
+	attribute = { name = "head_bs_old_mouth_01"					blend_shape = "female_head_bs_old_mouth_01" }
+	attribute = { name = "head_bs_old_mouth_02"					blend_shape = "female_head_bs_old_mouth_02" }
+	attribute = { name = "head_bs_old_mouth_03"					blend_shape = "female_head_bs_old_mouth_03" }
+	attribute = { name = "head_bs_old_nose_01"					blend_shape = "female_head_bs_old_nose_01" }
+	attribute = { name = "head_bs_old_nose_02"					blend_shape = "female_head_bs_old_nose_02" }
+	attribute = { name = "head_bs_old_nose_03"					blend_shape = "female_head_bs_old_nose_03" }
+
+	# Head Deformation Blends
+	attribute = { name = "head_bs_cheek_fat_max"    blend_shape = "female_head_bs_cheek_fat_max"  } 
+	attribute = { name = "head_bs_cheek_fat_min"    blend_shape = "female_head_bs_cheek_fat_min"  } 
+	attribute = { name = "head_bs_cheek_forward_max"    blend_shape = "female_head_bs_cheek_forward_max"  } 
+	attribute = { name = "head_bs_ear_lower_bend_max"    blend_shape = "female_head_bs_ear_lower_bend_max"  } 
+	attribute = { name = "head_bs_ear_angle_max"    blend_shape = "female_head_bs_ear_angle_max"  } 
+	attribute = { name = "head_bs_cheek_width_max"    blend_shape = "female_head_bs_cheek_width_max"  } 
+	attribute = { name = "head_bs_cheek_prom_max"    blend_shape = "female_head_bs_cheek_prom_max"  } 
+	attribute = { name = "head_bs_cheek_height_max"    blend_shape = "female_head_bs_cheek_height_max"  } 
+	attribute = { name = "head_bs_ear_upper_bend_max"    blend_shape = "female_head_bs_ear_upper_bend_max"  } 
+	attribute = { name = "head_bs_ear_size_max"    blend_shape = "female_head_bs_ear_size_max"  } 
+	attribute = { name = "head_bs_ear_out_max"    blend_shape = "female_head_bs_ear_out_max"  } 
+	attribute = { name = "head_bs_ear_inner_shape_max"    blend_shape = "female_head_bs_ear_inner_shape_max"  } 
+	attribute = { name = "head_bs_eye_size_max"    blend_shape = "female_head_bs_eye_size_max"  } 
+	attribute = { name = "head_bs_eye_corner_depth_min"    blend_shape = "female_head_bs_eye_corner_depth_min"  } 
+	attribute = { name = "head_bs_eye_corner_def_max"    blend_shape = "female_head_bs_eye_corner_def_max"  } 
+	attribute = { name = "head_bs_eye_size_min"    blend_shape = "female_head_bs_eye_size_min"  } 
+	attribute = { name = "head_bs_eye_fold_shape_max"    blend_shape = "female_head_bs_eye_fold_shape_max"  } 
+	attribute = { name = "head_bs_eye_fold_droop_max"    blend_shape = "female_head_bs_eye_fold_droop_max"  } 
+	attribute = { name = "head_bs_eye_upper_lid_size_max"    blend_shape = "female_head_bs_eye_upper_lid_size_max"  } 
+	attribute = { name = "head_bs_forehead_brow_curve_max"    blend_shape = "female_head_bs_forehead_brow_curve_max"  } 
+	attribute = { name = "head_bs_eye_upper_lid_size_min"    blend_shape = "female_head_bs_eye_upper_lid_size_min"  } 
+	attribute = { name = "head_bs_forehead_brow_inner_height_max"    blend_shape = "female_head_bs_forehead_brow_inner_height_max"  } 
+	attribute = { name = "head_bs_forehead_brow_forward_max"    blend_shape = "female_head_bs_forehead_brow_forward_max"  } 
+	attribute = { name = "head_bs_forehead_roundness_max"    blend_shape = "female_head_bs_forehead_roundness_max"  } 
+	attribute = { name = "head_bs_forehead_brow_width_max"    blend_shape = "female_head_bs_forehead_brow_width_max"  } 
+	attribute = { name = "head_bs_forehead_brow_outer_height_max"    blend_shape = "female_head_bs_forehead_brow_outer_height_max"  } 
+	attribute = { name = "head_bs_mouth_lower_lip_def_max"    blend_shape = "female_head_bs_mouth_lower_lip_def_max"  } 
+	attribute = { name = "head_bs_jaw_def_max"    blend_shape = "female_head_bs_jaw_def_max"  } 
+	attribute = { name = "head_bs_mouth_lower_lip_pads_max"    blend_shape = "female_head_bs_mouth_lower_lip_pads_max"  } 
+	attribute = { name = "head_bs_mouth_lower_lip_full_max"    blend_shape = "female_head_bs_mouth_lower_lip_full_max"  } 
+	attribute = { name = "head_bs_mouth_philtrum_def_max"    blend_shape = "female_head_bs_mouth_philtrum_def_max"  } 
+	attribute = { name = "head_bs_mouth_lower_lip_width_max"    blend_shape = "female_head_bs_mouth_lower_lip_width_max"  } 
+	attribute = { name = "head_bs_mouth_philtrum_width_max"    blend_shape = "female_head_bs_mouth_philtrum_width_max"  } 
+	attribute = { name = "head_bs_mouth_philtrum_curve_max"    blend_shape = "female_head_bs_mouth_philtrum_curve_max"  } 
+	attribute = { name = "head_bs_mouth_upper_lip_full_max"    blend_shape = "female_head_bs_mouth_upper_lip_full_max"  } 
+	attribute = { name = "head_bs_mouth_upper_lip_def_max"    blend_shape = "female_head_bs_mouth_upper_lip_def_max"  } 
+	attribute = { name = "head_bs_nose_forward_max"    blend_shape = "female_head_bs_nose_forward_max"  } 
+	attribute = { name = "head_bs_mouth_upper_lip_width_max"    blend_shape = "female_head_bs_mouth_upper_lip_width_max"  } 
+	attribute = { name = "head_bs_mouth_upper_lip_curve_max"    blend_shape = "female_head_bs_mouth_upper_lip_curve_max"  } 
+	attribute = { name = "head_bs_nose_length_max"    blend_shape = "female_head_bs_nose_length_max"  } 
+	attribute = { name = "head_bs_nose_hawk_max"    blend_shape = "female_head_bs_nose_hawk_max"  } 
+	attribute = { name = "head_bs_nose_height_max"    blend_shape = "female_head_bs_nose_height_max"  } 
+	attribute = { name = "head_bs_nose_nostril_height_max"    blend_shape = "female_head_bs_nose_nostril_height_max"  } 
+	attribute = { name = "head_bs_nose_nostril_angle_max"    blend_shape = "female_head_bs_nose_nostril_angle_max"  } 
+	attribute = { name = "head_bs_nose_nostril_width_max"    blend_shape = "female_head_bs_nose_nostril_width_max"  } 
+	attribute = { name = "head_bs_nose_curve_max"    blend_shape = "female_head_bs_nose_curve_max"  } 
+	attribute = { name = "head_bs_nose_ridge_def_max"    blend_shape = "female_head_bs_nose_ridge_def_max"  } 
+	attribute = { name = "head_bs_nose_ridge_angle_max"    blend_shape = "female_head_bs_nose_ridge_angle_max"  } 
+	attribute = { name = "head_bs_nose_ridge_def_min"    blend_shape = "female_head_bs_nose_ridge_def_min"  } 
+	attribute = { name = "head_bs_nose_size_max"    blend_shape = "female_head_bs_nose_size_max"  } 
+	attribute = { name = "head_bs_nose_ridge_width_max"    blend_shape = "female_head_bs_nose_ridge_width_max"  } 
+	attribute = { name = "head_bs_nose_tip_forward_max"    blend_shape = "female_head_bs_nose_tip_forward_max"  } 
+	attribute = { name = "head_bs_nose_tip_angle_max"    blend_shape = "female_head_bs_nose_tip_angle_max"  } 
+	attribute = { name = "head_bs_nose_tip_width_max"    blend_shape = "female_head_bs_nose_tip_width_max"  } 
+
+	# Expressions 
+	attribute = { name = "head_bs_crowfeet_01"    blend_shape = "female_head_bs_crowfeet_01"  } 
+	attribute = { name = "head_bs_crowfeet_02"    blend_shape = "female_head_bs_crowfeet_02"  } 
+	attribute = { name = "head_bs_crowfeet_03"    blend_shape = "female_head_bs_crowfeet_03"  } 
+	attribute = { name = "head_bs_frown_01"    blend_shape = "female_head_bs_frown_01"  } 
+	attribute = { name = "head_bs_frown_02"    blend_shape = "female_head_bs_frown_02"  } 
+	attribute = { name = "head_bs_frown_03"    blend_shape = "female_head_bs_frown_03"  } 
+	attribute = { name = "head_bs_surprise_01"    blend_shape = "female_head_bs_surprise_01"  } 
+	attribute = { name = "head_bs_surprise_02"    blend_shape = "female_head_bs_surprise_02"  } 
+	attribute = { name = "head_bs_surprise_03"    blend_shape = "female_head_bs_surprise_03"  } 
+
+
+	#### Animations ####
+
+	default_state = "none"
+    state = {	name = "none"					animation = "head_bind_pose" }
+
+	# state = {	name = "idle_entry"						animation = "head_idle1_1" chance = 10 looping = no  next_state = "idle1" time_offset = { 0.0 7.0 }}
+	# state = {	name = "idle_entry"						animation = "head_idle2_1" chance = 10 looping = no  next_state = "idle2" time_offset = { 0.0 7.0 }}
+	# state = {	name = "idle_entry"						animation = "head_idle3_1" chance = 10 looping = no  next_state = "idle3" time_offset = { 0.0 7.0 }}
+	# state = {	name = "idle_entry"						animation = "head_idle4_1" chance = 10 looping = no  next_state = "idle4" time_offset = { 0.0 7.0 }}
+	# state = {	name = "idle_entry"						animation = "head_idle5_1" chance = 10 looping = no  next_state = "idle5" time_offset = { 0.0 7.0 }}
+	# state = {	name = "idle_entry"						animation = "head_idle6_1" chance = 10 looping = no  next_state = "idle6" time_offset = { 0.0 7.0 }}
+	# state = {	name = "idle_entry"						animation = "head_idle7_1" chance = 10 looping = no  next_state = "idle7" time_offset = { 0.0 7.0 }}
+	# state = {	name = "idle_entry"						animation = "head_idle8_1" chance = 10 looping = no  next_state = "idle8" time_offset = { 0.0 7.0 }}
+
+	state = {	name = "idle_entry"						animation = "head_idle1_1" chance = 10 looping = no  next_state = "idle1" }
+	state = {	name = "idle1"							animation = "head_idle1_1" chance = 10 looping = no next_state = "idle1" }
+	state = {	name = "idle1"							animation = "head_idle1_2" chance = 5 looping = no next_state = "idle1" }
+
+	state = {	name = "idle_entry"						animation = "head_idle2_1" chance = 10 looping = no  next_state = "idle2" }
+	state = {	name = "idle2"							animation = "head_idle2_1" chance = 10 looping = no next_state = "idle2" }
+	state = {	name = "idle2"							animation = "head_idle2_2" chance = 5 looping = no next_state = "idle2" }
+
+	state = {	name = "idle_entry"						animation = "head_idle3_1" chance = 10 looping = no  next_state = "idle3" }
+	state = {	name = "idle3"							animation = "head_idle3_1" chance = 10 looping = no next_state = "idle3" }
+	state = {	name = "idle3"							animation = "head_idle3_2" chance = 5 looping = no next_state = "idle3" }
+	state = {	name = "idle3"							animation = "head_idle3_3" chance = 5 looping = no next_state = "idle3" }
+
+	state = {	name = "idle_entry"						animation = "head_idle4_1" chance = 10 looping = no  next_state = "idle4" }
+	state = {	name = "idle4"							animation = "head_idle4_1" chance = 10 looping = no next_state = "idle4" }
+	state = {	name = "idle4"							animation = "head_idle4_2" chance = 5 looping = no next_state = "idle4" }
+
+	state = {	name = "idle_entry"						animation = "head_idle5_1" chance = 10 looping = no  next_state = "idle5" }
+	state = {	name = "idle5"							animation = "head_idle5_1" chance = 10 looping = no next_state = "idle5" }
+	state = {	name = "idle5"							animation = "head_idle5_2" chance = 5 looping = no next_state = "idle5" }
+
+	state = {	name = "idle_entry"						animation = "head_idle6_1" chance = 10 looping = no  next_state = "idle6" }
+	state = {	name = "idle6"							animation = "head_idle6_1" chance = 10 looping = no next_state = "idle6" }
+	state = {	name = "idle6"							animation = "head_idle6_2" chance = 5 looping = no next_state = "idle6" }
+
+	state = {	name = "idle_entry"						animation = "head_idle7_1" chance = 10 looping = no  next_state = "idle7" }
+	state = {	name = "idle7"							animation = "head_idle7_1" chance = 10 looping = no next_state = "idle7" }
+	state = {	name = "idle7"							animation = "head_idle7_2" chance = 5 looping = no next_state = "idle7" }
+
+	state = {	name = "idle_entry"						animation = "head_idle8_1" chance = 10 looping = no  next_state = "idle8" }
+	state = {	name = "idle8"							animation = "head_idle8_1" chance = 10 looping = no next_state = "idle8" }
+	state = {	name = "idle8"							animation = "head_idle8_2" chance = 5 looping = no next_state = "idle8" }
+
+	state = {	name = "aristocrat1"						animation = "head_aristocrat1" chance = 10 looping = no  next_state = "aristocrat1" }
+	state = {	name = "capitalist1"						animation = "head_capitalist1" chance = 10 looping = no  next_state = "capitalist1" }
+	state = {	name = "capitalist2"						animation = "head_capitalist2" chance = 10 looping = no  next_state = "capitalist2" }
+	state = {	name = "officer1"						animation = "head_officer1" chance = 10 looping = no  next_state = "officer1" }
+	state = {	name = "engineer1"						animation = "head_engineer1" chance = 10 looping = no  next_state = "serviceman1" }
+	state = {	name = "serviceman1"						animation = "head_serviceman1" chance = 10 looping = no  next_state = "serviceman1" }
+	state = {	name = "peasant1"						animation = "head_peasant1" chance = 10 looping = no  next_state = "peasant1" }
+	state = {	name = "clergyman1"						animation = "head_clergyman1" chance = 10 looping = no  next_state = "clergyman1" }
+	state = {	name = "academician1"						animation = "head_academician1" chance = 10 looping = no  next_state = "academician1" }
+	state = {	name = "bureaucrat1"						animation = "head_bureaucrat1" chance = 10 looping = no  next_state = "bureaucrat1" }
+	state = {	name = "clerk1"						animation = "head_clerk1" chance = 10 looping = no  next_state = "clerk1" }
+	state = {	name = "farmer1"						animation = "head_farmer1" chance = 10 looping = no  next_state = "farmer1" }
+	state = {	name = "mechanic1"						animation = "head_mechanic1" chance = 10 looping = no  next_state = "farmer1" }
+	state = {	name = "shopkeeper1"						animation = "head_shopkeeper1" chance = 10 looping = no  next_state = "shopkeeper1" }
+	state = {	name = "labourer1"						animation = "head_labourer1" chance = 10 looping = no  next_state = "labourer1" }
+	state = {	name = "slave1"						animation = "head_slave1" chance = 10 looping = no  next_state = "slave1" }
+	
+	
+	#### Pop Middling-Affluent Animations ####
+	
+		state = {	name = "idle_head_pop_saber"					animation = "head_idle_saber" chance = 10 looping = yes }
+	
+	state = {	name = "idle_head_pop_holyscripture"			animation = "head_idle_holyscripture" chance = 10 looping = yes  }		
+	
+	state = {	name = "idle_head_pop_basket"					animation = "head_idle_basket" chance = 10 looping = yes  }			
+	
+	
+	state = {	name = "idle_head_pop_umbrella"					animation = "head_idle_umbrella" chance = 10 looping = yes  }
+	
+	state = {	name = "idle_head_pop_rifle"					animation = "head_idle_rifle" chance = 10 looping = yes  }		
+
+	state = {	name = "idle_head_pop_parasol"					animation = "head_idle_parasol" chance = 10 looping = yes  }	
+	
+	state = {	name = "idle_head_pop_shovels"					animation = "head_idle_shovels" chance = 10 looping = yes  }		
+	
+	state = {	name = "idle_head_pop_flowers"					animation = "head_idle_flowers" chance = 10 looping = yes  }		
+	
+	state = {	name = "idle_head_pop_shackles"					animation = "head_idle_shackles" chance = 10 looping = yes  }		
+	
+	state = {	name = "idle_head_pop_crudehoe"					animation = "head_idle_crudehoe" chance = 10 looping = yes  }	
+
+	state = {	name = "idle_head_pop_pitchfork"				animation = "head_idle_pitchfork" chance = 10 looping = yes  }	
+
+	state = {	name = "idle_head_pop_fan"						animation = "head_idle_fan" chance = 10 looping = yes  }		
+	
+	state = {	name = "idle_head_pop_walkingcane"				animation = "head_idle_walkingcane" chance = 10 looping = yes  }		
+	
+	state = {	name = "idle_head_pop_wrench"					animation = "head_idle_wrench" chance = 10 looping = yes  }		
+	
+	state = {	name = "idle_head_pop_butcher"					animation = "head_idle_butcher" chance = 10 looping = yes  }			
+	
+	state = {	name = "idle_head_pop_ledger"					animation = "head_idle_ledger" chance = 10 looping = yes  }		
+
+	state = {	name = "idle_head_pop_calipers"					animation = "head_idle_calipers" chance = 10 looping = yes  }	
+	
+	state = {	name = "idle_head_pop_sack"						animation = "head_idle_sack" chance = 10 looping = yes  }	
+	
+	state = {	name = "idle_head_pop_apron"					animation = "head_idle_apron" chance = 10 looping = yes  }	
+	
+
+	state = {	name = "idle_head_pop_hattop"					animation = "head_idle_hattop" chance = 10 looping = yes  }	
+	
+	state = {	name = "idle_head_pop_hatacademic"				animation = "head_idle_hatacademic" chance = 10 looping = yes  }
+	
+	state = {	name = "idle_head_pop_hatmonocle"				animation = "head_idle_hatmonocle" chance = 10 looping = yes  }	
+	
+	
+		#### Pop Staving-Struggle Animations ####
+	
+			state = {	name = "idle_head_struggle_pop_saber"					animation = "head_struggle_idle_saber" chance = 10 looping = yes }
+	
+	state = {	name = "idle_head_struggle_pop_holyscripture"			animation = "head_struggle_idle_holyscripture" chance = 10 looping = yes  }		
+	
+	state = {	name = "idle_head_struggle_pop_basket"					animation = "head_struggle_idle_basket" chance = 10 looping = yes  }			
+	
+	
+	state = {	name = "idle_head_struggle_pop_umbrella"					animation = "head_struggle_idle_umbrella" chance = 10 looping = yes  }
+	
+	state = {	name = "idle_head_struggle_pop_rifle"					animation = "head_struggle_idle_rifle" chance = 10 looping = yes  }		
+
+	state = {	name = "idle_head_struggle_pop_parasol"					animation = "head_struggle_idle_parasol" chance = 10 looping = yes  }	
+	
+	state = {	name = "idle_head_struggle_pop_shovels"					animation = "head_struggle_idle_shovels" chance = 10 looping = yes  }		
+	
+	state = {	name = "idle_head_struggle_pop_flowers"					animation = "head_struggle_idle_flowers" chance = 10 looping = yes  }		
+	
+	
+	
+	state = {	name = "idle_head_struggle_pop_crudehoe"					animation = "head_struggle_idle_crudehoe" chance = 10 looping = yes  }	
+
+	state = {	name = "idle_head_struggle_pop_pitchfork"				animation = "head_struggle_idle_pitchfork" chance = 10 looping = yes  }	
+
+	state = {	name = "idle_head_struggle_pop_fan"						animation = "head_struggle_idle_fan" chance = 10 looping = yes  }		
+	
+	state = {	name = "idle_head_struggle_pop_walkingcane"				animation = "head_struggle_idle_walkingcane" chance = 10 looping = yes  }		
+	
+	state = {	name = "idle_head_struggle_pop_wrench"					animation = "head_struggle_idle_wrench" chance = 10 looping = yes  }		
+	
+	state = {	name = "idle_head_struggle_pop_butcher"					animation = "head_struggle_idle_butcher" chance = 10 looping = yes  }			
+	
+	state = {	name = "idle_head_struggle_pop_ledger"					animation = "head_struggle_idle_ledger" chance = 10 looping = yes  }		
+
+	state = {	name = "idle_head_struggle_pop_calipers"					animation = "head_struggle_idle_calipers" chance = 10 looping = yes  }	
+	
+	
+	
+	state = {	name = "idle_head_struggle_pop_apron"					animation = "head_struggle_idle_apron" chance = 10 looping = yes  }	
+	state = {	name = "idle_head_struggle_pop_hattop"					animation = "head_struggle_idle_hattop" chance = 10 looping = yes  }	
+	state = {	name = "idle_head_struggle_pop_hatacademic"				animation = "head_struggle_idle_hatacademic" chance = 10 looping = yes  }
+	state = {	name = "idle_head_struggle_pop_hatmonocle"				animation = "head_struggle_idle_hatmonocle" chance = 10 looping = yes  }	
+	
+	
+			
+
+		
+								#### Generals VS screen ####
+		
+		
+	state = {	name = "idle_head_General_VS_Left_Saber"				animation = "head_General_VS_Left_Saber" chance = 10 looping = yes  }
+
+	state = {	name = "idle_head_General_VS_Left_Point"				animation = "head_General_VS_Left_Point" chance = 10 looping = yes  }	
+	
+	state = {	name = "idle_head_General_VS_Left_Fist"					animation = "head_General_VS_Left_Fist" chance = 10 looping = yes  }	
+	
+	state = {	name = "idle_head_General_VS_Left_Cross"				animation = "head_General_VS_Left_Cross" chance = 10 looping = yes  }	
+	
+		
+		
+		
+		
+	state = {	name = "idle_head_General_VS_Right_Saber"				animation = "head_General_VS_Right_Saber" chance = 10 looping = yes  }	
+	
+	state = {	name = "idle_head_General_VS_Right_Point"				animation = "head_General_VS_Right_Point" chance = 10 looping = yes  }
+	
+	state = {	name = "idle_head_General_VS_Right_Fist"				animation = "head_General_VS_Right_Fist" chance = 10 looping = yes  }
+
+	state = {	name = "idle_head_General_VS_Right_Cross"				animation = "head_General_VS_Right_Cross" chance = 10 looping = yes  }
+	
+	state = {	name = "idle_head_General_VS_Right_HandsHips"			animation = "head_General_VS_Right_HandsHips" chance = 10 looping = yes  }
+
+
+
+	#### General Emotions States ####
+
+	state = {	name = "idle_head_emotions_happy"					animation = "head_emotions_happy" chance = 10 looping = yes  }
+	state = {	name = "idle_head_emotions_scheming"				animation = "head_emotions_scheming" chance = 10 looping = yes  }
+	state = {	name = "idle_head_emotions_boastful"				animation = "head_emotions_boastful" chance = 10 looping = yes  }
+	state = {	name = "idle_head_emotions_proud"					animation = "head_emotions_proud" chance = 10 looping = yes  }
+
+
+
+
+
+
+
+
+	
+	
+	
+	#scale = 0.5
+	#attach = { name = "eyes"					shared_pose_entity = "male_head_eyes_entity" }
+}
+
