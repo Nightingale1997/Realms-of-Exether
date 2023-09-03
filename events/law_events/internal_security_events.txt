@@ -8,13 +8,14 @@ internal_security_events.1 = {
 	title = internal_security_events.1.t
 	desc = internal_security_events.1.d
 	flavor = internal_security_events.1.f
+
+	category = enactment
 	
 	event_image = {
-		video = "gfx/event_pictures/southamerica_public_figure_assassination.bk2"
+		video = "southamerica_public_figure_assassination"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/public_figure_assassination"
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 	
@@ -33,6 +34,9 @@ internal_security_events.1 = {
 				law = law_type:law_secret_police
 				value < neutral
 			}
+			leader = {
+				is_busy = no
+			}
 		}
 	}
 
@@ -48,6 +52,9 @@ internal_security_events.1 = {
 				law_stance = {
 					law = law_type:law_secret_police
 					value < neutral
+				}
+				leader = {
+					is_busy = no
 				}
 			}
 			save_scope_as = anti_secret_police_ig
@@ -93,13 +100,14 @@ internal_security_events.2 = {
 	title = internal_security_events.2.t
 	desc = internal_security_events.2.d
 	flavor = internal_security_events.2.f
+
+	category = enactment
 	
 	event_image = {
-		video = "gfx/event_pictures/middleeast_police_breaking_door.bk2"
+		video = "votp_conspiring"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/middleeast/police_breaking_door"
 
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
 	
@@ -179,13 +187,14 @@ internal_security_events.3 = {
 	title = internal_security_events.3.t
 	desc = internal_security_events.3.d
 	flavor = internal_security_events.3.f
+
+	category = enactment
 	
 	event_image = {
-		video = "gfx/event_pictures/africa_public_protest.bk2"
+		video = "africa_public_protest"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/africa/public_protest"
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
@@ -264,7 +273,7 @@ internal_security_events.3 = {
 	option = { # these are foolish concerns
 		name = internal_security_events.3.b
 		add_enactment_modifier = {
-			name = privacy_concerns_modifier
+			name = privacy_concerns_good_modifier
 			multiplier = -1
 		}
 		# if there's a movement to preserve, they get angry
@@ -311,13 +320,14 @@ internal_security_events.4 = {
 	title = internal_security_events.4.t
 	desc = internal_security_events.4.d
 	flavor = internal_security_events.4.f
+
+	category = enactment
 	
 	event_image = {
-		video = "gfx/event_pictures/africa_soldiers_breaking_protest.bk2"
+		video = "votp_cops_march"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/africa/soldiers_breaking_protest"
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 	
@@ -325,12 +335,6 @@ internal_security_events.4 = {
 	
 	trigger = {
 		is_enacting_law = law_type:law_guaranteed_liberties
-		any_interest_group = {
-			law_stance = {
-				law = law_type:law_guaranteed_liberties
-				value > neutral
-			}
-		}
 		OR = {
 			institution_investment_level = {
 				institution = institution_police
@@ -341,26 +345,18 @@ internal_security_events.4 = {
 			has_law = law_type:law_militarized_police
 		}
 		any_political_movement = {
-			political_movement_support > 0.1
+			political_movement_support > 10
 			any_supporting_interest_group = {
 				is_marginal = no
 			}
 			is_political_movement_type = movement_to_enact
+			desired_law = law_type:law_guaranteed_liberties
 		}
 	}
 
 	immediate = {
 		currently_enacting_law = {
 			save_scope_as = current_law_scope
-		}
-		random_interest_group = {
-			limit = {
-				law_stance = {
-					law = law_type:law_guaranteed_liberties
-					value > neutral
-				}
-			}
-			save_scope_as = liberties_ig
 		}
 	}
 
@@ -371,7 +367,7 @@ internal_security_events.4 = {
 			name = violent_suppression_modifier
 		}
 		capital = {
-			add_radicals = {
+			add_radicals_in_state = {
 				value = large_radicals
 				strata = poor
 			}
@@ -385,11 +381,11 @@ internal_security_events.4 = {
 			multiplier = 2
 		}
 		capital = {
-			add_radicals = {
+			add_radicals_in_state = {
 				value = large_radicals
 				pop_type = officers
 			}
-			add_radicals = {
+			add_radicals_in_state = {
 				value = large_radicals
 				pop_type = soldiers
 			}
@@ -411,13 +407,14 @@ internal_security_events.5 = {
 	title = internal_security_events.5.t
 	desc = internal_security_events.5.d
 	flavor = internal_security_events.5.f
+
+	category = enactment
 	
 	event_image = {
-		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
+		video = "unspecific_politicians_arguing"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/asia/politician_parliament_motion"
 
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
 	
@@ -457,13 +454,14 @@ internal_security_events.6 = {
 	title = internal_security_events.6.t
 	desc = internal_security_events.6.d
 	flavor = internal_security_events.6.f
+
+	category = enactment
 	
 	event_image = {
-		video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"
+		video = "unspecific_vandalized_storefront"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/unspecific/vandalized_storefront"
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 	
@@ -495,11 +493,11 @@ internal_security_events.6 = {
 			name = terrorist_attack_modifier
 		}
 		capital = {
-			add_radicals = {
+			add_radicals_in_state = {
 				value = large_radicals
 				pop_type = officers
 			}
-			add_radicals = {
+			add_radicals_in_state = {
 				value = medium_radicals
 				pop_type = soldiers
 			}
@@ -512,11 +510,11 @@ internal_security_events.6 = {
 			name = purged_police_modifier
 		}
 		capital = {
-			add_radicals = {
+			add_radicals_in_state = {
 				value = medium_radicals
 				pop_type = officers
 			}
-			add_radicals = {
+			add_radicals_in_state = {
 				value = large_radicals
 				pop_type = soldiers
 			}

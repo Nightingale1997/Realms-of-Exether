@@ -20,15 +20,20 @@
 		ig_trait_divine_right
 		ig_trait_pious_fiction
 	}
-	
+
 	on_enable = {
 		ig:ig_devout = {
 			set_ig_trait = ig_trait:ig_trait_pious_fiction
 			set_ig_trait = ig_trait:ig_trait_divine_right
 			set_ig_trait = ig_trait:ig_trait_be_fruitful_and_multiply
 		}
-	}
+		
+		### Specific
 
+
+		### Generic
+
+	}
 	on_disable = {}
 	on_character_ig_membership = {
 		change_character_religion = scope:interest_group.owner.religion
@@ -139,7 +144,7 @@
 		multiply = {
 			desc = "LEADER_POPULARITY"
 			scope:interest_group = {
-				leader = {
+				leader ?= {
 					value = popularity
 					multiply = 0.0025
 					add = 1
@@ -173,6 +178,31 @@
 			multiply = {
 				desc = "STATE_ATHEISM_LAW"
 				value = 0.1
+			}
+		}
+		
+		if = {
+			limit = {
+				scope:interest_group = {
+					is_in_government = yes
+				}
+			}
+			add = {
+				desc = "POP_LOYALISTS"
+				value = pop_loyalist_fraction
+				multiply = 100
+			}
+		}
+		if = {
+			limit = {
+				scope:interest_group = {
+					is_in_government = no
+				}
+			}
+			add = {
+				desc = "POP_RADICALS"
+				value = pop_radical_fraction
+				multiply = 100
 			}
 		}
 	}
@@ -229,17 +259,6 @@
 			multiply = {
 				value = 0
 			}
-		}
-		# Muslims and Theravada more likely to adopt Devout
-		if = {
-			limit = {
-				OR = {
-					owner.religion = rel:cult_of_the_sea
-					owner.religion = rel:cult_of_the_sun
-					owner.religion = rel:cult_of_war
-				}
-			}
-			multiply = 2
 		}
 	}
 

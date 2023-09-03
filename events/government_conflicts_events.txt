@@ -11,11 +11,10 @@ government_conflicts.1 = {
 	flavor = government_conflicts.1.f
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_capitalists_meeting.bk2"
+		video = "europenorthamerica_capitalists_meeting"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/capitalists_meeting"
 
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 
@@ -53,6 +52,15 @@ government_conflicts.1 = {
 				name = disfavored_in_government
 				months = normal_modifier_time
 			}
+			if = {
+				limit = {
+					owner = {
+						c:FRA ?= this
+						has_journal_entry = je_divided_monarchists
+					}
+				}
+				fra_disfavor_leader_ig_dynasty = yes
+			}
 		}
 	}
 
@@ -62,6 +70,15 @@ government_conflicts.1 = {
 			add_modifier = {
 				name = disfavored_in_government
 				months = normal_modifier_time
+			}
+			if = {
+				limit = {
+					owner = {
+						c:FRA ?= this
+						has_journal_entry = je_divided_monarchists
+					}
+				}
+				fra_disfavor_leader_ig_dynasty = yes
 			}
 		}
 	}
@@ -86,11 +103,10 @@ government_conflicts.2 = {
 	flavor = government_conflicts.2.f
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_capitalists_meeting.bk2"
+		video = "europenorthamerica_capitalists_meeting"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/capitalists_meeting"
 
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 
@@ -128,6 +144,15 @@ government_conflicts.2 = {
 				name = disfavored_in_government
 				months = normal_modifier_time
 			}
+			if = {
+				limit = {
+					owner = {
+						c:FRA ?= this
+						has_journal_entry = je_divided_monarchists
+					}
+				}
+				fra_disfavor_leader_ig_dynasty = yes
+			}
 		}
 	}
 
@@ -137,6 +162,15 @@ government_conflicts.2 = {
 			add_modifier = {
 				name = disfavored_in_government
 				months = normal_modifier_time
+			}
+			if = {
+				limit = {
+					owner = {
+						c:FRA ?= this
+						has_journal_entry = je_divided_monarchists
+					}
+				}
+				fra_disfavor_leader_ig_dynasty = yes
 			}
 		}
 	}
@@ -162,11 +196,10 @@ government_conflicts.3 = {
 	flavor = government_conflicts.3.f
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_christianity.bk2"
+		video = "southamerica_christianity"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/christianity"
 
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 
@@ -204,6 +237,15 @@ government_conflicts.3 = {
 				name = disfavored_in_government
 				months = normal_modifier_time
 			}
+			if = {
+				limit = {
+					owner = {
+						c:FRA ?= this
+						has_journal_entry = je_divided_monarchists
+					}
+				}
+				fra_disfavor_leader_ig_dynasty = yes
+			}
 		}
 	}
 
@@ -213,6 +255,15 @@ government_conflicts.3 = {
 			add_modifier = {
 				name = disfavored_in_government
 				months = normal_modifier_time
+			}
+			if = {
+				limit = {
+					owner = {
+						c:FRA ?= this
+						has_journal_entry = je_divided_monarchists
+					}
+				}
+				fra_disfavor_leader_ig_dynasty = yes
 			}
 		}
 	}
@@ -237,11 +288,10 @@ government_conflicts.4 = {
 	flavor = government_conflicts.4.f
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_christianity.bk2"
+		video = "southamerica_christianity"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/christianity"
 
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 
@@ -279,6 +329,15 @@ government_conflicts.4 = {
 				name = disfavored_in_government
 				months = normal_modifier_time
 			}
+			if = {
+				limit = {
+					owner = {
+						c:FRA ?= this
+						has_journal_entry = je_divided_monarchists
+					}
+				}
+				fra_disfavor_leader_ig_dynasty = yes
+			}
 		}
 	}
 
@@ -288,6 +347,15 @@ government_conflicts.4 = {
 			add_modifier = {
 				name = disfavored_in_government
 				months = normal_modifier_time
+			}
+			if = {
+				limit = {
+					owner = {
+						c:FRA ?= this
+						has_journal_entry = je_divided_monarchists
+					}
+				}
+				fra_disfavor_leader_ig_dynasty = yes
 			}
 		}
 	}
@@ -312,11 +380,10 @@ government_conflicts.5 = {
 	flavor = government_conflicts.5.f
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_christianity.bk2"
+		video = "southamerica_christianity"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/christianity"
 
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 
@@ -354,6 +421,15 @@ government_conflicts.5 = {
 				name = disfavored_in_government
 				months = normal_modifier_time
 			}
+			if = {
+				limit = {
+					owner = {
+						c:FRA ?= this
+						has_journal_entry = je_divided_monarchists
+					}
+				}
+				fra_disfavor_leader_ig_dynasty = yes
+			}
 		}
 	}
 
@@ -363,6 +439,15 @@ government_conflicts.5 = {
 			add_modifier = {
 				name = disfavored_in_government
 				months = normal_modifier_time
+			}
+			if = {
+				limit = {
+					owner = {
+						c:FRA ?= this
+						has_journal_entry = je_divided_monarchists
+					}
+				}
+				fra_disfavor_leader_ig_dynasty = yes
 			}
 		}
 	}
@@ -387,11 +472,10 @@ government_conflicts.6 = {
 	flavor = government_conflicts.6.f
 
 	event_image = {
-		video = "gfx/event_pictures/middleeast_middleclass_cafe.bk2"
+		video = "middleeast_middleclass_cafe"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/middleeast/middleclass_cafe"
 
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 
@@ -429,6 +513,15 @@ government_conflicts.6 = {
 				name = disfavored_in_government
 				months = normal_modifier_time
 			}
+			if = {
+				limit = {
+					owner = {
+						c:FRA ?= this
+						has_journal_entry = je_divided_monarchists
+					}
+				}
+				fra_disfavor_leader_ig_dynasty = yes
+			}
 		}
 	}
 
@@ -438,6 +531,15 @@ government_conflicts.6 = {
 			add_modifier = {
 				name = disfavored_in_government
 				months = normal_modifier_time
+			}
+			if = {
+				limit = {
+					owner = {
+						c:FRA ?= this
+						has_journal_entry = je_divided_monarchists
+					}
+				}
+				fra_disfavor_leader_ig_dynasty = yes
 			}
 		}
 	}
@@ -462,11 +564,10 @@ government_conflicts.7 = {
 	flavor = government_conflicts.7.f
 
 	event_image = {
-		video = "gfx/event_pictures/middleeast_middleclass_cafe.bk2"
+		video = "middleeast_middleclass_cafe"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/middleeast/middleclass_cafe"
 
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 
@@ -504,6 +605,15 @@ government_conflicts.7 = {
 				name = disfavored_in_government
 				months = normal_modifier_time
 			}
+			if = {
+				limit = {
+					owner = {
+						c:FRA ?= this
+						has_journal_entry = je_divided_monarchists
+					}
+				}
+				fra_disfavor_leader_ig_dynasty = yes
+			}
 		}
 	}
 
@@ -513,6 +623,15 @@ government_conflicts.7 = {
 			add_modifier = {
 				name = disfavored_in_government
 				months = normal_modifier_time
+			}
+			if = {
+				limit = {
+					owner = {
+						c:FRA ?= this
+						has_journal_entry = je_divided_monarchists
+					}
+				}
+				fra_disfavor_leader_ig_dynasty = yes
 			}
 		}
 	}
@@ -537,11 +656,10 @@ government_conflicts.8 = {
 	flavor = government_conflicts.8.f
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
+		video = "unspecific_politicians_arguing"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/asia/politician_parliament_motion"
 
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 
@@ -579,6 +697,15 @@ government_conflicts.8 = {
 				name = disfavored_in_government
 				months = normal_modifier_time
 			}
+			if = {
+				limit = {
+					owner = {
+						c:FRA ?= this
+						has_journal_entry = je_divided_monarchists
+					}
+				}
+				fra_disfavor_leader_ig_dynasty = yes
+			}
 		}
 	}
 
@@ -588,6 +715,15 @@ government_conflicts.8 = {
 			add_modifier = {
 				name = disfavored_in_government
 				months = normal_modifier_time
+			}
+			if = {
+				limit = {
+					owner = {
+						c:FRA ?= this
+						has_journal_entry = je_divided_monarchists
+					}
+				}
+				fra_disfavor_leader_ig_dynasty = yes
 			}
 		}
 	}
@@ -612,11 +748,10 @@ government_conflicts.9 = {
 	flavor = government_conflicts.9.f
 
 	event_image = {
-		video = "gfx/event_pictures/asia_union_leader.bk2"
+		video = "asia_union_leader"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/asia/union_leader"
 
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 
@@ -654,6 +789,15 @@ government_conflicts.9 = {
 				name = disfavored_in_government
 				months = normal_modifier_time
 			}
+			if = {
+				limit = {
+					owner = {
+						c:FRA ?= this
+						has_journal_entry = je_divided_monarchists
+					}
+				}
+				fra_disfavor_leader_ig_dynasty = yes
+			}
 		}
 	}
 
@@ -663,6 +807,15 @@ government_conflicts.9 = {
 			add_modifier = {
 				name = disfavored_in_government
 				months = normal_modifier_time
+			}
+			if = {
+				limit = {
+					owner = {
+						c:FRA ?= this
+						has_journal_entry = je_divided_monarchists
+					}
+				}
+				fra_disfavor_leader_ig_dynasty = yes
 			}
 		}
 	}
@@ -687,11 +840,10 @@ government_conflicts.10 = {
 	flavor = government_conflicts.10.f
 
 	event_image = {
-		video = "gfx/event_pictures/middleeast_courtroom_upheaval.bk2"
+		video = "middleeast_courtroom_upheaval"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/middleeast/courtroom_upheaval"
 
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 
@@ -729,6 +881,15 @@ government_conflicts.10 = {
 				name = disfavored_in_government
 				months = normal_modifier_time
 			}
+			if = {
+				limit = {
+					owner = {
+						c:FRA ?= this
+						has_journal_entry = je_divided_monarchists
+					}
+				}
+				fra_disfavor_leader_ig_dynasty = yes
+			}
 		}
 	}
 
@@ -738,6 +899,15 @@ government_conflicts.10 = {
 			add_modifier = {
 				name = disfavored_in_government
 				months = normal_modifier_time
+			}
+			if = {
+				limit = {
+					owner = {
+						c:FRA ?= this
+						has_journal_entry = je_divided_monarchists
+					}
+				}
+				fra_disfavor_leader_ig_dynasty = yes
 			}
 		}
 	}
@@ -762,11 +932,10 @@ government_conflicts.11 = {
 	flavor = government_conflicts.11.f
 
 	event_image = {
-		video = "gfx/event_pictures/middleeast_courtroom_upheaval.bk2"
+		video = "middleeast_courtroom_upheaval"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/middleeast/courtroom_upheaval"
 
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 
@@ -804,6 +973,15 @@ government_conflicts.11 = {
 				name = disfavored_in_government
 				months = normal_modifier_time
 			}
+			if = {
+				limit = {
+					owner = {
+						c:FRA ?= this
+						has_journal_entry = je_divided_monarchists
+					}
+				}
+				fra_disfavor_leader_ig_dynasty = yes
+			}
 		}
 	}
 
@@ -813,6 +991,15 @@ government_conflicts.11 = {
 			add_modifier = {
 				name = disfavored_in_government
 				months = normal_modifier_time
+			}
+			if = {
+				limit = {
+					owner = {
+						c:FRA ?= this
+						has_journal_entry = je_divided_monarchists
+					}
+				}
+				fra_disfavor_leader_ig_dynasty = yes
 			}
 		}
 	}

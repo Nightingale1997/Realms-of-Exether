@@ -9,11 +9,10 @@ type = country_event
 	flavor = decree_events.100.f
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_gears_pistons.bk2"
+		video = "unspecific_gears_pistons"
 	}
 	
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/unspecific/gears_pistons"
 
 	icon = "gfx/interface/icons/event_icons/event_trade.dds"
 
@@ -32,6 +31,7 @@ type = country_event
 					is_building_type = building_tooling_workshops
 					is_building_type = building_paper_mills
 					is_building_type = building_chemical_plants
+					is_building_type = building_explosives_factory
 					is_building_type = building_synthetics_plants
 					is_building_type = building_steel_mills
 					is_building_type = building_motor_industry
@@ -73,6 +73,7 @@ type = country_event
 						is_building_type = building_tooling_workshops
 						is_building_type = building_paper_mills
 						is_building_type = building_chemical_plants
+						is_building_type = building_explosives_factory
 						is_building_type = building_synthetics_plants
 						is_building_type = building_steel_mills
 						is_building_type = building_motor_industry
@@ -127,11 +128,10 @@ type = country_event
 	flavor = decree_events.101.f
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_capitalists_meeting.bk2"
+		video = "europenorthamerica_capitalists_meeting"
 	}
 	
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/capitalists_meeting"
 
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 
@@ -150,6 +150,7 @@ type = country_event
 					is_building_type = building_tooling_workshops
 					is_building_type = building_paper_mills
 					is_building_type = building_chemical_plants
+					is_building_type = building_explosives_factory
 					is_building_type = building_synthetics_plants
 					is_building_type = building_steel_mills
 					is_building_type = building_motor_industry
@@ -193,6 +194,7 @@ type = country_event
 						is_building_type = building_tooling_workshops
 						is_building_type = building_paper_mills
 						is_building_type = building_chemical_plants
+						is_building_type = building_explosives_factory
 						is_building_type = building_synthetics_plants
 						is_building_type = building_steel_mills
 						is_building_type = building_motor_industry
@@ -247,11 +249,10 @@ type = country_event
 	flavor = decree_events.102.f
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_russian_serfs.bk2"
+		video = "europenorthamerica_russian_serfs"
 	}
 	
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/russian_serfs"
 
 	icon = "gfx/interface/icons/event_icons/event_trade.dds"
 
@@ -363,11 +364,10 @@ type = country_event
 	flavor = decree_events.103.f
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_russian_serfs.bk2"
+		video = "europenorthamerica_russian_serfs"
 	}
 	
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/russian_serfs"
 
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 
@@ -481,11 +481,10 @@ type = country_event
 	flavor = decree_events.104.f
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_gears_pistons.bk2"
+		video = "unspecific_gears_pistons"
 	}
 	
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/unspecific/gears_pistons"
 
 	icon = "gfx/interface/icons/event_icons/event_trade.dds"
 
@@ -587,11 +586,10 @@ type = country_event
 	flavor = decree_events.105.f
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_capitalists_meeting.bk2"
+		video = "europenorthamerica_capitalists_meeting"
 	}
 	
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/capitalists_meeting"
 
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 
@@ -698,11 +696,10 @@ type = country_event
 	flavor = decree_events.106.f
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_before_the_battle.bk2"
+		video = "europenorthamerica_before_the_battle"
 	}
 	
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/before_the_battle"
 
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
 
@@ -781,7 +778,7 @@ type = country_event
 				name = decree_increased_pay
 				months = short_modifier_time
 			}
-			add_loyalists = {
+			add_loyalists_in_state = {
 				pop_type = soldiers
 				value = large_radicals
 			}
@@ -798,11 +795,10 @@ type = country_event
 	flavor = decree_events.107.f
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_before_the_battle.bk2"
+		video = "europenorthamerica_before_the_battle"
 	}
 	
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/before_the_battle"
 
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
 
@@ -844,7 +840,7 @@ type = country_event
 			}
 			can_research = wargaming
 		}
-		add_technology_progress = { progress = 4000 technology = wargaming }
+		add_technology_progress = { progress = 6000 technology = wargaming }
 	}
 	option = { #tech option 2
 		name = decree_events.107.c
@@ -856,7 +852,7 @@ type = country_event
 			} 
 			can_research = nco_training
 		}
-		add_technology_progress = { progress = 5000 technology = nco_training }
+		add_technology_progress = { progress = 6500 technology = nco_training }
 	}
 	option = { #tech option 3
 		name = decree_events.107.e
@@ -867,7 +863,7 @@ type = country_event
 				has_technology_researched = stormtroopers
 			}
 		}
-		add_technology_progress = { progress = 5000 technology = stormtroopers }
+		add_technology_progress = { progress = 6500 technology = stormtroopers }
 	}
 }
 
@@ -880,11 +876,10 @@ type = country_event
 	flavor = decree_events.108.f
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_springtime_of_nations.bk2"
+		video = "europenorthamerica_springtime_of_nations"
 	}
 	
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/springtime_of_nation"
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
@@ -937,11 +932,10 @@ type = country_event
 	flavor = decree_events.109.f
 
 	event_image = {
-		video = "gfx/event_pictures/middleeast_police_breaking_door.bk2"
+		video = "middleeast_police_breaking_door"
 	}
 	
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/middleeast/police_breaking_door"
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 

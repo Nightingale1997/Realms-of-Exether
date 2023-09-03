@@ -7,11 +7,10 @@ society_tech_events.104 = { #Evelators
 	}
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_factory_opening.bk2"
+		video = "southamerica_factory_opening"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/factory_opening"
 
 	icon = "gfx/interface/icons/event_icons/event_industry.dds"
 
@@ -44,18 +43,17 @@ society_tech_events.104 = { #Evelators
 	}
 }
 
-society_tech_events.105 = { #Mutal Funds
+society_tech_events.105 = { #Mutual Funds
 	type = country_event
 
 	trigger = {
 	}
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_factory_opening.bk2"
+		video = "southamerica_factory_opening"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/factory_opening"
 
 	icon = "gfx/interface/icons/event_icons/event_trade.dds"
 
@@ -93,6 +91,6 @@ society_tech_events.105 = { #Mutal Funds
 			NOT = { has_technology_researched = international_exchange_standards }
 			can_research = international_exchange_standards
 		}
-		add_technology_progress = { progress = 4000 technology = international_exchange_standards }
+		add_technology_progress = { progress = 6000 technology = international_exchange_standards }
 	}
 }

@@ -25,11 +25,10 @@ cholera.1 = {
 	flavor = cholera.1.f
 	
 	event_image = {
-		video = "gfx/event_pictures/unspecific_sick_in_hospital.bk2"
+		video = "unspecific_sick_in_hospital"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/unspecific/sick_people_in_a_field_hospital"
 	
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 	
@@ -80,7 +79,7 @@ cholera.1 = {
 			NOT = { has_technology_researched = modern_sewerage }
 		}
 		add_technology_progress = {
-			progress = 2500
+			progress = 3500
 			technology = modern_sewerage
 		}
 		scope:cholera_state = {
@@ -99,7 +98,7 @@ cholera.1 = {
 			NOT = { has_technology_researched = pharmaceuticals }
 		}
 		add_technology_progress = {
-			progress = 2500
+			progress = 3500
 			technology = pharmaceuticals
 		}
 		scope:cholera_state = {

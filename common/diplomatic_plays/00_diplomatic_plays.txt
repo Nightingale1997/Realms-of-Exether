@@ -1,9 +1,4 @@
-﻿
-# Note: A commented out entry for the german unification dp is on lines 484-505. 
-
-############################################################################
-
-dp_open_market = {
+﻿dp_open_market = {
 	war_goal = open_market
 	
 	texture = "gfx/interface/icons/war_goals/open_market.dds"
@@ -11,11 +6,12 @@ dp_open_market = {
 	possible = {
 		NOT = { is_country_type = decentralized }
 		aggressive_diplomatic_plays_permitted = yes
-		NOT = { is_subject_of = scope:target }
-		scope:target = {
+		NOT = { is_subject_of = scope:target_country }		
+		scope:target_country = {
 			NOT = { is_country_type = decentralized }
 			NOT = { is_subject_of = root }
 		}
+		diplomatic_play_has_no_relations_blockers = yes
 	}
 
 	on_weekly_pulse = {}
@@ -34,10 +30,11 @@ dp_regime_change = {
 	possible = {
 		NOT = { is_country_type = decentralized }
 		aggressive_diplomatic_plays_permitted = yes
-		NOT = { is_subject_of = scope:target }
-		scope:target = {
+		NOT = { is_subject_of = scope:target_country }	
+		scope:target_country = {
 			NOT = { is_country_type = decentralized }
 		}
+		diplomatic_play_has_no_relations_blockers = yes		
 	}
 
 	on_weekly_pulse = {}
@@ -55,10 +52,11 @@ dp_ban_slavery = {
 	possible = {
 		NOT = { is_country_type = decentralized }
 		aggressive_diplomatic_plays_permitted = yes
-		NOT = { is_subject_of = scope:target }
-		scope:target = {
+		NOT = { is_subject_of = scope:target_country }	
+		scope:target_country = {
 			NOT = { is_country_type = decentralized }
 		}
+		diplomatic_play_has_no_relations_blockers = yes		
 	}
 
 	on_weekly_pulse = {}
@@ -76,11 +74,12 @@ dp_conquer_state = {
 	possible = {
 		NOT = { is_country_type = decentralized }
 		aggressive_diplomatic_plays_permitted = yes
-		NOT = { is_subject_of = scope:target }
-		scope:target = {
+		NOT = { is_subject_of = scope:target_country }
+		scope:target_country = {
 			NOT = { is_country_type = decentralized }
 			NOT = { is_subject_of = root }
-		}			
+		}	
+		diplomatic_play_has_no_relations_blockers = yes		
 	}
 	
 	on_weekly_pulse = {}
@@ -100,11 +99,12 @@ dp_return_state = {
 	possible = {
 		NOT = { is_country_type = decentralized }
 		aggressive_diplomatic_plays_permitted = yes
-		NOT = { is_subject_of = scope:target }
-		scope:target = {
+		NOT = { is_subject_of = scope:target_country }	
+		scope:target_country = {
 			NOT = { is_country_type = decentralized }
 			NOT = { is_subject_of = root }
-		}			
+		}
+		diplomatic_play_has_no_relations_blockers = yes
 	}
 	
 	on_weekly_pulse = {}
@@ -122,12 +122,32 @@ dp_liberate_subject = {
 	possible = {
 		NOT = { is_country_type = decentralized }
 		aggressive_diplomatic_plays_permitted = yes
-		NOT = { is_subject_of = scope:target }
-		scope:target = {
+		NOT = { is_subject_of = scope:target_country }	
+		scope:target_country = {
 			NOT = { is_country_type = decentralized }
 			is_subject = yes
 			NOT = { is_subject_of = root }
 		}
+		diplomatic_play_has_no_relations_blocker_with_overlord = yes
+	}
+
+	on_weekly_pulse = {}
+
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+dp_liberate_country = {
+	war_goal = liberate_country
+
+	texture = "gfx/interface/icons/war_goals/liberate_country.dds"
+
+	possible = {
+		NOT = { is_country_type = decentralized }
+		aggressive_diplomatic_plays_permitted = yes
+		NOT = { is_subject_of = scope:target_country }	
+		diplomatic_play_has_no_relations_blockers = yes
 	}
 
 	on_weekly_pulse = {}
@@ -164,11 +184,12 @@ dp_take_treaty_port = {
 	possible = {
 		NOT = { is_country_type = decentralized }
 		aggressive_diplomatic_plays_permitted = yes
-		NOT = { is_subject_of = scope:target }
-		scope:target = {
+		NOT = { is_subject_of = scope:target_country }
+		scope:target_country = {
 			NOT = { is_country_type = decentralized }
 			NOT = { is_subject_of = root }
-		}			
+		}
+		diplomatic_play_has_no_relations_blocker_with_overlord = yes		
 	}
 	
 	on_weekly_pulse = {}
@@ -185,7 +206,8 @@ dp_make_dominion = {
 	texture = "gfx/interface/icons/war_goals/make_dominion.dds"
 	
 	possible = {
-		aggressive_diplomatic_plays_permitted = yes		
+		aggressive_diplomatic_plays_permitted = yes	
+		diplomatic_play_has_no_relations_blocker_with_target = yes	
 	}
 	
 	on_weekly_pulse = {}
@@ -201,7 +223,8 @@ dp_make_vassal = {
 	texture = "gfx/interface/icons/war_goals/make_vassal.dds"
 	
 	possible = {
-		aggressive_diplomatic_plays_permitted = yes			
+		aggressive_diplomatic_plays_permitted = yes	
+		diplomatic_play_has_no_relations_blocker_with_target = yes	
 	}
 	
 	on_weekly_pulse = {}
@@ -218,6 +241,7 @@ dp_make_puppet = {
 	
 	possible = {	
 		aggressive_diplomatic_plays_permitted = yes		
+		diplomatic_play_has_no_relations_blocker_with_target = yes		
 	}
 	
 	on_weekly_pulse = {}
@@ -233,7 +257,15 @@ dp_transfer_subject = {
 	texture = "gfx/interface/icons/war_goals/transfer_subject.dds"
 	
 	possible = {	
-		aggressive_diplomatic_plays_permitted = yes	
+		NOT = { is_country_type = decentralized }
+		aggressive_diplomatic_plays_permitted = yes
+		NOT = { is_subject_of = scope:target_country }	
+		scope:target_country = {
+			NOT = { is_country_type = decentralized }
+			is_subject = yes
+			NOT = { is_subject_of = root }
+		}
+		diplomatic_play_has_no_relations_blocker_with_overlord = yes			
 	}
 	
 	on_weekly_pulse = {}
@@ -251,7 +283,7 @@ dp_annex_subject = {
 	possible = {
 		NOT = { is_country_type = decentralized }
 		aggressive_diplomatic_plays_permitted = yes
-		scope:target = {
+		scope:target_country = {
 			NOT = { is_country_type = decentralized }
 			is_direct_subject_of = root
 			OR = {
@@ -283,14 +315,14 @@ dp_force_recognition = {
 	possible = {
 		is_country_type = unrecognized
 		aggressive_diplomatic_plays_permitted = yes
-		NOT = { is_subject_of = scope:target }
-		scope:target = {
+		scope:target_country = {
+			is_subject = no
 			OR = {
 				is_country_type = recognized
 				is_country_type = colonial
 			}		
-			NOT = { is_subject_of = root }
-		}			
+		}	
+		diplomatic_play_has_no_relations_blocker_with_target = yes	
 	}
 	
 	on_weekly_pulse = {}
@@ -307,6 +339,7 @@ dp_revolution = {
 	mirror_war_goal = yes
 	initiator_can_add_war_goals = no
 	target_can_add_war_goals = no
+	add_infamy_for_starting_initiator_wargoals = no
 	
 	war_goal = annex_country
 	
@@ -320,14 +353,14 @@ dp_revolution = {
 		scope:initiator = {
 			is_revolutionary = yes
 		}
-		scope:initiator.civil_war_origin_country = scope:target
+		scope:initiator.civil_war_origin_country = scope:target_country
 	}
 
 	additional_involvement_trigger = {
 		NOT = { is_country_type = decentralized }
 		aggressive_diplomatic_plays_permitted = yes
 	
-		scope:target = {
+		scope:target_country = {
 			capital = {
 				region = {
 					save_temporary_scope_as = target_capital_region
@@ -361,6 +394,7 @@ dp_secession = {
 	initiator_can_add_war_goals = no
 	target_can_add_war_goals = no
 	backing_down_always_ends_play = no
+	add_infamy_for_starting_initiator_wargoals = no
 	
 	war_goal = secession
 	
@@ -371,7 +405,7 @@ dp_secession = {
 	}		
 	
 	possible = {
-		scope:target = {
+		scope:target_country = {
 			is_secessionist = yes
 		}
 	}
@@ -380,7 +414,7 @@ dp_secession = {
 		NOT = { is_country_type = decentralized }
 		aggressive_diplomatic_plays_permitted = yes
 	
-		scope:target = {
+		scope:target_country = {
 			capital = {
 				region = {
 					save_temporary_scope_as = target_capital_region
@@ -390,7 +424,7 @@ dp_secession = {
 		
 		OR = {
 			has_interest_marker_in_region = scope:target_capital_region
-			is_home_country_for = scope:target
+			is_home_country_for = scope:target_country
 		}
 	}
 	
@@ -413,8 +447,8 @@ dp_contain_threat = {
 	possible = {
 		NOT = { is_country_type = decentralized }
 		aggressive_diplomatic_plays_permitted = yes
-		NOT = { is_subject_of = scope:target }
-		scope:target = {
+		NOT = { is_subject_of = scope:target_country }
+		scope:target_country = {
 			NOT = { is_country_type = decentralized }
 			NOT = { is_subject_of = root }
 		}	
@@ -424,7 +458,7 @@ dp_contain_threat = {
 		}	
 		custom_tooltip = {
 			text = DIPLO_PLAY_OUTRAGED_TRIGGER
-			"scope:target.infamy" >= infamy_threshold:pariah
+			"scope:target_country.infamy" >= infamy_threshold:pariah
 		}
 	}
 
@@ -441,10 +475,10 @@ dp_contain_threat = {
 	on_war_end = {}
 }
 
-dp_native_uprising = {
-	war_goal = annex_native
-	
-	requires_interest_marker = no
+dp_taiping_rebellion = {
+	war_goal = annex_country
+	mirror_war_goal = yes
+	add_infamy_for_starting_initiator_wargoals = no
 	
 	texture = "gfx/interface/icons/war_goals/annex_country.dds"
 	
@@ -453,7 +487,51 @@ dp_native_uprising = {
 	}
 	
 	possible = {
-		scope:target = {
+		exists = c:TPG
+		scope:target_country = {
+			this = c:TPG
+		}
+	}
+	
+	additional_involvement_trigger = {
+		NOT = { is_country_type = decentralized }
+		aggressive_diplomatic_plays_permitted = yes
+	
+		scope:target_country = {
+			capital = {
+				region = {
+					save_temporary_scope_as = target_capital_region
+				}
+			}
+		}
+		
+		OR = {
+			has_interest_marker_in_region = scope:target_capital_region
+			is_home_country_for = scope:target_country
+		}
+	}
+	
+	on_weekly_pulse = {}
+	
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+dp_native_uprising = {
+	war_goal = colonization_rights
+	
+	requires_interest_marker = no
+	add_infamy_for_starting_initiator_wargoals = no
+	
+	texture = "gfx/interface/icons/war_goals/annex_country.dds"
+	
+	selectable_in_lens = {
+		always = no
+	}
+	
+	possible = {
+		scope:target_country = {
 			is_country_type = decentralized
 		}
 	}
@@ -484,28 +562,328 @@ dp_annex_war = {
 	on_war_end = {}
 }
 
-#dp_leadership_germany = {
-#	war_goal = unification_leadership
-#	
-#	requires_interest_marker = no
-#	mirror_war_goal = yes
-#	
-#	texture = "gfx/interface/icons/war_goals/unify_germany.dds"
-#	
-#	selectable_in_lens = {
-#		always = no
-#	}	
-#	
-#	possible = {
-#		has_technology_researched = nationalism			
-#	}
-#	
-#	on_weekly_pulse = {}
-#	
-#	on_war_begins = {}
-#
-#	on_war_end = {}
-#}
+dp_unify_germany = {
+	war_goal = unification
+	
+	requires_interest_marker = no
+	blocked_by_diplomatic_status = no
+	add_infamy_for_starting_initiator_wargoals = no
+	
+	texture = "gfx/interface/icons/war_goals/unify_germany.dds"
+	
+	selectable_in_lens = {
+		always = no
+	}
+	
+	possible = {
+		NOT = { exists = c:GER }
+		NOT = { is_country_type = decentralized }
+		has_technology_researched = pan-nationalism
+	}
+	
+	on_weekly_pulse = {}
+	
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+dp_unify_italy = {
+	war_goal = unification
+	
+	requires_interest_marker = no
+	blocked_by_diplomatic_status = no
+	add_infamy_for_starting_initiator_wargoals = no
+	
+	texture = "gfx/interface/icons/war_goals/unify_italy.dds"
+	
+	selectable_in_lens = {
+		always = no
+	}
+	
+	possible = {
+		NOT = { exists = c:ITA }
+		NOT = { is_country_type = decentralized }
+		has_technology_researched = nationalism
+	}
+	
+	on_weekly_pulse = {}
+	
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+dp_unify_scandinavia = {
+	war_goal = unification
+	
+	requires_interest_marker = no
+	blocked_by_diplomatic_status = no
+	add_infamy_for_starting_initiator_wargoals = no
+	
+	texture = "gfx/interface/icons/war_goals/unification.dds"
+	
+	selectable_in_lens = {
+		always = no
+	}
+	
+	possible = {
+		NOT = { exists = c:SCA }
+		NOT = { is_country_type = decentralized }
+		has_technology_researched = pan-nationalism
+	}
+	
+	on_weekly_pulse = {}
+	
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+dp_unify_ethiopia = {
+	war_goal = annex_country
+	
+	texture = "gfx/interface/icons/war_goals/annex_country.dds"
+	
+	selectable_in_lens = {
+		can_form_nation = ETH
+	}
+	
+	possible = {
+		NOT = { exists = c:ETH }
+		NOT = { is_country_type = decentralized }
+		is_subject = no
+		custom_tooltip = {
+			text = ETH_tt
+			can_form_nation = ETH
+		}
+		scope:target_country = {
+			NOT = { is_country_type = decentralized }
+			aggressive_diplomatic_plays_permitted = yes
+			custom_tooltip = {
+				text = ETH_tt
+				can_form_nation = ETH
+			}
+		}
+	}
+	
+	on_weekly_pulse = {}
+	
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+dp_unify_china = {
+	war_goal = annex_country
+	
+	texture = "gfx/interface/icons/war_goals/annex_country.dds"
+	
+	selectable_in_lens = {
+		OR = {
+			has_government_type = gov_warlord_state
+			has_variable = chinese_central_government
+		}
+	}
+	
+	possible = {
+		NOT = { exists = c:CHI }
+		NOT = { is_country_type = decentralized }
+		is_subject = no
+		OR = {
+			has_government_type = gov_warlord_state
+			has_variable = chinese_central_government
+		}
+		
+		scope:target_country = {
+			NOT = { is_country_type = decentralized }
+			aggressive_diplomatic_plays_permitted = yes
+			OR = {
+				has_government_type = gov_warlord_state
+				has_variable = chinese_central_government
+			}
+		}
+	}
+	
+	on_weekly_pulse = {}
+	
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+dp_unify_arabia = {
+	war_goal = annex_country
+	
+	texture = "gfx/interface/icons/war_goals/annex_country.dds"
+	
+	selectable_in_lens = {
+		can_form_nation = ARA
+	}
+	
+	possible = {
+		NOT = { exists = c:ARA }
+		NOT = { is_country_type = decentralized }
+		has_technology_researched = pan-nationalism
+		is_subject = no
+		can_form_nation = ARA
+
+		scope:target_country = {
+			NOT = { is_country_type = decentralized }
+			aggressive_diplomatic_plays_permitted = yes
+			custom_tooltip = {
+				text = ARA_tt
+				can_form_nation = ARA
+			}
+		}
+	}
+	
+	on_weekly_pulse = {}
+	
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+dp_unify_india = {
+	war_goal = annex_country
+	
+	texture = "gfx/interface/icons/war_goals/annex_country.dds"
+	
+	selectable_in_lens = {
+		can_form_nation = BHT
+	}
+	
+	possible = {
+		NOT = { exists = c:BHT }
+		NOT = { is_country_type = decentralized }
+		has_technology_researched = pan-nationalism
+		is_subject = no 
+		custom_tooltip = {
+			text = BHT_tt
+			can_form_nation = BHT
+		}
+		scope:target_country = {
+			NOT = { is_country_type = decentralized }
+			aggressive_diplomatic_plays_permitted = yes
+			custom_tooltip = {
+				text = BHT_tt
+				can_form_nation = BHT
+			}
+		}
+	}
+	
+	on_weekly_pulse = {}
+	
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+dp_unify_indonesia = {
+	war_goal = annex_country
+	
+	texture = "gfx/interface/icons/war_goals/annex_country.dds"
+	
+	selectable_in_lens = {
+		can_form_nation = IDN
+	}
+	
+	possible = {
+		NOT = { exists = c:IDN }
+		NOT = { is_country_type = decentralized }
+		has_technology_researched = pan-nationalism
+		is_subject = no
+		custom_tooltip = {
+			text = IDN_tt
+			can_form_nation = IDN
+		}
+		scope:target_country = {
+			NOT = { is_country_type = decentralized }
+			aggressive_diplomatic_plays_permitted = yes
+			custom_tooltip = {
+				text = IDN_tt
+				can_form_nation = IDN
+			}
+		}
+	}
+	
+	on_weekly_pulse = {}
+	
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+dp_leadership_germany = {
+	war_goal = unification_leadership
+	
+	requires_interest_marker = no
+	mirror_war_goal = yes
+	
+	texture = "gfx/interface/icons/war_goals/unify_germany.dds"
+	
+	selectable_in_lens = {
+		always = no
+	}	
+	
+	possible = {
+		has_technology_researched = nationalism			
+	}
+	
+	on_weekly_pulse = {}
+	
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+dp_leadership_italy = {
+	war_goal = unification_leadership
+	
+	requires_interest_marker = no
+	mirror_war_goal = yes
+	
+	texture = "gfx/interface/icons/war_goals/unify_italy.dds"
+	
+	selectable_in_lens = {
+		always = no
+	}	
+	
+	possible = {
+		has_technology_researched = nationalism			
+	}
+	
+	on_weekly_pulse = {}
+	
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+dp_leadership_scandinavia = {
+	war_goal = unification_leadership
+	
+	requires_interest_marker = no
+	mirror_war_goal = yes
+	
+	texture = "gfx/interface/icons/war_goals/unification.dds"
+	
+	selectable_in_lens = {
+		always = no
+	}	
+	
+	possible = {
+		has_technology_researched = pan-nationalism			
+	}
+	
+	on_weekly_pulse = {}
+	
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
 
 dp_humiliation = {
 	war_goal = humiliation

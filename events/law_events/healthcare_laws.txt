@@ -7,13 +7,14 @@ healthcare_laws.1 = { #famers want healthcare due to accidents
 	title = healthcare_laws.1.t
 	desc = healthcare_laws.1.d
 	flavor = healthcare_laws.1.f
+
+	category = enactment
 	
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_russian_serfs.bk2"
+		video = "europenorthamerica_russian_serfs"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/russian_serfs"
 
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 	
@@ -116,13 +117,14 @@ healthcare_laws.2 = { #who should be paying for this?
 	title = healthcare_laws.2.t
 	desc = healthcare_laws.2.d
 	flavor = healthcare_laws.2.f
+
+	category = enactment
 	
 	event_image = {
-		video = "gfx/event_pictures/africa_leader_arguing.bk2"
+		video = "africa_leader_arguing"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/africa/leader_arguing"
 
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 	
@@ -189,13 +191,14 @@ healthcare_laws.3 = { #sickness in the government
 	title = healthcare_laws.3.t
 	desc = healthcare_laws.3.d
 	flavor = healthcare_laws.3.f
+
+	category = enactment
 	
 	event_image = {
-		video = "gfx/event_pictures/unspecific_sick_in_hospital.bk2"
+		video = "unspecific_sick_in_hospital"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/unspecific/sick_people_in_a_field_hospital"
 
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 	
@@ -256,13 +259,14 @@ healthcare_laws.4 = { #not enough health care
 	title = healthcare_laws.4.t
 	desc = healthcare_laws.4.d
 	flavor = healthcare_laws.4.f
+
+	category = enactment
 	
 	event_image = {
-		video = "gfx/event_pictures/southamerica_election.bk2"
+		video = "southamerica_election"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/election"
 
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 	
@@ -313,13 +317,14 @@ healthcare_laws.5 = {
 	title = healthcare_laws.5.t
 	desc = healthcare_laws.5.d
 	flavor = healthcare_laws.5.f
+
+	category = enactment
 	
 	event_image = {
-		video = "gfx/event_pictures/africa_leader_arguing.bk2"
+		video = "africa_leader_arguing"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/africa/leader_arguing"
 
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 	
@@ -365,6 +370,17 @@ healthcare_laws.5 = {
 	option = { 
 		name = healthcare_laws.5.a
 		default_option = yes
+		ai_chance = {
+			base = 50
+			modifier = {
+				trigger = {
+					scope:anti_public_healthcare_ig = {
+						ig_approval < -5
+					}
+				}
+				add = -25
+			}
+		}
 		scope:anti_public_healthcare_ig = {
 			add_modifier = {
 				name = healthcare_debate_ig_ignored
@@ -389,6 +405,9 @@ healthcare_laws.5 = {
 
 	option = { 
 		name = healthcare_laws.5.b
+		ai_chance = {
+			base = 50
+		}
 		scope:anti_public_healthcare_ig = {
 			add_modifier = {
 				name = healthcare_debate_ig_heard
@@ -409,13 +428,14 @@ healthcare_laws.6 = { #Healthcare too expensive
 	title = healthcare_laws.6.t
 	desc = healthcare_laws.6.d
 	flavor = healthcare_laws.6.f
+
+	category = enactment
 	
 	event_image = {
-		video = "gfx/event_pictures/southamerica_aristocrats.bk2"
+		video = "southamerica_aristocrats"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
 
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
 	

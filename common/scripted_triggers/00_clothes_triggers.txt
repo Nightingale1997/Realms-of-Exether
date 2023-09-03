@@ -56,7 +56,7 @@ french_empire_clothes_trigger = {
 			OR = {
 				AND = {
 					c:ARR = this
-					is_subject = no # preventing uniform conflicts if FRA becomes a subject of another country with puppet uniforms
+					is_subject = no # preventing uniform conflicts if ARR becomes a subject of another country with puppet uniforms
 				}
 				is_subject_of = c:ARR
 			}		
@@ -72,7 +72,7 @@ french_empire_clothes_pop_trigger = {
 			OR = {
 				AND = {
 					c:ARR = this
-					is_subject = no # preventing uniform conflicts if FRA becomes a subject of another country with puppet uniforms
+					is_subject = no # preventing uniform conflicts if ARR becomes a subject of another country with puppet uniforms
 				}
 				is_subject_of = c:ARR
 			}		
@@ -112,8 +112,7 @@ native_american_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
 		culture = {
-			has_discrimination_trait = human_heritage
-			has_discrimination_trait = elf_heritage
+			has_discrimination_trait = wood_gnome
 		}
 	}
 }
@@ -140,7 +139,7 @@ jewish_clothes_pop_trigger = {
      exists = scope:pop
   	scope:pop = {
 		culture = {
-			has_discrimination_trait = vandori_heritage
+			has_discrimination_trait = halfling_heritage
 		}
 	}
 }
@@ -149,7 +148,7 @@ hindu_clothes_pop_trigger = {
 	exists = scope:pop
 	scope:pop = {
 		culture = {
-			has_discrimination_trait = halfling_heritage
+			has_discrimination_trait = bird_heritage
 		}
 	}
 }
@@ -159,7 +158,6 @@ african_diaspora_clothes_trigger = {
 	scope:character = {
 		OR = {
 			culture = cu:shkemger
-			culture = cu:khanaruk
 		}
 	}
 }
@@ -169,7 +167,6 @@ african_diaspora_pop_clothes_trigger = {
 	scope:pop = {
 		OR = {
 			culture = cu:shkemger
-			culture = cu:khanaruk
 		}
 	}
 }
@@ -198,7 +195,7 @@ chinese_imperial_clothes_trigger = {
      	}
 		OR = {
 			culture = {
-				has_discrimination_trait = goblin_heritage
+				has_discrimination_trait = hobgoblin
 			}
 			AND = {
 				exists = c:YUL
@@ -240,14 +237,22 @@ chinese_manchu_queue_hairstyle_pops_trigger = { # hairsyle for Manchu pops not l
 chinese_court_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
-		always = no
+		culture = {
+			OR = {
+				has_discrimination_trait = hobgoblin
+			}
+		}
 	}	
 }
 
 chinese_court_clothes_pop_trigger = {
 	exists = scope:pop
 	scope:pop = {
-		always = no
+		culture = {
+			OR = {
+				has_discrimination_trait = hobgoblin
+			}
+		}
 	}	
 }
 
@@ -530,7 +535,7 @@ east_asian_clothes_pop_trigger = {
 	scope:pop = {
 		culture = {
 			OR = {
-				has_discrimination_trait = goblin_heritage
+				has_discrimination_trait = hobgoblin
 			}
 		}   
 	}
@@ -612,7 +617,7 @@ african_clothes_pop_trigger = {
 	scope:pop = {
 		culture = {
 			OR = {
-				has_discrimination_trait = goblin_heritage
+				has_discrimination_trait = gavkhani_culture_group
 			}
 		}   
 	}
@@ -622,7 +627,7 @@ native_american_clothes_pop_trigger = {
 	exists = scope:pop
 	scope:pop = {
 		culture = {
-			has_discrimination_trait = gnome_heritage
+			has_discrimination_trait = wood_gnome
 		}   
 	}
 }
@@ -631,7 +636,7 @@ south_east_asia_clothes_pop_trigger = {
 	exists = scope:pop
 	scope:pop = {
 		culture = {
-			has_discrimination_trait = southeast_asian_heritage
+			has_discrimination_trait = southern_elf
 		}   
 	}
 }
@@ -641,7 +646,7 @@ south_american_clothes_character_trigger = {
 	scope:character = {
 		culture = {
 			has_discrimination_trait = thalorian_culture_group
-		}  
+		} 
 	}
 }
 
@@ -725,6 +730,14 @@ slavic_clothes_trigger = {
 				has_discrimination_trait = west_slavic
 				has_discrimination_trait = jugoslav
 			}
+		}   
+	}
+}
+
+nordic_clothes_pop_trigger = {
+	scope:pop ?= {
+		culture = {
+			has_discrimination_trait = hasalian	
 		}   
 	}
 }
@@ -1016,6 +1029,11 @@ should_be_naked_trigger = {
 			is_pop_type = peasants
 			is_pop_type = laborers
 			is_pop_type = slaves
+		}
+		OR = {
+			culture = {
+				has_discrimination_trait = monstrous_heritage
+			}
 		}
 	}
 }

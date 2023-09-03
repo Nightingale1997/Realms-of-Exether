@@ -7,39 +7,13 @@
                 is_in_government = yes
                 is_marginal = no
                 any_preferred_law = {
-                    save_temporary_scope_as = petition_law_trig
-                    prev = {
-                        law_stance = {
-                            law = scope:petition_law_trig.type
-                            value > neutral
-                        }
-                    }
-                    NOT = {
-                        ROOT = {
-                            has_law = prev.type
-                        }
-                    }  
-                    can_be_enacted = yes
+                    law_is_valid_for_ig_petition = yes
                 }
             }
             save_scope_as = government_petition_ig
             ordered_preferred_law = {
                 limit = {
-                    save_temporary_scope_as = petition_law
-                    ROOT = {
-                        scope:government_petition_ig = {
-                            law_stance = {
-                                law = scope:petition_law.type
-                                value > neutral
-                            }
-                        }
-                    }
-                    NOT = {
-                        ROOT = {
-                            has_law = prev.type
-                        }
-                    }  
-                    can_be_enacted = yes
+					law_is_valid_for_ig_petition = yes
                 }
                 min = 0 
                 max = 2
@@ -47,7 +21,12 @@
                 save_scope_as = government_petition_law
             }
         }
-        set_variable = { name = desired_law_var value = scope:government_petition_law }
+        if = {
+            limit = {
+                exists = scope:government_petition_law
+            }
+            set_variable = { name = desired_law_var value = scope:government_petition_law }
+        }
         trigger_event = { id = government_petition_events.1 popup = yes }
     }
 
@@ -60,6 +39,7 @@
 	}
 
     complete = {
+        exists = scope:government_petition_law
         has_law = scope:government_petition_law.type
     }
 
@@ -78,7 +58,7 @@
 
     invalid = {
         OR = {
-            scope:government_petition_ig = {
+            scope:government_petition_ig ?= {
                 law_stance = {
                     law = scope:government_petition_law.type
                     value < approve
@@ -91,152 +71,68 @@
     }
 
     fail = {
-        scope:government_petition_ig = {
+        scope:government_petition_ig ?= {
             is_in_government = no
         }
     }
 
     on_timeout = {
-        if = { 
+        if = {
             limit = {
-                scope:government_petition_ig = {
-                    ig_approval > 5
-                }
+                is_enacting_law = scope:government_petition_law.type
             }
-            if = {
-                limit = {
-                    is_enacting_law = scope:government_petition_law.type
-                }
-                scope:government_petition_ig = {
+            scope:government_petition_ig = {
+                if = {
+                    limit = {
+                        is_powerful = yes
+                    }
                     add_modifier = {
                         name = modifier_failed_to_meet_petition
                         months = long_modifier_time
                         is_decaying = yes
                         multiplier = {
-							add = 1
-							divide = {
-								add = 1
-								add = ROOT.enactment_phase
-							}
-						}
+                            add = 1.5
+                            divide = {
+                                add = 1
+                                add = ROOT.enactment_phase
+                            }
+                        }
                     }
                 }
-            }
-            else_if = {
-                scope:government_petition_ig = {
-                    if = {
-                        limit = {
-                            NOT = {
-                                root = {
-                                    has_ruling_interest_group_count = 1
-                                }
-                            }
-                            is_powerful = yes
-                        }
-                        remove_ruling_interest_group = yes
-                    }
+                else = {
                     add_modifier = {
                         name = modifier_failed_to_meet_petition
                         months = long_modifier_time
                         is_decaying = yes
-						multiplier = {
-							add = 1.5
-						}
-                    }
-                }
-            }
-            else = {
-                scope:government_petition_ig = {
-                    if = {
-                        limit = {
-                            NOT = {
-                                root = {
-                                    has_ruling_interest_group_count = 1
-                                }
+                        multiplier = {
+                            add = 1
+                            divide = {
+                                add = 1
+                                add = ROOT.enactment_phase
                             }
                         }
-                    }
-                    add_modifier = {
-                        name = modifier_failed_to_meet_petition
-                        months = long_modifier_time
-						multiplier = {
-							add = 1
-						}
-                        is_decaying = yes
                     }
                 }
             }
         }
         else = {
-            if = {
-                limit = {
-                    root = {
-                        has_ruling_interest_group_count = 1
-                    }
-                }
-                scope:government_petition_ig = {
-                    add_modifier = {
-                        name = modifier_failed_to_meet_petition
-                        months = long_modifier_time
-                        is_decaying = yes
-                        multiplier = {
-							add = 1
-							divide = {
-								add = 1
-								add = ROOT.enactment_phase
-							}
-						}
-                    }
-                }
-            }
-            else_if = {
-                scope:government_petition_ig = {
-                    if = {
-                        limit = {
-                            NOT = {
-                                root = {
-                                    has_ruling_interest_group_count = 1
-                                }
-                            }
-                            is_powerful = yes
-                        }
+            scope:government_petition_ig = {
+                if = {
+                    limit = {
+                        is_powerful = yes
                     }
                     add_modifier = {
                         name = modifier_failed_to_meet_petition
                         months = long_modifier_time
                         is_decaying = yes
-                        multiplier = {
-							add = 2
-							divide = {
-								add = 1
-								add = ROOT.enactment_phase
-							}
-						}
+                        multiplier = 1.5
                     }
                 }
-            }
-            else = {
-                scope:government_petition_ig = {
-                    if = {
-                        limit = {
-                            NOT = {
-                                root = {
-                                    has_ruling_interest_group_count = 1
-                                }
-                            }
-                        }
-                    }
+                else = {
                     add_modifier = {
                         name = modifier_failed_to_meet_petition
                         months = long_modifier_time
                         is_decaying = yes
-						multiplier = {
-							add = 1.5
-							divide = {
-								add = 1
-								add = ROOT.enactment_phase
-							}
-						}
                     }
                 }
             }
@@ -245,22 +141,14 @@
     }
 
     on_fail = {
-		if = {
-			limit = {
-				OR = {
-					enacting_any_law = no
-					enactment_phase < 1
-				}
+		scope:government_petition_ig = {
+			add_modifier = {
+				name = modifier_failed_to_meet_petition
+				months = long_modifier_time
+				is_decaying = yes
+				multiplier = 2
 			}
-			scope:government_petition_ig = {
-				add_modifier = {
-					name = modifier_failed_to_meet_petition
-					months = long_modifier_time
-					is_decaying = yes
-					multiplier = 2
-				}
-			}
-        }
+		}
         remove_variable = desired_law_var
     }
 

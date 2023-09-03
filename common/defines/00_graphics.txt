@@ -218,7 +218,7 @@ NGraphics = {
 	FLAT_MAP_ZOOM_STEP = 10			# At which zoom step to fade to flat map
 
 	# Water fixes
-	WATER_SHADOW_MULTIPLIER = 0.25 				# Controls water shadow brightness ( multiplies the environment cubemap by this value and adds it to the shadow as light )
+	WATER_SHADOW_MULTIPLIER = 0.75 				# Controls water shadow brightness ( multiplies the environment cubemap by this value and adds it to the shadow as light )
 
 	# Goods colors
 	GOOD_CATEGORY_MILITARY = { 0.29 0.16 0.17 1 }
@@ -232,9 +232,9 @@ NGraphics = {
 	MORALE_LOW = { 0.65 0.1 0.1 1 }
 
 	# Loyalty colors
-	LOYALTY_LOYALIST = {0.39 0.67 0.33 1}
-	LOYALTY_RADICAL = {0.88 0.34 0.34 1}
-	LOYALTY_NEUTRAL = {0.7 0.7 0.7 1 }
+	LOYALTY_LOYALIST = { 0.39 0.67 0.33 1}
+	LOYALTY_RADICAL = { 0.88 0.34 0.34 1}
+	LOYALTY_NEUTRAL = { 0.7 0.7 0.7 1 }
 
 	UNIMPORTANT_ELEMENT_ALPHA = 0.3
 
@@ -246,6 +246,10 @@ NGraphics = {
 	REVOLUTION_MAP_OBJECT_LAYER = "revolution_dynamic"
 	REVOLUTION_MAP_OBJECT_UPDATE_PROVINCES_PER_FRAME = 16			# Max number of provinces that may be updated per frame.
 	REVOLUTION_MAP_OBJECT_UPDATE_MAX_TIME_PER_FRAME = 0.002			# Max time per frame to spend on dynamic terrain updates in seconds.
+
+	# Night map objects
+	NIGHT_MAP_OBJECT_LAYERS = { "night_dynamic" "night_effects" }	# Layers that activate at night
+	DAY_MAP_OBJECT_LAYERS = { "day_dynamic" "day_effects" }	# Layers that activate at day
 
 	# Dynamic map objects
 	HIDDEN_MAP_OBJECT_LAYERS = { "mines_dynamic" "farms_dynamic" "forestry_dynamic" }	# These layers are hidden by default when the game starts
@@ -280,6 +284,9 @@ NGraphics = {
 	DISTANCE_ROUGHNESS_BLEND = 80.0			# Blend range
 	DISTANCE_ROUGHNESS_SCALE = 0.5			# Roughness multiplier scale
 	DAYS_AFTER_BATTLE_TO_SHOW_ENTITY = 7	# For how long to show battle entities after the battle
+
+	MILITARY_FORMATION_BASECAMP_ENTITY = "generic_line_infantry_pm_skirmish_infantry_entity"	# Entity of the base camp of military formation on the front
+	MILITARY_FORMATION_UNIT_ENTITY = "european_mobile_artillery_pm_mobile_artillery_entity"		# Entity of military units on front provinces
 }
 
 NFrontend = {
@@ -349,8 +356,17 @@ NCities = {
 	CITY_VFX_ZOOM_CUTOFF = 250				# zoom at which we hide all city VFXes
 	CITY_PARTICLES_ZOOM_CUTOFF = 200		# zoom at which we hide all city particle effects (for example chimney smoke)
 
-	CITY_REVOLUTION_ENTITY_DEFAULT = { "revolution_barricade_small_mesh" "revolution_barricade_mid_mesh" "revolution_barricade_large_mesh" }	# Randomly pick mesh
-	CITY_REVOLUTION_ENTITY_AMOUNT = 0.45	# Multiplier of revolution entities spawning
+	# For each camera distance to the city there is a cut-off factor for the amount of visible buildings in the city
+	# if the distance is lower than the first step, then the factor is 0, i.e. all buildings are visible
+	# if the distance is higher than the last step, then the factor from the last step is taken
+	# if the distance is between steps, then the factor is calculated linearly
+	CITY_BUILDINGS_CUTOFF_DISTANCES = 	{ 300 	400 	600 }	# steps of distances from camera to city to which apply corresponding cut-off factors, must be sorted from low to high
+	CITY_BUILDINGS_CUTOFF_FACTORS = 	{ 0 	0.7 	0.95 }	# which share of buildings to cut off at a certain distance step, must be sorted from low to high
+
+	NIGHT_LIGHT_COLOR_DEFAULT = { 1.0 0.16 0.035 6.5 }	# Lights color, Alpha is max intensity
+	NIGHT_LIGHT_FADE_TIME = 0.35			# Time for indiviual lights to fade in/out from when they activate
+	NIGHT_LIGHT_ACTIVATE_BEGIN = 0.3		# Time at which lights start to activate, on a 0.0 - 1.0 cycle where day is at 0.0 and 0.5 is the midpoint between day and night
+	NIGHT_LIGHT_ACTIVATE_END = 0.75			# Time at which lights finish activating
 }
 
 NRoutes = {

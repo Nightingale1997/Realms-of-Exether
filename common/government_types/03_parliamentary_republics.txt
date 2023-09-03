@@ -1,4 +1,23 @@
-﻿gov_parliamentary_dictatorship = {
+﻿gov_technate_parliamentary = {
+	transfer_of_power = dictatorial
+
+	male_ruler = "RULER_TITLE_CHIEF_ENGINEER"
+	female_ruler = "RULER_TITLE_CHIEF_ENGINEER"
+	
+	possible = {
+		has_law = law_type:law_parliamentary_republic
+		has_law = law_type:law_technocracy
+	}
+
+	on_government_type_change = {
+		change_to_dictatorial = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_dictatorial = yes
+	}
+}
+
+gov_parliamentary_dictatorship = {
 	transfer_of_power = dictatorial
 
 	male_ruler = "RULER_TITLE_LORD_PROTECTOR"
@@ -7,6 +26,13 @@
 	possible = {
 		has_law = law_type:law_parliamentary_republic
 		has_law = law_type:law_autocracy 
+	}
+
+	on_government_type_change = {
+		change_to_dictatorial = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_dictatorial = yes
 	}
 }
 
@@ -20,6 +46,33 @@ gov_parliamentary_oligarchy = {
 		has_law = law_type:law_parliamentary_republic
 		country_has_voting_franchise = no
 	}
+
+	on_government_type_change = {
+		change_to_dictatorial = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_dictatorial = yes
+	}
+}
+
+gov_parliamentary_single_party_state = {
+	transfer_of_power = presidential_elective
+	new_leader_on_reform_government = yes
+
+	male_ruler = "RULER_TITLE_CHANCELLOR"
+	female_ruler = "RULER_TITLE_CHANCELLOR"
+	
+	possible = {
+		has_law = law_type:law_parliamentary_republic
+		has_law = law_type:law_single_party_state
+	}
+
+	on_government_type_change = {
+		change_to_presidential_elective = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_presidential_elective = yes
+	}
 }
 
 gov_parliamentary_democracy = {
@@ -32,5 +85,15 @@ gov_parliamentary_democracy = {
 	possible = {
 		has_law = law_type:law_parliamentary_republic
 		country_has_voting_franchise = yes
+		NOT = { 
+			has_law = law_type:law_single_party_state
+		}
+	}
+
+	on_government_type_change = {
+		change_to_parliamentary_elective = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_parliamentary_elective = yes
 	}
 }

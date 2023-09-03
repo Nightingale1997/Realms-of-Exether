@@ -594,7 +594,7 @@ widget = {
 				hbox = {
 					margin_top = 20
 					margin_bottom = 92
-					spacing = 20
+					spacing = 10
 
 					button_group = {
 						onclick = "[FrontEndMainView.OnLogin]"
@@ -605,7 +605,7 @@ widget = {
 
 							pops_login_accountwidget = {
 								parentanchor = hcenter
-								size = { 30 30 }
+								size = { 35 35 }
 
 								blockoverride "properties" {
 									onclick = "[FrontEndMainView.OnLogin]"
@@ -634,7 +634,7 @@ widget = {
 							button_settings = {
 								name = "settings"
 								parentanchor = hcenter
-								size = { 30 30 }
+								size = { 35 35 }
 							}
 
 							text_single = {
@@ -649,6 +649,58 @@ widget = {
 							}
 						}
 					}
+
+					button_group = {
+
+						onclick = "[ToggleThemeSettings]"
+						using = select_button_sound
+
+						onclick = "[GetVariableSystem.Set( 'theme_selector_theme_tab', 'true' )]"
+	        			onclick = "[GetVariableSystem.Clear( 'theme_selector_settings_tab')]"
+
+						flowcontainer = {
+							direction = vertical
+
+							button_theme_selector = {
+								name = "theme_selector"
+								parentanchor = hcenter
+								size = { 35 35 }
+							}
+
+							text_single = {
+								parentanchor = hcenter
+								max_width = 100
+								min_width = 100
+								autoresize = yes
+
+								text = "THEME"
+								default_format = "#clickable;glow_color:{0.1,0.1,0.1,1}"
+								align = center|nobaseline
+							}
+						}
+
+						icon = {
+							visible = "[And(HasAnyAvailableNewThemes, Not(HasAnyThemeIssues))]"
+							texture = "gfx/interface/current_situations/icon_situation_unread.dds"
+							size = { 25 25 }
+							position = { -20 -20 }
+							parentanchor = bottom|right
+							widgetanchor = bottom|right
+							
+							tooltip = "NEW_THEMES_AVAILABLE"
+						}
+
+						icon = {
+							visible = "[HasAnyThemeIssues]"
+							texture = "gfx/interface/icons/generic_icons/warning.dds"
+							size = { 25 25 }
+							position = { -20 -20 }
+							parentanchor = bottom|right
+							widgetanchor = bottom|right
+							
+							tooltip = "THEME_ISSUES"
+						}
+					}
 				}
 			}
 		}
@@ -656,16 +708,45 @@ widget = {
 
 	clickable_version_number = {
 		
-		parentanchor = bottom|right
+		parentanchor = right|bottom
 		position = { -15 -15 }
-
 		using = tooltip_se
 
-		blockoverride "background"
-		{
-			
+		blockoverride "background" {}
+	}
+
+	flowcontainer = {
+		direction = vertical
+		scale = "[ScaleToFitElementInside('(int32)1920', '(int32)1080')]"
+		margin = { 20 20 }
+		parentanchor = right|vcenter
+		position = { -400 0 }
+
+		background = {
+			using = entry_bg_simple_solid
+		}
+
+		textbox = {
+			autoresize = yes
+			multiline = yes
+			align = nobaseline
+			max_width = 600
+			text = "MAIN_MENU_DISCLAIMER"
+		}
+
+		button_text = {
+			size = { 300 24 }
+			alpha = 1
+			tooltip = "DISCORD_URL"
+			using = tooltip_below
+			onclick = "[OpenDiscordUrl]"
+
+			blockoverride "text" {
+				text = "MAIN_MENU_DISCLAIMER_DISCORD_LINK"
+			}
 		}
 	}
+
 
 	widget = {
 		parentanchor = bottom|left

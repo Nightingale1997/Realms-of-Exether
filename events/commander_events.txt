@@ -22,6 +22,7 @@ commander_events.2 = { #Commanders habit is getting out of control
 	trigger = {
 		any_scope_character = {
 			has_role = general
+			is_busy = no
 			is_ruler = no
 			OR = {
 				has_trait = alcoholic
@@ -35,6 +36,7 @@ commander_events.2 = { #Commanders habit is getting out of control
 		random_scope_character = {
 			limit = {
 				has_role = general
+				is_busy = no
 				is_ruler = no
 				OR = {
 					has_trait = alcoholic
@@ -101,6 +103,7 @@ commander_events.4 = {
 				has_role = admiral
 			}
 			is_ruler = no
+			is_busy = no
 			OR = {
 				has_trait = alcoholic
 				has_trait = opium_addiction
@@ -108,7 +111,7 @@ commander_events.4 = {
 			}
 			OR = {
 				has_trait = defense_in_depth_specialist
-				has_trait = expert_artillery_commander
+				# has_trait = expert_artillery_commander
 				has_trait = expert_naval_commander
 				has_trait = expert_convoy_raider
 				has_trait = celebrity_commander
@@ -120,6 +123,7 @@ commander_events.4 = {
 				has_role = admiral
 			}
 			is_ruler = no
+			is_busy = no
 			NOT = {
 				has_trait = alcoholic
 				has_trait = opium_addiction
@@ -136,6 +140,7 @@ commander_events.4 = {
 					has_role = admiral
 				}
 				is_ruler = no
+				is_busy = no
 				NOT = {
 					has_trait = alcoholic
 					has_trait = opium_addiction
@@ -155,6 +160,7 @@ commander_events.4 = {
 					has_role = admiral
 				}
 				is_ruler = no
+				is_busy = no
 				OR = {
 					has_trait = alcoholic
 					has_trait = opium_addiction
@@ -162,7 +168,7 @@ commander_events.4 = {
 				}
 				OR = {
 					has_trait = defense_in_depth_specialist
-					has_trait = expert_artillery_commander
+					# has_trait = expert_artillery_commander
 					has_trait = expert_naval_commander
 					has_trait = expert_convoy_raider
 					has_trait = celebrity_commander
@@ -262,7 +268,7 @@ commander_events.5 = {
 		name = commander_events.5.a
 		default_option = yes
 		add_technology_progress = {	
-			progress = 3000
+			progress = 4500
 			technology = handcranked_machine_gun
 		}
 	}
@@ -270,7 +276,7 @@ commander_events.5 = {
 	option = {
 		name = commander_events.5.b
 		add_technology_progress = {	
-			progress = 4000
+			progress = 6000
 			technology = bolt_action_rifles
 		}
 	}
@@ -288,11 +294,10 @@ commander_events.6 = {
     flavor = commander_events.6.f
 
     event_image = {
-		video = "gfx/event_pictures/europenorthamerica_before_the_battle.bk2"
+		video = "europenorthamerica_before_the_battle"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/before_the_battle"
 
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
 
@@ -301,6 +306,7 @@ commander_events.6 = {
 	trigger = {
 		NOT = { has_variable = psychological_warfare_var }
 		any_scope_character = {
+			is_busy = no
 			has_role = general
 			OR = {
 				has_trait = romantic
@@ -333,6 +339,7 @@ commander_events.6 = {
 		random_scope_character = {
 			limit = {
 				has_role = general
+				is_busy = no
 				OR = {
 					has_trait = romantic
 					has_trait = arrogant
@@ -350,13 +357,17 @@ commander_events.6 = {
 					has_trait = pious
 				}
 			}
+			set_variable = seducer_commander_var
 			save_scope_as = seducer_commander
 		}
 		random_interest_group = {
 			limit = {
 				is_marginal = no
 				leader = {
-					NOT = { has_trait = syphilis }
+					NOT = { 
+						has_trait = syphilis
+						has_variable = seducer_commander_var
+					}
 					is_female = no
 				}
 			}
@@ -396,6 +407,7 @@ commander_events.6 = {
 				limit = { NOT = { has_trait = syphilis } }
 				add_trait = syphilis
 			}
+			remove_variable = seducer_commander_var
 		}
 		scope:cheated_ig = {
 			add_modifier = {
@@ -411,7 +423,8 @@ commander_events.6 = {
 		hidden_effect = {
 			scope:seducer_commander = {
 				kill_character = yes
-			}
+				remove_variable = seducer_commander_var
+			}		
 		}
 		scope:cheated_leader = {
 			add_trait = syphilis
@@ -443,6 +456,7 @@ commander_events.6 = {
 				name = punched_commander_modifier #popularity bad
 				months = normal_modifier_time
 			}
+			remove_variable = seducer_commander_var
 			if = {
 				limit = { NOT = { has_trait = syphilis } }
 				add_trait = syphilis

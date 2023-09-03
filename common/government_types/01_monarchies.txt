@@ -15,7 +15,11 @@
 	on_government_type_change = {
 		change_to_hereditary = yes
 	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
 }
+
 gov_decentralized_realm = {
 	transfer_of_power = hereditary
 	
@@ -37,46 +41,8 @@ gov_decentralized_realm = {
 	on_government_type_change = {
 		change_to_hereditary = yes
 	}
-}
-
-
-gov_hm_gov = {
-	transfer_of_power = hereditary
-
-	male_ruler = "RULER_TITLE_KING"
-	female_ruler = "RULER_TITLE_QUEEN"
-	
-	male_heir = "RULER_TITLE_PRINCE"
-	female_heir = "RULER_TITLE_PRINCESS"
-	
-	possible = {
-		has_law = law_type:law_monarchy
-		AND = { exists = c:ARR c:ARR = ROOT }
-	}
-
-	on_government_type_change = {
-		change_to_hereditary = yes
-	}
-}
-
-gov_khanate = {
-	transfer_of_power = hereditary
-
-	male_ruler = "RULER_TITLE_KHAN"
-	female_ruler = "RULER_TITLE_KHATUN"
-	
-	male_heir = "RULER_TITLE_PRINCE"
-	female_heir = "RULER_TITLE_PRINCESS"
-	
-	possible = {
-		has_law = law_type:law_monarchy
-		OR = {
-			AND = { exists = c:YAN c:YAN = ROOT }
-		}
-	}
-
-	on_government_type_change = {
-		change_to_hereditary = yes
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
 	}
 }
 
@@ -104,6 +70,9 @@ gov_absolute_empire = {
 
 	on_government_type_change = {
 		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
 	}
 }
 
@@ -134,6 +103,9 @@ gov_feudal_empire = {
 	on_government_type_change = {
 		change_to_hereditary = yes
 	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
 }
 
 gov_empire = {
@@ -160,6 +132,9 @@ gov_empire = {
 
 	on_government_type_change = {
 		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
 	}
 }
 
@@ -189,6 +164,9 @@ gov_constitutional_empire = {
 	on_government_type_change = {
 		change_to_hereditary = yes
 	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
 }
 
 gov_absolute_kingdom = {
@@ -208,6 +186,9 @@ gov_absolute_kingdom = {
 
 	on_government_type_change = {
 		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
 	}
 }
 
@@ -230,6 +211,9 @@ gov_feudal_kingdom = {
 	on_government_type_change = {
 		change_to_hereditary = yes
 	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
 }
 
 gov_kingdom = {
@@ -249,6 +233,9 @@ gov_kingdom = {
 
 	on_government_type_change = {
 		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
 	}
 }
 
@@ -270,6 +257,9 @@ gov_constitutional_kingdom = {
 	on_government_type_change = {
 		change_to_hereditary = yes
 	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
 }
 
 gov_absolute_county = {
@@ -288,12 +278,15 @@ gov_absolute_county = {
 		has_law = law_type:law_autocracy 
 		country_tier = city_state
 	
-		country_is_in_europe = yes
+		country_is_in_settler_coast = yes
 			
 	}
 
 	on_government_type_change = {
 		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
 	}
 }
 
@@ -313,12 +306,15 @@ gov_constitutional_county = {
 		country_has_voting_franchise = yes
 		country_tier = city_state
 	
-		country_is_in_europe = yes
+		country_is_in_settler_coast = yes
 			
 	}
 
 	on_government_type_change = {
 		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
 	}
 }
 
@@ -338,12 +334,15 @@ gov_county = {
 		country_has_voting_franchise = no
 		country_tier = city_state
 
-		country_is_in_europe = yes
+		country_is_in_settler_coast = yes
 			
 	}
 
 	on_government_type_change = {
 		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
 	}
 }
 
@@ -364,12 +363,15 @@ gov_absolute_duchy = {
 		has_law = law_type:law_autocracy 
 		country_tier = principality
 	
-		country_is_in_europe = yes
+		country_is_in_settler_coast = yes
 			
 	}
 
 	on_government_type_change = {
 		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
 	}
 }
 
@@ -389,12 +391,15 @@ gov_constitutional_duchy = {
 		country_has_voting_franchise = yes
 		country_tier = principality
 	
-		country_is_in_europe = yes
+		country_is_in_settler_coast = yes
 			
 	}
 
 	on_government_type_change = {
 		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
 	}
 }
 
@@ -414,12 +419,15 @@ gov_duchy = {
 		country_has_voting_franchise = no
 		country_tier = principality
 
-		country_is_in_europe = yes
+		country_is_in_settler_coast = yes
 			
 	}
 
 	on_government_type_change = {
 		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
 	}
 }
 
@@ -437,11 +445,14 @@ gov_absolute_principality = {
 		has_law = law_type:law_monarchy
 		has_law = law_type:law_autocracy 
 		country_tier = principality
-		country_is_in_europe = no
+		country_is_in_settler_coast = no
 	}
 
 	on_government_type_change = {
 		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
 	}
 }
 
@@ -458,12 +469,15 @@ gov_principality = {
 		has_law = law_type:law_monarchy
 		country_has_voting_franchise = no
 		country_tier = principality
-		country_is_in_europe = no
+		country_is_in_settler_coast = no
 
 	}
 
 	on_government_type_change = {
 		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
 	}
 }
 
@@ -481,12 +495,15 @@ gov_constitutional_principality = {
 		has_law = law_type:law_monarchy
 		country_has_voting_franchise = yes
 		country_tier = principality
-		country_is_in_europe = no
+		country_is_in_settler_coast = no
 
 	}
 
 	on_government_type_change = {
 		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
 	}
 }
 
@@ -504,11 +521,14 @@ gov_absolute_grand_duchy = {
 		has_law = law_type:law_autocracy 
 		country_tier = grand_principality
 
-		country_is_in_europe = yes
+		country_is_in_settler_coast = yes
 	}
 
 	on_government_type_change = {
 		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
 	}
 }
 
@@ -526,11 +546,14 @@ gov_grand_duchy = {
 		country_has_voting_franchise = no
 		country_tier = grand_principality
 
-		country_is_in_europe = yes
+		country_is_in_settler_coast = yes
 	}
 
 	on_government_type_change = {
 		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
 	}
 }
 
@@ -549,12 +572,15 @@ gov_constitutional_grand_duchy = {
 		country_has_voting_franchise = yes
 		country_tier = grand_principality
 
-		country_is_in_europe = yes
+		country_is_in_settler_coast = yes
 
 	}
 
 	on_government_type_change = {
 		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
 	}
 }
 
@@ -571,11 +597,14 @@ gov_absolute_grand_principality = {
 		has_law = law_type:law_monarchy
 		has_law = law_type:law_autocracy 
 		country_tier = grand_principality
-		country_is_in_europe = no
+		country_is_in_settler_coast = no
 	}
 
 	on_government_type_change = {
 		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
 	}
 }
 
@@ -592,11 +621,14 @@ gov_grand_principality = {
 		has_law = law_type:law_monarchy
 		country_has_voting_franchise = no
 		country_tier = grand_principality
-		country_is_in_europe = no
+		country_is_in_settler_coast = no
 	}
 
 	on_government_type_change = {
 		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
 	}
 }
 
@@ -614,12 +646,15 @@ gov_constitutional_grand_principality = {
 		has_law = law_type:law_monarchy
 		country_has_voting_franchise = yes
 		country_tier = grand_principality
-		country_is_in_europe = no
+		country_is_in_settler_coast = no
 
 	}
 
 	on_government_type_change = {
 		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
 	}
 }
 

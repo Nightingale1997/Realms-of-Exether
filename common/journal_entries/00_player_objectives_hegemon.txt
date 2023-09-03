@@ -206,11 +206,7 @@ je_the_hegemon = {
 	active_update_frequency = 1
 
 	complete = {
-		game_date > 1935.12.30
-		custom_tooltip = {
-			text = je_the_hegemon_final_tt
-			country_and_subjects_population_global_share > 0.5
-		}
+		total_population_including_subjects_share >= 0.4
 	}
 
 	on_complete = {

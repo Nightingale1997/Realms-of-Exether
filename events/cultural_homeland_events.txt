@@ -9,11 +9,10 @@ cultural_homeland_events.1 = { #Majority Culture blames minority culture
 	flavor = cultural_homeland_events.1.f
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_aristocrats.bk2"
+		video = "southamerica_aristocrats"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
@@ -24,11 +23,11 @@ cultural_homeland_events.1 = { #Majority Culture blames minority culture
 	trigger = {
 		any_scope_state = {
 			is_homeland_of_country_cultures = ROOT
-			any_scope_pop = {
-				pop_is_discriminated = yes
+			any_scope_culture = {
+				culture_is_discriminated_in = ROOT
 			}
-			any_scope_pop = {
-				pop_has_primary_culture = yes
+			any_scope_culture = {
+				is_primary_culture_of = ROOT
 			}
 			average_sol < 10
 		}
@@ -38,26 +37,24 @@ cultural_homeland_events.1 = { #Majority Culture blames minority culture
 		random_scope_state = {
 			limit = {
 				is_homeland_of_country_cultures = ROOT
-				any_scope_pop = {
-					pop_is_discriminated = yes
+				any_scope_culture = {
+					culture_is_discriminated_in = ROOT
 				}
-				any_scope_pop = {
-					pop_has_primary_culture = yes
+				any_scope_culture = {
+					is_primary_culture_of = ROOT
 				}
 				average_sol < 10
 			}
 			save_scope_as = culture_state
-			random_scope_pop = {
-				limit = {
-					pop_has_primary_culture = yes
-				}
-				culture = { save_scope_as = state_majority_culture }
+			random_scope_culture = {
+				limit = { culture_is_discriminated_in = ROOT }
+				save_scope_as = state_minority_culture
 			}
 			random_scope_culture = {
-				limit = {
-					culture_is_discriminated_in = ROOT
+				limit = { 
+					is_primary_culture_of = ROOT 
 				}
-				save_scope_as = state_minority_culture
+				save_scope_as = state_majority_culture
 			}
 		}
 	}
@@ -83,7 +80,7 @@ cultural_homeland_events.1 = { #Majority Culture blames minority culture
 				months = normal_modifier_time
 				multiplier = -1
 			}
-		}
+		}			
 	}
 }
 
@@ -97,11 +94,10 @@ cultural_homeland_events.10 = { #Newspaper writes article about minority culture
 	flavor = cultural_homeland_events.10.f
 
 	event_image = {
-		video = "gfx/event_pictures/middleeast_middleclass_cafe.bk2"
+		video = "middleeast_middleclass_cafe"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/middleeast/middleclass_cafe"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
@@ -112,11 +108,11 @@ cultural_homeland_events.10 = { #Newspaper writes article about minority culture
 	trigger = {
 		any_scope_state = {
 			is_homeland_of_country_cultures = ROOT
-			any_scope_pop = {
-				pop_is_discriminated = yes
+			any_scope_culture = {
+				culture_is_discriminated_in = ROOT
 			}
-			any_scope_pop = {
-				pop_has_primary_culture = yes
+			any_scope_culture = {
+				is_primary_culture_of = ROOT
 			}
 		}
 	}
@@ -125,31 +121,23 @@ cultural_homeland_events.10 = { #Newspaper writes article about minority culture
 		random_scope_state = {
 			limit = {
 				is_homeland_of_country_cultures = ROOT
-				any_scope_pop = {
-					pop_is_discriminated = yes
+				any_scope_culture = {
+					culture_is_discriminated_in = ROOT
 				}
-				any_scope_pop = {
-					pop_has_primary_culture = yes
+				any_scope_culture = {
+					is_primary_culture_of = ROOT
 				}
 			}
 			save_scope_as = culture_state
-			random_scope_pop = {
-				limit = {
-					pop_has_primary_culture = yes
-				}
-				culture = { 
-					save_scope_as = state_majority_culture 
-				}
+			random_scope_culture = {
+				limit = { culture_is_discriminated_in = ROOT }
+				save_scope_as = state_minority_culture
 			}
-			random_scope_pop = {
-				limit = {
-					culture = { 
-						culture_is_discriminated_in = ROOT 
-					}
+			random_scope_culture = {
+				limit = { 
+					is_primary_culture_of = ROOT 
 				}
-				culture = { 
-					save_scope_as = state_minority_culture 
-				}
+				save_scope_as = state_majority_culture
 			}
 		}
 	}
@@ -164,7 +152,7 @@ cultural_homeland_events.10 = { #Newspaper writes article about minority culture
 
 	option = { #Ignore it
 		name = cultural_homeland_events.10.b
-		default_option = yes
+		default_option = yes		
 		scope:culture_state = {
 			set_variable = rising_cultural_tension
 			add_culture_standard_of_living_modifier = {
@@ -185,11 +173,10 @@ cultural_homeland_events.20 = { #Minority blocked from businesses
 	flavor = cultural_homeland_events.20.f
 
 	event_image = {
-		video = "gfx/event_pictures/middleeast_middleclass_cafe.bk2"
+		video = "middleeast_middleclass_cafe"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/middleeast/middleclass_cafe"
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
@@ -245,7 +232,7 @@ cultural_homeland_events.20 = { #Minority blocked from businesses
 
 	option = {
 		name = cultural_homeland_events.20.b
-		default_option = yes
+		default_option = yes	
 		scope:culture_state = {
 			set_variable = high_cultural_tension
 			add_culture_standard_of_living_modifier = {
@@ -267,11 +254,10 @@ cultural_homeland_events.30 = { #Minority not being employed
 	flavor = cultural_homeland_events.30.f
 
 	event_image = {
-		video = "gfx/event_pictures/middleeast_middleclass_cafe.bk2"
+		video = "middleeast_middleclass_cafe"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/middleeast/middleclass_cafe"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
@@ -330,7 +316,7 @@ cultural_homeland_events.30 = { #Minority not being employed
 
 	option = {
 		name = cultural_homeland_events.30.b
-		default_option = yes
+		default_option = yes	
 		scope:culture_state = {
 			set_variable = high_cultural_tension
 			add_culture_standard_of_living_modifier = {
@@ -352,11 +338,10 @@ cultural_homeland_events.40 = { #Minority businesses attacked
 	flavor = cultural_homeland_events.40.f
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"
+		video = "unspecific_vandalized_storefront"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/unspecific/vandalized_storefront"
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
@@ -421,7 +406,7 @@ cultural_homeland_events.40 = { #Minority businesses attacked
 
 	option = {
 		name = cultural_homeland_events.40.b
-		default_option = yes
+		default_option = yes	
 		scope:culture_state = {
 			set_variable = high_cultural_tension
 			add_culture_standard_of_living_modifier = {
@@ -442,11 +427,10 @@ cultural_homeland_events.50 = { #Minority members killed
 	flavor = cultural_homeland_events.50.f
 
 	event_image = {
-		video = "gfx/event_pictures/africa_soldiers_breaking_protest.bk2"
+		video = "africa_soldiers_breaking_protest"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/africa/soldiers_breaking_protest"
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
@@ -500,7 +484,7 @@ cultural_homeland_events.50 = { #Minority members killed
 		add_modifier = {
 			name = modifier_minority_members_defended
 			months = normal_modifier_time
-		}
+		}	
 		scope:culture_state = {
 			add_culture_standard_of_living_modifier = {
 				culture = scope:state_minority_culture
@@ -512,7 +496,7 @@ cultural_homeland_events.50 = { #Minority members killed
 
 	option = {
 		name = cultural_homeland_events.50.b
-		default_option = yes
+		default_option = yes		
 		scope:culture_state = {
 			set_variable = {
 				name = high_cultural_tension

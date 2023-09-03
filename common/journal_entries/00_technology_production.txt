@@ -255,7 +255,7 @@ je_dynamite = {
 			}
 		}
 		any_scope_building = {
-			is_building_type = building_chemical_plants
+			is_building_type = building_explosives_factory
 		}
 	}
 
@@ -299,7 +299,7 @@ je_dynamite = {
 		any_scope_building = {
 			custom_tooltip = je_shortform_building_chemical_plants_tooltip
 			filter = {
-				is_building_type = building_chemical_plants
+				is_building_type = building_explosives_factory
 			}
 			percent > 0.75
 			OR = {

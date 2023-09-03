@@ -12,11 +12,10 @@ urbanization_events.1 = {
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_factory_opening.bk2"
+		video = "southamerica_factory_opening"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/factory_opening"
 
 	icon = "gfx/interface/icons/event_icons/event_industry.dds"
 
@@ -63,11 +62,10 @@ urbanization_events.2 = {
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+		video = "europenorthamerica_london_center"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 	
@@ -119,11 +117,11 @@ urbanization_events.2 = {
 		name = urbanization_events.2.a
 		default_option = yes
 		scope:urbanization_state = {
-			add_loyalists = {
+			add_loyalists_in_state = {
 				strata = rich
 				value = 0.1
 			}
-			add_loyalists = {
+			add_loyalists_in_state = {
 				strata = middle
 				value = 0.1
 			}
@@ -137,11 +135,11 @@ urbanization_events.2 = {
 				name = luxurious_parties
 				months = long_modifier_time
 			}
-			add_loyalists = {
+			add_loyalists_in_state = {
 				strata = rich
 				value = 0.25
 			}
-			add_loyalists = {
+			add_loyalists_in_state = {
 				strata = middle
 				value = 0.25
 			}
@@ -161,11 +159,10 @@ urbanization_events.4 = {
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_factory_opening.bk2"
+		video = "southamerica_factory_opening"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/factory_opening"
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
@@ -204,6 +201,15 @@ urbanization_events.4 = {
 				name = modifier_ig_happy_urbanization
 				months = normal_modifier_time
 			}
+			if = {
+				limit = {
+					owner = {
+						c:FRA ?= this
+						has_journal_entry = je_divided_monarchists
+					}
+				}
+				fra_favor_leader_ig_dynasty = yes
+			}
 		}
 		ig:ig_industrialists = {
 			add_modifier = {
@@ -221,6 +227,15 @@ urbanization_events.4 = {
 				name = modifier_ignored_ig_urbanization
 				months = normal_modifier_time
 			}
+			if = {
+				limit = {
+					owner = {
+						c:FRA ?= this
+						has_journal_entry = je_divided_monarchists
+					}
+				}
+				fra_disfavor_leader_ig_dynasty = yes
+			}
 		}
 	}
 }
@@ -237,11 +252,10 @@ urbanization_events.5 = {
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_factory_opening.bk2"
+		video = "southamerica_factory_opening"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/factory_opening"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
@@ -296,11 +310,10 @@ urbanization_events.6 = {
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_factory_opening.bk2"
+		video = "votp_realist_household"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/factory_opening"
 
 	icon = "gfx/interface/icons/event_icons/event_industry.dds"
 
@@ -342,7 +355,7 @@ urbanization_events.6 = {
 				name = modifier_no_subsistence_farming
 				months = normal_modifier_time
 			}
-			add_radicals = {
+			add_radicals_in_state = {
 				strata = rich
 				value = medium_radicals
 			}

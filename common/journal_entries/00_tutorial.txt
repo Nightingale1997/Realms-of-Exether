@@ -899,7 +899,7 @@ je_tutorial_increase_relations = {
 je_tutorial_improve_rank = {
 	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
 	should_be_pinned_by_default = yes
-		
+	
 	immediate = {
 		if = { 
 			limit = {
@@ -950,56 +950,63 @@ je_tutorial_improve_rank = {
 			set_variable = tut_unrecognized_power
 		}
 	}
-
+	
 	complete = {
-		trigger_if = { 
-			limit = {
-				has_variable = tut_great_power
+		OR = {
+			scope:journal_entry = { is_goal_complete = yes }
+			trigger_if = { 
+				limit = {
+					has_variable = tut_great_power
+				}
+				global_country_ranking = 1
+			} 
+			trigger_else_if = {
+				limit = {
+					has_variable = tut_major_power		
+				}
+				country_rank = rank_value:great_power
 			}
-			global_country_ranking = 1
-		} 
-		
-		trigger_else_if = {
-			limit = {
-				has_variable = tut_major_power		
+			trigger_else_if = {
+				limit = {
+					has_variable = tut_minor_power
+				}
+				country_rank = rank_value:major_power
 			}
-			country_rank = rank_value:great_power
+			trigger_else_if = {
+				limit = {
+					has_variable = tut_insignificant_power
+				}
+				country_rank = rank_value:minor_power
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = tut_unrecognized_major_power
+				}
+				country_rank > rank_value:unrecognized_major_power
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = tut_unrecognized_regional_power
+				}
+				country_rank >= rank_value:unrecognized_major_power
+			}
+			trigger_else_if = {
+				limit = {
+					has_variable = tut_unrecognized_power
+				}
+				country_rank >= rank_value:unrecognized_regional_power
+			}
 		}
-		
-		trigger_else_if = {
-			limit = {
-				has_variable = tut_minor_power
-			}
-			country_rank = rank_value:major_power
-		}
-		
-		trigger_else_if = {
-			limit = {
-				has_variable = tut_insignificant_power
-			}
-			country_rank = rank_value:minor_power
-		}
+	}
+	
+	current_value = {
+		value = prestige
+	}
 
-		trigger_else_if = {
-			limit = {
-				has_variable = tut_unrecognized_major_power
-			}
-			country_rank > rank_value:unrecognized_major_power
-		}
-		
-		trigger_else_if = {
-			limit = {
-				has_variable = tut_unrecognized_regional_power
-			}
-			country_rank >= rank_value:unrecognized_major_power
-		}
-
-		trigger_else_if = {
-			limit = {
-				has_variable = tut_unrecognized_power
-			}
-			country_rank >= rank_value:unrecognized_regional_power
-		}
+	goal_add_value = {
+		value = prestige
+		multiply = 1
+		min = 100
 	}
 	
 	weight = 1028
@@ -1422,16 +1429,45 @@ je_tutorial_declare_an_interest = {
 
 	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
 
+	immediate = {
+		scope:journal_entry = {
+			set_variable = {
+				name = num_weeks_in_progress
+				value = 0
+			}
+		}
+	}
+
+	on_weekly_pulse = {
+		effect = {
+			scope:journal_entry = { 
+				if = {
+					limit = {
+						is_progressing = yes 
+					}
+					change_variable = {
+						name = num_weeks_in_progress
+						add = 1
+					}
+				}
+			}
+		}
+	}
+
+	is_progressing = {
+		has_interest_marker_in_region = scope:target.capital.region
+	}
+	
 	complete = {
 		scope:journal_entry = { is_goal_complete = yes }
 	}
 	
-	current_value = num_active_declared_interests
+	current_value = {
+		value = scope:journal_entry.var:num_weeks_in_progress
+	}
 	
-	goal_add_value = 1
-
-	is_progressing = {
-		num_interests > scope:journal_entry.goal_value
+	goal_add_value = {
+		value = 12
 	}
 
 	on_complete = {
@@ -1499,20 +1535,6 @@ je_tutorial_make_peace = {
 	transferable = yes
 	should_update_on_player_command = yes
 	should_be_pinned_by_default = yes
-}
-
-je_tutorial_reach_end_date = {
-	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
-	should_be_pinned_by_default = yes
-	active_update_frequency = 1
-	
-	complete = {
-		game_date > 1935.12.30
-	}
-	
-	weight = 1070
-	transferable = yes
-	should_update_on_player_command = yes
 }
 
 je_tutorial_research_technology = {

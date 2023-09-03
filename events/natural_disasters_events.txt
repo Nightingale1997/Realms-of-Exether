@@ -11,11 +11,10 @@ natural_disaster_events.1 = { #Small Earthquake
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_devastation.bk2"
+		video = "unspecific_devastation"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/unspecific/devastation"
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
@@ -40,7 +39,7 @@ natural_disaster_events.1 = { #Small Earthquake
 		name = natural_disaster_events.1.a
 		default_option = yes
 		scope:earthquake_state.state_region = {
-			add_devastation = 25
+			add_devastation = 20
 		}
 		custom_tooltip = natural_disaster_variable_tt
 		hidden_effect = {
@@ -67,7 +66,7 @@ natural_disaster_events.1 = { #Small Earthquake
 		add_modifier = {
 			name = modifier_earthquake_relief
 			multiplier = money_amount_multiplier_medium
-			months = normal_modifier_time
+			months = short_modifier_time
 		}
 		scope:earthquake_state.state_region = {
 			add_devastation = 10
@@ -84,11 +83,10 @@ natural_disaster_events.2 = { #Small Flood
 	flavor = natural_disaster_events.2.f
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_devastation.bk2"
+		video = "unspecific_devastation"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/unspecific/devastation"
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
@@ -115,7 +113,7 @@ natural_disaster_events.2 = { #Small Flood
 		name = natural_disaster_events.2.a
 		default_option = yes
 		scope:flood_state.state_region = {
-			add_devastation = 25
+			add_devastation = 20
 		}
 		custom_tooltip = natural_disaster_variable_tt
 		hidden_effect = {
@@ -142,7 +140,7 @@ natural_disaster_events.2 = { #Small Flood
 		add_modifier = {
 			name = modifier_flood_relief
 			multiplier = money_amount_multiplier_medium
-			months = normal_modifier_time
+			months = short_modifier_time
 		}
 		scope:flood_state.state_region = {
 			add_devastation = 10
@@ -159,11 +157,10 @@ natural_disaster_events.3 = { #Mega Flood
 	flavor = natural_disaster_events.3.f
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_devastation.bk2"
+		video = "unspecific_devastation"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/unspecific/devastation"
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
@@ -210,7 +207,7 @@ natural_disaster_events.3 = { #Mega Flood
 		name = natural_disaster_events.3.a
 		default_option = yes
 		scope:mega_flood_state.state_region = {
-			add_devastation = 100
+			add_devastation = 40
 		}
 		custom_tooltip = natural_disaster_variable_tt
 		hidden_effect = {
@@ -240,7 +237,7 @@ natural_disaster_events.3 = { #Mega Flood
 			months = normal_modifier_time
 		}
 		scope:mega_flood_state.state_region = {
-			add_devastation = 80
+			add_devastation = 20
 		}
 	}
 }
@@ -256,11 +253,10 @@ natural_disaster_events.4 = { #Mega Earthquake
 	flavor = natural_disaster_events.4.f
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_devastation.bk2"
+		video = "unspecific_devastation"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/unspecific/devastation"
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
@@ -309,7 +305,7 @@ natural_disaster_events.4 = { #Mega Earthquake
 		name = natural_disaster_events.4.a
 		default_option = yes
 		scope:mega_earthquake_state.state_region = {
-			add_devastation = 100
+			add_devastation = 40
 		}
 		custom_tooltip = natural_disaster_variable_tt
 		hidden_effect = {
@@ -339,7 +335,7 @@ natural_disaster_events.4 = { #Mega Earthquake
 			months = normal_modifier_time
 		}
 		scope:mega_earthquake_state.state_region = {
-			add_devastation = 80
+			add_devastation = 20
 		}
 	}
 }
@@ -356,18 +352,25 @@ natural_disaster_events.5 = { #Crop Failure
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/asia_dead_cattle_poor_harvest.bk2"
+		video = "asia_dead_cattle_poor_harvest"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/asia/dead_cattle_poor_harvest"
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
 	trigger = {
 		any_scope_state = {
 			any_scope_building = {
-				is_plantation_building = yes
+				OR = {
+  						is_farm_building = yes
+  						is_plantation_building = yes
+  					}
+
+			}
+			NOR = {
+				has_modifier = modifier_crop_failure
+				has_modifier = modifier_crop_failure_relief_effect
 			}
 		}
 	}
@@ -376,9 +379,16 @@ natural_disaster_events.5 = { #Crop Failure
 		random_scope_state = {
 			limit = {
 				any_scope_building = {
-					is_plantation_building = yes
+					OR = {
+  						is_farm_building = yes
+  						is_plantation_building = yes
+  					}
 				}
-			}
+				NOR = {
+					has_modifier = modifier_crop_failure
+					has_modifier = modifier_crop_failure_relief_effect
+					}
+				}
 			save_scope_as = crop_fail_state
 			random_scope_building = {
 				limit = {
@@ -447,11 +457,10 @@ natural_disaster_events.6 = { #Tropical Cyclone
 	flavor = natural_disaster_events.6.f
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_devastation.bk2"
+		video = "unspecific_devastation"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/unspecific/devastation"
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
@@ -480,7 +489,7 @@ natural_disaster_events.6 = { #Tropical Cyclone
 		name = natural_disaster_events.6.a
 		default_option = yes
 		scope:cyclone_state.state_region = {
-			add_devastation = 25
+			add_devastation = 20
 		}
 		custom_tooltip = natural_disaster_variable_tt
 		hidden_effect = {
@@ -507,7 +516,7 @@ natural_disaster_events.6 = { #Tropical Cyclone
 		add_modifier = {
 			name = modifier_cyclone_relief
 			multiplier = money_amount_multiplier_small
-			months = normal_modifier_time
+			months = short_modifier_time
 		}
 		scope:cyclone_state.state_region = {
 			add_devastation = 10
@@ -526,11 +535,10 @@ natural_disaster_events.7 = { #Small Eruption
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_devastation.bk2"
+		video = "unspecific_devastation"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/unspecific/devastation"
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
@@ -564,7 +572,7 @@ natural_disaster_events.7 = { #Small Eruption
 		}
 		else = {
 			scope:volcanic_state.state_region = {
-				add_devastation = 25
+				add_devastation = 20
 			}
 		}
 		custom_tooltip = natural_disaster_variable_tt
@@ -592,7 +600,7 @@ natural_disaster_events.7 = { #Small Eruption
 		add_modifier = {
 			name = modifier_volcano_relief
 			multiplier = money_amount_multiplier_small
-			months = normal_modifier_time
+			months = short_modifier_time
 		}
 		if = {
 			limit = {
@@ -617,11 +625,10 @@ natural_disaster_events.8 = { #Mega Eruption
 	flavor = natural_disaster_events.8.f
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_devastation.bk2"
+		video = "unspecific_devastation"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/unspecific/devastation"
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
@@ -670,7 +677,7 @@ natural_disaster_events.8 = { #Mega Eruption
 		name = natural_disaster_events.8.a
 		default_option = yes
 		scope:mega_volcanic_state.state_region = {
-			add_devastation = 100
+			add_devastation = 40
 		}
 		custom_tooltip = natural_disaster_variable_tt
 		hidden_effect = {
@@ -700,7 +707,7 @@ natural_disaster_events.8 = { #Mega Eruption
 			months = normal_modifier_time
 		}
 		scope:mega_volcanic_state.state_region = {
-			add_devastation = 80
+			add_devastation = 20
 		}
 	}
 }

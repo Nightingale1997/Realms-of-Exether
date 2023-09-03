@@ -8,12 +8,13 @@ slavery_law_events.1 = { # Advancing the cause of slavery
 	desc = slavery_law_events.1.d
 	flavor = slavery_law_events.1.f
 
+	category = enactment
+
 	event_image = {
-		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"
+		video = "unspecific_ruler_speaking_to_people"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
@@ -99,12 +100,13 @@ slavery_law_events.2 = { # debating slavery
 	desc = slavery_law_events.2.d
 	flavor = slavery_law_events.2.f
 
+	category = enactment
+
 	event_image = {
-		video = "gfx/event_pictures/southamerica_election.bk2"
+		video = "southamerica_election"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/election"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
@@ -190,14 +192,15 @@ slavery_law_events.3 = { # Stall event
 	desc = slavery_law_events.3.d
 	flavor = slavery_law_events.3.f
 
+	category = enactment
+
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_slaves_night.bk2"
+		video = "southamerica_slaves_night"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/slaves_night"
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
@@ -281,12 +284,13 @@ slavery_law_events.4 = { # Advancing the cause of Abolition
 	desc = slavery_law_events.4.d
 	flavor = slavery_law_events.4.f
 
+	category = enactment
+
 	event_image = {
-		video = "gfx/event_pictures/southamerica_slaves_night.bk2"
+		video = "southamerica_slaves_night"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/slaves_night"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
@@ -321,7 +325,7 @@ slavery_law_events.4 = { # Advancing the cause of Abolition
 			}
 		}
 		currently_enacting_law = {
-			save_scope_as = enacting_law_scope
+			save_scope_as = current_law_scope
 		}
 	}
 
@@ -367,12 +371,13 @@ slavery_law_events.5 = { # debating abolition
 	desc = slavery_law_events.5.d
 	flavor = slavery_law_events.5.f
 
+	category = enactment
+
 	event_image = {
-		video = "gfx/event_pictures/southamerica_election.bk2"
+		video = "southamerica_election"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/election"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
@@ -402,7 +407,7 @@ slavery_law_events.5 = { # debating abolition
 
 	immediate = {
 		currently_enacting_law = {
-			save_scope_as = enacting_law_scope
+			save_scope_as = current_law_scope
 		}
 		random_interest_group = {
 			limit = {
@@ -459,16 +464,17 @@ slavery_law_events.6 = { # Stall event
 	desc = slavery_law_events.6.d
 	flavor = slavery_law_events.6.f
 
+	category = enactment
+
 	duration = 3
 
 	cooldown = { months = normal_modifier_time }
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_aristocrats.bk2"
+		video = "southamerica_aristocrats"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
@@ -490,7 +496,7 @@ slavery_law_events.6 = { # Stall event
 			days = 730 # two years
 		}
 		currently_enacting_law = {
-			save_scope_as = enacting_law_scope
+			save_scope_as = current_law_scope
 		}
 	}
 
@@ -518,6 +524,107 @@ slavery_law_events.6 = { # Stall event
 					name = plantation_reaction_stall_success
 				}
 			}
+		}
+	}
+}
+
+######
+
+#Forgiveness and Forgetting
+slavery_law_events.7 = {
+	type = country_event
+	placement = root
+	title = slavery_law_events.7.t
+	desc = slavery_law_events.7.d
+	flavor = slavery_law_events.7.f
+
+	category = enactment
+
+	duration = 3
+
+	cooldown = { months = long_modifier_time }
+
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	trigger = {
+		has_law = law_type:law_slavery_banned
+		any_interest_group = {
+			has_ideology = ideology:ideology_pro_slavery
+		}
+		OR = {	
+			NOT = {
+				this = c:USA
+				has_variable = slavery_recently_abolished
+			}
+			AND = {
+				this = c:USA
+				OR = {
+					has_variable = je_acw_countdown_complete
+					NOT = {
+						has_journal_entry = je_acw_countdown
+					}	
+				}
+			}
+		}
+	}
+
+	immediate = {
+		random_interest_group = {
+			limit = {
+				has_ideology = ideology:ideology_pro_slavery
+			}
+			save_scope_as = slaver_ig
+		}
+
+		random_law = {
+			limit = { type = law_type:law_slavery_banned }
+			save_scope_as = slavery_banned_scope
+		}
+	}
+
+	option = {
+		name = slavery_law_events.7.a
+		default_option = yes
+		scope:slaver_ig = {
+			add_modifier = {
+				name = modifier_slavery_forgotten
+				months = normal_modifier_time
+			}
+		}
+		add_modifier = {
+			name = modifier_slavery_whitewashing
+			months = long_modifier_time
+		}
+		every_interest_group = {
+			limit = {
+				has_ideology = ideology:ideology_pro_slavery
+			}
+			remove_ideology = ideology_pro_slavery
+		}
+	}
+	option = { 
+		name = slavery_law_events.7.b
+		scope:slaver_ig = {
+			add_modifier = {
+				name = modifier_slavery_forgotten_bad
+				months = normal_modifier_time
+			}
+		}
+		add_radicals = {
+			value = small_radicals
+			strata = rich
+		}
+		every_interest_group = {
+			limit = {
+				has_ideology = ideology:ideology_pro_slavery
+			}
+			remove_ideology = ideology_pro_slavery
 		}
 	}
 }

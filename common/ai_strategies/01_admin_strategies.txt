@@ -3,8 +3,6 @@
 	
 	type = administrative
 
-	wanted_construction_ratio = 2000000 # 1 level of construction sector per 2 million incorporated population
-
 	building_group_weights = {
 		bg_agriculture = 2.0
 		bg_ranching = 2.0
@@ -84,55 +82,11 @@
 	}
 }
 
-ai_strategy_plantation_economy = {
-	icon = "gfx/interface/icons/ai_strategy_icons/agricultural_expansion.dds"
-	
-	type = administrative
-
-	wanted_construction_ratio = 2000000 # 1 level of construction sector per 2 million incorporated population
-	
-	goods_stances = {
-		fruit = { stance = wants_export }
-		fabric = { stance = wants_export }
-		sugar = { stance = wants_export }
-		coffee = { stance = wants_export }
-		tea = { stance = wants_export }
-		opium = { stance = wants_export }
-		tobacco = { stance = wants_export }
-		dye = { stance = wants_export }
-		silk = { stance = wants_export }
-	}	
-
-	building_group_weights = {
-		bg_plantations = 2.0
-		bg_manufacturing = 0.5
-	}
-	
-	weight = {
-		value = 10			
-
-		if = {
-			limit = { is_country_type = unrecognized }
-			multiply = 0.5
-		}
-
-		if = {
-			limit = { 
-				exists = ig:ig_landowners
-				ig:ig_landowners = { is_powerful = yes } 
-			}
-			multiply = 1.5
-		}		
-	}
-}
-
 ai_strategy_resource_expansion = {
 	icon = "gfx/interface/icons/ai_strategy_icons/resource_expansion.dds"
 	
 	type = administrative	
 
-	wanted_construction_ratio = 1500000 # 1 level of construction sector per 1.5 million incorporated population
-	
 	building_group_weights = {
 		bg_rubber = 1.5
 		bg_oil_extraction = 1.5
@@ -152,12 +106,6 @@ ai_strategy_resource_expansion = {
 				has_technology_researched = nitroglycerin
 			}			
 		}	
-		fertilizer = { # Explosives byproduct
-			stance = wants_export   
-			trigger = {
-				has_technology_researched = nitroglycerin
-			}				
-		}
 		tools = { stance = wants_high_supply }
 		coal = { stance = wants_export }
 		iron = { stance = wants_export }
@@ -175,6 +123,16 @@ ai_strategy_resource_expansion = {
 	
 	weight = {
 		value = 10		
+		
+		if = {
+			limit = { 
+				OR = {
+					country_is_in_settler_coast = yes
+					#country_is_in_north_america = yes
+				}
+			}
+			add = 20
+		}
 		
 		if = {
 			limit = { is_country_type = unrecognized }
@@ -220,11 +178,6 @@ ai_strategy_industrial_expansion = {
 	
 	type = administrative
 	
-	wanted_construction_ratio = 1000000 # 1 level of construction sector per 1 million incorporated population
-	
-	desired_tax_level = high
-	max_tax_level = very_high
-	
 	subsidies = {
 		building_motor_industry = wants_to_have
 		building_tooling_workshops = wants_to_have
@@ -237,11 +190,20 @@ ai_strategy_industrial_expansion = {
 	}
 	
 	goods_stances = {
-		electricity = { stance = wants_high_supply }
-		oil = { stance = wants_high_supply }
+		rubber = { 
+			stance = wants_high_supply 
+			trigger = {
+				has_technology_researched = rubber_mastication
+			}			
+		}
+		oil = { 
+			stance = wants_high_supply 
+			trigger = {
+				has_technology_researched = pumpjacks
+			}			
+		}
 		dye = { stance = wants_high_supply }
 		silk = { stance = wants_high_supply }
-		rubber = { stance = wants_high_supply }
 		tools = { stance = wants_high_supply }
 		coal = { stance = wants_high_supply }
 		iron = { stance = wants_high_supply }
@@ -263,7 +225,24 @@ ai_strategy_industrial_expansion = {
 	}
 	
 	weight = {
-		value = 10	
+		value = 10
+				
+		if = {
+			limit = { 
+				OR = {
+					country_is_in_settler_coast = yes
+					#country_is_in_north_america = yes
+				}
+			}
+			add = 20
+		}
+		
+		if = {
+			limit = {
+				has_variable = japan_forced_to_open_market
+			}
+			add = 1000
+		}		
 		
 		if = {
 			limit = { is_country_type = unrecognized }
@@ -275,23 +254,28 @@ ai_strategy_industrial_expansion = {
 				exists = ig:ig_industrialists
 				ig:ig_industrialists = { is_powerful = yes } 
 			}
-			multiply = 1.5
+			multiply = 2.0
 		}	
 		
 		if = { 
-			limit = { literacy_rate < 0.25 }
+			limit = { literacy_rate < 0.20 }
 			multiply = 0.5
 		}
 		
 		if = { 
-			limit = { literacy_rate < 0.35 }
+			limit = { literacy_rate < 0.40 }
 			multiply = 0.5
 		}
 
 		if = { 
-			limit = { literacy_rate >= 0.50 }
+			limit = { literacy_rate >= 0.60 }
 			multiply = 1.5
-		}	
+		}
+
+		if = { 
+			limit = { literacy_rate >= 0.80 }
+			multiply = 1.5
+		}			
 
 		if = {
 			limit = {
@@ -307,8 +291,6 @@ ai_strategy_placate_population = {
 	
 	type = administrative
 
-	wanted_construction_ratio = 10000000 # 1 level of construction sector per 10 million incorporated population
-	
 	desired_tax_level = low
 	max_tax_level = medium
 	min_tax_level = very_low

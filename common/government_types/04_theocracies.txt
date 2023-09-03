@@ -1,49 +1,24 @@
-﻿#gov_dalai_lama = {
-#	transfer_of_power = dictatorial
-#	
-#	male_ruler = "RULER_TITLE_DALAI_LAMA"
-#	female_ruler = "" # Empty on purpose
-#	
-#	possible = {
-#		has_law = law_type:law_theocracy
-#		exists = c:TIB
-#		c:TIB = ROOT
-#	}	
-#}
+﻿gov_contechne = {
+	transfer_of_power = dictatorial
+	
+	male_ruler = "RULER_TITLE_ARCHMAGOS"
+	female_ruler = "RULER_TITLE_ARCHMAGOS"
 
-#gov_papacy = {
-#	transfer_of_power = dictatorial
-#
-#	male_ruler = "RULER_POPE"
-#	female_ruler = "RULER_POPE"
-#	
-#	possible = {
-#		has_law = law_type:law_theocracy
-#		OR = {
-#			AND = {
-#				exists = c:PAP
-#				c:PAP = ROOT
-#			}
-#			AND = {
-#				exists = c:ITA
-#				c:ITA = ROOT
-#			}
-#		}
-#	}
-#}
+	male_heir = "RULER_TITLE_MAGOS"
+	female_heir = "RULER_TITLE_MAGOS"
+	
+	possible = {	
+		has_law = law_type:law_theocracy
+		has_law = law_type:law_technocracy
+	}		
 
-#gov_bhutanese_dual_system_dharma = {
-#	transfer_of_power = dictatorial
-#
-#	male_ruler = "RULER_TITLE_DHARMA_RAJA"
-#	female_ruler = "RULER_TITLE_DHARMA_RAJA"
-#	
-#	possible = {
-#		exists = c:BHU 
-#		c:BHU = ROOT
-#		has_law = law_type:law_theocracy
-#	}
-#}
+	on_government_type_change = {
+		change_to_dictatorial = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_dictatorial = yes
+	}
+}
 
 gov_theocratic_oligarchy = {
 	transfer_of_power = dictatorial
@@ -54,6 +29,13 @@ gov_theocratic_oligarchy = {
 	possible = {
 		has_law = law_type:law_theocracy
 		has_law = law_type:law_oligarchy
+	}
+
+	on_government_type_change = {
+		change_to_dictatorial = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_dictatorial = yes
 	}
 }
 
@@ -67,6 +49,13 @@ gov_theocracy = {
 		has_law = law_type:law_theocracy
 		country_has_voting_franchise = no
 	}
+
+	on_government_type_change = {
+		change_to_dictatorial = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_dictatorial = yes
+	}
 }
 
 gov_theocratic_democracy = {
@@ -79,6 +68,35 @@ gov_theocratic_democracy = {
 		has_law = law_type:law_theocracy
 		country_has_voting_franchise = yes
 	}
+
+	on_government_type_change = {
+		change_to_dictatorial = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_dictatorial = yes
+	}
+}
+
+gov_theocratic_single_party_state = {
+	transfer_of_power = dictatorial
+
+	male_ruler = "RULER_HIGH_PRIEST"
+	female_ruler = "RULER_HIGH_PRIESTESS"
+	
+	possible = {
+		has_law = law_type:law_theocracy
+		country_has_voting_franchise = yes
+		NOT = { 
+			has_law = law_type:law_single_party_state
+		}
+	}
+
+	on_government_type_change = {
+		change_to_dictatorial = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_dictatorial = yes
+	}
 }
 
 gov_theocratic_dictatorship = {
@@ -90,6 +108,13 @@ gov_theocratic_dictatorship = {
 	possible = {
 		has_law = law_type:law_theocracy
 		has_law = law_type:law_autocracy 
+	}
+
+	on_government_type_change = {
+		change_to_dictatorial = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_dictatorial = yes
 	}
 }
 
