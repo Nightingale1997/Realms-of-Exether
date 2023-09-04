@@ -285,7 +285,7 @@ african_clothes_trigger = {
 	scope:character = {
 		culture = {
 			OR = {
-				has_discrimination_trait = namkhazen_heritage
+				has_discrimination_trait = qiin_culture_group
 			}
 		}
 	}     
@@ -351,7 +351,7 @@ arabic_clothes_trigger = {
 		OR = {
 			culture = {
 				OR = {
-					has_discrimination_trait = orc_heritage
+					has_discrimination_trait = namkhazen_heritage
 				}
 			}
 		}
@@ -374,9 +374,20 @@ european_clothes_trigger = {
 			has_discrimination_trait = human_heritage
 		}
 		NOT = {
-			culture = {
-				has_discrimination_trait = thalorian_culture_group
+			OR = {
+				culture = {
+					OR = {
+						has_discrimination_trait = thalorian_culture_group
+						has_discrimination_trait = qiin_culture_group
+					}
+					
+				}
+				culture = cu:glethach
+				culture = cu:anwarthi
+				culture = cu:qinnaat
+				culture = cu:azmaraan
 			}
+
 		}
 	}
 }
@@ -547,7 +558,13 @@ republic_clothes_trigger = {
 overweight_trigger = {
 	exists = scope:character
 	scope:character = {
-     	has_trait = expensive_tastes
+		OR = {
+			culture = {
+				has_discrimination_trait = orc_heritage
+			}  
+			has_trait = expensive_tastes
+		}
+  
      }
 }
 
@@ -587,7 +604,7 @@ arabic_clothes_pop_trigger = {
 	scope:pop = {
 		OR = {
 			culture = {
-				has_discrimination_trait = orc_heritage
+				has_discrimination_trait = namkhazen_heritage
 			}   
 		}
 	}
@@ -599,7 +616,7 @@ indigenous_oceanic_clothes_trigger = {
 			exists = scope:pop
 			scope:pop = {
 				culture = {
-					has_discrimination_trait = naga
+					has_discrimination_trait = orc_heritage
 				}   
 			}
 		}
@@ -607,7 +624,7 @@ indigenous_oceanic_clothes_trigger = {
 			exists = scope:character
 			scope:character = {
 				culture = {
-					has_discrimination_trait = naga
+					has_discrimination_trait = orc_heritage
 				}   
 			}
 		}
@@ -618,7 +635,6 @@ circumpolar_clothes_pop_trigger = {
 	exists = scope:pop
 	scope:pop = {
 		OR = {
-			culture = cu:glethach
 			culture = {
 				has_discrimination_trait = giant_heritage
 			}
@@ -628,9 +644,19 @@ circumpolar_clothes_pop_trigger = {
 }
 
 sami_clothes_pop_trigger = {
-	exists = scope:pop
-	scope:pop = {
-		culture = cu:toftir_giant
+	OR = {
+		AND = {
+			exists = scope:character
+			scope:character = {
+				culture = cu:toftir_giant
+			}
+		}
+		AND = {
+			exists = scope:pop
+			scope:pop = {
+				culture = cu:toftir_giant
+			}
+		}
 	}
 }
 
@@ -683,15 +709,25 @@ south_american_clothes_pop_trigger = {
 }
 
 integrated_south_american_natives_pop_trigger = { # Represents those South American native groups that had long been integrated into wider South and Central American society.
-	exists = scope:pop
-	scope:pop = {
-		culture = {
-			OR = {
-				this = cu:qinnaat
-				this = cu:azmaraan
+	OR = {
+		AND = {
+			exists = scope:pop
+			scope:pop = {
+				culture = {
+					has_discrimination_trait = new_khussite_culture_group
+				}  
 			}
 		}
-	}
+		AND = {
+			exists = scope:character
+			scope:character = {
+				culture = {
+					has_discrimination_trait = thalorian_culture_group
+				}  
+			}
+		}
+	}	
+
 }
 
 cold_clothes_pop_trigger = {
@@ -699,6 +735,7 @@ cold_clothes_pop_trigger = {
 	scope:pop = {
 		OR = {
 			has_pop_culture = umbradorn
+			has_pop_culture = glethach
 		}
 	}
 }
@@ -707,7 +744,9 @@ japanese_clothes_pop_trigger = {
 	exists = scope:pop
 	scope:pop = {
 		OR = {
-			culture = cu:jazamandroso
+					culture = {
+			has_discrimination_trait = hellborn_heritage
+		}
 		}
 	}
 }
@@ -717,7 +756,9 @@ japanese_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
           OR = {
-			culture = cu:jazamandroso
+					culture = {
+			has_discrimination_trait = hellborn_heritage
+		}
           }
 	}
 }
@@ -748,10 +789,7 @@ slavic_clothes_trigger = {
 	scope:character ?= {
 		culture = {
 			OR = {
-				has_discrimination_trait = slavic
-				has_discrimination_trait = east_slavic
-				has_discrimination_trait = west_slavic
-				has_discrimination_trait = jugoslav
+				has_discrimination_trait = dwarf_heritage
 			}
 		}   
 	}
@@ -910,13 +948,26 @@ christian_clothes_pop_trigger = {
 }
 
 buddhist_clothes_pop_trigger = {
-     exists = scope:pop
-     scope:pop = {
-  		OR = {
-			religion = rel:mortals_burden
+	OR = {
+		AND = {
+			exists = scope:character
+			scope:character = {
+				OR = {
+					religion = rel:mortals_burden
+				}
+			}
 		}
-     }
+		AND = {
+			exists = scope:pop
+			scope:pop = {
+				OR = {
+				  religion = rel:mortals_burden
+			  }
+		   }
+		}
+	}
 }
+
 
 slightly_underweight_pop_trigger = {
 	exists = scope:pop
@@ -941,29 +992,71 @@ slightly_underweight_pop_trigger = {
 }
 
 underweight_pop_trigger = {
-	exists = scope:pop
-	scope:pop = {
-		OR = {
-			AND = {
-				pop_weight_modifier_scale < 25
-				standard_of_living >= 5
-				standard_of_living < 10
-			}		
-			AND = {
-				standard_of_living < 5
-				pop_weight_modifier_scale >= 25
-				pop_weight_modifier_scale < 50
-			}		
-		}	
-    }
+	
+	OR = {
+		AND = {
+			exists = scope:pop
+			scope:pop = {
+				OR = {
+					culture = {
+						has_discrimination_trait = elf_heritage
+					}  
+					AND = {
+						pop_weight_modifier_scale < 25
+						standard_of_living >= 5
+						standard_of_living < 10
+					}		
+					AND = {
+						standard_of_living < 5
+						pop_weight_modifier_scale >= 25
+						pop_weight_modifier_scale < 50
+					}		
+				}	
+			}
+		}
+		AND = {
+			exists = scope:character
+			scope:character = {
+				OR = {
+					culture = {
+						has_discrimination_trait = elf_heritage
+					}  	
+				}	
+			}
+		}
+	}
+
 }
 
 very_underweight_pop_trigger = {
-	exists = scope:pop
-	scope:pop = {
-		pop_weight_modifier_scale < 25
-		standard_of_living < 5	
-    }
+	OR = {
+		AND = {
+			exists = scope:character
+			scope:character = {
+				OR = {
+					culture = {
+						has_discrimination_trait = namkhazen_heritage
+					}  
+					culture = cu:nightwalker
+					culture = cu:wastecrawler
+				}
+
+			}
+		}
+		AND = {
+			exists = scope:pop
+			scope:pop = {
+				OR = {
+					culture = {
+						has_discrimination_trait = namkhazen_heritage
+					}  
+					pop_weight_modifier_scale < 25
+					standard_of_living < 5	
+				}
+			}
+		}
+	}
+
 }
 
 slightly_overweight_pop_trigger = {
@@ -994,6 +1087,9 @@ overweight_pop_trigger = {
 	exists = scope:pop
 	scope:pop = {
 		OR = {
+			culture = {
+				has_discrimination_trait = orc_heritage
+			}  
 			AND = {
 				standard_of_living >= 15
 				standard_of_living < 20
@@ -1015,20 +1111,36 @@ overweight_pop_trigger = {
 }
 
 very_overweight_pop_trigger = {
-	exists = scope:pop
-	scope:pop = {
-		OR = {
-			AND = {
-				standard_of_living >= 20
-				standard_of_living < 40
-				pop_weight_modifier_scale >= 95
+
+	OR = {
+		AND = {
+			exists = scope:character
+			scope:character = {
+					culture = {
+						has_discrimination_trait = orc_heritage
+					}  
+					has_trait = expensive_tastes
+			 }
+		}
+
+		AND = {
+			exists = scope:pop
+			scope:pop = {
+				OR = {
+					AND = {
+						standard_of_living >= 20
+						standard_of_living < 40
+						pop_weight_modifier_scale >= 95
+					}
+					AND = {
+						standard_of_living >= 40
+						pop_weight_modifier_scale >= 90
+					}				
+				}	
 			}
-			AND = {
-				standard_of_living >= 40
-				pop_weight_modifier_scale >= 90
-			}				
-		}	
-    }
+		}
+	}
+
 }
 
 struggling_pop_trigger = {
@@ -1045,20 +1157,34 @@ agitator_character_trigger = {
 }
 
 should_be_naked_trigger = {
-	exists = scope:pop
-	scope:pop = {
-       	OR = {
-			is_pop_type = farmers
-			is_pop_type = peasants
-			is_pop_type = laborers
-			is_pop_type = slaves
+
+	OR = {
+		AND = {
+			exists = scope:pop
+			scope:pop = {
+				   OR = {
+					is_pop_type = farmers
+					is_pop_type = peasants
+					is_pop_type = laborers
+					is_pop_type = slaves
+					culture = {
+						has_discrimination_trait = monstrous_heritage
+					}
+				}
+			}
 		}
-		OR = {
-			culture = {
-				has_discrimination_trait = monstrous_heritage
+		AND = {
+			exists = scope:character
+			scope:character = {
+				   OR = {
+					culture = {
+						has_discrimination_trait = monstrous_heritage
+					}
+				}
 			}
 		}
 	}
+
 }
 
 ## Can only be checked in the interface since the setting isn't synced

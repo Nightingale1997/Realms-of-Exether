@@ -4810,7 +4810,7 @@ christian_religious_clothes = {
                 christian_clothes_pop_trigger = yes
                 NOT = {
                     scope:pop ?= {
-                        religion = rel:orc_mother
+                        religion = rel:cult_of_the_sun
                     }
                 }
                 clergy_clothes_pop_trigger = yes
@@ -4837,7 +4837,7 @@ semitic_religious_clothes = {
                 OR = {
                     muslim_clothes_pop_trigger = yes
                     scope:pop ?= {
-                        religion = rel:orc_mother
+                        religion = rel:house_of_fate
                     }
                     AND = {
                         european_clothes_pop_trigger = no
