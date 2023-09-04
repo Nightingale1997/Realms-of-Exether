@@ -1,0 +1,69 @@
+pdxmesh = {
+        name = "sword_diamond_mesh"
+        file = "hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "skins_textures/held_items/sword_diamond.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/held_items.shader"
+        }
+    }
+    entity = {
+        name = "sword_diamond_entity"
+        pdxmesh = "sword_diamond_mesh"
+    }
+
+    pdxmesh = {
+        name = "sword_iron_mesh"
+        file = "hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "skins_textures/held_items/sword_iron.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/held_items.shader"
+        }
+    }
+    entity = {
+        name = "sword_iron_entity"
+        pdxmesh = "sword_iron_mesh"
+    }
+
+    pdxmesh = {
+        name = "sword_stone_mesh"
+        file = "hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "skins_textures/held_items/sword_stone.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/held_items.shader"
+        }
+    }
+    entity = {
+        name = "sword_stone_entity"
+        pdxmesh = "sword_stone_mesh"
+    }
+
+    pdxmesh = {
+        name = "sword_wood_mesh"
+        file = "hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "skins_textures/held_items/sword_wood.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/held_items.shader"
+        }
+    }
+    entity = {
+        name = "sword_wood_entity"
+        pdxmesh = "sword_wood_mesh"
+    }
+
+    

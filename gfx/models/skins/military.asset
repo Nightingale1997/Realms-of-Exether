@@ -1,0 +1,103 @@
+pdxmesh = {
+        name = "top_blue_soldier_mesh"
+        file = "hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "skins_textures/clothes/military/top_blue_soldier.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/military.shader"
+        }
+    }
+    entity = {
+        name = "top_blue_soldier_entity"
+        pdxmesh = "top_blue_soldier_mesh"
+    }
+
+    pdxmesh = {
+        name = "top_diamond_full_mesh"
+        file = "hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "skins_textures/clothes/military/top_diamond_full.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/military.shader"
+        }
+    }
+    entity = {
+        name = "top_diamond_full_entity"
+        pdxmesh = "top_diamond_full_mesh"
+    }
+
+    pdxmesh = {
+        name = "top_green_soldier_mesh"
+        file = "hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "skins_textures/clothes/military/top_green_soldier.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/military.shader"
+        }
+    }
+    entity = {
+        name = "top_green_soldier_entity"
+        pdxmesh = "top_green_soldier_mesh"
+    }
+
+    pdxmesh = {
+        name = "top_hte_soldier_mesh"
+        file = "hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "skins_textures/clothes/military/top_hte_soldier.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/military.shader"
+        }
+    }
+    entity = {
+        name = "top_hte_soldier_entity"
+        pdxmesh = "top_hte_soldier_mesh"
+    }
+
+    pdxmesh = {
+        name = "top_redcoat_mesh"
+        file = "hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "skins_textures/clothes/military/top_redcoat.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/military.shader"
+        }
+    }
+    entity = {
+        name = "top_redcoat_entity"
+        pdxmesh = "top_redcoat_mesh"
+    }
+
+    pdxmesh = {
+        name = "top_red_soldier_mesh"
+        file = "hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "skins_textures/clothes/military/top_red_soldier.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/military.shader"
+        }
+    }
+    entity = {
+        name = "top_red_soldier_entity"
+        pdxmesh = "top_red_soldier_mesh"
+    }
+
+    

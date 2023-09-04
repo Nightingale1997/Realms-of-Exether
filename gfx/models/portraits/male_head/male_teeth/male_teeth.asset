@@ -11,6 +11,8 @@ pdxmesh = {
 		shader = "portrait_skin"
 		shader_file = "gfx/FX/jomini/portrait.shader"
 	}
+
+	blend_shape = { id = "male_head_bs_no_portrait"	type = "no_portrait.mesh"  }
 }
 
 entity = {
@@ -24,4 +26,6 @@ entity = {
 			}
 		}
 	}
+
+	attribute = { name = "head_bs_no_portrait"	blend_shape = "male_head_bs_no_portrait" }
 }

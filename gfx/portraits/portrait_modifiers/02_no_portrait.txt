@@ -1,0 +1,115 @@
+﻿no_portrait = {
+	usage = game
+	#selection_behavior = weighted_random
+	#fallback = no_portrait
+
+    no_portrait = {
+        dna_modifiers = {
+
+            accessory = {
+				mode = replace
+				gene = props
+				template = no_prop
+				value = 1
+			}
+
+            accessory = {
+                mode = add
+                gene = outfits
+                template = no_outfit
+                value = 1
+            }
+
+            accessory = {
+                mode = replace
+                gene = belts
+                template = no_belt
+                value = 1
+            }
+
+            accessory = {
+                mode = replace
+                gene = waistcoats
+                template = no_waistcoat
+                value = 1
+            }
+
+            accessory = {
+                mode = replace
+                gene = top_layer
+                template = no_top_layer
+                value = 1
+            }
+
+            accessory = {
+                mode = replace
+                gene = necklaces
+                template = no_necklace
+                value = 1
+            }
+
+            accessory = {
+                mode = replace
+                gene = legwear
+                template = no_legwear
+                value = 1
+            }
+
+            accessory = {
+                mode = add
+                gene = shirt
+                template = no_shirts
+                value = 1
+            }
+
+            accessory = {
+                mode = add
+                gene = aiguillettes
+                template = no_aiguillettes
+                value = 1
+            }
+
+            accessory = {
+                mode = replace
+                gene = eye_accessory
+                template = no_eyes
+                value = 1
+            }
+
+            accessory = {
+                mode = replace
+                gene = hairstyles
+                template = no_hairstyles
+                value = 1
+            }
+
+            accessory = {
+                mode = replace
+                gene = headgear
+                template = no_headgear
+                value = 1
+            }
+
+            accessory = {
+                mode = replace
+                gene = beards
+                template = no_beard
+                value = 1
+            }
+
+            morph = {
+                mode = replace
+                gene = gene_no_portrait
+                template = no_portrait
+                value = 1
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 10000
+                no_portrait_trigger = yes
+            }
+        }
+    }
+}

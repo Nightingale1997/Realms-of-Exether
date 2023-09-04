@@ -46,6 +46,8 @@ pdxmesh = {
 
 	#### Blend Shapes ####
 
+	blend_shape = { id = "male_head_bs_no_portrait"	type = "blendshapes/male_head_no_portrait.mesh"  }
+
 	#From CK3
 	blend_shape = { id = "male_bs_neutral"		type = "blendshapes/male_bs_neutral.mesh" }
 
@@ -54,8 +56,6 @@ pdxmesh = {
 	blend_shape = { id = "race_mer_ears_02"		type = "blendshapes/race_mer_ears_02.mesh" }
 	blend_shape = { id = "race_mer_ears_03"		type = "blendshapes/race_mer_ears_03.mesh" }
 	blend_shape = { id = "race_mer_eyebrows"		type = "blendshapes/race_mer_eyebrows.mesh" }
-
-	blend_shape = { id = "male_orc_teeth_lips"		type = "blendshapes/male_orc_teeth_lips.mesh" }
 
 	#Vanilla Start
 	blend_shape = { id = "male_head_bs_fat_head"	type = "blendshapes/male_head_bs_fat_head.mesh"  }
@@ -380,20 +380,13 @@ entity = {
 
 	#### Blend Shapes ####
 
+	attribute = { name = "head_bs_no_portrait"					blend_shape = "male_head_bs_no_portrait" }
+
 	#From EK
 	attribute = { name = "race_mer_ears_01_bs"					blend_shape = "race_mer_ears_01" }
 	attribute = { name = "race_mer_ears_02_bs"					blend_shape = "race_mer_ears_02" }
 	attribute = { name = "race_mer_ears_03_bs"					blend_shape = "race_mer_ears_03" }
 	attribute = { name = "race_mer_eyebrows_bs"					blend_shape = "race_mer_eyebrows" }
-
-	attribute = { name = "bs_orc_teeth_bottom_teeth_size"					blend_shape = "male_bs_neutral" }
-	attribute = { name = "bs_orc_teeth_broken_left"					blend_shape = "male_bs_neutral" }
-	attribute = { name = "bs_orc_teeth_broken_right"					blend_shape = "male_bs_neutral" }
-	attribute = { name = "bs_orc_teeth_tusk_size"					blend_shape = "male_bs_neutral" }
-	attribute = { name = "bs_orc_teeth_tusks_forward"					blend_shape = "male_bs_neutral" }
-	attribute = { name = "bs_orc_teeth_tusks_outward"					blend_shape = "male_bs_neutral" }
-
-	attribute = { name = "bs_orc_teeth_lips"					blend_shape = "male_orc_teeth_lips" }
 
 	attribute = { name = "head_bs_fat_head"					blend_shape = "male_head_bs_fat_head" }
 	attribute = { name = "head_bs_fat_body"					blend_shape = "male_head_bs_fat_body" }

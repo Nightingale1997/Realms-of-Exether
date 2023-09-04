@@ -1,4 +1,27 @@
-﻿british_empire_clothes_trigger = {
+﻿no_portrait_trigger = {
+	OR = {
+		AND = {
+			exists = scope:character
+			scope:character = {
+				culture = {
+					has_discrimination_trait = bird_heritage
+				}
+			}
+		}
+		AND = {
+			exists = scope:pop
+			scope:pop = {
+				culture = {
+					has_discrimination_trait = bird_heritage
+				}
+			}
+		}
+	}
+}
+
+
+
+british_empire_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
 		exists = c:DUM
