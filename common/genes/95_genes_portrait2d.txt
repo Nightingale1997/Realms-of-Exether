@@ -1,7 +1,18 @@
 ﻿accessory_genes = {
 	base_skins = {
-		gene_base_skin = {
+
+		gene_no_flat_skin = {
 			index = 0
+			male = {
+				1 = empty
+			}		   
+			female = male
+			boy = male
+			girl = male
+		}	
+
+		gene_base_skin = {
+			index = 1
 			male = {
 				1 = steve
 				1 = zuri
@@ -27,7 +38,7 @@
 		}
 
 		gene_unique_skin= {
-			index = 1
+			index = 2
 			male = {
 				1 = britishwanderer
 				1 = gobblin
@@ -65,7 +76,7 @@
 		}
 
 		gene_thruitt = {
-			index = 2
+			index = 3
 			male = {
 				1 = thruitt
 				1 = thruitt_arctic
