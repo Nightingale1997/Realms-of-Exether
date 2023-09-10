@@ -14,9 +14,51 @@
          }   
     
          weight = {
-             base = 0
-         }
+            base = 0
+        }
     }
+
+    no_facial_hair = {
+        dna_modifiers = {
+            accessory = {
+                mode = replace
+                gene = beards
+                template = no_beard
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+               mode = replace
+               gene = mustaches
+               template = no_mustache
+               range = { 0 1 }
+           }
+        }   
+   
+        weight = {
+           base = 0
+           modifier = {
+               add = 1000
+               OR = {
+                   AND = {
+                       exists = scope:character
+                       scope:character = { 
+                           culture = {
+                               has_discrimination_trait = elf_heritage
+                           }
+                       }
+                   }
+                   AND = {
+                       exists = scope:pop
+                       scope:pop = {
+                           culture = {
+                               has_discrimination_trait = elf_heritage
+                           }
+                       }
+                   }
+               }                
+           }
+       }
+   }
     
     asian_beards = {
         dna_modifiers = {
@@ -132,23 +174,18 @@
                 add = 1000
                 OR = {
                     AND = {
-                        european_clothes_trigger = yes # sanity check so that things aren't being applied in wildly edge case scenarios
                         exists = scope:character
                         scope:character = { 
-                            age > 16 
-                            religion = {
-                                has_discrimination_trait = vandori_heritage
+                            culture = {
+                                has_discrimination_trait = dwarf_heritage
                             }
-							is_interest_group_type = ig_devout 
                         }
                     }
                     AND = {
-                        european_clothes_pop_trigger = yes # sanity check so that things aren't being applied in wildly edge case scenarios
                         exists = scope:pop
                         scope:pop = {
-                            is_pop_type = clergymen
-                            religion = {
-                                has_discrimination_trait = vandori_heritage
+                            culture = {
+                                has_discrimination_trait = dwarf_heritage
                             }
                         }
                     }

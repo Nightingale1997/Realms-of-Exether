@@ -19,14 +19,9 @@
                 scope:character ?= {
                     OR = {
                         has_role = agitator
-                        has_template = fra_delescluze_character_template # Never ever give Louis Delescluze a hat, any hat. His forehead is too powerful.
+                        
                     }
                     is_historical = yes
-                    NOR = {
-                        has_template = rus_lenin_character_template
-                        has_template = gbr_pankhurst_character_template
-                        has_template = agitator_emiliano_zapata
-                    }
                 }
             }
         }
@@ -161,7 +156,7 @@
             modifier = {
                 add = 90000
                 scope:character ?= {
-                    has_template = rus_lenin_character_template
+                    agitator_character_trigger = yes
                 }
             }
         }
@@ -183,7 +178,7 @@
             modifier = {
                 add = 90000
                 scope:character ?= {
-                    has_template = gbr_pankhurst_character_template
+                    agitator_character_trigger = yes
                 }
             }
         }
@@ -204,7 +199,7 @@
             modifier = {
                 add = 90000
                 scope:character ?= {
-                    has_template = agitator_emiliano_zapata
+                    agitator_character_trigger = yes
                 }
             }
         }
@@ -212,23 +207,7 @@
 
 ### END OF HISTORICAL CLOTHING ###
 
-    chinese_imperial_headgear = {
-        dna_modifiers = {
-            accessory = {
-                mode = add
-                gene = headgear
-                template = chinese_imperial_headgear
-                range = { 0 1 } # For the randomness to work correctly
-            }
-        }
-        weight = {
-            base = 0
-            modifier = {
-               add = 100
-               chinese_imperial_clothes_trigger = yes
-            }
-        }
-    }
+ 
 
     japanese_imperial_headgear = {
         dna_modifiers = {
@@ -287,7 +266,7 @@
             modifier = {
                 add = 90000
                 scope:character ?= {
-                    has_template = agitator_alfred_hugenberg
+                    agitator_character_trigger = yes
                 }
             }
         }
@@ -864,13 +843,10 @@
                 scope:character ?= {
                     culture = {
                         OR = {
-                            has_discrimination_trait = goblin_heritage
+                            THIS = cu:anwarthi
+                            THIS = cu:xhurlob
                         }
-                        NOR = { 
-                            
-                            THIS = cu:shkemger
-                            THIS = cu:khanaruk
-                        }
+                       
                     }
                 }
             }
@@ -948,13 +924,27 @@
             base = 0
             modifier = {
                 add = 100
-                exists = scope:pop
-                scope:pop = {
-                    is_pop_type = aristocrats
-                    culture = {
-                        has_discrimination_trait = goblin_heritage
+                OR = {
+                    AND = {
+                        exists = scope:character
+                        scope:character = {
+                            is_ruler = yes
+                            culture = {
+                                has_discrimination_trait = hobgoblin
+                            }
+                        }
+                    }
+                    AND = {
+                        exists = scope:pop
+                        scope:pop = {
+                            is_pop_type = aristocrats
+                            culture = {
+                                has_discrimination_trait = hobgoblin
+                            }
+                        }
                     }
                 }
+      
             }
         }
     }

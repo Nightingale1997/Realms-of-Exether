@@ -114,15 +114,6 @@
                 german_clothes_trigger = yes
                 scope:character ?= {
                     age > 12
-                    NOR = {
-                        has_template = agitator_jules_brunet
-                        has_template = rus_leon_trotsky_character_template
-                        has_template = agitator_nestor_makhno
-                        has_template = fra_georges_boulanger_character_template
-                        has_template = agitator_louise_michel
-                        has_template = agitator_susan_b_anthony
-                        has_template = agitator_emiliano_zapata
-                    }
                 }
                 OR = {
                     military_clothes_trigger = yes
@@ -184,15 +175,6 @@
                 }
                 scope:character ?= {
                     age > 12
-                    NOR = {
-                        has_template = agitator_jules_brunet
-                        has_template = rus_leon_trotsky_character_template
-                        has_template = agitator_nestor_makhno
-                        has_template = fra_georges_boulanger_character_template
-                        has_template = agitator_louise_michel
-                        has_template = agitator_susan_b_anthony
-                        has_template = agitator_emiliano_zapata
-                    }
                 }
             }
         }
@@ -240,15 +222,6 @@
                 republic_clothes_trigger = no
                 scope:character = {
                     age > 12
-                    NOR = {
-                        has_template = agitator_jules_brunet
-                        has_template = rus_leon_trotsky_character_template
-                        has_template = agitator_nestor_makhno
-                        has_template = fra_georges_boulanger_character_template
-                        has_template = agitator_louise_michel
-                        has_template = agitator_susan_b_anthony
-                        has_template = agitator_emiliano_zapata
-                    }
                 }
                 OR = {
                     military_clothes_trigger = yes

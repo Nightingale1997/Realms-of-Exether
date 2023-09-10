@@ -144,7 +144,7 @@ native_north_american_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
 		culture = {
-			has_discrimination_trait = tunnel_cursed
+			has_discrimination_trait = thalorian_culture_group
 		}
 	}
 }
@@ -152,17 +152,29 @@ native_north_american_clothes_trigger = {
 muslim_clothes_pop_trigger = {
      exists = scope:pop
   	scope:pop = {
-		religion = {
-			has_discrimination_trait = orc_religion
-		}
+		culture = {
+			has_discrimination_trait = namkhazen_heritage
+		} 
 	}
 }
 
 jewish_clothes_pop_trigger = {
-     exists = scope:pop
-  	scope:pop = {
-		culture = {
-			has_discrimination_trait = halfling_heritage
+	OR = {
+		AND = {
+			exists = scope:pop
+			scope:pop = {
+				culture = {
+					has_discrimination_trait = goblin_heritage
+				}   
+			}
+		}
+		AND = {
+			exists = scope:character
+			scope:character = {
+				culture = {
+					has_discrimination_trait = goblin_heritage
+				}   
+			}
 		}
 	}
 }
@@ -171,7 +183,7 @@ hindu_clothes_pop_trigger = {
 	exists = scope:pop
 	scope:pop = {
 		culture = {
-			has_discrimination_trait = bird_heritage
+			has_discrimination_trait = dwarf_heritage
 		}
 	}
 }
@@ -180,7 +192,9 @@ african_diaspora_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
 		OR = {
-			culture = cu:shkemger
+			culture = {
+				has_discrimination_trait = new_khussite_culture_group
+			}
 		}
 	}
 }
@@ -189,7 +203,9 @@ african_diaspora_pop_clothes_trigger = {
 	exists = scope:pop
 	scope:pop = {
 		OR = {
-			culture = cu:shkemger
+			culture = {
+				has_discrimination_trait = new_khussite_culture_group
+			}
 		}
 	}
 }
@@ -218,11 +234,7 @@ chinese_imperial_clothes_trigger = {
      	}
 		OR = {
 			culture = {
-				has_discrimination_trait = hobgoblin
-			}
-			AND = {
-				exists = c:YUL
-				home_country = c:YUL
+				has_discrimination_trait = draconic_heritage
 			}
 		}
 	}
@@ -262,7 +274,7 @@ chinese_court_clothes_trigger = {
 	scope:character = {
 		culture = {
 			OR = {
-				has_discrimination_trait = hobgoblin
+				has_discrimination_trait = draconic_heritage
 			}
 		}
 	}	
@@ -273,7 +285,7 @@ chinese_court_clothes_pop_trigger = {
 	scope:pop = {
 		culture = {
 			OR = {
-				has_discrimination_trait = hobgoblin
+				has_discrimination_trait = draconic_heritage
 			}
 		}
 	}	
@@ -286,9 +298,10 @@ african_clothes_trigger = {
 		culture = {
 			OR = {
 				has_discrimination_trait = qiin_culture_group
-			}
+				has_discrimination_trait = wood_elf
 		}
 	}     
+}
 }
 
 arabic_fez_trigger = {
@@ -354,6 +367,7 @@ arabic_clothes_trigger = {
 					has_discrimination_trait = namkhazen_heritage
 				}
 			}
+			culture = cu:anwarthi
 		}
 	}        
 }
@@ -361,9 +375,7 @@ arabic_clothes_trigger = {
 ethiopian_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
-		culture = {
-			has_discrimination_trait = vandori_heritage
-		}
+		culture = cu:tefereti
 	}
 }
 
@@ -397,7 +409,7 @@ indian_clothes_trigger = {
 	scope:character = {
 		OR = {
 			culture = {
-				has_discrimination_trait = halfling_heritage
+				has_discrimination_trait = dwarf_heritage
 			}
 		}
 	}
@@ -415,22 +427,47 @@ siamese_clothes_trigger = { #Pretty sure this is actual burmese
 american_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
-		exists = home_country
-		home_country = {
-			exists = c:VAI
-			c:VAI = this
-			is_subject = no
-		}
+			OR = {
+				culture = {
+					has_discrimination_trait = thalorian_culture_group
+				}
+				AND = {
+					exists = c:VAI
+					exists = home_country
+					home_country = {
+						OR = {
+							AND = {
+								c:VAI = this
+								is_subject = no # preventing uniform conflicts if DUM becomes a subject of another country with puppet uniforms
+							}
+							is_subject_of = c:VAI
+						}		
+					}
+				}
+			}
 	}
 }
 
 american_clothes_pop_trigger = {
 	exists = scope:pop
 	scope:pop = {
-		home_country = {
-			exists = c:VAI
-			c:VAI = this
-			is_subject = no
+		OR = {
+			culture = {
+				has_discrimination_trait = thalorian_culture_group
+			}
+			AND = {
+				exists = c:VAI
+				exists = home_country
+				home_country = {
+					OR = {
+						AND = {
+							c:VAI = this
+							is_subject = no # preventing uniform conflicts if DUM becomes a subject of another country with puppet uniforms
+						}
+						is_subject_of = c:VAI
+					}		
+				}
+			}
 		}
 	}
 }
@@ -575,18 +612,30 @@ east_asian_clothes_pop_trigger = {
 	scope:pop = {
 		culture = {
 			OR = {
-				has_discrimination_trait = hobgoblin
+				has_discrimination_trait = draconic_heritage
 			}
 		}   
 	}
 }
 
-central_asian_clothes_pop_trigger = {
-	exists = scope:pop
-	scope:pop = {
-		culture = {
-			has_discrimination_trait = djinn_heritage
-		}   
+central_asian_clothes_pop_trigger= {
+	OR = {
+		AND = {
+			exists = scope:character
+			scope:character = {
+				culture = {
+					has_discrimination_trait = hobgoblin
+				}
+			}
+		}
+		AND = {
+			exists = scope:pop
+			scope:pop = {
+				culture = {
+					has_discrimination_trait = hobgoblin
+				}   
+			}
+		}
 	}
 }
 
@@ -666,9 +715,10 @@ african_clothes_pop_trigger = {
 	scope:pop = {
 		culture = {
 			OR = {
-				has_discrimination_trait = gavkhani_culture_group
-			}
-		}   
+				has_discrimination_trait = qiin_culture_group
+				has_discrimination_trait = wood_elf
+		}
+	}   
 	}
 }
 
@@ -768,7 +818,7 @@ indian_clothes_pop_trigger = {
 	scope:pop = {
 		OR = {
 			culture = {
-				has_discrimination_trait = halfling_heritage
+				has_discrimination_trait = dwarf_heritage
 			} 
 		}
 	}
@@ -778,7 +828,7 @@ slavic_clothes_pop_trigger = {
 	scope:pop ?= {
 		culture = {
 			OR = {
-				has_discrimination_trait = dwarf_heritage
+				has_discrimination_trait = thalorian_culture_group
 			}
 			
 		}   
@@ -789,7 +839,7 @@ slavic_clothes_trigger = {
 	scope:character ?= {
 		culture = {
 			OR = {
-				has_discrimination_trait = dwarf_heritage
+				has_discrimination_trait = thalorian_culture_group
 			}
 		}   
 	}
@@ -952,17 +1002,13 @@ buddhist_clothes_pop_trigger = {
 		AND = {
 			exists = scope:character
 			scope:character = {
-				OR = {
-					religion = rel:mortals_burden
-				}
+				culture = cu:anwarthi
 			}
 		}
 		AND = {
 			exists = scope:pop
 			scope:pop = {
-				OR = {
-				  religion = rel:mortals_burden
-			  }
+				culture = cu:anwarthi
 		   }
 		}
 	}
@@ -1035,7 +1081,15 @@ very_underweight_pop_trigger = {
 			scope:character = {
 				OR = {
 					culture = {
-						has_discrimination_trait = namkhazen_heritage
+						OR = {
+							has_discrimination_trait = namkhazen_heritage
+							AND = {
+								has_discrimination_trait = goblin_heritage
+								NOT = {
+									has_discrimination_trait = hobgoblin
+								}
+							}
+						}
 					}  
 					culture = cu:nightwalker
 					culture = cu:wastecrawler
@@ -1048,7 +1102,15 @@ very_underweight_pop_trigger = {
 			scope:pop = {
 				OR = {
 					culture = {
-						has_discrimination_trait = namkhazen_heritage
+						OR = {
+							has_discrimination_trait = namkhazen_heritage
+							AND = {
+								has_discrimination_trait = goblin_heritage
+								NOT = {
+									has_discrimination_trait = hobgoblin
+								}
+							}
+						}
 					}  
 					pop_weight_modifier_scale < 25
 					standard_of_living < 5	
@@ -1116,16 +1178,27 @@ very_overweight_pop_trigger = {
 		AND = {
 			exists = scope:character
 			scope:character = {
+				OR = {
+					AND = {
+						culture = {
+							has_discrimination_trait = orc_heritage
+						}  
+						has_trait = expensive_tastes
+					}
 					culture = {
-						has_discrimination_trait = orc_heritage
-					}  
-					has_trait = expensive_tastes
+						has_discrimination_trait = ogre_heritage
+					}
+				}
+			
 			 }
 		}
 
 		AND = {
 			exists = scope:pop
 			scope:pop = {
+				culture = {
+					has_discrimination_trait = ogre_heritage
+				}
 				OR = {
 					AND = {
 						standard_of_living >= 20
@@ -1168,7 +1241,9 @@ should_be_naked_trigger = {
 					is_pop_type = laborers
 					is_pop_type = slaves
 					culture = {
-						has_discrimination_trait = monstrous_heritage
+						OR = {
+							has_discrimination_trait = monstrous_heritage
+						}
 					}
 				}
 			}
@@ -1176,8 +1251,8 @@ should_be_naked_trigger = {
 		AND = {
 			exists = scope:character
 			scope:character = {
-				   OR = {
-					culture = {
+				culture = {
+					OR = {
 						has_discrimination_trait = monstrous_heritage
 					}
 				}
