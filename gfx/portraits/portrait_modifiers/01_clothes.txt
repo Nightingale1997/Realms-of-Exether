@@ -380,6 +380,94 @@
         }
     }
 
+    halfling_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = no_outfit
+                range = { 0 1 } # For the randomness to work correctly
+             }
+ 
+            accessory = {
+                mode = add
+                gene = civilian_coats
+                template = all_civilian_coats
+                range = { 0 0.1 } # For the randomness to work correctly
+             }
+ 
+             accessory = {
+                 mode = add
+                 gene = waistcoats
+                 template = european_waistcoats
+                 range = { 0.9 1.0 } # For the randomness to work correctly
+             }
+ 
+             accessory = {
+                 mode = add
+                 gene = legwear
+                 template = european_legwear_colors
+                 range = { 0 0.1 } # For the randomness to work correctly
+             }
+         }
+ 
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 10000
+                
+                OR = {
+                    upper_clothes_pop_trigger = yes
+                    scope:character ?= {
+                        has_role = politician
+                        is_ruler = no
+                    }
+                }
+                halfling_clothes_trigger = yes
+            }
+        }
+    }
+
+    
+    halfling_rich_clothes = {
+
+        dna_modifiers = {
+            accessory = {
+               mode = add
+               gene = coats
+               template = agitator_blanqui
+               range = { 0 1 }
+            }
+
+            accessory = {
+                mode = add
+                gene = legwear
+                template = slavic_legwear
+                range = { 0 0.1 } 
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000
+                halfling_clothes_trigger = yes'
+
+                OR = {
+                    upper_clothes_pop_trigger = yes
+                    scope:character ?= {
+                        has_role = politician
+                        is_ruler = no
+                    }
+                }
+
+            }
+        }
+    }
+
+
+
 ### END OF AGITATORS. ###
 
 ## HISTORICAL CHARACTER SCRIPTED CLOTHING ###
@@ -591,6 +679,9 @@
                             scope:character ?= {
                                 OR = {
                                     culture = cu:ravikian
+                                    culture = {
+                                        has_discrimination_trait = halfling_heritage
+                                    }
                                 }
                             }
                         }
@@ -653,6 +744,9 @@
                     scope:character ?= {
                         OR = {
                             culture = cu:ravikian
+                            culture = {
+                                has_discrimination_trait = halfling_heritage
+                            }
                         }
                     }
                     african_diaspora_clothes_trigger = yes
@@ -699,8 +793,10 @@
                             exists = scope:character
                             scope:character ?= {
                                 OR = {
-                                    culture = cu:qinnaat
-                                    culture = cu:azmaraan
+                                    culture = cu:ravikian
+                                    culture = {
+                                        has_discrimination_trait = halfling_heritage
+                                    }
                                 }
                             }
                         }
@@ -739,8 +835,10 @@
                             exists = scope:character
                             scope:character ?= {
                                 OR = {
-                                    culture = cu:qinnaat
-                                    culture = cu:azmaraan
+                                    culture = cu:ravikian
+                                    culture = {
+                                        has_discrimination_trait = halfling_heritage
+                                    }
                                 }
                             }
                         }
@@ -794,9 +892,10 @@
                         exists = scope:character
                         scope:character ?= {
                             OR = {
-                                culture = cu:qinnaat
-                                culture = cu:azmaraan
-                            }
+                                culture = {
+                                    has_discrimination_trait = halfling_heritage
+                                }
+                            } 
                         }
                     }
                     african_diaspora_clothes_trigger = yes
@@ -1589,7 +1688,9 @@
                 AND = {
                     exists = scope:pop
                     scope:pop = {
-                        culture = cu:rahoru
+                        culture = {
+                            has_discrimination_trait = ogre_heritage
+                        }
                     }
                     OR = {
                         poor_clothes_pop_trigger = yes

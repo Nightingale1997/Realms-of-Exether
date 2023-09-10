@@ -20,7 +20,6 @@
 }
 
 
-
 british_empire_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
@@ -164,7 +163,7 @@ jewish_clothes_pop_trigger = {
 			exists = scope:pop
 			scope:pop = {
 				culture = {
-					has_discrimination_trait = goblin_heritage
+					has_discrimination_trait = halfling_heritage
 				}   
 			}
 		}
@@ -172,7 +171,7 @@ jewish_clothes_pop_trigger = {
 			exists = scope:character
 			scope:character = {
 				culture = {
-					has_discrimination_trait = goblin_heritage
+					has_discrimination_trait = halfling_heritage
 				}   
 			}
 		}
@@ -415,6 +414,17 @@ indian_clothes_trigger = {
 	}
 }
 
+halfling_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		OR = {
+			culture = {
+				has_discrimination_trait = halfling_heritage
+			}
+		}
+	}
+}
+
 siamese_clothes_trigger = { #Pretty sure this is actual burmese
 	exists = scope:character
 	scope:character = {
@@ -597,7 +607,10 @@ overweight_trigger = {
 	scope:character = {
 		OR = {
 			culture = {
-				has_discrimination_trait = orc_heritage
+				OR = {
+					has_discrimination_trait = orc_heritage
+				}
+				
 			}  
 			has_trait = expensive_tastes
 		}
@@ -1186,7 +1199,10 @@ very_overweight_pop_trigger = {
 						has_trait = expensive_tastes
 					}
 					culture = {
-						has_discrimination_trait = ogre_heritage
+						OR = {
+							has_discrimination_trait = halfling_heritage
+							has_discrimination_trait = ogre_heritage
+						}
 					}
 				}
 			
@@ -1197,7 +1213,10 @@ very_overweight_pop_trigger = {
 			exists = scope:pop
 			scope:pop = {
 				culture = {
-					has_discrimination_trait = ogre_heritage
+					OR = {
+						has_discrimination_trait = halfling_heritage
+						has_discrimination_trait = ogre_heritage
+					}
 				}
 				OR = {
 					AND = {
