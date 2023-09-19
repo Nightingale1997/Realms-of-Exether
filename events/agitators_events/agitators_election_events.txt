@@ -1043,6 +1043,48 @@ agitators_election_events.8 = {
 					}
 				}
 			}
+			OR = {
+				AND = {
+					has_socialist_ideology = yes
+					this.interest_group = {
+						leader = {
+							has_socialist_ideology = yes
+						}
+					}
+				}
+				AND = {
+					has_progressive_ideology = yes
+					this.interest_group = {
+						leader = {
+							has_progressive_ideology = yes
+						}
+					}
+				}
+				AND = {
+					has_liberal_ideology = yes
+					this.interest_group = {
+						leader = {
+							has_liberal_ideology = yes
+						}
+					}
+				}
+				AND = {
+					has_reactionary_ideology = yes
+					this.interest_group = {
+						leader = {
+							has_reactionary_ideology = yes
+						}
+					}
+				}
+				AND = {
+					has_conservative_ideology = yes
+					this.interest_group = {
+						leader = {
+							has_conservative_ideology = yes
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -1059,7 +1101,67 @@ agitators_election_events.8 = {
 	}
 	
 	immediate = {
-		save_agitator_election_scopes = yes
+		random_scope_character = {
+			limit = {
+				has_role = agitator
+				this.interest_group = {
+					has_party = yes
+					this.party = {
+						any_member = {
+							count >= 2
+						}
+					}
+				}
+				OR = {
+					AND = {
+						has_socialist_ideology = yes
+						this.interest_group = {
+							leader = {
+								has_socialist_ideology = yes
+							}
+						}
+					}
+					AND = {
+						has_progressive_ideology = yes
+						this.interest_group = {
+							leader = {
+								has_progressive_ideology = yes
+							}
+						}
+					}
+					AND = {
+						has_liberal_ideology = yes
+						this.interest_group = {
+							leader = {
+								has_liberal_ideology = yes
+							}
+						}
+					}
+					AND = {
+						has_reactionary_ideology = yes
+						this.interest_group = {
+							leader = {
+								has_reactionary_ideology = yes
+							}
+						}
+					}
+					AND = {
+						has_conservative_ideology = yes
+						this.interest_group = {
+							leader = {
+								has_conservative_ideology = yes
+							}
+						}
+					}
+				}
+			}
+			this.interest_group = {
+				save_scope_as = agitator_ig_scope
+				party = {
+					save_scope_as = agitator_party_scope
+				}
+			}
+		}
 		scope:agitator_party_scope = {
 			random_member = {
 				limit = {

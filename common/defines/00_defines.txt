@@ -16,10 +16,12 @@ NJominiMap = {
 
 NAI = {
 	DEFAULT_STRATEGY_STRING = "ai_strategy_default"
-	
+
 	STRATEGY_RANDOM_FACTOR = 20.0 # The higher this is, the more random AI strategy selection will be
 	
 	TICKS_FOR_FULL_SPENDING_UPDATE = 50 # The higher this is, the less often AIs will update their spending priorities 
+		
+	MIN_SUBJECT_TYPE_VALUE = 1 # ai_value for a subject type is never below this
 	
 	GOVERNMENT_MONEY_SPENDING_ENABLED = yes  	 # If this is set to no, the AI for government money spending will be disabled
 	GOVERNMENT_AUTHORITY_SPENDING_ENABLED = yes  # If this is set to no, the AI for authority spending will be disabled
@@ -89,7 +91,7 @@ NAI = {
 	DIPLOMATIC_DEMAND_ACCEPTANCE_INCORPORATED_STATE_FACTOR = -25 # Added to acceptance if the wargoal is demanding they cede an incorporated state
 	DIPLOMATIC_DEMAND_ACCEPTANCE_SUBJUGATION_FACTOR = 0.5		 # Multiplied by country's desire to become a subject of the specified type if the wargoal is demanding subjugation
 	DIPLOMATIC_DEMAND_ACCEPTANCE_ANNEXATION_FACTOR = -100		 # Added to acceptance if the wargoal is demanding their full annexation
-	DIPLOMATIC_DEMAND_ACCEPTANCE_LOYAL_SUBJECT_FACTOR = 50		 # Added to acceptance for demands by overlords against loyal subjects
+	DIPLOMATIC_DEMAND_ACCEPTANCE_LOYAL_SUBJECT_FACTOR = 100		 # Added to acceptance for demands by overlords against loyal subjects
 	
 	INFLUENCE_DEFICIT_BREAK_PACT_BASE_VALUE = 50						# Added to accept/propose score for a pact 
 	INFLUENCE_DEFICIT_BREAK_PACT_RANDOM_FACTOR = 1.0					# The higher this is, the more random AI pact breaking due to influence deficit will be
@@ -312,27 +314,27 @@ NAI = {
 	# Sympathy is added together and then multiplied by a dice roll range of (DIPLO_PLAY_SYMPATHY_RANGE_MIN to DIPLO_PLAY_SYMPATHY_RANGE_MAX) to give the AI a random preference for each side in a particular play
 	# Sympathy above 0 is added directly to the willingness to join that side in the play
 	# Sympathy for a side can be below 0, but has no additional effect other than acting as a buffer against sympathy increases
-	DIPLO_PLAY_SYMPATHY_RANGE_MIN = 0.5 # The minimum range for the initial sympathy random roll (additing during play are fully random)
-	DIPLO_PLAY_SYMPATHY_RANGE_MAX = 1.0 # The maximum range for the initial sympathy random roll (additing during play are fully random)
-	DIPLO_PLAY_SYMPATHY_BASE_INITIATOR = 25 # The base size of the random sympathy range for attacker in diplomatic play
-	DIPLO_PLAY_SYMPATHY_BASE_TARGET = 50 # The base size of the random sympathy range for defender in diplomatic play
+	DIPLO_PLAY_SYMPATHY_RANGE_MIN = 0.1 # The minimum range for the initial sympathy random roll (additions during play are fully random)
+	DIPLO_PLAY_SYMPATHY_RANGE_MAX = 1.0 # The maximum range for the initial sympathy random roll (additions during play are fully random)
+	DIPLO_PLAY_SYMPATHY_BASE_INITIATOR = 20 # The base size of the random sympathy range for attacker in diplomatic play
+	DIPLO_PLAY_SYMPATHY_BASE_TARGET = 40 # The base size of the random sympathy range for defender in diplomatic play
 	DIPLO_PLAY_SYMPATHY_ENEMY_OF_SUBJECT_INITIATOR = -100 # Subtracted from sympathy range for enemies of our subjects if the enemy is the attacker
 	DIPLO_PLAY_SYMPATHY_ENEMY_OF_SUBJECT_TARGET = -50 # Subtracted from sympathy range for enemies of our subjects if the enemy is the defender
 	DIPLO_PLAY_SYMPATHY_ENEMY_OF_ALLY_INITIATOR = -100 # Subtracted from sympathy range for enemies of our allies if the enemy is the attacker
 	DIPLO_PLAY_SYMPATHY_ENEMY_OF_ALLY_TARGET = -50 # Subtracted from sympathy range for enemies of our allies if the enemy is the defender
-	DIPLO_PLAY_SYMPATHY_ENEMY_OF_INFAMOUS_COUNTRY = 25 # Added to sympathy range for enemy of infamous country (does not apply to allies & subjects)
-	DIPLO_PLAY_SYMPATHY_ENEMY_OF_NOTORIOUS_COUNTRY = 50 # Added to sympathy range for enemy of notorious country (does not apply to allies & subjects)
+	DIPLO_PLAY_SYMPATHY_ENEMY_OF_INFAMOUS_COUNTRY = 15 # Added to sympathy range for enemy of infamous country (does not apply to allies & subjects)
+	DIPLO_PLAY_SYMPATHY_ENEMY_OF_NOTORIOUS_COUNTRY = 30 # Added to sympathy range for enemy of notorious country (does not apply to allies & subjects)
 	DIPLO_PLAY_SYMPATHY_ENEMY_OF_PARIAH_COUNTRY = 100 # Added to sympathy range for enemy of pariah country (does not apply to allies & subjects)
 	DIPLO_PLAY_SYMPATHY_LENIENT_AI_GAME_RULE = 25 # Added to sympathy range for player when using lenient AI game rule
 	DIPLO_PLAY_SYMPATHY_HARSH_AI_GAME_RULE = -25 # Subtracted to sympathy range for player when using harsh AI game rule
-	DIPLO_PLAY_SYMPATHY_INCREASE_GAINED_BACKER = 100 # Sympathy is increased by up to this amount for enemy of a side which receives a new backer, scaled by their number of battalions compared to total forces in the play
-	DIPLO_PLAY_SYMPATHY_INCREASE_LOST_BACKER = 50 # Sympathy is increased by up to this amount for a side which loses a backer, scaled by their number of battalions compared to total forces in the play
-	DIPLO_PLAY_SYMPATHY_INCREASE_NEW_WARGOAL = 1 # Sympathy is increased by up to this amount * accured infamy for enemy of a side which adds a new wargoal 
-    DIPLO_PLAY_SYMPATHY_INCREASE_SWAYED_WITH_WARGOAL = 0.5 # Sympathy is increased by up to this amount * accured infamy for enemy of a side which adds a new wargoal through swaying
+	DIPLO_PLAY_SYMPATHY_FROM_INITIAL_WARGOAL = 0.75 # Initial sympathy for target is increased by up to this amount * accured infamy on the primary wargoal
+    DIPLO_PLAY_SYMPATHY_INCREASE_NEW_WARGOAL = 1 # Sympathy is increased by up to this amount * accured infamy for enemy of a side which adds a new wargoal 
+    DIPLO_PLAY_SYMPATHY_INCREASE_SWAYED_WITH_WARGOAL = 0.75 # Sympathy is increased by up to this amount * accured infamy for enemy of a side which adds a new wargoal through swaying
 	DIPLO_PLAY_SYMPATHY_INCREASE_ADDED_PRIMARY_WARGOAL = 0.5 # Sympathy is increased by up to this amount * accured infamy for enemy of a side which makes a new wargoal into a primary demand
 
 	DIPLO_PLAY_SWITCH_SIDES_FACTOR = -10 # If AI has already picked a side, add reluctance to accept further sway offers
-	DIPLO_PLAY_IDEOLOGICAL_OPINION_FACTOR = 1 # Ideological opinion is multiplied by this and added to acceptance to join a side
+	DIPLO_PLAY_IDEOLOGICAL_OPINION_POSITIVE_FACTOR = 0.2 # Positive ideological opinion is multiplied by this and added to acceptance to join a side
+	DIPLO_PLAY_IDEOLOGICAL_OPINION_NEGATIVE_FACTOR = 1 # Negative ideological opinion is multiplied by this and added to acceptance to join a side
 	DIPLO_PLAY_IDEOLOGICAL_OPINION_REVOLUTION_MULT = 3 # DIPLO_PLAY_IDEOLOGICAL_OPINION_FACTOR is multiplied by this in a revolution play
 	DIPLO_PLAY_SECESSION_OWN_SECESSION_RISK_FACTOR = -100 # Add this amount of reluctance for AI to back a secession of a culture that has enough pops in their own country to secede
 	DIPLO_PLAY_NON_ALLY_UNRECOGNIZED_BASE_FACTOR = -25 #  Add this amount of reluctance for AI to back a non-allied unrecognized power against a recognized one 
@@ -370,8 +372,8 @@ NAI = {
 	DIPLO_PLAY_ATTITUDE_LOYAL_BACKER_FACTOR = 25
 	DIPLO_PLAY_ATTITUDE_REBELLIOUS_FACTOR = -100
 	DIPLO_PLAY_ATTITUDE_REBELLIOUS_BACKER_FACTOR = -50
-	DIPLO_PLAY_ATTITUDE_PROTECTIVE_FACTOR = 50
-	DIPLO_PLAY_ATTITUDE_PROTECTIVE_BACKER_FACTOR = 20
+	DIPLO_PLAY_ATTITUDE_PROTECTIVE_FACTOR = 25
+	DIPLO_PLAY_ATTITUDE_PROTECTIVE_BACKER_FACTOR = 10
 	DIPLO_PLAY_ATTITUDE_DOMINEERING_FACTOR = -10
 	DIPLO_PLAY_ATTITUDE_DOMINEERING_BACKER_FACTOR = 0
 	
@@ -408,7 +410,7 @@ NAI = {
 	DIPLO_PLAY_REVERSE_SWAY_CALL_IN_OBLIGATION_FACTOR = -3.0 # Multiply by how much the AI values the obligation it holds and apply to reverse-sway acceptance for calling in obligation
 	DIPLO_PLAY_REVERSE_SWAY_STATE_VALUE_FACTOR = -2.0 # Multiplied by how much the AI would score a state they own for a Return State wargoal to determine reluctance to cede it in a reverse-sway
 	DIPLO_PLAY_REVERSE_SWAY_BECOME_SUBJECT_VALUE_FACTOR = 1.0 # Multiplied by how much the AI wants to become a subject of the sway target
-	DIPLO_PLAY_REVERSE_SWAY_TRANSFER_SUBJECT_VALUE_FACTOR = -0.5 # Multiplied by how much the AI values the subject they're offering to transfer to the sway target
+	DIPLO_PLAY_REVERSE_SWAY_TRANSFER_SUBJECT_VALUE_FACTOR = -1.0 # Multiplied by how much the AI values the subject they're offering to transfer to the sway target
 	DIPLO_PLAY_REVERSE_SWAY_CALL_ALLY_DESIRE = 25 # Added to AI scoring for reverse sway call ally even though call ally isn't actually valid for reverse-sways, so they can score it against other sway types
 	
 	DIPLO_PLAY_ADD_WARGOAL_MIN_SCORE = 20 # A wargoal needs at least this value for AI to add it to the play
@@ -535,6 +537,7 @@ NAI = {
 	DECLARE_INTEREST_RIVAL_FACTOR = 25 # For each rival with an interest in the region
 	DECLARE_INTEREST_SUPPORTS_TRADE_ROUTE_FACTOR = 1000 # Add if this interest is in a market with which we have a trade route (and there is no other interest that would support it)
 	DECLARE_INTEREST_SUPPORTS_DIPLOMATIC_PACT_FACTOR = 1000 # Add if this interest is in a country with which we have a diplomatic pact (and there is no other interest that would support it)
+	DECLARE_INTEREST_SUPPORTS_GROWING_COLONY_FACTOR = 1000 # Add if this interest is in a region where we have a growing colony
 	DECLARE_INTEREST_ADJACENT_REGION_MULT = 1.5
 	
 	# If an AI country has too many colonial/non-colonial interests, subtract the score of those type of interests by this
@@ -573,9 +576,9 @@ NAI = {
 	MONEY_SPENDING_MIN_SURPLUS_TO_ADD_SHOULD_HAVE = 2000 # How much of a surplus in absolute money does AI want to have after increasing spending for a 'should-have' project
 	MONEY_SPENDING_MIN_SURPLUS_TO_ADD_WANTS_TO_HAVE = 5000 # How much of a surplus in absolute money does AI want to have after increasing spending for a 'wants-to-have' project
 	MONEY_SPENDING_MIN_SURPLUS_TO_ADD_NICE_TO_HAVE = 10000 # How much of a surplus in absolute money does AI want to have after increasing spending for a 'nice-to-have' project
-	MONEY_SPENDING_MIN_SURPLUS_TO_IGNORE_RATIO_FOR_SHOULD_HAVE = 20000 # If AI has this surplus in absolute money, it's always fine to increase spending on a 'should-have' project, regardless of income ratio
-	MONEY_SPENDING_MIN_SURPLUS_TO_IGNORE_RATIO_FOR_WANTS_TO_HAVE = 40000 # If AI has this surplus in absolute money, it's always fine to increase spending on a 'wants-to-have' project, regardless of income ratio
-	MONEY_SPENDING_MIN_SURPLUS_TO_IGNORE_RATIO_FOR_NICE_TO_HAVE = 60000 # If AI has this surplus in absolute money, it's always fine to increase spending on a 'nice-to-have' project, regardless of income ratio
+	MONEY_SPENDING_MIN_SURPLUS_TO_IGNORE_RATIO_FOR_SHOULD_HAVE = 15000 # If AI has this surplus in absolute money, it's always fine to increase spending on a 'should-have' project, regardless of income ratio
+	MONEY_SPENDING_MIN_SURPLUS_TO_IGNORE_RATIO_FOR_WANTS_TO_HAVE = 30000 # If AI has this surplus in absolute money, it's always fine to increase spending on a 'wants-to-have' project, regardless of income ratio
+	MONEY_SPENDING_MIN_SURPLUS_TO_IGNORE_RATIO_FOR_NICE_TO_HAVE = 50000 # If AI has this surplus in absolute money, it's always fine to increase spending on a 'nice-to-have' project, regardless of income ratio
 	MONEY_SPENDING_ACCEPTABLE_WAR_DEBT = 0.5 # If the AI has less than this % debt to ceiling, avoid doing cost-cutting at war for 'wants to have' and above
 	MONEY_SPENDING_MIN_RATIO_TO_CONSIDER_GOLD_RESERVES = 0.8 # How low of a income-to-expenses ratio does the AI need to have to try to cut spending regardless of how plentiful its gold reserves are (when at peace)
 	MONEY_SPENDING_MIN_WEEKS_OF_GOLD_RESERVES_TO_NOT_REMOVE_SHOULD_HAVE = 20 # If we have enough gold reserves to maintain our current spending for this long, don't decrease spending on a 'should-have'
@@ -589,7 +592,7 @@ NAI = {
 	MONEY_SPENDING_PRESTIGE_RIVAL_THRESHOLD = 0.5 # If a rival has this much more prestige than AI does, it wants to increase spending on art academies
 	
 	MONEY_SPENDING_MILITARY_CRITICAL_THRESHOLD = 0.5 # If actual-to-wanted number of barracks/naval bases is below this, AI will not consider downsizing them further
-	MONEY_SPENDING_CONSTRUCTION_CRITICAL_THRESHOLD = 0.25 # If actual-to-wanted number of construction sector buildings is below this, AI considers it very important to get more
+	MONEY_SPENDING_CONSTRUCTION_CRITICAL_THRESHOLD = 0.5 # If actual-to-wanted number of construction sector buildings is below this, AI considers it very important to get more
 	MONEY_SPENDING_INNOVATION_CRITICAL_THRESHOLD = 0.25 # If innovation production compared to cap is worse than this, AI considers it very important to improve
 	MONEY_SPENDING_INNOVATION_DESIRED_THRESHOLD = 0.90 # If innovation production compared to cap is worse than this, AI considers it important to improve
 	MONEY_SPENDING_SUPPLY_NETWORK_CRITICAL_THRESHOLD = 0.75 # If supply network is worse than this, AI considers it critical to improve it
@@ -830,14 +833,14 @@ NAI = {
 	TRADE_ROUTE_MIN_WANTED_RELATIVE_VOLUME = 0.1 # If a trade route won't account for at least this fraction of buy/sell orders in the market, don't create it
 	TRADE_ROUTE_MIN_VALUE_TO_IGNORE_VOLUME_CHECK = 1000 # If a trade route is trading at least this much base value worth of goods, ignore the relative check above
 	TRADE_ROUTE_ACCEPTABLE_SPENDING = 0.002 # AI will not spend more BUR than this on trade routes (scaled by weekly GDP)
-	TRADE_ROUTE_ACCEPTABLE_SPENDING_MINIMUM = 100 # If TRADE_ROUTE_ACCEPTABLE_SPENDING is less than this, this is used instead (so even small countries can do some trading)
+	TRADE_ROUTE_ACCEPTABLE_SPENDING_MINIMUM = 20 # If TRADE_ROUTE_ACCEPTABLE_SPENDING is less than this, this is used instead (so even small countries can do some trading other than their free routes)
 	
 	TRADE_ROUTE_MARKET_RANDOM_FACTOR = 1.0 # The higher this is, the more random the AI will be about which markets it trades with
 	TRADE_ROUTE_GOODS_RANDOM_FACTOR = 1.0 # The higher this is, the more random the AI will be about which goods it selects for trading
-	TRADE_ROUTE_EXPORT_VS_IMPORT_TOLERANCE = 2.0 # The AI is OK with having up to this amount more import than export routes or vice versa
+	TRADE_ROUTE_EXPORT_VS_IMPORT_TOLERANCE = 3.0 # The AI is OK with having up to this amount more import than export routes or vice versa
 	TRADE_ROUTE_TRADE_VALUE_FACTOR = 1.0 # The expected final trade volume * base price of goods is multiplied by this
 	TRADE_ROUTE_RELATIVE_VOLUME_FACTOR = 2.0 # Multiply trade route score by ( 1 + supplied fraction of buy/sell orders in the market * this )
-	TRADE_ROUTE_WANTED_NEW_GOODS_FACTOR = 10000 # Add this if the trade route is importing a good to the market that the AI wants and has no local production for
+	TRADE_ROUTE_WANTED_NEW_GOODS_MULT = 100 #  Multiply trade route score by this if the trade route is importing a good to the market that the AI wants and has no local production or other import routes for
 	TRADE_ROUTE_DISTANCE_DIVISOR = 0.002 # Divide the trade route value by 1 + (absolute distance between the two market capitals * this) to encourage AI to trade with nearby markets (we use this instead of more expensive convoy distance calc)
 	TRADE_ROUTE_TARIFF_DIVISOR = 2 # Divide the trade route value by 1 + ( total tariff rate * this ) 
 	TRADE_ROUTE_EXISTING_ROUTES_DIVISOR = 0.5 # Score for trade route is divided by (1 + this) for each trade route the market has of the same goods
@@ -884,6 +887,7 @@ NCountry = {
 	URBAN_CENTER_BUILDING = "building_urban_center"
 	CONSCRIPTION_CENTER_BUILDING = "building_conscription_center"
 	TRADE_CENTER_BUILDING = "building_trade_center"
+	RAILWAY_BUILDING = "building_railway"
 	CONSTRUCTION_QUEUE_INCREMENT_SHIFT = 5  # Increment/Decrement used for buildings construction queue when holding down Shift
 	CONSTRUCTION_QUEUE_INCREMENT_CONTROL = 10 # Increment/Decrement used for buildings construction queue when holding down Ctrl
 	WEEKS_TO_STORE_LOYALIST_RADICAL_STATISTICS = 52 # Number of weeks of statistics for loyalists/radicals that is stored and shown
@@ -1154,10 +1158,12 @@ NEconomy = {
 	BUILDING_RAISE_WAGES_MIN_RELEVANT_POP_SIZE = 50 # Pops with less workforce than this are ignored when checking whether a profitable building should raise wages because of radicalizing workers
 	BUILDING_RAISE_WAGES_DISCRIMINATION_FACTOR = 0.66 # Profitable buildings only care to raise wages for discriminated pops if their wealth to expected SoL ratio is less than this
 	BUILDING_LOWER_WAGES_TARGET_WEALTH_MULT = 1.33 # Buildings will consider lowering wages if all significant pops working in them have this * the target wealth to expected SoL ratio
-	BUILDING_PROFIT_TARGET_TO_RAISE_WAGES = 0.3	# Required profit margin to consider raising wages for SoL or employment reasons, with BUILDING_WEEKS_BETWEEN_PAY_CHANGES weeks cooldown
+	BUILDING_MIN_EARNINGS_TO_HIRE_EMPLOYEES = 2  # Non-subsidized buildings will not hire if it would result in their annual earnings/employee falling below this threshold
+	BUILDING_PROFIT_TARGET_TO_RAISE_WAGES = 0.3		# Required profit margin to consider raising wages for SoL or employment reasons, with BUILDING_WEEKS_BETWEEN_PAY_CHANGES weeks cooldown
 	BUILDING_PROFIT_TARGET_TO_LOWER_WAGES = 0.15	# If profit margin is this or below, consider lowering wages for SoL or employment reasons, with BUILDING_WEEKS_BETWEEN_PAY_CHANGES weeks cooldown
 	BUILDING_MAX_EMPLOYMENT_FRACTION_TO_RAISE_WAGES = 0.5 # If the employment fraction of a building is above this, don't raise wages just to try and snipe employees from other buildings
-	BUILDING_WEEKS_BETWEEN_PAY_CHANGES = 12		# Cooldown between changes in pay and firing staff, so buildings don't overcompensate for a temporary change in circumstances
+	BUILDING_WEEKS_BETWEEN_PAY_CHANGES = 12		# Cooldown between changes in pay, so buildings don't overcompensate for a temporary change in circumstances. If the building is unprofitable it uses BUILDING_WEEKS_BETWEEN_PAY_CHANGES_WHEN_UNPROFITABLE instead.
+	BUILDING_WEEKS_BETWEEN_PAY_CHANGES_WHEN_UNPROFITABLE = 4 # Cooldown between changes in pay, so buildings don't overcompensate for a temporary change in circumstances. Only used when unprofitable.
 	MIN_RAISE_TO_HIRE = 0.10					# The minimum required increase in wages for an employee to switch jobs (1.0 = +100% = x2)
 	BASE_RESOURCE_DISCOVER_CHANCE = 0.02 		# Per day (1.0 = 1%)
 	EMPLOYMENT_RESOURCE_DEPLETE_CHANCE = 0.005	# Multiplied by number of fully employed levels of the building
@@ -1170,7 +1176,7 @@ NEconomy = {
 	QUALITY_OF_LIFE_MAX = 100
 	SUBSISTENCE_OUTPUT_AVERAGE_WAGE_RATE_FACTOR = 150   # Each 1.0 of subsistence output counts as this much wage rate when setting normal wages
 	PEASANT_STARTING_WAGE_RATE_FACTOR = 1.0		# For the sake of calculating starting normal wages, treat peasants as having this pop type wage multiplier
-	STARTING_WAGE_RATE_MULTIPLIER = 2.0			# Starting wage rate is multiplied by this (for easy balancing)
+	STARTING_WAGE_RATE_MULTIPLIER = 1.0			# Starting wage rate is multiplied by this (for easy balancing)
 	NORMAL_WAGE_RATE_FALLBACK = 500.0			# If it's impossible to compute a normal wage rate (e.g. if every incorporated pop works in government buildings) set it to this (weekly £ per POP_SIZE_PACKAGE employees)
 	MINIMUM_WAGE_RATE = 10.0					# The wage rate can never drop below this, no matter what (weekly £ per POP_SIZE_PACKAGE employees)
 	MAXIMUM_WAGE_RATE = 100000.0				# The absolute maximum that a building's wage rate can be increased to.
@@ -1184,8 +1190,6 @@ NEconomy = {
 	BUILDING_PAUSE_HIRES_CASH_RESERVES_THRESHOLD = 0.75 	# If cash reserves are less than this, buildings should consider pausing new hires to wait for cash reserves
 	BUILDING_MIN_EMPLOYMENT_FRACTION_TO_PAUSE_HIRES = 0.1 	# If building has at least this employment, it's OK to pause hiring
 	BUILDING_MAX_PROFIT_TO_PAUSE_HIRES = 0.2				# If building is making less than this fraction of revenue in profit, it's OK to pause hiring  
-	
-	URBANIZATION_PER_BUILDING = 100
 	
 	PRICE_REPORT_MAX_ENTRIES = 10
 	
@@ -1265,6 +1269,11 @@ NEconomy = {
 	COMPANY_PROSPERITY_BONUS_THRESHOLD = 100			# At this amount of prosperity, a company will start providing its prosperity bonus modifier
 	COMPANY_PROSPERITY_WEEKLY_INCREASE = 5				# High-productivity companies have their prosperity increase by this amount per week
 	COMPANY_PROSPERITY_WEEKLY_DECREASE = 5				# Low-productivity companies have their prosperity increase by this amount per week
+	
+	COMPANY_STATE_NAME_WEIGHT_RANDOM_FACTOR = 0.5		# The higher this is, the more random state selection for company names will be 
+	COMPANY_STATE_NAME_WEIGHT_PER_BUILDING_LEVEL = 10	# States have their weight increased to be picked as the namesake for a company by this for each level of company-related buildings in the state
+	COMPANY_STATE_NAME_WEIGHT_PER_POTENTIAL_BUILDING_LEVEL = 0.1	# States have their weight increased to be picked as the namesake for a company by this for each level of potential company-related buildings in the state
+	COMPANY_STATE_NAME_WEIGHT_HOMELAND_FACTOR = 5		# States have their weight to be picked as the namesake for a company multiplied by this if it's a homeland of the owning country
 } 
 
 NMilitary = {
@@ -1284,6 +1293,7 @@ NMilitary = {
 	MIN_USABLE_MANPOWER = 100						# Lowest manpower engaged in a battle limit (otherwise determined by combat width)
 	COMBAT_UNITS_PER_LEVEL = 1						# Number of combat units each level of military building can support. Must be the same for all recruitable buildings (barracks/conscription centers/naval bases)
 	BASE_MORALE_RECOVERED_PER_DAY = 0.03			# Default morale recovered is 3% per day
+	BASE_MORALE_RECOVERED_PER_DAY_SLOW_RATE = 0.1	# If current morale exceeds formation supply, multiply the excess gained by this value
 	BASE_MORALE_LOST_PER_DAY = 0.05					# Default morale lost when out of supply is 5%
 
 	# Travel related
@@ -1294,6 +1304,9 @@ NMilitary = {
     GENERAL_TRAVEL_AUTO_REASSIGN_INSTANTLY = 15		# If General is being auto reassigned (front destruction for example) and travel time is below this number of days make them travel instantly
     GENERAL_INVALID_TRAVEL_DAYS = 0                 # If our system fails to compute travel time due to invalid front/HQ position, then use this value as travel time instead. This prevents such cases from causing >300 days travels. This ignores GENERAL_TRAVEL_AUTO_REASSIGN_INSTANTLY.
 	FORMATION_TRAVEL_SPEED = 5.55					# The speed of formations when they travel, in pixels per tick [> 0]
+
+	USE_TRAVEL_NETWORK = yes						# (Temp) toggle for using direct travel vs travel network
+	FORMATION_TRAVEL_NETWORK_SPEED = 15				# (Temp) base speed of formations when they travel via the travel network
 
 	BATTLE_PLAN_ADVANCE_PROGRESS_TO_LAUNCH = 100 			# required accumulated advance progress to launch
 	BATTLE_PLAN_SWITCH_ORDER_LOST_PROGRESS_PERCENT = 0.5	# 50% accumulated advance progress lost when switching from an attacking order
@@ -1331,7 +1344,6 @@ NMilitary = {
 	INTERCEPTION_DELAY_BASE_DAYS = 5						# atleast this many days between each admiral interception attempt
 	INTERCEPTION_DELAY_MAX_RANDOM_DAYS_FACTOR = 10			# up to this many extra days between each admiral interception attempt
 	INTERCEPTION_BASE_CHANCE = 0.1							# base chance when trying to intercept enemy admirals
-	INTERCEPTION_NAVAL_INVASION_CHANCE = 1.0				# chance for intercepting enemy admiral during naval invasion
 
 	ADMIRAL_BATTLE_LOSS_REPAIR_TIME_DAYS = 28				# number of days after loosing a naval battle that an admiral cannot perform any new Orders
 
@@ -1351,6 +1363,10 @@ NMilitary = {
 	BATTLE_CONDITION_CHANCE_TO_UPDATE_PER_EXTRA_TICK = 0.01 # For each tick that has passed since the minimum number of ticks, this chance to refresh battle conditions (i.e. 13 ticks after min, there's 13% chance of switching)
 	
 	MAX_NUM_COMMANDERS_PER_FORMATION = 4	# The maximum number of commanders in a given Military Formation
+	
+	MILITARY_FORMATION_ORGANIZATION_MAX = 100				# The maximum amount of Organization a Military Formation requires to be considered at full Organization
+	MILITARY_FORMATION_ORGANIZATION_MIN = 25				# The minimum amount of Organization a Military Formation will always retain despite exceeding their Command Limit 
+	MILITARY_FORMATION_DAILY_ORGANIZATION_GAIN_MIN = 0.1	# The minimum amount of Organization a Military Formation can gain in a day
 }
 
 NDiplomacy = {
@@ -1427,13 +1443,14 @@ NDiplomacy = {
 	SWAY_OFFER_WARGOAL_MANEUVERS_COST_HUMILIATION = 20
 	SWAY_OFFER_WARGOAL_MANEUVERS_COST_UNIFICATION_LEADERSHIP = 30
 	SWAY_OFFER_WARGOAL_MANEUVERS_COST_OPEN_MARKET = 20
-	SWAY_OFFER_WARGOAL_MANEUVERS_COST_REGIME_CHANGE = 5
+	SWAY_OFFER_WARGOAL_MANEUVERS_COST_REGIME_CHANGE = 8
 	SWAY_OFFER_WARGOAL_MANEUVERS_COST_BAN_SLAVERY = 20
 	SWAY_OFFER_WARGOAL_MANEUVERS_COST_ANNEX_COUNTRY = 10
 	SWAY_OFFER_WARGOAL_MANEUVERS_COST_LIBERATE_COUNTRY = 30
-	SWAY_OFFER_WARGOAL_MANEUVERS_COST_MAKE_PUPPET = 8	
-	SWAY_OFFER_WARGOAL_MANEUVERS_COST_MAKE_DOMINION = 8
-	SWAY_OFFER_WARGOAL_MANEUVERS_COST_MAKE_VASSAL = 8
+	SWAY_OFFER_WARGOAL_MANEUVERS_COST_MAKE_PROTECTORATE = 8	
+	SWAY_OFFER_WARGOAL_MANEUVERS_COST_REDUCE_AUTONOMY = 5
+	SWAY_OFFER_WARGOAL_MANEUVERS_COST_INCREASE_AUTONOMY = 10
+	SWAY_OFFER_WARGOAL_MANEUVERS_COST_MAKE_TRIBUTARY = 8
 	SWAY_OFFER_WARGOAL_MANEUVERS_COST_CONQUER_STATE = 10
 	SWAY_OFFER_WARGOAL_MANEUVERS_COST_RETURN_STATE = 10
 	SWAY_OFFER_WARGOAL_MANEUVERS_COST_TAKE_TREATY_PORT = 10
@@ -1444,7 +1461,7 @@ NDiplomacy = {
 	SWAY_OFFER_WARGOAL_MANEUVERS_COST_LIBERATE_SUBJECT = 20
 	SWAY_OFFER_WARGOAL_MANEUVERS_COST_FORCE_RECOGNITION = 30
 	SWAY_OFFER_WARGOAL_MANEUVERS_COST_UNIFICATION = 100
-	SWAY_OFFER_WARGOAL_MANEUVERS_COST_INDEPENDENCE = 30
+	SWAY_OFFER_WARGOAL_MANEUVERS_COST_INDEPENDENCE = 40
 	SWAY_OFFER_WARGOAL_MANEUVERS_COST_SECESSION = 100
     SWAY_OFFER_WARGOAL_MANEUVERS_COST_POPULATION_SCALING_FACTOR = 10000 # The amount of population by which the factor below is multiplied
 	SWAY_OFFER_WARGOAL_MANEUVERS_COST_POPULATION_SCALING_MULTIPLIER = 0.03 # For each SWAY_OFFER_WARGOAL_MANEUVERS_COST_POPULATION_SCALING_FACTOR population in a country/state, multiply maneuvers cost by this
@@ -1467,9 +1484,8 @@ NDiplomacy = {
 	WAR_GOAL_BAN_SLAVERY_MONTHS = 60	# [>= 0]
 	WAR_GOAL_HUMILIATION_PACT_TYPE = "humiliation"
 	WAR_GOAL_HUMILIATION_MONTHS = 60	# [>= 0]
-	WAR_GOAL_MAKE_PUPPET_SUBJECT_TYPE = "subject_type_puppet"
-	WAR_GOAL_MAKE_DOMINION_SUBJECT_TYPE = "subject_type_dominion"
-	WAR_GOAL_MAKE_VASSAL_SUBJECT_TYPE = "subject_type_vassal"	
+	WAR_GOAL_MAKE_PROTECTORATE_SUBJECT_TYPE = "subject_type_protectorate"
+	WAR_GOAL_MAKE_TRIBUTARY_SUBJECT_TYPE = "subject_type_tributary"	
 	WAR_GOAL_FORCE_RECOGNITION_FROM_TYPE = "unrecognized"
 	WAR_GOAL_FORCE_RECOGNITION_TO_TYPE = "recognized"
 	WAR_GOAL_FORCE_RECOGNITION_TARGET_RANK = "great_power"
@@ -1480,6 +1496,8 @@ NDiplomacy = {
 	WAR_GOAL_CONTAIN_THREAT_YEARS_SINCE_CONQUEST = 10
 	WAR_GOAL_REGIME_CHANGE_MONTHS = 60 # Government in country with forced regime change is locked in for this number of months [>= 0]
 	WAR_GOAL_REGIME_CHANGE_MAX_IDEOLOGICAL_OPINION = -5 # If ideological opinion is above this, regime change can't be used
+	WAR_GOAL_REGIME_CHANGE_MIN_LAW_PROGRESSIVENESS_DIFFERENCE = 50 # If the difference between the target wargoal holder's laws in a law group are not at least this, don't change it as part of regime change
+	WAR_GOAL_REGIME_CHANGE_NUM_TIMES_TO_LOOP_THROUGH_LAWS = 3	# How many times do we loop through the laws to check what to change? This is done more than once in order to allow laws that are unlocked by other laws to be changed
 	
 	WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR = 10000 # The amount of population by which the factor below is multiplied
 	WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER = 0.03 # For each WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR population in a country/state, multiply infamy by this
@@ -1494,9 +1512,9 @@ NDiplomacy = {
 	WAR_GOAL_INFAMY_CONQUER_STATE = 5.0
 	WAR_GOAL_INFAMY_RETURN_STATE = 2.0
 	WAR_GOAL_INFAMY_TAKE_TREATY_PORT = 2.0
-	WAR_GOAL_INFAMY_MAKE_PUPPET = 3.0
-	WAR_GOAL_INFAMY_MAKE_VASSAL = 3.0
-	WAR_GOAL_INFAMY_MAKE_DOMINION = 2.0
+	WAR_GOAL_INFAMY_MAKE_PROTECTORATE = 2.0
+	WAR_GOAL_INFAMY_MAKE_TRIBUTARY = 2.0
+	WAR_GOAL_INFAMY_REDUCE_AUTONOMY = 2.0
 	WAR_GOAL_INFAMY_TRANSFER_SUBJECT = 2.0	
 	WAR_GOAL_INFAMY_ANNEX_COUNTRY = 5.0
 	WAR_GOAL_INFAMY_UNIFICATION = 0.5
@@ -1517,9 +1535,10 @@ NDiplomacy = {
 	WAR_GOAL_EXECUTION_PRIORITY_UNIFICATION_LEADERSHIP = 7
 	WAR_GOAL_EXECUTION_PRIORITY_ANNEX_COUNTRY = 8
 	WAR_GOAL_EXECUTION_PRIORITY_LIBERATE_COUNTRY = 9
-	WAR_GOAL_EXECUTION_PRIORITY_MAKE_PUPPET = 10	
-	WAR_GOAL_EXECUTION_PRIORITY_MAKE_DOMINION = 11
-	WAR_GOAL_EXECUTION_PRIORITY_MAKE_VASSAL = 12	
+	WAR_GOAL_EXECUTION_PRIORITY_MAKE_PROTECTORATE = 10	
+	WAR_GOAL_EXECUTION_PRIORITY_MAKE_TRIBUTARY = 11
+	WAR_GOAL_EXECUTION_PRIORITY_REDUCE_AUTONOMY = 12
+	WAR_GOAL_EXECUTION_PRIORITY_INCREASE_AUTONOMY = 13
 	WAR_GOAL_EXECUTION_PRIORITY_CONQUER_STATE = 21
 	WAR_GOAL_EXECUTION_PRIORITY_RETURN_STATE = 22
 	WAR_GOAL_EXECUTION_PRIORITY_TAKE_TREATY_PORT = 23	
@@ -1736,13 +1755,13 @@ NPops = {
 } 
 
 ### Pop Growth Constants
-@min_birthrate = 0.0015
-@max_birthrate = 0.0040
+@min_birthrate = 0.0010
+@max_birthrate = 0.0080
 @min_mortality = 0.0010
-@max_mortality = 0.0070
+@max_mortality = 0.0100
 @pop_growth_sol_equilibrium = 5							# Equilibrium is where (with no birthrate/death-rate mods) growth is stagnant
-@pop_growth_sol_delta_cap = 20							# SoL Delta Cap is where net growth stops increasing with rising SoL, i.e. both drop at the same pace
-@pop_growth_sol_cap = 40								# SoL Cap is where they birthrate/death-rate stop dropping
+@pop_growth_sol_delta_cap = 25							# SoL Delta Cap is where net growth stops increasing with rising SoL, i.e. both drop at the same pace
+@pop_growth_sol_cap = 50								# SoL Cap is where they birthrate/death-rate stop dropping
 
 @mortality_at_equilibrium = @[max_birthrate-(pop_growth_sol_equilibrium*(max_birthrate-min_birthrate)/pop_growth_sol_cap)]
 @birthrate_at_delta_cap = @[max_birthrate-(pop_growth_sol_delta_cap*(max_birthrate-min_birthrate)/pop_growth_sol_cap)]
@@ -1908,8 +1927,9 @@ NWar = {
 	OCCUPATION_STATE_BASE_WEIGHT = 1
 	OCCUPATION_STATE_POP_WEIGHT = 1
 	OCCUPATION_STATE_INCORPORATED_WEIGHT = 10
-	OCCUPATION_STATE_DEFENSIVE_BATTLE_VICTORY_SCORE = 100000 # How many occupation "points" each country receives after winning a defensive battle
+	OCCUPATION_STATE_DEFENSIVE_BATTLE_VICTORY_SCORE = 100 # How many occupation "points" each country receives after winning a defensive battle
 	OCCUPATION_STATE_CLEAR_OCCUPATION_FRACTION = 0.5 # Fraction of occupation score dedicated to clear occupation from your own States (if any).
+	NAVAL_INVASION_MAX_LAND_BATTLE_DEFEATS_AT_ZERO_OCCUPATION = 3 # At this number of land defeats with zero occupation you fail the naval invasion.
 	
 	STATE_CONQUEST_HOMELAND_AND_CLAIM_RADICALIZATION = 0.1
 	STATE_CONQUEST_HOMELAND_AND_CLAIM_DEMILITARIZATION = 0.25
@@ -1923,6 +1943,31 @@ NWar = {
 	MAX_SIMULTANEOUS_BATTLES = 1                    # Allows to spawn up to MAX_SIMULTANEOUS_BATTLES as long as you have that many generals with advance orders.
 	LOCK_PROVINCE_CAPTURE_TO_SINGLE_STATE = no      # If `yes`, provinces will only be captured on the same state as the battle province state.
 	PREFER_BATTLES_IN_UNIQUE_STATES = no            # If `yes`, will avoid creating ANY battles in the same state UNLESS there's no other option.
+}
+
+NTravelNetwork = {
+	ARMY_CONNECTION_UNDEVELOPED_COST_MULT = 4.0		# Travel cost multiplier for undeveloped land connections
+	ARMY_CONNECTION_DIRT_ROAD_COST_MULT = 2.0		# Travel cost multiplier for dirt road land connections
+	ARMY_CONNECTION_HARDENED_ROAD_COST_MULT = 1.5	# Travel cost multiplier for hardened road land connections (currently unused)
+	ARMY_CONNECTION_RAILWAY_COST_MULT = 1.0			# Travel cost multiplier for railway land connections
+	ARMY_CONNECTION_CHARTED_COST_MULT = 1.0			# Travel cost multiplier for ocean/coastal water connections
+	ARMY_CONNECTION_CANAL_COST_MULT = 1.0			# Travel cost multiplier for channel water connections
+	ARMY_DIRECT_CONNECTION_COST_MULT = 10.0			# Travel cost multiplier for traveling in a direct line from/to a position on the map (without a travel node connection)
+	ARMY_CONNECTION_DOCKING_COST = 200				# Fixed docking/undocking cost for going from a harbor node to a port node (overrides docking connection length)
+
+	FLEET_CONNECTION_UNDEVELOPED_COST_MULT = 100.0	# Travel cost multiplier for undeveloped land connections (unused by fleets)
+	FLEET_CONNECTION_DIRT_ROAD_COST_MULT = 100.0	# Travel cost multiplier for dirt road land connections (unused by fleets)
+	FLEET_CONNECTION_HARDENED_ROAD_COST_MULT = 100.0	# Travel cost multiplier for hardened road land connections (currently unused) (unused by fleets)
+	FLEET_CONNECTION_RAILWAY_COST_MULT = 100.0		# Travel cost multiplier for railway land connections (unused by fleets)
+	FLEET_CONNECTION_CHARTED_COST_MULT = 1.0		# Travel cost multiplier for ocean/coastal water connections
+	FLEET_CONNECTION_CANAL_COST_MULT = 1.0			# Travel cost multiplier for channel water connections
+	FLEET_DIRECT_CONNECTION_COST_MULT = 4.0			# Travel cost multiplier for traveling in a direct line from/to a position on the map (without a travel node connection)
+	FLEET_CONNECTION_DOCKING_COST = 10				# Fixed docking/undocking cost for going from a harbor node to a port node (overrides docking connection length)
+
+	DIRECT_CONNECTION_COST_MULT = 10.0 				# Travel cost multiplier for traveling in a direct line from/to a position on the map (without a travel node connection)
+	DIRECT_CONNECTION_NODE_MAX_NODES = 10			# Only search the closest X travel nodes for direct line map travel
+	DIRECT_CONNECTION_NODE_SEARCH_DISTANCE = 1200	# Default distance allowed to pathfind in a direct line from a (start/target) map point to a travel node (if no valid are found, it is expanded)
+	DIRECT_CONNECTION_MAP_MAX_DISTANCE = 300 		# Maximum distance allowed to pathfind in a direct line between start and target map points directly
 }
 
 NText = {

@@ -608,6 +608,11 @@ character_events.5 = { #A statue made of the king
 			NOT = { has_variable = ruler_statue_var }
 		}
 		NOT = { has_variable = ruler_statue_cooldown }
+		NOT = {
+			ruler = {
+				has_trait = trait_child
+			}
+		}
 	}
 
 	immediate = {

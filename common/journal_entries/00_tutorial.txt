@@ -1169,6 +1169,25 @@ je_tutorial_convoy_raiding = {
 		}
 	}
 
+	invalid = {
+		custom_tooltip = {
+			text = je_tutorial_convoy_raiding_invalid_tooltip
+			OR = {
+				NOT = { exists = scope:target }
+				NOT = { scope:target.owner = root }
+				NOT = { 
+					scope:target = {
+						has_role = admiral
+					}
+				}
+			}
+		}
+	}
+
+	on_invalid = {
+		remove_active_objective_subgoal = sg_convoy_raiding
+	}
+
 	weight = 1052
 	transferable = yes
 	should_update_on_player_command = yes

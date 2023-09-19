@@ -231,6 +231,11 @@ NGraphics = {
 	MORALE_MEDIUM = { 0.7 0.5 0.1 1 }
 	MORALE_LOW = { 0.65 0.1 0.1 1 }
 
+	# Organization colors
+	ORGANIZATION_HIGH = { 0.14 0.60 0.2 1 }
+	ORGANIZATION_MEDIUM = { 0.7 0.5 0.1 1 }
+	ORGANIZATION_LOW = { 0.65 0.1 0.1 1 }
+	
 	# Loyalty colors
 	LOYALTY_LOYALIST = { 0.39 0.67 0.33 1}
 	LOYALTY_RADICAL = { 0.88 0.34 0.34 1}
@@ -285,8 +290,22 @@ NGraphics = {
 	DISTANCE_ROUGHNESS_SCALE = 0.5			# Roughness multiplier scale
 	DAYS_AFTER_BATTLE_TO_SHOW_ENTITY = 7	# For how long to show battle entities after the battle
 
-	MILITARY_FORMATION_BASECAMP_ENTITY = "generic_line_infantry_pm_skirmish_infantry_entity"	# Entity of the base camp of military formation on the front
-	MILITARY_FORMATION_UNIT_ENTITY = "european_mobile_artillery_pm_mobile_artillery_entity"		# Entity of military units on front provinces
+	# Grid cell scores used for cities
+	CELL_SCORE_BASE = 1.0					# A cell that is 100% within the province will get the full base score. A cell outside the province will get 0. A 50/50 cell will get approximately half base score.
+	CELL_SCORE_UNDER_WATER_PENALTY = 10.0	# penalty per depth-units under water. Added for each corner of the cell
+	CELL_SCORE_SLOPE_MIN = 0.075			# amount of slope allowed before penalty kicks in. value corresponds to the slope's 'k' in f(x)=kx+m
+	CELL_SCORE_SLOPE_PENALTY = 6			# penalty per 'k' above the limit. Does not scale linearly with slope angle so might be tricky to tweak
+	CELL_SCORE_RIVER_PENALTY = 10.0			# Penalty per "to-close-to-river"-units	(distance-from-cell-center-to-river-edge - bias)
+	CELL_SCORE_ROAD_PENALTY = 10.0
+	CELL_SCORE_NOISE_FACTOR = 0.0			# Multiplies score with 1+-noise_factor
+
+	# Frontline diorama graphics
+	FRONT_DIORAMA_GRID_WIDTH = 20			# Grid width of dioramas inside a province
+	FRONT_DIORAMA_GRID_HEIGHT = 20			# Grid height of dioramas inside a province 
+	FRONT_DIORAMA_GRID_SCALE = 1.1			# Grid cell scale of dioramas inside a province
+
+	OCCUPATION_ENTITY = "military_occupation_flag_entity"		# Entity that appears on occupied territory by occupying nation
+	OCCUPATION_ENTITY_DIRECTION = { 0.0 0.0 -1.0 }				# Direction of occupation entity
 }
 
 NFrontend = {
@@ -324,13 +343,6 @@ NCities = {
 	GRID_SCALE = 1.1
 	MESH_SCALE = 1.0		#scale all meshes by this
 
-	CELL_SCORE_BASE = 1.0					# A cell that is 100% within the province will get the full base score. A cell outside the province will get 0. A 50/50 cell will get approximately half base score.
-	CELL_SCORE_UNDER_WATER_PENALTY = 10.0	# penalty per depth-units under water. Added for each corner of the cell
-	CELL_SCORE_SLOPE_MIN = 0.075			# amount of slope allowed before penalty kicks in. value corresponds to the slope's 'k' in f(x)=kx+m
-	CELL_SCORE_SLOPE_PENALTY = 6			# penalty per 'k' above the limit. Does not scale linearly with slope angle so might be tricky to tweak
-	CELL_SCORE_RIVER_PENALTY = 10.0			# Penalty per "to-close-to-river"-units	(distance-from-cell-center-to-river-edge - bias)
-	CELL_SCORE_ROAD_PENALTY = 10.0
-	CELL_SCORE_NOISE_FACTOR = 0.0			# Multiplies score with 1+-noise_factor
 	MAX_ACTIVE_SOUND_EFFECTS = 5
 
 	CITY_RIVER_DISTANCE_BIAS = 0.75			# Higher values = more river avoidance
@@ -444,4 +456,12 @@ NGuiFlag = {
 	SMALL_WAVE_SCALE = 7.0
 	WAVE_SCALE = 0.95
 	ANIMATION_SPEED = 0.9
+}
+
+NTravelNetwork = {
+	FORMATION_CATCHUP_DISTANCE = 20.0			# If a military formation 3D caravan is this distance behind where it is supposed to be, accelerate with catch-up speed
+	FORMATION_CATCHUP_SPEED_MULTIPLIER = 1.5	# Accelerate averaged speed by this multiplied when 'catching up'
+	FORMATION_CATCHUP_MIN_SPEED = 15.0			# Minimum speed for catching up
+	FORMATION_SMOOTHING_STEP_COUNT = 5			# For smoothing visual movement speed, military formation speed is measured as a rolling average over X steps
+	FORMATION_SMOOTHING_STEP_TIME = 1.0			# Each step for the military formation speed smoothing is this long
 }
