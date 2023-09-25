@@ -445,6 +445,57 @@ desert = {
 	devastation_mask_strength = 1.0
 }
 
+wasteland = {
+	label = label_hazardous
+	weight = 2
+	textures = {
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
+							state_is_in_southern_hemisphere = yes
+						}
+					}
+					add = 1
+				}
+			}
+			path = "gfx/state_pictures/desert_northamerica.dds"
+			effect = "vfx_entity_ui_state_desert_northamerica"
+		}
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
+							state_is_in_southern_hemisphere = no
+						}
+					}
+					add = 1
+				}
+			}
+			path = "gfx/state_pictures/desert.dds"
+			effect = "vfx_entity_ui_state_desert"
+		}
+	}
+	
+	combat_width = 0.5
+	risk = 0.6
+	materials = { 
+		Desert_01 = 0.5
+		Desert_03 = 0.5
+		Desert_04 = 0.5
+		Desert_05 = 0.5
+		Desert_06 = 0.5
+	}
+	debug_color = hsv { 0.15 0.15 0.15 }
+	
+	pollution_mask_strength = 1.0
+	devastation_mask_strength = 1.0
+}
+
 tundra = {
 	label = label_flat
 	label = label_hazardous
