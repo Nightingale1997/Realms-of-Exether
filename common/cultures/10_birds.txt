@@ -2,6 +2,10 @@
 	color= hsv{ 0.12 0.56 0.86 }
 	religion = mountain_worship
 	traits = { bird_heritage }
+	# The Whitefeather avians take great care to adorn their plumage with their own designs
+	obsessions = {
+		dye
+	}
 	male_common_first_names={
 		Agustin
 		Aitor
@@ -266,6 +270,10 @@ cliffpercher = {
 	color= hsv{ 0.52 0.51 0.75 }
 	religion = mountain_worship
 	traits = { bird_heritage }
+	#Cliffpercher Avians are natural fishers.
+	obsessions = {
+		fish
+	}
 	male_common_first_names={
 		Abel
 		Adriano
@@ -455,6 +463,10 @@ sandcircler = {
 	color= hsv{ 0.94 0.27 0.87 }
 	religion = animist
 	traits = { bird_heritage }
+	#The Sandcirlers' native deserts are arid places, but cactusfruit and sparse oasises supply them with their sacred fruit to keep them fed.
+	obsessions = {
+		fruit
+	}
 	male_common_first_names={
 		Aurelio
 		Camilo
@@ -517,6 +529,11 @@ blacktalon = {
 	color= hsv{ 0.72 0.25 0.28 }
 	religion = death_worship
 	traits = { bird_heritage }
+	#Blacktalon Avians are carrion eaters, and will age, salt and smoke meat to last through winter.
+	obsessions = {
+		meat
+	}
+	
 	male_common_first_names={
 		Aadu
 		Alar
@@ -664,10 +681,12 @@ blacktalon = {
 
 saglithan={
 	color= hsv{ 0.38 0.27 0.86 }
-	religion = mountain_worship
+	religion = animist
 	traits = { bird_heritage }
-	
-	
+	#Saglithans are hunters, swooping down upon prey maintains their feeling of a rightful place above the rest of the world.
+	obsessions = {
+		meat
+	}
 	male_common_first_names={
 		Alessandro Alfonso Ambrogio Amedeo Andrea Angelo Antonio Agostino
 		Bernardino Bartolomeo Benedetto Bonaventura Bernardo
