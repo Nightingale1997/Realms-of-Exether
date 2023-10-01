@@ -50,7 +50,11 @@ plains = {
 				if = {
 					limit = {
 						scope:region = {
-							state_is_in_southern_hemisphere = yes
+							OR = {
+								state_is_in_southern_hemisphere = yes
+								region = sr:region_yanger_steppe
+							}
+						
 						}
 					}
 					add = 1
@@ -107,6 +111,46 @@ plains = {
 		Grasslands_08 = 0.5
 	}
 	debug_color = hsv { 0.1 0.5 0.8 }
+	
+	pollution_mask_strength = 1.0
+	devastation_mask_strength = 1.0
+}
+
+wasteland = {
+	label = label_hazardous
+	weight = 2
+
+	
+	textures = {
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
+							region = sr:region_shaking_fields
+						}
+					}
+					add = 1
+				}
+			}
+			path = "gfx/state_pictures/wasteland_mud.dds"
+			effect = "vfx_entity_ui_state_ocean"
+		}
+		{
+			weight = {
+				value = 1
+				
+			}
+			path = "gfx/state_pictures/wasteland.dds"
+			effect = "vfx_entity_ui_state_ocean"
+		}
+	}
+	
+	combat_width = 0.5
+	risk = 0.6
+	created_material = DYNAMIC-Pollution_01
+	debug_color = hsv { 0.15 0.15 0.15 }
 	
 	pollution_mask_strength = 1.0
 	devastation_mask_strength = 1.0
@@ -181,11 +225,27 @@ forest = {
 	weight = 1.5
 	textures = {
 		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
+							region = sr:region_vermillion_thicket
+						}
+					}
+					add = 1
+				}
+			}
+			path = "gfx/state_pictures/vermillion_thicket.dds"
+			effect = "vfx_entity_ui_state_forest"
+		}
+		{
 			weight = 1
 			path = "gfx/state_pictures/forest.dds"
 			effect = "vfx_entity_ui_state_forest"
 		}
 	}
+
 	
 	combat_width = 0.6
 	risk = 0.5
@@ -258,13 +318,60 @@ hills = {
 					limit = {
 						scope:region = {
 							is_arid_region = yes
+							NOT = {
+								region = sr:region_teferet
+							}
 						}
 					}
-					add = 1
+					add = 3
 				}
 			}
-			path = "gfx/state_pictures/mountains_arid.dds"
+			path = "gfx/state_pictures/hills_desert.dds"
 			effect = "vfx_entity_ui_state_mountains_arid"
+		}
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
+							is_arid_region = yes
+							NOT = {
+								region = sr:region_teferet
+							}
+						}
+					}
+					add = 3
+				}
+			}
+			path = "gfx/state_pictures/hills_desert.dds"
+			effect = "vfx_entity_ui_state_mountains_arid"
+		}
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
+							OR = {
+								region = sr:region_south_toftir
+								region = sr:region_exiles_burden
+								region = sr:region_razorwind
+								region = sr:region_rimeroot_jungle
+								region = sr:region_thawed_lands
+								region = sr:region_east_everfrost
+								region = sr:region_west_everfrost
+								region = sr:region_coldreach
+								region = sr:region_whisperpine
+							}
+							
+						}
+					}
+					add = 3
+				}
+			}
+			path = "gfx/state_pictures/hills_tundra.dds"
+			effect = "vfx_entity_ui_state_tundra"
 		}
 	}
 	
@@ -333,6 +440,40 @@ mountain = {
 			}
 			path = "gfx/state_pictures/mountains.dds"
 			effect = "vfx_entity_ui_state_mountains"
+		}
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
+							OR = {
+								region = sr:region_west_everfrost
+								region = sr:region_coldreach
+							}
+						
+						}
+					}
+					add = 3
+				}
+			}
+			path = "gfx/state_pictures/arctic_mountain.dds"
+			effect = "vfx_entity_ui_state_arctic"
+		}
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
+							region = sr:region_east_everfrost
+						}
+					}
+					add = 3
+				}
+			}
+			path = "gfx/state_pictures/volcano_snow.dds"
+			effect = "vfx_entity_ui_state_arctic"
 		}
 	}
 
@@ -434,6 +575,40 @@ desert = {
 				if = {
 					limit = {
 						scope:region = {
+							OR = {
+								region = sr:region_nogi_desert
+								region = sr:region_anwarth
+							}
+							
+						}
+					}
+					add = 1
+				}
+			}
+			path = "gfx/state_pictures/desert_zalaron.dds"
+			effect = "vfx_entity_ui_state_desert_northamerica"
+		}
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
+							region = sr:region_salt_wastes
+						}
+					}
+					add = 1
+				}
+			}
+			path = "gfx/state_pictures/salt_flats.dds"
+			effect = "vfx_entity_ui_state_desert_northamerica"
+		}
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
 							state_is_in_southern_hemisphere = no
 						}
 					}
@@ -514,6 +689,24 @@ snow = {
 	label = label_hazardous
 	weight = 1
 	textures = {
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
+							OR = {
+								region = sr:region_rimeroot_jungle
+							}
+							
+						}
+					}
+					add = 3
+				}
+			}
+			path = "gfx/state_pictures/frozen_jungle.dds"
+			effect = "vfx_entity_ui_state_arctic"
+		}
 		{
 			weight = {
 				value = 1
