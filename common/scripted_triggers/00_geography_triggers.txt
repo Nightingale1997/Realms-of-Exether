@@ -205,12 +205,13 @@ is_arabic_farmland = {
 
 is_asian_farmland = {
 	OR = {
-		region = sr:region_indochina
-		region = sr:region_indonesia
-		region = sr:region_south_china
-		region = sr:region_north_china
-		region = sr:region_manchuria
-		region = sr:region_japan
+		region = sr:region_sanbang
+		region = sr:region_kengurudal
+		region = sr:region_tundgara
+		region = sr:region_valley_of_golden_fields
+		region = sr:region_muru
+		region = sr:region_boroo_jirta
+		region = sr:region_bataar_kharaal
 	}
 }
 
@@ -224,6 +225,25 @@ is_subtropic_farmland = {
 		region = sr:region_la_plata
 		region = sr:region_caribbean
 	}
+}
+
+is_rocky_desert = {
+	OR = {
+								region = sr:region_nogi_desert
+								region = sr:region_embervein_arroyo
+								region = sr:region_starshimmer_bank
+								region = sr:region_salt_wastes
+								region = sr:region_zurkhurrins_bridge
+								region = sr:region_gavkhan
+								region = sr:region_yamkhanato
+								region = sr:region_hirugolaima
+								region = sr:region_strait_of_aranmendi
+								region = sr:region_vulture_coast
+								region = sr:region_rust_gorge
+								region = sr:region_new_dumonia
+								region = sr:region_scalethane_realms
+								region = sr:region_khantar
+						}
 }
 
 is_arid_region = {
@@ -248,5 +268,6 @@ is_arid_region = {
 		region = sr:region_rust_gorge
 		region = sr:region_new_dumonia
 		region = sr:region_scalethane_realms
+		region = sr:region_khantar
 	}
 }
