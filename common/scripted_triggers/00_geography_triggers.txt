@@ -188,18 +188,13 @@ country_is_in_southeast_asia = {
 
 is_arabic_farmland = {
 	OR = {
-		region = sr:region_anatolia
-		region = sr:region_arabic
-		region = sr:region_persia
-		region = sr:region_central_asia
-		region = sr:region_nile_basin
+		region = sr:region_north_chin_desert
+		region = sr:region_south_chin_desert
+		region = sr:region_anwarth
+		region = sr:region_teferet
+		region = sr:region_shimmering_bank
 		region = sr:region_north_africa
-		region = sr:region_senegal
-		region = sr:region_niger
-		region = sr:region_congo
-		region = sr:region_ethiopia
-		region = sr:region_zanj
-		region = sr:region_southern_africa
+		region = sr:region_nogi_desert
 	}
 }
 
@@ -217,13 +212,11 @@ is_asian_farmland = {
 
 is_subtropic_farmland = {
 	OR = {
-		region = sr:region_mexico
-		region = sr:region_central_america
-		region = sr:region_gran_colombia
-		region = sr:region_andes
-		region = sr:region_brazil
-		region = sr:region_la_plata
-		region = sr:region_caribbean
+		region = sr:region_sarpakshetra
+		region = sr:region_thoughtsmith_ridge
+		region = sr:region_verdant_shore
+		region = sr:region_old_thaloria
+		region = sr:region_skittering_hills
 	}
 }
 

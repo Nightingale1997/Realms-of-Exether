@@ -251,6 +251,21 @@ hills = {
 			path = "gfx/state_pictures/hills.dds"
 			effect = "vfx_entity_ui_state_hills"
 		}
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
+							is_arid_region = yes
+						}
+					}
+					add = 1
+				}
+			}
+			path = "gfx/state_pictures/mountains_arid.dds"
+			effect = "vfx_entity_ui_state_mountains_arid"
+		}
 	}
 	
 	combat_width = 0.6
