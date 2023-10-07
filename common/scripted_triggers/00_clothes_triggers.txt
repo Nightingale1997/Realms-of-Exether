@@ -158,24 +158,7 @@ muslim_clothes_pop_trigger = {
 }
 
 jewish_clothes_pop_trigger = {
-	OR = {
-		AND = {
-			exists = scope:pop
-			scope:pop = {
-				culture = {
-					has_discrimination_trait = halfling_heritage
-				}   
-			}
-		}
-		AND = {
-			exists = scope:character
-			scope:character = {
-				culture = {
-					has_discrimination_trait = halfling_heritage
-				}   
-			}
-		}
-	}
+		always= no
 }
 
 hindu_clothes_pop_trigger = {
@@ -382,7 +365,10 @@ european_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
 		culture = {
-			has_discrimination_trait = human_heritage
+			OR = {
+				has_discrimination_trait = human_heritage
+			}
+
 		}
 		NOT = {
 			OR = {
@@ -656,7 +642,11 @@ european_clothes_pop_trigger = {
 	exists = scope:pop
 	scope:pop = {
 		culture = {
-			has_discrimination_trait = human_heritage
+			OR = {
+				has_discrimination_trait = human_heritage
+				has_discrimination_trait = halfling_heritage
+			}
+	
 		}
 	}
 }
@@ -1058,8 +1048,11 @@ underweight_pop_trigger = {
 			scope:pop = {
 				OR = {
 					culture = {
-						has_discrimination_trait = elf_heritage
-					}  
+						OR = {
+							has_discrimination_trait = elf_heritage
+							has_discrimination_trait = gnome_heritage
+						}  	
+					}	
 					AND = {
 						pop_weight_modifier_scale < 25
 						standard_of_living >= 5
@@ -1076,9 +1069,10 @@ underweight_pop_trigger = {
 		AND = {
 			exists = scope:character
 			scope:character = {
-				OR = {
-					culture = {
+				culture = {
+					OR = {
 						has_discrimination_trait = elf_heritage
+						has_discrimination_trait = gnome_heritage
 					}  	
 				}	
 			}
@@ -1254,17 +1248,14 @@ should_be_naked_trigger = {
 		AND = {
 			exists = scope:pop
 			scope:pop = {
-				   OR = {
-					is_pop_type = farmers
-					is_pop_type = peasants
-					is_pop_type = laborers
-					is_pop_type = slaves
+				AND = {
 					culture = {
 						OR = {
 							has_discrimination_trait = monstrous_heritage
 						}
 					}
 				}
+		
 			}
 		}
 		AND = {

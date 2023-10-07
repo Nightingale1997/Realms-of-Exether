@@ -95,7 +95,7 @@ elf = {
         5 = {  name = eye_size             range = { 0.4 0.52 }     }
     }
 
-	gene_bs_body_type = {
+	gene_body_type = {
 		10 = { name = body_fat_head_fat_low			range = { 0.25 0.4 }		}
 		
 		10 = { name = body_fat_head_fat_medium		range = { 0.25 0.4 }		}
@@ -139,7 +139,7 @@ elf = {
 		10 = { name = jaw_angle		range = { 0.4 0.74	}	}
 	}
 	
-	gene_bs_mouth_upper_lip_full = {
+	gene_mouth_upper_lip_full = {
 		10 = { name = mouth_upper_lip_full 	range = { 0.0 0.5 }	}
 	}
 	
@@ -147,7 +147,7 @@ elf = {
 		10 = { name = mouth_upper_lip_size 	range = {0.38 0.55} }
 	}
 	
-	gene_bs_mouth_lower_lip_full = {
+	gene_mouth_lower_lip_full = {
 		10 = { name = mouth_lower_lip_full 	range = { 0.1 0.6 }	}
 	}
 	
@@ -159,7 +159,7 @@ elf = {
 		10 = { name = mouth_corner_height 	range = { 0.3 0.55 }	}
 	}
 	
-	gene_bs_nose_height = {
+	gene_nose_height = {
 		10 = { name = nose_height	range = { 0.16 0.75	}	}
 	}
 
@@ -193,7 +193,7 @@ elf = {
 		80 = { name = forehead_angle	range = { 0.05 0.5 }	}
 	}
 	
-	gene_bs_eye_fold_shape = {
+	gene_eye_fold_shape = {
 		80 = { name = eye_fold_shape	range = { 0.0 0.0 }	}
 	}
 
@@ -205,7 +205,7 @@ elf = {
 
 	}
 
-	face_detail_cheek_fat = {
+	gene_cheek_fat = {
 		25 = { name = cheek_fat_01	range = { 0.0 1.0	}	}
 
 		#Beauty Section
@@ -214,7 +214,7 @@ elf = {
 		0 = { name = cheek_fat_01	range = { 0.0 0.5	}	traits = { beauty_3 }	}
 	}
 
-	face_detail_temple_def = {
+	gene_temple_def = {
 		25 = { name = temple_def	range = { 0.2 1.0	}	}
 
 		#Beauty Section
@@ -238,7 +238,7 @@ elf = {
 		80 = { name = jaw_height	range = { 0.31 0.55 } }
 	}
 
-	face_detail_cheek_def = {
+	gene_cheek_def = {
 		1 = { name = cheek_def_01	range = { 0.8 1.0 }	}
 		1 = { name = cheek_def_02	range = { 0.8 1.0 }	}
 
@@ -251,48 +251,48 @@ elf = {
 		0 = { name = cheek_def_02	range = { 0.8 0.9 }	traits = { beauty_3 }	}
 	}
 	
-	face_detail_chin_cleft = {
+	gene_chin_cleft = {
 		1 = { name = chin_dimple	range = { 0.0 0.4 }	}
 		1 = { name = chin_cleft		range = { 0.0 0.3 }	}
 	}
 
 
-	gene_bs_cheek_forward = {
+	gene_cheek_forward = {
 		40 = { name = cheek_forward	range = { 0.0 0.5 }	}
 	}
 
-	gene_bs_ear_outward = {
+	gene_ear_outward = {
 		10 = { name = ear_outward	range = { 0.0 0.3 }	}
 		90 = { name = ear_outward	range = { 0.0 1.0 }	}
 	}
 
-	gene_bs_eye_corner_depth = {
+	gene_eye_corner_depth = {
 		25 = { name = eye_corner_depth	range = { 0.0 0.8 }	}
 	}
 
-	gene_bs_forehead_brow_curve = {
+	gene_forehead_brow_curve = {
 		10 = { name = forehead_brow_curve	range = { 0.8 1.0 }	}
 	}
 
-	gene_bs_forehead_brow_inner_height = {
+	gene_forehead_brow_inner_height = {
 		25 = { name = forehead_brow_inner_height	range = { 0.7 1.0 }	}
 	}
 
-	gene_bs_forehead_brow_forward = {
+	gene_forehead_brow_forward = {
 		40 = { name = forehead_brow_forward	range = { 0.15 0.5 }	}
 	}
 
-	gene_bs_forehead_brow_outer_height = {
+	gene_forehead_brow_outer_height = {
 		40 = { name = forehead_brow_outer_height	range = { 0.7 1.0 }	}
 	}
 	
-	gene_bs_nose_size = {
+	gene_nose_size = {
 		15 = { name = nose_size	range = { 0.0 0.25 }	}
 		70 = { name = nose_size	range = { 0.25 0.4 }	}
 		15 = { name = nose_size	range = { 0.4 0.6 }	}
 	}
 
-	gene_bs_nose_tip_angle = {
+	gene_nose_tip_angle = {
 		25 = { name = nose_tip_angle	range = { 0.0 0.2	}	}
 		40 = { name = nose_tip_angle	range = { 0.0 0.3	}	}
 	}
@@ -347,16 +347,16 @@ elf = {
 elf_ear = {
 	template = "elf"
 	
-	gene_bs_ear_outward = {
+	gene_ear_outward = {
 		10 = { name = ear_outward	range = { 0.19 0.37 }	}
 	}
 	
-	gene_bs_ear_angle = {
+	gene_ear_angle = {
 		10 = { name = ear_angle		range = { 0.0 0.6 } 	}
 		10 = { name = ear_angle		range = { 0.0 0.5 } 	}
 	}
 
-	gene_bs_ear_bend = {
+	gene_ear_bend = {
 		10 = { name = ear_upper_bend		range = { 0.4 1.0 } 	}
 	}
 }
@@ -381,10 +381,6 @@ elf_dark = {
 		40 = { 1.0 0.04 1.0 0.06 }
 	}
 	
-	race_gene_mer_forehead = {
-		1 = { name = mer_forehead			range = { 0.75 1.0 } }
-	}	
-	
 	complexion = {
 		10 = { name = complexion_3 	range = { 0.0  1.0 } }
 	}
@@ -392,14 +388,6 @@ elf_dark = {
 	eye_color = {
 		90 = { 0.21 0.14 0.44 0.41 } #yellow
 	}
-	
-	eye_sclera = {
-		5 = {  name = colored_sclera		range = { 0.0 0.0 } }
-	}
-	eye_pupil = {
-		10 = {	name = large_pupils			range = { 0.1 0.3 }	}
-	}
-	
 	
 	gene_head_profile = {
 		10 = { name = head_profile	range = { 0.55 0.73	}	}
@@ -463,7 +451,7 @@ elf_dark = {
 	}
 	
 
-	gene_bs_body_type = {
+	gene_body_type = {
 		10 = { name = body_fat_head_fat_low			range = { 0.3 0.4 }		}
 		
 		10 = { name = body_fat_head_fat_medium		range = { 0.3 0.4 }		}

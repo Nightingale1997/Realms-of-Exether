@@ -415,13 +415,12 @@
         weight = {
             base = 0
             modifier = {
-                add = 10000
+                add = 1000
                 
                 OR = {
                     upper_clothes_pop_trigger = yes
                     scope:character ?= {
                         has_role = politician
-                        is_ruler = no
                     }
                 }
                 halfling_clothes_trigger = yes
@@ -3508,7 +3507,7 @@ chinese_upper_clothes = {
         }
     }
 
-}
+
 
 #Religion Clothes
 
@@ -3608,3 +3607,4 @@ buddhist_religious_clothes = {
     }
 }
 
+}
