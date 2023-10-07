@@ -27,79 +27,6 @@
 		}
 	}
 
-<<<<<<< HEAD:common/interest_groups/00_mages.txt
-=======
-	on_enable = {
-		ig:ig_intelligentsia = {
-			if = {
-				limit = {
-					owner = { c:CHI ?= this }
-				}
-				set_ig_trait = ig_trait:ig_trait_social_criticism
-				set_ig_trait = ig_trait:ig_trait_avant_garde
-				set_ig_trait = ig_trait:ig_trait_restoration
-			}
-			else_if = {
-				limit = {
-					owner = { 
-						OR = { 
-							c:TUR ?= this
-							c:RUS ?= this
-						}
-					}
-				}
-				set_ig_trait = ig_trait:ig_trait_crisis_of_identity
-				set_ig_trait = ig_trait:ig_trait_avant_garde
-				set_ig_trait = ig_trait:ig_trait_propagandists
-			}
-			else_if = {
-				limit = {
-					has_dlc_feature = voice_of_the_people_content
-					owner = { c:FRA ?= this }
-				}
-				set_ig_trait = ig_trait:ig_trait_social_criticism
-				set_ig_trait = ig_trait:ig_trait_avant_garde
-				set_ig_trait = ig_trait:ig_trait_les_beaux_arts
-			}
-			else = {
-				set_ig_trait = ig_trait:ig_trait_social_criticism
-				set_ig_trait = ig_trait:ig_trait_avant_garde
-				set_ig_trait = ig_trait:ig_trait_propagandists
-			}
-		}
-		
-		# Papal Intellegentsia
-		if = {
-			limit = {
-				c:PAP ?= this
-			}
-			ig:ig_intelligentsia = {
-				remove_ideology = ideology_anti_clerical
-			}
-		}
-		# Hawaiian Democrats
-		else_if = {
-			limit = {
-				country_has_primary_culture = cu:hawaiian
-			}
-			ig:ig_intelligentsia = {
-				set_interest_group_name = ig_hawaiian_democrats
-			}
-		}
-		# Literati
-		else_if = {
-			limit = {
-				any_primary_culture = {
-					has_discrimination_trait = han_chinese
-				}
-			}
-			ig:ig_intelligentsia = { 
-				set_interest_group_name = ig_literati
-				remove_ideology = ideology_anti_clerical
-			}
-		}
-	}
->>>>>>> f420a792 (1.5.1):common/interest_groups/00_intelligentsia.txt
 	on_disable = {}
 	on_character_ig_membership = {}
 
@@ -238,8 +165,6 @@
 				min = 0
 			}
 		}
-<<<<<<< HEAD:common/interest_groups/00_mages.txt
-=======
 		
 		if = {
 			limit = {
@@ -267,7 +192,6 @@
 				add = 1
 			}
 		}
->>>>>>> f420a792 (1.5.1):common/interest_groups/00_intelligentsia.txt
 	}
 
 	monarch_weight = {
