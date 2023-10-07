@@ -2,30 +2,14 @@
 
 state_is_in_settler_coast = {
 	OR = {
-		region = sr:region_north_germany
-		region = sr:region_south_germany
-		region = sr:region_england
-		region = sr:region_gaelic
-		region = sr:region_iberia
-		region = sr:region_france
-		region = sr:region_occitania
-		region = sr:region_rhine
-		region = sr:region_low_countries
-		region = sr:region_north_italy
-		region = sr:region_south_italy
-		region = sr:region_poland
-		region = sr:region_hungary
-		region = sr:region_west_balkans
-		region = sr:region_east_balkans
-		region = sr:region_greece
-		region = sr:region_baltic
-		region = sr:region_belarus
-		region = sr:region_scandinavia
-		region = sr:region_central_russia
-		region = sr:region_ukraine
-		region = sr:region_barents
-		region = sr:region_volga
-		region = sr:region_switzerland
+		region = sr:region_achon
+		region = sr:region_arrador
+		region = sr:region_moorweald
+		region = sr:region_lake_bossard
+		region = sr:region_ceraun
+		region = sr:region_lagoon_coast
+		region = sr:region_keystone_peninsula
+		region = sr:region_nogi_desert
 	}
 }
 
@@ -48,18 +32,14 @@ state_is_in_southern_hemisphere = {
 	}
 }
 
-state_is_in_africa = {
+state_is_in_bay_of_new_fortune = {
 	custom_tooltip = {
 		text = state_in_africa_desc
 		OR = {
-			region = sr:region_nile_basin
-			region = sr:region_ethiopia
-			region = sr:region_north_africa
-			region = sr:region_senegal
-			region = sr:region_niger
-			region = sr:region_congo
-			region = sr:region_southern_africa
-			region = sr:region_zanj
+			region = sr:region_north_chin_desert
+			region = sr:region_south_chin_desert
+			region = sr:region_salt_wastes
+			region = sr:region_shaking_fields
 		}
 	}
 }
@@ -72,43 +52,78 @@ state_is_in_teferet = {
 	}
 }
 
-state_is_in_central_asia = {
+state_is_in_west_locari = {
 	OR = {
-		region = sr:region_himalayas
-		region = sr:region_central_asia
+		region = sr:region_new_dumonia
+		region = sr:region_west_mindrend_sands
+		region = sr:region_scalethane_realms
 	}
 }
 
-state_is_in_india = {
+state_is_in_east_locari = {
 	OR = {
-		region = sr:region_south_india
-		region = sr:region_north_india		
+		region = sr:region_dreamweaver_jungle
+		region = sr:region_anantadesh
+		region = sr:region_sarpakshetra
+		region = sr:region_thoughtsmith_ridge
 	}
 }
 
-state_is_in_east_asia = {
+state_is_in_kharaa_ur = {
 	OR = {
-		region = sr:region_south_china
-		region = sr:region_north_china
-		region = sr:region_manchuria
-		region = sr:region_japan
-		region = sr:region_west_siberia
-		region = sr:region_east_siberia
+		region = sr:region_hirugolaima
+		region = sr:region_ongoryu
+		region = sr:region_yamkhanato
+		region = sr:region_bataar_kharaal
+		region = sr:region_boroo_jirta
+		region = sr:region_muru
+		region = sr:region_valley_of_golden_fields
+		region = sr:region_khantar
+		region = sr:region_strait_of_aranmendi
 	}
 }
 
-state_is_in_china = {
+state_is_in_yulug = {
 	OR = {
-		region = sr:region_south_china
-		region = sr:region_north_china
+		region = sr:region_valley_of_golden_fields
+		region = sr:region_bataar_kharaal
+		region = sr:region_boroo_jirta
+		region = sr:region_muru
 		# not counting manchuria here deliberately
 	}
 }
 
-state_is_in_southeast_asia = {
+state_is_in_citrus_currents = {
 	OR = {
-		region = sr:region_indonesia
-		region = sr:region_indochina
+		region = sr:region_sanbang
+		region = sr:region_lotus_isles
+		region = sr:region_vindon_narrows
+	}
+}
+
+state_is_in_northern_zalaron = {
+	OR = {
+		region = sr:region_vairia
+		region = sr:region_steepcliff
+		region = sr:region_vermillion_thicket
+	}
+}
+
+state_is_in_northwestern_zalaron = {
+	OR = {
+		region = sr:region_ravik
+		region = sr:region_gnomehome
+		region = sr:region_hasals_mirror
+		region = sr:region_verdant_shore
+		region = sr:region_old_thaloria
+	}
+}
+
+state_is_in_gavkhan = {
+	OR = {
+		region = sr:region_gavkhan
+		region = sr:region_kengurudal
+		region = sr:region_tokalivar
 	}
 }
 ### Country geography triggers
@@ -121,17 +136,17 @@ country_is_in_settler_coast = {
 	}
 }
 
-country_is_in_north_america = {
+country_is_in_northern_zalaron = {
 	exists = capital
 	capital = {
-		state_is_in_north_america = yes
+		state_is_in_northern_zalaron = yes
 	}
 }
 
-country_is_in_central_america = {
+country_is_in_gavkhan = {
 	exists = capital
 	capital = {
-		state_is_in_central_america = yes
+		state_is_in_gavkhan = yes
 	}
 }
 
@@ -142,10 +157,10 @@ country_is_in_south_america = {
 	}
 }
 
-country_is_in_africa = {
+country_is_in_bay_of_new_fortune = {
 	exists = capital
 	capital = {
-		state_in_africa = yes
+		state_is_in_bay_of_new_fortune = yes
 	}
 }
 
@@ -156,31 +171,31 @@ country_is_in_teferet = {
 	}
 }
 
-country_is_in_central_asia = {
+country_is_in_west_locari = {
 	exists = capital
 	capital = {
-		state_is_in_central_asia = yes
+		state_is_in_west_locari = yes
 	}
 }
 
-country_is_in_india = {
+country_is_in_east_locari = {
 	exists = capital
 	capital = {
-		state_is_in_india = yes
+		state_is_in_east_locari = yes
 	}
 }
 
-country_is_in_east_asia = {
+country_is_in_kharaa_ur = {
 	exists = capital
 	capital = {
-		state_is_in_east_asia = yes
+		state_is_in_kharaa_ur = yes
 	}
 }
 
-country_is_in_southeast_asia = {
+country_is_in_citrus_currents = {
 	exists = capital
 	capital = {
-		state_is_in_southeast_asia = yes
+		state_is_in_citrus_currents = yes
 	}
 }
 
@@ -192,7 +207,7 @@ is_arabic_farmland = {
 		region = sr:region_south_chin_desert
 		region = sr:region_anwarth
 		region = sr:region_teferet
-		region = sr:region_shimmering_bank
+		region = sr:region_shimmering_coast
 		region = sr:region_north_africa
 		region = sr:region_nogi_desert
 	}
