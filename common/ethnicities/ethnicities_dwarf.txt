@@ -34,7 +34,7 @@
 @blend3min = 0.5
 @blend3max = 0.8
 
-gnome = {
+dwarf = {
 	template = "ethnicity_template"
 
 	   skin_color = {
@@ -63,7 +63,7 @@ gnome = {
 	gene_chin_forward = {
 
 	 
-		84 = { name = chin_forward   range = { 1.0 1.0 }      }
+		84 = { name = chin_forward   range = { 0.5 0.75 }      }
 	  
 
 	}
@@ -99,12 +99,9 @@ gnome = {
 	gene_eye_depth = {
 
 	   
-		25 = { name = eye_depth    range = { 0.25 0.35 }    }
-		40 = { name = eye_depth    range = { 0.35 0.45 }    }
-		20 = { name = eye_depth    range = { 0.45 0.5 }    }
-		5 = { name = eye_depth    range = { 0.5 0.55 }    }
-		0 = { name = eye_depth    range = { 0.55 0.65 }    }
-		0 = { name = eye_depth    range = { 0.65 0.75 }    }
+
+		10 = { name = eye_depth    range = { 0.65 0.75 }    }
+		20 = { name = eye_depth    range = { 0.75 1.0 }    }
 	  
 
 	}
@@ -143,7 +140,7 @@ gnome = {
 
 	gene_forehead_angle = {
 
-		64 = { name = forehead_angle   range = { 0.5 0.5}      }
+		64 = { name = forehead_angle   range = { 1.0 1.0}      }
 	   
 
 	}
@@ -172,7 +169,7 @@ gnome = {
 	gene_forehead_roundness = {
 
 	
-		64 = { name = forehead_roundness   range = { 0.5 0.5 }      }
+		64 = { name = forehead_roundness   range = { 0.0 0.0 }      }
 
 
 	}
@@ -196,7 +193,7 @@ gnome = {
 	gene_head_profile = {
 
    
-		64 = { name = head_profile   range = { 0.5 0.5 }      }
+		64 = { name = head_profile   range = { 0.8 0.8 }      }
 	  
 
 	}
@@ -240,7 +237,7 @@ gnome = {
 	gene_jaw_forward = {
 
 
-		84 = { name = jaw_forward   range = { 0.5 0.5 }      }
+		84 = { name = jaw_forward   range = { 1.0 1.0 }      }
 
 
 	}
@@ -360,7 +357,7 @@ gnome = {
 
 	gene_cheek_forward = {
 
-		84 = { name = cheek_forward   range = { 0.5 0.5 }      }
+		84 = { name = cheek_forward   range = { 1.0 1.0 }      }
 
 	}
 
@@ -408,7 +405,7 @@ gnome = {
 	gene_ear_out = {
 
 
-		64 = { name = ear_out   range = { 1.0 1.0 }      }
+		64 = { name = ear_out   range = { 0.5 0.5 }      }
  
 
 	}
@@ -416,7 +413,7 @@ gnome = {
 	gene_ear_size = {
 
 
-		84 = { name = ear_size   range = { 1.0 1.0 }      }
+		84 = { name = ear_size   range = { 0.5 0.5 }      }
  
 
 	}
@@ -493,14 +490,14 @@ gnome = {
 
 	gene_forehead_brow_curve = {
 
-		64 = { name = forehead_brow_curve   range = { 0.5 0.5 }      }
+		64 = { name = forehead_brow_curve   range = { 0.0 0.3 }      }
 
 	}
 
 	gene_forehead_brow_forward = {
 
   
-		84 = { name = forehead_brow_forward   range = { 0.5 0.5 }      }
+		84 = { name = forehead_brow_forward   range = { 1.0 1.0 }      }
 
 
 	}
@@ -524,7 +521,7 @@ gnome = {
 	gene_forehead_brow_width = {
 
 
-		84 = { name = forehead_brow_width   range = { 0.5 0.5 }      }
+		84 = { name = forehead_brow_width   range = { 0.85 1.0 }      }
 
 
 	}
@@ -540,12 +537,8 @@ gnome = {
 	gene_jaw_def = {
 
 
-		40 = { name = jaw_def   range = { @neg3_min @neg3_max }    }
-		25 = { name = jaw_def    range = { @neg2_min @neg2_max }    }
-		15 = { name = jaw_def   range = { @neg1_min @neg1_max }    }
-		10 = { name = jaw_def    range = { @pos1_min @pos1_max }    }
-		5 = { name = jaw_def    range = { @pos2_min @pos2_max }    }
-		0 = { name = jaw_def    range = { @pos3_min @pos3_max }    }
+
+		10 = { name = jaw_def    range = { 1.0 1.0 }    }
 
 
 	}
@@ -553,7 +546,7 @@ gnome = {
 	gene_mouth_lower_lip_def = {
 
 
-		64 = { name = mouth_lower_lip_def   range = { 0.5 0.5 }      }
+		64 = { name = mouth_lower_lip_def   range = { 1.0 1.0 }      }
 
 
 	}
@@ -601,7 +594,7 @@ gnome = {
 
 	gene_mouth_philtrum_def = {
 
-		64 = { name = mouth_philtrum_def   range = { 0.5 0.5 }      }
+		64 = { name = mouth_philtrum_def   range = { 0.8 1.0 }      }
 
 
 	}
@@ -625,7 +618,7 @@ gnome = {
 	gene_mouth_upper_lip_def = {
 
 
-	   64 = { name = mouth_upper_lip_def   range = { 0.5 0.5 }      }
+	   64 = { name = mouth_upper_lip_def   range = { 1.0 1.0 }      }
 	
 
 
@@ -677,7 +670,7 @@ gnome = {
 	gene_nose_hawk = {
 
 		
-		84 = { name = nose_hawk   range = { 0.5 0.5 }      }
+		84 = { name = nose_hawk   range = { 1.0 1.0 }      }
 		
 	}
 
@@ -718,12 +711,8 @@ gnome = {
 	gene_nose_nostril_height = {
 
 	 
-		1 = { name = nose_nostril_height    range = { 0.4 0.5   }    }
-		5 = { name = nose_nostril_height    range = { 0.15 0.4  }    }
-		40 = { name = nose_nostril_height    range = { 0.0 0.15  }    }
-		40 = { name = nose_nostril_height    range = { 0.0 0.15  }    }
-		5 = { name = nose_nostril_height    range = { 0.15 0.4  }    }
-		1 = { name = nose_nostril_height    range = { 0.4 0.5   }    }
+
+		1 = { name = nose_nostril_height    range = { 1.0 1.0   }    }
 	 
 	}
 
@@ -752,10 +741,8 @@ gnome = {
 
 	gene_nose_ridge_def = {
 
-  
-		10 = {  name = nose_ridge_def             range = { 0.3 0.4 }     }
-		80 = {  name = nose_ridge_def             range = { 0.3 0.6 }     }
-		10 = {  name = nose_ridge_def             range = { 0.7 0.8 }     }
+
+		10 = {  name = nose_ridge_def             range = { 1.0 1.0 }     }
 
 
 
@@ -764,7 +751,7 @@ gnome = {
 	gene_nose_ridge_def_min = {
 
 	 
-		84 = { name = nose_ridge_def_min   range = { 0.5 0.5 }      }
+		84 = { name = nose_ridge_def_min   range = { 1.0 1.0 }      }
    
 
 	}
@@ -818,7 +805,7 @@ gnome = {
 	gene_nose_tip_width = {
 
 	
-		20 = { name = nose_tip_width    range = { 1.0 1.0 }    }
+		20 = { name = nose_tip_width    range = { 0.0 0.0 }    }
 
 	}
 
@@ -934,12 +921,11 @@ gnome = {
 	}
 
 	beards = {
-		10 = { name = no_beard       range = { 0.0 0.0 } }
+		10 = { name = full_beards       range = { 0.4 1.0 } }
 	}
 
 	mustaches = {
-		30 = { name = historical_mustaches        range = { 0.0 1.0 } }
-		10 = { name = full_mustache       range = { 0.0 1.0 } }
+		30 = { name = european_mustaches        range = { 0.0 1.0 } }
 	}
 
 	# coats = {
@@ -966,8 +952,8 @@ gnome = {
 
 	
 
-gnome_north = {
-template = "gnome"
+dwarf_light = {
+template = "dwarf"
 	
  skin_color = {
    10 = { 0.0 0.1 0.5 0.15 }
@@ -992,3 +978,29 @@ hair_color = {
 }
 		
 }
+
+dwarf_dark = {
+	template = "dwarf"
+		
+	skin_color = {
+		10 = { 0.8 0.54 0.81 0.56 }
+		10 = { 0.80 0.53 0.82 0.55 }
+		10 = { 0.85 0.52 0.86 0.54 }
+	}
+	eye_color = {
+		# Brown
+		20 = { 0.05 0.5 0.33 0.8 }
+		# Green
+		20 = { 0.33 0.5 0.67 0.8 }
+		# Blue
+		60 = { 0.67 0.5 1.0 0.8 }
+	}
+	hair_color = {
+		# Cherry
+		10 = { 0.60 0.5 0.68 0.65 }
+		# Auburn
+		5 = { 0.78 0.5 1.0 0.65 }
+	}
+			
+	}
+	
