@@ -116,15 +116,6 @@ ideology_traditionalist = {
 			}
 			add = 50
 		}
-		# conservative and/or reactionary leaders have a higher spawn chance if the Anti-Dreyfusards won.
-		if = {
-			limit = {
-				scope:interest_group = {
-					has_variable = anti_dreyfusard_victory
-				}
-			}
-			add = 50
-		}
 	}
 }
 
@@ -339,15 +330,6 @@ ideology_republican_leader = {
 			}
 			add = 75
 		}
-		# liberal and/or radical leaders have a higher spawn chance if the Dreyfusards won.
-		if = {
-			limit = {
-				scope:interest_group = {
-					has_variable = dreyfusard_victory
-				}
-			}
-			add = 50
-		}
 	}
 }
 
@@ -512,15 +494,6 @@ ideology_radical = {
 				}
 				multiply = { value = 0.5 }
 			}
-			# liberal and/or radical leaders have a higher spawn chance if the Dreyfusards won.
-			if = {
-				limit = {
-					scope:interest_group = {
-						has_variable = dreyfusard_victory
-					}
-				}
-				add = 50
-			}
 		}
 	}
 }
@@ -620,15 +593,6 @@ ideology_reformer = {
 						has_law = law_type:law_no_womens_rights
 						has_law = law_type:law_child_labor_allowed
 					}
-				}
-			}
-			add = 50
-		}
-		# liberal and/or radical leaders have a higher spawn chance if the Dreyfusards won.
-		if = {
-			limit = {
-				scope:interest_group = {
-					has_variable = dreyfusard_victory
 				}
 			}
 			add = 50
@@ -734,15 +698,6 @@ ideology_feminist = {
 					}
 				}
 				add = -50
-			}
-			# liberal and/or radical leaders have a higher spawn chance if the Dreyfusards won.
-			if = {
-				limit = {
-					scope:interest_group = {
-						has_variable = dreyfusard_victory
-					}
-				}
-				add = 50
 			}
 		}
 	}
@@ -996,14 +951,7 @@ ideology_pacifist = {
 			add = 50
 		}
 		# liberal and/or radical leaders have a higher spawn chance if the Dreyfusards won.
-		if = {
-			limit = {
-				scope:interest_group = {
-					has_variable = dreyfusard_victory
-				}
-			}
-			add = 50
-		}
+
 	}
 }
 
@@ -1188,15 +1136,6 @@ ideology_royalist = {
 			}
 			add = 50
 		}
-		# conservative and/or reactionary leaders have a higher spawn chance if the Anti-Dreyfusards won.
-		if = {
-			limit = {
-				scope:interest_group = {
-					has_variable = anti_dreyfusard_victory
-				}
-			}
-			add = 50
-		}
 	}
 }
 
@@ -1335,14 +1274,7 @@ ideology_social_democrat = {
 			multiply = 0.01
 		}
 		# liberal and/or radical leaders have a higher spawn chance if the Dreyfusards won.
-		if = {
-			limit = {
-				scope:interest_group = {
-					has_variable = dreyfusard_victory
-				}
-			}
-			add = 50
-		}
+
 	}
 }
 
@@ -1866,15 +1798,6 @@ ideology_fascist = {
 			}
 			add = 150
 		}
-		# conservative and/or reactionary leaders have a higher spawn chance if the Anti-Dreyfusards won.
-		if = {
-			limit = {
-				scope:interest_group = {
-					has_variable = anti_dreyfusard_victory
-				}
-			}
-			add = 50
-		}
 	}
 }
 
@@ -2157,15 +2080,6 @@ ideology_ethno_nationalist = {
 			}
 			add = -75
 		}
-		# conservative and/or reactionary leaders have a higher spawn chance if the Anti-Dreyfusards won.
-		if = {
-			limit = {
-				scope:interest_group = {
-					has_variable = anti_dreyfusard_victory
-				}
-			}
-			add = 50
-		}
 	}
 }
 
@@ -2279,15 +2193,7 @@ ideology_theocrat = {
 			}
 			add = -150
 		}
-		# conservative and/or reactionary leaders have a higher spawn chance if the Anti-Dreyfusards won.
-		if = {
-			limit = {
-				scope:interest_group = {
-					has_variable = anti_dreyfusard_victory
-				}
-			}
-			add = 50
-		}
+
 	}
 }
 
@@ -3029,90 +2935,7 @@ ideology_humanitarian = {
 			add = -50
 		}
 		# liberal and/or radical leaders have a higher spawn chance if the Dreyfusards won.
-		if = {
-			limit = {
-				scope:interest_group = {
-					has_variable = dreyfusard_victory
-				}
-			}
-			add = 50
-		}
-	}
-}
 
-ideology_jacksonian_democrat = {
-	icon = "gfx/interface/icons/ideology_icons/ideology_leader/jackson_democrat.dds"
-
-	character_ideology = yes
-
-	lawgroup_governance_principles = {
-		law_monarchy = strongly_disapprove
-		law_magocracy = strongly_disapprove
-		law_theocracy = strongly_disapprove
-		law_council_republic = strongly_disapprove
-		law_parliamentary_republic = neutral
-		law_presidential_republic = approve
-	}
-	
-	lawgroup_distribution_of_power = {
-		law_universal_suffrage = strongly_approve
-		law_census_voting = approve
-		law_wealth_voting = neutral
-		law_landed_voting = disapprove
-		law_anarchy = strongly_disapprove
-		law_oligarchy = strongly_disapprove
-		law_autocracy = strongly_disapprove
-		law_single_party_state = disapprove
-		law_technocracy = strongly_disapprove
-	}
-
-	lawgroup_bureaucracy = {
-		law_elected_bureaucrats = approve
-		law_appointed_bureaucrats = neutral
-		law_hereditary_bureaucrats = disapprove
-	}
-
-	lawgroup_slavery = {
-		law_slavery_banned = strongly_disapprove
-		law_debt_slavery = strongly_disapprove		
-		law_slave_trade = neutral
-		law_legacy_slavery = approve
-	}
-
-	lawgroup_citizenship = {
-		law_ethnostate = strongly_disapprove
-		law_national_supremacy = neutral
-		law_racial_segregation = approve
-		law_cultural_exclusion = neutral
-		law_multicultural = strongly_disapprove	
-	}
-
-	possible = {
-		owner = {
-			AND = {
-				exists = c:USA
-				OR = {
-					c:USA = this
-					civil_war_origin_country = c:USA
-				}
-			}
-			any_scope_character = {
-				has_variable = is_andrew_jackson
-			}
-		}
-		scope:interest_group = {
-			NOR = {
-				has_variable = communist_ig_var
-				has_variable = chose_vanguardism
-				has_variable = chose_fascism
-				has_variable = chose_conservatism
-				has_variable = chose_ethno_nationalism
-			}
-		}
-	}
-
-	leader_weight = {
-		value = 300
 	}
 }
 

@@ -117,14 +117,5 @@
 			}
 			add = -150
 		}
-		# conservative and/or reactionary leaders have a higher spawn chance if the Anti-Dreyfusards won.
-		if = {
-			limit = {
-				scope:interest_group = {
-					has_variable = anti_dreyfusard_victory
-				}
-			}
-			add = 50
-		}
 	}
 }

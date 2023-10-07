@@ -494,13 +494,6 @@ ai_strategy_armed_isolationism = {
 		if = {
 			limit = { has_law = law_type:law_isolationism }
 			add = 100
-		}	
-		
-		if = {
-			limit = {
-				has_variable = japan_forced_to_open_market
-			}
-			multiply = 0.1
 		}		
 
 		if = {

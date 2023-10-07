@@ -397,13 +397,6 @@ ai_strategy_progressive_agenda = {
 			
 			add = 10
 		}	
-
-		if = {
-			limit = {
-				has_variable = japan_forced_to_open_market
-			}
-			add = 1000
-		}
 		
 		if = {
 			limit = {

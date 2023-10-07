@@ -118,18 +118,6 @@ law_presidential_republic = {
 		country_legitimacy_ideological_incoherence_mult = 0.2
 		country_authority_add = 100
 	}
-
-	on_activate = {
-		if = {
-			limit = {
-				has_variable = fra_republic_counter
-			}
-			change_variable = {
-				name = fra_republic_counter
-				add = 1
-			}
-		}
-	}
 	
 	possible_political_movements = {
 		law_council_republic
@@ -189,18 +177,6 @@ law_parliamentary_republic = {
 	modifier = {
 		country_legitimacy_govt_total_votes_add = 20
 		country_legitimacy_govt_size_add = 1
-	}
-	
-	on_activate = {
-		if = {
-			limit = {
-				has_variable = fra_republic_counter
-			}
-			change_variable = {
-				name = fra_republic_counter
-				add = 1
-			}
-		}
 	}
 
 	possible_political_movements = {

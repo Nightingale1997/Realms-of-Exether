@@ -366,16 +366,5 @@ conservative_party = {
 				desc = "from_no_police"
 			}
 		}
-		if = { # arbitrary weight for Andrew Jackson to be in the right party
-			limit = {
-				leader = {
-					has_variable = is_andrew_jackson
-				}
-			}
-			add = {
-				value = 35
-				desc = "from_jackson"
-			}
-		}
 	}
 }
