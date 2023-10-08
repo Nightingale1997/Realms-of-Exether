@@ -46,7 +46,7 @@ TEM = {
 	capital = STATE_NISHIGUCHI
 }
 
-# Shawujing
+#Shawujing
 SHJ = {
 	color = rgb{ 144 50 68 } 
 
@@ -58,7 +58,7 @@ SHJ = {
 	capital = STATE_BALDBAN
 }
 
-# Zhubajie
+#Zhubajie
 ZHU = {
 	color = rgb{ 80 30 5 } 
 
@@ -70,7 +70,7 @@ ZHU = {
 	capital = STATE_KYRKAZ
 }
 
-# Sunwukong
+#Sunwukong
 SUN = {
 	color = rgb{ 128 221 16 } 
 
@@ -80,4 +80,52 @@ SUN = {
 
 	cultures = { yakamimbo } 
 	capital = STATE_BATOKYOAN
+}
+
+#Apavasavalyne
+APY = {
+	color = rgb{ 155 125 74 } 
+
+	country_type = unrecognized 
+
+	tier = kingdom
+
+	cultures = { kojiniu } 
+	capital = STATE_TSUKHANJUKU
+}
+
+#Genden
+GDN = {
+	color = rgb{ 256 110 8 } 
+
+	country_type = unrecognized 
+
+	tier = kingdom
+
+	cultures = { peljidiin } 
+	capital = STATE_SUKHIA
+}
+
+#Tahmina
+TAH = {
+	color = rgb{ 28 201 64 } 
+
+	country_type = unrecognized 
+
+	tier = kingdom
+
+	cultures = { sohrab } 
+	capital = STATE_JARGALTSAI
+}
+
+#Kashcheikahn
+KCN = {
+	color = rgb{ 92 117 203 } 
+
+	country_type = unrecognized 
+
+	tier = kingdom
+
+	cultures = { morevnamarya } 
+	capital = STATE_BATSI
 }
