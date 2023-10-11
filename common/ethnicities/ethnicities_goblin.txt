@@ -42,6 +42,18 @@ goblin = {
 		90 = { 0.39 0.57 0.44 0.62 }
 	}
 
+	hairstyles = {
+        10 = { name = european_hairstyles       range = { 0.4 0.45 } }
+        10 = { name = european_hairstyles       range = { 0.75 1 } }
+    }
+
+    beards = {
+        10 = { name = asian_beards       range = { 0.0 1.0 } }
+    }
+
+    mustaches = {
+        10 = { name = asian_mustaches        range = { 0.0 1.0 } }
+    }
 	
 	eye_color = {
 		#White eyes
@@ -232,16 +244,9 @@ goblin = {
 		10 = { name = jaw_height	range = { 0.3 0.65  }	}
 	}
 
-	# gene_jaw_width = {
-		# 10 = { name = jaw_width	range = { 0.4 0.5 }	}
-		# 80 = { name = jaw_width	range = { 0.5 0.8 }	}
-		# 10 = { name = jaw_width	range = { 0.8 1.0 }	}
-
-	# # Beauty Section
-		# 0 = { name = jaw_width	range = { 0.7 0.8 }	traits = { beauty_1 }	}
-		# 0 = { name = jaw_width	range = { 0.7 0.8 }	traits = { beauty_2 }	}
-		# 0 = { name = jaw_width	range = { 0.7 0.8 }	traits = { beauty_3 }	}
-	# }
+	 gene_jaw_width = {
+		 10 = { name = jaw_width	range = { 0.0 0.4 }	}
+	}
 
 	gene_mouth_height = {
 		10 = { name = mouth_height	range = { 0.35 0.7  }	}
@@ -339,7 +344,6 @@ goblin = {
 
 	gene_nose_length = {
 		40 = { name = nose_length	range = { 0.5 1.0 }	}
-		60 = { name = nose_length	range = { 0.0 0.5 }	}
 	}
 
 	gene_nose_hawk = {
@@ -430,7 +434,7 @@ goblin = {
     gene_nose_tip_width = {
 
      
-         90 = { name = nose_tip_width   range = { 0.5 1.0 }      }
+         90 = { name = nose_tip_width   range = { 0.0 0.5 }      }
         
 
 
@@ -557,10 +561,6 @@ race_goblin_green = {
 		40 = { name = nose_height	range = { 0.5 1.0 }	}
 		60 = { name = nose_height	range = { 0.5 1.0 }	}
 	}
-
-	gene_nose_length = {
-		40 = { name = nose_length	range = { 0.45 0.55 }	}
-	}
 	
 	gene_ear_angle = {
 		10 = { name = ear_angle  range = { 0.9 1.0 }	}
@@ -638,4 +638,69 @@ goblin_yellow = {
 		# Reds
 		10 = { 0.57 0.5 0.88 0.7 }
 	}
+}
+
+hobgoblin = {
+	template = "race_goblin_green"
+
+	skin_color = {
+		90 = { 0.06 0.57 0.08 0.62 }
+	}
+
+	gene_height = {
+
+        
+        84 = { name = normal_height   range = { 0.5 0.5 }      }
+   
+
+    }
+
+	gene_nose_nostril_width = {
+
+        84 = { name = nose_nostril_width   range = { 0.8 0.9 }      }
+
+
+    }
+
+	gene_nose_size = {
+
+	    80 = { name = nose_size    range = { 0.8 0.9 }    }
+	    
+
+    }
+
+	gene_nose_height = {
+		40 = { name = nose_height	range = { 0.3 0.5 }	}
+	}
+
+	gene_forehead_height = {
+		80 = { name = forehead_height	range = { 0.5 0.6 }	}
+	}
+
+	gene_nose_length = {
+		60 = { name = nose_length	range = { 0.0 0.5 }	}
+	}
+
+    gene_nose_tip_width = {
+
+		90 = { name = nose_tip_width   range = { 0.5 1.0 }      }
+	   
+   }
+
+   gene_head_height = {
+	80 = { name = forehead_height	range = { 0.5 0.6 }	}
+}
+
+gene_jaw_width = {
+	10 = { name = jaw_width	range = { 0.5 0.6 }	}
+}
+
+gene_forehead_brow_outer_height = {
+	80 = { name = forehead_brow_outer_height	range = { 0.9 1.0 }	}
+}
+
+gene_forehead_brow_inner_height = {
+	80 = { name = forehead_brow_inner_height	range = { 0.3 0.5 }	}
+}
+
 }
