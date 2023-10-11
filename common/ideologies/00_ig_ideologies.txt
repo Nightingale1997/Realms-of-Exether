@@ -53,6 +53,37 @@
 	}	
 }
 
+ideology_power_hungry = {
+	icon = "gfx/interface/icons/ideology_icons/paternalistic.dds"
+	
+	lawgroup_governance_principles = {
+		law_monarchy = approve
+		law_theocracy = approve
+		law_magocracy = strongly_approve		
+		law_presidential_republic = neutral
+		law_parliamentary_republic = neutral
+		law_council_republic = strongly_disapprove
+	}
+	
+	lawgroup_distribution_of_power = {
+		law_single_party_state = neutral
+		law_landed_voting = approve
+		law_autocracy = strongly_approve
+		law_oligarchy = approve
+		law_wealth_voting = neutral
+		law_census_voting = disapprove
+		law_universal_suffrage = strongly_disapprove
+		law_anarchy = strongly_disapprove
+		law_technocracy = approve
+	}
+	
+	lawgroup_bureaucracy = {
+		law_hereditary_bureaucrats = approve
+		law_appointed_bureaucrats = neutral
+		law_elected_bureaucrats = disapprove
+	}
+}
+
 ideology_laissez_faire = {
 	icon = "gfx/interface/icons/ideology_icons/laissez_faire.dds"
 	
@@ -729,5 +760,32 @@ ideology_pro_slavery = {
 		law_debt_slavery = approve
 		law_legacy_slavery = neutral
 		law_slavery_banned = strongly_disapprove
+	}
+}
+
+ideology_luddite_devout = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/luddite.dds"
+
+	lawgroup_economic_system = {
+		law_industry_banned = strongly_approve
+		law_agrarianism = approve
+		law_cooperative_ownership = neutral
+		law_traditionalism = neutral
+		law_laissez_faire = strongly_disapprove
+		law_interventionism = strongly_disapprove
+		law_command_economy = strongly_disapprove
+	}
+	
+	lawgroup_trade_policy = {
+		law_free_trade = strongly_disapprove
+		law_mercantilism = neutral
+		law_protectionism = approve		
+		law_isolationism = strongly_approve
+	}
+
+
+	lawgroup_magic = {
+		law_divine_miracles = approve
+		law_druidic_circles = strongly_approve
 	}
 }

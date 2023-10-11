@@ -6,6 +6,7 @@
 
 	ideologies = {
 		ideology_arcane_scholars
+		ideology_power_hungry
 	}
 
 	enable = {
@@ -33,13 +34,13 @@
 	pop_potential = {
 		literacy_rate > 0.25
 		OR = {
-			is_pop_type = academics
 			is_pop_type = aristocrats
 			is_pop_type = bureaucrats
 			is_pop_type = capitalists
 			is_pop_type = clergymen
 			is_pop_type = clerks
 			is_pop_type = engineers
+			is_pop_type = wizards
 		}
 	}
 

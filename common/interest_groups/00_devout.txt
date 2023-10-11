@@ -30,6 +30,21 @@
 
 		### Generic
 
+		if = {
+			limit = {
+				OR = {
+					country_has_state_religion = rel:druidic
+					country_has_state_religion = rel:elf_nature
+				}
+				
+			}
+			ig:ig_devout = {
+				set_interest_group_name = ig_druids
+				remove_ideology = ideology_patriarchal
+				add_ideology = ideology_luddite_devout
+			}
+		}
+
 	}
 	on_disable = {}
 	on_character_ig_membership = {
