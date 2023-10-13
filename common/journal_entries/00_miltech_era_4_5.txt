@@ -58,7 +58,7 @@ je_trench_warfare = {
 	complete = {
 		country_pm_usage = {
 			target = ROOT
-			production_method = pm_trench_infantry
+			production_method = pm_training_streamlining
 			value > 0.25
 		}
 		any_scope_war = {
@@ -68,7 +68,7 @@ je_trench_warfare = {
 					NOT = { has_trait = trench_rat }
 					commander_pm_usage = {
 						target = ROOT
-						production_method = pm_trench_infantry
+						production_method = pm_training_streamlining
 						value > 0.5
 					}
 				}

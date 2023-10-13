@@ -221,6 +221,7 @@ texticon = {
 }
 
 ### ARMY
+
 texticon = {
   icon = battalions
   iconsize = {
@@ -252,7 +253,7 @@ texticon = {
   icon = battalions
   iconsize = {
     offset = { 0 30 }
-    texture = "gfx/interface/icons/generic_icons/battalions_60.dds"
+    texture = "gfx/interface/icons/generic_icons/battalions.dds"
     fontsize = 30
   }
 }
@@ -265,6 +266,55 @@ texticon = {
     fontsize = 91
   }
 }
+
+### CONSCRIPTS
+
+texticon = {
+  icon = conscripts
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/generic_icons/conscripts_30.dds"
+    fontsize = 15
+  }
+}
+
+texticon = {
+  icon = conscripts
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/generic_icons/conscripts_34.dds"
+    fontsize = 17
+  }
+}
+
+texticon = {
+  icon = conscripts
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/generic_icons/conscripts_44.dds"
+    fontsize = 22
+  }
+}
+
+texticon = {
+  icon = conscripts
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/generic_icons/conscripts.dds"
+    fontsize = 30
+  }
+}
+
+texticon = {
+  icon = conscripts
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/generic_icons/conscripts.dds"
+    fontsize = 91
+  }
+}
+
+### NAVY
 
 texticon = {
   icon = flotillas
@@ -297,7 +347,7 @@ texticon = {
   icon = flotillas
   iconsize = {
     offset = { 0 20 }
-    texture = "gfx/interface/icons/generic_icons/flotillas_60.dds"
+    texture = "gfx/interface/icons/generic_icons/flotillas.dds"
     fontsize = 30
   }
 }
@@ -490,7 +540,7 @@ texticon = {
 texticon = {
   icon = coin1
   iconsize = {
-    offset = { 0 25 }
+    offset = { 0 20 }
     texture = "gfx/interface/icons/generic_icons/coin_icon_01.dds"
     fontsize = 84
   }
@@ -498,7 +548,7 @@ texticon = {
 texticon = {
   icon = coin2
   iconsize = {
-    offset = { 0 25 }
+    offset = { 0 20 }
     texture = "gfx/interface/icons/generic_icons/coin_icon_02.dds"
     fontsize = 84
   }
@@ -506,7 +556,7 @@ texticon = {
 texticon = {
   icon = coin3
   iconsize = {
-    offset = { 0 25 }
+    offset = { 0 20 }
     texture = "gfx/interface/icons/generic_icons/coin_icon_03.dds"
     fontsize = 84
   }
@@ -514,7 +564,7 @@ texticon = {
 texticon = {
   icon = coin4
   iconsize = {
-    offset = { 0 25 }
+    offset = { 0 20 }
     texture = "gfx/interface/icons/generic_icons/coin_icon_04.dds"
     fontsize = 84
   }
@@ -522,7 +572,7 @@ texticon = {
 texticon = {
   icon = coin5
   iconsize = {
-    offset = { 0 25 }
+    offset = { 0 20 }
     texture = "gfx/interface/icons/generic_icons/coin_icon_05.dds"
     fontsize = 84
   }
@@ -530,7 +580,7 @@ texticon = {
 texticon = {
   icon = coin6
   iconsize = {
-    offset = { 0 25 }
+    offset = { 0 20 }
     texture = "gfx/interface/icons/generic_icons/coin_icon_06.dds"
     fontsize = 84
   }
@@ -538,7 +588,7 @@ texticon = {
 texticon = {
   icon = coin7
   iconsize = {
-    offset = { 0 25 }
+    offset = { 0 20 }
     texture = "gfx/interface/icons/generic_icons/coin_icon_07.dds"
     fontsize = 84
   }
@@ -546,7 +596,7 @@ texticon = {
 texticon = {
   icon = coin8
   iconsize = {
-    offset = { 0 25 }
+    offset = { 0 20 }
     texture = "gfx/interface/icons/generic_icons/coin_icon_08.dds"
     fontsize = 84
   }
@@ -554,7 +604,7 @@ texticon = {
 texticon = {
   icon = coin9
   iconsize = {
-    offset = { 0 25 }
+    offset = { 0 20 }
     texture = "gfx/interface/icons/generic_icons/coin_icon_09.dds"
     fontsize = 84
   }
@@ -562,7 +612,7 @@ texticon = {
 texticon = {
   icon = coin10
   iconsize = {
-    offset = { 0 25 }
+    offset = { 0 20 }
     texture = "gfx/interface/icons/generic_icons/coin_icon_10.dds"
     fontsize = 84
   }
@@ -570,7 +620,7 @@ texticon = {
 texticon = {
   icon = coin11
   iconsize = {
-    offset = { 0 25 }
+    offset = { 0 20 }
     texture = "gfx/interface/icons/generic_icons/coin_icon_11.dds"
     fontsize = 84
   }
@@ -578,7 +628,7 @@ texticon = {
 texticon = {
   icon = coin12
   iconsize = {
-    offset = { 0 25 }
+    offset = { 0 20 }
     texture = "gfx/interface/icons/generic_icons/coin_icon_12.dds"
     fontsize = 84
   }
@@ -586,7 +636,7 @@ texticon = {
 texticon = {
   icon = coin13
   iconsize = {
-    offset = { 0 25 }
+    offset = { 0 20 }
     texture = "gfx/interface/icons/generic_icons/coin_icon_13.dds"
     fontsize = 84
   }
@@ -1450,6 +1500,15 @@ texticon = {
   iconsize = {
     offset = { 0 30 }
     texture = "gfx/interface/icons/generic_icons/marginalized.dds"
+    fontsize = 90
+  }
+}
+
+texticon = {
+  icon = goods_shortage
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/generic_icons/goods_shortage.dds"
     fontsize = 90
   }
 }

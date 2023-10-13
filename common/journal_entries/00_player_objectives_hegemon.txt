@@ -111,6 +111,14 @@ je_take_subject = {
 					who = root
 					type = personal_union
 				}
+				has_diplomatic_pact = {
+					who = root
+					type = vassal
+				}
+				has_diplomatic_pact = {
+					who = root
+					type = tributary
+				}
 			}
 			count >= 5
 		}

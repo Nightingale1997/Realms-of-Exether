@@ -333,7 +333,25 @@ ai_strategy_default = {
 				}
 				multiply = 0.5
 			}
-		}	
+		}
+
+		if = {
+			limit = {
+				has_journal_entry = je_scramble_for_africa
+
+				# Scramble for Africa powers should only care about the Boers once diamonds are found
+				scope:subject = {
+					country_is_in_africa = yes
+					any_scope_building = {
+						OR = {
+							is_building_type = building_gold_mine
+							is_building_type = building_gold_fields
+						}
+					}
+				}
+			}
+			add = 50
+		}
 
 		min = 0
 		max = 100
@@ -639,13 +657,13 @@ ai_strategy_default = {
 
 		add = {
 			value = investment_pool_income
-			divide = 500 # 1 construction output per this much into the investment pool				
+			divide = 750 # 1 construction output per this much into the investment pool				
 		}
 		
 		add = {
 			value = income
 					
-			divide = 2000 # 1 construction output per this much income
+			divide = 3000 # 1 construction output per this much income
 
 			min = 0
 		}		

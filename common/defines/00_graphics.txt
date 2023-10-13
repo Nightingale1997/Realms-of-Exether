@@ -86,6 +86,11 @@
 	HEAT_MAP_GOOD = 		{ 0.11 0.46 0.05 1 }				# Green
 	HEAT_MAP_NEUTRAL = 		{ 0.75 0.75 0.75 1 }				# White
 
+	# LOCAL PRICES
+	LOCAL_PRICE_MAP_HIGH =	{ 1.000 0.674 0.454 2 }				# Gold
+	LOCAL_PRICE_MAP_LOW = 	{ 0.410 0.670 0.740 2 }				# Blue
+	LOCAL_PRICE_MAP_MID = 	{ 0.75 0.75 0.75 1 }				# White
+
 	# COLORS FOR RADICALS AND LOYALISTS HEAT MAP
 	RADICALS_HEAT_BASE = 	{ 0.5 0.04 0.02 0 }					# Red, but zero alpha
 	RADICALS_HEAT_MAX = 	{ 0.5 0.04 0.02 1 }					# Red
@@ -95,6 +100,10 @@
 	LOYALISTS_HEAT_MAX = 	{ 0.11 0.46 0.05 1 }				# Green
 	LOYALIST_PERCENTAGE_OF_POPULATION = 0.25					# In the Loyalists Map Mode, if the amount of loyalists in a state is above X the state will be colored with LOYALISTS_HEAT_MAX
 
+	#COLORS FOR POLLUTION HEAT MAP
+	POLLUTION_HEAT_BASE = 	{ 0.3 0.25 0.16 0 }
+	POLLUTION_HEAT_MAX = 	{ 0.3 0.25 0.16 1 }
+	POLLUTION_COLOR_CEILING_VALUE = 0.6							# In the Pollution map mode a state will reach POLLUTION_HEAT_MAX at this fraction of POLLUTION_MAX
 }
 
 # NOTE: Stolen from CK3, will need tweaking etc.
@@ -277,12 +286,7 @@ NGraphics = {
 	# Coa
 	COUNTRY_COLOR_LIST_NAME = "country_color_list"					# The Coat-of-Arms list to use when generating dynamic country map colors
 
-	# Segment Border
-	FRONT_SEGMENTS_POOL_SIZE = 1024									# Amount of border segments that is supported by border system
-
 	NAVAL_BATTLE_POSITION_RANDOM_TRIES = 10							# Amount of tries we rerandomize naval battle positions (between 0 and 100)
-
-	BORDER_GRAPHICS_SHIFT_DISTANCE = 5.0							# Distance from center to the compatant entities
 
 	# Scaled Distance Roughness
 	DISTANCE_ROUGHNESS_POSITION = 1.8		# Position to start blend
@@ -299,13 +303,28 @@ NGraphics = {
 	CELL_SCORE_ROAD_PENALTY = 10.0
 	CELL_SCORE_NOISE_FACTOR = 0.0			# Multiplies score with 1+-noise_factor
 
-	# Frontline diorama graphics
-	FRONT_DIORAMA_GRID_WIDTH = 20			# Grid width of dioramas inside a province
-	FRONT_DIORAMA_GRID_HEIGHT = 20			# Grid height of dioramas inside a province 
-	FRONT_DIORAMA_GRID_SCALE = 1.1			# Grid cell scale of dioramas inside a province
+	# Front entities graphics
+	FRONT_ENTITIES_CUTOFF = 300 			# Zoom at which we hide all front entities
+	FRONT_DIORAMA_GRID_WIDTH = 20			# Grid width of a diorama inside a province
+	FRONT_DIORAMA_GRID_HEIGHT = 20			# Grid height of a diorama inside a province 
+	FRONT_DIORAMA_GRID_SCALE = 1.1			# Grid cell scale of a diorama inside a province
+	FRONT_DIORAMA_FLAT_MAP_ENTITY = "generic_siege_artillery_entity"	# The entity that is visible in the flat map mode instead of front entities
+
+	# Battle entities graphics
+	BATTLE_ENTITIES_CUTOFF = 300 			# Zoom at which we hide all battle entities
+	BATTLE_DIORAMA_GRID_WIDTH = 30			# Grid width of a diorama inside a province
+	BATTLE_DIORAMA_GRID_HEIGHT = 40			# Grid height of a diorama inside a province 
+	BATTLE_DIORAMA_GRID_SCALE = 1.1			# Grid cell scale of a diorama inside a province
+	BATTLE_DIORAMA_ATTACKER_STATE = "advance"		# Animation state name for the attacker side
+	BATTLE_DIORAMA_DEFENDER_STATE = "defend"		# Animation state name for the defender side
+
+	MILITARY_ENTITIES_TOGGLE_MAP_OBJECTS_IN_RADIUS = 2			# How many cells around entities should be used for hiding map objects (trees)
 
 	OCCUPATION_ENTITY = "military_occupation_flag_entity"		# Entity that appears on occupied territory by occupying nation
 	OCCUPATION_ENTITY_DIRECTION = { 0.0 0.0 -1.0 }				# Direction of occupation entity
+
+	# Fleet entities graphics
+	FLEET_ENTITIES_CUTOFF = 300				# Zoom at which we hide all fleet entities
 }
 
 NFrontend = {
@@ -459,9 +478,10 @@ NGuiFlag = {
 }
 
 NTravelNetwork = {
-	FORMATION_CATCHUP_DISTANCE = 20.0			# If a military formation 3D caravan is this distance behind where it is supposed to be, accelerate with catch-up speed
+	FORMATION_CATCHUP_DISTANCE = 40.0			# If a military formation 3D caravan is this distance behind where it is supposed to be, accelerate with catch-up speed
 	FORMATION_CATCHUP_SPEED_MULTIPLIER = 1.5	# Accelerate averaged speed by this multiplied when 'catching up'
 	FORMATION_CATCHUP_MIN_SPEED = 15.0			# Minimum speed for catching up
 	FORMATION_SMOOTHING_STEP_COUNT = 5			# For smoothing visual movement speed, military formation speed is measured as a rolling average over X steps
 	FORMATION_SMOOTHING_STEP_TIME = 1.0			# Each step for the military formation speed smoothing is this long
+	FORMATION_SMOOTHING_SPEED_MULTIPLIER = 1.2  # General speed multiplier applied to the smoothing measurement (it's better to be "ahead" than "behind")
 }

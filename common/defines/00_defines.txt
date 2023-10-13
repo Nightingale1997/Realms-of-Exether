@@ -651,7 +651,7 @@ NAI = {
 
 	# Below data is used to calculate how much weight the AI places on a production building
 	PRODUCTION_BUILDING_RANDOM_FACTOR = 10.0 # The higher this is, the more random AI construction will be
-	PRODUCTION_BUILDING_STATE_RANDOM_FACTOR = 0.33 # The higher this is, the more random AI state selection for building types will be
+	PRODUCTION_BUILDING_STATE_RANDOM_FACTOR = 1.0 # The higher this is, the more random AI state selection for building types will be
 	PRODUCTION_BUILDING_BASE_VALUE = 1000 # If no ai_value is scripted in the building
 	PRODUCTION_BUILDING_NO_AVAILABLE_WORKFORCE_FACTOR = 0.25 # Total weight is multiplied by this if the state lacks enough workforce to staff the building
 	PRODUCTION_BUILDING_GOODS_PROFIT_FACTOR = 5000 # Per pound of predicted building profit (divided by employee count per level)
@@ -660,8 +660,8 @@ NAI = {
 	PRODUCTION_BUILDING_PRODUCED_VALUE_FACTOR = 0.25 # Per pound of produced goods in base value
 	PRODUCTION_BUILDING_INCORPORATED_INFRASTRUCTURE_USAGE_FACTOR = 0.05 # Total weight is divided by ( 1 + this * building infrastructure usage ) in incorporated states
 	PRODUCTION_BUILDING_UNINCORPORATED_INFRASTRUCTURE_USAGE_FACTOR = 1.0 # Total weight is divided by ( 1 + this * building infrastructure usage ) in unincorporated states
-	PRODUCTION_BUILDING_INPUT_NO_LOCAL_PRODUCTION_FACTOR = -0.5 # Add this value to a building for each unit of money worth of goods consumed that are not produced by any buildings in the state but *are* produced by buildings in the market
-	PRODUCTION_BUILDING_OUTPUT_NO_LOCAL_CONSUMPTION_FACTOR = -0.5 # Add this value to a building for each unit of money worth of goods produced that are not consumed by any buildings in the state but *are* consumed by buildings in the market
+	PRODUCTION_BUILDING_INPUT_NO_LOCAL_PRODUCTION_FACTOR = -0.5 # Add this value to a building for each unit of money worth of goods consumed that are not produced in the state but *are* produced by buildings in the market
+	PRODUCTION_BUILDING_OUTPUT_NO_LOCAL_CONSUMPTION_FACTOR = -0.5 # Add this value to a building for each unit of money worth of goods produced that are not consumed in the state but *are* consumed by buildings in the market
 	PRODUCTION_BUILDING_OUTPUT_HIGH_PRICE_THRESHOLD = 1.25 # Lower threshold multiplier of base price for applying 'high price' modifier below
 	PRODUCTION_BUILDING_OUTPUT_HIGH_PRICE_FACTOR = 0.25 # Add this value to a building for each unit of money worth of goods above high price threshold that this building produces
 	PRODUCTION_BUILDING_OUTPUT_HIGH_PRICE_WANTS_HIGH_SUPPLY_FACTOR = 0.75 # Add this value to a building for each unit of money worth of goods above high price threshold that this building produces and which we want a high supply of
@@ -884,6 +884,7 @@ NCountry = {
 	CONSTRUCTION_CAMP_BUILDING = "building_construction_sector"
 	BARRACKS_BUILDING = "building_barracks"
 	NAVAL_BASE_BUILDING = "building_naval_base"
+	PORT_BUILDING = "building_port"
 	URBAN_CENTER_BUILDING = "building_urban_center"
 	CONSCRIPTION_CENTER_BUILDING = "building_conscription_center"
 	TRADE_CENTER_BUILDING = "building_trade_center"
@@ -1083,9 +1084,10 @@ NEconomy = {
 	FIRED_POP_RADICALIZATION_BASE_FRACTION = 0.2		# This percentage of a pop becomes radicalized when they lose their job, for instance due to a building being downsized
 	FIRED_POP_RADICALIZATION_SHARES_FACTOR = 0.05		# Additional percentage of pop that becomes radicalized they lost their job for each per-pop share they had in the building			
 
-	POLLUTION_TARGET_DIVISOR_BASE = 1					# Base value to divide total pollution generation by for calculating state region pollution target level
-	POLLUTION_TARGET_DIVISOR_ARABLE_LAND_MULT = 0.1		# Amount per arable land to add to pollution divisor
-	POLLUTION_CHANGE_SPEED = 0.5						# Each day, pollution in state region changes by this amount towards target
+	# Pollution Impact = (GeneratedPollution (StateRegion) / (DIVISOR_BASE + DIVISOR_ARABLE_LAND_MULT * SQRT(ArableLand (State Region)))/POLLUTION_MAX
+	POLLUTION_TARGET_DIVISOR_BASE = 50					# Base value to divide total pollution generation by for calculating state region pollution target level
+	POLLUTION_TARGET_DIVISOR_ARABLE_LAND_MULT = 1.5		# Amount per arable land to add to pollution divisor
+	POLLUTION_CHANGE_SPEED = 0.255						# Each day, pollution in state region changes by this amount towards target
 	POLLUTION_MAX = 255
 	POLLUTION_SPREAD_TO_NEIGHBOR = 0.25					# Adjacent state regions always have at least this much of their neighbor's pollution level
 
@@ -1227,6 +1229,8 @@ NEconomy = {
 	SLAVE_TRADE_SLAVES_PER_WEEK = 100			# Base number of slaves that will be traded per marker per week
 	SLAVE_TRADE_MIN_MARKET_ACCESS = 0.1			# Minimum market access multiplier for slave trade, i.e. even at a marker with 0 market access, this fraction of the base number will be traded
 	
+	BUILDING_FAILED_HIRE_COOLDOWN_WEEKS_WITHOUT_WAGE_RAISE = 4		# If a building fails to hire, it waits this many weeks before trying again *unless* it has since raised wages
+	
 	BUILDING_LAYOFFS_MIN_WEEKS_BETWEEN = 4		# Minimum number of weeks between layoffs
 	BUILDING_LAYOFFS_DECREASE_BY = 0.15			# The ratio that layoffs will reduce employment by (e.g. 0.15 means if you're currently 57% employed, reduce that to 48.45%)
 
@@ -1367,6 +1371,9 @@ NMilitary = {
 	MILITARY_FORMATION_ORGANIZATION_MAX = 100				# The maximum amount of Organization a Military Formation requires to be considered at full Organization
 	MILITARY_FORMATION_ORGANIZATION_MIN = 25				# The minimum amount of Organization a Military Formation will always retain despite exceeding their Command Limit 
 	MILITARY_FORMATION_DAILY_ORGANIZATION_GAIN_MIN = 0.1	# The minimum amount of Organization a Military Formation can gain in a day
+	
+	MILITARY_FORMATION_WEEKLY_MAX_UNIT_UPGRADES_ARMY = 0.1		# Each week a mobilized army can upgrade this (0.0-1.0) fraction of its total number of units.
+	MILITARY_FORMATION_WEEKLY_MAX_UNIT_UPGRADES_FLEET = 0.05	# Each week a mobilized fleet can upgrade this (0.0-1.0) fraction of its total number of units.
 }
 
 NDiplomacy = {
@@ -1682,6 +1689,7 @@ NPops = {
 	ECONOMIC_MIGRATION_STATE_POPULATION_THRESHOLD = 100000				# States with less pops than this have reduced economic emigration numbers to avoid total depopulation
 	CULTURAL_MIGRATION_BASE = 0.05								# Base amount of a pop that wants to move due to mass migration
 	CULTURAL_MIGRATION_FROM_RADICALS = 0.05						# At 100% radicals, this fraction of the pop wants to mass migrate
+	CULTURAL_COMMUNITY_LINGER_TIME_WEEKS = 3					# When the last pop of a given culture leaves a state, the corresponding cultural community will be removed after this long
 	MIGRATION_UNEMPLOYMENT_MULT = 10.0							# Amount of migration from SoL is increased by this when a pop is unemployed
 	MIGRATION_MIN_STATE_POPS = 20000							# A state with less pops than this will not get emigration
 	MIGRATION_MIN_POP_AMOUNT = 1								# No less than this amount of a pop can migrate each week (if any migration at all should happen)
@@ -1711,6 +1719,17 @@ NPops = {
 	MASS_MIGRATION_NUM_TARGET_STATES_FOR_NO_PENALTY = 5	# Countries with at least this number of possible target states do not receive any penalty to their mass migration target score
 	MASS_MIGRATION_FEW_TARGET_STATES_PENALTY = 0.25		# Mass migration target score is divided by ( 1 + this * number of possible target states less than MASS_MIGRATION_NUM_TARGET_STATES_FOR_NO_PENALTY )
 
+	MASS_MIGRATION_TARGET_MIGRATION_PULL_FACTOR = 1.5	# A state with a mass migration target will have its migration pull multiplied by this value (when considered by the relevant culture pops in the relevant origin country)
+
+	MIGRATION_DESIRE_BASE = 0								# Base desire to migrate
+	MIGRATION_DESIRE_FROM_DISCRIMINATION = 100				# Being discriminated will increase desire to migrate by this much
+	MIGRATION_DESIRE_FROM_JOB_SATISFACTION_FACTOR = -1.0	# A pop's desire to migrate will be affected by its job satisfaction multiplied by this value.
+
+	CULTURAL_MIGRATION_PER_WEEK_FACTOR = 5										# This number of individuals will migrate for each point of difference in migration pull
+	CULTURAL_MIGRATION_PER_WEEK_PER_TOTAL_POPULATION = 100000					# Additionally, one more individual will migrate per this number of population for each point of difference in migration pull
+	CULTURAL_MIGRATION_MIN_DIFFERENCE_IN_MIGRATION_ATTRACTION_TO_MOVE = 5		# Pops will not migrate if their best option is to a state with a lower delta in migration pull than this number
+	CULTURAL_MIGRATION_MIN_POP_FRACTION_TO_MOVE = 0.05							# If the people wanting to migrate constitues less than this fraction of a pop, no new pop will be created and they won't migrate.
+
 	COLONIZATION_RIGHTS_GROWTH_MULTIPLIER = 2.0			# Colonial growth AND max colonial growth are multiplied by this if you have colonization rights
 	COLONIAL_GROWTH_BASE_FACTOR = 0.00001				# Colonial growth generated by a state is ( total pops / 1000 ) * this * modifier from institution
 	MIN_BASE_COLONIAL_GROWTH = 0.01						# Country base colonial growth from population cannot be lower than this
@@ -1725,6 +1744,14 @@ NPops = {
 	INDIVIDUALS_TAXED_PER_TAX_CAPACITY = 10000			# How many pops can be taxed efficiently for each tax capacity
 	
 	EXPECTED_SOL_FROM_LITERACY_SUBSISTENCE_MULT = 0.25	# Expected SoL from literacy is multiplied by this for Pops working in subsistence buildings
+
+	JOB_SATISFACTION_BASE = -250							# Base job satisfaction
+	JOB_SATISFACTION_PER_SOL_ABOVE_EXPECTED_SOL = 50		# Job satisfaction gained per level of SoL above your expected SoL
+	JOB_SATISFACTION_PER_SOL_ABOVE_STATE_STRATA_SOL = 50	# Job satisfaction gained per level of SoL above the state average for your strata
+	JOB_SATISFACTION_PER_SOL_ABOVE_COUNTRY_STRATA_SOL = 20	# Job satisfaction gained per level of SoL above the country average for your strata
+	JOB_SATISFACTION_PER_PERCENT_WAGE_RATE_ABOVE_NORMAL = 1	# Job satisfaction gained per pound of workplace wage rate (weekly wage of 10k laborers) above country normal
+	JOB_SATISFACTION_PER_PERCENT_HIGHER_STRATA_QUALIFICATION = -10 # Job satisfaction gained per percent of workforce qualified for a higher strata. Note that qualifications are assumed to overlap and the largest qualification is used in this calculation
+	JOB_SATISFACTION_FROM_EMPLOYMENT = 100					# Job satisfaction gained from having a job
 	
 	### Pop Consolidation defines
 	# Pop Consolidation identifies pops so small their impact on the economy and politics is insignificant, and merges them into other pops in the same building or state.

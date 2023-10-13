@@ -221,6 +221,11 @@ ai_strategy_territorial_expansion = {
 			limit = { country_is_in_settler_coast = yes }
 			multiply = 0.25
 		}	
+		
+		if = {
+			limit = { has_law = law_type:law_council_republic }
+			multiply = 0.5
+		}
 	}
 }
 
@@ -416,7 +421,12 @@ ai_strategy_colonial_expansion = {
 		if = {
 			limit = { has_technology_researched = civilizing_mission }
 			multiply = 1.25
-		}				
+		}	
+		
+		if = {
+			limit = { has_law = law_type:law_council_republic }
+			multiply = 0.01
+		}			
 	}
 }
 
@@ -476,6 +486,7 @@ ai_strategy_armed_isolationism = {
 	
 	possible = {
 		NOT = { country_rank = rank_value:great_power }
+		NOT = { has_law = law_type:law_council_republic }
 	}
 	
 	weight = {
@@ -504,7 +515,7 @@ ai_strategy_armed_isolationism = {
 		if = {
 			limit = { country_rank = rank_value:major_power }
 			multiply = 0.5
-		}			
+		}		
 	}
 }
 
@@ -678,6 +689,7 @@ ai_strategy_economic_imperialism = {
 					can_reach_target_country = yes
 					scope:target_country = {
 						has_law = law_type:law_isolationism
+						gdp >= 5000000 # Not worth doing against small markets
 					}
 				}
 				add = {
@@ -741,6 +753,11 @@ ai_strategy_economic_imperialism = {
 		if = {
 			limit = { navy_size >= 75 }
 			multiply = 1.5
-		}			
+		}	
+		
+		if = {
+			limit = { has_law = law_type:law_council_republic }
+			multiply = 0.25
+		}
 	}
 }

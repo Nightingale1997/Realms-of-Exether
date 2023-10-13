@@ -3,7 +3,7 @@
 	
 	building_modifiers = {
 		workforce_scaled = { # 85
-			goods_output_grain_add = 2.5 # 50
+			goods_output_grain_add = 2 # 50
 			goods_output_fabric_add = 0.5 # 10
 			goods_output_wood_add = 0.5 # 10
 			goods_output_services_add = 0.5 # 15
@@ -442,9 +442,9 @@ pm_government_run_building_subsistence = {
 	
 	building_modifiers = {
 		level_scaled = {
-			building_employment_clergymen_add = 150
+			building_employment_clergymen_add = 100
+			building_employment_bureaucrats_add = 150
 			building_employment_wizards_add = 75
-			building_employment_bureaucrats_add = 100
 		}
 		unscaled = {
 			building_government_shares_add = 1
