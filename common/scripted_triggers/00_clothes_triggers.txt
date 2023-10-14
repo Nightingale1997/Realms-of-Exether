@@ -215,9 +215,7 @@ chinese_imperial_clothes_trigger = {
      		has_law = law_type:law_monarchy
      	}
 		OR = {
-			culture = {
-				has_discrimination_trait = draconic_heritage
-			}
+			has_culture = cu:shkemger
 		}
 	}
 }
@@ -256,7 +254,11 @@ chinese_court_clothes_trigger = {
 	scope:character = {
 		culture = {
 			OR = {
-				has_discrimination_trait = draconic_heritage
+				AND = {
+					NOT = { this = cu:khanaruk }
+					has_discrimination_trait = goblin_heritage
+				}
+				
 			}
 		}
 	}	
@@ -267,7 +269,8 @@ chinese_court_clothes_pop_trigger = {
 	scope:pop = {
 		culture = {
 			OR = {
-				has_discrimination_trait = draconic_heritage
+				NOT = { this = cu:khanaruk }
+				has_discrimination_trait = goblin_heritage
 			}
 		}
 	}	
@@ -611,7 +614,7 @@ east_asian_clothes_pop_trigger = {
 	scope:pop = {
 		culture = {
 			OR = {
-				has_discrimination_trait = draconic_heritage
+				has_discrimination_trait = goblin_heritage
 			}
 		}   
 	}

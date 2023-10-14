@@ -399,7 +399,14 @@ mountain = {
 				if = {
 					limit = {
 						scope:region = {
-							state_is_in_southern_hemisphere = yes
+							OR = {
+								region = sr:region_west_aritzakarri
+								region = sr:region_skittering_hills
+								region = sr:region_vitics_roosts
+								region = sr:region_the_trident
+								region = sr:region_ravik
+							}
+						
 						}
 					}
 					add = 1
@@ -1458,7 +1465,7 @@ docks = {
 					limit = {
 						exists = state.b:building_port
 					}
-					add = 1
+					add = 10
 				}
 			}
 			path = "gfx/state_pictures/docks.dds"
@@ -1467,14 +1474,71 @@ docks = {
 		{
 			weight = {
 				value = 1
-				# if = {
-				#	limit = {
-				#		NOT = { exists = state.b:building_port }
-				#	}
-				#	add = 1
-				# }
+				 if = {
+					limit = {
+						AND = {
+							NOT = { exists = state.b:building_port }
+							scope:region = {
+								is_arid_region = yes
+							}
+						}
+						
+					}
+					add = 1
+				 }
 			}
 			path = "gfx/state_pictures/plains_arid.dds"
+			effect = "vfx_entity_ui_state_plains_arid"
+		}
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						AND = {
+							NOT = { exists = state.b:building_port }
+							scope:region = {
+								OR = {
+									region = sr:region_south_toftir
+									region = sr:region_exiles_burden
+									region = sr:region_razorwind
+									region = sr:region_rimeroot_jungle
+									region = sr:region_thawed_lands
+									region = sr:region_east_everfrost
+									region = sr:region_west_everfrost
+									region = sr:region_coldreach
+									region = sr:region_whisperpine
+								}
+								
+							}
+						}
+
+					}
+					add = 3
+				}
+			}
+			path = "gfx/state_pictures/arctic.dds"
+			effect = "vfx_entity_ui_state_arctic"
+		}
+		{
+			weight = {
+				value = 1
+				 if = {
+					limit = {w
+						AND = {
+							NOT = { exists = state.b:building_port }
+							NOT = {
+								scope:region = {
+									is_arid_region = yes
+								}
+							}
+						}
+						
+					}
+					add = 1
+				 }
+			}
+			path = "gfx/state_pictures/plains.dds"
 			effect = "vfx_entity_ui_state_plains_arid"
 		}
 	}

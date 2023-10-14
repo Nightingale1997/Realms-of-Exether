@@ -111,6 +111,14 @@ elf_southern = {
 	color = { 0.7 0.4 0.6 }
 }
 
+animist = {
+	texture = "gfx/interface/icons/religion_icons/animist.dds"
+	traits = {
+		animist
+	}
+	color = { 0.6 0.3 0.2 }
+}
+
 lords_of_avarice = {
 	texture = "gfx/interface/icons/religion_icons/hindu.dds"
 	traits = {
@@ -275,4 +283,9 @@ halfling_pantheon = {
 	
 	taboos = {
 	}
+}
+
+atheist = {
+	texture = "gfx/interface/icons/religion_icons/atheist.dds"
+	color = { 1.0 1.0 1.0 }
 }

@@ -604,7 +604,7 @@ west_thalorian={
 	}
 	graphics = european
 	ethnicities = {
-		1 = central_african
+		1 = south_american
 	}
 }
 
@@ -754,7 +754,7 @@ lake_thalorian = {
 		Zottu
 	}
 	ethnicities = {
-		1 = east_african
+		1 = south_american
 	}
 	graphics = european
 }
@@ -1956,4 +1956,74 @@ ceraunian={
 		1 = slavic
 	}
 	graphics = european
+}
+
+korafri={
+	color= hsv{ 0.52 0.09 0.55 }
+	religion = animist
+	traits = { human_heritage }
+	male_common_first_names={
+		Amadi
+		Andikan
+		Aren
+		Averey
+		Bahari
+		Bakari
+		Bash
+		Bayode
+		Bitalo
+		Chane
+		Chata
+		Dakarai
+		Davu
+		Dume
+		Fabunni
+		Gamba
+		Genet
+		Guban
+		Hajari
+		Haruni
+		Ife
+		Ilo
+		Issay
+		Jabari
+		Jabilo
+		Jaguan
+		Kabili
+		Kamwimbile
+		Kasim
+		Kenyi
+		Khairi
+		Makalo
+		Mansa
+		Morathi
+		Musawenkosi
+		Raimi
+		Razi
+		Reth
+	}
+	female_common_first_names = {
+		Jokate
+		Kajala
+		Khalila
+		Wema
+		Yobnesh
+	}	
+	noble_last_names = {
+		Kasanda
+		Watuta
+		Zwagendaba
+	}
+	common_last_names={
+		Bulungute
+		Mirambo
+		Mkasiwa
+		Mnywasele
+		Msemwa
+		Mudimbe
+	}
+	ethnicities = {
+		1 = african
+	}
+	graphics = african
 }
