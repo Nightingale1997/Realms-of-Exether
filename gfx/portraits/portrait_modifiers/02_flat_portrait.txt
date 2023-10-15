@@ -1,0 +1,25 @@
+﻿flat_portrait = {
+	usage = game
+
+    flat_bird_white_portrait = {
+        dna_modifiers = {
+            accessory = {
+                mode = replace
+                gene = base_skins
+                template = gene_bird_white_skin
+				range = { 0 1 }
+            }
+        }
+		weight = {
+			base = 0
+		}
+    }
+
+	# unique_portraits = {
+	# 	dna_modifiers = {
+	# 		mode = replace
+	# 		gene = base_skins
+	# 		template = 
+	# 	}
+	# }
+}

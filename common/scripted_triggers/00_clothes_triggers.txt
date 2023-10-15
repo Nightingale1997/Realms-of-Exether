@@ -1255,6 +1255,7 @@ should_be_naked_trigger = {
 					culture = {
 						OR = {
 							has_discrimination_trait = monstrous_heritage
+							has_discrimination_trait = bird_heritage
 						}
 					}
 				}
@@ -1267,6 +1268,7 @@ should_be_naked_trigger = {
 				culture = {
 					OR = {
 						has_discrimination_trait = monstrous_heritage
+						has_discrimination_trait = bird_heritage
 					}
 				}
 			}
@@ -1278,7 +1280,6 @@ should_be_naked_trigger = {
 ## Can only be checked in the interface since the setting isn't synced
 should_be_fully_naked_portrait_trigger = {
 	should_be_naked_trigger = yes
-	should_show_nudity = yes
 }
 #
 #should_be_topless_portrait_trigger = {
