@@ -1561,6 +1561,14 @@ s:STATE_SAVAGE_REACH = {
 add_homeland = tqalt
 }
 
+s:STATE_THIRSTRIDGE = {
+	create_state = {
+		country = c:RUX
+		owned_provinces = { "x21EFEE" "x4FF6E0" "x51CCF3" "x5ECAFB" "x6CEBB4" "x6DBEEA" "x6DDAC1" "x7BBCE5" "x89A6CE" "x8AF2D6" "x8CE785" "x8FFE78" "x96B0C8" "x9BC2D4" "x9D9DFB" "xA4E87B" "xA9D37E" "xAB99ED" "xADE6D5" "xB0B9BD" "xB5ACD4" "xB5C2E1" "xB5EECE" "xB693B6" "xBBA4D9" "xBDF8F3" "xC2A6AB" "xC7DC97" "xC8AA93" "xCAF4B8" "xCAF9F7" "xD4A4D8" "xD75CD5" "xD882A5" "xD8E5BB" "xD963E0" "xDACB5A" "xDC7CB1" "xDDE371" "xE0FCFC" "xE36CC4" "xE6EEB5" "xF0FC9A" "xF4D243" "xF7B3A7" "xF9EBF0" "xFA5AD3" "xFABCE8" }
+	}
+add_homeland = tqalt
+}
+
 s:STATE_SNAILBANE = {
 	create_state = {
 		country = c:SNL
