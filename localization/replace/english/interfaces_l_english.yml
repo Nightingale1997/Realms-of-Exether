@@ -708,6 +708,10 @@
  PANEL_MILITARY_ARMY_CURRENT_REGULARS:0 "@battalions![Country.GetRegularBattalions|0v]"
  PANEL_MILITARY_ARMY_CURRENT_CONSCRIPTS:2 "@battalions![Country.GetConscriptedBattalions|0v]/[Country.CalcConscriptableBattalions|0]"
  PANEL_MILITARY_ARMY_CURRENT_BATTALIONS:0 "@battalions![Country.GetBattalions|0v]"
+ 
+ POWER_PROJECTION_FROM_MILITARY_FORMATION: "#tooltippable #tooltip:[MILITARY_FORMATION.GetTooltipTag],MILITARY_FORMATION_POWER_PROJECTION_TOOLTIP $VALUE|=+0$#!#! from [MILITARY_FORMATION.GetName]"
+ MILITARY_FORMATION_POWER_PROJECTION_TOOLTIP: "[MilitaryFormation.GetPowerProjectionDesc]"
+ MILITARY_FORMATION_POWER_PROJECTION_DESC: "#header [concept_power_projection]: $TOTAL_POWER_PROJECTION|v0$\n$TOOLTIP_DELIMITER$\nAverage [concept_offense] and [concept_defense] of $AVERAGE_CE|1v$ spread across $TOTAL_MANPOWER|D1$ [concept_manpower] results in $TOTAL_POWER_PROJECTION|v0$ $concept_power_projection$ for the formation."
 
  REGULARS_AND_CONSCRIPTS: "Regulars & Conscripts"
 
@@ -3607,10 +3611,14 @@
  TOOLTIP_JOB_SATISFACTION_DUE_TO_SAME: "This is due to:"
  TOOLTIP_JOB_SATISFACTION_DUE_TO_UPDATING: "This will soon update to [Pop.GetNextJobSatisfaction|+] due to:"
  JOB_SATISFACTION_BASE: "$VALUE|+=$ from Base dissatisfaction"
+ JOB_SATISFACTION_FOR_NEWLY_HIRED: "$VALUE|+=$ because the [concept_pop] has just been hired"
  JOB_SATISFACTION_PER_SOL_ABOVE_EXPECTED_SOL: "$VALUE|+=$ from the difference between current (#tooltippable #tooltip:[Pop.GetTooltipTag],TOOLTIP_POP_QOL [LabelingHelper.GetLabelForStandardOfLiving(Pop.GetCurrentStandardOfLiving)|v] ([Pop.GetCurrentStandardOfLiving|v])#!#!) and [Concept('concept_expected_sol', '$concept_expected_sol_short$')] (#tooltippable #tooltip:[Pop.GetTooltipTag],TOOLTIP_POP_EXPECTED_SOL [LabelingHelper.GetLabelForStandardOfLiving(Pop.GetExpectedStandardOfLiving)] ([Pop.GetExpectedStandardOfLiving|v])#!#!) [concept_sol]"
  JOB_SATISFACTION_PER_SOL_ABOVE_COUNTRY_STRATA_SOL: "$VALUE|+=$ from the difference between current (#tooltippable #tooltip:[Pop.GetTooltipTag],TOOLTIP_POP_QOL [LabelingHelper.GetLabelForStandardOfLiving(Pop.GetCurrentStandardOfLiving)|v] ([Pop.GetCurrentStandardOfLiving|v])#!#!) and average [concept_sol] in [Pop.GetCountry.GetName] for [Pop.GetPopType.GetStrata] ([LabelingHelper.GetLabelForStandardOfLiving(FixedPointToInt('(CFixedPoint)$AVERAGE$')))|v] ($AVERAGE|v2$))"
  JOB_SATISFACTION_PER_SOL_ABOVE_STATE_STRATA_SOL: "$VALUE|+=$ from the difference between current (#tooltippable #tooltip:[Pop.GetTooltipTag],TOOLTIP_POP_QOL [LabelingHelper.GetLabelForStandardOfLiving(Pop.GetCurrentStandardOfLiving)|v] ([Pop.GetCurrentStandardOfLiving|v])#!#!) and average [concept_sol] in [Pop.GetState.GetName] for [Pop.GetPopType.GetStrata] ([LabelingHelper.GetLabelForStandardOfLiving(FixedPointToInt('(CFixedPoint)$AVERAGE$'))|v] ($AVERAGE|v2$))"
  JOB_SATISFACTION_PER_PERCENT_WAGE_RATE_ABOVE_NORMAL: "$VALUE|+=$ from the relative difference of #variable $DIFF|1$%#! between [concept_building_wage] in [Pop.GetBuilding.GetName] ($WORKPLACE_WAGE_RATE|v$) and [Pop.GetCountry.GetName] ($NORMAL_WAGE_RATE|v$)"
+ JOB_SATISFACTION_FROM_CAN_AFFORD_EXPENSES: "$VALUE|+=$ because the [concept_pop] can afford its [Concept( 'concept_pop_income', '$concept_pop_income_expenses_short$' )]"
+ JOB_SATISFACTION_FROM_CAN_BARELY_AFFORD_EXPENSES: "$VALUE|+=$ because the [concept_pop] can barely afford its [Concept( 'concept_pop_income', '$concept_pop_income_expenses_short$' )]"
+ JOB_SATISFACTION_FROM_CANNOT_AFFORD_EXPENSES: "$VALUE|+=$ because the [concept_pop] cannot afford its [Concept( 'concept_pop_income', '$concept_pop_income_expenses_short$' )]"
  JOB_SATISFACTION_PER_PERCENT_HIGHER_STRATA_QUALIFICATION: "$VALUE|+=$ from being $RATIO|%v1$ [Concept('concept_pop_qualifications', '$concept_qualified$')] for a higher strata than [Pop.GetPopType.GetStrata]"
  JOB_SATISFACTION_FROM_EMPLOYMENT: "$VALUE|+=$ from being [Concept('concept_employment' ,'$concept_employed$')]"
  GROWTH_RATE_BREAKDOWN:0 "#header Growth Rate#!\n[Pop.GetPopGrowthDesc]"
