@@ -1,0 +1,39 @@
+﻿DIPLOMACY = {
+	c:DUM = {
+		create_diplomatic_pact = {
+			country = c:ABR
+			type = personal_union
+		}
+		create_diplomatic_pact = {
+			country = c:SSC
+			type = dominion
+		}
+		create_diplomatic_pact = {
+			country = c:AUM
+			type =  protectorate
+		}
+	}
+	c:RAV = {
+		create_diplomatic_pact = {
+			country = c:THY
+			type = dominion
+		}
+	}
+	c:ARR = {
+		create_diplomatic_pact = {
+			country = c:WHI
+			type = puppet
+		}
+		create_diplomatic_pact = {
+			country = c:CLR
+			type = protectorate
+		}
+	}
+	c:THI = {
+		create_diplomatic_pact = {
+			country = c:FEY
+			type = puppet
+		}
+	}
+	
+}

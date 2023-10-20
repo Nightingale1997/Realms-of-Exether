@@ -164,6 +164,9 @@ jewish_clothes_pop_trigger = {
 hindu_clothes_pop_trigger = {
 	exists = scope:pop
 	scope:pop = {
+		NOT = {
+			culture = cu:castaway_dwarf
+		}
 		culture = {
 			has_discrimination_trait = dwarf_heritage
 		}
@@ -395,6 +398,9 @@ european_clothes_trigger = {
 indian_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
+		NOT = {
+			culture = cu:castaway_dwarf
+		}
 		OR = {
 			culture = {
 				has_discrimination_trait = dwarf_heritage
@@ -670,17 +676,24 @@ indigenous_oceanic_clothes_trigger = {
 		AND = {
 			exists = scope:pop
 			scope:pop = {
-				culture = {
-					has_discrimination_trait = orc_heritage
-				}   
+				OR = {
+					culture = {
+						has_discrimination_trait = orc_heritage
+					}  
+					culture = cu:castaway_dwarf
+				}
+ 
 			}
 		}
 		AND = {
 			exists = scope:character
 			scope:character = {
-				culture = {
-					has_discrimination_trait = orc_heritage
-				}   
+				OR = {
+					culture = {
+						has_discrimination_trait = orc_heritage
+					}  
+					culture = cu:castaway_dwarf
+				}
 			}
 		}
 	}
@@ -822,6 +835,9 @@ japanese_clothes_trigger = {
 indian_clothes_pop_trigger = {
 	exists = scope:pop
 	scope:pop = {
+		NOT = {
+			culture = cu:castaway_dwarf
+		}
 		OR = {
 			culture = {
 				has_discrimination_trait = dwarf_heritage

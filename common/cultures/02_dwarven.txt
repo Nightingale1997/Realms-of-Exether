@@ -222,6 +222,56 @@ vozi={
 	graphics = asian
 }
 
+vynduri={
+	color= hsv{ 0.40 0.36 0.70 }
+	religion = dwarf_pantheon
+	traits = { dwarf_heritage }
+	male_common_first_names={
+		Aikia
+		Asllak
+		Biejas
+		Dure
+		Erke
+		Hanno
+		Iskko
+		Joha
+		Laras
+		Markkos
+		Mikko
+		Niillas
+		Osku
+		Quiwe
+		Uhkku
+	}
+	female_common_first_names = {
+		Aili
+		Margareta
+		Marja
+		Nasti
+	}	
+	noble_last_names = {
+		Aeijih
+		Keskitalo
+		Magga
+		Nuorane
+		Nysto
+		Ukonsaari
+	}
+	common_last_names={
+		Dunfjeld
+		Haetta
+		Kappfjell
+		Kvitfjell
+		Magga
+		Somby
+		Turi
+	}
+	graphics = european
+	ethnicities = {
+		1 = caucasian
+	}
+}
+
 koshiri={
 	color= hsv{ 0 0 0.5 }
 	religion = dwarf_pantheon
@@ -268,4 +318,67 @@ koshiri={
 		1 = dwarf_light
 	}
 	graphics = asian
+}
+
+castaway_dwarf={
+	color= hsv{ 0.71 0.54 0.78 }
+	religion = animist
+	traits = { dwarf_heritage }
+	male_common_first_names={
+		Bing
+		Chen
+		Du
+		He
+		Hou
+		Lin
+		Qin
+		Sa
+		Shen
+		Tan
+		Wong
+		Wu
+		Xu
+		Xue
+		Yan
+		Zheng
+	}
+	female_common_first_names = {
+		Akew
+		Jin
+		Jinhong
+		Junying
+		Qingtang
+		Sanniang
+		Shanziang
+		Shih
+		Taiqing
+		Xiefen
+		Xiugu
+		Xuanjiao
+		Yu
+		Yunmei
+	}	
+	noble_last_names = {
+		Cui
+		Li
+		Nie
+		Zhang
+	}
+	common_last_names={
+		Baochen
+		Baozhen
+		Debang
+		Fu
+		Huiyin
+		Nai-siong
+		Nee
+		Sen
+		Shu
+		Xin
+		Zexu
+	}
+	ethnicities = {
+		1 = dwarf_light
+	}
+	graphics = african
 }
