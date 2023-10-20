@@ -862,7 +862,7 @@ NAI = {
 	COMPANY_TYPE_BUILDING_LEVELS_MAX = 2.0			# Effects of COMPANY_TYPE_NUM_BUILDING_LEVELS_FACTOR cannot be higher than this
 	COMPANY_TYPE_COMPETITION_FACTOR = 2					# Divisor for AI weight of companies is increased by 1 + ( number of building types on existing companies that compete * this )
 
-	MILITARY_UNITS_PER_FORMATION_BASE = 50		# For each this number of battalions we create another military formation in a HQ
+	MILITARY_UNITS_PER_FORMATION_BASE = 100		# For each this number of battalions we create another military formation in a HQ
 	MILITARY_UNITS_MIN_FOR_GARRISON_FORMATION = 15 		# If a HQ has at least this number of units we set the minimum number of formations to 2, so that there will be a garrison formation present
 	MILITARY_UNITS_GARRISON_BATTALION_MULT = 0.33	# The garrison formation (the last formation in each HQ) should receive only this number of troops compared to the other formations in the HQ
 }
