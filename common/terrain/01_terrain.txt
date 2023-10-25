@@ -437,7 +437,6 @@ mountain = {
 					limit = {
 						scope:region = {
 							AND = {
-								state_is_in_southern_hemisphere = no
 								is_arid_region = no
 							}
 						}
@@ -1010,6 +1009,21 @@ plantation = {
 			}
 			path = "gfx/state_pictures/plantation.dds"
 			effect = "vfx_entity_ui_state_plantation"
+		}
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
+							is_subtropic_farmland = yes
+						}
+					}
+					add = 2
+				}
+			}
+			path = "gfx/state_pictures/farmland_subtropic.dds"
+			effect = "vfx_entity_ui_state_farmland_subtropic"
 		}
 	}
 	
