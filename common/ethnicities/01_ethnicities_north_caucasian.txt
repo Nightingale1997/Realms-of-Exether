@@ -1,6 +1,4 @@
-﻿# Anbennar - changed final hair color value to be 0.99 not 1.0 as 1.0 is used for our special hair colours
-
-@neg1_min = 0.4
+﻿@neg1_min = 0.4
 @neg1_max = 0.5
 
 @neg2_min = 0.3
@@ -41,7 +39,7 @@ north_caucasian = {
 
 	
 	skin_color = {
-		10 = { 0.2 0.15 0.2 0.15 }	#Anbennar - changed y threshold due to our rgb skins. e.g. it was 0.3 out of 1, so translating that its 0.15 out of 0.5 - as 0.5 is the new treshold of vanilla skin tones
+		10 = { 0.2 0.15 0.2 0.15 }	
 	}
 	eye_color = {
 		# Brown

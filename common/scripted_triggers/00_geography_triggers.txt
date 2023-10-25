@@ -224,6 +224,25 @@ is_asian_farmland = {
 	}
 }
 
+is_jungle = {
+	OR = {
+		region = sr:region_sanbang
+		region = sr:region_kengurudal
+		region = sr:region_tundgara
+		region = sr:region_valley_of_golden_fields
+		region = sr:region_muru
+		region = sr:region_boroo_jirta
+		region = sr:region_bataar_kharaal
+		region = sr:region_vindon_narrows
+		region = sr:region_lotus_isles
+		region = sr:region_dreamweaver_jungle
+		region = sr:region_sarpakshetra
+		region = sr:region_anantadesh
+		region = sr:region_elusive_coves
+		region = sr:region_lacertia
+	}
+}
+
 is_subtropic_farmland = {
 	OR = {
 		region = sr:region_sarpakshetra
@@ -277,5 +296,8 @@ is_arid_region = {
 		region = sr:region_new_dumonia
 		region = sr:region_scalethane_realms
 		region = sr:region_khantar
+		region = sr:region_tokalivar
+		region = sr:region_east_mindrend_sands	
+		region = sr:region_west_mindrend_sands
 	}
 }

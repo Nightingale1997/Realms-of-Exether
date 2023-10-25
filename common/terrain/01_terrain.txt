@@ -269,7 +269,10 @@ hills = {
 				if = {
 					limit = {
 						scope:region = {
-							is_asian_farmland = yes
+							OR = {
+								is_jungle = yes
+							}
+							
 						}
 					}
 					add = 1
