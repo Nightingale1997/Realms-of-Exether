@@ -636,21 +636,16 @@
                 template = african_outfits_politician
                 range = { 0.1 0.5 } # For the work to randomly correctness
             }
-            accessory = {
-                mode = add
-                gene = necklaces
-                template = african_necklaces
-                range = { 0 1 } # For the randomness to work correctly
-            }
         }
         weight = {
             base = 0
             modifier = {
                 add = 200
-                african_clothes_trigger = yes
+                recognized_country_trigger = no
+          
                 scope:character ?= {
                     culture = {
-                        has_discrimination_trait = southern_african_culture_group
+                        has_discrimination_trait = ogre_heritage
                     }
                 }
             }
@@ -2201,30 +2196,30 @@ indigenous_oceanic_pop_clothes = {
 }
 
 # consolidated with general pop clothes, but scripting left in if we want to quickly re-enable this stuff
-#indigenous_oceanic_mid_clothes = {
-#    dna_modifiers = {
-#        accessory = {
-#            mode = add
-#            gene = outfits
-#            template = polynesian_outfits
-#            range = { 0 0.5 } # For the randomness to work correctly
-#        }
-#        accessory = {
-#            mode = add
-#            gene = necklaces
-#            template = polynesian_necklaces
-#            range = { 0 1 } # For the randomness to work correctly
-#        }
-#    } 
-#    weight = {
-#        base = 0
-#        modifier = {
-#            add = 500
-#            indigenous_oceanic_clothes_trigger = yes
-#            middle_clothes_pop_trigger = yes
-#        }
-#    }
-#}
+indigenous_oceanic_mid_clothes = {
+    dna_modifiers = {
+        accessory = {
+            mode = add
+            gene = outfits
+            template = polynesian_outfits
+            range = { 0 0.5 } # For the randomness to work correctly
+        }
+        accessory = {
+            mode = add
+            gene = necklaces
+            template = polynesian_necklaces
+            range = { 0 1 } # For the randomness to work correctly
+        }
+    } 
+    weight = {
+        base = 0
+        modifier = {
+            add = 500
+            indigenous_oceanic_clothes_trigger = yes
+            middle_clothes_pop_trigger = yes
+        }
+    }
+}
 indigenous_oceanic_high_clothes_unrecognized = {
     dna_modifiers = {
         accessory = {

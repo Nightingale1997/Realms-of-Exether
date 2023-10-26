@@ -621,16 +621,7 @@
                 add = 200
                 scope:pop ?= {
                     home_country = {
-                        any_scope_character = {
-                            has_variable = garibaldi_var # Garibaldi can be an agitator or general or politician, it's all valid
-                        }
-                        OR = {
-                            is_unification_candidate = ITA
-                            AND = {
-                                exists = c:ITA
-                                c:ITA = this
-                            }
-                        }
+                        always = no
                     }
                 }
                 OR = {

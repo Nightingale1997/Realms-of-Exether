@@ -1338,7 +1338,7 @@ urban = {
 				if = {
 					limit = {
 						scope:region = {
-							state_in_africa = yes
+							state_is_in_bay_of_new_fortune = yes
 						}
 					}
 					add = 1
@@ -1422,14 +1422,12 @@ urban = {
 					limit = {
 						scope:region = {
 							AND = {
-								state_is_in_europe = no
+								state_is_in_settler_coast = no
 								is_subtropic_farmland = no
-								state_is_in_east_asia = no
-								state_is_in_southeast_asia = no
+								is_asian_farmland = no
 								state_is_in_teferet = no
-								state_is_in_central_asia = no
-								state_is_in_india = no
-								state_in_africa = no
+								state_in_locari = no
+								state_is_in_bay_of_new_fortune = no
 							}
 						}
 					}
@@ -1541,7 +1539,7 @@ docks = {
 			weight = {
 				value = 1
 				 if = {
-					limit = {w
+					limit = {
 						AND = {
 							NOT = { exists = state.b:building_port }
 							NOT = {
