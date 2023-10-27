@@ -232,8 +232,8 @@ giant = {
 		100 = { name = ear_both_bend	 range = {0.04 0.2}	  }
 	}
 
-	gene_ear_outward = {
-		100 = { name = ear_outward	 range = {0 0.2}	  }
+	gene_ear_out = {
+		100 = { name = ear_out	 range = {0 0.2}	  }
 	}
 
 	gene_ear_size = {
@@ -241,8 +241,8 @@ giant = {
 		20 = { name = ear_size	 range = {0.1 0.35}	  }
 	}
 
-	gene_eye_corner_depth = {
-		100 = { name = eye_corner_depth	 range = {0.04 0.14}	  }
+	gene_eye_corner_def = {
+		100 = { name = eye_corner_def	 range = {0.04 0.14}	  }
 	}
 
 	gene_eye_fold_shape = {
@@ -378,35 +378,11 @@ giant = {
 		100 = { name = nose_tip_width	 range = {0.06 0.8}	  }
 	}
 
-    gene_cheek_def = {
-        1 = {  name = cheek_def_01             range = { 0.0 0.75 }     }
-        1 = {  name = cheek_def_02             range = { 0.0 0.75 }     }
-		1 = {  name = cheek_def_01             range = { 0.0 0.25 }     }
-        1 = {  name = cheek_def_02             range = { 0.0 0.25 }     }
-		1 = {  name = cheek_def_01             range = { 0.5 0.9 }     }
-        1 = {  name = cheek_def_02             range = { 0.5 0.9 }     }
-    }
-
     gene_cheek_fat = {
-		2 = {  name = cheek_fat_01             range = { 0.0 0.5 }     }
-		2 = {  name = cheek_fat_02             range = { 0.0 0.5 }     }
-		2 = {  name = cheek_fat_03             range = { 0.0 0.5 }     }
-        2 = {  name = cheek_fat_04             range = { 0.0 0.5 }     }
-        2 = {  name = cheek_fat_01             range = { 0.0 0.3 }     }
-		2 = {  name = cheek_fat_01             range = { 0.0 0.25 }     }
-		2 = {  name = cheek_fat_02             range = { 0.0 0.25 }     }
-		2 = {  name = cheek_fat_03             range = { 0.0 0.25 }     }
-        2 = {  name = cheek_fat_04             range = { 0.0 0.25 }     }
-        2 = {  name = cheek_fat_01             range = { 0.0 0.23 }     }
-    }
-
-    gene_chin_cleft = {
-        40 = {  name = chin_cleft             range = { 0.0 0.1 }     }
-        5 = {  name = chin_cleft             range = { 0.1 0.7 }     }
-        1 = {  name = chin_cleft             range = { 0.8 1.0 }     }
-        40 = {  name = chin_dimple             range = { 0.0 0.1 }     }
-        5 = {  name = chin_dimple             range = { 0.1 0.7 }     }
-        1 = {  name = chin_dimple             range = { 0.8 1.0 }     }
+		2 = {  name = cheek_fat             range = { 0.0 0.5 }     }
+        2 = {  name = cheek_fat             range = { 0.0 0.3 }     }
+		2 = {  name = cheek_fat             range = { 0.0 0.25 }     }     
+        2 = {  name = cheek_fat             range = { 0.0 0.23 }     }
     }
 
 	gene_chin_def = {
@@ -429,10 +405,6 @@ giant = {
 
 	gene_nose_tip_def = {
 		100 = { name = nose_tip_def	 range = {0.5 0.99}	  }
-	}
-
-	gene_temple_def = {
-		100 = { name = temple_def	 range = {0.0 0.8}	  }
 	}
 
 	eyelashes_accessory = {
@@ -468,17 +440,6 @@ giant = {
         10 = {  name = layer_2_lower_thickness             range = { 0.25 0.75 }     }
     }
 
-    gene_body_hair = {
-    	20 = {  name = body_hair_sparse_low_stubble             range = { 0.0 0.8 }     }
-        20 = {  name = body_hair_sparse_low_stubble             range = { 0.8 1.0 }     }
-        10 = {  name = body_hair_avg             range = { 0.35 0.75 }     }
-        # 5 = {  name = body_hair_dense             range = { 0.35 0.75 }     }
-    }
-	
-	hairline_type = {
-		90 = {	name = receding			range = { 0.0 0.0 }	}
-        10 = {  name = widows_peak          range = { 0.0 0.5 }     }
-    }
 
 
 }
@@ -528,11 +489,7 @@ goliath = {
 		# Brown
 		10 = { 0.74 0.7 0.91 0.98 }
 	}
-	
-	eye_pupil = {
-		10 = {	name = human_pupils			range = { 0.0 0.11 }	}
 
-	}
 
 	gene_chin_forward = {
 		100 = { name = chin_forward	 range = {0.52 0.62}	  }
@@ -706,13 +663,13 @@ goliath = {
 
     }
 
-    gene_ear_outward = {
-        1 = { name = ear_outward    range = { @blend3min @blend3max }    }
-        15 = { name = ear_outward    range = { @blend2min @blend2max }    }
-        40 = { name = ear_outward    range = { @blend1min @blend1max }    }
-        40 = { name = ear_outward    range = { @blend1min @blend1max }    }
-        15 = { name = ear_outward    range = { @blend2min @blend2max }    }
-        1 = { name = ear_outward    range = { @blend3min @blend3max }    }
+    gene_ear_out = {
+        1 = { name = ear_out    range = { @blend3min @blend3max }    }
+        15 = { name = ear_out    range = { @blend2min @blend2max }    }
+        40 = { name = ear_out    range = { @blend1min @blend1max }    }
+        40 = { name = ear_out    range = { @blend1min @blend1max }    }
+        15 = { name = ear_out    range = { @blend2min @blend2max }    }
+        1 = { name = ear_out    range = { @blend3min @blend3max }    }
 
     }
 
@@ -726,8 +683,8 @@ goliath = {
 
     }
 
-	gene_eye_corner_depth = {
-		100 = { name = eye_corner_depth	 range = {0.5 0.58}	  }
+	gene_eye_corner_def = {
+		100 = { name = eye_corner_def	 range = {0.5 0.58}	  }
 	}
 
 	gene_eye_fold_shape = {
@@ -867,35 +824,17 @@ goliath = {
 		100 = { name = nose_tip_width	 range = {0 0.07}	  }
 	}
 
-    gene_cheek_def = {
-        1 = {  name = cheek_def_01             range = { 0.0 0.75 }     }
-        1 = {  name = cheek_def_02             range = { 0.0 0.75 }     }
-		1 = {  name = cheek_def_01             range = { 0.0 0.25 }     }
-        1 = {  name = cheek_def_02             range = { 0.0 0.25 }     }
-		1 = {  name = cheek_def_01             range = { 0.5 0.9 }     }
-        1 = {  name = cheek_def_02             range = { 0.5 0.9 }     }
-    }
-
     gene_cheek_fat = {
-		2 = {  name = cheek_fat_01             range = { 0.0 0.5 }     }
+		2 = {  name = cheek_fat             range = { 0.0 0.5 }     }
 		2 = {  name = cheek_fat_02             range = { 0.0 0.5 }     }
 		2 = {  name = cheek_fat_03             range = { 0.0 0.5 }     }
         2 = {  name = cheek_fat_04             range = { 0.0 0.5 }     }
-        2 = {  name = cheek_fat_01             range = { 0.0 0.3 }     }
-		2 = {  name = cheek_fat_01             range = { 0.0 0.25 }     }
+        2 = {  name = cheek_fat             range = { 0.0 0.3 }     }
+		2 = {  name = cheek_fat             range = { 0.0 0.25 }     }
 		2 = {  name = cheek_fat_02             range = { 0.0 0.25 }     }
 		2 = {  name = cheek_fat_03             range = { 0.0 0.25 }     }
         2 = {  name = cheek_fat_04             range = { 0.0 0.25 }     }
-        2 = {  name = cheek_fat_01             range = { 0.0 0.23 }     }
-    }
-
-    gene_chin_cleft = {
-        40 = {  name = chin_cleft             range = { 0.0 0.1 }     }
-        5 = {  name = chin_cleft             range = { 0.1 0.7 }     }
-        1 = {  name = chin_cleft             range = { 0.8 1.0 }     }
-        40 = {  name = chin_dimple             range = { 0.0 0.1 }     }
-        5 = {  name = chin_dimple             range = { 0.1 0.7 }     }
-        1 = {  name = chin_dimple             range = { 0.8 1.0 }     }
+        2 = {  name = cheek_fat             range = { 0.0 0.23 }     }
     }
 
 	gene_chin_def = {
@@ -931,10 +870,6 @@ goliath = {
 		100 = { name = nose_tip_def	 range = {0.5 0.99}	  }
 	}
 
-	gene_temple_def = {
-		100 = { name = temple_def	 range = {0.0 0.65}	  }
-	}
-
 	expression_brow_wrinkles = {
         25 = {  name = brow_wrinkles_01            range = { 0.0 0.7 }     }
 
@@ -968,35 +903,10 @@ goliath = {
 
     }
 
-	complexion = {
-		1 = {  name = complexion_1				range = { 0.1 1.0 }		}
-        1 = {  name = complexion_2             range = { 0.1 1.0 }     }
-        1 = {  name = complexion_3             range = { 0.1 1.0 }     }
-        1 = {  name = complexion_6             range = { 0.1 1.0 }     }
-        1 = {  name = complexion_7             range = { 0.1 1.0 }     }
-        1 = {  name = complexion_8				range = { 0.1 1.0 }		}
-        1 = {  name = complexion_9             range = { 0.1 1.0 }     }
-        1 = {  name = complexion_10             range = { 0.1 1.0 }     }
-        1 = {  name = complexion_11				range = { 0.1 1.0 }		}
-        1 = {  name = complexion_16             range = { 0.1 1.0 }     }
-        1 = {  name = complexion_17				range = { 0.1 1.0 }		}
-        1 = {  name = complexion_18             range = { 0.1 1.0 }     }
-        1 = {  name = complexion_20             range = { 0.1 1.0 }     }
-        20 = {  name = complexion_21             range = { 0.1 1.0 }     }
-        1 = {  name = complexion_22             range = { 0.1 1.0 }     }
-        20 = {  name = complexion_23             range = { 0.1 1.0 }     }
-        1 = {  name = complexion_24             range = { 0.1 1.0 }     }
-        20 = {  name = complexion_25             range = { 0.1 1.0 }     }
-        1 = {  name = complexion_26             range = { 0.1 1.0 }     }
-        1 = {  name = complexion_27             range = { 0.1 1.0 }     }
-        1 = {  name = complexion_28             range = { 0.1 1.0 }     }
-        20 = {  name = complexion_29             range = { 0.1 1.0 }     }
-        1 = {  name = complexion_33             range = { 0.1 1.0 }     }
-        1 = {  name = complexion_34             range = { 0.1 1.0 }     }
-        1 = {  name = complexion_35             range = { 0.1 1.0 }     }
-        20 = {  name = complexion_36             range = { 0.1 1.0 }     }
-	    20 = {  name = complexion_6in             range = { 0.1 1.0 }     }
-
+	gene_complexion = {
+		1 = {  name = complexion_01				range = { 0.1 1.0 }		}
+        1 = {  name = complexion_02             range = { 0.1 1.0 }     }
+        1 = {  name = complexion_03             range = { 0.1 1.0 }     }
 	}
 
     gene_height = {
@@ -1051,16 +961,6 @@ goliath = {
         10 = {  name = layer_2_lower_thickness             range = { 0.25 0.75 }     }
     }
 
-    gene_body_hair = {
-    	20 = {  name = body_hair_sparse_low_stubble             range = { 0.0 0.8 }     }
-        20 = {  name = body_hair_sparse_low_stubble             range = { 0.8 1.0 }     }
-        # 20 = {  name = body_hair_avg             range = { 0.35 0.75 }     }
-        # 5 = {  name = body_hair_dense             range = { 0.35 0.75 }     }
-    }
 	
-	hairline_type = {
-    	90 = {  name = receding           range = { 0.0 0.0 }     }
-        10 = {  name = widows_peak          range = { 0.0 0.5 }     }
-    }
 
 }

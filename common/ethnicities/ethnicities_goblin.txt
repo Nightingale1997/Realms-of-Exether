@@ -87,11 +87,6 @@ goblin = {
 		# 50 = { 0.65 0.5 0.9 1.0 }
 	}
 
-	gene_body_hair = {
-		3 = { name = body_hair_sparse_low_stubble 	range = { 0.0 0.5 } }
-		4 = { name = body_hair_avg_low_stubble 	range = { 0.0 0.5 } }
-	}
-
 
 	gene_height = {
 		2 = { name = normal_height		range = { 0.0 0.1 }		} #goblin short
@@ -111,9 +106,9 @@ goblin = {
 		30 = { name = ear_inner_shape  range = { 0.0 1.0 }	}
 	}
 
-	gene_ear_outward = {
-		30 = { name = ear_outward  range = { 0.0 0.3 }	}
-		70 = { name = ear_outward  range = { 0.3 1.0 }	}
+	gene_ear_out = {
+		30 = { name = ear_out  range = { 0.0 0.3 }	}
+		70 = { name = ear_out  range = { 0.3 1.0 }	}
 	}
 
 	gene_ear_bend = {
@@ -228,12 +223,12 @@ goblin = {
 	}
 
 	gene_cheek_fat = {
-		25 = { name = cheek_fat_01	range = { 0.5 1.0  }	}
+		25 = { name = cheek_fat	range = { 0.5 1.0  }	}
 		
 		#Beauty Section
-		0 = { name = cheek_fat_01	range = { 0.0 0.5  }	traits = { beauty_1 }	}
-		0 = { name = cheek_fat_01	range = { 0.0 0.5  }	traits = { beauty_2 }	}
-		0 = { name = cheek_fat_01	range = { 0.0 0.5  }	traits = { beauty_3 }	}
+		0 = { name = cheek_fat	range = { 0.0 0.5  }	traits = { beauty_1 }	}
+		0 = { name = cheek_fat	range = { 0.0 0.5  }	traits = { beauty_2 }	}
+		0 = { name = cheek_fat	range = { 0.0 0.5  }	traits = { beauty_3 }	}
 	}
 
 	gene_jaw_forward = {
@@ -254,20 +249,6 @@ goblin = {
 
 	gene_mouth_width = {
 		10 = { name = mouth_width	range = { 0.1 0.3  }	}
-	}
-
-	gene_cheek_def = {
-		90 = { name = cheek_def_01	range = { 0.5 0.8 }	}
-		10 = { name = cheek_def_01	range = { 0.8 1.0 }	}
-		90 = { name = cheek_def_02	range = { 0.8 1.0 }	}
-
-		#Beauty Section
-		0 = { name = cheek_def_01	range = { 0.6 0.7 }	traits = { beauty_1 }	}
-		0 = { name = cheek_def_01	range = { 0.6 0.7 }	traits = { beauty_2 }	}
-		0 = { name = cheek_def_01	range = { 0.6 0.7 }	traits = { beauty_3 }	}
-		0 = { name = cheek_def_02	range = { 0.8 1.0 }	traits = { beauty_1 }	}
-		0 = { name = cheek_def_02	range = { 0.8 1.0 }	traits = { beauty_2 }	}
-		0 = { name = cheek_def_02	range = { 0.8 1.0 }	traits = { beauty_3 }	}
 	}
 
 	gene_cheek_forward = {
@@ -491,17 +472,6 @@ gene_nose_nostril_width = {
 		10 = {  name = close_spacing_lower_thickness		range = { 0.65 1.0 }	}
 	}
 
-	race_gene_mer_eyebrows_01 = {
-		80 = {  name = mer_eyebrows_01			range = { 0.0 0.8 }	}
-		10 = {  name = mer_eyebrows_01			range = { 0.8 1.0 }	}
-	}
-	hairline_type = {
-		10 = {	name = receding			range = { 0.3 0.5 }	}
-		3 = {	name = receding			range = { 0.5 0.7 }	}
-		25 = {	name = widows_peak			range = { 0.5 0.7 }	}
-		10 = {	name = widows_peak			range = { 0.7 1.0 }	}
-	}
-
 }
 
 race_goblin_green = {
@@ -548,10 +518,6 @@ race_goblin_green = {
 	gene_eyebrows_fullness = {
 		10 = {  name = no_eyebrows			range = { 0.65 1.0 }	}
 	}
-
-	race_gene_mer_eyebrows_01 = {
-		80 = {  name = human_eyebrows			range = { 0.0 0.8 }	}
-	}
 	
 	gene_nose_forward = {
 		40 = { name = nose_forward	range = { 0.4 0.7 }	}
@@ -587,14 +553,14 @@ race_goblin_green = {
 		30 = { name = neck_width  range = { 0.3 0.6 }	}
 	}
 	
-	gene_body_type = {
+	gene_bs_body_type = {
 		30 = { name = body_fat_head_fat_full 	range = { 0.12 0.23 } }
 		30 = { name = body_fat_head_fat_medium 	range = { 0.12 0.23 } }
 	}
 	
 	
 	gene_cheek_fat = {
-		30 = { name = cheek_fat_01 	range = { 0.0 0.2 } }
+		30 = { name = cheek_fat 	range = { 0.0 0.2 } }
 	}
 	
 	gene_chin_height = {
