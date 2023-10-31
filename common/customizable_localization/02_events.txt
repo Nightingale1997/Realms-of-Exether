@@ -349,43 +349,6 @@ place_event = {
 		localization_key = place_event_destroyer
 	}
 
-
-	text = {
-		trigger = {
-			exists = c:SWE
-			this = c:SWE
-			owns_entire_state_region = STATE_SVEALAND
-		}
-		localization_key = place_event_gamla_stan
-	}
-
-	text = {
-		trigger = {
-			exists = c:SWE
-			this = c:SWE
-			owns_entire_state_region = STATE_SVEALAND
-		}
-		localization_key = place_event_gustav
-	}
-
-	text = {
-		trigger = {
-			exists = c:RUS
-			this = c:RUS
-			owns_entire_state_region = STATE_MOSCOW
-		}
-		localization_key = place_event_kremlin
-	}
-
-	text = {
-		trigger = {
-			exists = c:USA
-			this = c:USA 
-			owns_entire_state_region = STATE_DISTRICT_OF_COLUMBIA
-		}
-		localization_key = place_event_whitehouse
-	}
-
 	text = {
 		trigger = {
 			exists = c:GBR
@@ -914,8 +877,8 @@ fiction_cliche = {
 	text = {
 		trigger = {
 			OR = {
-				country_is_in_europe = yes
-				country_is_in_north_america = yes
+				country_is_in_settler_coast = yes
+				country_is_in_northwestern_zalaron = yes
 			}
 		}
 		localization_key = fanfic_ship_west
@@ -923,7 +886,7 @@ fiction_cliche = {
 
 	text = {
 		trigger = {
-			country_is_in_south_america = yes
+			country_is_in_gavkhan = yes
 		}
 		localization_key = fanfic_ship_south_america
 	}

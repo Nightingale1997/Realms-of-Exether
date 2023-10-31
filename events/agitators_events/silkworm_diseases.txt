@@ -36,8 +36,8 @@ silkworm_diseases.1 = {
 			is_researching_technology = pasteurization
 		}
 		OR = {	
-			country_is_in_europe = yes
-			country_is_in_north_america = yes
+			country_is_in_settler_coast = yes
+			country_is_in_northwestern_zalaron = yes
 		}
 		NOT = {
 			has_variable = pebrine_outbreak_event

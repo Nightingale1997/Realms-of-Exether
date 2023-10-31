@@ -143,17 +143,17 @@ country_is_in_northern_zalaron = {
 	}
 }
 
+country_is_in_northwestern_zalaron = {
+	exists = capital
+	capital = {
+		state_is_in_northwestern_zalaron = yes
+	}
+}
+
 country_is_in_gavkhan = {
 	exists = capital
 	capital = {
 		state_is_in_gavkhan = yes
-	}
-}
-
-country_is_in_south_america = {
-	exists = capital
-	capital = {
-		state_is_in_south_america = yes
 	}
 }
 

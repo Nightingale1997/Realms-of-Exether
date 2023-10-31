@@ -128,7 +128,7 @@ ai_strategy_resource_expansion = {
 			limit = { 
 				OR = {
 					country_is_in_settler_coast = yes
-					#country_is_in_north_america = yes
+					country_is_in_northwestern_zalaron = yes
 				}
 			}
 			add = 20
@@ -244,7 +244,7 @@ ai_strategy_industrial_expansion = {
 			limit = { 
 				OR = {
 					country_is_in_settler_coast = yes
-					#country_is_in_north_america = yes
+					country_is_in_northwestern_zalaron = yes
 				}
 			}
 			add = 20
