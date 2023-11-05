@@ -1,4 +1,10 @@
 ﻿l_english:
   POP_WIZARDS: "$wizards$ [concept_profession]"
-  MAGIC_TOOLTIP: "[GetPlayer.GetPowerTooltip('influence')][SelectLocalization(GetMetaPlayer.GetPlayedOrObservedCountry.IsValid, 'MAGIC_TOOLTIP_DELAYED', 'OBSERVER_NO_COUNTRY_SELECTED') ]"
-  MAGIC_TOOLTIP_DELAYED: "\n$TOOLTIP_DELIMITER$\nYour total generation of #v [GetPlayer.GetPowerIncome('influence')|D+0=]#! @inf![Nbsp][concept_magic_reserves] is due to:[ConcatIfNeitherEmpty('\n', GetPlayer.GetPowerIncomeString('influence'))][ConcatIfNeitherEmpty('\n\n', GetPlayer.GetPowerExpensesString('influence'))]"
+  MAGIC_TOOLTIP: "$MAGIC_BALANCE$[GetPlayer.GetCustom('magic_reserves_loc')][SelectLocalization(GetMetaPlayer.GetPlayedOrObservedCountry.IsValid, 'MAGIC_TOOLTIP_DELAYED', 'OBSERVER_NO_COUNTRY_SELECTED') ]"
+  MAGIC_TOOLTIP_DELAYED: "\n$TOOLTIP_DELIMITER$\nYour total generation of #v [AccessPlayer.MakeScope.ScriptValue('magic_reserves_total')|=+D]#! @magic![Nbsp][concept_magic_reserves] is due to:$MAGIC_BASE_VALUE_BONUS$ [GetPlayer.GetCustom('magic_institution_bonus_loc')]"
+  MAGIC_BALANCE: "@magic! [concept_magic_reserves]\nBalance: [AccessPlayer.MakeScope.ScriptValue('magic_reserves_total')|=+D]"
+  MAGIC_EXCESS_EFFECT_HEADER: "\n$TOOLTIP_DELIMITER$\nEffects from #v 100%#! or more #g excess#! @magic! [concept_magic_reserves] (generation is higher than usage):\nStuff here"
+  MAGIC_DEFICIT_EFFECT_HEADER: "\n$TOOLTIP_DELIMITER$\nEffects from #v 100%#! @magic! [concept_magic_reserves] #n deficit#! (usage is higher than generation):\nStuff here"
+  MAGIC_BASE_VALUE_BONUS: "\n#g +100#! from Base Value"
+  MAGIC_INSTITUTION_RESERVE_BONUS: "\n[AccessPlayer.MakeScope.ScriptValue('magic_institution_bonus_loc')|=+D] from Magical Focus"
+magical_focus_institution_tooltip: "test"

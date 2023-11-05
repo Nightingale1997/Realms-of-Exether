@@ -261,8 +261,7 @@ law_astrological_studies = {
 	
 	institution = institution_magical_focus
 	institution_modifier = {
-		state_assimilation_mult = 0.125
-		state_education_access_add = 0.1
+		country_magical_reserves_add = 100
 	}
 	
 	possible_political_movements = {
@@ -411,6 +410,7 @@ law_mage_hunters = {
 	institution_modifier = {
 		country_authority_add = 50	
 		country_wizards_pol_str_mult = -0.1
+		country_magical_reserves_add = -100
 	}
 	
 	possible_political_movements = {

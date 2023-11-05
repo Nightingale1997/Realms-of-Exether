@@ -1,0 +1,32 @@
+﻿
+	magic_reserves_loc = {
+		type = country
+
+		text = {
+			trigger = {
+				normalized_magic_surplus >= 1
+			}
+			localization_key = MAGIC_EXCESS_EFFECT_HEADER 
+		}
+		text = {
+			trigger = {
+				normalized_magic_deficit < 0
+			}
+			localization_key = MAGIC_DEFICIT_EFFECT_HEADER 
+		}
+	}
+
+	magic_institution_bonus_loc = {
+		type = country
+
+		text = {
+			trigger = {
+				magic_institution_level > 0
+				NOT = {
+					has_law = law_type:law_mage_hunters
+				}
+			}
+			localization_key = MAGIC_INSTITUTION_RESERVE_BONUS
+		}
+	}
+	
