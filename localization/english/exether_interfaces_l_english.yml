@@ -1,2 +1,4 @@
 ﻿l_english:
   POP_WIZARDS: "$wizards$ [concept_profession]"
+  MAGIC_TOOLTIP: "[GetPlayer.GetPowerTooltip('influence')][SelectLocalization(GetMetaPlayer.GetPlayedOrObservedCountry.IsValid, 'MAGIC_TOOLTIP_DELAYED', 'OBSERVER_NO_COUNTRY_SELECTED') ]"
+  MAGIC_TOOLTIP_DELAYED: "\n$TOOLTIP_DELIMITER$\nYour total generation of #v [GetPlayer.GetPowerIncome('influence')|D+0=]#! @inf![Nbsp][concept_magic_reserves] is due to:[ConcatIfNeitherEmpty('\n', GetPlayer.GetPowerIncomeString('influence'))][ConcatIfNeitherEmpty('\n\n', GetPlayer.GetPowerExpensesString('influence'))]"
