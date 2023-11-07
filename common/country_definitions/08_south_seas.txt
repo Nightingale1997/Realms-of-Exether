@@ -10,6 +10,42 @@ DEV = {
 	capital = STATE_VAROTSOA
 }
 
+#Aye-aye Coast
+AYE = {
+	color = rgb{ 70 20 0 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { jazamandroso } 
+	capital = STATE_MAHALATSAKA
+}
+
+#Seraphora
+SPH = {
+	color = rgb{ 60 80 20 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { jazamandroso } 
+	capital = STATE_ANKAZOBE
+}
+
+#Eldraloori
+EOO = {
+	color = rgb{ 70 0 50 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { jazamandroso } 
+	capital = STATE_TSIMIHAVANA
+}
+
 #Lirionthal
 LIR = {
 	color = rgb{ 60 70 60 } 
@@ -219,4 +255,26 @@ LEM = {
 	tier = principality
 	cultures = { hulutit } 
 	capital = STATE_ZVEJYCATIA
+}
+
+#Cocochan
+COC = {
+	color = rgb{  155 155 156 } 
+
+	country_type = unrecognized
+
+	tier = principality
+	cultures = { giff } 
+	capital = STATE_VEDAMALA
+}
+
+#Xochihip
+XOC = {
+	color = rgb{ 80 32 20 }
+
+	country_type = unrecognized
+
+	tier = principality
+	cultures = { giff } 
+	capital = STATE_VEDAMALA
 }
