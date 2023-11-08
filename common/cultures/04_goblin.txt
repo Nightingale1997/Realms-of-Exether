@@ -395,7 +395,7 @@ xhurlob = {
 		Ceku
 	}
 	ethnicities = {
-		1 = goblin_yellow
+		1 = goblin
 	}
 	graphics = east_asian
 }
@@ -545,7 +545,7 @@ shkemger = {
 }
 
 atiukura = {
-	color= hsv{ 0.80 0.30 0.05 }
+	color= hsv{ 0.80 0.30 0.5 }
 	religion = goblin_pantheon
 	traits = { kharaan_urchu_culture_group goblin_heritage }
 	male_common_first_names={
@@ -1604,6 +1604,65 @@ kalmyk={
 	}
 	ethnicities = {
 		1 = central_asian
+	}
+	graphics = east_asian
+}
+
+dales_togrul={
+	color= hsv{ 0.55 0.17 0.73 }
+	religion = goblin_pantheon
+	traits = { goblin_heritage }
+	male_common_first_names={
+		Jjunju
+		Kabulu
+		Kagali
+		Kalema
+		Kikulwe
+		Kiweewa
+		Kyabaggo
+		Musanje
+		Mutesa
+		Mwanga
+		Namugala
+		Semakookiro
+		Terwewalwa
+	}
+	female_common_first_names = {
+		Abisagi
+		Basuuta
+		Damali
+		Esiteri
+		Gwolyoowa
+		Laakeeri
+		Loyiroosa
+		Muganzirwazzaza
+		Najjuka
+		Nakangu
+		Nakijoba
+		Nalubowa
+		Nalunga
+		Nawaguma
+		Nfambe
+		Samali
+	}	
+	noble_last_names = {
+		Abalasangeye
+		Bagalayze
+		Butiko
+		Ffumbe
+		Lugave
+	}
+	common_last_names={
+		Mmamba
+		Ndiga
+		Ngabi
+		Ngo
+		Ngonge
+		Njovu
+		Nseenene
+	}
+	ethnicities = {
+		1 = goblin_yellow
 	}
 	graphics = east_asian
 }

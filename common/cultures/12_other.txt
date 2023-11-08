@@ -157,6 +157,54 @@ lacertian={
 	graphics = african
 }
 
+west_lacertian={
+	color= hsv{ 0.63 0.47 0.83 }
+	religion = animist
+	traits = { lizardfolk_heritage }
+	male_common_first_names={
+		Ajang
+		Akoc
+		Aney
+		Awin
+		Dedunyal
+		Fadyet
+		Fafiti
+		Kodit
+		Kuikon
+		Kur
+		Kwadker
+		Muko
+		Nyadwai
+		Nyidok
+		Tyelgut
+		Wak
+		Yor
+	}
+	female_common_first_names = {
+		Kabon
+		Zahra
+	}	
+	noble_last_names = {
+		al_Suwaylih
+		El_Din
+	}
+	common_last_names={
+		wad_Ajang
+		wad_Akoc
+		wad_Akwot
+		wad_Kudit
+		wad_Kur
+		wad_Kwadker
+		wad_Nyakwac
+		wad_Nyidok
+		wad_Yor
+	}
+	ethnicities = {
+		1 = african
+	}
+	graphics = african
+}
+
 onikoku={
 	color= hsv{ 289 50 68 }
 	religion = animist
@@ -328,7 +376,7 @@ onikoku={
 		Yui
 	}
 	ethnicities = {
-		1 = asian
+		1 = ogre
 	}
 	graphics = asian
 }
@@ -890,41 +938,6 @@ onisazae={
 		1 = ogre
 	}
 	graphics = east_asian
-}
-
-azande={
-	color= hsv{ 0.58 0.49 0.58 }
-	religion = animist
-	traits = { hippo_heritage }
-	male_common_first_names={
-		Bigomokero
-		Birhenjira
-		Kabare
-		Makome
-		Mwerve
-		Ngabwe
-		Rugema
-		Rugemaninzi
-		Rutanganda
-		Souau
-	}
-	female_common_first_names = {
-		Catarina
-	}	
-	noble_last_names = {
-		Dericoyard
-		Vungara
-	}
-	common_last_names={
-		Muhigirwa
-		Nabushi
-		Ntayitunda
-		Younga
-	}
-	ethnicities = {
-		1 = african
-	}
-	graphics = african
 }
 
 giff={

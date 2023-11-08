@@ -34,6 +34,17 @@ YOK = {
 	capital = STATE_HIRAKHANJO
 }
 
+#Onghor
+ONG = {
+	color = rgb{ 12 84 124 } 
+
+	country_type = unrecognized 
+
+	tier = kingdom
+
+	cultures = { onikoku } 
+	capital = STATE_PLACEHOLDER_EMPTY_9
+}
 #Temarash
 TEM = {
 	color = rgb{ 190 190 190 } 
@@ -68,6 +79,42 @@ ZHU = {
 
 	cultures = { atiukura } 
 	capital = STATE_KYRKAZ
+}
+
+#Zinj-Zuun
+ZIN = {
+	color = rgb{ 128 90 166 } 
+
+	country_type = unrecognized 
+
+	tier = principality
+
+	cultures = { atiukura } 
+	capital = STATE_XHAMADANI
+}
+
+#Esker Asar
+EKA = {
+	color = rgb{ 188 90 66 } 
+
+	country_type = unrecognized 
+
+	tier = kingdom
+
+	cultures = { dales_togrul } 
+	capital = STATE_STRUGOVA
+}
+
+#Drithmia
+DTH = {
+	color = rgb{ 108 150 136 } 
+
+	country_type = unrecognized 
+
+	tier = principality
+
+	cultures = { xhurlob } 
+	capital = STATE_KAVAJANA
 }
 
 #Sunwukong
