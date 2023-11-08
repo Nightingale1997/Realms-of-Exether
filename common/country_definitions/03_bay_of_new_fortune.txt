@@ -193,7 +193,7 @@ HOR = {
 
 #Skravend
 SKR = {
-	color = rgb{ 250 20 30 } 
+	color = rgb{ 50 100 30 } 
 
 	country_type = unrecognized
 
@@ -203,13 +203,25 @@ SKR = {
 	capital = STATE_PWANIQWA
 }
 
+#Prowlhold
+PRO = {
+	color = rgb{ 180 150 156 } 
+
+	country_type = unrecognized
+
+	tier = principality
+
+	cultures = { gnoll } 
+	capital = STATE_MAWIMBIMAJI
+}
+
 #Yiparidge
 YIP = {
 	color = rgb{ 50 120 30 } 
 
 	country_type = decentralized
 
-	tier = kingdom
+	tier = principality
 
 	cultures = { gnoll } 
 	capital = STATE_JITOKANYA
@@ -221,7 +233,7 @@ THT = {
 
 	country_type = decentralized
 
-	tier = kingdom
+	tier = principality
 
 	cultures = { gnoll } 
 	capital = STATE_JITOMREMBO
@@ -233,7 +245,7 @@ GHR = {
 
 	country_type = decentralized
 
-	tier = kingdom
+	tier = principality
 
 	cultures = { gnoll } 
 	capital = STATE_MAJIMBA
@@ -245,7 +257,7 @@ RIK = {
 
 	country_type = decentralized
 
-	tier = kingdom
+	tier = principality
 
 	cultures = { gnoll } 
 	capital = STATE_TAYTAQOCHA

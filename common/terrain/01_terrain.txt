@@ -1355,8 +1355,6 @@ urban = {
 						scope:region = {
 							or = {
 								state_is_in_teferet = yes
-								state_is_in_central_asia = yes
-								state_is_in_india = yes
 							}
 						}
 					}
@@ -1373,8 +1371,7 @@ urban = {
 					limit = {
 						scope:region = {
 							or = {
-								state_is_in_east_asia = yes
-								state_is_in_southeast_asia = yes
+								state_is_in_kharaa_ur = yes
 							}
 						}
 					}
@@ -1426,7 +1423,7 @@ urban = {
 								is_subtropic_farmland = no
 								is_asian_farmland = no
 								state_is_in_teferet = no
-								state_in_locari = no
+								state_is_in_locari = no
 								state_is_in_bay_of_new_fortune = no
 							}
 						}

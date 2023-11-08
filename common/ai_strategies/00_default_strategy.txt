@@ -341,7 +341,7 @@ ai_strategy_default = {
 
 				# Scramble for Africa powers should only care about the Boers once diamonds are found
 				scope:subject = {
-					country_is_in_africa = yes
+					state_is_in_southern_hemisphere = yes
 					any_scope_building = {
 						OR = {
 							is_building_type = building_gold_mine

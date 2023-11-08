@@ -1,0 +1,92 @@
+﻿magic_reserves_base = 100
+
+magic_institution_level = {
+	value = 0
+
+	if = {
+		limit = {
+			institution_investment_level = {
+				institution = institution_magical_focus
+				value = 1
+			}
+		}
+		add = 1
+	}
+	else_if = {
+		limit = {
+			institution_investment_level = {
+				institution = institution_magical_focus
+				value = 2
+			}
+		}
+		add = 2
+	}
+	else_if = {
+		limit = {
+			institution_investment_level = {
+				institution = institution_magical_focus
+				value = 3
+			}
+		}
+		add = 3
+	}
+	else_if = {
+		limit = {
+			institution_investment_level = {
+				institution = institution_magical_focus
+				value = 4
+			}
+		}
+		add = 4
+	}
+	else_if = {
+		limit = {
+			institution_investment_level = {
+				institution = institution_magical_focus
+				value = 5
+			}
+		}
+		add = 5
+	}
+
+  }
+
+  magic_institution_bonus = {
+	value = 0
+
+	add = magic_institution_level * 100
+  }
+
+magic_reserves_total = {
+	value = 0
+
+	add = magic_reserves_base
+
+	if = {
+		limit = {
+			NOT = {
+				has_law = law_type:law_mage_hunters
+			}
+		}
+		add = magic_institution_bonus
+	}
+
+
+  }
+
+normalized_magic_surplus = {
+	value = magic_reserves_total
+
+	divide = 1000
+	min = 0
+	max = 1
+  }
+
+  normalized_magic_deficit = {
+	value = magic_reserves_total
+
+	divide = 1000
+	min = -1
+	max = 0
+  }
+
