@@ -204,7 +204,7 @@ japanese_imperial_clothes_trigger = {
      		has_law = law_type:law_monarchy
      	}
 		culture = {
-			has_discrimination_trait = hellborn_heritage
+			has_discrimination_trait = planetouched_heritage
 		}
 	}
 }
@@ -814,7 +814,7 @@ japanese_clothes_pop_trigger = {
 	scope:pop = {
 		OR = {
 					culture = {
-			has_discrimination_trait = hellborn_heritage
+			has_discrimination_trait = planetouched_heritage
 		}
 		}
 	}
@@ -826,7 +826,7 @@ japanese_clothes_trigger = {
 	scope:character = {
           OR = {
 					culture = {
-			has_discrimination_trait = hellborn_heritage
+			has_discrimination_trait = planetouched_heritage
 		}
           }
 	}

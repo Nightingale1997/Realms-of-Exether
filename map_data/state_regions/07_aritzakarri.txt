@@ -7,17 +7,30 @@
     farm = x84FBBA
     mine = x98BAEE
     port = x9FD7DA
+    arable_land = 33
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" }
+    capped_resources = {
+      bg_fishing = 6
+      bg_logging = 2
+    }
 
 }
 STATE_URRATEGI = {
     id = 4623
-    subsistence_building = "building_subsistence_farms"
+    subsistence_building = "building_subsistence_pastures"
     provinces = { "x7FD0CE" "xA6F2CB" "xB487E7" "xB5D9FB" "xB5E37C" "xC9BDBD" "xD6FC43" "xDA5BE4" "xDFE653" "xE0D9C8" "xE1C8B3" "xE1DFC6" "xED9BD1" }
     city = x7FD0CE
     wood = xA6F2CB
     farm = xB487E7
     mine = xB5D9FB
     port = xB5E37C
+    arable_land = 10
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+      bg_logging = 5
+      bg_whaling = 3
+      bg_fishing = 8
+    }
 
 }
 STATE_HIRUMENDI = {
@@ -183,6 +196,13 @@ STATE_NISHIGARRA = {
     farm = x9280EA
     mine = x96A9DE
     port = xB7FDA2
+    arable_land = 9
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_tea_plantations" }
+    capped_resources = {
+      bg_logging = 3
+      bg_whaling = 2
+      bg_fishing = 8
+    }
 
 }
 STATE_GORRIMENDIA = {
@@ -304,6 +324,13 @@ STATE_MUGARA = {
     farm = x77E1A1
     mine = x9DCDFD
     port = xACE6B9
+    arable_land = 13
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_tea_plantations" }
+    capped_resources = {
+      bg_logging = 4
+      bg_whaling = 4
+      bg_fishing = 10
+    }
 
 }
 STATE_ARAKALDE = {

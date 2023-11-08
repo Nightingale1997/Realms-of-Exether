@@ -1,4 +1,51 @@
-﻿qadimra = {
+﻿jazamandroso = {
+	color= hsv{ 0.35 0.26 0.64 }
+	religion = animist
+	traits = { planetouched_heritage }
+	male_common_first_names={
+		Andriamanely
+		Andriantsirotso
+		Lamboina
+		Ndriantompoinairivo
+		Rabiby
+		Radama
+		Rainilaiarivony
+		Ramasoandro
+		Ratsimivila
+		Tonanahary
+		Tsialana
+		Tsimiharo
+		Zafimamy
+	}
+	female_common_first_names = {
+		Binao
+		Ramasindrazana
+		Rasendranoro
+		Raketaka
+		Razafinandriamanitra
+		Ranavalona
+		Tahina
+	}	
+	noble_last_names = {
+		Bemihisatra
+		Ramavo
+		Hova
+	}
+	common_last_names={
+		Andriamahazo
+		Ramanantsoa
+		Ratsimandrava
+		Ratsiraka
+		Tsiranana
+		Razafindramary
+	}
+	ethnicities = {
+		1 = polynesian
+	}
+	graphics = east_asian
+}
+
+qadimra = {
 	color= rgb{ 132 121 86 }
 	religion = opened_eye
 	
@@ -106,6 +153,181 @@ navrozdok = {
 	}
 	ethnicities = {
 		1 = namkhazen
+	}
+	graphics = east_asian
+}
+
+yachaymanchi = {
+	color= hsv{ 0.10 0.22 0.69 }
+	religion = house_of_fate
+	traits = { djinn_heritage qiin_culture_group }
+	male_common_first_names={
+		Agustin
+		Alejandro
+		Antauro
+		Antonio
+		Basilio
+		Daniel
+		Diego
+		Eugenio_2
+		Facundo
+		Felipe
+		Francisco
+		Gustavo
+		Hilario
+		Inca
+		Isaac
+		Jose_Maria
+		Julio
+		Lorenzo
+		Manuel
+		Marcos
+		Mariano
+		Martin_2
+		Nicolas_2
+		Osvaldo
+		RenE_
+		Roberto
+		Simon_2
+		Tupac
+		Ulises
+		Victor_2
+	}
+	female_common_first_names = {
+		Angelica
+		Casimira
+		Felicita
+		Juanita
+		Luzmila
+		Mercedes
+		Micael
+		Nilda
+		Savina
+		Silvia
+	}	
+	noble_last_names = {
+		Collahuazo
+		Duchicela
+		Poma
+		Quispe
+		Santa_Cruz
+	}
+	common_last_names={
+		Arguedas
+		Barrientos
+		Cajahuanca
+		Canchata
+		Chambi
+		Chihuan
+		Cusurichi
+		Espejo
+		Frisancho
+		Gamarra
+		Guaman
+		Guayasamin
+		Gutierrez
+		Heredia
+		Humala
+		Iturri
+		Lazarte
+		Luduena
+		Melgarejo
+		Noguera
+		Palacios
+		Patino
+		Rodriguez
+		Roncaglia
+		Sosa
+		Sumac
+		Toledo
+		Vargas
+		Wallparrimachi
+	}
+	ethnicities = {
+		1 = djinn
+	}
+	graphics = european
+}
+
+vandori={
+	color= hsv{ 0.17 0.41 0.34 }
+	religion = astral_path
+	traits = { vandori_heritage }
+	male_common_first_names={
+		Bak Bong-haek
+		Chwa-chin
+		Gu
+		Han Heong-gyo Hong
+		Jeong Jo
+		Kwon
+		Mung-geun
+		Ok
+		Sang-ok Sang-yong Sim
+		Yi Yun
+	}
+	female_common_first_names = {
+		Bingheogak
+		Hwahyeop
+		Jeongildang
+		Seonhui Sinjeong Sunghee
+		Yeongsuhap Yunjidang
+	}
+	male_noble_first_names = {
+		Bang-bo Byung-guk Byung-hak Byung-si
+		Choi-ung
+		Don-in Du-seon
+		Ha-eung Hong-jip Hunggun
+		Gyu-ho
+		In-young
+		Jeong-hui Jin Jo-sun Jung-yang Jwa-geun
+		Kyung-jae
+		Sang-hwang Sun-mok Sun-taek
+		Won-yong
+		Yong-sun Yu-won
+	}
+	male_regal_first_names = {
+		Byeon
+		Cheok
+		Geum Gong
+		Hui Hwan
+		Myeong-bok
+		San
+	}
+	female_regal_first_names = {
+		Ja-yeong Jeungsun
+		Hyoyu
+		Ok-jeong
+	}
+
+	noble_last_names = {
+		Bak
+		Chang Choe 
+		Gang Gim Gwon
+		Han Hong
+		Jo
+		Kim Ko
+		Min Moon
+		Na Namgung
+		Park
+		Shin Seong Seok Song
+		Won
+		Yi
+	}
+	common_last_names={
+		Bo
+		Ch_ok Chung
+		Guk Gyu
+		Haung Hu Hwan Hyong
+		Im
+		Jip
+		Mok
+		Seo Seon
+		Shinjong Si Sun
+		Taek
+		Yong
+	}
+	ethnicities = {
+		1 = asian
 	}
 	graphics = east_asian
 }
@@ -328,7 +550,7 @@ onikoku={
 		Yui
 	}
 	ethnicities = {
-		1 = asian
+		1 = ogre
 	}
 	graphics = asian
 }
@@ -890,130 +1112,4 @@ onisazae={
 		1 = ogre
 	}
 	graphics = east_asian
-}
-
-azande={
-	color= hsv{ 0.58 0.49 0.58 }
-	religion = animist
-	traits = { hippo_heritage }
-	male_common_first_names={
-		Bigomokero
-		Birhenjira
-		Kabare
-		Makome
-		Mwerve
-		Ngabwe
-		Rugema
-		Rugemaninzi
-		Rutanganda
-		Souau
-	}
-	female_common_first_names = {
-		Catarina
-	}	
-	noble_last_names = {
-		Dericoyard
-		Vungara
-	}
-	common_last_names={
-		Muhigirwa
-		Nabushi
-		Ntayitunda
-		Younga
-	}
-	ethnicities = {
-		1 = african
-	}
-	graphics = african
-}
-
-giff={
-	color= hsv{ 0.50 0.24 0.75 }
-	religion = animist
-	traits = {  hippo_heritage }
-	male_common_first_names={
-		Agustin
-		Alberto
-		Alfredo
-		Antonio
-		Armando
-		Arturo
-		Carlos
-		Cenobio
-		Daniel
-		Diego
-		Everardo
-		Gerardo
-		Gumersindo
-		Hector
-		Jesus
-		Juan
-		Leobardo
-		Luis
-		Manuel
-		Marcial
-		Marco_Antonio
-		Melchor
-		Pedro
-		Ricardo
-		Salvador
-		Samuel
-		Sergio
-		Silvano
-		Silvestre
-		Victor_2
-	}
-	female_common_first_names = {
-		Amalia
-		Antonia
-		Celsa
-		Erendira
-		Eva
-		Jovita
-		Laureana
-		Margarita
-		Maria
-		Marta
-		Matilde
-		Modesta
-		Ramona
-	}	
-	noble_last_names = {
-		Calderon
-		Cristobal_2
-		Ochoa
-		Paniagua
-		Ocampo
-	}
-	common_last_names={
-		Almonte
-		Arredondo
-		Arriaga
-		Aureoles
-		Bernal
-		Brito
-		Cano
-		Carrillo
-		Cuevas
-		Dimas
-		Esquivel
-		Estrada
-		Galeana
-		Gallardo
-		Garcia
-		Gomez
-		Lopez
-		Maciel
-		Magana
-		Medrano
-		Mena
-		Tinoco
-		Toryo
-		Vargas
-		Zendejas
-	}
-	ethnicities = {
-		1 = native_american
-	}
-	graphics = decentralised_americas
 }
