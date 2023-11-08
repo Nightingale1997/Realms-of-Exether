@@ -6,6 +6,23 @@ GLOBAL = {
 		ig:ig_landowners = { add_ideology = ideology_pro_slavery }
 	}
 
+	# Jack the ripper, prevents the event from happening every game
+
+	every_country = {
+		if = {
+			limit = {
+				is_player = yes
+			}
+		}
+		random_list = {
+			1 = { set_variable = var_jack_ripper_possible }
+			9 = {
+				#Nothing Happens
+			}
+		}
+	}
+
+
 	#Event Variables
 	
 	set_global_variable = {

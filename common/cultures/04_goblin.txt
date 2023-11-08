@@ -50,9 +50,9 @@ khanaruk = {
 		Vanchinbalyn
 	}
 	ethnicities = {
-		1 = goblin
+		1 = hobgoblin
 	}
-	graphics = asian
+	graphics = east_asian
 }
 
 batukai = {
@@ -105,9 +105,9 @@ batukai = {
 		Vanchinbalyn
 	}
 	ethnicities = {
-		1 = goblin
+		1 = hobgoblin
 	}
-	graphics = asian
+	graphics = east_asian
 }
 
 #Goblin
@@ -253,7 +253,7 @@ varbat = {
 	ethnicities = {
 		1 = goblin
 	}
-	graphics = asian
+	graphics = east_asian
 }
 
 xhurlob = {
@@ -397,7 +397,7 @@ xhurlob = {
 	ethnicities = {
 		1 = goblin_yellow
 	}
-	graphics = asian
+	graphics = east_asian
 }
 
 shkemger = {
@@ -541,7 +541,7 @@ shkemger = {
 	ethnicities = {
 		1 = goblin_yellow
 	}
-	graphics = asian
+	graphics = east_asian
 }
 
 atiukura = {
@@ -1549,5 +1549,61 @@ rethrashar = {
 	ethnicities = {
 		1 = goblin
 	}
-	graphics = asian
+	graphics = east_asian
+}
+
+#South Goblins
+kalmyk={
+	color= rgb{ 250 182 3 }
+	religion = gelugpa
+	traits = { goblin_heritage  }
+	male_common_first_names={
+		Badamdorj
+		Balingiin
+		Batbayar
+		Baterdene
+		Chingis
+		Dambyan
+		Damdin
+		Dogsomyn
+		Gonchigjalzangiin
+		Gonchigtseren
+		Injinash
+		Khorloogiin
+		Kubilai
+		Otgonbayar
+		Peljidiin
+		Sodnomyn
+	}
+	female_common_first_names = {
+		Bayartsetseg
+		Dondogdulam
+		Ider
+		Khajidsuren
+		Oyuungerel
+		Sonomyn
+		Tuyaa
+	}	
+	noble_last_names = {
+		Gonchigjalzangiin
+		Togs-Ochiryn
+	}
+	common_last_names={
+		Amar
+		Bodoo
+		Chagdarjav
+		Choibalsan
+		Damdinbazar
+		Genden
+		Jamyan
+		Murdorj 
+		Sukhbaatar
+		Tomorbaatar
+		Tserendorj
+		Vanchinbalyn
+	}
+	ethnicities = {
+		1 = central_asian
+	}
+	graphics = east_asian
 }

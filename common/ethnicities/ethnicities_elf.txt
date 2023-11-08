@@ -95,7 +95,7 @@ elf = {
         5 = {  name = eye_size             range = { 0.4 0.52 }     }
     }
 
-	gene_body_type = {
+	gene_bs_body_type = {
 		10 = { name = body_fat_head_fat_low			range = { 0.25 0.4 }		}
 		
 		10 = { name = body_fat_head_fat_medium		range = { 0.25 0.4 }		}
@@ -206,21 +206,12 @@ elf = {
 	}
 
 	gene_cheek_fat = {
-		25 = { name = cheek_fat_01	range = { 0.0 1.0	}	}
+		25 = { name = cheek_fat	range = { 0.0 1.0	}	}
 
 		#Beauty Section
-		0 = { name = cheek_fat_01	range = { 0.0 0.5	}	traits = { beauty_1 }	}
-		0 = { name = cheek_fat_01	range = { 0.0 0.5	}	traits = { beauty_2 }	}
-		0 = { name = cheek_fat_01	range = { 0.0 0.5	}	traits = { beauty_3 }	}
-	}
-
-	gene_temple_def = {
-		25 = { name = temple_def	range = { 0.2 1.0	}	}
-
-		#Beauty Section
-		0 = { name = temple_def	range = { 0.0 0.5	}	traits = { beauty_1 }	}
-		0 = { name = temple_def	range = { 0.0 0.5	}	traits = { beauty_2 }	}
-		0 = { name = temple_def	range = { 0.0 0.5	}	traits = { beauty_3 }	}
+		0 = { name = cheek_fat	range = { 0.0 0.5	}	traits = { beauty_1 }	}
+		0 = { name = cheek_fat	range = { 0.0 0.5	}	traits = { beauty_2 }	}
+		0 = { name = cheek_fat	range = { 0.0 0.5	}	traits = { beauty_3 }	}
 	}
 
 	gene_neck_length = {
@@ -238,36 +229,17 @@ elf = {
 		80 = { name = jaw_height	range = { 0.31 0.55 } }
 	}
 
-	gene_cheek_def = {
-		1 = { name = cheek_def_01	range = { 0.8 1.0 }	}
-		1 = { name = cheek_def_02	range = { 0.8 1.0 }	}
-
-		#Beauty Section
-		0 = { name = cheek_def_01	range = { 0.8 0.9 }	traits = { beauty_1 }	}
-		0 = { name = cheek_def_01	range = { 0.8 0.9 }	traits = { beauty_2 }	}
-		0 = { name = cheek_def_01	range = { 0.8 0.9 }	traits = { beauty_3 }	}
-		0 = { name = cheek_def_02	range = { 0.8 0.9 }	traits = { beauty_1 }	}
-		0 = { name = cheek_def_02	range = { 0.8 0.9 }	traits = { beauty_2 }	}
-		0 = { name = cheek_def_02	range = { 0.8 0.9 }	traits = { beauty_3 }	}
-	}
-	
-	gene_chin_cleft = {
-		1 = { name = chin_dimple	range = { 0.0 0.4 }	}
-		1 = { name = chin_cleft		range = { 0.0 0.3 }	}
-	}
-
-
 	gene_cheek_forward = {
 		40 = { name = cheek_forward	range = { 0.0 0.5 }	}
 	}
 
-	gene_ear_outward = {
-		10 = { name = ear_outward	range = { 0.0 0.3 }	}
-		90 = { name = ear_outward	range = { 0.0 1.0 }	}
+	gene_ear_out = {
+		10 = { name = ear_out	range = { 0.0 0.3 }	}
+		90 = { name = ear_out	range = { 0.0 1.0 }	}
 	}
 
-	gene_eye_corner_depth = {
-		25 = { name = eye_corner_depth	range = { 0.0 0.8 }	}
+	gene_eye_corner_def = {
+		25 = { name = eye_corner_def	range = { 0.0 0.8 }	}
 	}
 
 	gene_forehead_brow_curve = {
@@ -310,33 +282,6 @@ elf = {
 		20 = {	name = mer_ears_01			range = { 0.4 1.0 }	}
 	}
 
-	race_gene_mer_eyebrows_01 = {
-		10 = {	name = mer_eyebrows_01			range = { 0.0 0.4 }	}
-		80 = {	name = mer_eyebrows_01			range = { 0.4 0.8 }	}
-		10 = {	name = mer_eyebrows_01			range = { 0.8 1.0 }	}
-	}
-
-	eye_sclera = {
-		5 = {	name = human_sclera			range = { 0.0 0.0 }	}
-		10 = {  name = colored_sclera		range = { 0.0 0.0 } }
-	}
-
-	eye_pupil = {
-		10 = {	name = large_pupils			range = { 0.0 0.25 }	}
-	}
-	
-	eye_color_saturation = {
-		10 = { name = eye_color_saturation		range = { 0.5 0.5 } }
-		10 = { name = eye_color_saturation		range = { 0.5 1.0 } }
-	}
-
-	hairline_type = {
-		10 = {	name = receding			range = { 0.3 0.5 }	}
-		3 = {	name = receding			range = { 0.5 0.7 }	}
-		25 = {	name = widows_peak			range = { 0.5 0.7 }	}
-		10 = {	name = widows_peak			range = { 0.7 1.0 }	}
-	}
-	
 	gene_eye_shut = {
 		20 = { name = eye_shut	range = { 0.25 0.47 }	}
 
@@ -347,8 +292,8 @@ elf = {
 elf_ear = {
 	template = "elf"
 	
-	gene_ear_outward = {
-		10 = { name = ear_outward	range = { 0.19 0.37 }	}
+	gene_ear_out = {
+		10 = { name = ear_out	range = { 0.19 0.37 }	}
 	}
 	
 	gene_ear_angle = {
@@ -381,8 +326,8 @@ elf_dark = {
 		40 = { 1.0 0.04 1.0 0.06 }
 	}
 	
-	complexion = {
-		10 = { name = complexion_3 	range = { 0.0  1.0 } }
+	gene_complexion = {
+		10 = { name = complexion_03 	range = { 0.0  1.0 } }
 	}
 	
 	eye_color = {
@@ -451,7 +396,7 @@ elf_dark = {
 	}
 	
 
-	gene_body_type = {
+	gene_bs_body_type = {
 		10 = { name = body_fat_head_fat_low			range = { 0.3 0.4 }		}
 		
 		10 = { name = body_fat_head_fat_medium		range = { 0.3 0.4 }		}

@@ -333,7 +333,25 @@ ai_strategy_default = {
 				}
 				multiply = 0.5
 			}
-		}	
+		}
+
+		if = {
+			limit = {
+				has_journal_entry = je_scramble_for_africa
+
+				# Scramble for Africa powers should only care about the Boers once diamonds are found
+				scope:subject = {
+					country_is_in_africa = yes
+					any_scope_building = {
+						OR = {
+							is_building_type = building_gold_mine
+							is_building_type = building_gold_fields
+						}
+					}
+				}
+			}
+			add = 50
+		}
 
 		min = 0
 		max = 100
@@ -639,13 +657,13 @@ ai_strategy_default = {
 
 		add = {
 			value = investment_pool_income
-			divide = 500 # 1 construction output per this much into the investment pool				
+			divide = 750 # 1 construction output per this much into the investment pool				
 		}
 		
 		add = {
 			value = income
 					
-			divide = 2000 # 1 construction output per this much income
+			divide = 3000 # 1 construction output per this much income
 
 			min = 0
 		}		
@@ -857,6 +875,117 @@ ai_strategy_default = {
 		max = 500
 		min = 0		
 	}		
+	
+	# Set the weights for combat unit groups, this determines the ratio that the AI aims to have of each, and thus what unit types it adds to formations
+	# Using this value in other strategies will function additively
+	# root = country
+	# scope:military_formation = military formation
+	combat_unit_group_weights = {
+		combat_unit_group_infantry = {
+			value = 100
+		}
+		combat_unit_group_artillery = {
+			value = 0			
+			if = {
+				limit = { has_technology_researched = artillery }
+				add = 10
+			}	
+			if = {
+				limit = { has_technology_researched = napoleonic_warfare }
+				add = 5
+			}	
+			if = {
+				limit = { has_technology_researched = breech_loading_artillery }
+				add = 5
+			}
+			if = {
+				limit = { has_technology_researched = wargaming }
+				add = 5
+			}
+			
+			if = {
+				limit = { has_law = law_type:law_peasant_levies }
+				multiply = 0.5
+			}			
+			else_if = {
+				limit = { has_law = law_type:law_national_militia }
+				multiply = 0.75
+			}
+			else_if = {
+				limit = { has_law = law_type:law_professional_army }
+				multiply = 1.25
+			}			
+		}
+		combat_unit_group_cavalry = {
+			value = 20
+			if = {
+				limit = { has_technology_researched = mobile_armor }
+				add = 10
+			}
+			
+			if = {
+				limit = { has_law = law_type:law_national_militia }
+				multiply = 0.5
+			}
+			else_if = {
+				limit = { has_law = law_type:law_professional_army }
+				multiply = 1.25
+			}			
+			else_if = {
+				limit = { has_law = law_type:law_peasant_levies }
+				multiply = 1.5
+			}				
+		}
+		combat_unit_group_light_ship = {
+			value = 100				
+		}
+		combat_unit_group_capital_ship = {
+			value = 0
+			if = {
+				limit = { country_rank = rank_value:great_power }
+				add = 30
+			}
+			if = {
+				limit = { country_rank = rank_value:major_power }
+				add = 10
+			}			
+		}
+		combat_unit_group_support_ship = {
+			value = 0
+			if = {
+				limit = { has_technology_researched = submarine }
+				add = 10
+			}
+			if = {
+				limit = { has_technology_researched = carrier_tech }
+				add = 10
+			}			
+		}		
+	}
+	
+	# How many conscript battalions should the AI aim to have for each regular battalion in a formation?
+	# root = country
+	# scope:military_formation = military formation
+	# Using this value in other strategies will function additively
+	conscript_battalion_ratio = {
+		value = 0
+		if = {
+			limit = { has_law = law_type:law_national_militia }
+			add = 5
+		}
+		else_if = {
+			limit = { has_law = law_type:law_professional_army }
+			add = 0.5
+		}			
+		else_if = {
+			limit = { has_law = law_type:law_peasant_levies }
+			add = 1
+		}	
+		else_if = {
+			limit = { has_law = law_type:law_mass_conscription }
+			add = 2
+		}		
+	}
 	
 	# Add a multiplier to the score AI assigns to particular building groups (default 1)
 	# Using this value in other strategies will result in several multiplications

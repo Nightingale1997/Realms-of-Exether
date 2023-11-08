@@ -81,7 +81,7 @@ dwarf_pantheon = {
 	traits = {
 		jewish
 	}
-	color = { 0.5 0.5 0.2 }
+	color = { 0.55 0.85 0.98 }
 }	
 
 elf_magic = {
@@ -109,6 +109,14 @@ elf_southern = {
 		eastern
 	}
 	color = { 0.7 0.4 0.6 }
+}
+
+animist = {
+	texture = "gfx/interface/icons/religion_icons/animist.dds"
+	traits = {
+		animist
+	}
+	color = { 0.6 0.3 0.2 }
 }
 
 lords_of_avarice = {
@@ -275,4 +283,9 @@ halfling_pantheon = {
 	
 	taboos = {
 	}
+}
+
+atheist = {
+	texture = "gfx/interface/icons/religion_icons/atheist.dds"
+	color = { 1.0 1.0 1.0 }
 }

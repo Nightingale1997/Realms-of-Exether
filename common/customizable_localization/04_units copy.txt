@@ -1,0 +1,30 @@
+﻿flotilla_prefix = {
+	type = country
+	random_valid = no
+	### generic fallback
+
+    text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = flotilla_prefix_blank # Many countries used no prefix at all
+	}
+}
+
+troop_name = {
+	type = building
+	random_valid = no
+	
+	text = {
+		trigger = {
+			is_building_type = building_barracks
+		}
+		localization_key = troop_name_regular
+	}
+	text = {
+		trigger = {
+			is_building_type = building_conscription_center
+		}
+		localization_key = troop_name_conscript
+	}
+}

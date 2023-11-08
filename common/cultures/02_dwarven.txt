@@ -3,29 +3,6 @@
 	religion = dwarven_dark_magic
 	traits = { dwarf_heritage tunnel_cursed }
 	male_common_first_names = {
-		Wayan
-		Made
-		Nyoman
-		Ketut
-		Putu
-		Kadek
-		Komang
-		Nengah
-		Gede
-		Wayan_Balik
-	}
-	female_common_first_names = {
-		Wayan
-		Made
-		Nyoman
-		Ketut
-		Putu
-		Kadek
-		Koming
-		Nengah
-		Wayan_Balik
-	}	
-	noble_last_names = {
 		I_Gusti
 		Anak_Agung
 		Tjokorda
@@ -33,16 +10,29 @@
 		Ida
 		Jero
 	}
-	common_last_names = {
+	female_common_first_names = {
 		Ngakan
 		Kompyang
 		Sang
 		Si
+	}	
+	noble_last_names = {
+		Kadek
+		Koming
+		Nengah
+		Wayan_Balik
+	}
+	common_last_names = {
+		Wayan
+		Made
+		Nyoman
+		Ketut
+		Putu
 	}
 	ethnicities = {
 		1 = dwarf_dark
 	}
-	graphics = asian
+	graphics = south_asian
 }
 
 #Dûneshar
@@ -84,7 +74,7 @@ duneshar={
 	ethnicities = {
 		1 = dwarf_light
 	}
-	graphics = asian
+	graphics = south_asian
 }
 
 #Lithorin
@@ -126,7 +116,7 @@ lithorin={
 	ethnicities = {
 		1 = dwarf_light
 	}
-	graphics = asian
+	graphics = south_asian
 }
 
 starwoken={
@@ -169,7 +159,7 @@ starwoken={
 	ethnicities = {
 		1 = dwarf_dark
 	}
-	graphics = asian
+	graphics = south_asian
 }
 
 vozi={
@@ -219,7 +209,49 @@ vozi={
 	ethnicities = {
 		1 = dwarf
 	}
-	graphics = asian
+	graphics = south_asian
+}
+
+vynduri={
+	color= hsv{ 0.40 0.36 0.70 }
+	religion = dwarf_pantheon
+	traits = { dwarf_heritage }
+	male_common_first_names={
+		Afanasiy
+		Aleksandr
+		Alitet
+		Diniyar
+		Donduk
+		Gabdull
+		Grigory
+		Mirsayet
+		Sihabetdin
+		Viktor
+	}
+	female_common_first_names = {
+		Galina
+		Sainkho
+	}	
+	noble_last_names = {
+		Khan
+	}
+	common_last_names={
+		Bilyaletdinov
+		Chaoke
+		Khovalyg
+		Krakovetsky
+		Nemtushkin
+		Nulgynet
+		Potanin
+		Shaimiev
+		Shashkov
+		Shchapov
+		Yadrintsev
+	}
+	ethnicities = {
+		1 = dwarf_light
+	}
+	graphics = east_asian
 }
 
 koshiri={
@@ -267,5 +299,178 @@ koshiri={
 	ethnicities = {
 		1 = dwarf_light
 	}
-	graphics = asian
+	graphics = south_asian
+}
+
+castaway_dwarf={
+	color= hsv{ 0.71 0.54 0.78 }
+	religion = animist
+	traits = { dwarf_heritage }
+	male_common_first_names={
+		Bing
+		Chen
+		Du
+		He
+		Hou
+		Lin
+		Qin
+		Sa
+		Shen
+		Tan
+		Wong
+		Wu
+		Xu
+		Xue
+		Yan
+		Zheng
+	}
+	female_common_first_names = {
+		Akew
+		Jin
+		Jinhong
+		Junying
+		Qingtang
+		Sanniang
+		Shanziang
+		Shih
+		Taiqing
+		Xiefen
+		Xiugu
+		Xuanjiao
+		Yu
+		Yunmei
+	}	
+	noble_last_names = {
+		Cui
+		Li
+		Nie
+		Zhang
+	}
+	common_last_names={
+		Baochen
+		Baozhen
+		Debang
+		Fu
+		Huiyin
+		Nai-siong
+		Nee
+		Sen
+		Shu
+		Xin
+		Zexu
+	}
+	ethnicities = {
+		1 = dwarf_light
+	}
+	graphics = african
+}
+
+hornodukh={
+	color= hsv{ 0.16 0.32 0.62 }
+	religion = dwarf_pantheon
+	traits = { dwarf_heritage }
+	male_common_first_names={
+		Alexei
+		Andrei
+		Anton
+		Arkadiy
+		Borys
+		Dmitro
+		Fyodor
+		Hryhoriy
+		Ivan
+		Lavr
+		Leonid
+		Lev
+		Mikhail
+		Mykola
+		Nikita
+		Oleksandr
+		Panteleimon 
+		Pavel
+		Petro
+		Roman
+		Semyon
+		Sergiy
+		Valeriy
+		Viktor
+		Vladislav
+		Volodimir
+		Yevhen
+		Yuriy
+	}
+	female_common_first_names = {
+		Darya
+		Dniprova
+		Hrytsko
+		Kolomba
+		Lyubov
+		Lyudmila
+		Maria
+		Nadazhda
+		Nataliya
+		Olena
+		Olha
+		Polina
+		Ruslana
+		Slava
+		Ulyana
+		Valeriya
+		Xenia
+		Yevheniya
+	}	
+	noble_last_names = {
+		Chubynsky
+		Czajkowski
+		Drahomanov
+		Gogol-Yanovsky
+		Hnizdovsky
+		Hrekov
+		Hrushevsky
+		Karaszewicz-Tokarzewski
+		Kobyliansky
+		Konysky
+		Kropyvnytsky
+		Kulish
+		Levytsky
+		Lototsky
+		Ohonovsky
+		Omelianovych-Pavlenko
+		Ortynsky
+		Petrushevych
+		Rodzianko
+		Sas-Kuilovsky
+		Shakhovskoy
+		Sheptytsky
+		Skoropadskyi
+		Vakhnianyn
+		Vitovsky
+		Zubrytsky
+	}
+	common_last_names={
+		Bezruchko
+		Chernyakhovsky
+		Dyachenko
+		Gamula
+		Grigoriev
+		Hrekov
+		Ivanenko
+		Ivanov
+		Kapustiansky
+		Kondratenko
+		Leshchenko
+		Leshchinskiy
+		Paskevich
+		Petliura
+		Radchenko
+		Shevchenko
+		Skoropadskyi
+		Stefaniv
+		Tymoshenko
+		Vitovsky
+	}
+	ethnicities = {
+		1 = dwarf
+	}
+	graphics = european
 }

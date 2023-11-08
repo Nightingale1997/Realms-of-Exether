@@ -118,9 +118,7 @@ NAI = {
 	RECRUITABLE_COMMANDER_CONDITION_TRAIT_SCORE = -25	# A recruitable commander's total value of condition traits is multiplied by this
 	RECRUITABLE_COMMANDER_FAVORED_IG_FACTOR	= 1.5		# If a recruitable commander comes from an IG the AI likes, multiply score by this
 	RECRUITABLE_COMMANDER_DISFAVORED_IG_FACTOR = 0.5	# If a recruitable commander comes from an IG the AI dislikes, multiply score by this
-	
-	CONSCRIPTION_ESTIMATED_MILITARY_POWER_MULT = 0.5 		# AI multiplies the value of conscriptable battalions by this to estimate potential combat power
-	
+
 	MOBILIZATION_BASE_DESIRED_RATIO_TO_ENEMY = 0.5   		# AI wants to have a total amount of mobilized army power that is equal to enemy mobilized army power * this
 	MOBILIZATION_MAIN_ATTACKER_ADDED_RATIO = 1.0  			# Add this to desired ratio for the main attacker in the war 
 	MOBILIZATION_MAIN_DEFENDER_ADDED_RATIO = 1.0  			# Add this to desired ratio for the main defender in the war 
@@ -136,8 +134,7 @@ NAI = {
 	MOBILIZATION_MIN_MOBILIZATION_TERRITORIAL_RISK = 0.15   #  AI will always mobilize at least this amount of forces if they might lose territory from the war/play
 	MOBILIZATION_MIN_MOBILIZATION_LOCAL_FRONTS = 0.25       # AI will always mobilize at least this amount of forces if they have any local fronts
 	MOBILIZATION_MIN_MOBILIZATION_CONTAINMENT_WAR = 1.0   # AI will always mobilize at least this amount of forces if fighting in a containment war
-	MOBILIZATION_DEFAULT_CONSCRIPT_POWER_PROJECTION = 1 	# If conscript power projection can't be calculated due to lack of a regular army, use this default value
-	
+
 	CONSCRIPTION_INSUFFICIENT_FORCES_FACTOR = 1 					# For each 1% of mobilization the AI isn't able to meet, raise a base of 1% * this conscripts
 	CONSCRIPTION_RELATIVE_CONSCRIPTED_COMBAT_POWER_DIVISOR = 1		# Conscripted forces fraction of combat power is multiplied by this, then the result of CONSCRIPTION_INSUFFICIENT_FORCES_FACTOR is divided by (1 + the result)
 	CONSCRIPTION_SMALL_STANDING_ARMY_THRESHOLD = 0.75				# An AI whose conscripted combat power is above this fraction of total combat power is affected by the below factor
@@ -651,7 +648,7 @@ NAI = {
 
 	# Below data is used to calculate how much weight the AI places on a production building
 	PRODUCTION_BUILDING_RANDOM_FACTOR = 10.0 # The higher this is, the more random AI construction will be
-	PRODUCTION_BUILDING_STATE_RANDOM_FACTOR = 0.33 # The higher this is, the more random AI state selection for building types will be
+	PRODUCTION_BUILDING_STATE_RANDOM_FACTOR = 1.0 # The higher this is, the more random AI state selection for building types will be
 	PRODUCTION_BUILDING_BASE_VALUE = 1000 # If no ai_value is scripted in the building
 	PRODUCTION_BUILDING_NO_AVAILABLE_WORKFORCE_FACTOR = 0.25 # Total weight is multiplied by this if the state lacks enough workforce to staff the building
 	PRODUCTION_BUILDING_GOODS_PROFIT_FACTOR = 5000 # Per pound of predicted building profit (divided by employee count per level)
@@ -660,8 +657,8 @@ NAI = {
 	PRODUCTION_BUILDING_PRODUCED_VALUE_FACTOR = 0.25 # Per pound of produced goods in base value
 	PRODUCTION_BUILDING_INCORPORATED_INFRASTRUCTURE_USAGE_FACTOR = 0.05 # Total weight is divided by ( 1 + this * building infrastructure usage ) in incorporated states
 	PRODUCTION_BUILDING_UNINCORPORATED_INFRASTRUCTURE_USAGE_FACTOR = 1.0 # Total weight is divided by ( 1 + this * building infrastructure usage ) in unincorporated states
-	PRODUCTION_BUILDING_INPUT_NO_LOCAL_PRODUCTION_FACTOR = -0.5 # Add this value to a building for each unit of money worth of goods consumed that are not produced by any buildings in the state but *are* produced by buildings in the market
-	PRODUCTION_BUILDING_OUTPUT_NO_LOCAL_CONSUMPTION_FACTOR = -0.5 # Add this value to a building for each unit of money worth of goods produced that are not consumed by any buildings in the state but *are* consumed by buildings in the market
+	PRODUCTION_BUILDING_INPUT_NO_LOCAL_PRODUCTION_FACTOR = -0.5 # Add this value to a building for each unit of money worth of goods consumed that are not produced in the state but *are* produced by buildings in the market
+	PRODUCTION_BUILDING_OUTPUT_NO_LOCAL_CONSUMPTION_FACTOR = -0.5 # Add this value to a building for each unit of money worth of goods produced that are not consumed in the state but *are* consumed by buildings in the market
 	PRODUCTION_BUILDING_OUTPUT_HIGH_PRICE_THRESHOLD = 1.25 # Lower threshold multiplier of base price for applying 'high price' modifier below
 	PRODUCTION_BUILDING_OUTPUT_HIGH_PRICE_FACTOR = 0.25 # Add this value to a building for each unit of money worth of goods above high price threshold that this building produces
 	PRODUCTION_BUILDING_OUTPUT_HIGH_PRICE_WANTS_HIGH_SUPPLY_FACTOR = 0.75 # Add this value to a building for each unit of money worth of goods above high price threshold that this building produces and which we want a high supply of
@@ -865,8 +862,9 @@ NAI = {
 	COMPANY_TYPE_BUILDING_LEVELS_MAX = 2.0			# Effects of COMPANY_TYPE_NUM_BUILDING_LEVELS_FACTOR cannot be higher than this
 	COMPANY_TYPE_COMPETITION_FACTOR = 2					# Divisor for AI weight of companies is increased by 1 + ( number of building types on existing companies that compete * this )
 
-	MILITARY_MIN_UNITS_IN_FORMATION = 5			# Min number of units to have in a military formation
-	MILITARY_MIN_TO_MAX_UNITS_RATIO = 0.5 		# Ratio that defines min number of units to have in a military formation proportional to the country's largest formation
+	MILITARY_UNITS_PER_FORMATION_BASE = 100				# For each this number of battalions we create another military formation in a HQ
+	MILITARY_UNITS_MIN_FOR_GARRISON_FORMATION = 15 		# If a HQ has at least this number of units we set the minimum number of formations to 2, so that there will be a garrison formation present
+	MILITARY_UNITS_GARRISON_BATTALION_MULT = 0.33		# The garrison formation (the last formation in each HQ) should receive only this number of troops compared to the other formations in the HQ
 }
 
 NCountry = {
@@ -884,6 +882,7 @@ NCountry = {
 	CONSTRUCTION_CAMP_BUILDING = "building_construction_sector"
 	BARRACKS_BUILDING = "building_barracks"
 	NAVAL_BASE_BUILDING = "building_naval_base"
+	PORT_BUILDING = "building_port"
 	URBAN_CENTER_BUILDING = "building_urban_center"
 	CONSCRIPTION_CENTER_BUILDING = "building_conscription_center"
 	TRADE_CENTER_BUILDING = "building_trade_center"
@@ -1083,9 +1082,10 @@ NEconomy = {
 	FIRED_POP_RADICALIZATION_BASE_FRACTION = 0.2		# This percentage of a pop becomes radicalized when they lose their job, for instance due to a building being downsized
 	FIRED_POP_RADICALIZATION_SHARES_FACTOR = 0.05		# Additional percentage of pop that becomes radicalized they lost their job for each per-pop share they had in the building			
 
-	POLLUTION_TARGET_DIVISOR_BASE = 1					# Base value to divide total pollution generation by for calculating state region pollution target level
-	POLLUTION_TARGET_DIVISOR_ARABLE_LAND_MULT = 0.1		# Amount per arable land to add to pollution divisor
-	POLLUTION_CHANGE_SPEED = 0.5						# Each day, pollution in state region changes by this amount towards target
+	# Pollution Impact = (GeneratedPollution (StateRegion) / (DIVISOR_BASE + DIVISOR_ARABLE_LAND_MULT * SQRT(ArableLand (State Region)))/POLLUTION_MAX
+	POLLUTION_TARGET_DIVISOR_BASE = 50					# Base value to divide total pollution generation by for calculating state region pollution target level
+	POLLUTION_TARGET_DIVISOR_ARABLE_LAND_MULT = 1.5		# Amount per arable land to add to pollution divisor
+	POLLUTION_CHANGE_SPEED = 0.255						# Each day, pollution in state region changes by this amount towards target
 	POLLUTION_MAX = 255
 	POLLUTION_SPREAD_TO_NEIGHBOR = 0.25					# Adjacent state regions always have at least this much of their neighbor's pollution level
 
@@ -1227,6 +1227,8 @@ NEconomy = {
 	SLAVE_TRADE_SLAVES_PER_WEEK = 100			# Base number of slaves that will be traded per marker per week
 	SLAVE_TRADE_MIN_MARKET_ACCESS = 0.1			# Minimum market access multiplier for slave trade, i.e. even at a marker with 0 market access, this fraction of the base number will be traded
 	
+	BUILDING_FAILED_HIRE_COOLDOWN_WEEKS_WITHOUT_WAGE_RAISE = 4		# If a building fails to hire, it waits this many weeks before trying again *unless* it has since raised wages
+	
 	BUILDING_LAYOFFS_MIN_WEEKS_BETWEEN = 4		# Minimum number of weeks between layoffs
 	BUILDING_LAYOFFS_DECREASE_BY = 0.15			# The ratio that layoffs will reduce employment by (e.g. 0.15 means if you're currently 57% employed, reduce that to 48.45%)
 
@@ -1277,6 +1279,7 @@ NEconomy = {
 } 
 
 NMilitary = {
+	POWER_PROJECTION_DIVISOR = 1000 				# Average of Offense and Defense is multiplied by manpower and divided by this to determine a unit's power projection
 	INITIAL_MANPOWER_COST_MULTIPLIER = 10 			# there is an extra cost for training new recruits, compared to maintenence of said recruits
 	MANPOWER_DIVISOR = 10000 						# the strategic goods needed by soldiers are counted in sets of
 	MANPOWER_LOST_DUE_TO_ATTRITION_PER_WEEK_MIN = 0.05 	# The minimum percentage of manpower a unit can lose each week due to attrition
@@ -1367,6 +1370,9 @@ NMilitary = {
 	MILITARY_FORMATION_ORGANIZATION_MAX = 100				# The maximum amount of Organization a Military Formation requires to be considered at full Organization
 	MILITARY_FORMATION_ORGANIZATION_MIN = 25				# The minimum amount of Organization a Military Formation will always retain despite exceeding their Command Limit 
 	MILITARY_FORMATION_DAILY_ORGANIZATION_GAIN_MIN = 0.1	# The minimum amount of Organization a Military Formation can gain in a day
+	
+	MILITARY_FORMATION_WEEKLY_MAX_UNIT_UPGRADES_ARMY = 0.1		# Each week a mobilized army can upgrade this (0.0-1.0) fraction of its total number of units.
+	MILITARY_FORMATION_WEEKLY_MAX_UNIT_UPGRADES_FLEET = 0.05	# Each week a mobilized fleet can upgrade this (0.0-1.0) fraction of its total number of units.
 }
 
 NDiplomacy = {
@@ -1583,8 +1589,10 @@ NDiplomacy = {
 	PRESTIGE_FROM_COUNTRY_GDP_DIVISOR = 1000000
 	PRESTIGE_FROM_COUNTRY_GDP = 3 # Per PRESTIGE_FROM_COUNTRY_GDP_DIVISOR GDP
 	PRESTIGE_FROM_SUBJECT_GDP = 1.5 # Per PRESTIGE_FROM_COUNTRY_GDP_DIVISOR GDP in subjects
-	PRESTIGE_FROM_POWER_PROJECTION = 0.2 # Per point of power projection from barracks & naval bases
-	PRESTIGE_FROM_SUBJECT_POWER_PROJECTION = 0.1 # Per point of power projection from barracks & naval bases in subjects
+	PRESTIGE_FROM_ARMY_POWER_PROJECTION = 0.03 # Per point of power projection from army combat power
+	PRESTIGE_FROM_NAVY_POWER_PROJECTION = 0.10 # Per point of power projection from navy combat power
+	PRESTIGE_FROM_SUBJECT_ARMY_POWER_PROJECTION = 0.0005 # Per point of power projection from army combat power in subjects
+	PRESTIGE_FROM_SUBJECT_NAVY_POWER_PROJECTION = 0.01 # Per point of power projection from navy combat power in subjects
 	PRESTIGE_MIN_NUM_COUNTRIES = 100 # If there's less countries using prestige than this in the game, we add some filler countries to adjust average prestige levels
 	FILLER_COUNTRY_PRESTIGE = 15
 	
@@ -1682,6 +1690,7 @@ NPops = {
 	ECONOMIC_MIGRATION_STATE_POPULATION_THRESHOLD = 100000				# States with less pops than this have reduced economic emigration numbers to avoid total depopulation
 	CULTURAL_MIGRATION_BASE = 0.05								# Base amount of a pop that wants to move due to mass migration
 	CULTURAL_MIGRATION_FROM_RADICALS = 0.05						# At 100% radicals, this fraction of the pop wants to mass migrate
+	CULTURAL_COMMUNITY_LINGER_TIME_WEEKS = 3					# When the last pop of a given culture leaves a state, the corresponding cultural community will be removed after this long
 	MIGRATION_UNEMPLOYMENT_MULT = 10.0							# Amount of migration from SoL is increased by this when a pop is unemployed
 	MIGRATION_MIN_STATE_POPS = 20000							# A state with less pops than this will not get emigration
 	MIGRATION_MIN_POP_AMOUNT = 1								# No less than this amount of a pop can migrate each week (if any migration at all should happen)
@@ -1711,6 +1720,17 @@ NPops = {
 	MASS_MIGRATION_NUM_TARGET_STATES_FOR_NO_PENALTY = 5	# Countries with at least this number of possible target states do not receive any penalty to their mass migration target score
 	MASS_MIGRATION_FEW_TARGET_STATES_PENALTY = 0.25		# Mass migration target score is divided by ( 1 + this * number of possible target states less than MASS_MIGRATION_NUM_TARGET_STATES_FOR_NO_PENALTY )
 
+	MASS_MIGRATION_TARGET_MIGRATION_PULL_FACTOR = 1.5	# A state with a mass migration target will have its migration pull multiplied by this value (when considered by the relevant culture pops in the relevant origin country)
+
+	MIGRATION_DESIRE_BASE = 100								# Base desire to migrate
+	MIGRATION_DESIRE_FROM_DISCRIMINATION = 200				# Being discriminated will increase desire to migrate by this much
+	MIGRATION_DESIRE_FROM_JOB_SATISFACTION_FACTOR = -1.0	# A pop's desire to migrate will be affected by its job satisfaction multiplied by this value.
+
+	CULTURAL_MIGRATION_PER_WEEK_FACTOR = 0.5									# This number of individuals will migrate for each point of difference in migration pull
+	CULTURAL_MIGRATION_PER_WEEK_PER_TOTAL_POPULATION = 200000					# Additionally, one more individual will migrate per this number of population for each point of difference in migration pull
+	CULTURAL_MIGRATION_MIN_DIFFERENCE_IN_MIGRATION_ATTRACTION_TO_MOVE = 10		# Pops will not migrate if their best option is to a state with a lower delta in migration pull than this number
+	CULTURAL_MIGRATION_MIN_POP_FRACTION_TO_MOVE = 0.2							# If the people wanting to migrate constitues less than this fraction of a pop, no new pop will be created and they won't migrate.
+
 	COLONIZATION_RIGHTS_GROWTH_MULTIPLIER = 2.0			# Colonial growth AND max colonial growth are multiplied by this if you have colonization rights
 	COLONIAL_GROWTH_BASE_FACTOR = 0.00001				# Colonial growth generated by a state is ( total pops / 1000 ) * this * modifier from institution
 	MIN_BASE_COLONIAL_GROWTH = 0.01						# Country base colonial growth from population cannot be lower than this
@@ -1725,6 +1745,20 @@ NPops = {
 	INDIVIDUALS_TAXED_PER_TAX_CAPACITY = 10000			# How many pops can be taxed efficiently for each tax capacity
 	
 	EXPECTED_SOL_FROM_LITERACY_SUBSISTENCE_MULT = 0.25	# Expected SoL from literacy is multiplied by this for Pops working in subsistence buildings
+
+	JOB_SATISFACTION_BASE = -130							# Base job satisfaction
+	JOB_SATISFACTION_FOR_NEWLY_HIRED = 1000					# Job satisfaction gained due to having been newly hired, this state lasts until the pop's next wealth calculation
+	JOB_SATISFACTION_PER_SOL_ABOVE_EXPECTED_SOL = 3		# Job satisfaction gained per level of SoL above your expected SoL
+	JOB_SATISFACTION_PER_SOL_ABOVE_STATE_STRATA_SOL = 2	# Job satisfaction gained per level of SoL above the state average for your strata
+	JOB_SATISFACTION_PER_SOL_ABOVE_COUNTRY_STRATA_SOL = 1	# Job satisfaction gained per level of SoL above the country average for your strata
+	JOB_SATISFACTION_PER_PERCENT_WAGE_RATE_ABOVE_NORMAL = 2	# Job satisfaction gained per pound of workplace wage rate (weekly wage of 10k laborers) above country normal
+	JOB_SATISFACTION_CAN_AFFORD_EXPENSES_THRESHOLD = 1.2	# If a pop's income is greater than this value times their expenses they are considered to be able to afford them
+	JOB_SATISFACTION_CANNOT_AFFORD_EXPENSES_THRESHOLD = 0.8	# If a pop's income is less than this value times their expenses they are considered not able to afford them
+	JOB_SATISFACTION_FROM_CAN_AFFORD_EXPENSES = 1000		# Job satisfaction gained from being able to afford your bug package (and taxes)
+	JOB_SATISFACTION_FROM_CAN_BARELY_AFFORD_EXPENSES = 0	# Job satisfaction gained from being able to barely afford your bug package (and taxes)
+	JOB_SATISFACTION_FROM_CANNOT_AFFORD_EXPENSES = -100		# Job satisfaction gained from not being able to afford your bug package (and taxes)
+	JOB_SATISFACTION_PER_PERCENT_HIGHER_STRATA_QUALIFICATION = -3 # Job satisfaction gained per percent of workforce qualified for a higher strata. Note that qualifications are assumed to overlap and the largest qualification is used in this calculation
+	JOB_SATISFACTION_FROM_EMPLOYMENT = 100					# Job satisfaction gained from having a job
 	
 	### Pop Consolidation defines
 	# Pop Consolidation identifies pops so small their impact on the economy and politics is insignificant, and merges them into other pops in the same building or state.

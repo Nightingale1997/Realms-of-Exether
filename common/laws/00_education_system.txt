@@ -13,6 +13,10 @@
 		value = 0
 	}
 
+	can_impose = { 
+		is_subject_of = scope:initiator	
+	} 
+
 	# AI will never abolish institutions entirely
 	ai_will_do = {
 		always = no
@@ -97,7 +101,11 @@ law_religious_schools = {
 				max = 1
 			}
 		}
-	}	
+	}
+
+	can_impose = { 
+		is_subject_of = scope:initiator	
+	} 	
 
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
@@ -152,6 +160,10 @@ law_private_schools = {
 			max = 0.6
 		}
 	}
+
+	can_impose = { 
+		is_subject_of = scope:initiator	
+	} 
 
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
@@ -226,6 +238,10 @@ law_public_schools = {
 			max = 1
 		}
 	}
+
+	can_impose = { 
+		is_subject_of = scope:initiator	
+	} 
 
 	ai_enact_weight_modifier = { #Petitions
 		value = 0

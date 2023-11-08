@@ -269,7 +269,10 @@ hills = {
 				if = {
 					limit = {
 						scope:region = {
-							is_asian_farmland = yes
+							OR = {
+								is_jungle = yes
+							}
+							
 						}
 					}
 					add = 1
@@ -399,7 +402,14 @@ mountain = {
 				if = {
 					limit = {
 						scope:region = {
-							state_is_in_southern_hemisphere = yes
+							OR = {
+								region = sr:region_west_aritzakarri
+								region = sr:region_skittering_hills
+								region = sr:region_vitics_roosts
+								region = sr:region_the_trident
+								region = sr:region_ravik
+							}
+						
 						}
 					}
 					add = 1
@@ -430,7 +440,6 @@ mountain = {
 					limit = {
 						scope:region = {
 							AND = {
-								state_is_in_southern_hemisphere = no
 								is_arid_region = no
 							}
 						}
@@ -1004,6 +1013,21 @@ plantation = {
 			path = "gfx/state_pictures/plantation.dds"
 			effect = "vfx_entity_ui_state_plantation"
 		}
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
+							is_subtropic_farmland = yes
+						}
+					}
+					add = 2
+				}
+			}
+			path = "gfx/state_pictures/farmland_subtropic.dds"
+			effect = "vfx_entity_ui_state_farmland_subtropic"
+		}
 	}
 	
 	combat_width = 1.5
@@ -1314,7 +1338,7 @@ urban = {
 				if = {
 					limit = {
 						scope:region = {
-							state_in_africa = yes
+							state_is_in_bay_of_new_fortune = yes
 						}
 					}
 					add = 1
@@ -1398,14 +1422,12 @@ urban = {
 					limit = {
 						scope:region = {
 							AND = {
-								state_is_in_europe = no
+								state_is_in_settler_coast = no
 								is_subtropic_farmland = no
-								state_is_in_east_asia = no
-								state_is_in_southeast_asia = no
+								is_asian_farmland = no
 								state_is_in_teferet = no
-								state_is_in_central_asia = no
-								state_is_in_india = no
-								state_in_africa = no
+								state_in_locari = no
+								state_is_in_bay_of_new_fortune = no
 							}
 						}
 					}
@@ -1458,7 +1480,7 @@ docks = {
 					limit = {
 						exists = state.b:building_port
 					}
-					add = 1
+					add = 10
 				}
 			}
 			path = "gfx/state_pictures/docks.dds"
@@ -1467,14 +1489,71 @@ docks = {
 		{
 			weight = {
 				value = 1
-				# if = {
-				#	limit = {
-				#		NOT = { exists = state.b:building_port }
-				#	}
-				#	add = 1
-				# }
+				 if = {
+					limit = {
+						AND = {
+							NOT = { exists = state.b:building_port }
+							scope:region = {
+								is_arid_region = yes
+							}
+						}
+						
+					}
+					add = 1
+				 }
 			}
 			path = "gfx/state_pictures/plains_arid.dds"
+			effect = "vfx_entity_ui_state_plains_arid"
+		}
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						AND = {
+							NOT = { exists = state.b:building_port }
+							scope:region = {
+								OR = {
+									region = sr:region_south_toftir
+									region = sr:region_exiles_burden
+									region = sr:region_razorwind
+									region = sr:region_rimeroot_jungle
+									region = sr:region_thawed_lands
+									region = sr:region_east_everfrost
+									region = sr:region_west_everfrost
+									region = sr:region_coldreach
+									region = sr:region_whisperpine
+								}
+								
+							}
+						}
+
+					}
+					add = 3
+				}
+			}
+			path = "gfx/state_pictures/arctic.dds"
+			effect = "vfx_entity_ui_state_arctic"
+		}
+		{
+			weight = {
+				value = 1
+				 if = {
+					limit = {
+						AND = {
+							NOT = { exists = state.b:building_port }
+							NOT = {
+								scope:region = {
+									is_arid_region = yes
+								}
+							}
+						}
+						
+					}
+					add = 1
+				 }
+			}
+			path = "gfx/state_pictures/plains.dds"
 			effect = "vfx_entity_ui_state_plains_arid"
 		}
 	}

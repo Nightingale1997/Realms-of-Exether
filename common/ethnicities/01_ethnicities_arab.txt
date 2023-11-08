@@ -1,7 +1,4 @@
-﻿# Anbennar - changed final hair color value to be 0.99 not 1.0 as 1.0 is used for our special hair colours
-# by JayBean
-
-@neg1_min = 0.4
+﻿@neg1_min = 0.4
 @neg1_max = 0.5
 
 @neg2_min = 0.3
@@ -42,7 +39,7 @@ arab = {
 
 	
 	skin_color = {
-		10 = { 0.3 0.25 0.7 0.325 }	#Anbennar - changed y threshold due to our rgb skins. Btw calc is % of 0.5 as 0.5 is our new 1. For example if it was 0.3, it would be 30% of 0.5
+		10 = { 0.3 0.25 0.7 0.325 }	
 	}
 	eye_color = {
 		# Brown

@@ -5,6 +5,7 @@ on_monthly_pulse_country = {
 	events = {
 		communism.8 # Red Army
 		unable_to_enact.1
+		colonial_administration_events.2 # African Colony Radicals
 
 		# Exile Agitators Events
 		yeet_agitator_events.1
@@ -261,7 +262,7 @@ on_yearly_pulse_country = {
 		
 		# Prostitution and police
 		20 = prostitution.1
-		20 = prostitution.2
+		100 = prostitution.2
 		20 = prostitution.3
 		20 = prostitution.4
 		20 = cable_street.1
@@ -439,28 +440,6 @@ on_monthly_pulse_character = {
 			}
 			remove_trait = trait_child
 			add_random_trait = personality
-		}
-		if = {
-			limit = {
-				is_mobilized = yes
-			}
-			set_variable = {
-				name = num_months_mobilized
-				value = {
-					add = {
-						if = {
-							limit = {
-								exists = var:num_months_mobilized
-							}
-							add = var:num_months_mobilized
-						}
-						else = { # for safety
-							add = 0
-						}
-					}
-					add = 1
-				}
-			}
 		}
 	}
 }
@@ -901,6 +880,22 @@ on_diplomatic_pact_third_party_auto_break = {
 # scope:target = Released Country
 on_country_released_as_independent = {
 	effect = {
+		if = {
+			limit = {
+				scope:target = {
+					OR = {
+						country_has_primary_culture = cu:warforged
+					}
+					OR = {
+						has_law = law_type:law_legacy_slavery
+						has_law = law_type:law_slave_trade
+					}
+				}
+			}
+			scope:target = {
+				trigger_event = { id = slave_revolt_events.1 days = 0 }
+			}
+		}
 	}
 }
 
@@ -920,6 +915,123 @@ on_country_released_as_overlord_subject = {
 
 # Root = Country
 on_country_formed = {
+	effect = {
+		if = {
+			limit = {
+				c:LAO ?= ROOT
+			}
+			trigger_event = { id = formation.1 popup = yes }
+		}
+		else_if = {
+			limit = {
+				c:UBD ?= ROOT
+			}
+			trigger_event = { id = formation.2 popup = yes }
+		}
+		else_if = {
+			limit = {
+				c:BYZ ?= ROOT
+			}
+			trigger_event = { id = formation.3 popup = yes }
+		}
+		else_if = {
+			limit = {
+				c:IBE ?= ROOT
+			}
+			trigger_event = { id = formation.5 popup = yes }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					c:BRZ ?= ROOT
+					c:USA ?= ROOT
+					c:SAF ?= ROOT
+				}
+			}
+			trigger_event = { id = formation.6 popup = yes }
+		}
+		else_if = {
+			limit = {
+				c:KUK ?= ROOT
+			}
+			trigger_event = { id = formation.7 popup = yes }
+		}
+		else_if = {
+			limit = {
+				c:ARA ?= ROOT
+			}
+			trigger_event = { id = formation.8 popup = yes }
+		}
+		else_if = {
+			limit = {
+				c:YUG ?= ROOT
+			}
+			trigger_event = { id = formation.9 popup = yes }
+		}
+		else_if = {
+			limit = {
+				c:SCA ?= ROOT
+			}
+			trigger_event = { id = formation.10 popup = yes }
+		}
+		else_if = {
+			limit = {
+				c:MAL ?= ROOT
+			}
+			trigger_event = { id = formation.11 popup = yes }
+		}
+		else_if = {
+			limit = {
+				c:TRH ?= ROOT
+			}
+			trigger_event = { id = formation.12 popup = yes }
+		}
+		else_if = {
+			limit = {
+				c:IDN ?= ROOT
+			}
+			trigger_event = { id = formation.13 popup = yes }
+		}
+		else_if = {
+			limit = {
+				c:BHT ?= ROOT
+			}
+			trigger_event = { id = formation.14 popup = yes }
+		}
+		else_if = {
+			limit = {
+				c:YEM ?= ROOT
+			}
+			trigger_event = { id = formation.15 popup = yes }
+		}
+		else_if = {
+			limit = {
+				c:KAZ ?= ROOT
+			}
+			trigger_event = { id = formation.16 popup = yes }
+		}
+		else_if = {
+			limit = {
+				c:HRE ?= ROOT
+			}
+			trigger_event = { id = formation.18 popup = yes }
+		}
+		else_if = {
+			limit = {
+				c:UNL ?= ROOT
+			}
+			trigger_event = { id = formation.19 popup = yes }
+		}
+		else_if = {
+			limit = {
+				c:RHN ?= ROOT
+			}
+			trigger_event = { id = formation.20 popup = yes }
+		}
+		else = {
+			trigger_event = { id = formation.17 popup = yes }
+		}
+	}
 }
 
 # Root = State
@@ -1034,19 +1146,10 @@ on_demobilized_army = {
 
 # Root = Character
 on_mobilized_general = {
-	effect = {
-		set_variable = {
-			name = num_months_mobilized
-			value = 0
-		}
-	}
 }
 
 # Root = Character
 on_demobilized_general = {
-	effect = {
-		remove_variable = num_months_mobilized
-	}
 }
 
 # Root = Diplomatic Play
@@ -2207,5 +2310,41 @@ on_character_recruitment = {
 on_naval_invasion = {
 	effect = {
 		post_notification = naval_invasion_against_us
+	}
+}
+
+# Root = Military Formation
+# scope:front = front we were going to
+# scope:target = current target travel location - HQ or Province (Sea Node)
+on_travel_to_front_cancelled = {
+	effect = {
+		post_notification = formation_travel_to_front_cancelled
+	}
+}
+
+# Root = Military Formation
+# scope:hq = HQ we were going to
+# scope:target = current target travel location - HQ or Province (Sea Node)
+on_travel_station_in_hq_cancelled = {
+	effect = {
+		post_notification = formation_travel_station_in_hq_cancelled
+	}
+}
+
+# Root = Military Formation
+# scope:province = Sea Node we were going to
+# scope:target = current target travel location - HQ or Province (Sea Node)
+on_travel_deploy_to_sea_node_cancelled  = {
+	effect = {
+		post_notification = formation_travel_deploy_to_sea_node_cancelled
+	}
+}
+
+# Root = Military Formation
+# scope:formation = Formation we were tracking
+# scope:target = current target travel location - HQ or Province (Sea Node)
+on_travel_track_formation_cancelled = {
+	effect = {
+		post_notification = formation_travel_track_formation_cancelled
 	}
 }

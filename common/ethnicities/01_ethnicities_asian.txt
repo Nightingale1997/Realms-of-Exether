@@ -1,6 +1,4 @@
-﻿# Anbennar - changed final hair color value to be 0.99 not 1.0 as 1.0 is used for our special hair colours
-
-@neg1_min = 0.4
+﻿@neg1_min = 0.4
 @neg1_max = 0.5
 
 @neg2_min = 0.3
@@ -40,7 +38,7 @@
     template = "ethnicity_template"
 
     skin_color = {
-        10 = { 0.2 0.15 0.2 0.2 }  #Anbennar - changed y threshold due to our rgb skins. Also made it so its not just same y for some weird reason, diverging from vanilla
+        10 = { 0.2 0.15 0.2 0.2 }  
     }
     eye_color = {
         # Brown

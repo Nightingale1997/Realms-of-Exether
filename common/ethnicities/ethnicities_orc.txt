@@ -110,7 +110,7 @@ orc = {
 		# 50 = { 0.65 0.5 0.9 1.0 }
 	}
 
-	gene_body_type = {
+	gene_bs_body_type = {
 		10 = { name = body_fat_head_fat_low	range = { 0.5 0.6 }	}
 		10 = { name = body_fat_head_fat_medium	range = { 0.5 0.6 }	}
 		10 = { name = body_fat_head_fat_full	range = { 0.5 0.6 }	}  
@@ -118,16 +118,7 @@ orc = {
 
 
 	gene_age = {
-		10 = { name = old_beauty_1	range = { 0.0 1.0 } }
-	}
-
-	gene_body_hair = {
-		10 = {  name = body_hair_sparse					range = { 0.5 1.0 }	}
-		10 = {  name = body_hair_sparse_low_stubble		range = { 0.5 1.0 }	}
-		30 = {  name = body_hair_avg					range = { 0.5 1.0 }	}
-		30 = {  name = body_hair_avg_low_stubble		range = { 0.5 1.0 }	}
-		20 = {  name = body_hair_dense					range = { 0.5 1.0 }	}
-		20 = {  name = body_hair_dense_low_stubble		range = { 0.5 1.0 }	}
+		10 = { name = old_1	range = { 0.0 1.0 } }
 	}
 
 	gene_head_top_height = {
@@ -250,21 +241,12 @@ orc = {
 	}
 
 	gene_cheek_fat = {
-		25 = { name = cheek_fat_01	range = { 0.0 1.0  }	}
+		25 = { name = cheek_fat	range = { 0.0 1.0  }	}
 
 		#Beauty Section
-		0 = { name = cheek_fat_01	range = { 0.0 0.5  }	traits = { beauty_1 }	}
-		0 = { name = cheek_fat_01	range = { 0.0 0.5  }	traits = { beauty_2 }	}
-		0 = { name = cheek_fat_01	range = { 0.0 0.5  }	traits = { beauty_3 }	}
-	}
-
-	gene_temple_def = {
-		25 = { name = temple_def	range = { 0.2 1.0  }	}
-
-		#Beauty Section
-		0 = { name = temple_def	range = { 0.0 0.5  }	traits = { beauty_1 }	}
-		0 = { name = temple_def	range = { 0.0 0.5  }	traits = { beauty_2 }	}
-		0 = { name = temple_def	range = { 0.0 0.5  }	traits = { beauty_3 }	}
+		0 = { name = cheek_fat	range = { 0.0 0.5  }	traits = { beauty_1 }	}
+		0 = { name = cheek_fat	range = { 0.0 0.5  }	traits = { beauty_2 }	}
+		0 = { name = cheek_fat	range = { 0.0 0.5  }	traits = { beauty_3 }	}
 	}
 
 	gene_jaw_forward = {
@@ -285,20 +267,6 @@ orc = {
 
 	gene_mouth_width = {
 		10 = { name = mouth_width	range = { 0.0 0.0  }	}
-	}
-
-	gene_cheek_def = {
-		90 = { name = cheek_def_01	range = { 0.5 0.8 }	}
-		10 = { name = cheek_def_01	range = { 0.8 1.0 }	}
-		90 = { name = cheek_def_02	range = { 0.8 1.0 }	}
-
-		#Beauty Section
-		0 = { name = cheek_def_01	range = { 0.6 0.7 }	traits = { beauty_1 }	}
-		0 = { name = cheek_def_01	range = { 0.6 0.7 }	traits = { beauty_2 }	}
-		0 = { name = cheek_def_01	range = { 0.6 0.7 }	traits = { beauty_3 }	}
-		0 = { name = cheek_def_02	range = { 0.8 1.0 }	traits = { beauty_1 }	}
-		0 = { name = cheek_def_02	range = { 0.8 1.0 }	traits = { beauty_2 }	}
-		0 = { name = cheek_def_02	range = { 0.8 1.0 }	traits = { beauty_3 }	}
 	}
 
 	gene_cheek_forward = {

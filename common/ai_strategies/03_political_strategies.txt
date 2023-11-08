@@ -251,6 +251,13 @@ ai_strategy_reactionary_agenda = {
 			}
 			
 			add = 1000
+		}	
+		
+		if = {
+			limit = {
+				has_law = law_type:law_council_republic	
+			}
+			multiply = 0.25
 		}					
 	}
 }
@@ -562,6 +569,13 @@ ai_strategy_egalitarian_agenda = {
 			}
 			
 			add = 1000
+		}	
+		
+		if = {
+			limit = {
+				has_law = law_type:law_council_republic	
+			}
+			add = 250
 		}			
 	}
 }

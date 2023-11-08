@@ -56,6 +56,10 @@ law_state_religion = {
 			value = 0.25
 		}
 	}
+
+	can_impose = { 
+		is_subject_of = scope:initiator	
+	} 
 	
 	ai_will_do = {
 		exists = ruler
@@ -63,6 +67,7 @@ law_state_religion = {
 			has_ideology = ideology:ideology_theocrat
 		}
 	}
+	
 	
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
@@ -97,6 +102,19 @@ law_denominational_exclusion = {
 		recalculate_pop_ig_support = yes
 
 
+
+		if = {
+			limit = {
+				has_law = law_type:law_state_atheism
+			}
+			set_state_religion = root.country_definition.religion
+		}
+		if = {
+			limit = {
+				has_modifier = antireligious_policies
+			}
+			remove_modifier = antireligious_policies
+		}
 	}
 	
 	religious_acceptance_rule = {
@@ -152,6 +170,10 @@ law_denominational_exclusion = {
 			}			
 		}
 	}
+	
+	can_impose = { 
+		is_subject_of = scope:initiator	
+	} 
 	
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
@@ -253,7 +275,12 @@ law_freedom_of_conscience = {
 			}		
 		}
 	}
-	
+
+	can_impose = { 
+		is_subject_of = scope:initiator	
+	} 
+
+
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
 		
@@ -350,7 +377,11 @@ law_total_separation = {
 			}			
 		}
 	}
-	
+
+	can_impose = { 
+		is_subject_of = scope:initiator	
+	} 
+
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
 		
@@ -444,7 +475,11 @@ law_state_atheism = {
 			}
 		}
 	}
-	
+
+	can_impose = { 
+		is_subject_of = scope:initiator	
+	} 
+
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
 		

@@ -103,7 +103,6 @@ gov_chartered_company = {
 		OR = {
 			AND = { exists = c:SSC c:SSC = ROOT }
 		}
-		is_subject_type = subject_type_dominion
 	}
 
 	on_government_type_change = {
@@ -132,6 +131,26 @@ gov_colonial_administration = {
 					has_discrimination_trait = human_heritage
 				}
 				country_is_in_settler_coast = no
+			}
+			AND = {
+				has_variable = senegal_subject_var
+				is_subject = yes
+			}
+			AND = {
+				has_variable = niger_subject_var
+				is_subject = yes
+			}
+			AND = {
+				has_variable = ethiopia_subject_var
+				is_subject = yes
+			}
+			AND = {
+				has_variable = zanj_subject_var
+				is_subject = yes
+			}
+			AND = {
+				has_variable = congo_subject_var
+				is_subject = yes
 			}
 		}
 	}

@@ -604,7 +604,7 @@ west_thalorian={
 	}
 	graphics = european
 	ethnicities = {
-		1 = caucasian
+		1 = south_american
 	}
 }
 
@@ -754,7 +754,7 @@ lake_thalorian = {
 		Zottu
 	}
 	ethnicities = {
-		1 = slavic
+		1 = south_american
 	}
 	graphics = european
 }
@@ -880,7 +880,7 @@ azmaraan={
 	ethnicities = {
 		1 = central_asian
 	}
-	graphics = asian
+	graphics = european
 }
 
 qinnaat={
@@ -935,7 +935,7 @@ qinnaat={
 	ethnicities = {
 		1 = central_asian
 	}
-	graphics = asian
+	graphics = european
 }
 
 
@@ -1025,118 +1025,120 @@ thiralian={
 	}
 }
 
-anwarthi = {
-	color= rgb{ 62 86 55 }
+anwarthi={
+	color={ 255 156 156 }
 	religion = mortals_burden
 	traits = {  human_heritage }
-
 	male_common_first_names = {
-		Aidamir
-		Aliy
-		Amirkhan
-		Azik
-		Qerandiqo
-		Hatajuq
-		Ismail
-		Shuwpagwe
-		Sefer
-		Qarabatir
+		Aho
+		Aram
+		Ayoub
+		Bartel
+		Butrus
+		Daniyel
+		Dawid
+		Elios
+		Emmanuel
+		Fadi
+		Farid
+		Farouk
+		Freydun
+		Gewargis
+		Hanna
+		Hormuzd
 		Ibrahim
-		Hasan
-		Inarmas
-		Aksak
-		Kudenet
-		Dokshuka
-		Khizir
-		Kuba
-		Mukhadin
-		Nalbi
-		Nedighe
-		Petrezok
-		Shumaf
-		Anfoko
-		Tlepsh
-		Zalimkhan
-		Aleguko
-		Zawirbiy
-		Ziramikw
+		Iskhaq
+		Istefane
+		Luqa
+		Malik
+		Mikal
+		Moshe
+		Moushe
+		Munir 
+		Murad
+		Mustafa
+		Narsai 
+		Naum
+		Ninos
+		Nukh
+		Paulos
+		Petros
+		Saadi 
+		Sanharib
+		Shalimoon 
+		Sharbel
+		Sharro
+		Shimun 
+		Shlemon 
+		Sohdo
+		Sorishu
+		Tolmai
+		Toma 
+		Yaghoub
+		Yomadan
+		Younan
+		Yusef
+		Zakay
 	}
 	female_common_first_names = {
-		Adiyiku
-		Ayshet
-		Bzcho
-		Elmeskhan
-		Fatme
-		Fayzet
-		Fyzh
-		Gupse
-		Gwaschemasche
-		Lashyn
-		Madiyne	
-		Mariyne
-		Marzet
-		Naghwe
-		Nakihat
-		Pizchine
-		Sakinat
-		Sataney
-		Temare
-		Zahret
-		Xwzchpagwe
-		Zhanwise
-		Zulima
-	}
+		Aisha
+		Amira
+		Anoush
+		Arram
+		Aaliyah
+		Bagiyeh
+		Bethani
+		Brula
+		Diyana
+		Dunya
+		Dwura
+		Emmita
+		Fatima
+		Hawah
+		Huda
+		Iman
+		Insoph
+		Istir
+		Jamila
+		Khannah
+		Layla
+		Marbita
+		Mariam
+		Marta
+		Nada
+		Nahrin
+		Nour 
+		Nura
+		Rebqah
+		Shafira
+		Shafri
+		Shamura
+		Shlama
+		Sussan
+		Tabitha
+		Talitha
+		Walita
+		Wardiya
+		Zarah
+	}	
 	noble_last_names = {
-		Berzeg
-		Zaneqo
-		Qalawebateqo
-		Aublaa
-		Diman
-		Shogenukov
-		Atazhuko
-		Boletoqo
-		Shirikhuqo
-		Akhedjaqo
-		Khirtsizhiqo
+		Malik
 	}
 	common_last_names = {
-		Achazh
-		Baga
-		Bzish
-		Berqa
-		Jarem
-		Yamezagh
-		Yarghuzh
-		Qakhw
-		Malish
-		Mafawud
-		Natkho
-		Namilhaqu
-		Watah
-		Sakhut
-		Thaqwakho
-		Tiqo
-		Tiw
-		Hapiy
-		Hatkh
-		Hatuw
-		Shiwmizh
-		Chemso
-		Abir
-		Bzac
-		Candar
-		Khapaye
-		Yiwnih
-		Qalebate
-		Khabatir
-		Tughuzhuqo
+		Abraham
+		Bet_Abram
+		Mikhail
+		Butrus
+		Rowil
+		Yohannan
 	}
-
 	ethnicities = {
-		1 = north_caucasian
+		1 = arab
 	}
-	graphics = european
+	graphics = arabic
 }
+
+
 
 #Sorbian
 zakonish={
@@ -1263,7 +1265,7 @@ glethach={
 	ethnicities = {
 		1 = asian
 	}
-	graphics = asian
+	graphics = european
 }
 
 
@@ -1481,7 +1483,7 @@ kusichaki={
 	ethnicities = {
 		1 = native_american
 	}
-	graphics = generic
+	graphics = european
 }
 
 
@@ -1954,6 +1956,525 @@ ceraunian={
 	}
 	ethnicities = {
 		1 = slavic
+	}
+	graphics = european
+}
+
+korafri={
+	color= hsv{ 0.52 0.09 0.55 }
+	religion = animist
+	traits = { human_heritage }
+	male_common_first_names={
+		Amadi
+		Andikan
+		Aren
+		Averey
+		Bahari
+		Bakari
+		Bash
+		Bayode
+		Bitalo
+		Chane
+		Chata
+		Dakarai
+		Davu
+		Dume
+		Fabunni
+		Gamba
+		Genet
+		Guban
+		Hajari
+		Haruni
+		Ife
+		Ilo
+		Issay
+		Jabari
+		Jabilo
+		Jaguan
+		Kabili
+		Kamwimbile
+		Kasim
+		Kenyi
+		Khairi
+		Makalo
+		Mansa
+		Morathi
+		Musawenkosi
+		Raimi
+		Razi
+		Reth
+	}
+	female_common_first_names = {
+		Jokate
+		Kajala
+		Khalila
+		Wema
+		Yobnesh
+	}	
+	noble_last_names = {
+		Kasanda
+		Watuta
+		Zwagendaba
+	}
+	common_last_names={
+		Bulungute
+		Mirambo
+		Mkasiwa
+		Mnywasele
+		Msemwa
+		Mudimbe
+	}
+	ethnicities = {
+		1 = central_african
+	}
+	graphics = african
+}
+
+zemvelo={
+	color= hsv{ 0.60 0.38 0.51 }
+	religion = animist
+	traits = { human_heritage}
+	male_common_first_names={
+		Mthuthuzeli
+		Nolizwe
+		Nonceba
+		Paki
+		Sipliwo
+		Thandiwe
+		Themba
+		Uuka
+	}
+	female_common_first_names = {
+		Bukelwa
+		Nogaweni
+		Nolitha
+		Noloyiso
+		Nolusapho
+		Nondwe
+		Nontathu
+		Nozamile
+		Thobeka
+		Vuyiswa
+	}	
+	noble_last_names = {
+		kaGcaleka
+		kaHintsa
+		kaPhalo
+		Sigcawu
+	}
+	common_last_names={
+		Behle
+		Dlamini
+		Dosini
+		Gqunu
+		Gxarha
+		Hegebe
+		Khawatu
+		Khumalo
+		Kwayi
+		Maduna
+		Mpemvu
+		Ncuthu
+		Qadi
+		Rhadebe
+		Sikhosana
+		Xesibe
+		Zangwa
+	}
+	ethnicities = {
+		1 = african
+	}
+	graphics = african
+}
+
+achonian={
+	color= hsv{ 0.40 0.03 0.58 }
+	religion = church_of_man
+	traits = { settler_coast_culture_group human_heritage }
+	male_common_first_names={
+		Alessandru
+		Beru
+		Duminku
+		Enrico
+		Evarist
+		Ferlad
+		Fernardu
+		Frangisku
+		Gabriel
+		Gorg
+		Joseph
+		Karmenu
+		Lawrenz
+		Marju
+		Mikiel
+		Ninu
+		Pawlu
+		Rokku
+		Saber
+		Ugo
+		Valent
+	}
+	female_common_first_names = {
+		Agatha
+		Aloisetta
+		Atanasia
+		Beatrici
+		Dorothea
+		Duminka
+		Elizabetta
+		Fawstina
+		Guljetta
+		Guzeppa
+		Helena
+		Karmena
+		Lucija
+		Margerita
+		Marthese
+		Therese
+		Vittorja
+	}	
+	noble_last_names = {
+		Cachia
+		Micallef
+		Moscati
+		Tabone
+	}
+	common_last_names={
+		Abela
+		Adami
+		Azzopardi
+		Boffa
+		Borg
+		Buhagiar
+		Cassar
+		Cumbo
+		Farrugia
+		Frendo
+		Gonzi
+		Howard
+		Mifsud
+		Mintoff
+		Mizzi
+		Muscat
+		Olivier
+		Puli
+		Pullicino
+		Strickland
+		Vella
+	}
+	graphics = european
+	ethnicities = {
+		1 = caucasian
+	}
+}
+
+achonian={
+	color= hsv{ 0.40 0.03 0.58 }
+	religion = church_of_man
+	traits = { settler_coast_culture_group human_heritage }
+	male_common_first_names={
+		Alessandru
+		Beru
+		Duminku
+		Enrico
+		Evarist
+		Ferlad
+		Fernardu
+		Frangisku
+		Gabriel
+		Gorg
+		Joseph
+		Karmenu
+		Lawrenz
+		Marju
+		Mikiel
+		Ninu
+		Pawlu
+		Rokku
+		Saber
+		Ugo
+		Valent
+	}
+	female_common_first_names = {
+		Agatha
+		Aloisetta
+		Atanasia
+		Beatrici
+		Dorothea
+		Duminka
+		Elizabetta
+		Fawstina
+		Guljetta
+		Guzeppa
+		Helena
+		Karmena
+		Lucija
+		Margerita
+		Marthese
+		Therese
+		Vittorja
+	}	
+	noble_last_names = {
+		Cachia
+		Micallef
+		Moscati
+		Tabone
+	}
+	common_last_names={
+		Abela
+		Adami
+		Azzopardi
+		Boffa
+		Borg
+		Buhagiar
+		Cassar
+		Cumbo
+		Farrugia
+		Frendo
+		Gonzi
+		Howard
+		Mifsud
+		Mintoff
+		Mizzi
+		Muscat
+		Olivier
+		Puli
+		Pullicino
+		Strickland
+		Vella
+	}
+	graphics = european
+	ethnicities = {
+		1 = caucasian
+	}
+}
+
+dorite={
+	color= hsv{ 0.16 0.39 0.95 }
+	religion = church_of_man
+	traits = { settler_coast_culture_group human_heritage }
+	male_common_first_names={
+		Aimery
+		Alphonse
+		Amedee
+		Auguste_Hilarion
+		Auguste-Marie
+		Bruno
+		Constant
+		Edouard-Marie
+		Felicite_Pierre
+		Florian
+		Gontran
+		Guillaume
+		Henri
+		Jakou
+		Jean
+		Jean-Denis
+		Julien
+		Michel-Augustin
+		Mordiern
+		Nathan
+		Paul
+		Philippe
+		Prudence-Guillaume
+		Raoul
+		Thomas
+	}
+	female_common_first_names = {
+		Adelaide
+		Anne
+		Caroline
+		Catherine
+		Elisabeth_2
+		Henriette
+		Jeanne
+		Julie
+		Louise
+		Pauline
+		Sophie
+		Tiphaine
+	}	
+	noble_last_names = {
+		Audren_de_Kerdrel
+		Berthois
+		d-Espinay
+		d-Oilliamson
+		de_Becdelievre
+		de_Boisgelin
+		de_Cintre
+		de_Cornulier
+		de_Botherel
+		de_Dieuleveult
+		de_Farcy
+		de_Goesbriand
+		de_Goulaine
+		de_Goyon
+		de_Gueheneuc
+		de_Kergariou
+		de_Keratry
+		de_Kergolay
+		de_Kersauson
+		de_Langle_de_Beaumanoir
+		de_Roujoux
+		des_Nos
+		du_Plusquellec
+		Espivent_de_La_Villesboisnet
+		Juchault
+		Lanjuinais
+		Magon
+	}
+	common_last_names={
+		Bedeau
+		Calvez
+		Dosser
+		Galand
+		Le_Bris
+		Le_Mouel
+		Quelfeter
+		Roper
+		Thoraval
+		Vallee
+		de_Saint-Andre
+	}
+	graphics = european
+	ethnicities = {
+		1 = caucasian
+	}
+}
+
+south_sea_ravager={
+	color= hsv { 0.9 0.4 0.47 }
+	religion = lords_of_avarice
+	traits = { human_heritage }
+	male_common_first_names={
+		Alberto
+		Alejandro
+		Alfredo
+		Ambrosio
+		Anselmo
+		Antonio
+		Arturo
+		Benigno
+		Buenaventura
+		Calixto
+		Carlos
+		Ceferino
+		Cesareo
+		Demetrio
+		Desiderio
+		Dionisio
+		Domingo
+		Eugenio_2
+		Federico
+		Felipe
+		Fernando
+		Fidel
+		Fulgencio
+		Gerardo
+		Gregorio
+		Guillermo
+		Horacio
+		Ignacio
+		Jacinto
+		Jacobo
+		Jesus
+		Joaquin
+		Jose
+		Jose_Miguel
+		Juan
+		Juan_Bautista
+		Manuel
+		Mariano
+		Mario
+		Maximo
+		Osvaldo
+		Pablo
+		Pedro
+		Rafael_2
+		Ramon
+		Raul_2
+		Romas
+		Salvador
+		Ulises
+		Wenceslao
+	}
+	female_common_first_names = {
+		Ana
+		Angelamaria
+		Isabel
+		Josefina
+		Luz
+		Maria
+		Mercedes
+		Milagros
+		Olivia
+		Palmira
+		Paula
+		Trinidad
+		Ulpiana
+		Victoria
+	}	
+	noble_last_names = {
+		Batista
+		Colon
+		de_Gordils
+		Maceo
+		Macias
+		de_Cespedes
+		de_Merino
+		de_Rojas
+		de_la_Rosa
+		de_Ortega
+		de_la_Torre
+	}
+	common_last_names={
+		Acosta
+		Alfau
+		Bayo
+		Baez
+		Cabral
+		Carmona
+		Castillo
+		Castro
+		Cisneros
+		Espaillat
+		Estrada
+		Estrella
+		Fernandez
+		Figuereo
+		Garcia
+		Gil
+		Gonzales
+		Gonzalez
+		Grau
+		Guillermo
+		Gomez
+		Henriquez
+		Herrera
+		Hevia
+		Laredo
+		Luperon
+		Machado
+		Mella
+		Mendieta
+		Moncada
+		Morales
+		Mota
+		Marquez
+		Mendez
+		Pelletier
+		Pimentel
+		Puello
+		Santana
+		Sosa
+		Trujillo
+		Valverde
+		Vasquez
+		Vazquez
+		Zayas
+	}
+	ethnicities = {
+		1 = east_african
 	}
 	graphics = european
 }

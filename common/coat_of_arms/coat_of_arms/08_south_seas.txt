@@ -1,1 +1,41 @@
-﻿
+﻿#Bonetide Raiders
+BTR = {
+	pattern = "pattern_solid.tga"
+	color1 = "black"
+
+	colored_emblem = {
+		texture = "ce_roe_pirate_three.dds"
+		color1 = "white"
+		color2 = "orange"
+		instance = { scale = { 1 1 } position = { 0.5 0.55 } }	
+	}	
+}
+
+#Crimson Corsairs
+CCO = {
+	pattern = "pattern_solid.tga"
+	color1 = "black"
+
+	colored_emblem = {
+		texture = "ce_roe_communist_pirate.dds"
+		color1 = "red_light"
+		instance = { scale = { 1 1 } position = { 0.5 0.55 } }	
+	}	
+
+	
+}
+
+#Silver Serpents
+IMA = {
+	pattern = "pattern_solid.tga"
+	color1 = "black"
+
+	colored_emblem = {
+		texture = "ce_roe_kraken_pirate.dds"
+		color1 = "yellow"
+		color2 = "grey"
+		instance = { scale = { 1 1 } position = { 0.5 0.55 } }	
+	}	
+
+	
+}

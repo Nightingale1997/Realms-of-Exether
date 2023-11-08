@@ -54,7 +54,7 @@
 	ethnicities = {
 		1 = native_american
 	}
-	graphics = generic
+	graphics = east_asian
 }
 
 gulf_naga={
@@ -96,7 +96,7 @@ gulf_naga={
 	ethnicities = {
 		1 = asian
 	}
-	graphics = asian
+	graphics = east_asian
 }
 
 jungle_naga={
@@ -152,7 +152,7 @@ jungle_naga={
 	ethnicities = {
 		1 = asian
 	}
-	graphics = asian
+	graphics = east_asian
 }
 
 nightwalker = {
@@ -207,7 +207,7 @@ nightwalker = {
 	ethnicities = {
 		1 = central_asian
 	}
-	graphics = asian
+	graphics = east_asian
 }
 
 wastecrawler = {
@@ -262,7 +262,77 @@ wastecrawler = {
 	ethnicities = {
 		1 = central_asian
 	}
-	graphics = asian
+	graphics = east_asian
+}
+
+gnoll={
+	color= hsv{ 0.58 0.51 0.96 }
+	religion = animist
+	traits = { monstrous_heritage }
+	male_common_first_names={
+		Amadi
+		Andikan
+		Aren
+		Averey
+		Bahari
+		Bakari
+		Bash
+		Bayode
+		Bitalo
+		Chane
+		Chata
+		Dakarai
+		Davu
+		Dume
+		Fabunni
+		Gamba
+		Genet
+		Guban
+		Hajari
+		Haruni
+		Ife
+		Ilo
+		Issay
+		Jabari
+		Jabilo
+		Jaguan
+		Kabili
+		Kamwimbile
+		Kasim
+		Kenyi
+		Khairi
+		Makalo
+		Mansa
+		Morathi
+		Musawenkosi
+		Raimi
+		Razi
+		Reth
+	}
+	female_common_first_names = {
+		Jokate
+		Kajala
+		Khalila
+		Wema
+		Yobnesh
+	}	
+	noble_last_names = {
+		Kasanda
+		Watuta
+		Zwagendaba
+	}
+	common_last_names={
+		Bulungute
+		Mirambo
+		Mkasiwa
+		Mnywasele
+		Msemwa
+		Mudimbe
+	}
+	ethnicities = {
+		1 = african
+	}
+	graphics = african
 }
 
 awakened={
@@ -293,5 +363,36 @@ awakened={
 	ethnicities = {
 		1 = central_asian
 	}
-	graphics = asian
+	graphics = east_asian
+}
+
+awakened_east={
+	color={ 122 127 111 }
+	religion = animist
+	traits = { beast monstrous_heritage }
+	male_common_first_names={
+		Gaghaz
+		Yori
+		Frong
+		Twaid
+		Vralk
+	}
+	female_common_first_names = {
+		Brahda
+		Droota
+		Kanka
+		Frifa
+	}	
+	noble_last_names = {
+		Longtooth
+		Longmane
+	}
+	common_last_names={
+		Grark
+		Howl
+	}
+	ethnicities = {
+		1 = central_asian
+	}
+	graphics = east_asian
 }
