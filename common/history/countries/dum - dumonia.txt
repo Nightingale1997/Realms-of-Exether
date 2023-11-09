@@ -1,0 +1,34 @@
+﻿COUNTRIES = {
+	c:DUM = {
+		effect_starting_technology_tier_2_tech = yes
+		effect_starting_politics_conservative = yes
+
+		add_technology_researched = atmospheric_engine
+
+		set_tax_level = medium
+
+		# Laws 
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy 
+		activate_law = law_type:law_freedom_of_conscience
+		activate_law = law_type:law_women_own_property
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_mercantilism
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_local_police
+		activate_law = law_type:law_public_schools
+		activate_law = law_type:law_censorship
+		activate_law = law_type:law_land_based_taxation
+
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 1
+		}
+		
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 2
+		}		
+	}
+}
