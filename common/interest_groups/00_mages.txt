@@ -63,7 +63,24 @@
 				limit = {
 					is_pop_type = bureaucrats
 				}
-				value = 150
+				value = 100
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_court_mages
+				}
+			}
+			add = {
+				desc = "POP_BUREAUCRATS_MAGES"
+				if = {
+					limit = {
+						is_pop_type = bureaucrats
+					}
+					value = 100
+				}
 			}
 		}
 
@@ -84,7 +101,7 @@
 				}
 			}
 			add = {
-				desc = "POP_BUREAUCRATS_ELECTED"
+				desc = "POP_BUREAUCRATS_MAGES"
 				if = {
 					limit = {
 						is_pop_type = bureaucrats
@@ -243,11 +260,11 @@
 				value = 3
 			}
 		}
-		# More likely with Appointed Bureaucrats
+		# More likely with Court Mages
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_appointed_bureaucrats
+					has_law = law_type:law_court_mages
 				}
 			}
 			multiply = {

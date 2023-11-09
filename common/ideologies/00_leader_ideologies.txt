@@ -258,6 +258,7 @@ ideology_republican_leader = {
 	
 	lawgroup_bureaucracy = {
 		law_elected_bureaucrats = approve
+		law_court_mages = neutral
 		law_appointed_bureaucrats = neutral
 		law_hereditary_bureaucrats = disapprove
 	}
@@ -2975,6 +2976,7 @@ ideology_positivist = {
 	lawgroup_bureaucracy = {
 		law_appointed_bureaucrats = strongly_approve
 		law_elected_bureaucrats = disapprove
+		law_court_mages = disapprove
 		law_hereditary_bureaucrats = strongly_disapprove
 	}
 	

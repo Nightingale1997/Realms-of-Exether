@@ -1931,19 +1931,28 @@ indian_royal_clothes = {
         base = 0
         modifier = {
             add = 200
-            scope:character ?= {
-                age > 10
-            }
+
             OR = {
-                AND = {
-                    indian_clothes_trigger = yes
-                    monarchy_clothes_trigger = yes
+                scope:pop ?= {
+                    is_pop_type = wizards
                 }
                 AND = {
-                    hindu_clothes_pop_trigger = yes
-                    clergy_clothes_pop_trigger = yes
+                    scope:character ?= {
+                        age > 10
+                    }
+                    OR = {
+                        AND = {
+                            indian_clothes_trigger = yes
+                            monarchy_clothes_trigger = yes
+                        }
+                        AND = {
+                            hindu_clothes_pop_trigger = yes
+                            clergy_clothes_pop_trigger = yes
+                        }
+                    }
                 }
             }
+
         }
     }
 }

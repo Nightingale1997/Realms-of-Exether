@@ -24,6 +24,7 @@
 	
 	lawgroup_bureaucracy = {
 		law_hereditary_bureaucrats = approve
+		law_court_mages = neutral
 		law_appointed_bureaucrats = neutral
 		law_elected_bureaucrats = disapprove
 	}
@@ -78,7 +79,8 @@ ideology_power_hungry = {
 	}
 	
 	lawgroup_bureaucracy = {
-		law_hereditary_bureaucrats = approve
+		law_court_mages = approve
+		law_hereditary_bureaucrats = neutral
 		law_appointed_bureaucrats = neutral
 		law_elected_bureaucrats = disapprove
 	}
@@ -342,6 +344,7 @@ ideology_meritocratic = {
 	lawgroup_bureaucracy = {
 		law_elected_bureaucrats = approve
 		law_appointed_bureaucrats = neutral		
+		law_court_mages = neutral
 		law_hereditary_bureaucrats = disapprove
 	}	
 	
@@ -471,6 +474,7 @@ ideology_anti_clerical = {
 		law_appointed_bureaucrats = approve
 		law_elected_bureaucrats = neutral	
 		law_hereditary_bureaucrats = disapprove
+		law_court_mages = disapprove
 	}
 
 	lawgroup_magic = {
