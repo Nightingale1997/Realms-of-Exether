@@ -417,7 +417,7 @@ BUILDINGS = {
       }
       create_building={
         building="building_textile_mills"
-        level=3
+        level=2
         reserves=1
         activate_production_methods={ "pm_handsewn_clothes" "pm_merchant_guilds_building_textile_mills" "pm_traditional_looms" "pm_craftsman_sewing" }
       }
@@ -515,11 +515,11 @@ BUILDINGS = {
         building="building_tooling_workshops"
         level=1
         reserves=1
-        activate_production_methods={ "pm_pig_iron" "pm_automation_disabled" "pm_privately_owned_building_tooling_workshops" }
+        activate_production_methods={ "pm_crude_tools" "pm_automation_disabled" "pm_privately_owned_building_tooling_workshops" }
       }
       create_building={
         building="building_iron_mine"
-        level=2
+        level=1
         reserves=1
         activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" "pm_merchant_guilds_building_iron_mine" }
       }
@@ -527,6 +527,14 @@ BUILDINGS = {
   }
 
   s:STATE_JARGALYO = {
+    region_state:TEM = {
+      create_building={
+        building="building_livestock_ranch"
+        level=2
+        reserves=1
+        activate_production_methods={ "pm_simple_ranch" "pm_butchering_tools" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+      }
+    }
   }
 
   s:STATE_SHINKANBATA = {
