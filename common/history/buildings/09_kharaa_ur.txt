@@ -453,7 +453,7 @@ BUILDINGS = {
       }
       create_building={
         building="building_silk_plantation"
-        level=1
+        level=2
         reserves=1
         activate_production_methods={ "default_building_silk_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
       }
@@ -461,7 +461,7 @@ BUILDINGS = {
         building="building_port"
         level=1
         reserves=1
-        activate_production_methods={ "pm_basic_port" }
+        activate_production_methods={ "pm_anchorage" }
       }
     }
   }
@@ -472,7 +472,7 @@ BUILDINGS = {
         building="building_port"
         level=1
         reserves=1
-        activate_production_methods={ "pm_basic_port" }
+        activate_production_methods={ "pm_anchorage" }
       }
     }
   }
