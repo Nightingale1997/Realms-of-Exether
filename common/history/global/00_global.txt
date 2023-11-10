@@ -22,6 +22,158 @@ GLOBAL = {
 		}
 	}
 
+	# Racial Techs
+
+	every_country = {
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = human_heritage
+				}
+			}
+			add_technology_researched = human_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = dwarf_heritage
+				}
+			}
+			add_technology_researched = dwarf_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = elf_heritage
+				}
+			}
+			add_technology_researched = elf_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = gnome_heritage
+				}
+			}
+			add_technology_researched = gnome_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = dragon_heritage
+				}
+			}
+			add_technology_researched = dragon_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = planetouched_heritage
+				}
+			}
+			add_technology_researched = planetouched_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = goblin_heritage
+				}
+			}
+			add_technology_researched = goblin_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = lizardfolk_heritage
+				}
+			}
+			add_technology_researched = lizard_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = giant_heritage
+				}
+			}
+			add_technology_researched = giant_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = mouse_heritage
+				}
+			}
+			add_technology_researched = mouse_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = orc_heritage
+				}
+			}
+			add_technology_researched = orc_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = halfling_heritage
+				}
+			}
+			add_technology_researched = halfling_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = bird_heritage
+				}
+			}
+			add_technology_researched = bird_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = mechanical_heritage
+				}
+			}
+			add_technology_researched = mechanical_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = hippo_heritage
+				}
+			}
+			add_technology_researched = hippo_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					AND = {
+						has_discrimination_trait = monstrous_heritage
+						NOT = { has_discrimination_trait = naga }
+						NOT = { has_discrimination_trait = awakened }
+						
+					}
+					
+				}
+			}
+			add_technology_researched = monster_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					OR = {
+						has_discrimination_trait = namkhazen_heritage
+						has_discrimination_trait = naga
+						has_discrimination_trait = awakened
+					}
+					
+				}
+			}
+			add_technology_researched = psionic_tech
+		}
+	}
+
 
 	#Event Variables
 	

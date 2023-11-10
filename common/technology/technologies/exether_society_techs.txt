@@ -1,0 +1,166 @@
+﻿astrology = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/astrology.dds"
+	category = society
+	
+	modifier = {
+		
+	}
+
+	unlocking_technologies = {
+		academia
+	}
+	
+	ai_weight = {
+		value = 3
+	}
+}
+
+psionic_theory = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/sericulture.dds"
+	category = society
+	
+	modifier = {
+		
+	}
+
+	unlocking_technologies = {
+		psychiatry
+	}
+	
+	ai_weight = {
+		value = 3
+	}
+}
+
+organized_adventuring = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/sericulture.dds"
+	category = society
+	
+	modifier = {
+		
+	}
+
+	unlocking_technologies = {
+		law_enforcement
+	}
+	
+	ai_weight = {
+		value = 2
+	}
+}
+
+supernatural_studies = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/sericulture.dds"
+	category = society
+	
+	modifier = {
+		astrology
+		empiricism
+	}
+
+	unlocking_technologies = {
+		astrology
+		empiricism
+	}
+	
+	ai_weight = {
+		value = 2
+	}
+}
+
+monster_hunters = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/sericulture.dds"
+	category = society
+	
+	modifier = {
+		
+	}
+
+	unlocking_technologies = {
+		colonization
+		organized_adventuring
+	}
+	
+	ai_weight = {
+		value = 2
+	}
+}
+
+potions = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/sericulture.dds"
+	category = society
+	
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		pharmaceuticals
+		supernatural_studies
+	}
+	
+	ai_weight = {
+		value = 2
+	}
+}
+
+thought_shielding = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/sericulture.dds"
+	category = society
+	
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		psionic_theory
+		potions
+	}
+	
+	ai_weight = {
+		value = 2
+	}
+}
+
+monstrous_eradication = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/sericulture.dds"
+	category = society
+	
+	modifier = {
+		
+	}
+
+	unlocking_technologies = {
+		civilizing_mission
+		monster_hunters
+	}
+	
+	ai_weight = {
+		value = 2
+	}
+}
+
+hero_worship = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/sericulture.dds"
+	category = society
+	
+	modifier = {
+		
+	}
+
+	unlocking_technologies = {
+		nationalism
+		monster_hunters
+	}
+	
+	ai_weight = {
+		value = 2
+	}
+}
