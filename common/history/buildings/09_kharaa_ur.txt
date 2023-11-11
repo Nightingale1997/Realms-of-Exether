@@ -153,33 +153,45 @@ BUILDINGS = {
   }
 
   s:STATE_ALBAIN = {
-    region_state:ZHU = {
-    }
   }
 
   s:STATE_GULTHYR = {
     region_state:ZHU = {
+      create_building={
+        building="building_whaling_station"
+        level=1
+        reserves=1
+        activate_production_methods={ "pm_simple_whaling" "pm_unrefrigerated" "pm_merchant_guilds_building_whaling_station" }
+      }
     }
   }
 
   s:STATE_THARKYR = {
     region_state:ZHU = {
+      create_building={
+        building="building_fishing_wharf"
+        level=1
+        reserves=1
+        activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+      }
     }
   }
 
   s:STATE_URTHOR = {
     region_state:ZHU = {
+      create_building={
+        building="building_fishing_wharf"
+        level=1
+        reserves=1
+        activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+      }
     }
   }
 
   s:STATE_KYRTHAL = {
-    region_state:QON = {
-    }
   }
 
   s:STATE_GROMKYL = {
-    region_state:QON = {
-    }
   }
 
   s:STATE_DROKYN = {
@@ -194,21 +206,43 @@ BUILDINGS = {
 
   s:STATE_ZURKYL = {
     region_state:QON = {
+      create_building={
+        building="building_logging_camp"
+        level=1
+        reserves=1
+        activate_production_methods={ "pm_simple_forestry" "pm_privately_owned_building_logging_camp" "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
+      }
     }
   }
 
   s:STATE_KYRGRIM = {
-    region_state:ZHU = {
-    }
   }
 
   s:STATE_DALSHTOK = {
     region_state:SHJ = {
+      create_building={
+        building="building_opium_plantation"
+        level=1
+        reserves=1
+        activate_production_methods={ "default_building_opium_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+      }
     }
   }
 
   s:STATE_BURZOK = {
     region_state:SHJ = {
+      create_building={
+        building="building_wheat_farm"
+        level=5
+        reserves=1
+        activate_production_methods={ "pm_simple_farming" "pm_privately_owned" "pm_tools_disabled" "pm_no_secondary" }
+      }
+      create_building={
+        building="building_opium_plantation"
+        level=1
+        reserves=1
+        activate_production_methods={ "default_building_opium_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+      }
     }
   }
 
@@ -219,61 +253,141 @@ BUILDINGS = {
 
   s:STATE_GOLMOK = {
     region_state:QON = {
+      create_building={
+        building="building_logging_camp"
+        level=1
+        reserves=1
+        activate_production_methods={ "pm_simple_forestry" "pm_privately_owned_building_logging_camp" "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
+      }
     }
   }
 
   s:STATE_KRAGKYL = {
     region_state:QON = {
+      create_building={
+        building="building_logging_camp"
+        level=1
+        reserves=1
+        activate_production_methods={ "pm_simple_forestry" "pm_privately_owned_building_logging_camp" "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
+      }
     }
   }
 
   s:STATE_DRUKYN = {
     region_state:QON = {
+      create_building={
+        building="building_logging_camp"
+        level=1
+        reserves=1
+        activate_production_methods={ "pm_simple_forestry" "pm_privately_owned_building_logging_camp" "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
+      }
     }
   }
 
   s:STATE_KAZTHOK = {
     region_state:SHJ = {
+      create_building={
+        building="building_wheat_farm"
+        level=10
+        reserves=1
+        activate_production_methods={ "pm_simple_farming" "pm_privately_owned" "pm_tools_disabled" "pm_no_secondary" }
+      }
     }
   }
 
   s:STATE_BAZKYL = {
-    region_state:SHJ = {
-    }
   }
 
   s:STATE_KYRTHOR = {
     region_state:QON = {
+      create_building={
+        building="building_logging_camp"
+        level=1
+        reserves=1
+        activate_production_methods={ "pm_simple_forestry" "pm_privately_owned_building_logging_camp" "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
+      }
+      create_building={
+        building="building_construction_sector"
+        level=1
+        reserves=1
+        activate_production_methods={ "pm_wooden_buildings" }
+      }
     }
   }
 
   s:STATE_GNAKYR = {
     region_state:SHJ = {
+      create_building={
+        building="building_logging_camp"
+        level=1
+        reserves=1
+        activate_production_methods={ "pm_simple_forestry" "pm_privately_owned_building_logging_camp" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
+      }
     }
   }
 
   s:STATE_RAZOK = {
     region_state:SHJ = {
+      create_building={
+        building="building_wheat_farm"
+        level=5
+        reserves=1
+        activate_production_methods={ "pm_simple_farming" "pm_privately_owned" "pm_tools_disabled" "pm_no_secondary" }
+      }
     }
   }
 
   s:STATE_KYRGRUK = {
     region_state:SHJ = {
+      create_building={
+        building="building_tobacco_plantation"
+        level=5
+        reserves=1
+        activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+      }
+      create_building={
+        building="building_opium_plantation"
+        level=3
+        reserves=1
+        activate_production_methods={ "default_building_opium_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+      }
     }
   }
 
   s:STATE_DORAZ = {
-    region_state:SHJ = {
-    }
   }
 
   s:STATE_BALDBAN = {
     region_state:SHJ = {
+      create_building={
+        building="building_government_administration"
+        level=27
+        reserves=1
+        activate_production_methods={ "pm_simple_organization" }
+      }
+      create_building={
+        building="building_textile_mills"
+        level=1
+        reserves=1
+        activate_production_methods={ "pm_handsewn_clothes" "pm_merchant_guilds_building_textile_mills" "pm_traditional_looms" "pm_craftsman_sewing" }
+      }
     }
   }
 
   s:STATE_KRAKYR = {
     region_state:SHJ = {
+      create_building={
+        building="building_logging_camp"
+        level=1
+        reserves=1
+        activate_production_methods={ "pm_simple_forestry" "pm_privately_owned_building_logging_camp" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
+      }
+      create_building={
+        building="building_construction_sector"
+        level=1
+        reserves=1
+        activate_production_methods={ "pm_wooden_buildings" }
+      }
     }
   }
 
@@ -289,12 +403,22 @@ BUILDINGS = {
 
   s:STATE_KYRKAZ = {
     region_state:ZHU = {
+      create_building={
+        building="building_tea_plantation"
+        level=2
+        reserves=1
+        activate_production_methods={ "default_building_tea_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+      }
+      create_building={
+        building="building_port"
+        level=1
+        reserves=1
+        activate_production_methods={ "pm_anchorage" }
+      }
     }
   }
 
   s:STATE_BAIZOR = {
-    region_state:ZHU = {
-    }
   }
 
   s:STATE_KAZKYL = {
@@ -374,17 +498,25 @@ BUILDINGS = {
 
   s:STATE_HOKUKHAN = {
     region_state:YOK = {
+      create_building={
+        building="building_tea_plantation"
+        level=5
+        reserves=1
+        activate_production_methods={ "default_building_tea_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+      }
+      create_building={
+        building="building_wheat_farm"
+        level=10
+        reserves=1
+        activate_production_methods={ "pm_simple_farming" "pm_privately_owned" "pm_tools_disabled" "pm_no_secondary" }
+      }
     }
   }
 
   s:STATE_TSURUKHAN = {
-    region_state:YOK = {
-    }
   }
 
   s:STATE_ARASHIHARA = {
-    region_state:YOK = {
-    }
   }
 
   s:STATE_KITAYAMAO = {
@@ -484,17 +616,19 @@ BUILDINGS = {
   }
 
   s:STATE_KHULEKI = {
-    region_state:YOK = {
-    }
   }
 
   s:STATE_KAMITAI = {
-    region_state:YOK = {
-    }
   }
 
   s:STATE_HARUGAWASAI = {
     region_state:YOK = {
+      create_building={
+        building="building_wheat_farm"
+        level=20
+        reserves=1
+        activate_production_methods={ "pm_simple_farming" "pm_privately_owned" "pm_tools_disabled" "pm_no_secondary" }
+      }
     }
   }
 
@@ -538,22 +672,44 @@ BUILDINGS = {
   }
 
   s:STATE_SHINKANBATA = {
-    region_state:YOK = {
-    }
   }
 
   s:STATE_HIRAKHANJO = {
     region_state:YOK = {
+      create_building={
+        building="building_government_administration"
+        level=18
+        reserves=1
+        activate_production_methods={ "pm_simple_organization" }
+      }
+      create_building={
+        building="building_livestock_ranch"
+        level=3
+        reserves=1
+        activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+      }
     }
   }
 
   s:STATE_MONGOGAWA = {
     region_state:YOK = {
+      create_building={
+        building="building_fishing_wharf"
+        level=4
+        reserves=1
+        activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+      }
     }
   }
 
   s:STATE_HAYAKHAMURA = {
     region_state:YOK = {
+      create_building={
+        building="building_fishing_wharf"
+        level=3
+        reserves=1
+        activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+      }
     }
   }
 
