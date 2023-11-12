@@ -1,0 +1,21 @@
+﻿building_adventuring_guild= {
+	building_group = bg_adventuring
+
+	city_type = city
+	
+	levels_per_mesh = 5
+
+	unlocking_technologies = {
+		organized_adventuring
+	}
+
+	production_method_groups = {
+		pmg_base_building_adventuring_guild
+		pmg_adventuring_focus
+		pmg_ownership_building_adventuring_guild
+	}
+	
+	texture = "gfx/interface/icons/building_icons/adventuring_guild.dds"
+
+	required_construction = construction_cost_medium
+}

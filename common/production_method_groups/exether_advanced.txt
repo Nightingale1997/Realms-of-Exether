@@ -1,0 +1,29 @@
+﻿pmg_base_building_adventuring_guild = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_traditional_adventuring
+		pm_pest_control
+		pm_questing_brigades
+		pm_glory_seekers
+	}
+}
+
+pmg_ownership_building_adventuring_guild = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	production_methods = {
+		pm_traditional_sponsorship
+		pm_private_sponsorship
+		pm_independent_adventurers
+	}
+}
+
+pmg_adventuring_focus = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_trophy_hunting
+		pm_community_service
+		pm_objects_of_power
+	}
+}

@@ -1,0 +1,191 @@
+﻿pm_traditional_adventuring = {
+	texture = "gfx/interface/icons/production_method_icons/traditional_adventuring.dds"
+
+	building_modifiers = {
+		workforce_scaled = { # 500 profit
+			goods_input_small_arms_add = 10 # 300
+			goods_output_trinkets_add = 4 # 800
+		}
+	}
+}
+
+pm_pest_control = {
+	texture = "gfx/interface/icons/production_method_icons/realist_art.dds"
+
+	unlocking_technologies = {
+		monster_hunting
+	}
+
+	building_modifiers = {
+
+		workforce_scaled = { # 550 profit
+			goods_input_small_arms_add = 15 # 450
+			goods_output_trinkets_add = 5 # 1000
+		}
+	}
+}
+
+pm_questing_brigades = {
+	texture = "gfx/interface/icons/production_method_icons/photographic_art.dds"
+
+	unlocking_technologies = {
+		hero_worship
+	}
+
+	building_modifiers = {
+
+		workforce_scaled = { # 630 profit
+			goods_input_small_arms_add = 15 # 450
+			goods_input_tools_add = 8 # 320
+
+			goods_output_trinkets_add = 7 # 1400
+		}
+	}
+}
+
+pm_glory_seekers = {
+	texture = "gfx/interface/icons/production_method_icons/film_art.dds"
+
+	unlocking_technologies = {
+		hero_worship
+	}
+
+	building_modifiers = {
+
+		workforce_scaled = { # 690 profit
+			goods_input_tools_add = 10 # 400
+			goods_input_small_arms_add = 15 # 450
+			goods_input_electricity_add = 2 # 60
+
+			goods_output_trinkets_add = 8 # 1600
+		}
+	}
+
+	required_input_goods = electricity
+}
+
+pm_traditional_sponsorship = {
+	texture = "gfx/interface/icons/production_method_icons/ownership_aristocrats.dds"
+
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_aristocrats_add = 100
+			building_employment_adventurers_add = 900
+			building_employment_clerks_add = 3000
+			building_employment_laborers_add = 1000
+		}
+
+		unscaled = {
+			building_aristocrats_shares_add = 10
+			building_adventurers_shares_add = 2
+		}
+	}
+}
+
+pm_private_sponsorship = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+
+	unlocking_technologies = {
+		realism
+	}
+
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 100
+			building_employment_adventurers_add = 900
+			building_employment_clerks_add = 3000
+			building_employment_laborers_add = 1000
+		}
+
+		unscaled = {
+			building_capitalists_shares_add = 10
+			building_adventurers_shares_add = 2
+		}
+	}
+}
+
+pm_independent_adventurers = {
+	texture = "gfx/interface/icons/production_method_icons/independent_artists.dds"
+
+	unlocking_technologies = {
+		hero_worship
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_adventurers_add = 2000
+			building_employment_clerks_add = 2000
+			building_employment_laborers_add = 1000		
+		}
+
+		unscaled = {
+			building_adventurers_shares_add = 10
+			building_clerks_shares_add = 2
+		}
+	}
+}
+
+pm_trophy_hunting = {
+	texture = "gfx/interface/icons/production_method_icons/trophy_hunting.dds"
+	unscaled = {
+		building_adventurers_mortality_mult = 0.1
+	}
+}
+
+pm_community_service = {
+	texture = "gfx/interface/icons/production_method_icons/community_service.dds"
+
+	unlocking_technologies = {
+		
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_trinkets_add = -2
+			goods_output_services_add = 5
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 100
+			building_employment_clerks_add = 200
+			building_employment_laborers_add = -500
+		}
+	}
+}
+
+pm_objects_of_power = {
+	texture = "gfx/interface/icons/production_method_icons/public_motor_carriages.dds"
+
+	unlocking_technologies = {
+		
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_trinkets_add = -2
+			goods_output_wishstone_add = 2
+		}
+
+		level_scaled = {
+			building_employment_engineers_add = 200
+			building_employment_machinists_add = 400
+			building_employment_laborers_add = -1000
+		}
+
+		unscaled = {
+			building_adventurers_mortality_mult = 0.3
+			building_machinists_mortality_mult = 0.2
+			building_engineers_mortality_mult = 0.1
+		}
+	}
+}

@@ -842,7 +842,6 @@ indian_clothes_pop_trigger = {
 			culture = {
 				has_discrimination_trait = dwarf_heritage
 			} 
-			is_pop_type = wizards
 		}
 	}
 }
@@ -916,7 +915,11 @@ upper_clothes_pop_trigger = {
 soldier_clothes_pop_trigger = {
      exists = scope:pop
      scope:pop = {
-		is_pop_type = soldiers
+		OR = {
+			is_pop_type = adventurers
+			is_pop_type = soldiers
+		}
+		
      }
 }
 

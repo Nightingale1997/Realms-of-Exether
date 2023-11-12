@@ -1,0 +1,64 @@
+﻿building_cloud_collectors = {
+	building_group = bg_cloud_collecting
+	texture = "gfx/interface/icons/building_icons/cloud_collectors.dds"
+	city_type = mine
+	levels_per_mesh = 5
+	required_construction = construction_cost_medium
+	terrain_manipulator = mining
+	
+	unlocking_technologies = {
+		shaft_mining
+	}
+
+	production_method_groups = {
+		pmg_mining_equipment_building_iron_mine
+		pmg_explosives_building_iron_mine
+		pmg_steam_automation_building_iron_mine
+		pmg_train_automation_building_iron_mine
+		pmg_ownership_capital_building_iron_mine
+	}
+ }
+
+ building_wishstone_fields = {
+	building_group = bg_wishstone_extraction
+	texture = "gfx/interface/icons/building_icons/wishstone_fields.dds"
+	city_type = mine
+	levels_per_mesh = 5
+	required_construction = construction_cost_medium
+
+	unlocking_technologies = {
+		pumpjacks
+	}
+	
+	production_method_groups = {
+		pmg_base_building_oil_rig
+		pmg_transportation_building_oil_rig
+		pmg_ownership_capital_building_oil_rig
+	}
+	
+}
+
+building_wishstone_reefs = {
+	building_group = bg_wishstone_extraction_sea
+	texture = "gfx/interface/icons/building_icons/wishstone_reefs.dds"
+	city_type = port
+	levels_per_mesh = 5
+	required_construction = construction_cost_medium
+
+	unlocking_technologies = {
+		pumpjacks
+	}
+	
+	production_method_groups = {
+		pmg_base_building_oil_rig
+		pmg_transportation_building_oil_rig
+		pmg_ownership_capital_building_oil_rig
+	}
+
+	possible = {
+		error_check = {
+			severity = fail
+			is_sea_adjacent = yes
+		}
+	}
+}
