@@ -53,129 +53,15 @@ dynamic_paris_commune_drift = {
 	type = country
 	text = {
 		trigger = {
-			global_var:paris_commune_progress_drift = -10
+			global_var:paris_commune_progress_drift < 0
 		}
-		localization_key = pc_tick_n10
+		localization_key = pc_tick_retreat
 	}
 	text = {
 		trigger = {
-			global_var:paris_commune_progress_drift = -9
+			global_var:paris_commune_progress_drift >= 0
 		}
-		localization_key = pc_tick_n9
-	}
-	text = {
-		trigger = {
-			global_var:paris_commune_progress_drift = -8
-		}
-		localization_key = pc_tick_n8
-	}
-	text = {
-		trigger = {
-			global_var:paris_commune_progress_drift = -7
-		}
-		localization_key = pc_tick_n7
-	}
-	text = {
-		trigger = {
-			global_var:paris_commune_progress_drift = -6
-		}
-		localization_key = pc_tick_n6
-	}
-	text = {
-		trigger = {
-			global_var:paris_commune_progress_drift = -5
-		}
-		localization_key = pc_tick_n5
-	}
-	text = {
-		trigger = {
-			global_var:paris_commune_progress_drift = -4
-		}
-		localization_key = pc_tick_n4
-	}
-	text = {
-		trigger = {
-			global_var:paris_commune_progress_drift = -3
-		}
-		localization_key = pc_tick_n3
-	}
-	text = {
-		trigger = {
-			global_var:paris_commune_progress_drift = -2
-		}
-		localization_key = pc_tick_n2
-	}
-	text = {
-		trigger = {
-			global_var:paris_commune_progress_drift = -1
-		}
-		localization_key = pc_tick_n1
-	}
-	text = {
-		trigger = {
-			global_var:paris_commune_progress_drift = 0
-		}
-		localization_key = pc_tick_0
-	}
-	text = {
-		trigger = {
-			global_var:paris_commune_progress_drift = 1
-		}
-		localization_key = pc_tick_1
-	}
-	text = {
-		trigger = {
-			global_var:paris_commune_progress_drift = 2
-		}
-		localization_key = pc_tick_2
-	}
-	text = {
-		trigger = {
-			global_var:paris_commune_progress_drift = 3
-		}
-		localization_key = pc_tick_3
-	}
-	text = {
-		trigger = {
-			global_var:paris_commune_progress_drift = 4
-		}
-		localization_key = pc_tick_4
-	}
-	text = {
-		trigger = {
-			global_var:paris_commune_progress_drift = 5
-		}
-		localization_key = pc_tick_5
-	}
-	text = {
-		trigger = {
-			global_var:paris_commune_progress_drift = 6
-		}
-		localization_key = pc_tick_6
-	}
-	text = {
-		trigger = {
-			global_var:paris_commune_progress_drift = 7
-		}
-		localization_key = pc_tick_7
-	}
-	text = {
-		trigger = {
-			global_var:paris_commune_progress_drift = 8
-		}
-		localization_key = pc_tick_8
-	}
-	text = {
-		trigger = {
-			global_var:paris_commune_progress_drift = 9
-		}
-		localization_key = pc_tick_9
-	}
-	text = {
-		trigger = {
-			global_var:paris_commune_progress_drift = 10
-		}
-		localization_key = pc_tick_10
+		localization_key = pc_tick_advance
 	}
 }
 

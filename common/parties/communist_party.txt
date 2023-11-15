@@ -40,11 +40,13 @@
 		leader = { # fascists, conservatives, and capitalists hate communism
 			NOR = {
 				has_ideology = ideology:ideology_fascist
+				has_ideology = ideology:ideology_integralist
 				has_ideology = ideology:ideology_ethno_nationalist
 				has_ideology = ideology:ideology_market_liberal
 				has_ideology = ideology:ideology_traditionalist
 				has_ideology = ideology:ideology_royalist
 				has_ideology = ideology:ideology_theocrat
+				has_ideology = ideology:ideology_corporatist_leader
 			}
 		}
 	}
@@ -305,16 +307,75 @@
 		}
 		if = { # republican
 			limit = {
-				OR = {
-					has_ideology = ideology:ideology_republican
-					has_ideology = ideology:ideology_populist
-					leader = {
-						OR = {
-							has_ideology = ideology:ideology_atheist
-							has_ideology = ideology:ideology_republican_leader
-							has_ideology = ideology:ideology_radical
-						}
-					}
+				scope:number = 1
+				is_powerful = no
+				is_marginal = no
+			}
+			multiply = {
+				value = 2
+				desc = "from_influential_supporting_member"
+			}
+		}
+		else_if = {
+			limit = {
+				scope:number = 2
+			}
+			multiply = {
+				value = 0.5
+				desc = "from_two_prior_members"
+			}
+		}
+		else_if = {
+			limit = {
+				scope:number = 3
+			}
+			multiply = {
+				value = 0.25
+				desc = "from_three_prior_members"
+			}
+		}
+		else_if = {
+			limit = {
+				scope:number > 3
+			}
+			multiply = {
+				value = 0.1
+				desc = "from_more_than_three_prior_members"
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+	         		has_variable = only_valid_party
+	         	}
+	         	NOT = {
+			        owner.var:only_valid_party = {
+			        	is_party_type = communist_party
+			        }
+			    }
+			}
+			multiply = {
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				leader = {
+					has_variable = caudillo_communist
+				}
+			}
+			add = {
+				value = 20
+				desc = "caudillo_support"
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+	         		has_variable = only_valid_party
+	         	}
+				owner.var:only_valid_party = {
+					is_party_type = communist_party
 				}
 				owner = {
 					OR = {

@@ -26,6 +26,16 @@
 			set_ig_trait = ig_trait:ig_trait_industrial_organizers
 			set_ig_trait = ig_trait:ig_trait_solidarity
 		}
+		
+		### Socialism
+		if = {
+			limit = {
+				has_technology_researched = socialism
+			}
+			ig:ig_trade_unions = {
+				add_ideology = ideology_socialist
+			}
+		}
 	}
 
 	on_disable = {}

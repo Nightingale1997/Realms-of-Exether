@@ -82,6 +82,68 @@
 	}
 }
 
+ai_strategy_plantation_economy = {
+	icon = "gfx/interface/icons/ai_strategy_icons/agricultural_expansion.dds"
+	
+	type = administrative
+
+	goods_stances = {
+		fruit = { stance = wants_export }
+		fabric = { stance = wants_export }
+		sugar = { stance = wants_export }
+		coffee = { stance = wants_export }
+		tea = { stance = wants_export }
+		opium = { stance = wants_export }
+		tobacco = { stance = wants_export }
+		dye = { stance = wants_export }
+		silk = { stance = wants_export }
+	}	
+
+	building_group_weights = {
+		bg_plantations = 2.0
+		bg_manufacturing = 0.5
+	}
+
+	possible = {
+		OR = {
+			capital.region = sr:sanbang
+		}
+	}
+	
+	weight = {
+		value = 10			
+		
+		if = {
+			limit = { 
+				OR = {
+					capital.region = sr:sanbang
+				}
+			}
+			add = 20
+		}
+
+		if = {
+			limit = { is_country_type = unrecognized }
+			multiply = 0.5
+		}
+
+		if = {
+			limit = { 
+				exists = ig:ig_landowners
+				ig:ig_landowners = { is_powerful = yes } 
+			}
+			multiply = 1.5
+		}	
+		
+		if = {
+			limit = {
+				has_journal_entry = je_agricultural_development
+			}
+			add = 45
+		}
+	}
+}
+
 ai_strategy_resource_expansion = {
 	icon = "gfx/interface/icons/ai_strategy_icons/resource_expansion.dds"
 	

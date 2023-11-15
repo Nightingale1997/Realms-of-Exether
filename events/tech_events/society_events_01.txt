@@ -60,7 +60,7 @@ dt_society_events.1 = {
 			has_technology_researched = labor_movement
 			NOT = { has_technology_researched = socialism }
 		}
-		add_technology_progress = { progress = 4500 technology = socialism }
+		add_technology_progress = { progress = 4150 technology = socialism }
 	}
 	option = {
 		name = dt_society_events.1.c # we need a more pragmatic approach
@@ -68,7 +68,7 @@ dt_society_events.1 = {
 			has_technology_researched = psychiatry
 			NOT = { has_technology_researched = philosophical_pragmatism }
 		}
-		add_technology_progress = { progress = 4500 technology = philosophical_pragmatism }
+		add_technology_progress = { progress = 4150 technology = philosophical_pragmatism }
 	}
 }
 
@@ -132,7 +132,7 @@ dt_society_events.2 = {
 			NOT = { has_technology_researched = camera }
 			can_research = camera
 		}
-		add_technology_progress = { progress = 4500 technology = camera }
+		add_technology_progress = { progress = 4150 technology = camera }
 	}
 
 	option = {

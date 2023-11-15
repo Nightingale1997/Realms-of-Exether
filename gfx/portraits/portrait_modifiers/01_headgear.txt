@@ -44,7 +44,15 @@
                 add = 100
                 european_clothes_trigger = yes
                 slavic_clothes_trigger = no
-                south_american_clothes_character_trigger = no
+                NAND = {
+                    south_american_clothes_character_trigger = yes
+                    scope:character ?= {
+                        NOR = {
+                            culture = cu:sulista
+                            culture = cu:paulista
+                        }
+                    }
+                }
                 agitator_character_trigger = yes
             }
         }
@@ -64,10 +72,60 @@
             modifier = {
                 add = 100
                 south_american_clothes_character_trigger = yes
+                scope:character ?= {
+                    NOR = {
+                        culture = cu:brazilian
+                        culture = cu:sulista
+                        culture = cu:amazonic
+                        culture = cu:paulista
+                        culture = cu:nordestino
+                        culture = cu:afro_brazilian
+                    }
+                }
                 OR = {
                     agitator_character_trigger = yes
                     scope:character ?= {
                         has_trait = bandit
+                    }
+                }
+            }
+        }
+    }
+
+    brazilian_agitator_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = male_headgear_gaucho_
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 90000
+                OR = {
+                    scope:character ?= {
+                        has_template = BRZ_virgulino_ferreira
+                    }
+                    scope:character ?= {
+                        AND = {
+                            exists = cu:nordestino
+                            culture = cu:nordestino
+                        }
+                        OR = {
+                            has_role = agitator
+                            AND = { # Monarchs don't get to wear this hat, but republican rulers can
+                                NAND = {
+                                    is_ruler = yes
+                                    home_country ?= {
+                                        has_law = law_type:law_monarchy
+                                    }
+                                }
+                                has_trait = bandit
+                            }
+                        }
                     }
                 }
             }
@@ -358,6 +416,7 @@
                 american_clothes_trigger = no
                 british_empire_clothes_trigger = no
                 french_empire_clothes_trigger = no
+                russian_empire_clothes_trigger = no
                 german_clothes_trigger = no
                 NOT = {
                     scope:character ?= {
@@ -606,13 +665,191 @@
         }
     }
 
+    russian_military_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = russian_military_headgear
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                russian_empire_clothes_trigger = yes
+                OR = {
+                    scope:character = {
+                        has_role = general
+                    }
+                    AND = {
+                        politician_clothes_trigger = yes
+                        armed_forces_clothes_trigger = yes
+                    }
+                }
+                agitator_character_trigger = no
+            }
+        }
+    }
+
+    korean_empire_military_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = korean_empire_military_headgear
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 1200
+                OR = {
+                    AND = {
+                        scope:character ?= {
+                            culture = cu:korean
+                            owner = {
+                                has_variable = KOR_korean_empire_declared
+                            }
+                        }
+                        OR = {
+                            scope:character = {
+                                has_role = general
+                            }
+                            AND = {
+                                politician_clothes_trigger = yes
+                                armed_forces_clothes_trigger = yes
+                                scope:character ?= {
+                                    NOT = { has_ideology = ideology:ideology_traditionalist }
+                                }
+                            }
+                        }
+                        agitator_character_trigger = no
+                    }
+                    AND = {
+                        scope:pop ?= {
+                            culture = cu:korean
+                            owner = {
+                                has_variable = KOR_korean_empire_declared
+                            }
+                        }
+                        OR = {
+                            soldier_clothes_pop_trigger = yes
+                            officers_clothes_pop_trigger = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    brazilian_military_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = brazilian_military_headgear
+                accessory = male_headgear_european_military_02_blue
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000
+                scope:character ?= {
+                    exists = c:BRZ
+                    home_country = {
+                        OR = {
+                            AND = {
+                                c:BRZ = this
+                                is_subject = no # preventing uniform conflicts if BRZ becomes a subject of another country with puppet uniforms
+                            }
+                            is_subject_of = c:BRZ
+                        }       
+                    }
+                    OR = {
+                        has_role = general
+                        AND = {
+                            has_role = politician
+                            is_ruler = no
+                            is_interest_group_type = ig_armed_forces
+                        }
+                    }
+                    agitator_character_trigger = no
+                }                
+            }
+        }
+    }
+
+    brazilian_officers_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = brazilian_military_headgear
+                range = { 0 0.66 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                scope:pop ?= {
+                    exists = c:BRZ
+                    home_country = {
+                        OR = {
+                            AND = {
+                                c:BRZ = this
+                                is_subject = no # preventing uniform conflicts if BRZ becomes a subject of another country with puppet uniforms
+                            }
+                            is_subject_of = c:BRZ
+                        }       
+                    }
+                    is_pop_type = officers
+                }                
+            }
+        }
+    }
+
+    brazilian_soldiers_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = brazilian_military_headgear
+                range = { 0.34 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                scope:pop ?= {
+                    exists = c:BRZ
+                    home_country = {
+                        OR = {
+                            AND = {
+                                c:BRZ = this
+                                is_subject = no # preventing uniform conflicts if BRZ becomes a subject of another country with puppet uniforms
+                            }
+                            is_subject_of = c:BRZ
+                        }       
+                    }
+                    is_pop_type = soldiers
+                }                
+            }
+        }
+    }
+
     garibaldi_military_headgear = {
         dna_modifiers = {
             accessory = {
                 mode = add
                 gene = headgear
                 template = french_military_headgear
-                range = { 0.4 0.6 } # Only selecting the red kepi with gold embroidery
+                accessory = male_headgear_european_military_02_red # Only selecting the red kepi with gold embroidery
             }
         }
         weight = {
@@ -814,6 +1051,38 @@
                 AND = {
                     arabic_clothes_trigger = yes
                     arabic_fez_trigger = yes
+                }
+            }
+            modifier = {
+                add = 90000
+                OR = {
+                    scope:character ?= {
+                        exists = owner
+                        exists = c:TUR
+                        owner = {
+                            c:TUR = this
+                        }
+                        OR = {
+                            AND = {
+                                has_role = general
+                                is_ruler = no
+                            }
+                            monarchy_clothes_trigger = yes
+                            AND = {
+                                armed_forces_clothes_trigger = yes
+                                politician_clothes_trigger = yes
+                            }
+                        }
+                        is_female = no
+                    }
+                    scope:pop ?= {
+                        exists = owner
+                        exists = c:TUR
+                        owner = {
+                            c:TUR = this
+                        }
+                        is_pop_type = officers
+                    }
                 }
             }
         }

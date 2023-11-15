@@ -1,6 +1,8 @@
 ﻿je_electric_underground_railway = {
 	icon = "gfx/interface/icons/event_icons/event_industry.dds"
 
+	group = je_group_technology
+
 	is_shown_when_inactive = {
 		is_player = yes
 		has_technology_researched = electrical_generation

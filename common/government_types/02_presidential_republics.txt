@@ -253,6 +253,9 @@ gov_junta = {
 			has_law = law_type:law_mass_conscription
 			has_law = law_type:law_professional_army
 		}
+		ig:ig_armed_forces = {
+			is_in_government = yes
+		}
 	}
 
 	on_government_type_change = {
@@ -298,6 +301,15 @@ gov_presidential_democracy = {
 		NOR = { 
 			has_law = law_type:law_single_party_state
 			has_law = law_type:law_technocracy
+			AND = {
+				country_has_primary_culture = cu:brazilian
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_landed_voting
+				OR = {
+					has_law = law_type:law_tenant_farmers
+					has_law = law_type:law_serfdom
+				}
+			}
 		}
 	}
 

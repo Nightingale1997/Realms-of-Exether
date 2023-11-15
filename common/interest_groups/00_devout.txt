@@ -47,7 +47,17 @@
 				add_ideology = ideology_luddite_devout
 			}
 		}
-
+		
+		### Corporatism
+		if = {
+			limit = {
+				has_technology_researched = corporatism
+			}
+			ig:ig_devout = {
+				remove_ideology = ideology_pious
+				add_ideology = ideology_corporatist
+			}
+		}
 	}
 	on_disable = {}
 	on_character_ig_membership = {
@@ -147,6 +157,22 @@
 			}
 		}
 		
+		if = {
+			limit = {
+				owner = {
+					has_technology_researched = corporatism
+					NOT = {
+						has_law = law_type:law_total_separation
+						has_law = law_type:law_state_atheism
+					}
+				}
+			}
+			multiply = {
+				desc = "CORPORATISM_TECH"
+				value = 1.25
+			}
+		}
+
 		add = {
 			desc = "POP_LITERACY"
 			this = {

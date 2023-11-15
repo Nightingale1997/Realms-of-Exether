@@ -203,7 +203,33 @@ ai_strategy_territorial_expansion = {
 	wargoal_weights = {
 		conquer_state = 1.5
 		return_state = 1.5
-	}	
+	}
+
+	secret_goal_scores = {
+		conquer = {
+			if = {
+				limit = {
+					can_reach_target_country = yes
+					has_strategic_adjacency = scope:target_country
+					scope:target_country.country_rank <= root.country_rank
+				}
+				
+				if = {
+					limit = {
+						NOT = { is_country_type = unrecognized }
+						scope:target_country = { NOT = { is_country_type = unrecognized } }
+					}
+					add = 25
+				}		
+				else_if = {
+					limit = {				
+						scope:target_country = { is_country_type = unrecognized }						
+					}
+					add = 50
+				}
+			}
+		}
+	}
 		
 	possible = {
 		always = yes
@@ -695,10 +721,20 @@ ai_strategy_economic_imperialism = {
 				add = {
 					value = 200
 				
-					# Less likely to use open market if we're already enemies in a play, ie they attacked us first
+					# Less interested in open market as a sway or defensive wargoal
 					if = {
-						limit = { is_diplomatic_play_enemy_of = scope:target_country }
-						multiply = 0.25
+						limit = { is_diplomatic_play_involved_with = scope:target_country }
+						multiply = 0.1
+					}
+					else_if = { # High score for opening Japan
+						limit = { 
+							scope:target_country = { 
+								exists = c:JAP
+								this = c:JAP		
+								has_law = law_type:law_isolationism 				
+							} 	
+						}
+						multiply = 2
 					}
 				}
 			}
@@ -711,6 +747,7 @@ ai_strategy_economic_imperialism = {
 					can_reach_target_state = yes
 					scope:target_country = {
 						has_law = law_type:law_isolationism
+						gdp >= 2000000 # Not worth doing against very small markets
 					}
 					scope:target_state = { is_incorporated = yes }
 				}

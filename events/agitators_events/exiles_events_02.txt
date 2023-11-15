@@ -1305,7 +1305,12 @@ exiles_more_events.9 = {
 		empty_agitator_slots >= 1
 		any_character_in_exile_pool = {
 			NOT = { home_country = ROOT }
-			culture = { NOT = { is_primary_culture_of = ROOT } }
+			culture = { 
+				NOR = { 
+					is_primary_culture_of = ROOT
+					culture_is_discriminated_in = ROOT
+				} 
+			}
 			interest_group_type = {
 				save_temporary_scope_as = exile_ig_type
 			}
@@ -1320,7 +1325,12 @@ exiles_more_events.9 = {
 		random_character_in_exile_pool  = {	
 			limit = {
 				NOT = { home_country = ROOT }
-				culture = { NOT = { is_primary_culture_of = ROOT } }
+				culture = { 
+					NOR = { 
+						is_primary_culture_of = ROOT
+						culture_is_discriminated_in = ROOT
+					} 
+				}
 			}
 			interest_group_type = {
 				save_temporary_scope_as = exile_ig_type
@@ -1330,7 +1340,6 @@ exiles_more_events.9 = {
 		random_interest_group = {
 			limit = {
 				scope:exile_ig_type = this.type
-				is_powerful = yes
 			}
 			save_scope_as = fertile_ground_ig
 		}

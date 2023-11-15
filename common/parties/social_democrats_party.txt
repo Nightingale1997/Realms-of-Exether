@@ -47,6 +47,7 @@ social_democrat_party = {
 		leader = { # fascists and conservatives hate social democracy
 			NOT = {
 				has_ideology = ideology:ideology_fascist
+				has_ideology = ideology:ideology_integralist
 				has_ideology = ideology:ideology_ethno_nationalist
 				has_ideology = ideology:ideology_traditionalist
 				has_ideology = ideology:ideology_royalist
@@ -159,6 +160,8 @@ social_democrat_party = {
 						has_ideology = ideology:ideology_reformer
 						has_ideology = ideology:ideology_republican_leader
 						has_ideology = ideology:ideology_atheist
+						has_ideology = ideology:ideology_humanitarian
+						has_ideology = ideology:ideology_humanitarian_royalist
 					}
 				}
 			}
@@ -201,6 +204,12 @@ social_democrat_party = {
 				OR = {
 					has_ideology = ideology:ideology_liberal
 					has_ideology = ideology:ideology_egalitarian
+					leader = {
+						OR = {
+							has_ideology = ideology:ideology_humanitarian
+							has_ideology = ideology:ideology_humanitarian_royalist
+						}
+					}
 				}
 				owner = {
 					has_law = law_type:law_outlawed_dissent
@@ -393,6 +402,137 @@ social_democrat_party = {
 			add = {
 				value = 5
 				desc = "from_slavery"
+			}
+		}
+		if = {
+			limit = {
+				is_interest_group_type = ig_trade_unions
+				is_powerful = yes
+			}
+			multiply = {
+				value = 2
+				desc = "from_archetype_party"
+			}
+		}
+		if = {
+			limit = {
+				scope:number = 1
+				is_powerful = no
+				is_marginal = no
+			}
+			multiply = {
+				value = 2
+				desc = "from_influential_supporting_member"
+			}
+		}
+		else_if = {
+			limit = {
+				scope:number = 2
+			}
+			multiply = {
+				value = 0.5
+				desc = "from_two_prior_members"
+			}
+		}
+		else_if = {
+			limit = {
+				scope:number = 3
+			}
+			multiply = {
+				value = 0.25
+				desc = "from_three_prior_members"
+			}
+		}
+		else_if = {
+			limit = {
+				scope:number > 3
+			}
+			multiply = {
+				value = 0.1
+				desc = "from_more_than_three_prior_members"
+			}
+		}
+		if = { # againt free trade
+			limit = {
+				owner = {
+					has_law = law_type:law_free_trade
+				}
+				OR = {
+					has_ideology = ideology:ideology_socialist
+					has_ideology = ideology:ideology_isolationist
+				}
+			}
+			add = {
+				value = 3
+				desc = "from_free_trade"
+			}
+		}
+		if = { # against l-f
+			limit = {
+				owner = {
+					has_law = law_type:law_laissez_faire
+				}
+				OR = {
+					has_ideology = ideology:ideology_agrarian
+					has_ideology = ideology:ideology_socialist
+					leader = {
+						OR = {
+							has_ideology = ideology:ideology_vanguardist
+							has_ideology = ideology:ideology_protectionist
+							has_ideology = ideology:ideology_luddite
+						}
+					}
+				}
+			}
+			add = {
+				value = 3
+				desc = "from_anti_laissez_faire"
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+	         		has_variable = only_valid_party
+	         	}
+	         	NOT = {
+			        owner.var:only_valid_party = {
+			        	is_party_type = social_democrat_party
+			        }
+			    }
+			}
+			multiply = {
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+	         		has_variable = only_valid_party
+	         	}
+				owner.var:only_valid_party = {
+					is_party_type = social_democrat_party
+				}
+	         	owner.ruler = {
+					this.interest_group = prev
+				}
+			}
+			add = {
+				value = 1000
+				desc = "from_only_legal_party"
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+	         		has_variable = only_valid_party
+	         	}
+	         	 owner.var:only_valid_party = {
+		        	is_party_type = social_democrat_party
+		        }
+			}
+			add = {
+				value = 3
+				desc = "from_only_legal_party"
 			}
 		}
 	}

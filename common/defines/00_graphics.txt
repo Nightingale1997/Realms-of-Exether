@@ -244,7 +244,7 @@ NGraphics = {
 	ORGANIZATION_HIGH = { 0.14 0.60 0.2 1 }
 	ORGANIZATION_MEDIUM = { 0.7 0.5 0.1 1 }
 	ORGANIZATION_LOW = { 0.65 0.1 0.1 1 }
-	
+
 	# Loyalty colors
 	LOYALTY_LOYALIST = { 0.39 0.67 0.33 1}
 	LOYALTY_RADICAL = { 0.88 0.34 0.34 1}
@@ -286,13 +286,10 @@ NGraphics = {
 	# Coa
 	COUNTRY_COLOR_LIST_NAME = "country_color_list"					# The Coat-of-Arms list to use when generating dynamic country map colors
 
-	NAVAL_BATTLE_POSITION_RANDOM_TRIES = 10							# Amount of tries we rerandomize naval battle positions (between 0 and 100)
-
 	# Scaled Distance Roughness
 	DISTANCE_ROUGHNESS_POSITION = 1.8		# Position to start blend
 	DISTANCE_ROUGHNESS_BLEND = 80.0			# Blend range
 	DISTANCE_ROUGHNESS_SCALE = 0.5			# Roughness multiplier scale
-	DAYS_AFTER_BATTLE_TO_SHOW_ENTITY = 7	# For how long to show battle entities after the battle
 
 	# Grid cell scores used for cities
 	CELL_SCORE_BASE = 1.0					# A cell that is 100% within the province will get the full base score. A cell outside the province will get 0. A 50/50 cell will get approximately half base score.
@@ -306,25 +303,47 @@ NGraphics = {
 	# Front entities graphics
 	FRONT_ENTITIES_CUTOFF = 300 			# Zoom at which we hide all front entities
 	FRONT_DIORAMA_GRID_WIDTH = 20			# Grid width of a diorama inside a province
-	FRONT_DIORAMA_GRID_HEIGHT = 20			# Grid height of a diorama inside a province 
+	FRONT_DIORAMA_GRID_HEIGHT = 20			# Grid height of a diorama inside a province
 	FRONT_DIORAMA_GRID_SCALE = 1.1			# Grid cell scale of a diorama inside a province
-	FRONT_DIORAMA_FLAT_MAP_ENTITY = "generic_siege_artillery_entity"	# The entity that is visible in the flat map mode instead of front entities
+	FRONT_DIORAMA_DEFAULT_STATE = "defend"	# Animation state name for entities without a general's order
+	FRONT_DIORAMA_FLAT_MAP_ENTITY = "generic_flatmap_unit_entity"	# The entity that is visible in the flat map mode instead of front entities
 
 	# Battle entities graphics
 	BATTLE_ENTITIES_CUTOFF = 300 			# Zoom at which we hide all battle entities
 	BATTLE_DIORAMA_GRID_WIDTH = 30			# Grid width of a diorama inside a province
-	BATTLE_DIORAMA_GRID_HEIGHT = 40			# Grid height of a diorama inside a province 
+	BATTLE_DIORAMA_GRID_HEIGHT = 40			# Grid height of a diorama inside a province
 	BATTLE_DIORAMA_GRID_SCALE = 1.1			# Grid cell scale of a diorama inside a province
 	BATTLE_DIORAMA_ATTACKER_STATE = "advance"		# Animation state name for the attacker side
 	BATTLE_DIORAMA_DEFENDER_STATE = "defend"		# Animation state name for the defender side
+	BATTLE_DIORAMA_DEFEAT_STATE = "defeat"			# Animation state name for defeated entities during the battle
+	BATTLE_DIORAMA_VICTORY_SIDE_STATE = "victory"	# Animation state name for entities on the winning battle side after the battle
+	BATTLE_DIORAMA_DEFEATED_SIDE_STATE = "idle"		# Animation state name for entities on the defeated battle side after the battle
+	BATTLE_DIORAMA_DESTRUCTION_DELAY = 5	# How many seconds we show diorama entities after the battle is over
+	BATTLE_DIORAMA_VFX_START_TIME = 3 		# After how many seconds we show VFX on battle sides after the battle is over (must be <= BATTLE_DIORAMA_DESTRUCTION_DELAY)
+	BATTLE_DIORAMA_VFX_VICTORY_SIDE = "war_center_explosion_entity"		# Entity that spawns after BATTLE_DIORAMA_VFX_START_TIME seconds after the battle end on the victory side
+	BATTLE_DIORAMA_VFX_DEFEATED_SIDE = "war_center_explosion_entity"	# Entity that spawns after BATTLE_DIORAMA_VFX_START_TIME seconds after the battle end on the defeated side
+	DAYS_AFTER_BATTLE_TO_SHOW_ENTITY = 7	# For how long to show battle environment entities after the battle
 
+	MILITARY_ENTITIES_FLYING_ENTITY_HEIGHT = 1					# If entity locator is higher than this value, then the entity is considered as flying i.e. doesn't occupy a cell and doesn't hide map objects beneath
 	MILITARY_ENTITIES_TOGGLE_MAP_OBJECTS_IN_RADIUS = 2			# How many cells around entities should be used for hiding map objects (trees)
+
+	NAVAL_ORDER_BASE_ENTITY = "naval_order_base_entity"
+	NAVAL_ORDER_ENTITY_HEIGHT = 0.25							# Height above water
 
 	OCCUPATION_ENTITY = "military_occupation_flag_entity"		# Entity that appears on occupied territory by occupying nation
 	OCCUPATION_ENTITY_DIRECTION = { 0.0 0.0 -1.0 }				# Direction of occupation entity
 
 	# Fleet entities graphics
 	FLEET_ENTITIES_CUTOFF = 300				# Zoom at which we hide all fleet entities
+	FLEET_ENTITIES_DEFAULT_STATE = "idle"	# Animation state name for the fleet entities stationed in a sea node
+
+	# Naval battles graphics
+	NAVAL_BATTLE_DIORAMA_ATTACKER_STATE = "advance"			# Animation state name for the attacker side
+	NAVAL_BATTLE_DIORAMA_DEFENDER_STATE = "defend"			# Animation state name for the defender side
+	NAVAL_BATTLE_DIORAMA_DEFEAT_STATE = "defeat"			# Animation state name for defeated entities during the battle
+	NAVAL_BATTLE_DIORAMA_VICTORY_SIDE_STATE = "idle"		# Animation state name for entities on the winning battle side after the battle
+	NAVAL_BATTLE_DIORAMA_DEFEATED_SIDE_STATE = "idle"		# Animation state name for entities on the defeated battle side after the battle
+	NAVAL_BATTLE_DIORAMA_DESTRUCTION_DELAY = 5				# For how many seconds we show diorama entities after the battle is over
 }
 
 NFrontend = {
@@ -349,6 +368,7 @@ NCamera = {
 	ZOOM_STEPS_MAX_TILT = { 89	89	89	89		89		89		89		89		89		89		89		89		89		89		89		89		}
 
 	MAX_PAN_TO_ZOOM_STEP = 7							# The camera will lower to this height (but only if above it) when panning to characters/provinces etc.
+	MAX_PAN_TO_ZOOM_STEP_EXTRA_CLOSE = 1 				
 
 	# Debug defines
 	DEBUG_GAMEPAD_LOWSPEED 		= 25.0
@@ -428,55 +448,6 @@ NProvinceHighlight = {
 	SAMPLE_COUNT = 16	# How many samples to use (max 16)
 }
 
-NMapCoa = {
-	ANGLE = 0.0							# Rotation of the coat of arms on the map. In radians
-	SIZE = 25.0							# Size of one CoA on the map. In world-units
-	SIZE_FLATMAP = 60.0					#
-	BLEND = 0.80f						# Minimum blend value. Final blend value will be the minimum of this and whatever the gradient borders use
-	BLEND_FLATMAP = 0.65f				#
-	BLEND_OCCUPATION = 1.0f				# Blend/Opacity of occupation stripes
-	BLEND_OCCUPATION_FLATMAP = 1.0f		#
-	BLEND_CLOSE_FADE_START = 100.0f		# Height at which to start fading out
-	BLEND_CLOSE_FADE_END = 60.0f		# Height at which to complete fading out
-	ROW_HORIZONTAL_OFFSET = 0.25		# Each row of coat of arms can be offset horizontally. This controls by how much in percentages
-	ROW_COUNT = 4						# How many rows to offset before starting over with an offset of 0s
-	STRIPE_SCALE = 1.0					# Scale of occupation stripes
-	STRIPE_SCALE_FLATMAP = 1.0
-}
-
-NEdgeOfWorld = {
-	# Cloudfield at the edge of map top/bottom
-	# For papermap table bokehfield, see shader file
-	BASETILE = 20.0f
-	BASESCROLL = { 0.0055 0.00325 }
-	BASESTRENGTH = 1.0f
-	BASEPOSITION = 0.728
-	BASECONTRAST = 1.08
-
-	CLOUD1TILE = 2.0
-	CLOUD1SCROLL = { 0.0015 -0.0015 }
-	CLOUD1STRENGTH = 1.0
-	CLOUD1POSITION = 0.538
-	CLOUD1CONTRAST = 1.0
-
-	CLOUD2TILE = 3.0
-	CLOUD2SCROLL = { -0.0075 0.00055 }
-	CLOUD2STRENGTH = 1.0
-	CLOUD2POSITION = 0.158
-	CLOUD2CONTRAST = 1.202
-
-	HIGHCLOUDCOLOR = { 0.8 0.8 1.0 1.0 }
-	LOWCLOUDCOLOR = { 0.03 0.03 0.03 1.0 }
-	COLORMULTIPLY = 0.015
-	FADEDISTANCE = 50
-}
-
-NGuiFlag = {
-	SMALL_WAVE_SCALE = 7.0
-	WAVE_SCALE = 0.95
-	ANIMATION_SPEED = 0.9
-}
-
 NTravelNetwork = {
 	FORMATION_CATCHUP_DISTANCE = 40.0			# If a military formation 3D caravan is this distance behind where it is supposed to be, accelerate with catch-up speed
 	FORMATION_CATCHUP_SPEED_MULTIPLIER = 1.5	# Accelerate averaged speed by this multiplied when 'catching up'
@@ -484,4 +455,7 @@ NTravelNetwork = {
 	FORMATION_SMOOTHING_STEP_COUNT = 5			# For smoothing visual movement speed, military formation speed is measured as a rolling average over X steps
 	FORMATION_SMOOTHING_STEP_TIME = 1.0			# Each step for the military formation speed smoothing is this long
 	FORMATION_SMOOTHING_SPEED_MULTIPLIER = 1.2  # General speed multiplier applied to the smoothing measurement (it's better to be "ahead" than "behind")
+
+	FORMATION_ARROW_SAMPLING_STEP = 7.0		 # Size of the sampling step (in "map pixels") of the spline network, used when creating arrows
+	FORMATION_ARROW_SAMPLING_STEP_FLATMAP = 30.0 # Size of the sampling step (in "map pixels") of the spline network, used when creating arrows, when zoomed out ("flatmap")
 }

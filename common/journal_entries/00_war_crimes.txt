@@ -1,51 +1,50 @@
-﻿# TO DO: Re-enable this by hooking them into Army/Fleet units composition rather than old Barracks/Naval Base PMs
+﻿je_war_crimes = {
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
-# je_war_crimes = {
-# 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	group = je_group_technology
 
-# 	is_shown_when_inactive = {
-# 		is_player = yes
-# 		has_technology_researched = automatic_machine_guns
-# 		army_size >= 25
-# 	}
+	is_shown_when_inactive = {
+		is_player = yes
+		has_technology_researched = automatic_machine_guns
+		army_size >= 25
+	}
 
-# 	possible = {
-# 		has_technology_researched = chemical_warfare
-# 		army_size >= 40
-# 	}
+	possible = {
+		has_technology_researched = chemical_warfare
+		army_size >= 40
+	}
 
-# 	complete = {
-# 		country_pm_usage = {
-# 			target = ROOT
-# 			production_method = pm_chemical_weapons_specialists
-# 			value > 0.25
-# 		}
-# 		any_scope_war = {
-# 			any_scope_front = {
-# 				any_scope_character = {
-# 					owner = ROOT
-# 					commander_pm_usage = {
-# 						target = ROOT
-# 						production_method = pm_chemical_weapons_specialists
-# 						value > 0.5
-# 					}
-# 				}
-# 				any_scope_state = {
-# 					NOT = { owner = ROOT }
-# 				}
-# 			}
-# 		}
-# 	}
+	complete = {
+		army_mobilization_option_fraction = {  
+			target = mobilization_option:mobilization_option_chemical_weapons  
+			value >= 0.2  
+		} 
+		any_scope_war = {
+			any_scope_front = {
+				any_scope_general = {
+					owner = ROOT
+					this.commander_military_formation = {
+						has_mobilization_option = mobilization_option:mobilization_option_chemical_weapons
+					}
+				}
+				any_scope_state = {
+					NOT = { owner = ROOT }
+				}
+			}
+		}
+	}
 
-# 	on_complete = {
-# 		trigger_event = { id = war_crimes.1 }
-# 	}
+	on_complete = {
+		trigger_event = { id = war_crimes.1 }
+	}
 
-# 	timeout = 3650
-# }
+	timeout = 3650
+}
 
 je_munitions_factories = {
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	group = je_group_technology
 
 	is_shown_when_inactive = {
 		is_player = yes

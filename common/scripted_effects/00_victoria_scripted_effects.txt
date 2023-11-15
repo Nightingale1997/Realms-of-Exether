@@ -9,7 +9,7 @@ ai_expedition_simulator_start = {
 			}
 		}
 		set_variable = expedition_leader_var
-		set_character_busy = yes
+		set_character_busy_and_immortal = yes
 	}
 	set_variable = on_expedition
 	add_modifier = {
@@ -104,6 +104,7 @@ adopt_random_antigovernment_ideology = {
 							owner.ruler = {
 								OR = {
 									has_ideology = ideology:ideology_fascist
+									has_ideology = ideology:ideology_integralist
 									has_ideology = ideology:ideology_ethno_nationalist
 									has_ideology = ideology:ideology_traditionalist
 								}
@@ -158,6 +159,7 @@ adopt_random_antigovernment_ideology = {
 							owner.ruler = {
 								OR = {
 									has_ideology = ideology:ideology_fascist
+									has_ideology = ideology:ideology_integralist
 									has_ideology = ideology:ideology_ethno_nationalist
 									has_ideology = ideology:ideology_traditionalist
 								}
@@ -212,6 +214,7 @@ adopt_random_antigovernment_ideology = {
 							owner.ruler = {
 								OR = {
 									has_ideology = ideology:ideology_fascist
+									has_ideology = ideology:ideology_integralist
 									has_ideology = ideology:ideology_ethno_nationalist
 									has_ideology = ideology:ideology_traditionalist
 								}
@@ -241,6 +244,7 @@ adopt_random_antigovernment_ideology = {
 									has_ideology = ideology:ideology_radical
 									has_ideology = ideology:ideology_feminist
 									has_ideology = ideology:ideology_humanitarian
+									has_ideology = ideology:ideology_humanitarian_royalist
 									has_ideology = ideology:ideology_social_democrat
 								}
 							}
@@ -264,6 +268,7 @@ adopt_random_antigovernment_ideology = {
 							owner.ruler = {
 								OR = {
 									has_ideology = ideology:ideology_fascist
+									has_ideology = ideology:ideology_integralist
 									has_ideology = ideology:ideology_ethno_nationalist
 									has_ideology = ideology:ideology_traditionalist
 								}
@@ -284,7 +289,7 @@ adopt_random_antigovernment_ideology = {
 					if = {
 						limit = {
 							owner = {
-								has_law = law_type:law_multiculturalism
+								has_law = law_type:law_multicultural
 							}
 						}
 						multiply = {
@@ -408,6 +413,7 @@ adopt_random_antigovernment_ideology = {
 						NOT = {
 							ruler = {
 								has_ideology = ideology:ideology_fascist	
+								has_ideology = ideology:ideology_integralist
 							}
 						}
 					}
@@ -420,6 +426,7 @@ adopt_random_antigovernment_ideology = {
 									has_ideology = ideology:ideology_radical
 									has_ideology = ideology:ideology_feminist
 									has_ideology = ideology:ideology_humanitarian
+									has_ideology = ideology:ideology_humanitarian_royalist
 									has_ideology = ideology:ideology_social_democrat
 								}
 							}
@@ -443,6 +450,7 @@ adopt_random_antigovernment_ideology = {
 							owner.ruler = {
 								OR = {
 									has_ideology = ideology:ideology_fascist
+									has_ideology = ideology:ideology_integralist
 									has_ideology = ideology:ideology_ethno_nationalist
 									has_ideology = ideology:ideology_traditionalist
 								}
@@ -628,7 +636,10 @@ adopt_random_antigovernment_ideology = {
 						has_technology_researched = feminism
 						NOT = {
 							ruler = {
-								has_ideology = ideology:ideology_humanitarian	
+								OR = {
+									has_ideology = ideology:ideology_humanitarian	
+									has_ideology = ideology:ideology_humanitarian_royalist
+								}
 							}
 						}
 					}
@@ -674,7 +685,8 @@ adopt_random_antigovernment_ideology = {
 								OR = {
 									has_ideology = ideology:ideology_radical
 									has_ideology = ideology:ideology_feminist
-									has_ideology = ideology:ideology_humanitarian
+									has_ideology = ideology:ideology_humanitarian	
+									has_ideology = ideology:ideology_humanitarian_royalist
 									has_ideology = ideology:ideology_social_democrat
 								}
 							}
@@ -698,6 +710,7 @@ adopt_random_antigovernment_ideology = {
 							owner.ruler = {
 								OR = {
 									has_ideology = ideology:ideology_fascist
+									has_ideology = ideology:ideology_integralist
 									has_ideology = ideology:ideology_ethno_nationalist
 									has_ideology = ideology:ideology_traditionalist
 								}
@@ -1089,6 +1102,7 @@ fascist_agitator_election_scope_effect = {
 		limit = {
 			OR = {
 				has_ideology = ideology:ideology_fascist
+				has_ideology = ideology:ideology_integralist
 				has_ideology = ideology:ideology_ethno_nationalist
 				AND = {
 					this.interest_group = {
@@ -1185,7 +1199,8 @@ liberal_agitator_election_scope_effect = {
 		limit = {
 			OR = {
 				has_ideology = ideology:ideology_reformer
-				has_ideology = ideology:ideology_humanitarian
+				has_ideology = ideology:ideology_humanitarian	
+				has_ideology = ideology:ideology_humanitarian_royalist
 				has_ideology = ideology:ideology_market_liberal
 				this.interest_group = {
 					is_member_of_party = owner.py:liberal_party
@@ -1326,12 +1341,14 @@ gen_ruler_party = {
 				ruler = {
 					OR = {
 						has_ideology = ideology:ideology_fascist
+						has_ideology = ideology:ideology_integralist
 						has_ideology = ideology:ideology_ethno_nationalist
 					}
 				}
 				ruler.interest_group.leader = {
 					OR = {
 						has_ideology = ideology:ideology_fascist
+						has_ideology = ideology:ideology_integralist
 						has_ideology = ideology:ideology_ethno_nationalist
 					}
 				}
@@ -1373,14 +1390,16 @@ gen_ruler_party = {
 					OR = {
 						has_ideology = ideology:ideology_social_democrat
 						has_ideology = ideology:ideology_feminist
-						has_ideology = ideology:ideology_humanitarian
+						has_ideology = ideology:ideology_humanitarian	
+						has_ideology = ideology:ideology_humanitarian_royalist
 					}
 				}
 				ruler.interest_group.leader = {
 					OR = {
 						has_ideology = ideology:ideology_social_democrat
 						has_ideology = ideology:ideology_feminist
-						has_ideology = ideology:ideology_humanitarian
+						has_ideology = ideology:ideology_humanitarian	
+						has_ideology = ideology:ideology_humanitarian_royalist
 					}
 				}
 				ruler = {
@@ -1770,7 +1789,7 @@ exile_character_with_martyrdom = {
 }
 
 # Divided Monarchists
-# Made by Victoria/Pacifica
+# Made by Victoria/Pacifica/AcresOfAsteraceae
 # Refer to comments here and in 02_french_monarchism to get an idea as to how this works.
 fra_set_divided_monarchist_variables = {
 	#Bonapartist Variables
@@ -2261,4 +2280,292 @@ clear_communism_vars = {
 	remove_variable = communism_progress_from_characters
 	remove_variable = communism_progress_from_laws
 	remove_variable = communism_progress_var_add
+}
+
+restore_peruvian_constitution = {
+	# Made by Hansi
+	# the Constitution of 1834 was largely a hotfix of the Constitution of 1828 and was also swept aside with the Peru-Bolivian Confederation
+	if = {
+		limit = {
+			NOT = {
+				has_law = law_type:law_presidential_republic
+			}
+		}
+		activate_law = law_type:law_presidential_republic
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_law = law_type:law_state_religion
+			}
+		}
+		activate_law = law_type:law_state_religion # Article 2 of the 1834 consitution: "[Peru's] Religion is Catholic, Apostolic, Roman, The Nation protects it by all means [...] and does not allow the exercise of any other."
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_law = law_type:law_census_voting
+			}
+		}
+		activate_law = law_type:law_census_voting # Political rights for citizens had no land ownership requirement 
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_law = law_type:law_racial_segregation
+			}
+		}
+		activate_law = law_type:law_racial_segregation
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_law = law_type:law_mercantilism
+			}
+		}
+		activate_law = law_type:law_mercantilism
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_law = law_type:law_interventionism
+			}
+		}
+		activate_law = law_type:law_interventionism
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_law = law_type:law_right_of_assembly
+			}
+		}
+		activate_law = law_type:law_right_of_assembly # Article 147 of the 1834 constitution: "Everyone can communicate their thoughts [...] or publish them through the printing press without prior censorship; but under the responsibility determined by law."
+	}
+	if = {
+		limit = {
+			NOR = {
+				has_law = law_type:law_legacy_slavery
+				has_law = law_type:law_slavery_banned
+			}
+		}
+		activate_law = law_type:law_legacy_slavery # Slavery was legal, but the slave trade was restricted
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_law = law_type:law_per_capita_based_taxation
+			}
+		}
+		activate_law = law_type:law_per_capita_based_taxation
+	}
+}
+
+# National Identity
+calculate_national_identity_progress = {
+	set_variable = { name = national_identity_progress_var_next value = 0 }
+	set_variable = { name = national_identity_progress_from_igs value = 0 }
+
+	# From Interest Groups
+	every_interest_group = {
+		limit = {
+			OR = {
+				has_ideology = ideology:ideology_patriotic
+				has_ideology = ideology:ideology_liberal
+			}
+		}
+		ROOT = {
+			set_variable = { name = ig_weight value = prev.ig_clout }
+		}
+		if = {
+			limit = {
+				is_in_government = yes
+			}
+			ROOT = {
+				change_variable = { name = ig_weight multiply = 3 }
+			}
+		}
+		ROOT = {
+			change_variable = { name = national_identity_progress_from_igs add = var:ig_weight }
+		}
+	}
+
+	#Wars
+	set_variable = { name = national_identity_progress_from_wars value = 0 }
+	every_scope_war = {
+		limit = {
+			has_war_support = { target = root value > 50 }
+		}
+		ROOT = {
+			change_variable = { name = national_identity_progress_from_wars add = 0.50 }
+		}
+	}
+	every_scope_war = {
+		limit = {
+			has_war_support = { target = root value <= 50 }
+			has_war_support = { target = root value > 25 }
+		}
+		ROOT = {
+			change_variable = { name = national_identity_progress_from_wars add = 0.25 }
+		}
+	}
+	every_scope_war = {
+		limit = {
+			has_war_support = { target = root value <= 25 }
+			has_war_support = { target = root value > 0 }
+		}
+		ROOT = {
+			change_variable = { name = national_identity_progress_from_wars add = 0.10 }
+		}
+	}
+
+	#Buildings
+	set_variable = { name = national_identity_progress_from_universities value = 0 }
+	every_scope_building = {
+		limit = {
+			OR = {
+				is_building_type = building_arts_academy
+				is_building_type = building_university
+				is_building_type = building_government_administration
+			}
+			occupancy >= 0.75
+		}
+		ROOT = {
+			change_variable = { name = national_identity_progress_from_universities add = prev.level }
+		}
+	}
+	change_variable = { name = national_identity_progress_from_universities divide = 25 }
+
+	set_variable = { name = national_identity_progress_from_prestige value = 0 }
+
+	#Prestige
+	ROOT = {
+		change_variable = { name = national_identity_progress_from_prestige add = root.prestige }
+	}
+	change_variable = { name = national_identity_progress_from_prestige divide = 100 }
+
+	set_variable = { name = national_identity_progress_from_homelands value = 0 }
+
+	#Homelands
+	every_scope_state = {
+		limit = {
+			NOT = {
+				is_homeland_of_country_cultures = ROOT
+			}
+		}
+		ROOT = {
+			change_variable = { name = national_identity_progress_from_homelands subtract = 0.25 }
+		}
+	}
+
+	change_variable = { name = national_identity_progress_var_next add = var:national_identity_progress_from_igs }
+	change_variable = { name = national_identity_progress_var_next add = var:national_identity_progress_from_wars }
+	change_variable = { name = national_identity_progress_var_next add = var:national_identity_progress_from_universities }
+	change_variable = { name = national_identity_progress_var_next add = var:national_identity_progress_from_prestige }
+	change_variable = { name = national_identity_progress_var_next add = var:national_identity_progress_from_homelands }
+	change_variable = { name = national_identity_progress_var_next add = var:national_identity_progress_var_add }
+}
+
+add_national_identity_progress = {
+	change_variable = { name = national_identity_progress_var add = var:national_identity_progress_var_next }
+	clamp_variable = { name = orleanist_progress max = 100 min = 0 }
+}
+
+set_national_identity_vars = {
+	set_variable = { name = national_identity_progress_from_igs value = 0 }
+	set_variable = { name = national_identity_progress_from_wars value = 0 }
+	set_variable = { name = national_identity_progress_from_universities value = 0 }
+	set_variable = { name = national_identity_progress_from_prestige value = 0 }
+	set_variable = { name = national_identity_progress_from_homelands value = 0 }
+	set_variable = { name = national_identity_progress_var_add value = 0 }
+	set_variable = { name = ig_weight value = 0 }
+}
+
+clear_national_identity_vars = {
+	remove_variable = national_identity_progress_from_igs
+	remove_variable = national_identity_progress_from_wars
+	remove_variable = national_identity_progress_from_universities
+	remove_variable = national_identity_progress_from_prestige
+	remove_variable = national_identity_progress_from_homelands
+	remove_variable = national_identity_progress_var_add
+}
+
+remove_pedropoint_effect = {
+	custom_tooltip = {
+		text = remove_pedropoint
+		change_variable = {
+			name = pedropoints
+			add = -1
+		}
+	}
+}
+
+add_pedropoint_effect = {
+	custom_tooltip = {
+		text = add_pedropoint
+		change_variable = {
+			name = pedropoints
+			add = 1
+		}
+	}
+}
+			
+add_pedropoint_effect_3 = {
+	custom_tooltip = {
+		text = add_3_pedropoint
+		change_variable = {
+			name = pedropoints
+			add = 3
+		}
+	}
+}
+
+replicate_laws_from_root = {
+	every_law = {
+		limit = {
+			ROOT = {
+				has_law = PREV.type
+			}
+			PREV = {
+				NOT = {
+					has_law = PREV.type
+				}
+			}
+		}
+		PREV = {
+			activate_law = PREV.type
+		}
+	}
+}
+
+replicate_laws_from_prev = {
+	every_law = {
+		limit = {
+			PREV = {
+				has_law = PREV.type
+			}
+			ROOT = {
+				NOT = {
+					has_law = PREV.type
+				}
+			}
+		}
+		ROOT = {
+			activate_law = PREV.type
+		}
+	}
+}
+
+paris_commune_update_tick = {
+	set_global_variable = {
+		name = paris_commune_drift_final_var
+		value = 0
+	}
+	change_global_variable = {
+		name = paris_commune_drift_final_var
+		add = global_var:paris_commune_progress_drift
+	}
+	change_global_variable = {
+		name = paris_commune_drift_final_var
+		add = var:PRC_recognition_level
+	}
 }

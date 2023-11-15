@@ -261,6 +261,7 @@ forest = {
 
 hills = {
 	label = label_elevated
+	label = label_travel_harsh_environment
 	weight = 2
 	textures = {
 		{
@@ -394,6 +395,7 @@ hills = {
 mountain = {
 	label = label_elevated
 	label = label_hazardous
+	label = label_travel_harsh_environment
 	weight = 1.5
 	textures = {
 		{
@@ -511,6 +513,7 @@ mountain = {
 jungle = {
 	label = label_forested
 	label = label_hazardous
+	label = label_travel_harsh_environment
 	weight = 1
 	textures = {
 		{
@@ -534,6 +537,7 @@ jungle = {
 
 wetland = {
 	label = label_hazardous
+	label = label_travel_harsh_environment
 	weight = 2
 	textures = {
 		{
@@ -562,6 +566,7 @@ wetland = {
 desert = {
 	label = label_flat
 	label = label_hazardous
+	label = label_travel_harsh_environment
 	weight = 2
 	textures = {
 		{
@@ -648,6 +653,7 @@ desert = {
 tundra = {
 	label = label_flat
 	label = label_hazardous
+	label = label_travel_harsh_environment
 	weight = 1.5
 	textures = {
 		{
@@ -697,6 +703,8 @@ savanna = {
 
 snow = {
 	label = label_hazardous
+	label = label_travel_harsh_environment
+
 	weight = 1
 	textures = {
 		{

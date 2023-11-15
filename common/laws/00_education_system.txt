@@ -13,8 +13,8 @@
 		value = 0
 	}
 
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 
 
 	# AI will never abolish institutions entirely
@@ -103,8 +103,8 @@ law_religious_schools = {
 		}
 	}
 
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 	
 
 	ai_enact_weight_modifier = { #Petitions
@@ -161,8 +161,8 @@ law_private_schools = {
 		}
 	}
 
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 
 
 	ai_enact_weight_modifier = { #Petitions
@@ -239,8 +239,8 @@ law_public_schools = {
 		}
 	}
 
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 
 
 	ai_enact_weight_modifier = { #Petitions

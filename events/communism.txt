@@ -760,7 +760,7 @@ communism.9 = {
 			any_scope_pop = {
 				pop_is_discriminated = no
 				standard_of_living > 15
-				workplace = {
+				workplace ?= {
 					OR = {
 					    has_active_production_method = pm_worker_cooperative_building_food_industry
 					    has_active_production_method = pm_worker_cooperative_building_textile_mills
@@ -799,7 +799,7 @@ communism.9 = {
 				any_scope_pop = {
 					pop_is_discriminated = no
 					standard_of_living > 15
-					workplace = {
+					workplace ?= {
 						OR = {
                             has_active_production_method = pm_worker_cooperative_building_food_industry
                             has_active_production_method = pm_worker_cooperative_building_textile_mills
@@ -832,7 +832,7 @@ communism.9 = {
 				limit = {
 					pop_is_discriminated = no
 					standard_of_living > 15
-					workplace = {
+					workplace ?= {
 						OR = {
                             has_active_production_method = pm_worker_cooperative_building_food_industry
                             has_active_production_method = pm_worker_cooperative_building_textile_mills

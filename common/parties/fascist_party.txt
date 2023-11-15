@@ -34,6 +34,7 @@
 					OR = {
 						has_ideology = ideology:ideology_fascist
 						has_ideology = ideology:ideology_ethno_nationalist
+						has_ideology = ideology:ideology_integralist
 					}
 				}
 			}
@@ -46,7 +47,10 @@
 			limit = {
 				is_powerful = yes
 				leader = {
-					has_ideology = ideology:ideology_fascist
+					OR = {
+						has_ideology = ideology:ideology_fascist
+						has_ideology = ideology:ideology_integralist
+					}
 				}
 			}
 			add = {
@@ -77,7 +81,10 @@
 					any_interest_group = {
 						is_powerful = yes
 						leader = {
-							has_ideology = ideology:ideology_fascist
+							OR = {
+								has_ideology = ideology:ideology_fascist
+								has_ideology = ideology:ideology_integralist
+							}
 						}
 					}
 				}
@@ -96,6 +103,8 @@
 						has_ideology = ideology:ideology_reformer
 						has_ideology = ideology:ideology_abolitionist
 						has_ideology = ideology:ideology_pacifist
+						has_ideology = ideology:ideology_humanitarian
+						has_ideology = ideology:ideology_humanitarian_royalist
 					}	
 				}
 			}
@@ -133,6 +142,31 @@
 			add = {
 				value = -3
 				desc = "from_moderate"
+			}
+		}
+		if = { # corporatists fall in line if they don't have christian democrats
+			limit = {
+				owner = {
+					any_interest_group = {
+						is_powerful = yes
+						leader = {
+							OR = {
+								has_ideology = ideology:ideology_fascist
+								has_ideology = ideology:ideology_integralist
+							}
+						}
+					}
+				}
+				OR = {
+					has_ideology = ideology:ideology_corporatist
+					leader = {
+						has_ideology = ideology:ideology_corporatist_leader
+					}
+				}
+			}
+			add = {
+				value = 5
+				desc = "from_corporatism"
 			}
 		}
 		if = { # patriots are inclined towards fascism
@@ -215,6 +249,112 @@
 			add = {
 				value = 3
 				desc = "from_no_proportional_or_per_capita_tax"
+			}
+		}
+		if = {
+			limit = {
+				scope:number = 1
+				is_powerful = no
+				is_marginal = no
+			}
+			multiply = {
+				value = 2
+				desc = "from_influential_supporting_member"
+			}
+		}
+		else_if = {
+			limit = {
+				scope:number = 2
+			}
+			multiply = {
+				value = 0.5
+				desc = "from_two_prior_members"
+			}
+		}
+		else_if = {
+			limit = {
+				scope:number = 3
+			}
+			multiply = {
+				value = 0.25
+				desc = "from_three_prior_members"
+			}
+		}
+		else_if = {
+			limit = {
+				scope:number > 3
+			}
+			multiply = {
+				value = 0.1
+				desc = "from_more_than_three_prior_members"
+			}
+		}
+		if = { # authoritarians inclined towards fascism
+			limit = {
+				leader = {
+					has_ideology = ideology:ideology_authoritarian
+				}
+			}
+			add = {
+				value = 3
+				desc = "from_authoritarian"
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+	         		has_variable = only_valid_party
+	         	}
+	         	NOT = {
+			        owner.var:only_valid_party = {
+			        	is_party_type = fascist_party
+			        }
+			    }
+			}
+			multiply = {
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				leader = {
+					has_variable = caudillo_fascist
+				}
+			}
+			add = {
+				value = 20
+				desc = "caudillo_support"
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+	         		has_variable = only_valid_party
+	         	}
+				 owner.var:only_valid_party = {
+					 is_party_type = fascist_party
+				 }
+	         	owner.ruler = {
+					this.interest_group = prev
+				}
+			}
+			add = {
+				value = 1000
+				desc = "from_only_legal_party"
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+	         		has_variable = only_valid_party
+	         	}
+	         	 owner.var:only_valid_party = {
+		        	is_party_type = fascist_party
+		        }
+			}
+			add = {
+				value = 3
+				desc = "from_only_legal_party"
 			}
 		}
 	}

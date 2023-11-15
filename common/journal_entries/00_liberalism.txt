@@ -1,6 +1,8 @@
 ﻿# Path to Liberalism
 je_liberalism_1 = {
 	icon = "gfx/interface/icons/event_icons/event_election.dds"
+	
+   group = je_group_internal_affairs
 
 	is_shown_when_inactive = {
 		NOT = { has_variable = liberalism_1_done }
@@ -25,6 +27,7 @@ je_liberalism_1 = {
 						has_ideology = ideology:ideology_radical
 						has_ideology = ideology:ideology_market_liberal
 						has_ideology = ideology:ideology_humanitarian
+						has_ideology = ideology:ideology_humanitarian_royalist
 						has_ideology = ideology:ideology_feminist
 					}
 				}
@@ -66,6 +69,8 @@ je_liberalism_1 = {
 # Freedom of Trade
 je_liberalism_2 = {
 	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+	
+	group = je_group_internal_affairs
 
 	complete = {
 		has_law = law_type:law_free_trade
@@ -95,6 +100,8 @@ je_liberalism_2 = {
 # Freedom of Thought
 je_liberalism_3 = {
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	
+	group = je_group_internal_affairs
 
 	complete = {
 		OR = {
@@ -127,6 +134,8 @@ je_liberalism_3 = {
 # The New Colossus
 je_liberalism_4 = {
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	
+	group = je_group_internal_affairs
 
 	complete = {
 		OR = {

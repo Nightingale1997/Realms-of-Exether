@@ -193,6 +193,23 @@
                                     }
                                 }
                             }
+                            AND = {
+                                exists = c:BRZ
+                                OR = {
+                                    AND = {
+                                        exists = scope:character
+                                        scope:character = {
+                                            exists = home_country
+                                            home_country = c:BRZ
+                                        }
+                                    }
+                                    AND = {
+                                        exists = scope:pop
+                                        scope:pop = { home_country = c:BRZ }
+                                    }
+                                }
+
+                            }
                         }
                         OR = {
                             AND = {
@@ -204,6 +221,12 @@
                             AND = {
                                 politician_clothes_trigger = yes
                                 armed_forces_clothes_trigger = yes
+                            }
+                            AND = {
+                                scope:pop ?= {
+                                    is_pop_type = soldiers
+                                    is_pop_type = officers
+                                }
                             }
                         }
                     }

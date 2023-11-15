@@ -50,6 +50,7 @@ DEFAULT = {
 					is_strongest_ig_in_government = yes
 					leader = {
 						OR = {
+							has_ideology = ideology:ideology_integralist
 							has_ideology = ideology:ideology_fascist
 							has_ideology = ideology:ideology_ethno_nationalist
 						}

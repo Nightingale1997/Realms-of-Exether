@@ -1,6 +1,8 @@
 ﻿je_communism_1 = {
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
+	group = je_group_internal_affairs
+
 	is_shown_when_inactive = {
 		NOT = { has_variable = communism_1_done }
 		OR = {
@@ -99,6 +101,8 @@
 je_communism_2 = {
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
+	group = je_group_internal_affairs
+
 	on_monthly_pulse = {
 		effect = {
 			if = {
@@ -140,6 +144,8 @@ je_communism_2 = {
 je_anarchy = {
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
+	group = je_group_internal_affairs
+
 	complete = {
 		has_law = law_type:law_anarchy
 		average_sol >= 15 # if you change this, also change event option in communism.2
@@ -159,6 +165,8 @@ je_anarchy = {
 
 je_vanguard = {
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	group = je_group_internal_affairs
 
 	complete = {
 		# id you change this, also change options in communism.2
@@ -219,6 +227,8 @@ je_vanguard = {
 je_communist_welfare = {
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
+	group = je_group_internal_affairs
+
 	complete = {
 		# if you change this, also change event option in communism.2
 		approaching_bureaucracy_shortage = no
@@ -258,6 +268,8 @@ je_communist_welfare = {
 
 je_5_year_plan = {
 	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	group = je_group_internal_affairs
 
 	immediate = {
 		root = {

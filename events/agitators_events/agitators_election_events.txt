@@ -1141,6 +1141,9 @@ agitators_election_events.8 = {
 			NOT = {
 				exists = scope:agitator_scope
 			}
+			NOT = {
+				exists = scope:agitator_party_scope
+			}
 			in_election_campaign = no
 		}
 	}
@@ -1148,7 +1151,38 @@ agitators_election_events.8 = {
 	immediate = {
 		random_scope_character = {
 			limit = {
-				has_role = agitator
+				OR = {
+					AND = {
+						has_socialist_ideology = yes
+						this.interest_group.leader = {
+							has_socialist_ideology = yes
+						}
+					}
+					AND = {
+						has_progressive_ideology = yes
+						this.interest_group.leader = {
+							has_progressive_ideology = yes
+						}
+					}
+					AND = {
+						has_liberal_ideology = yes
+						this.interest_group.leader = {
+							has_liberal_ideology = yes
+						}
+					}
+					AND = {
+						has_conservative_ideology = yes
+						this.interest_group.leader = {
+							has_conservative_ideology = yes
+						}
+					}
+					AND = {
+						has_reactionary_ideology = yes
+						this.interest_group.leader = {
+							has_reactionary_ideology = yes
+						}
+					}
+				}
 				this.interest_group = {
 					has_party = yes
 					this.party = {
@@ -1157,49 +1191,8 @@ agitators_election_events.8 = {
 						}
 					}
 				}
-				OR = {
-					AND = {
-						has_socialist_ideology = yes
-						this.interest_group = {
-							leader = {
-								has_socialist_ideology = yes
-							}
-						}
-					}
-					AND = {
-						has_progressive_ideology = yes
-						this.interest_group = {
-							leader = {
-								has_progressive_ideology = yes
-							}
-						}
-					}
-					AND = {
-						has_liberal_ideology = yes
-						this.interest_group = {
-							leader = {
-								has_liberal_ideology = yes
-							}
-						}
-					}
-					AND = {
-						has_reactionary_ideology = yes
-						this.interest_group = {
-							leader = {
-								has_reactionary_ideology = yes
-							}
-						}
-					}
-					AND = {
-						has_conservative_ideology = yes
-						this.interest_group = {
-							leader = {
-								has_conservative_ideology = yes
-							}
-						}
-					}
-				}
 			}
+			save_scope_as = agitator_scope
 			this.interest_group = {
 				save_scope_as = agitator_ig_scope
 				party = {
@@ -1207,6 +1200,7 @@ agitators_election_events.8 = {
 				}
 			}
 		}
+
 		scope:agitator_party_scope = {
 			random_member = {
 				limit = {
@@ -2603,8 +2597,7 @@ agitators_election_events.17 = {
 	option = {
 		name = agitators_election_events.17.b
 		trigger = {
-			scope:industrialists_scope.party = {
-				exists = yes
+			scope:industrialists_scope.party ?= {
 				NOT = {
 					is_party_type = fascist_party
 				}
@@ -4137,6 +4130,7 @@ agitators_election_events.31 = {
 			OR = {
 				has_ideology = ideology:ideology_reformer
 				has_ideology = ideology:ideology_humanitarian
+				has_ideology = ideology:ideology_humanitarian_royalist
 				has_ideology = ideology:ideology_market_liberal
 				trigger_if = {
 					limit = {
@@ -4250,6 +4244,7 @@ agitators_election_events.32 = {
 			OR = {
 				has_ideology = ideology:ideology_reformer
 				has_ideology = ideology:ideology_humanitarian
+				has_ideology = ideology:ideology_humanitarian_royalist
 				has_ideology = ideology:ideology_market_liberal
 				trigger_if = {
 					limit = {
@@ -4408,6 +4403,7 @@ agitators_election_events.33 = {
 			OR = {
 				has_ideology = ideology:ideology_reformer
 				has_ideology = ideology:ideology_humanitarian
+				has_ideology = ideology:ideology_humanitarian_royalist
 				has_ideology = ideology:ideology_market_liberal
 				trigger_if = {
 					limit = {
@@ -4546,6 +4542,7 @@ agitators_election_events.34 = {
 			OR = {
 				has_ideology = ideology:ideology_reformer
 				has_ideology = ideology:ideology_humanitarian
+				has_ideology = ideology:ideology_humanitarian_royalist
 				has_ideology = ideology:ideology_market_liberal
 				trigger_if = {
 					limit = {
@@ -4658,6 +4655,7 @@ agitators_election_events.35 = {
 			OR = {
 				has_ideology = ideology:ideology_reformer
 				has_ideology = ideology:ideology_humanitarian
+				has_ideology = ideology:ideology_humanitarian_royalist
 				has_ideology = ideology:ideology_market_liberal
 				trigger_if = {
 					limit = {

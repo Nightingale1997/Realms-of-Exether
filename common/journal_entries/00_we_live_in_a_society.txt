@@ -1,6 +1,8 @@
 ﻿je_dialectics = {
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
+	group = je_group_technology
+
 	is_shown_when_inactive = {
 		is_player = yes
 		NOT = { has_variable = dialectics_je_done }
@@ -52,6 +54,8 @@
 je_realism = {
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
+	group = je_group_technology
+
 	is_shown_when_inactive = {
 		is_player = yes
 		NOT = { has_variable = realism_je_done }
@@ -88,6 +92,8 @@ je_realism = {
 
 je_academia = {
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	group = je_group_technology
 
 	is_shown_when_inactive = {
 		is_player = yes

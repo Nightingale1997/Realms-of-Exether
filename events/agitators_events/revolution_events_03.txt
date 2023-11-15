@@ -97,8 +97,8 @@ revolution_pulse2_events.1 = {
 			text = revolution_pulse2_events.1.tt
 			trigger_event = { id = revolution_pulse2_events.2 days = 365 popup = yes }
 		}
-		scope:army_lad_leader_scope = { 
-			set_character_busy = yes 
+		scope:army_lad_leader_scope = {
+			set_character_busy_and_immortal = yes 
 			set_variable = army_lad_leader_var
 		}
 	}
@@ -184,7 +184,7 @@ revolution_pulse2_events.2 = {
 	option = {
 		name = revolution_pulse2_events.2.a 
 		default_option = yes
-		scope:army_lad_leader_scope = { set_character_busy = no }
+		scope:army_lad_leader_scope = { set_character_busy_and_immortal = no }
 		add_modifier = {
 			name = results_of_the_fact_finding_mission
 			months = normal_modifier_time
