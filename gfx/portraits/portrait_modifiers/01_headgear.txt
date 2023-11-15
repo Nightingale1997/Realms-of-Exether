@@ -44,15 +44,7 @@
                 add = 100
                 european_clothes_trigger = yes
                 slavic_clothes_trigger = no
-                NAND = {
-                    south_american_clothes_character_trigger = yes
-                    scope:character ?= {
-                        NOR = {
-                            culture = cu:sulista
-                            culture = cu:paulista
-                        }
-                    }
-                }
+                south_american_clothes_character_trigger = yes
                 agitator_character_trigger = yes
             }
         }
@@ -72,16 +64,6 @@
             modifier = {
                 add = 100
                 south_american_clothes_character_trigger = yes
-                scope:character ?= {
-                    NOR = {
-                        culture = cu:brazilian
-                        culture = cu:sulista
-                        culture = cu:amazonic
-                        culture = cu:paulista
-                        culture = cu:nordestino
-                        culture = cu:afro_brazilian
-                    }
-                }
                 OR = {
                     agitator_character_trigger = yes
                     scope:character ?= {
@@ -107,13 +89,6 @@
                 add = 90000
                 OR = {
                     scope:character ?= {
-                        has_template = BRZ_virgulino_ferreira
-                    }
-                    scope:character ?= {
-                        AND = {
-                            exists = cu:nordestino
-                            culture = cu:nordestino
-                        }
                         OR = {
                             has_role = agitator
                             AND = { # Monarchs don't get to wear this hat, but republican rulers can
@@ -709,7 +684,9 @@
                 OR = {
                     AND = {
                         scope:character ?= {
-                            culture = cu:korean
+                            culture = {
+                                has_discrimination_trait = ogre_heritage
+                            }
                             owner = {
                                 has_variable = KOR_korean_empire_declared
                             }
@@ -730,7 +707,9 @@
                     }
                     AND = {
                         scope:pop ?= {
-                            culture = cu:korean
+                                                        culture = {
+                                has_discrimination_trait = ogre_heritage
+                            }
                             owner = {
                                 has_variable = KOR_korean_empire_declared
                             }

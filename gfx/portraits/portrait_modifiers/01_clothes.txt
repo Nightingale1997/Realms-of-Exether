@@ -131,12 +131,6 @@
                 european_clothes_trigger = yes
                 NAND = {
                     south_american_clothes_character_trigger = yes
-                    scope:character ?= {
-                        NOR = { 
-                            culture = cu:paulista 
-                            culture = cu:sulista
-                        }
-                    }
                 }
                 slavic_clothes_trigger = no
                 agitator_character_trigger = yes
@@ -257,24 +251,6 @@
             modifier = {
                 add = 100
                 south_american_clothes_character_trigger = yes
-                scope:character ?= {
-                    NOR = {
-                        culture = cu:brazilian
-                        AND = {
-                            exists = cu:nordestino
-                            culture = cu:nordestino
-                        }
-                        AND = {
-                            exists = cu:paulista
-                            culture = cu:paulista
-                        }
-                        AND = {
-                            exists = cu:sulista
-                            culture = cu:sulista
-                        }
-
-                    }
-                }
                 agitator_character_trigger = yes 
             }
         }
@@ -312,14 +288,13 @@
                     AND = {
                         scope:character ?= {
                             OR = {
-                                culture = cu:brazilian
                                 AND = {
-                                    exists = cu:nordestino
-                                    culture = cu:nordestino
+                                    exists = cu:west_thalorian
+                                    culture = cu:west_thalorian
                                 }
                                 AND = {
-                                    exists = cu:amazonic
-                                    culture = cu:amazonic
+                                    exists = cu:lacustrine_thalorian
+                                    culture = cu:lacustrine_thalorian
                                 }
                             }
                         }

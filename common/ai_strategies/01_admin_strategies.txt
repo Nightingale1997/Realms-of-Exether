@@ -106,7 +106,7 @@ ai_strategy_plantation_economy = {
 
 	possible = {
 		OR = {
-			capital.region = sr:sanbang
+			country_is_in_citrus_currents = yes
 		}
 	}
 	
@@ -116,7 +116,7 @@ ai_strategy_plantation_economy = {
 		if = {
 			limit = { 
 				OR = {
-					capital.region = sr:sanbang
+					country_is_in_citrus_currents = yes
 				}
 			}
 			add = 20
