@@ -589,3 +589,151 @@ dp_humiliation = {
 
 	on_war_end = {}
 }
+
+dp_unify_khus = {
+	war_goal = unification
+	
+	requires_interest_marker = no
+	blocked_by_diplomatic_status = no
+	add_infamy_for_starting_initiator_wargoals = no
+	
+	texture = "gfx/interface/icons/war_goals/unification.dds"
+	
+	selectable_in_lens = {
+		always = no
+	}
+	
+	possible = {
+		NOT = { exists = c:NEK }
+		NOT = { is_country_type = decentralized }
+		has_technology_researched = nationalism
+	}
+	
+	on_weekly_pulse = {}
+	
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+dp_unify_gavkhan = {
+	war_goal = unification
+	
+	requires_interest_marker = no
+	blocked_by_diplomatic_status = no
+	add_infamy_for_starting_initiator_wargoals = no
+	
+	texture = "gfx/interface/icons/war_goals/unification.dds"
+	
+	selectable_in_lens = {
+		always = no
+	}
+	
+	possible = {
+		NOT = { exists = c:GAV }
+		NOT = { is_country_type = decentralized }
+		has_technology_researched = nationalism
+	}
+	
+	on_weekly_pulse = {}
+	
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+dp_unify_thaloria = {
+	war_goal = unification
+	
+	requires_interest_marker = no
+	blocked_by_diplomatic_status = no
+	add_infamy_for_starting_initiator_wargoals = no
+	
+	texture = "gfx/interface/icons/war_goals/unification.dds"
+	
+	selectable_in_lens = {
+		always = no
+	}
+	
+	possible = {
+		NOT = { exists = c:TLA }
+		NOT = { is_country_type = decentralized }
+		has_technology_researched = nationalism
+	}
+	
+	on_weekly_pulse = {}
+	
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+dp_leadership_thaloria = {
+	war_goal = unification_leadership
+	
+	requires_interest_marker = no
+	mirror_war_goal = yes
+	
+	texture = "gfx/interface/icons/war_goals/unification.dds"
+	
+	selectable_in_lens = {
+		always = no
+	}	
+	
+	possible = {
+		has_technology_researched = nationalism			
+	}
+	
+	on_weekly_pulse = {}
+	
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+
+dp_leadership_khus = {
+	war_goal = unification_leadership
+	
+	requires_interest_marker = no
+	mirror_war_goal = yes
+	
+	texture = "gfx/interface/icons/war_goals/unification.dds"
+	
+	selectable_in_lens = {
+		always = no
+	}	
+	
+	possible = {
+		has_technology_researched = nationalism			
+	}
+	
+	on_weekly_pulse = {}
+	
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+dp_leadership_gavkhan = {
+	war_goal = unification_leadership
+	
+	requires_interest_marker = no
+	mirror_war_goal = yes
+	
+	texture = "gfx/interface/icons/war_goals/unification.dds"
+	
+	selectable_in_lens = {
+		always = no
+	}	
+	
+	possible = {
+		has_technology_researched = nationalism			
+	}
+	
+	on_weekly_pulse = {}
+	
+	on_war_begins = {}
+
+	on_war_end = {}
+}

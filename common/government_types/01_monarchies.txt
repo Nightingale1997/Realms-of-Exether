@@ -1,4 +1,25 @@
-﻿gov_enlightened_despotate = {
+﻿gov_jarldom = {
+	transfer_of_power = hereditary
+	
+	male_ruler = "RULER_TITLE_JARL"
+	female_ruler = "RULER_TITLE_JARL"
+	
+	possible = {	
+		has_law = law_type:law_monarchy
+		any_primary_culture = {
+			has_discrimination_trait = giant_heritage
+		}
+	}		
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+gov_enlightened_despotate = {
 	transfer_of_power = hereditary
 	
 	male_ruler = "RULER_TITLE_PHILOSOPHER_KING"

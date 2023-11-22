@@ -337,3 +337,52 @@ DRI = {
 	cultures = { stranfolk } 
 	capital = STATE_FLUSTERBEEK
 }
+
+#Great Gavkhan
+GAV = {
+	color = { 62  122  189 }
+
+	country_type = unrecognized
+	
+	tier = empire
+	
+	cultures = { varbat xhurlob rethrashar }
+	capital = STATE_BERATIA
+}
+
+#Thaloria
+TLA = {
+	color = { 47 91 91 }
+
+	country_type = recognized
+
+	tier = empire
+	
+	cultures = { west_thalorian lake_thalorian }
+	capital = STATE_VONKENDAM
+}
+
+#East Thaloria
+TLE = {
+	color = { 47 11 98 }
+
+	country_type = recognized
+
+	tier = kingdom
+	
+	cultures = { lake_thalorian }
+	capital = STATE_STORMHOLM
+}
+
+#West Thaloria
+TLW = {
+	color = { 47 91 18 }
+
+	country_type = recognized
+
+	tier = kingdom
+	
+	cultures = { west_thalorian }
+	capital = STATE_WINDMERE
+}
+
