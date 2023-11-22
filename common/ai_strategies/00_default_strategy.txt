@@ -1979,24 +1979,6 @@ ai_strategy_default = {
 				add = 100					
 			}
 
-			if = {
-				limit = {
-					scope:target_country = {
-						has_journal_entry = je_peru_bolivia
-					}
-					OR = {
-						country_has_primary_culture = cu:south_andean
-						country_has_primary_culture = cu:north_andean
-						country_has_primary_culture = cu:platinean
-						country_has_primary_culture = cu:argentine
-						country_has_primary_culture = cu:chilean
-						country_has_primary_culture = cu:colombian
-						country_has_primary_culture = cu:ecuadorian
-					}
-				}
-				add = -50
-			}
-
 			multiply = {
 				value = "ai_ideological_opinion(scope:target_country)"
 				multiply = 0.05
@@ -2465,24 +2447,6 @@ ai_strategy_default = {
 						add = 50
 					}
 				}
-			}
-
-			if = {
-				limit = {
-					scope:target_country = {
-						has_journal_entry = je_peru_bolivia
-					}
-					OR = {
-						country_has_primary_culture = cu:south_andean
-						country_has_primary_culture = cu:north_andean
-						country_has_primary_culture = cu:platinean
-						country_has_primary_culture = cu:argentine
-						country_has_primary_culture = cu:chilean
-						country_has_primary_culture = cu:colombian
-						country_has_primary_culture = cu:ecuadorian
-					}
-				}
-				add = 50
 			}
 
 			multiply = {
@@ -3437,24 +3401,6 @@ ai_strategy_default = {
 						scope:target_country.top_overlord.infamy >= infamy_threshold:pariah
 					}
 					add = 25
-				}
-
-				if = {
-					limit = {
-						scope:target_country = {
-							has_journal_entry = je_peru_bolivia
-						}
-						OR = {
-							country_has_primary_culture = cu:south_andean
-							country_has_primary_culture = cu:north_andean
-							country_has_primary_culture = cu:platinean
-							country_has_primary_culture = cu:argentine
-							country_has_primary_culture = cu:chilean
-							country_has_primary_culture = cu:colombian
-							country_has_primary_culture = cu:ecuadorian
-						}						
-					}
-					add = 75
 				}
 
 				# Relations with subject

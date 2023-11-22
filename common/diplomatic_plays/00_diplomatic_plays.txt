@@ -304,16 +304,7 @@ dp_annex_subject = {
 				has_diplomatic_pact = { who = root type = puppet }
 				has_diplomatic_pact = { who = root type = vassal }
 			}
-		}
-		NOT = {
-			has_journal_entry = je_peru_bolivia
-			scope:target_country = {
-				OR = {
-					country_has_primary_culture = cu:quechua
-					country_has_primary_culture = cu:south_andean
-				}
-			}
-		}			
+		}		
 	}
 	
 	on_weekly_pulse = {}
