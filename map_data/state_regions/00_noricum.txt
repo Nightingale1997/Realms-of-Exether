@@ -252,7 +252,14 @@ STATE_FROSTGATE = {
     farm = xB19EDE
     mine = xD5F4BE
     port = xE59082
-
+    arable_land = 22
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_iron_mining = 40
+        bg_logging = 20
+        bg_fishing = 12
+    }
+    naval_exit_id = 3017
 }
 STATE_ICEWIND = {
     id = 4016
@@ -399,7 +406,15 @@ STATE_MIDCLACK = {
     farm = x5EF9B4
     mine = x86DFEB
     port = x9994CB
-
+    arable_land = 30
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_iron_mining = 36
+        bg_lead_mining = 18
+        bg_logging = 23
+        bg_fishing = 11
+    }
+    naval_exit_id = 3017
 }
 STATE_KOTHIAN = {
     id = 4027
@@ -468,7 +483,14 @@ STATE_ELDBERG = {
     farm = xA6EE91
     mine = xC3FEA6
     port = xC4F57D
-
+    arable_land = 5
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_sulfur_mining = 20
+        bg_whaling = 5
+        bg_fishing = 3
+    }
+    naval_exit_id = 3022
 }
 STATE_ADRIANSEN = {
     id = 4033

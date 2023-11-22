@@ -294,7 +294,20 @@ POPS = {
 
 
     s:STATE_FROSTGATE = {
-
+      region_state:ABR = {
+        create_pop = {
+          culture = avalorean
+          size = 289400
+        }
+        create_pop = {
+          culture = nivaskyan
+          size = 20000
+        }
+        create_pop = {
+          culture = dumonian
+          size = 18000
+        }
+      }
   }
 
 
@@ -393,7 +406,20 @@ POPS = {
 
 
     s:STATE_MIDCLACK = {
-
+      region_state:ABR = {
+        create_pop = {
+          culture = avalorean
+          size = 1081208
+        }
+        create_pop = {
+          culture = dumonian
+          size = 32000
+        }
+        create_pop = {
+          culture = dewaric
+          size = 1000
+        }
+      }
   }
 
 
@@ -444,7 +470,16 @@ POPS = {
 
 
     s:STATE_ELDBERG = {
-
+      region_state:OEX = {
+        create_pop = {
+          culture = arcthar
+          size = 63200
+        }
+        create_pop = {
+          culture = fire_giant
+          size = 520
+        }
+      }
   }
 
 

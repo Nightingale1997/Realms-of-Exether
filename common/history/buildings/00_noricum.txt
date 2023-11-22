@@ -581,7 +581,20 @@ POPS = {
 
 
     s:STATE_FROSTGATE = {
-
+      region_state:ABR={
+        create_building={
+          building="building_logging_camp"
+          level=2
+          reserves=1
+          activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts" "pm_privately_owned_building_logging_camp" }
+        }
+        create_building={
+          building="building_fishing_wharf"
+          level=2
+          reserves=1
+          activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+        }
+      }
   }
 
 
@@ -723,7 +736,68 @@ POPS = {
 
 
     s:STATE_MIDCLACK = {
-
+      region_state:ABR={
+        create_building={
+          building="building_government_administration"
+          level=4
+          reserves=1
+          activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+        }
+        create_building={
+          building="building_construction_sector"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_iron_frame_buildings" }
+        }			
+        create_building={
+          building="building_university"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_scholastic_education" }
+        }
+        create_building={
+          building="building_paper_mills"
+          level=3
+          reserves=1
+          activate_production_methods={ "pm_pulp_pressing" "pm_automation_disabled" "pm_merchant_guilds_building_paper_mills" }
+        }			
+        create_building={
+          building="building_textile_mills"
+          level=3
+          reserves=1
+          activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_traditional_looms" "pm_merchant_guilds_building_textile_mills" }
+        }
+        create_building={
+          building="building_iron_mine"
+          level=5
+          reserves=1
+          activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" "pm_merchant_guilds_building_iron_mine" }
+        }
+        create_building={
+          building="building_rye_farm"
+          level=2
+          reserves=1
+          activate_production_methods={ "pm_simple_farming" "pm_privately_owned" "pm_tools" "pm_potatoes" }
+        }
+        create_building={
+          building="building_fishing_wharf"
+          level=2
+          reserves=1
+          activate_production_methods={ "pm_merchant_guilds_building_fishing_wharf" "pm_unrefrigerated" "pm_fishing_trawlers" }
+        }
+        create_building={
+          building="building_port"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_basic_port" }
+        }
+        create_building={
+          building="building_logging_camp"
+          level=8
+          reserves=1
+          activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts" "pm_privately_owned_building_logging_camp" }
+        }
+      }
   }
 
 
@@ -772,7 +846,20 @@ POPS = {
 
 
     s:STATE_ELDBERG = {
-
+      region_state:OEX={
+        create_building={
+          building="building_fishing_wharf"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_merchant_guilds_building_fishing_wharf" "pm_unrefrigerated" "pm_simple_fishing" }
+        }
+        create_building={
+          building="building_port"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_anchorage" }
+        }
+      }
   }
 
 
