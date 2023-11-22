@@ -1,0 +1,393 @@
+BUILDINGS = {
+
+  s:STATE_SHARINDLARS_NEEDLE = {
+
+  }
+
+  s:STATE_CHANTSIRENE = {
+
+  }
+
+  s:STATE_MERACIEL_AUBELAC = {
+
+  }
+
+  s:STATE_ABAISSE_DE_MARBRUN = {
+
+  }
+
+  s:STATE_VALSANG = {
+
+  }
+
+  s:STATE_AZURSOL = {
+
+  }
+
+  s:STATE_SAINT_MER = {
+
+  }
+
+  s:STATE_CAEL_VALEN = {
+
+  }
+
+  s:STATE_LANDING_AT_SEA = {
+
+  }
+
+  s:STATE_VIRULENT_EGRESS = {
+
+  }
+
+  s:STATE_THE_CHASM = {
+
+  }
+
+  s:STATE_ORCBANE_PASS = {
+
+  }
+
+  s:STATE_PENDYM_GWYN = {
+
+  }
+
+  s:STATE_RIVER_MEDDEN = {
+
+  }
+
+  s:STATE_VOZMEAD_BORDERLANDS = {
+
+  }
+
+  s:STATE_EASTERN_PLAGUEWOOD = {
+
+  }
+
+  s:STATE_FORESTS_HEART = {
+
+  }
+
+  s:STATE_PLAGUEWOOD_HINTERLANDS = {
+
+  }
+
+  s:STATE_ASHWICK = {
+
+  }
+
+  s:STATE_OUTER_MOORWEALD = {
+
+  }
+
+  s:STATE_INNER_MOORWEALD = {
+
+  }
+
+  s:STATE_WHISKER_FIELDS = {
+
+  }
+
+  s:STATE_WAYFARE_MEADOWS = {
+
+  }
+
+  s:STATE_THE_AMBER_RUN = {
+
+  }
+
+  s:STATE_MISTREACH = {
+
+  }
+
+  s:STATE_VICEROYS_PEARL = {
+      region_state:ARR={
+        create_building={
+          building="building_government_administration"
+          level=10
+          reserves=1
+          activate_production_methods={ "pm_vertical_filing_cabinets" }
+        }	
+        create_building={
+          building="building_arts_academy"
+          level=3
+          reserves=1
+          activate_production_methods={ "pm_traditional_art" }
+        }			
+        create_building={
+          building="building_construction_sector"
+          level=3
+          reserves=1
+          activate_production_methods={ "pm_iron_frame_buildings" }
+        }				
+        create_building={
+          building="building_university"
+          level=5
+          reserves=1
+          activate_production_methods={ "pm_scholastic_education" }
+        }
+        create_building={
+          building="building_paper_mills"
+          level=10
+          reserves=1
+          activate_production_methods={ "pm_sulfite_pulping" "pm_automation_disabled" "pm_privately_owned_building_paper_mills" }
+        }			
+        create_building={
+          building="building_textile_mills"
+          level=23
+          reserves=1
+          activate_production_methods={ "pm_dye_workshops" "pm_privately_owned_building_textile_mills" "pm_traditional_looms" "pm_craftsman_sewing" }
+        }
+        create_building={
+          building="building_shipyards"
+          level=3
+          reserves=1
+          activate_production_methods={ "pm_basic_shipbuilding" "pm_merchant_guilds_building_shipyards" }
+        }
+        create_building={
+          building="building_military_shipyards"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_merchant_guilds_building_military_shipyards" "pm_military_shipbuilding_wooden_2" }
+        }
+        create_building={
+          building="building_furniture_manufacturies"
+          level=15
+          reserves=1
+          activate_production_methods={ "pm_lathe" "pm_privately_owned_building_furniture_manufacturies" "pm_automation_disabled" "pm_luxury_furniture" }
+        }
+        create_building={
+          building="building_rye_farm"
+          level=15
+          reserves=1
+          activate_production_methods={ "pm_privately_owned" "pm_no_secondary" "pm_tools" "pm_soil_enriching_farming" }
+        }
+        create_building={
+          building="building_livestock_ranch"
+          level=5
+          reserves=1
+          activate_production_methods={ "pm_privately_owned" "pm_sheep_farms" "pm_standard_fences" "pm_unrefrigerated" "pm_slaughterhouses" }
+        }
+        create_building={
+          building="building_fishing_wharf"
+          level=2
+          reserves=1
+          activate_production_methods={ "pm_merchant_guilds_building_fishing_wharf" "pm_unrefrigerated" "pm_fishing_trawlers" }
+        }
+        create_building={
+          building="building_railway"
+          level=2
+          reserves=1
+          activate_production_methods={ "pm_steam_trains" "pm_wooden_passenger_carriages" }
+        }
+        create_building={
+          building="building_port"
+          level=8
+          reserves=1
+          activate_production_methods={ "pm_basic_port" }
+        }
+      }
+    
+  }
+
+  s:STATE_FAR_SHORE = {
+
+  }
+
+  s:STATE_DURANS_LAND = {
+
+  }
+
+  s:STATE_FIRST_BOROUGH = {
+
+  }
+
+  s:STATE_BYRIVER = {
+
+  }
+
+  s:STATE_GREENCOURT = {
+
+  }
+
+  s:STATE_GOLDENACRE = {
+
+  }
+
+  s:STATE_SHARPWOOD = {
+
+  }
+
+  s:STATE_VERDANT_VALE = {
+
+  }
+
+  s:STATE_TWO_BARREL_COAST = {
+
+  }
+
+  s:STATE_LOWER_GOLDENLEAF = {
+
+  }
+
+  s:STATE_THE_MATCHES = {
+
+  }
+
+  s:STATE_RUNEPORT_GALESTRUM = {
+
+  }
+
+  s:STATE_TWOTORS = {
+
+  }
+
+  s:STATE_ACHONIAN_HIGHLANDS = {
+
+  }
+
+  s:STATE_GLIMMERING_COAST = {
+
+  }
+
+  s:STATE_LEYLINE_COAST = {
+
+  }
+
+  s:STATE_HORSELORDS_DEMESNE = {
+
+  }
+
+  s:STATE_ROCHENSTONE = {
+
+  }
+
+  s:STATE_SJETTSZCEK_MIRE = {
+
+  }
+
+  s:STATE_THUNDERSPELL_COAST = {
+
+  }
+
+  s:STATE_SOLEMN_STONES = {
+
+  }
+
+  s:STATE_VYNDERVOHT = {
+
+  }
+
+  s:STATE_SHIFTING_SCAR = {
+
+  }
+
+  s:STATE_OVERBURROW = {
+
+  }
+
+  s:STATE_UPPER_GOLDENLEAF = {
+
+  }
+
+  s:STATE_NEWBANKS = {
+
+  }
+
+  s:STATE_STOUTHEART_BASIN = {
+
+  }
+
+  s:STATE_CROPHEART_DALE = {
+
+  }
+
+  s:STATE_CLEARBOUGH_ESTATES = {
+
+  }
+
+  s:STATE_GOLDENMOOR = {
+
+  }
+
+  s:STATE_MOUNT_YELFIS= {
+
+  }
+
+  s:STATE_COGSREST = {
+
+  }
+
+  s:STATE_NOGI_SANDS = {
+
+  }
+
+  s:STATE_GRAVELROCK_ROAD = {
+
+  }
+
+  s:STATE_ELF1 = {
+
+  }
+
+  s:STATE_ELF2 = {
+
+  }
+
+  s:STATE_ELF3 = {
+
+  }
+
+  s:STATE_ELF4 = {
+
+  }
+
+  s:STATE_HAZELDEEP = {
+
+  }
+
+  s:STATE_AZURETHORN = {
+
+  }
+
+  s:STATE_FERNSEA = {
+
+  }
+
+  s:STATE_SKYPIERCER_PEAK = {
+
+  }
+
+  s:STATE_CLOUDSILVER_SPINE = {
+
+  }
+
+  s:STATE_VOZMEAD_LOWLANDS = {
+
+  }
+
+  s:STATE_SUNKEN_CLIFFS = {
+
+  }
+
+  s:STATE_DWARVENHAMMER = {
+
+  }
+
+  s:STATE_TARBANK = {
+
+  }
+
+  s:STATE_WICKERRYE = {
+
+  }
+
+  s:STATE_SILVERTARGE = {
+
+  }
+
+  s:STATE_IRON_HALLS = {
+
+  }
+
+}

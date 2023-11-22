@@ -282,7 +282,14 @@ STATE_VICEROYS_PEARL = {
     farm = x77C6C7
     mine = x8AF6F3
     port = x97F2B1
-
+    arable_land = 40
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 40
+        bg_logging = 6
+        bg_fishing = 10
+    }
+    naval_exit_id = 3038
 }
 STATE_FAR_SHORE = {
     id = 4162
