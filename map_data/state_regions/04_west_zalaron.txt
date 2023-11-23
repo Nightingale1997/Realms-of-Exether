@@ -39,7 +39,19 @@ STATE_KORCAJA = {
     wood = x6F98FD
     farm = x72E8BC
     mine = x7BD3ED
-    port = x89C2ED
+    arable_land = 80
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_logging = 11
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 28
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 10
+    }
 
 }
 STATE_KULLAMAL = {
@@ -105,8 +117,15 @@ STATE_ELBASHTIA = {
     wood = x6BF1D8
     farm = x9590F2
     mine = xA6E09B
-    port = xACCAC0
-
+    arable_land = 40
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" }
+    capped_resources = {
+        bg_logging = 10
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 16
+    }
 }
 STATE_LUMADHIA = {
     id = 2410

@@ -1,0 +1,628 @@
+POPS = {
+
+  s:STATE_SHKODERIA = {
+
+  }
+  s:STATE_VALBARDA = {
+
+  }
+  s:STATE_DURRESIA = {
+
+  }
+  s:STATE_KORCAJA = {
+		region_state:SHW = {
+			create_pop = {
+				culture = varbat
+				size = 252360
+			}
+			create_pop = {
+				culture = xhurlob
+				size = 476304
+			}
+			create_pop = {
+				culture = west_thalorian
+				size = 36234
+				pop_type = slaves
+			}
+		}
+  }
+  s:STATE_KULLAMAL = {
+
+  }
+  s:STATE_VLORIANA = {
+
+  }
+  s:STATE_GJAKOVA = {
+
+  }
+  s:STATE_LEZHANIA = {
+
+  }
+  s:STATE_KRUJANA = {
+
+  }
+  s:STATE_ELBASHTIA = {
+		region_state:TUF = {
+			create_pop = {
+				culture = xhurlob
+				size = 340000
+			}
+			create_pop = {
+				culture = varbat
+				size = 80004
+			}
+			create_pop = {
+				culture = west_thalorian
+				size = 12600
+				pop_type = slaves
+			}
+		}
+  }
+  s:STATE_LUMADHIA = {
+
+  }
+  s:STATE_GJILANIJA = {
+
+  }
+  s:STATE_FIERANA = {
+
+  }
+  s:STATE_KURBULL = {
+
+  }
+  s:STATE_PESHKOPINA = {
+
+  }
+  s:STATE_BERATIA = {
+
+  }
+  s:STATE_VOSKOPOJANA = {
+
+  }
+  s:STATE_SARANDOVA = {
+
+  }
+  s:STATE_TETOVAJA = {
+
+  }
+  s:STATE_KAVAJANA = {
+
+  }
+  s:STATE_PODBARDISHTA = {
+
+  }
+  s:STATE_RUSYLESH = {
+
+  }
+  s:STATE_ZARJAPE = {
+
+  }
+  s:STATE_DIBRA = {
+
+  }
+  s:STATE_KERCOVA = {
+
+  }
+  s:STATE_STRUGOVA = {
+
+  }
+  s:STATE_PRESPIA = {
+
+  }
+  s:STATE_KRUSHEVA = {
+
+  }
+  s:STATE_DEBARIA = {
+
+  }
+  s:STATE_SHKUMBINIA = {
+
+  }
+  s:STATE_KUKESPIA = {
+
+  }
+  s:STATE_NYZHNE_SENIA = {
+
+  }
+  s:STATE_SHPYNTESI = {
+
+  }
+  s:STATE_ERSEKERA = {
+
+  }
+  s:STATE_ZATYRE = {
+
+  }
+  s:STATE_BREZHKE = {
+
+  }
+  s:STATE_USTRIZHYVKA = {
+
+  }
+  s:STATE_TROPOJA = {
+
+  }
+  s:STATE_HUTSULANE = {
+
+  }
+  s:STATE_TEPELENA = {
+
+  }
+  s:STATE_BELSHIA = {
+
+  }
+  s:STATE_CERRIKUA = {
+
+  }
+  s:STATE_KLOSI = {
+
+  }
+  s:STATE_SKRAPARIA = {
+
+  }
+  s:STATE_XHAMADHANI = {
+
+  }
+  s:STATE_KORCOVA = {
+
+  }
+  s:STATE_VITHKUQJA = {
+
+  }
+  s:STATE_MILOTI = {
+
+  }
+  s:STATE_LISIJA = {
+
+  }
+  s:STATE_LATORIIVE = {
+
+  }
+  s:STATE_KILIMAMAI = {
+
+  }
+  s:STATE_JUACHAI = {
+
+  }
+  s:STATE_SAWATHONG = {
+
+  }
+  s:STATE_MAJISAMAKI = {
+
+  }
+  s:STATE_KLONGBARIDI = {
+
+  }
+  s:STATE_SWAHAILUK = {
+
+  }
+  s:STATE_BONGSAF = {
+
+  }
+  s:STATE_KISIKLONG = {
+
+  }
+  s:STATE_MAJIPEMBE = {
+
+  }
+  s:STATE_CHANGAVUTA = {
+
+  }
+  s:STATE_SWAHATHAI = {
+
+  }
+  s:STATE_KLONGLALA = {
+
+  }
+  s:STATE_MAJIWAZIRI = {
+
+  }
+  s:STATE_JUALALA = {
+
+  }
+  s:STATE_SWAHAKLONG = {
+
+  }
+  s:STATE_KILIMAKAZI = {
+
+  }
+  s:STATE_THASAMAKI = {
+
+  }
+  s:STATE_SAWABARA = {
+
+  }
+  s:STATE_KISITONG = {
+
+  }
+  s:STATE_MAWIMBEUNG = {
+
+  }
+  s:STATE_NAVAKAI = {
+
+  }
+  s:STATE_SHANAKONG = {
+
+  }
+  s:STATE_YAZHINAVA = {
+
+  }
+  s:STATE_KEEDZAI = {
+
+  }
+  s:STATE_NAKOTHAI = {
+
+  }
+  s:STATE_SHIBADUAI = {
+
+  }
+  s:STATE_KAINAVA = {
+
+  }
+  s:STATE_DIYINAKHAD = {
+
+  }
+  s:STATE_NASHAYAZH = {
+
+  }
+  s:STATE_KEENAVOK = {
+
+  }
+  s:STATE_SHIMAKAI = {
+
+  }
+  s:STATE_YAZHIDZI = {
+
+  }
+  s:STATE_SHINOGOZH = {
+
+  }
+  s:STATE_NAKOKAIN = {
+
+  }
+  s:STATE_DINASHIN = {
+
+  }
+  s:STATE_KEENAVAZH = {
+
+  }
+  s:STATE_NAVOYAZH = {
+
+  }
+  s:STATE_SHINAKHAD = {
+
+  }
+  s:STATE_THAGHIZHI = {
+
+  }
+  s:STATE_KLINGELMEER = {
+
+  }
+  s:STATE_TINKELHOVEN = {
+
+  }
+  s:STATE_RATELBERG = {
+
+  }
+  s:STATE_PIEPERDORP = {
+
+  }
+  s:STATE_RIJMVALLEI = {
+
+  }
+  s:STATE_FLUITBOS = {
+
+  }
+  s:STATE_SMIDSHOEK = {
+
+  }
+  s:STATE_TIKKERHAVEN = {
+
+  }
+  s:STATE_MOLENWOUD = {
+
+  }
+  s:STATE_BELLENBERG = {
+
+  }
+  s:STATE_KLINGELBERG = {
+
+  }
+  s:STATE_VONKPLEIN = {
+
+  }
+  s:STATE_GNURKENRADE = {
+
+  }
+  s:STATE_KLOMPWIJK = {
+
+  }
+  s:STATE_TROMMELKUST = {
+
+  }
+  s:STATE_SMEERGOED = {
+
+  }
+  s:STATE_KWETTERDIJK = {
+
+  }
+  s:STATE_FLUITERHEIDE = {
+
+  }
+  s:STATE_TIMMERSTEEN = {
+
+  }
+  s:STATE_VUURHOEK = {
+
+  }
+  s:STATE_DRAAIVELD = {
+
+  }
+  s:STATE_GLIMMERDAM = {
+
+  }
+  s:STATE_KRULWILGEN = {
+
+  }
+  s:STATE_KLINGELWEIDE = {
+
+  }
+  s:STATE_SMIDSGROEN = {
+
+  }
+  s:STATE_SNAARGRACHT = {
+
+  }
+  s:STATE_BELLENBOS = {
+
+  }
+  s:STATE_RATELHOUT = {
+
+  }
+  s:STATE_RATELKUST = {
+
+  }
+  s:STATE_VONKENDAM = {
+
+  }
+  s:STATE_GNURKENSTAD = {
+
+  }
+  s:STATE_PIEPERHAVEN = {
+
+  }
+  s:STATE_SPRANKELMEER = {
+
+  }
+  s:STATE_VUURVALLEI = {
+
+  }
+  s:STATE_FLUITVELD = {
+
+  }
+  s:STATE_TIMMERHAVEN = {
+
+  }
+  s:STATE_KRULHOVEN = {
+
+  }
+  s:STATE_KLOMPPLEIN = {
+
+  }
+  s:STATE_SNAARBERG = {
+
+  }
+  s:STATE_SPRONKERGROEN = {
+
+  }
+  s:STATE_DRAAIKUST = {
+
+  }
+  s:STATE_GLIMMERWOUD = {
+
+  }
+  s:STATE_VALORN = {
+
+  }
+  s:STATE_EVERLUND = {
+
+  }
+  s:STATE_HAVENSHIRE = {
+
+  }
+  s:STATE_SILVERBROOK = {
+
+  }
+  s:STATE_HIGHMOOR = {
+
+  }
+  s:STATE_IRONWOOD = {
+
+  }
+  s:STATE_STORMHOLM = {
+
+  }
+  s:STATE_RAVENHOLME = {
+
+  }
+  s:STATE_THORNFIELD = {
+
+  }
+  s:STATE_FARREACH = {
+
+  }
+  s:STATE_MOONSHADE = {
+
+  }
+  s:STATE_STORMWATCH = {
+
+  }
+  s:STATE_EMBERFALL = {
+
+  }
+  s:STATE_DRAGONCREST = {
+
+  }
+  s:STATE_GLENWOOD = {
+
+  }
+  s:STATE_BRIGHTWATER = {
+
+  }
+  s:STATE_DAWNRIDGE = {
+
+  }
+  s:STATE_SUNDALE = {
+
+  }
+  s:STATE_WHITESTONE = {
+
+  }
+  s:STATE_RIVERTIDE = {
+
+  }
+  s:STATE_LIONS_ROOST = {
+
+  }
+  s:STATE_WINDMERE = {
+
+  }
+  s:STATE_HOLLOWBROOK = {
+
+  }
+  s:STATE_SHADOWFEN = {
+
+  }
+  s:STATE_SUNDERPORT = {
+
+  }
+  s:STATE_AMBERWICK = {
+
+  }
+  s:STATE_STONEHAVEN = {
+
+  }
+  s:STATE_GOLDENGROVE = {
+
+  }
+  s:STATE_WINDSONG = {
+
+  }
+  s:STATE_WINDSPEAR = {
+
+  }
+  s:STATE_MISTVALE = {
+
+  }
+  s:STATE_SILVERCREST = {
+
+  }
+  s:STATE_GRINWALD = {
+
+  }
+  s:STATE_MAANSTIEN = {
+
+  }
+  s:STATE_NATUURBRUZJE = {
+
+  }
+  s:STATE_SINNEBEAM = {
+
+  }
+  s:STATE_STJERRENFAL = {
+
+  }
+  s:STATE_MISTDAL = {
+
+  }
+  s:STATE_EKENKUST = {
+
+  }
+  s:STATE_WETTERWIIDTE = {
+
+  }
+  s:STATE_BLOEIJENDREAM = {
+
+  }
+  s:STATE_SKIMERSFJILD = {
+
+  }
+  s:STATE_FLUSTERBEEK = {
+
+  }
+  s:STATE_DAUWBLED = {
+
+  }
+  s:STATE_SULVERSTREAM = {
+
+  }
+  s:STATE_WOLKENEVEL = {
+
+  }
+  s:STATE_KLAVERBOSK = {
+
+  }
+  s:STATE_REINFALL = {
+
+  }
+  s:STATE_ELZEKOEPEL = {
+
+  }
+  s:STATE_FLINTERWIIDTE = {
+
+  }
+  s:STATE_HIMMELSTIM = {
+
+  }
+  s:STATE_WALDLJOCHT = {
+
+  }
+  s:STATE_NACHTSIMMER = {
+
+  }
+  s:STATE_STILTEBRUZJE = {
+
+  }
+  s:STATE_SINNEBRAN = {
+
+  }
+  s:STATE_SKIMERWALD = {
+
+  }
+  s:STATE_STREAMFLAMME = {
+
+  }
+  s:STATE_STJERROPTOCHT = {
+
+  }
+  s:STATE_MISTGLANS = {
+
+  }
+  s:STATE_SAVAGE_LANDS = {
+
+  }
+  s:STATE_ROUGHSTONE_TERRITORY = {
+
+  }
+  s:STATE_FIERCEHOLD = {
+
+  }
+  s:STATE_SAVAGE_REACH = {
+
+  }
+  s:STATE_SNAILBANE = {
+
+  }
+  s:STATE_BLOODTHORN_WASTES = {
+
+  }
+  s:STATE_SALTSHORE = {
+
+  }
+  s:STATE_BLOODAXE_TERRITORY = {
+
+  }
+  s:STATE_MLIMASHWARI = {
+
+  }
+}
