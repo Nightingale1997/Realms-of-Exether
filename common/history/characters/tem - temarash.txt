@@ -1,0 +1,29 @@
+﻿CHARACTERS = {
+	c:TEM = {
+		create_character = {
+			first_name = "Kubilai"
+			last_name = "Gonchigjalzangiin"
+			historical = yes
+			ruler = yes
+			is_general = yes
+			age = 42
+			interest_group = ig_landowners
+			ideology = ideology_slaver
+			traits = {
+				wrathful
+			}
+		}
+		create_character = {
+			first_name = "Peljidiin"
+			last_name = "Gonchigjalzangiin"
+			historical = yes
+			heir = yes
+			age = 8
+			interest_group = ig_landowners
+			ideology = ideology_traditionalist
+			traits = {
+				trait_child
+			}
+		}
+	}
+}
