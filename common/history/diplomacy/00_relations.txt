@@ -1,0 +1,28 @@
+﻿DIPLOMACY = {
+	c:YUL = {
+		set_relations = { country = c:TEM value = 50 }
+		set_relations = { country = c:SUN value = 20 }
+		set_relations = { country = c:QON value = 20 }
+		set_relations = { country = c:ZHU value = 20 }
+		set_relations = { country = c:YOK value = -50 }
+		set_relations = { country = c:SHJ value = -50 }
+	}
+	c:YOK = {
+		set_relations = { country = c:TEM value = -50 }
+		set_relations = { country = c:SUN value = -30 }
+		set_relations = { country = c:QON value = -30 }
+		set_relations = { country = c:ZHU value = -30 }
+		set_relations = { country = c:SHJ value = 30 }
+	}
+	c:SHJ = {
+		set_relations = { country = c:TEM value = -50 }
+		set_relations = { country = c:SUN value = -30 }
+		set_relations = { country = c:QON value = -30 }
+		set_relations = { country = c:ZHU value = -30 }
+	}
+	c:TEM = {
+		set_relations = { country = c:SUN value = -10 }
+		set_relations = { country = c:QON value = -10 }
+		set_relations = { country = c:ZHU value = -10 }
+	}
+}
