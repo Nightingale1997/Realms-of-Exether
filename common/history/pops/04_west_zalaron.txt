@@ -7,10 +7,38 @@ POPS = {
 
   }
   s:STATE_DURRESIA = {
-
+		region_state:ZIN = {
+			create_pop = {
+				culture = dales_togrul
+				size = 142000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = akmuociai
+				religion = animist
+				size = 28000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = mgzavri
+				size = 3000
+			}
+			create_pop = {
+				culture = xhurlob
+				size = 249200
+			}
+			create_pop = {
+				culture = varbat
+				size = 40600
+			}
+			create_pop = {
+				culture = vandori
+				size = 300
+			}
+		}
   }
   s:STATE_KORCAJA = {
-		region_state:SHW = {
+		region_state:ZIX = {
 			create_pop = {
 				culture = varbat
 				size = 252360
@@ -39,7 +67,35 @@ POPS = {
 
   }
   s:STATE_KRUJANA = {
-
+		region_state:REM = {
+			create_pop = {
+				culture = varbat
+				size = 444100
+			}
+			create_pop = {
+				culture = xhurlob
+				size = 127896
+			}
+			create_pop = {
+				culture = kaalkid
+				size = 16000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = pabardian
+				size = 8000
+			}
+      create_pop = {
+				pop_type = slaves
+				culture = xhurlob
+				size = 38000
+			}
+      create_pop = {
+				pop_type = slaves
+				culture = west_thalorian
+				size = 28000
+			}
+		}
   }
   s:STATE_ELBASHTIA = {
 		region_state:TUF = {
@@ -74,13 +130,46 @@ POPS = {
 
   }
   s:STATE_BERATIA = {
-
+		region_state:ZIX = {
+			create_pop = {
+				culture = xhurlob
+				size = 105764
+			}
+			create_pop = {
+				culture = atiukura
+				size = 32000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = mgzavri
+				size = 4200
+			}
+		}
   }
   s:STATE_VOSKOPOJANA = {
 
   }
   s:STATE_SARANDOVA = {
-
+		region_state:ZIX = {
+			create_pop = {
+				culture = xhurlob
+				size = 158000
+			}
+			create_pop = {
+				culture = atiukura
+				size = 32000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = mgzavri
+				size = 8280
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = west_thalorian
+				size = 6000
+			}
+		}
   }
   s:STATE_TETOVAJA = {
 

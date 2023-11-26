@@ -29,7 +29,13 @@ STATE_DURRESIA = {
     farm = xAFBCB6
     mine = xB6C4BF
     port = xB9EC5E
-
+    arable_land = 20
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_sulfur_mining = 28
+        bg_fishing = 5
+    }
+    naval_exit_id = 3028
 }
 STATE_KORCAJA = {
     id = 2403
@@ -106,8 +112,11 @@ STATE_KRUJANA = {
     wood = x93F899
     farm = xA7D09D
     mine = xB29AAE
-    port = xB3F7BC
-
+    arable_land = 60
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" }
+    capped_resources = {
+        bg_logging = 14
+    }
 }
 STATE_ELBASHTIA = {
     id = 2409
@@ -191,7 +200,13 @@ STATE_BERATIA = {
     farm = x5EA7F6
     mine = x7BEEFC
     port = xAF95B5
-
+    arable_land = 30
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" }
+    capped_resources = {
+        bg_iron_mining = 15
+        bg_fishing = 5
+    }
+    naval_exit_id = 3009
 }
 STATE_VOSKOPOJANA = {
     id = 2416
@@ -213,7 +228,13 @@ STATE_SARANDOVA = {
     farm = xA0E5A7
     mine = xA4BBEB
     port = xA4F27D
-
+    arable_land = 80
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_tea_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_iron_mining = 24
+        bg_fishing = 15
+    }
+    naval_exit_id = 3009
 }
 STATE_TETOVAJA = {
     id = 2418
