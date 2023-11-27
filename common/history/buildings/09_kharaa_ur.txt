@@ -126,19 +126,19 @@ BUILDINGS = {
     region_state:YUL = {
 	  create_building={
         building="building_iron_mine"
-        level=3
+        level=4
         reserves=1
         activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" "pm_merchant_guilds_building_iron_mine" }
       }
 	  create_building={
         building="building_tooling_workshops"
-        level=2
+        level=3
         reserves=1
         activate_production_methods={ "pm_pig_iron" "pm_automation_disabled" "pm_privately_owned_building_tooling_workshops" }
       }
 	  create_building={
         building="building_fishing_wharf"
-        level=1
+        level=4
         reserves=1
         activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
       }
@@ -501,6 +501,14 @@ BUILDINGS = {
   }
 
   s:STATE_ALBAIN = {
+    region_state:ZHU = {
+	  create_building={
+        building="building_port"
+        level=1
+        reserves=1
+        activate_production_methods={ "pm_basic_port" }
+      }
+	}
   }
 
   s:STATE_GULTHYR = {
@@ -537,6 +545,14 @@ BUILDINGS = {
   }
 
   s:STATE_KYRTHAL = {
+    region_state:QON = {
+	  create_building={
+        building="building_port"
+        level=1
+        reserves=1
+        activate_production_methods={ "pm_basic_port" }
+      }
+	}
   }
 
   s:STATE_GROMKYL = {
@@ -604,6 +620,12 @@ BUILDINGS = {
         reserves=1
         activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
       }
+	  create_building={
+        building="building_logging_camp"
+        level=3
+        reserves=1
+        activate_production_methods={ "pm_saw_mills" "pm_privately_owned_building_logging_camp" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
+      }
     }
   }
 
@@ -626,6 +648,24 @@ BUILDINGS = {
         level=1
         reserves=1
         activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+      }
+	  create_building={
+        building="building_shipyards"
+        level=1
+        reserves=1
+        activate_production_methods={ "pm_basic_shipbuilding" "pm_merchant_guilds_building_shipyards" }
+      }
+	  create_building={
+        building="building_logging_camp"
+        level=3
+        reserves=1
+        activate_production_methods={ "pm_saw_mills" "pm_privately_owned_building_logging_camp" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
+      }
+	  create_building={
+        building="building_port"
+        level=1
+        reserves=1
+        activate_production_methods={ "pm_basic_port" }
       }
     }
   }
@@ -688,6 +728,18 @@ BUILDINGS = {
         reserves=1
         activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
       }
+	  create_building={
+        building="building_tooling_workshops"
+        level=1
+        reserves=1
+        activate_production_methods={ "pm_crude_tools" "pm_automation_disabled" "pm_privately_owned_building_tooling_workshops" }
+      }
+	  create_building={
+		building="building_coal_mine"
+		level=5
+		reserves=1
+		activate_production_methods={ "pm_picks_and_shovels_building_coal_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" "pm_privately_owned_building_coal_mine" }
+	  
     }
   }
 
@@ -696,6 +748,12 @@ BUILDINGS = {
 
   s:STATE_KYRTHOR = {
     region_state:QON = {
+	  create_building={
+        building="building_government_administration"
+        level=13
+        reserves=1
+        activate_production_methods={ "pm_simple_organization" }
+      }
       create_building={
         building="building_logging_camp"
         level=1
@@ -717,7 +775,7 @@ BUILDINGS = {
         building="building_logging_camp"
         level=1
         reserves=1
-        activate_production_methods={ "pm_simple_forestry" "pm_privately_owned_building_logging_camp" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
+        activate_production_methods={ "pm_saw_mills" "pm_privately_owned_building_logging_camp" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
       }
 	  create_building={
         building="building_fishing_wharf"
@@ -856,6 +914,12 @@ BUILDINGS = {
   s:STATE_KYRKAZ = {
     region_state:ZHU = {
       create_building={
+        building="building_government_administration"
+        level=2
+        reserves=1
+        activate_production_methods={ "pm_simple_organization" }
+      }
+	  create_building={
         building="building_tea_plantation"
         level=2
         reserves=1
@@ -875,6 +939,18 @@ BUILDINGS = {
 
   s:STATE_KAZKYL = {
     region_state:YUL = {
+	  create_building={
+        building="building_logging_camp"
+        level=3
+        reserves=1
+        activate_production_methods={ "pm_saw_mills" "pm_privately_owned_building_logging_camp" "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
+      }
+	  create_building={
+		building="building_furniture_manufacturies"
+		level=2
+		reserves=1
+		activate_production_methods={ "pm_handcrafted_furniture" "pm_privately_owned_building_furniture_manufacturies" "pm_automation_disabled" "pm_luxury_furniture" }
+	  }
     }
   }
 
@@ -931,6 +1007,12 @@ BUILDINGS = {
         reserves=1
         activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
       }
+	  create_building={
+        building="building_port"
+        level=1
+        reserves=1
+        activate_production_methods={ "pm_basic_port" }
+      }
     }
   }
 
@@ -955,7 +1037,7 @@ BUILDINGS = {
       }
 	  create_building={
         building="building_shipyards"
-        level=1
+        level=2
         reserves=1
         activate_production_methods={ "pm_basic_shipbuilding" "pm_merchant_guilds_building_shipyards" }
       }
@@ -996,6 +1078,12 @@ BUILDINGS = {
 
   s:STATE_BATOKYOAN = {
     region_state:SUN = {
+	  create_building={
+        building="building_government_administration"
+        level=2
+        reserves=1
+        activate_production_methods={ "pm_simple_organization" }
+      }
       create_building={
         building="building_tea_plantation"
         level=1
@@ -1122,6 +1210,14 @@ BUILDINGS = {
   }
 
   s:STATE_KAMISHINBA = {
+    region_state:TEM = {
+	  create_building={
+        building="building_port"
+        level=1
+        reserves=1
+        activate_production_methods={ "pm_basic_port" }
+      }
+	}
   }
 
   s:STATE_KHASUNEN = {
