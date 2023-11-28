@@ -35,5 +35,22 @@
 			type = puppet
 		}
 	}
-	
+	c:YUL = {
+		create_diplomatic_pact = {
+			country = c:TEM
+			type = vassal
+		}
+		create_diplomatic_pact = {
+			country = c:SUN
+			type = tributary
+		}
+		create_diplomatic_pact = {
+			country = c:QON
+			type = tributary
+		}
+		create_diplomatic_pact = {
+			country = c:ZHU
+			type = tributary
+		}
+	}
 }

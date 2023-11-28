@@ -13,7 +13,7 @@
         bg_coal_mining = 10
         bg_iron_mining = 20
     }
-
+    naval_exit_id = 3036
 }
 STATE_ULDOR = {
     id = 4531
@@ -30,7 +30,7 @@ STATE_ULDOR = {
         bg_coal_mining = 60
         bg_logging = 8
     }
-
+    naval_exit_id = 3036
 }
 STATE_CHADBA = {
     id = 4532
@@ -48,7 +48,7 @@ STATE_CHADBA = {
         bg_coal_mining = 36
         bg_logging = 4
     }
-
+    naval_exit_id = 3036
 }
 STATE_TUKHUR = {
     id = 4533
@@ -67,7 +67,7 @@ STATE_TUKHUR = {
         bg_lead_mining = 15
         bg_logging = 4
     }
-
+    naval_exit_id = 3036
 }
 STATE_KHURIN = {
     id = 4534
@@ -83,12 +83,13 @@ STATE_KHURIN = {
     capped_resources = {
         bg_logging = 10
     }
-
+    naval_exit_id = 3036
 }
 STATE_BOLDOO = {
     id = 4535
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x6CE3DF" "x79D1F6" "x8BBAC7" "xD1CC5F" "xE09583" "xEADBCA" }
+    traits = { "state_trait_kharaa_ur_jungle" }
     city = x6CE3DF
     wood = x79D1F6
     farm = x8BBAC7
@@ -100,7 +101,7 @@ STATE_BOLDOO = {
         bg_fishing = 10
         bg_logging = 18
     }
-
+    naval_exit_id = 3036
 }
 STATE_KHORTA = {
     id = 4536
@@ -116,12 +117,13 @@ STATE_KHORTA = {
     capped_resources = {
         bg_logging = 7
     }
-
+    naval_exit_id = 3036
 }
 STATE_GARBOL = {
     id = 4537
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x62EFF8" "x92DA96" "x98D8C3" "xD2BEED" "xEDD8BC" "xF369E4" }
+    traits = { "state_trait_kharaa_ur_jungle" }
     city = x62EFF8
     wood = x92DA96
     farm = x98D8C3
@@ -133,7 +135,7 @@ STATE_GARBOL = {
         bg_fishing = 6
         bg_logging = 20
     }
-
+    naval_exit_id = 3036
 }
 STATE_ORONK = {
     id = 4538
@@ -149,7 +151,7 @@ STATE_ORONK = {
     capped_resources = {
         bg_logging = 11
     }
-
+    naval_exit_id = 3036
 }
 STATE_KHAIRI = {
     id = 4539
@@ -168,7 +170,7 @@ STATE_KHAIRI = {
         bg_iron_mining = 36
         bg_logging = 3
     }
-
+    naval_exit_id = 3036
 }
 STATE_GURBA = {
     id = 4540
@@ -188,7 +190,7 @@ STATE_GURBA = {
         bg_sulfur_mining = 32
         bg_logging = 2
     }
-
+    naval_exit_id = 3036
 }
 STATE_CHANMA = {
     id = 4541
@@ -206,7 +208,7 @@ STATE_CHANMA = {
         bg_lead_mining = 24
         bg_logging = 4
     }
-
+    naval_exit_id = 3036
 }
 STATE_DALKH = {
     id = 4542
@@ -225,7 +227,7 @@ STATE_DALKH = {
         bg_sulfur_mining = 32
         bg_logging = 20
     }
-
+    naval_exit_id = 3036
 }
 STATE_SUKHIA = {
     id = 4543
@@ -242,7 +244,7 @@ STATE_SUKHIA = {
         bg_sulfur_mining = 60
         bg_logging = 8
     }
-
+    naval_exit_id = 3036
 }
 STATE_ALTANU = {
     id = 4544
@@ -259,7 +261,7 @@ STATE_ALTANU = {
         bg_sulfur_mining = 40
         bg_logging = 5
     }
-
+    naval_exit_id = 3036
 }
 STATE_SAINO = {
     id = 4545
@@ -278,12 +280,13 @@ STATE_SAINO = {
         bg_sulfur_mining = 36
         bg_logging = 12
     }
-
+    naval_exit_id = 3036
 }
 STATE_ERKHE = {
     id = 4546
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x82EAE1" "x8FCDE9" "x90DFDF" "xB1BB9C" "xC4D17F" "xCEB191" "xE267B7" "xE997E2" "xF2D3B0" "xFDFAD9" }
+    traits = { "state_trait_kharaa_ur_jungle" }
     city = x82EAE1
     wood = x8FCDE9
     farm = x90DFDF
@@ -294,12 +297,13 @@ STATE_ERKHE = {
     capped_resources = {
         bg_logging = 21
     }
-
+    naval_exit_id = 3036
 }
 STATE_DALAI = {
     id = 4547
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x40EEFA" "x55C8F8" "x64B9FE" "x92F5D7" "xA6ABD6" "xC2EAE7" "xC2F455" "xDD5DF6" "xEC888E" }
+    traits = { "state_trait_kharaa_ur_jungle" }
     city = x40EEFA
     wood = x55C8F8
     farm = x64B9FE
@@ -311,12 +315,13 @@ STATE_DALAI = {
         bg_fishing = 5
         bg_logging = 19
     }
-
+    naval_exit_id = 3036
 }
 STATE_OROGOO = {
     id = 4548
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x9FDB80" "xAAECE1" "xC184E3" "xC79DF2" "xC897D9" "xE7E979" "xECF38D" "xEDB4E1" "xF2BBAC" }
+    traits = { "state_trait_kharaa_ur_jungle" }
     city = x9FDB80
     wood = xAAECE1
     farm = xC184E3
@@ -327,12 +332,13 @@ STATE_OROGOO = {
     capped_resources = {
         bg_logging = 22
     }
-
+    naval_exit_id = 3036
 }
 STATE_GURVA = {
     id = 4549
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x98C99A" "x98EAD7" "xA2C0AC" "xB3D592" "xB7F6D3" "xC5C1B7" "xD4C261" "xF9A8C8" }
+    traits = { "state_trait_kharaa_ur_jungle" }
     city = x98C99A
     wood = x98EAD7
     farm = xA2C0AC
@@ -344,12 +350,13 @@ STATE_GURVA = {
         bg_fishing = 7
         bg_logging = 23
     }
-
+    naval_exit_id = 3036
 }
 STATE_KHONGO = {
     id = 4550
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x8E93D8" "xAFDDC6" "xCE38EF" "xD0C2FA" "xD4D0F7" "xE8A974" "xFC848E" }
+    traits = { "state_trait_kharaa_ur_jungle" }
     city = x8E93D8
     wood = xAFDDC6
     farm = xCE38EF
@@ -361,12 +368,13 @@ STATE_KHONGO = {
         bg_fishing = 13
         bg_logging = 13
     }
-
+    naval_exit_id = 3036
 }
 STATE_SERGER = {
     id = 4551
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x2AFDD6" "x5FC7CF" "x97F7AD" "x98D493" "xCACCAC" "xD7F15B" "xDE9F9C" "xE42BF2" "xE9C2C3" "xF39E9B" }
+    traits = { "state_trait_kharaa_ur_jungle" }
     city = x2AFDD6
     wood = x5FC7CF
     farm = x97F7AD
@@ -379,12 +387,13 @@ STATE_SERGER = {
         bg_whaling = 7
         bg_logging = 9
     }
-
+    naval_exit_id = 3036
 }
 STATE_BUYANT = {
     id = 4552
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x47EFC6" "x60F2ED" "xBFC6BE" "xC09FD1" "xC3C5FD" "xCAB2D2" "xCDB68E" "xCDD766" "xDFD249" "xFDEA9C" }
+    traits = { "state_trait_kharaa_ur_jungle" }
     city = x47EFC6
     wood = x60F2ED
     farm = xBFC6BE
@@ -396,7 +405,7 @@ STATE_BUYANT = {
         bg_fishing = 9
         bg_logging = 13
     }
-
+    naval_exit_id = 3003
 }
 STATE_GALSHA = {
     id = 4553
@@ -414,7 +423,7 @@ STATE_GALSHA = {
         bg_sulfur_mining = 44
         bg_logging = 18
     }
-
+    naval_exit_id = 3036
 }
 STATE_BAIDAL = {
     id = 4554
@@ -435,12 +444,13 @@ STATE_BAIDAL = {
         type = "bg_rubber"
         undiscovered_amount = 16
     }
-
+    naval_exit_id = 3003
 }
 STATE_ONON = {
     id = 4555
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x50FDEE" "x8DE18A" "x8FE9B7" "x968CE0" "x9BD8F0" "xA8E6E1" "xE944F8" "xF2B65E" "xF6BA63" }
+    traits = { "state_trait_kharaa_ur_jungle" }
     city = x50FDEE
     wood = x8DE18A
     farm = x8FE9B7
@@ -455,12 +465,13 @@ STATE_ONON = {
         type = "bg_rubber"
         undiscovered_amount = 6
     }
-
+    naval_exit_id = 3036
 }
 STATE_DORNO = {
     id = 4556
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x59EAF5" "x60F1E6" "xB3BEFE" "xB9E8C2" "xC2BACE" "xC5EFA0" "xDE5DBF" "xE5B786" "xEC8FC9" }
+    traits = { "state_trait_kharaa_ur_jungle" }
     city = x59EAF5
     wood = x60F1E6
     farm = xB3BEFE
@@ -471,12 +482,13 @@ STATE_DORNO = {
     capped_resources = {
         bg_logging = 15
     }
-
+    naval_exit_id = 3036
 }
 STATE_TOSON = {
     id = 4557
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x8CDCE2" "xA76BF3" "xC0B3CA" "xC6B092" "xF1EBCE" "xF4BDBD" "xFAA97F" }
+    traits = { "state_trait_kharaa_ur_jungle" }
     city = x8CDCE2
     wood = xA76BF3
     farm = xC0B3CA
@@ -487,7 +499,7 @@ STATE_TOSON = {
     capped_resources = {
         bg_logging = 13
     }
-
+    naval_exit_id = 3036
 }
 STATE_TSENK = {
     id = 4558
@@ -506,12 +518,13 @@ STATE_TSENK = {
         bg_sulfur_mining = 48
         bg_logging = 7
     }
-
+    naval_exit_id = 3036
 }
 STATE_BATSI = {
     id = 4559
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x2CE4F0" "x6BE9D0" "xACD57B" "xB099C6" "xC3B2EB" "xCCF370" "xEFE995" "xF489E1" "xFDEC90" }
+    traits = { "state_trait_kharaa_ur_jungle" }
     city = x2CE4F0
     wood = x6BE9D0
     farm = xACD57B
@@ -527,7 +540,7 @@ STATE_BATSI = {
         type = "bg_rubber"
         undiscovered_amount = 8
     }
-
+    naval_exit_id = 3036
 }
 STATE_ALBAIN = {
     id = 4560
@@ -544,7 +557,7 @@ STATE_ALBAIN = {
         bg_whaling = 2
         bg_fishing = 10
     }
-
+    naval_exit_id = 3014
 }
 STATE_GULTHYR = {
     id = 4561
@@ -561,7 +574,7 @@ STATE_GULTHYR = {
         bg_whaling = 6
         bg_fishing = 12
     }
-
+    naval_exit_id = 3059
 }
 STATE_THARKYR = {
     id = 4562
@@ -578,7 +591,7 @@ STATE_THARKYR = {
         bg_fishing = 7
         bg_logging = 6
     }
-
+    naval_exit_id = 3059
 }
 STATE_URTHOR = {
     id = 4563
@@ -595,7 +608,7 @@ STATE_URTHOR = {
         bg_fishing = 10
         bg_logging = 5
     }
-
+    naval_exit_id = 3059
 }
 STATE_KYRTHAL = {
     id = 4564
@@ -611,7 +624,7 @@ STATE_KYRTHAL = {
     capped_resources = {
         bg_fishing = 18
     }
-
+    naval_exit_id = 3033
 }
 STATE_GROMKYL = {
     id = 4565
@@ -628,7 +641,7 @@ STATE_GROMKYL = {
         bg_fishing = 10
         bg_logging = 7
     }
-
+    naval_exit_id = 3033
 }
 STATE_DROKYN = {
     id = 4566
@@ -646,7 +659,7 @@ STATE_DROKYN = {
         bg_whaling = 6
         bg_logging = 3
     }
-
+    naval_exit_id = 3059
 }
 STATE_KAZTHYR = {
     id = 4567
@@ -663,12 +676,13 @@ STATE_KAZTHYR = {
         bg_fishing = 4
         bg_logging = 6
     }
-
+    naval_exit_id = 3059
 }
 STATE_ZURKYL = {
     id = 4568
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x67BCF5" "x6FCDBE" "xA0CA8D" "xC2D2A1" "xC5BDDF" "xCBFEAE" "xCD81F8" "xDA8D99" "xDF68CF" "xE4EE82" "xFB8E73" "xFE97EC" }
+    traits = { "state_trait_kharaa_ur_jungle" }
     city = x67BCF5
     wood = x6FCDBE
     farm = xA0CA8D
@@ -680,7 +694,7 @@ STATE_ZURKYL = {
         bg_fishing = 11
         bg_logging = 20
     }
-
+    naval_exit_id = 3033
 }
 STATE_KYRGRIM = {
     id = 4569
@@ -700,7 +714,7 @@ STATE_KYRGRIM = {
         bg_lead_mining = 15
         bg_logging = 7
     }
-
+    naval_exit_id = 3059
 }
 STATE_DALSHTOK = {
     id = 4570
@@ -717,7 +731,7 @@ STATE_DALSHTOK = {
         bg_fishing = 16
         bg_logging = 7
     }
-
+    naval_exit_id = 3014
 }
 STATE_BURZOK = {
     id = 4572
@@ -734,12 +748,13 @@ STATE_BURZOK = {
         bg_fishing = 12
         bg_logging = 5
     }
-
+    naval_exit_id = 3014
 }
 STATE_ERKBALB = {
     id = 4573
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x84E4CA" "x889CEC" "x8DE9B6" "x9AEAFB" "xB0BEC9" "xB397D0" "xD1BFF9" "xD7C284" "xE896C7" "xF390BA" "xFE0BF3" }
+    traits = { "state_trait_kharaa_ur_jungle" }
     city = x84E4CA
     wood = x889CEC
     farm = x8DE9B6
@@ -752,12 +767,13 @@ STATE_ERKBALB = {
         bg_sulfur_mining = 80
         bg_logging = 16
     }
-
+    naval_exit_id = 3036
 }
 STATE_GOLMOK = {
     id = 4574
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "xBA7AD7" "xBB73E2" "xBDC7BE" "xC387AB" "xC6E8E7" "xDF929F" "xEC3FFA" "xF5AECF" }
+    traits = { "state_trait_kharaa_ur_jungle" }
     city = xBA7AD7
     wood = xBB73E2
     farm = xBDC7BE
@@ -769,12 +785,13 @@ STATE_GOLMOK = {
         bg_fishing = 5
         bg_logging = 17
     }
-
+    naval_exit_id = 3036
 }
 STATE_KRAGKYL = {
     id = 4575
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x74F889" "x83F7B2" "x8CB0FC" "x90D494" "xACD097" "xC3B680" "xC572C7" "xDDC675" "xE583D9" "xF1D0A8" "xF3C345" "xF9E6F8" "xFEF957" }
+    traits = { "state_trait_kharaa_ur_jungle" }
     city = x74F889
     wood = x83F7B2
     farm = x8CB0FC
@@ -786,12 +803,13 @@ STATE_KRAGKYL = {
         bg_fishing = 6
         bg_logging = 15
     }
-
+    naval_exit_id = 3036
 }
 STATE_DRUKYN = {
     id = 4576
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "xA1D8E1" "xAB7ED2" "xBD4DED" "xC7FEBF" "xCCEC91" "xD65ED8" "xEDBFEC" "xEED878" "xEFDF27" "xF1A8D9" "xF3A9A2" "xFC73FD" }
+    traits = { "state_trait_kharaa_ur_jungle" }
     city = xA1D8E1
     wood = xAB7ED2
     farm = xBD4DED
@@ -804,7 +822,7 @@ STATE_DRUKYN = {
         bg_iron_mining = 60
         bg_logging = 16
     }
-
+    naval_exit_id = 3036
 }
 STATE_KAZTHOK = {
     id = 4577
@@ -823,7 +841,7 @@ STATE_KAZTHOK = {
         bg_iron_mining = 33
         bg_logging = 2
     }
-
+    naval_exit_id = 3014
 }
 STATE_BAZKYL = {
     id = 4578
@@ -842,6 +860,7 @@ STATE_KYRTHOR = {
     id = 4579
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x7BA5D6" "x86F3EF" "x9EE784" "xB0D5B6" "xB0FAFC" "xBABAD6" "xC767FC" "xD572E2" "xE68DA6" "xE7AE66" "xF16EC6" "xF8CA78" }
+    traits = { "state_trait_kharaa_ur_jungle" }
     city = x7BA5D6
     wood = x86F3EF
     farm = x9EE784
@@ -853,7 +872,7 @@ STATE_KYRTHOR = {
         bg_fishing = 5
         bg_logging = 13
     }
-
+    naval_exit_id = 3036
 }
 STATE_GNAKYR = {
     id = 4580
@@ -870,7 +889,7 @@ STATE_GNAKYR = {
         bg_fishing = 6
         bg_logging = 2
     }
-
+    naval_exit_id = 3014
 }
 STATE_RAZOK = {
     id = 4581
@@ -888,7 +907,7 @@ STATE_RAZOK = {
         bg_coal_mining = 60
         bg_logging = 4
     }
-
+    naval_exit_id = 3014
 }
 STATE_KYRGRUK = {
     id = 4582
@@ -905,7 +924,7 @@ STATE_KYRGRUK = {
         bg_fishing = 7
         bg_logging = 2
     }
-
+    naval_exit_id = 3014
 }
 STATE_DORAZ = {
     id = 4583
@@ -924,7 +943,7 @@ STATE_DORAZ = {
         bg_lead_mining = 45
         bg_fishing = 5
     }
-
+    naval_exit_id = 3036
 }
 STATE_BALDBAN = {
     id = 4584
@@ -947,7 +966,7 @@ STATE_BALDBAN = {
         depleted_type = "bg_gold_mining"
         undiscovered_amount = 8
     }
-
+    naval_exit_id = 3014
 }
 STATE_KRAKYR = {
     id = 4585
@@ -964,12 +983,13 @@ STATE_KRAKYR = {
         bg_fishing = 8
         bg_logging = 2
     }
-
+    naval_exit_id = 3014
 }
 STATE_KYRZUR = {
     id = 4586
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x38CBF5" "x48DAFA" "x59B8EC" "x5EB6F0" "x62BEE0" "x7AFCF2" "x89D7F0" "x8AF2A8" "x8D8DF5" "x9693DB" "xA2EE9D" "xA65AF6" "xAC92F2" "xB8F2B7" "xD2AEE8" "xDF60BD" "xE674EF" "xE79581" "xFD3BC4" }
+    traits = { "state_trait_kharaa_ur_jungle" }
     city = x38CBF5
     wood = x48DAFA
     farm = x59B8EC
@@ -980,7 +1000,7 @@ STATE_KYRZUR = {
     capped_resources = {
         bg_logging = 25
     }
-
+    naval_exit_id = 3036
 }
 STATE_GROMMOK = {
     id = 4587
@@ -998,7 +1018,7 @@ STATE_GROMMOK = {
         bg_lead_mining = 30
         bg_logging = 3
     }
-
+    naval_exit_id = 3059
 }
 STATE_KYRKAZ = {
     id = 4588
@@ -1018,7 +1038,7 @@ STATE_KYRKAZ = {
         bg_lead_mining = 36
         bg_logging = 7
     }
-
+    naval_exit_id = 3014
 }
 STATE_BAIZOR = {
     id = 4589
@@ -1034,25 +1054,26 @@ STATE_BAIZOR = {
     capped_resources = {
         bg_fishing = 6
     }
-
+    naval_exit_id = 3036
 }
 STATE_KAZKYL = {
     id = 4590
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x6DF5BA" "x72FBC7" "x8BBFD7" "xA09EC0" "xA5E48E" "xB0C588" "xB6FEC8" "xE664EF" "xE7F86D" "xF1F89A" "xF4C960" "xF553EC" "xF818EE" "xFA58A9" "xFEABB6" }
+    traits = { "state_trait_kharaa_ur_jungle" }
     city = x6DF5BA
     wood = x72FBC7
     farm = x8BBFD7
     mine = xA09EC0
     port = xA5E48E
-    arable_land = 102
+    arable_land = 152
     arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_tea_plantations" "bg_silk_plantations" "bg_tobacco_plantations" }
     capped_resources = {
         bg_coal_mining = 52
         bg_lead_mining = 45
         bg_logging = 17
     }
-
+    naval_exit_id = 3036
 }
 STATE_ORONAKA = {
     id = 4591
@@ -1070,7 +1091,7 @@ STATE_ORONAKA = {
         bg_lead_mining = 24
         bg_sulfur_mining = 36
     }
-
+    naval_exit_id = 3059
 }
 STATE_KHANGAWA = {
     id = 4592
@@ -1086,7 +1107,7 @@ STATE_KHANGAWA = {
     capped_resources = {
         bg_fishing = 8
     }
-
+    naval_exit_id = 3036
 }
 STATE_HIRAMACHI = {
     id = 4593
@@ -1104,7 +1125,7 @@ STATE_HIRAMACHI = {
         bg_lead_mining = 36
         bg_sulfur_mining = 40
     }
-
+    naval_exit_id = 3027
 }
 STATE_KHULANJO = {
     id = 4594
@@ -1120,7 +1141,7 @@ STATE_KHULANJO = {
     capped_resources = {
         bg_logging = 2
     }
-
+    naval_exit_id = 3036
 }
 STATE_HOKUDAIHAN = {
     id = 4595
@@ -1137,7 +1158,7 @@ STATE_HOKUDAIHAN = {
         bg_fishing = 10
         bg_logging = 4
     }
-
+    naval_exit_id = 3027
 }
 STATE_TAKAYAMAAN = {
     id = 4596
@@ -1153,12 +1174,13 @@ STATE_TAKAYAMAAN = {
     capped_resources = {
         bg_fishing = 18
     }
-
+    naval_exit_id = 3014
 }
 STATE_JARGALTSAI = {
     id = 4597
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x6EE2BB" "x74FDB3" "x93ACFB" "xA386DC" "xAFD1F1" "xBBDF81" "xDF99A4" "xDFB1D7" "xE35DE8" "xEE34D8" "xFE17F1" }
+    traits = { "state_trait_kharaa_ur_jungle" }
     city = x6EE2BB
     wood = x74FDB3
     farm = x93ACFB
@@ -1169,12 +1191,13 @@ STATE_JARGALTSAI = {
     capped_resources = {
         bg_logging = 14
     }
-
+    naval_exit_id = 3036
 }
 STATE_YAMAKHANJU = {
     id = 4598
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x1BF2F7" "x5DB4FC" "x7CC5BC" "xB58ED1" "xBBAED1" "xCBC269" "xCBEFD4" "xCFC798" "xD9F254" "xE0B4CC" "xF7E86D" }
+    traits = { "state_trait_kharaa_ur_jungle" }
     city = x1BF2F7
     wood = x5DB4FC
     farm = x7CC5BC
@@ -1186,7 +1209,7 @@ STATE_YAMAKHANJU = {
         bg_fishing = 8
         bg_logging = 9
     }
-
+    naval_exit_id = 3003
 }
 STATE_KURULANDU = {
     id = 4599
@@ -1203,7 +1226,7 @@ STATE_KURULANDU = {
         bg_fishing = 9
         bg_logging = 10
     }
-
+    naval_exit_id = 3003
 }
 STATE_KIYOMORIN = {
     id = 4600
@@ -1221,7 +1244,7 @@ STATE_KIYOMORIN = {
         bg_iron_mining = 33
         bg_logging = 5
     }
-
+    naval_exit_id = 3036
 }
 STATE_BATOKYOAN = {
     id = 4601
@@ -1239,7 +1262,7 @@ STATE_BATOKYOAN = {
         bg_lead_mining = 36
         bg_logging = 6
     }
-
+    naval_exit_id = 3036
 }
 STATE_KHULEKKA = {
     id = 4602
@@ -1257,7 +1280,7 @@ STATE_KHULEKKA = {
         bg_iron_mining = 39
         bg_logging = 5
     }
-
+    naval_exit_id = 3036
 }
 STATE_HOKUKHAN = {
     id = 4603
@@ -1275,12 +1298,13 @@ STATE_HOKUKHAN = {
         bg_iron_mining = 45
         bg_logging = 3
     }
-
+    naval_exit_id = 3036
 }
 STATE_TSURUKHAN = {
     id = 4604
     subsistence_building = "building_subsistence_pastures"
     provinces = { "x2BEBF7" "x4BBBFB" "x61EAC9" "x7BD0E8" "x85C8ED" "xAABFD6" "xB59FF7" "xB8AAA4" "xCF929E" "xD8EBA0" "xDA75CE" "xDDB0BF" "xE0C2BA" "xE386F8" "xE3AEEF" "xF433ED" "xFA94D2" }
+    traits = { "state_trait_kharaa_ur_desert" }
     city = x2BEBF7
     wood = x4BBBFB
     farm = x61EAC9
@@ -1291,12 +1315,13 @@ STATE_TSURUKHAN = {
     capped_resources = {
         bg_fishing = 3
     }
-
+    naval_exit_id = 3027
 }
 STATE_ARASHIHARA = {
     id = 4605
     subsistence_building = "building_subsistence_pastures"
     provinces = { "x3FCCF2" "x64F3B3" "x86AEF1" "xAFB1D6" "xB6F0D9" "xB8ABBD" "xC0CDF1" "xC493E8" "xCBC787" "xCCCC76" "xCE85F1" "xD9BD6D" "xDDA0B3" "xDFFCE6" "xE2B266" "xF3B5B5" "xFCDA75" "xFCEDEE" "xFEE06D" }
+    traits = { "state_trait_kharaa_ur_desert" }
     city = x3FCCF2
     wood = x64F3B3
     farm = x86AEF1
@@ -1308,7 +1333,7 @@ STATE_ARASHIHARA = {
         type = "bg_oil_extraction"
         undiscovered_amount = 30
     }
-
+    naval_exit_id = 3036
 }
 STATE_KITAYAMAO = {
     id = 4606
@@ -1326,7 +1351,7 @@ STATE_KITAYAMAO = {
         depleted_type = "bg_gold_mining"
         undiscovered_amount = 8
     }
-
+    naval_exit_id = 3036
 }
 STATE_FUJIMORIYAMA = {
     id = 4607
@@ -1345,7 +1370,7 @@ STATE_FUJIMORIYAMA = {
         bg_iron_mining = 75
         bg_logging = 6
     }
-
+    naval_exit_id = 3003
 }
 STATE_NISHIGUCHI = {
     id = 4608
@@ -1364,7 +1389,7 @@ STATE_NISHIGUCHI = {
         bg_iron_mining = 36
         bg_logging = 5
     }
-
+    naval_exit_id = 3003
 }
 STATE_MONGOROKKU = {
     id = 4609
@@ -1383,7 +1408,7 @@ STATE_MONGOROKKU = {
         bg_iron_mining = 45
         bg_logging = 10
     }
-
+    naval_exit_id = 3003
 }
 STATE_KAMISHINBA = {
     id = 4610
@@ -1399,7 +1424,7 @@ STATE_KAMISHINBA = {
     capped_resources = {
         bg_fishing = 12
     }
-
+    naval_exit_id = 3003
 }
 STATE_KHASUNEN = {
     id = 4611
@@ -1415,7 +1440,7 @@ STATE_KHASUNEN = {
     capped_resources = {
         bg_fishing = 6
     }
-
+    naval_exit_id = 3003
 }
 STATE_KHULEKI = {
     id = 4612
@@ -1431,7 +1456,7 @@ STATE_KHULEKI = {
     capped_resources = {
         bg_fishing = 9
     }
-
+    naval_exit_id = 3027
 }
 STATE_KAMITAI = {
     id = 4613
@@ -1449,7 +1474,7 @@ STATE_KAMITAI = {
         bg_coal_mining = 24
         bg_lead_mining = 27
     }
-
+    naval_exit_id = 3027
 }
 STATE_HARUGAWASAI = {
     id = 4614
@@ -1468,7 +1493,7 @@ STATE_HARUGAWASAI = {
         bg_coal_mining = 40
         bg_logging = 12
     }
-
+    naval_exit_id = 3003
 }
 STATE_TSUKHANJUKU = {
     id = 4615
@@ -1485,7 +1510,7 @@ STATE_TSUKHANJUKU = {
         bg_fishing = 5
         bg_lead_mining = 36
     }
-
+    naval_exit_id = 3003
 }
 STATE_KIYOMATSUE = {
     id = 4616
@@ -1504,7 +1529,7 @@ STATE_KIYOMATSUE = {
         bg_iron_mining = 24
         bg_logging = 5
     }
-
+    naval_exit_id = 3003
 }
 STATE_JARGALYO = {
     id = 4617
@@ -1520,12 +1545,13 @@ STATE_JARGALYO = {
     capped_resources = {
         bg_fishing = 4
     }
-
+    naval_exit_id = 3003
 }
 STATE_SHINKANBATA = {
     id = 4618
     subsistence_building = "building_subsistence_pastures"
     provinces = { "x24F3F3" "x3AEBF2" "x6DECBA" "x7CF588" "x92BDC2" "x9DBAD1" "xA2EC70" "xA5BEF5" "xAB93E6" "xB5F1C6" "xBA66F0" "xBAD2DE" "xBCC8C7" "xC3FBE2" "xC6E5E7" "xCA61FB" "xCDC3F7" "xD3C7AC" "xD4F359" "xD88CA7" "xD9B79C" "xDAB981" "xDC43F6" "xDC94E5" "xE6868A" "xE8FCFD" "xE9E6F4" "xEBEF53" "xF9C3ED" "xFDF3C9" }
+    traits = { "state_trait_kharaa_ur_desert" }
     city = x24F3F3
     wood = x3AEBF2
     farm = x6DECBA
@@ -1539,6 +1565,7 @@ STATE_HIRAKHANJO = {
     id = 4619
     subsistence_building = "building_subsistence_pastures"
     provinces = { "x33E3DF" "x40CDFB" "x57F2BC" "x69E9E9" "x73D2FB" "x79B9F9" "x8CE2BD" "x97F88E" "xABBAC6" "xB0C0A2" "xB5E1F7" "xB7E0E5" "xB7EAA2" "xB8C486" "xB8FB46" "xC7E5DD" "xC8F86E" "xCFF9D1" "xD4E3E7" "xDCBD9E" "xDEB4E2" "xDF9AAF" "xE1FDB2" "xE8908E" "xEAD485" "xEF8DA9" "xF632F8" "xFDBAA1" "xFDF0D3" }
+    traits = { "state_trait_kharaa_ur_desert" }
     city = x33E3DF
     wood = x40CDFB
     farm = x57F2BC
@@ -1555,7 +1582,7 @@ STATE_HIRAKHANJO = {
         type = "bg_oil_extraction"
         undiscovered_amount = 30
     }
-
+    naval_exit_id = 3036
 }
 STATE_MONGOGAWA = {
     id = 4620
@@ -1571,7 +1598,7 @@ STATE_MONGOGAWA = {
     capped_resources = {
         bg_fishing = 8
     }
-
+    naval_exit_id = 3027
 }
 STATE_HAYAKHAMURA = {
     id = 4621
@@ -1590,5 +1617,5 @@ STATE_HAYAKHAMURA = {
         bg_iron_mining = 33
         bg_sulfur_mining = 32
     }
-
+    naval_exit_id = 3027
 }

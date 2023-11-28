@@ -1,0 +1,30 @@
+﻿CHARACTERS = {
+	c:YOK = {
+		create_character = {
+			first_name = "Goro"
+			last_name = "Uryu"
+			historical = yes
+			ruler = yes
+			is_general = yes
+			age = 35
+			interest_group = ig_landowners
+			ideology = ideology_moderate
+			traits = {
+				direct
+				bandit
+			}
+		}
+		create_character = {
+			first_name = "Koichiro"
+			last_name = "Uryu"
+			historical = yes
+			heir = yes
+			age = 13
+			interest_group = ig_landowners
+			ideology = ideology_jingoist_leader
+			traits = {
+				trait_child
+			}
+		}
+	}
+}

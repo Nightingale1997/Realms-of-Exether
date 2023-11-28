@@ -1,0 +1,28 @@
+﻿CHARACTERS = {
+	c:SUN = {
+		create_character = {
+			first_name = "Tewfik"
+			last_name = "Konushevci"
+			historical = yes
+			ruler = yes
+			age = 61
+			interest_group = ig_landowners
+			ideology = ideology_traditionalist
+			traits = {
+				persistent
+			}
+		}
+		create_character = {
+			first_name = "Izet"
+			last_name = "Konushevci"
+			historical = yes
+			heir = yes
+			age = 8
+			interest_group = ig_landowners
+			ideology = ideology_traditionalist
+			traits = {
+				trait_child
+			}
+		}
+	}
+}
