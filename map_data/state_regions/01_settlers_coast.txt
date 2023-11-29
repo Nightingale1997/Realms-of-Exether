@@ -651,7 +651,16 @@ STATE_NOGI_SANDS = {
     wood = x3BE7E4
     farm = x61BAE9
     mine = x67EAEC
-    port = x70F89D
+    arable_land = 20
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 32
+        bg_opium_plantations = 12
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 5
+    }
 
 }
 STATE_GRAVELROCK_ROAD = {
