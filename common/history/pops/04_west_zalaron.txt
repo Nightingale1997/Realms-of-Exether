@@ -7,7 +7,7 @@ POPS = {
 
   }
   s:STATE_DURRESIA = {
-		region_state:ZIN = {
+		region_state:ZIX = {
 			create_pop = {
 				culture = dales_togrul
 				size = 142000
@@ -55,7 +55,43 @@ POPS = {
 		}
   }
   s:STATE_KULLAMAL = {
-
+		region_state:ZIX = {
+			create_pop = {
+				culture = xhurlob
+				size = 158000
+			}
+			create_pop = {
+				culture = atiukura
+				size = 8400
+			}
+			create_pop = {
+				culture = dales_togrul
+				size = 9200
+			}
+			create_pop = {
+				culture = varbat
+				religion = sunni
+				size = 38000
+			}
+			create_pop = {
+				culture = rethrashar
+				size = 4000
+			}
+			create_pop = {
+				culture = vandori
+				size = 400
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = mgzavri
+				size = 7000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = west_thalorian
+				size = 9000
+			}
+		}
   }
   s:STATE_VLORIANA = {
 
@@ -121,7 +157,29 @@ POPS = {
 
   }
   s:STATE_FIERANA = {
-
+		region_state:ZIX = {
+			create_pop = {
+				pop_type = slaves
+				culture = mgzavri
+				size = 32800
+			}
+			create_pop = {
+				culture = xhurlob
+				size = 670000
+			}
+			create_pop = {
+				culture = rethrashar
+				size = 221000
+			}
+			create_pop = {
+				culture = varbat
+				size = 48000
+			}
+			create_pop = {
+				culture = vandori
+				size = 16000
+			}
+		}
   }
   s:STATE_KURBULL = {
 

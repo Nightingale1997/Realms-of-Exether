@@ -69,7 +69,16 @@ STATE_KULLAMAL = {
     farm = x7EDCA1
     mine = x9BC3D0
     port = x9FA8E4
-
+    arable_land = 10
+    arable_resources = { "bg_livestock_ranches" "bg_coffee_plantations" "bg_tobacco_plantations" }
+    capped_resources = {
+        bg_fishing = 10
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 20
+    }
+    naval_exit_id = 3028
 }
 STATE_VLORIANA = {
     id = 2405
@@ -167,7 +176,17 @@ STATE_FIERANA = {
     farm = x64F7F2
     mine = x7990ED
     port = x95F896
-
+    arable_land = 70
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_tobacco_plantations" }
+    capped_resources = {
+        bg_lead_mining = 12
+        bg_fishing = 9
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 20
+    }
+    naval_exit_id = 3009
 }
 STATE_KURBULL = {
     id = 2413
@@ -206,7 +225,7 @@ STATE_BERATIA = {
         bg_iron_mining = 15
         bg_fishing = 5
     }
-    naval_exit_id = 3009
+    naval_exit_id = 3028
 }
 STATE_VOSKOPOJANA = {
     id = 2416
