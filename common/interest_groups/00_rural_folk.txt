@@ -37,9 +37,12 @@
 			is_pop_type = capitalists
 		}
 		OR = {
-			pop_employment_building_group = bg_agriculture
-			pop_employment_building_group = bg_ranching
-			pop_employment_building_group = bg_plantations
+			AND = {
+				NOT = { is_pop_type = wizards }
+				pop_employment_building_group = bg_agriculture
+				pop_employment_building_group = bg_ranching
+				pop_employment_building_group = bg_plantations
+			}
 			AND = {
 				is_pop_type = wizards
 				has_law = law_type:law_druidic_circles

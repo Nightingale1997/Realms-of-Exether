@@ -483,6 +483,10 @@ law_dark_arts = {
 		state_mortality_mult = -0.01
 	}
 
+	modifier = {
+		country_infamy_decay_mult = -0.25
+	}
+
 	on_enact = {
 		if = {
 			limit = {
