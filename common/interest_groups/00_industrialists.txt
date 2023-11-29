@@ -48,6 +48,10 @@
 			is_pop_type = capitalists
 			is_pop_type = engineers
 			is_pop_type = shopkeepers
+			AND = {
+				is_pop_type = wizards
+				has_law = law_type:law_artificer_guilds
+			}
 		}
 	}
 
@@ -84,6 +88,19 @@
 				}
 				value = 50
 				add = this.standard_of_living
+			}
+		}
+
+		add = {
+			desc = "ARTIFICER_LAW"
+			if = {
+				limit = {
+					is_pop_type = wizards
+					owner = {
+						has_law = law_type:law_artificer_guilds
+					}
+				}
+				value = 25
 			}
 		}
 

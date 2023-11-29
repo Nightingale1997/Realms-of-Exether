@@ -123,7 +123,17 @@ POPS = {
   }
 
   s:STATE_FAR_SHORE = {
+		region_state:THI = {
 
+			create_pop = {
+				culture = thiralian
+				size = 408014
+			}
+			create_pop = {
+				culture = dorite
+				size = 186786
+			}
+		}
   }
 
   s:STATE_DURANS_LAND = {
@@ -247,11 +257,29 @@ POPS = {
   }
 
   s:STATE_COGSREST = {
-
+		region_state:DRO = {
+			create_pop = {
+				culture = aridrun
+				size = 751104
+			}
+			create_pop = {
+				culture = vozi
+				size = 15996
+			}
+		}
   }
 
   s:STATE_NOGI_SANDS = {
-
+		region_state:DRO = {
+			create_pop = {
+				culture = aridrun
+				size = 476392
+			}
+			create_pop = {
+				culture = vozi # nanfaren
+				size = 11600
+			}
+		}
   }
 
   s:STATE_GRAVELROCK_ROAD = {
@@ -259,19 +287,43 @@ POPS = {
   }
 
   s:STATE_ELF1 = {
-
+		region_state:DRO = {
+			create_pop = {
+				culture = aridrun
+				size = 372508
+			}
+		}
   }
 
   s:STATE_ELF2 = {
-
+		region_state:DRO = {
+			create_pop = {
+				culture = aridrun
+				size = 860796
+			}
+		}
   }
 
   s:STATE_ELF3 = {
-
+		region_state:DRO = {
+			create_pop = {
+				culture = aridrun
+				size = 1620800
+			}
+		}
   }
 
   s:STATE_ELF4 = {
-
+		region_state:DRO = {
+			create_pop = {
+				culture = aridrun
+				size = 828528
+			}
+			create_pop = {
+				culture = vozi
+				size = 12264
+			}
+		}
   }
 
   s:STATE_HAZELDEEP = {

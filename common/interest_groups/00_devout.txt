@@ -98,6 +98,19 @@
 		}
 
 		add = {
+			desc = "MIRACLES_LAW"
+			if = {
+				limit = {
+					is_pop_type = wizards
+					owner = {
+						has_law = law_type:law_divine_miracles
+					}
+				}
+				value = 25
+			}
+		}
+
+		add = {
 			desc = "POP_PEASANTS"
 			if = {
 				limit = {

@@ -8,6 +8,33 @@
 	disallowing_laws = {
 		#law_compulsory_primary_school
 	}
+
+	on_enact = {
+		if = {
+			limit = {
+				has_law = law_type:law_artificer_guilds
+			}
+			custom_tooltip = wizards_industrialist_ig_shift_effect_negative_tt
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_divine_miracles
+			}
+			custom_tooltip = wizards_devout_ig_shift_effect_negative_tt
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_astrological_studies
+			}
+			custom_tooltip = academics_mages_ig_shift_effect_negative_tt
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_druidic_circles
+			}
+			custom_tooltip = wizards_rural_ig_shift_effect_negative_tt
+		}
+	}
 	
 	pop_support = {
 		value = 0
@@ -51,7 +78,7 @@ law_divine_miracles = {
 
 	institution = institution_magical_focus
 	institution_modifier = {
-		building_working_conditions_mult = -0.05
+		country_clergymen_pol_str_mult = 0.05
 		state_conversion_mult = 0.05
 	}
 	
@@ -59,6 +86,36 @@ law_divine_miracles = {
 		law_private_schools
 		law_public_schools
 	}	
+
+	on_enact = {
+		if = {
+			limit = {
+					has_law = law_type:law_artificer_guilds
+			}
+			custom_tooltip = wizards_industrialist_ig_shift_effect_negative_tt
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_law = law_type:law_divine_miracles
+				}
+				
+			}
+			custom_tooltip = wizards_devout_ig_shift_effect_tt
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_astrological_studies
+			}
+			custom_tooltip = academics_mages_ig_shift_effect_negative_tt
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_druidic_circles
+			}
+			custom_tooltip = wizards_rural_ig_shift_effect_negative_tt
+		}
+	}
 	
 	pop_support = {
 		value = 0
@@ -135,6 +192,35 @@ law_druidic_circles = {
 		building_group_bg_plantations_throughput_mult = 0.05
 		
 	}
+
+	on_enact = {
+		if = {
+			limit = {
+				has_law = law_type:law_artificer_guilds
+			}
+			custom_tooltip = wizards_industrialist_ig_shift_effect_negative_tt
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_divine_miracles
+			}
+			custom_tooltip = wizards_devout_ig_shift_effect_negative_tt
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_astrological_studies
+			}
+			custom_tooltip = academics_mages_ig_shift_effect_negative_tt
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_law = law_type:law_druidic_circles
+				}
+			}
+			custom_tooltip = wizards_rural_ig_shift_effect_tt
+		}
+	}
 	
 	possible_political_movements = {
 		law_religious_schools
@@ -189,6 +275,7 @@ law_artificer_guilds = {
 	institution_modifier = {
 		building_group_bg_manufacturing_throughput_mult = 0.05
 		building_group_bg_service_throughput_mult = 0.05
+		country_engineers_pol_str_mult = 0.05
 	}
 	
 	possible_political_movements = {
@@ -196,6 +283,35 @@ law_artificer_guilds = {
 		law_religious_schools
 	}	
 	
+	on_enact = {
+		if = {
+			limit = {
+				NOT = {
+					has_law = law_type:law_artificer_guilds
+				}
+			}
+			custom_tooltip = wizards_industrialist_ig_shift_effect_tt
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_divine_miracles
+			}
+			custom_tooltip = wizards_devout_ig_shift_effect_negative_tt
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_astrological_studies
+			}
+			custom_tooltip = academics_mages_ig_shift_effect_negative_tt
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_druidic_circles
+			}
+			custom_tooltip = wizards_rural_ig_shift_effect_negative_tt
+		}
+	}
+
 	pop_support = {
 		value = 0
 		add = {
@@ -268,6 +384,35 @@ law_astrological_studies = {
 		law_private_schools
 		law_religious_schools
 	}	
+
+	on_enact = {
+		if = {
+			limit = {
+					has_law = law_type:law_artificer_guilds
+			}
+			custom_tooltip = wizards_industrialist_ig_shift_effect_negative_tt
+		}
+		if = {
+			limit = {
+					has_law = law_type:law_divine_miracles
+			}
+			custom_tooltip = wizards_devout_ig_shift_effect_negative_tt
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_law = law_type:law_astrological_studies
+				}
+			}
+			custom_tooltip = academics_mages_ig_shift_effect_tt
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_druidic_circles
+			}
+			custom_tooltip = wizards_rural_ig_shift_effect_negative_tt
+		}
+	}
 	
 	pop_support = {
 		value = 0
@@ -336,6 +481,33 @@ law_dark_arts = {
 	institution_modifier = {
 		state_birth_rate_mult = 0.01
 		state_mortality_mult = -0.01
+	}
+
+	on_enact = {
+		if = {
+			limit = {
+				has_law = law_type:law_artificer_guilds
+			}
+			custom_tooltip = wizards_industrialist_ig_shift_effect_negative_tt
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_divine_miracles
+			}
+			custom_tooltip = wizards_devout_ig_shift_effect_negative_tt
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_astrological_studies
+			}
+			custom_tooltip = academics_mages_ig_shift_effect_negative_tt
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_druidic_circles
+			}
+			custom_tooltip = wizards_rural_ig_shift_effect_negative_tt
+		}
 	}
 	
 	possible_political_movements = {
@@ -417,6 +589,33 @@ law_mage_hunters = {
 		law_private_schools
 		law_religious_schools
 	}	
+
+	on_enact = {
+		if = {
+			limit = {
+				has_law = law_type:law_artificer_guilds
+			}
+			custom_tooltip = wizards_industrialist_ig_shift_effect_negative_tt
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_divine_miracles
+			}
+			custom_tooltip = wizards_devout_ig_shift_effect_negative_tt
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_astrological_studies
+			}
+			custom_tooltip = academics_mages_ig_shift_effect_negative_tt
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_druidic_circles
+			}
+			custom_tooltip = wizards_rural_ig_shift_effect_negative_tt
+		}
+	}
 	
 	pop_support = {
 		value = 0

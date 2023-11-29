@@ -51,6 +51,10 @@
 			is_pop_type = clerks
 			is_pop_type = engineers
 			is_pop_type = wizards
+			AND = {
+				is_pop_type = academics
+				has_law = law_type:law_astrological_studies
+			}
 		}
 	}
 
@@ -63,7 +67,7 @@
 				limit = {
 					is_pop_type = wizards
 				}
-				value = 250
+				value = 200
 			}
 		}
 
@@ -101,6 +105,19 @@
 					is_pop_type = clerks
 				}
 				value = 50
+			}
+		}
+
+		add = {
+			desc = "ASTROLOGICAL_STUDIES_LAW"
+			if = {
+				limit = {
+					is_pop_type = wizards
+					owner = {
+						has_law = law_type:law_astrological_studies
+					}
+				}
+				value = 25
 			}
 		}
 
@@ -149,6 +166,7 @@
 						is_pop_type = aristocrats
 						is_pop_type = clergymen
 						is_pop_type = capitalists
+						is_pop_type = wizards
 					}
 					OR = {
 						pop_employment_building_group = bg_service
