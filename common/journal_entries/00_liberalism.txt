@@ -17,7 +17,17 @@ je_liberalism_1 = {
 				is_in_government = yes
 			}
 			OR = {
-				has_ideology = ideology:ideology_liberal		
+				trigger_if = {
+					limit = {
+						owner = {
+							has_technology_researched = feminism
+						}
+					}
+					has_ideology = ideology:ideology_liberal_modern
+				}
+				trigger_else = {
+					has_ideology = ideology:ideology_liberal
+				}
 				any_scope_character = {
 					OR = {
 						has_role = politician
@@ -46,6 +56,7 @@ je_liberalism_1 = {
 			is_in_government = yes
 			OR = {
 				has_ideology = ideology:ideology_liberal
+				has_ideology = ideology:ideology_liberal_modern
 				leader = { has_ideology = ideology:ideology_radical }
 				leader = { has_ideology = ideology:ideology_market_liberal }
 			}

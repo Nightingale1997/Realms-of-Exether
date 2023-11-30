@@ -305,7 +305,8 @@ NGraphics = {
 	FRONT_DIORAMA_GRID_WIDTH = 20			# Grid width of a diorama inside a province
 	FRONT_DIORAMA_GRID_HEIGHT = 20			# Grid height of a diorama inside a province
 	FRONT_DIORAMA_GRID_SCALE = 1.1			# Grid cell scale of a diorama inside a province
-	FRONT_DIORAMA_DEFAULT_STATE = "defend"	# Animation state name for entities without a general's order
+	FRONT_DIORAMA_STATE_DEFAULT = "idle"		# Animation state name for entities when they do nothing (before war)
+	FRONT_DIORAMA_STATE_NO_GENERAL = "defend"	# Animation state name for entities without a general's order
 	FRONT_DIORAMA_FLAT_MAP_ENTITY = "generic_flatmap_unit_entity"	# The entity that is visible in the flat map mode instead of front entities
 
 	# Battle entities graphics
@@ -319,13 +320,14 @@ NGraphics = {
 	BATTLE_DIORAMA_VICTORY_SIDE_STATE = "victory"	# Animation state name for entities on the winning battle side after the battle
 	BATTLE_DIORAMA_DEFEATED_SIDE_STATE = "idle"		# Animation state name for entities on the defeated battle side after the battle
 	BATTLE_DIORAMA_DESTRUCTION_DELAY = 5	# How many seconds we show diorama entities after the battle is over
-	BATTLE_DIORAMA_VFX_START_TIME = 3 		# After how many seconds we show VFX on battle sides after the battle is over (must be <= BATTLE_DIORAMA_DESTRUCTION_DELAY)
-	BATTLE_DIORAMA_VFX_VICTORY_SIDE = "war_center_explosion_entity"		# Entity that spawns after BATTLE_DIORAMA_VFX_START_TIME seconds after the battle end on the victory side
-	BATTLE_DIORAMA_VFX_DEFEATED_SIDE = "war_center_explosion_entity"	# Entity that spawns after BATTLE_DIORAMA_VFX_START_TIME seconds after the battle end on the defeated side
+	BATTLE_DIORAMA_VFX_START_TIME = 0 		# After how many seconds we show VFX on battle sides after the battle is over (must be <= BATTLE_DIORAMA_DESTRUCTION_DELAY)
+	BATTLE_DIORAMA_VFX_VICTORY_SIDE = "battle_diorama_victory_entity"		# Entity that spawns after BATTLE_DIORAMA_VFX_START_TIME seconds after the battle end on the victory side
+	BATTLE_DIORAMA_VFX_DEFEATED_SIDE = "battle_diorama_defeat_entity"	# Entity that spawns after BATTLE_DIORAMA_VFX_START_TIME seconds after the battle end on the defeated side
 	DAYS_AFTER_BATTLE_TO_SHOW_ENTITY = 7	# For how long to show battle environment entities after the battle
 
 	MILITARY_ENTITIES_FLYING_ENTITY_HEIGHT = 1					# If entity locator is higher than this value, then the entity is considered as flying i.e. doesn't occupy a cell and doesn't hide map objects beneath
 	MILITARY_ENTITIES_TOGGLE_MAP_OBJECTS_IN_RADIUS = 2			# How many cells around entities should be used for hiding map objects (trees)
+	MILITARY_ENTITIES_DITHER_DURATION = 1.0						# How many seconds it takes for diorama entities to gradually appear or disappear. Applies to all dioramas: front, land battle, fleet, and naval battle dioramas
 
 	NAVAL_ORDER_BASE_ENTITY = "naval_order_base_entity"
 	NAVAL_ORDER_ENTITY_HEIGHT = 0.25							# Height above water

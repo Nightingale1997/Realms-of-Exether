@@ -663,7 +663,6 @@ ai_strategy_economic_imperialism = {
 	}
 	
 	strategic_region_scores = {
-
 	}
 	
 	secret_goal_scores = {
@@ -672,6 +671,7 @@ ai_strategy_economic_imperialism = {
 				limit = {
 					has_strategic_adjacency = scope:target_country
 					root.country_rank > scope:target_country.country_rank
+					scope:target_country.country_rank < rank_value:major_power
 					scope:target_country = {
 						NOR = { 
 							has_law = law_type:law_free_trade 
@@ -680,6 +680,13 @@ ai_strategy_economic_imperialism = {
 					}
 				}
 				add = 50
+				
+				if = {
+					limit = {
+						scope:target_country = { is_country_type = unrecognized }
+					}
+					add = 50
+				}
 			}		
 		}		
 		conquer = {		
@@ -694,17 +701,49 @@ ai_strategy_economic_imperialism = {
 				limit = {
 					scope:target_country = { NOT = { is_country_type = unrecognized } }
 				}
-				multiply = 0.5
+				add = -50
+			}
+			
+			# Don't attack Japan outright, open them instead
+			if = {
+				limit = {
+					scope:target_country = { 
+						has_law = law_type:law_isolationism 
+						gdp >= 2000000
+						capital.region = sr:region_japan												
+					} 
+				}
+				add = -1000
 			}			
 		}		
 	}
 
 	wargoal_weights = {
-		take_treaty_port = 1.5
-		make_protectorate = 1.5
-		reduce_autonomy = 1.5	
+		make_protectorate = 1.5	
 		make_tributary = 1.5	
 	}	
+	
+	treaty_port_value = {
+		if = {
+			limit = {
+				can_reach_target_state = yes
+				scope:target_country = {
+					has_law = law_type:law_isolationism
+					gdp >= 2000000 # Not worth doing against very small markets
+				}
+				scope:target_state = { is_incorporated = yes }
+			}
+			add = {
+				value = 50
+			
+				# More likely to grab a treaty port if we're already enemies in a play, ie they attacked us first
+				if = {
+					limit = { is_diplomatic_play_enemy_of = scope:target_country }
+					multiply = 2.0
+				}
+			}
+		}	
+	}
 	
 	wargoal_scores = {	
 		open_market = {
@@ -712,6 +751,7 @@ ai_strategy_economic_imperialism = {
 		
 			if = {
 				limit = {
+					country_rank = rank_value:great_power
 					can_reach_target_country = yes
 					scope:target_country = {
 						has_law = law_type:law_isolationism
@@ -719,14 +759,14 @@ ai_strategy_economic_imperialism = {
 					}
 				}
 				add = {
-					value = 200
+					value = 100
 				
 					# Less interested in open market as a sway or defensive wargoal
 					if = {
 						limit = { is_diplomatic_play_involved_with = scope:target_country }
-						multiply = 0.1
+						multiply = 0.2
 					}
-					else_if = { # High score for opening Japan
+					else_if = { # Very high score for opening Japan
 						limit = { 
 							scope:target_country = { 
 								exists = c:JAP
@@ -734,30 +774,7 @@ ai_strategy_economic_imperialism = {
 								has_law = law_type:law_isolationism 				
 							} 	
 						}
-						multiply = 2
-					}
-				}
-			}
-		}
-		take_treaty_port = {
-			value = 0
-		
-			if = {
-				limit = {
-					can_reach_target_state = yes
-					scope:target_country = {
-						has_law = law_type:law_isolationism
-						gdp >= 2000000 # Not worth doing against very small markets
-					}
-					scope:target_state = { is_incorporated = yes }
-				}
-				add = {
-					value = 100
-				
-					# More likely to grab a treaty port if we're already enemies in a play, ie they attacked us first
-					if = {
-						limit = { is_diplomatic_play_enemy_of = scope:target_country }
-						multiply = 2.0
+						multiply = 10
 					}
 				}
 			}

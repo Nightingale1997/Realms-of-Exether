@@ -727,7 +727,7 @@ je_tutorial_improve_consumer_goods_access = {
 		
 	complete = {
 		exists = scope:target
-		scope:target = { market_goods_pricier < 0.25 }
+		scope:target = { state_goods_pricier < 0.2 }
 	}
 	
 	weight = 1021
@@ -1181,10 +1181,9 @@ je_tutorial_mobilize_army = {
 	group = je_group_tutorial
 
 	complete = {
-		any_scope_character = {
-			has_role = general
-			is_mobilized = yes
-#			fully_mobilized = yes
+		any_military_formation = {
+			is_army = yes
+			is_fully_mobilized = yes
 		}
 	}
 

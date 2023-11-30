@@ -221,6 +221,12 @@ je_unrecognized_power = {
 	}
 	
 	on_complete = {
+		hidden_effect = {
+			add_journal_entry = {
+				type = je_the_hegemon
+				objective_subgoal = sg_the_hegemon
+			}
+		}
 	}
 		
 	weight = 1009

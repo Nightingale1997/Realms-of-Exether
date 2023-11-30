@@ -36,6 +36,20 @@
 				add_ideology = ideology_socialist
 			}
 		}
+
+		### Feminism
+		if = {
+			limit = {
+				has_technology_researched = feminism
+			}
+			every_interest_group = {
+				limit = {
+					has_ideology = ideology:ideology_egalitarian
+				}
+				remove_ideology = ideology_egalitarian
+				add_ideology = ideology_egalitarian_modern
+			}
+		}
 	}
 
 	on_disable = {}

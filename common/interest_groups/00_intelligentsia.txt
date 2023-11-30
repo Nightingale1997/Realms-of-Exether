@@ -34,13 +34,26 @@
 				has_dlc_feature = rp1_content
 				c:BRZ ?= THIS
 			}
-			ig:ig_intelligentsia = { 
+			ig:ig_intelligentsia = {
 				set_ig_trait = ig_trait:ig_trait_brasilidade
 				set_ig_trait = ig_trait:ig_trait_bachareis
 				set_ig_trait = ig_trait:ig_trait_social_criticism
 
 				remove_ideology = ideology_republican
 				add_ideology = ideology_constitutionalist
+			}
+		}
+		
+		if = {
+			limit = {
+				has_technology_researched = feminism
+			}
+			every_interest_group = {
+				limit = {
+					has_ideology = ideology:ideology_liberal
+				}
+				remove_ideology = ideology_liberal
+				add_ideology = ideology_liberal_modern
 			}
 		}
 	}

@@ -631,8 +631,64 @@
                         has_role = general
                     }
                     AND = {
-                        politician_clothes_trigger = yes
-                        armed_forces_clothes_trigger = yes
+                        scope:pop ?= {
+                            culture = {
+                                has_discrimination_trait = gnome_heritage
+                            }
+                            owner = {
+                                c:RAV ?= this
+                            }
+                        }
+                        OR = {
+                            soldier_clothes_pop_trigger = yes
+                            officers_clothes_pop_trigger = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    japanese_meiji_military_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = european_military_02_colors
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 1200
+                OR = {
+                    AND = {
+                        scope:character ?= {
+                            culture = cu:jazamandroso
+                        }
+                        OR = {
+                            scope:character = {
+                                has_role = general
+                            }
+                            AND = {
+                                politician_clothes_trigger = yes
+                                armed_forces_clothes_trigger = yes
+                                scope:character ?= {
+                                    NOT = { has_ideology = ideology:ideology_traditionalist }
+                                }
+                            }
+                        }
+                        agitator_character_trigger = no
+                    }
+                    AND = {
+                        scope:pop ?= {
+                            culture = cu:jazamandroso
+                        }
+                        OR = {
+                            soldier_clothes_pop_trigger = yes
+                            officers_clothes_pop_trigger = yes
+                        }
                     }
                 }
                 agitator_character_trigger = no
