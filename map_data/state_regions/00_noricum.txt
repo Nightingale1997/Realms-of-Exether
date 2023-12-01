@@ -282,7 +282,13 @@ STATE_TEMPLE_HILL = {
     farm = x9786F3
     mine = x97C3C0
     port = xAE5BF2
-
+    arable_land = 60
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_logging = 11
+        bg_fishing = 7
+    }
+    naval_exit_id = 3007
 }
 STATE_ALYEA = {
     id = 4018
@@ -629,7 +635,14 @@ STATE_COLNAIG = {
     farm = xDC91B0
     mine = xE0F627
     port = xE2E6EB
-
+    arable_land = 20
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_iron_mining = 9
+        bg_logging = 7
+        bg_fishing = 5
+    }
+    naval_exit_id = 3007
 }
 STATE_INVERINGAR = {
     id = 4043
@@ -731,7 +744,14 @@ STATE_FALNALECK = {
     farm = x8DCDAB
     mine = xB964E3
     port = xB9BC98
-
+    arable_land = 40
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_sulfur_mining = 48
+        bg_logging = 8
+        bg_fishing = 6
+    }
+    naval_exit_id = 3007
 }
 STATE_ROSKIRK = {
     id = 4051

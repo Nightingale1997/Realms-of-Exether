@@ -317,7 +317,22 @@ POPS = {
 
 
     s:STATE_TEMPLE_HILL = {
-
+      region_state:AUM = {
+        create_pop = {
+          culture = dumonian
+          religion = cult_of_the_sun
+          size = 1033868
+        }
+        create_pop = {
+          culture = dumonian
+          size = 333868
+        }
+        create_pop = {
+          culture = jalian
+          religion = cult_of_the_sun
+          size = 5596
+        }
+      }
   }
 
 
@@ -608,7 +623,17 @@ POPS = {
 
 
     s:STATE_COLNAIG = {
-
+      region_state:AUM = {
+        create_pop = {
+          culture = dumonian
+          religion = cult_of_the_sun
+          size = 401000
+        }
+        create_pop = {
+          culture = dumonian
+          size = 51000
+        }
+      }
   }
 
 
@@ -675,7 +700,17 @@ POPS = {
 
 
     s:STATE_FALNALECK = {
-
+      region_state:AUM = {
+        create_pop = {
+          culture = jalian
+          religion = cult_of_the_sun
+          size = 703600
+        }
+        create_pop = {
+          culture = jalian
+          size = 103600
+        }
+      }
   }
 
 
