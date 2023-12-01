@@ -1823,7 +1823,7 @@ glethach={
 }
 
 
-meriwyn={
+jalian={
 	color= hsv{ 0.61 0.50 0.68 }
 	religion = church_of_man
 	traits = {  human_heritage }
@@ -1940,6 +1940,186 @@ meriwyn={
 		Underwood
 		War
 		Yeamans
+	}
+	graphics = european
+	ethnicities = {
+		1 = caucasian
+	}
+}
+
+meriwyn={
+	color= hsv{ 0.61 0.50 0.68 }
+	religion = church_of_man
+	traits = {  human_heritage }
+	male_common_first_names={
+		Alexander
+		Arthur
+		Brian
+		Cathal
+		Christopher
+		Con
+		Daniel
+		Denis
+		Desmond
+		Edward
+		Ernes
+		Fionan
+		Frank
+		George
+		Harry
+		Jack
+		James
+		John
+		Joseph
+		Kevin
+		Liam
+		Michael
+		Murrough
+		Patrick
+		Peter
+		Richard
+		Robert
+		Sean
+		Thomas
+		William
+		Eamon
+	}
+	female_common_first_names = {
+		Adela
+		Anne
+		Bithia
+		Bridget
+		Catherine
+		Charlotte
+		Clotilde
+		Edith
+		Ethel
+		Ellen
+		Ellice
+		Emily
+		Gertrude
+		Honora
+		Ida
+		Ismania
+		Isobel
+		Jane
+		Josephine
+		Laura
+		Letitia
+		Louisa
+		Margaret
+		Mary
+		Melesina
+		Mildred
+		Nora
+		Olivia
+		Rachel
+		Rose
+		Sarah
+		Sophie
+	}	
+	noble_last_names = {
+		Beresford
+		Browne
+		Castlereagh
+		Conyngham
+		FitzGerald
+		FitzMaurice
+		Glenavy
+		Hamilton
+		Hill
+		Lambart
+		Loftus
+		Mornington
+		O_Brien
+		Plunket
+		Prendergast
+		Talbot
+		Taylor
+		Templemore
+		Tyrrell
+		Vane-Tempest
+	}
+	common_last_names={
+		Aiken
+		Ashe
+		Boyle
+		Brady
+		Breen
+		Brennan
+		Brown
+		Brugha
+		Burke
+		Byrne
+		Campbell
+		Carroll
+		Clarke
+		Collins
+		Connolly
+		Connor
+		Cosgrave
+		Craig
+		Cust
+		Cowhig
+		Daly
+		Doherty
+		Donnelly
+		Doyle
+		Dryhurst
+		Duffy
+		Dunne
+		Farrell
+		Fitzgerald
+		Fitzpatrick
+		Flynn
+		Gallagher
+		Griffith
+		Hayes
+		Healy
+		Hughes
+		Hungerford
+		Johnston
+		Kelly
+		Kennedy
+		Larkin
+		Lynch
+		Maguire
+		Mallin
+		Martin
+		McCartan
+		McCarthy
+		McCullough
+		McGarry
+		McGuinness
+		Moore
+		Moran
+		Mulcahy
+		Murphy
+		Murray
+		Nolan
+		O_Connor
+		O_Doherty
+		O_Higgins
+		O_Leary
+		O_Mara
+		Pearse
+		Plunket
+		Power
+		Quinn
+		Reilly
+		Ryan
+		Smith
+		Smyth
+		Sullivan
+		Thompson
+		Walsh
+		White
+		Wilson
+	}
+	
+	graphics = european
+	ethnicities = {
+		1 = caucasian_irish
 	}
 	graphics = european
 	ethnicities = {
@@ -2646,161 +2826,146 @@ achonian={
 	religion = church_of_man
 	traits = { settler_coast_culture_group human_heritage }
 	male_common_first_names={
-		Alessandru
-		Beru
-		Duminku
-		Enrico
-		Evarist
-		Ferlad
-		Fernardu
-		Frangisku
-		Gabriel
-		Gorg
-		Joseph
-		Karmenu
-		Lawrenz
-		Marju
-		Mikiel
-		Ninu
-		Pawlu
-		Rokku
-		Saber
-		Ugo
-		Valent
+		Alenka
+		Alfonz
+		Alfred
+		Andrej
+		Anton
+		Avgust
+		Bartolomej
+		Blaz
+		Bojan
+		Boris
+		Bostjian
+		Bozidar
+		Ciril
+		Danilo
+		Demeter
+		Drago
+		Dusan
+		Franc
+		Gregorij
+		Ivan
+		Ivo
+		Janez
+		Jernej
+		Joze
+		Jurij
+		Karpo
+		Lado
+		Leon_2
+		Lojze
+		Miha
+		Milan
+		Mladen
+		Odilo
+		Pino
+		Rado
+		Radovan
+		Rudolf
+		Slavko
+		Slavoj
+		Stane
+		Stanko
+		Tomasz
+		Toncka
+		Tone
+		Viktor
+		Vilko
+		Vladimir
+		Vladko
+		Vojko
+		Zeljko
 	}
 	female_common_first_names = {
-		Agatha
-		Aloisetta
-		Atanasia
-		Beatrici
-		Dorothea
-		Duminka
-		Elizabetta
-		Fawstina
-		Guljetta
-		Guzeppa
-		Helena
-		Karmena
-		Lucija
-		Margerita
-		Marthese
-		Therese
-		Vittorja
+		Adela
+		Alenka
+		Alma
+		Angela
+		Draga
+		Felicita
+		Ivana
+		Jana
+		Jelena
+		Josipina
+		Katarina
+		Kristina
+		Marija
+		Pavlina
+		Terezija
+		Vera
+		Vilibalda
+		Zofka
+		Zora
 	}	
 	noble_last_names = {
-		Cachia
-		Micallef
-		Moscati
-		Tabone
+		Barbo
+		Cobenzl
+		Einspieler
+		Kacijanar
+		Kuhar
+		Miklosic
+		Potiorek
+		Rozman
+		Turjaski
+		Vega
 	}
 	common_last_names={
-		Abela
-		Adami
-		Azzopardi
-		Boffa
-		Borg
-		Buhagiar
-		Cassar
-		Cumbo
-		Farrugia
-		Frendo
-		Gonzi
-		Howard
-		Mifsud
-		Mintoff
-		Mizzi
-		Muscat
-		Olivier
-		Puli
-		Pullicino
-		Strickland
-		Vella
+		Arnic
+		Avbelj
+		Avsenik
+		Bajuk
+		Bitenc
+		Cankar
+		Cec
+		Cernigoj
+		Czipott
+		Dolar
+		Drolc
+		Duletic
+		Globocnik
+		Gobec
+		Godina
+		Golob
+		Haus
+		Hladnik
+		Ivanek
+		Kantuser
+		Kidric
+		Komar
+		Kopitar
+		Kraigher
+		Lipovsek
+		Lipuscek
+		Macek
+		Maister
+		Marinko
+		Miklosic
+		Mravlajk
+		Pengov
+		Pesek
+		Peterle
+		Pirec
+		Plecnik
+		Rozman
+		Rupnik
+		Sarh
+		Srebrnic
+		Tomazic
+		Tomsic
+		Urbancic
+		Vega
+		Von_Windisch-Gratz
+		Zagar
+		Zerjal
+		Zizke
+		Zornada
+		Zupancic
+	}
+	ethnicities = {
+		1 = slavic
 	}
 	graphics = european
-	ethnicities = {
-		1 = caucasian
-	}
-}
-
-achonian={
-	color= hsv{ 0.40 0.03 0.58 }
-	religion = church_of_man
-	traits = { settler_coast_culture_group human_heritage }
-	male_common_first_names={
-		Alessandru
-		Beru
-		Duminku
-		Enrico
-		Evarist
-		Ferlad
-		Fernardu
-		Frangisku
-		Gabriel
-		Gorg
-		Joseph
-		Karmenu
-		Lawrenz
-		Marju
-		Mikiel
-		Ninu
-		Pawlu
-		Rokku
-		Saber
-		Ugo
-		Valent
-	}
-	female_common_first_names = {
-		Agatha
-		Aloisetta
-		Atanasia
-		Beatrici
-		Dorothea
-		Duminka
-		Elizabetta
-		Fawstina
-		Guljetta
-		Guzeppa
-		Helena
-		Karmena
-		Lucija
-		Margerita
-		Marthese
-		Therese
-		Vittorja
-	}	
-	noble_last_names = {
-		Cachia
-		Micallef
-		Moscati
-		Tabone
-	}
-	common_last_names={
-		Abela
-		Adami
-		Azzopardi
-		Boffa
-		Borg
-		Buhagiar
-		Cassar
-		Cumbo
-		Farrugia
-		Frendo
-		Gonzi
-		Howard
-		Mifsud
-		Mintoff
-		Mizzi
-		Muscat
-		Olivier
-		Puli
-		Pullicino
-		Strickland
-		Vella
-	}
-	graphics = european
-	ethnicities = {
-		1 = caucasian
-	}
 }
 
 dorite={
@@ -3233,3 +3398,262 @@ nivaskyan={
 		1 = circumpolar
 	}
 }
+
+
+bossardi={
+	color= hsv{ 0.20 0.53 0.23 }
+	religion = church_of_man
+	traits = { human_heritage }
+	male_common_first_names={
+		Adolf Alexander Anton Augustus Albert Andreas Ambros Alois
+		Benedicht
+		Carl Christoph Christian Constant CA_sar Carl-Friedrich
+		Dominik Damian
+		Eduard Ernst Eugen Emil Ernst_August
+		Friedrich Franz Florian Franz_Xaver
+		Gall Gabriel Gustav Gottfried Georg Gottlieb
+		Hermann Heinrich
+		Imbert
+		Johann Jakob Joseph Johann_Baptist Johann_Konrad Johann_Peter Jakob_Christoph
+		Kaspar Klemens Kajetan Konrad
+		Ludwig Leo
+		Manfred Martin Moritz
+		Nazar Nikolaus
+		Otto Oswald
+		Peter Placidus Philipp
+		Rudolf
+		Samuel Stephan Silvan Severin
+		Theodor
+		Ulrich
+		Wolfgang Walter Wilhelm
+		Xavier
+	}
+	female_common_first_names = {
+		Anna
+		Barbara
+		Emilie
+		Gertrud
+		Germaine
+		Henriette
+		Isabelle
+		Johanna
+		Julie
+		Lydia
+		Maria
+		Rosalie
+	}	
+	noble_last_names = { # mostly patrician families of Bern
+		von_Bonstetten von_BU_ren von_Bergmann
+		von_Donatz
+		Effinger von_Erlach
+		von_Frisching
+		von_Graffenried
+		von_Hettlingen
+		Lentulus Lombach von_Ligerz
+		May von_Muelinen von_Muralt
+		von_Reding-Biberegg von_RU_pplin
+		von_Salis-Soglio von_Steiger von_Schorno von_Streng
+		von_Tavel von_Thurn
+		von_Wattenwyl von_Weber
+		Zehender
+	}
+	common_last_names={
+		Ador Anderwert Angehrn Altwegg Aepli
+		Brenner BA_chtold Bacher BlO_sch Barblan Balmer Bodenheimer Bitzius Burren Benzinger BU_eler Bachmann Bamert Bettschart Binzegger
+		Calonder Corrodi Castell Camenzind
+		Deucher DA_hler Dieth Dinkelmann DU_rrenmatt DU_ggelin Dumelin
+		Enderlin ElsA_sser Eggenschwyler Eggli Eberle Etter Egloff
+		Fornerod Funk Fassbind Freyenmuth
+		Haab Herzog Haller HU_gelberger Henggeler Hegglin
+		Iten
+		Jaggi
+		Knusel Kuoni Kurz KlA_y KO_nitzer KU_ndig KA_lin
+		Leinert Loosli Lindt Lienhard Lohner Litschi Loser Labhardt Leutenegger
+		Motta Munzinger Meyer Morel Marti Minder Morgenthaler Moser Mettler Moos Merz MO_rikofer
+		Naff Nussbaumer
+		Oethiker Ochsner
+		RA_z Ritschard Ruoss Rogenmoser Ruckstuhl Reutlinger Roth
+		Schneider de_Staeel Siegwart-Muller Stutz Streiff StA_mpfli Stockmar Schneider Schurer SchA_r Simonin Stutzer Steinegger Styger Sidler Schwerzmann Sulzberger Scherb
+		Tschudi Tschiemer Theiler Trinkler
+		Usteri
+		ValA_r Villiger
+		Wille Wyss Wynistorf Willi Winet Wiss
+		Zeni Zeerleder Ziltener ZU_rcher
+	}
+	graphics = european
+	ethnicities = {
+		1 = caucasian
+	}
+}
+
+yanger={
+	color= hsv{ 0.08 0.62 0.93 }
+	religion = animist
+	traits = { human_heritage }
+		male_common_first_names={
+			Asleg
+			Buzas
+			Dary
+			Duna
+			Dushes
+			Gord
+			Istopka
+			Kedra
+			Kion
+			Kuzili
+			Mikvor
+			Mitrok
+			Pyotr
+			Shukay
+			Tur
+			Vozei
+			Yadi
+		}
+		female_common_first_names={
+			Abzyan
+			Badian
+			Buchy
+			Chabey
+			Ochin
+			Ochin
+			Odoka
+			Odottya
+			Oduvan
+			Okylna
+			Opoch
+			Paladdya
+			Sudai
+			Takyan
+			Tulivit
+			Varish
+			Zarni
+		}
+		noble_last_names={
+			Anton
+			Baysar
+			Begish
+			Blin
+			Blok
+			Dorod
+			Gerd
+			Konev
+			Mitrei
+			Oki
+			Prokop
+			Pugachy
+			Pyatchen
+			Razin
+			Serebren
+			Shklyayev
+			Solovyov
+			Tuktarev
+			Zarbat
+		}
+		common_last_names={
+			Anton
+			Baysar
+			Begish
+			Blin
+			Blok
+			Dorod
+			Gerd
+			Konev
+			Mitrei
+			Oki
+			Prokopy
+			Pugachy
+			Pyatchen
+			Razin
+			Serebren
+			Shklyay
+			Solovyov
+			Tuktar
+			Zarbat
+		}
+		graphics = european
+		ethnicities = {
+			1 = caucasian
+		}
+	}
+
+	wealder={
+		color= hsv{ 0.13 0.80 0.99 }
+		religion = jewish
+		traits = { jewish_group european_heritage } 
+		# could have German-speaking, but would make them not discriminated which would be very ahistorical
+		male_common_first_names={
+			Abraham
+			Albert
+			Benjamin
+			Daniel
+			David
+			Franz
+			Gerson
+			Gustav
+			Heinrich
+			Hermann
+			Ignatz
+			Isaak
+			Jakob
+			Jeremias
+			Josef
+			Julius
+			Leonhard
+			Michael
+			Mose
+			Salomon
+			Saul
+			Sigmund
+			Simon
+			Theodor
+		}
+		female_common_first_names = {
+			Angela Alice Amalie
+			Berta
+			Emma Elsa
+			Johanna
+			Klara Karoline
+			Minna Margarete
+			Regine
+			Zoe
+		}	
+		noble_last_names = {
+			Auerbach Austerlitz
+			von_Bleichroeder
+			Ephrussi
+			Guenzburg
+			von_Hofmannsthal
+			von_Neumann
+			Oppenheim
+			Zuckerkandl
+		}
+		common_last_names={
+			Abramovitch
+			Bernstein
+			Birnbaum
+			Bloch
+			Cantor
+			Cohen
+			Frank
+			Friedlander
+			Goldstein
+			Horowitz
+			Israel
+			Jacobsohn
+			Kagan
+			Kaplan
+			Klein
+			Levin
+			Luria
+			Morgenstern
+			Nathan
+			Oren
+			Schwartz
+			Weinstein
+			Weiss
+		}
+		ethnicities = {
+			1 = caucasian
+		}
+		graphics = european
+	}
