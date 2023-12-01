@@ -47,6 +47,38 @@
 				add_ideology = ideology_luddite_devout
 			}
 		}
+
+		if = {
+			limit = {
+				OR = {
+					religion = {
+						has_discrimination_trait = death_domain
+					}
+					religion = {
+						has_discrimination_trait = evil_heritage
+					}
+				}
+				
+			}
+			ig:ig_devout = {
+				remove_ideology = ideology_pious
+				add_ideology = ideology_pious_dark
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = {
+						has_discrimination_trait = magoclast
+					}
+				}
+				
+			}
+			ig:ig_devout = {
+				remove_ideology = ideology_pious
+				add_ideology = ideology_pious_magoclast
+			}
+		}
 		
 		### Corporatism
 		if = {

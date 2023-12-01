@@ -1387,7 +1387,7 @@ ocelian = {
 azmaraan={
 	color={ 62 73 41 }
 	religion = marktarian
-	traits = { new_khussite_culture_group human_heritage }
+	traits = { khussite_culture_group human_heritage }
 
 	# Magic addiction, reflavor opium
 	obsessions = {
@@ -1439,8 +1439,8 @@ azmaraan={
 
 qinnaat={
 	color={ 83 102 46 }
-	religion = marktarian
-	traits = { new_khussite_culture_group human_heritage }
+	religion = marktarian_antimagic
+	traits = { khussite_culture_group human_heritage }
 	male_common_first_names={
 		Ablai
 		Abu_al-Khayr
@@ -3198,100 +3198,6 @@ south_sea_ravager={
 	graphics = european
 }
 
-yanger={
-	color= hsv{ 0.20 0.53 0.23 }
-	religion = church_of_man
-	traits = { human_heritage }
-	male_common_first_names={
-		Abraham
-		Amos
-		Baruch
-		Binyamin
-		Daniel
-		David
-		Efraim
-		Ehud
-		Eli
-		Eliezer
-		Elijah
-		Gavriel
-		Hebel
-		Immanuel
-		Itzhak
-		Levi
-		Mattiyahu
-		Mensahe
-		Mikhael
-		Mordecai
-		Moshe
-		Natan
-		Noach
-		Reuben
-		Roi
-		Shalom
-		Shimon
-		Tovia
-		Uriel
-		Uzziel
-		Yaakov
-		Yachin
-		Yafe
-		Yehoshua
-		Yehudah
-		Yochanan
-		Yonatan
-		Yosef
-		Zohar
-	}
-	female_common_first_names = {
-		Barbara
-		Beatrice
-		Cecile
-		Eugenie
-		Inez
-		Irene
-		Noemie
-		Nora
-		Ruth
-		Sonia
-		Yosefa
-	}	
-	noble_last_names = {
-		Abrabanel
-		Camondo
-		Curiel
-		De_Leon
-		Sassoon
-	}
-	common_last_names={
-		Banai
-		Barak
-		Ben_Ami
-		Benveniste
-		Canetti
-		Cantor
-		Cardoso
-		Cohen
-		Disraeli
-		Gaon
-		Golan
-		Haddad
-		Halevi
-		Levy
-		Maimon
-		Mizrachi
-		Montefiore
-		Peretz
-		Rafaeli
-		Saban
-		Sebag
-	}
-	graphics = european
-	ethnicities = {
-		1 = caucasian
-	}
-}
-
 nivaskyan={
 	color= hsv{ 0.67 0 0.67 }
 	religion = church_of_man
@@ -3488,7 +3394,7 @@ bossardi={
 
 yanger={
 	color= hsv{ 0.08 0.62 0.93 }
-	religion = animist
+	religion = horse_worship
 	traits = { human_heritage }
 		male_common_first_names={
 			Asleg
