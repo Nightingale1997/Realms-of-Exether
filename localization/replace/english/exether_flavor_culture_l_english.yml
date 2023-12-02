@@ -1,0 +1,6 @@
+﻿l_english:
+  # Culture descriptions
+ DATA_CULTURE_NAME_TOOLTIP: "[Concept('concept_cultural_trait', '$concept_cultural_traits$')]: [Culture.GetCulturalTraitsDesc]\n[concept_religion]: [Culture.GetReligionsDesc]\n[concept_obsession]: [Culture.GetObsessionsDesc]\n[concept_taboo]: [Culture.GetTaboosDesc][ConcatIfNeitherEmpty('\n\n', AddLocalizationIf(GetPlayer.IsValid, 'DATA_CULTURE_NAME_TOOLTIP_INGAME_ADDED'))]$DATA_CULTURE_NAME_TOOLTIP_DESC$"
+  DATA_CULTURE_NAME_TOOLTIP_DESC: "#lore [ConcatIfNeitherEmpty('\n$TOOLTIP_DELIMITER$\n', Culture.GetCustom('culture_flavor_loc'))]#!"
+  # Culture Flavor
+  culture_flavor_loc_default: ""

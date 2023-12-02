@@ -1,0 +1,34 @@
+﻿goods_flavor_loc = {
+	type = goods
+	random_valid = no
+
+	text = {
+		trigger = {
+			this = g:cloudsilver
+		}
+		localization_key = cloudsilver_flavor
+	}
+	text = {
+		trigger = {
+			this = g:wishstone
+		}
+		localization_key = wishstone_flavor
+	}
+	text = {
+		trigger = {
+			this = g:opium
+		}
+		localization_key = chimesilt_flavor
+	}
+	text = {
+		trigger = {
+			this = g:trinkets
+		}
+		localization_key = trinkets_flavor
+	}
+
+	text = {
+		localization_key = goods_flavor_loc_default
+		fallback = yes
+	}
+}

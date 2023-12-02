@@ -1,0 +1,52 @@
+﻿religion_flavor_loc = {
+	type = religion
+	random_valid = no
+
+	 text = {
+	 	trigger = {
+	 		this = rel:church_of_man
+	 	}
+	 	localization_key = church_of_man_flavor
+	 }
+	 text = {
+		trigger = {
+			this = rel:elf_magic
+		}
+		localization_key = orthodox_seldarine_flavor
+	}
+	text = {
+		trigger = {
+			this = rel:elf_nature
+		}
+		localization_key = wild_seldarine_flavor
+	}
+	text = {
+		trigger = {
+			this = rel:elf_southern
+		}
+		localization_key = southern_seldarine_flavor
+	}
+	text = {
+		trigger = {
+			this = rel:dwarven_ancestors
+		}
+		localization_key = morndinsamman_flavor
+	}
+	text = {
+		trigger = {
+			this = rel:creed_of_hasal
+		}
+		localization_key = hasal_flavor
+	}
+	text = {
+		trigger = {
+			this = rel:house_of_fate
+		}
+		localization_key = house_of_fate_flavor
+	}
+
+	text = {
+		localization_key = religion_flavor_loc_default
+		fallback = yes
+	}
+}
