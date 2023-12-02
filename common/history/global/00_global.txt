@@ -76,6 +76,14 @@ GLOBAL = {
 		if = {
 			limit = {
 				any_primary_culture = {
+					has_discrimination_trait = ogre_heritage
+				}
+			}
+			add_technology_researched = ogre_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
 					has_discrimination_trait = goblin_heritage
 				}
 			}
