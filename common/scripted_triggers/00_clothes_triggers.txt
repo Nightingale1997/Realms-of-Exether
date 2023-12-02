@@ -403,12 +403,16 @@ ethiopian_clothes_trigger = {
 european_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
-		culture = {
-			OR = {
-				has_discrimination_trait = human_heritage
+		OR = {
+			culture = {
+				OR = {
+					has_discrimination_trait = human_heritage
+				}
 			}
-
+			culture = cu:vampire
+			culture = cu:sunkissed
 		}
+
 		NOT = {
 			OR = {
 				culture = {
@@ -683,13 +687,17 @@ central_asian_clothes_pop_trigger= {
 european_clothes_pop_trigger = {
 	exists = scope:pop
 	scope:pop = {
-		culture = {
-			OR = {
-				has_discrimination_trait = human_heritage
-				has_discrimination_trait = halfling_heritage
+		OR = {
+			culture = {
+				OR = {
+					has_discrimination_trait = human_heritage
+					has_discrimination_trait = halfling_heritage
+				}
 			}
-	
+			culture = cu:vampire
+			culture = cu:sunkissed
 		}
+
 	}
 }
 
@@ -1311,6 +1319,8 @@ should_be_naked_trigger = {
 							has_discrimination_trait = bird_heritage
 						}
 					}
+					NOT = { culture = cu:vampire }
+					NOT = { culture = cu:sunkissed }
 				}
 		
 			}
@@ -1318,12 +1328,17 @@ should_be_naked_trigger = {
 		AND = {
 			exists = scope:character
 			scope:character = {
-				culture = {
-					OR = {
-						has_discrimination_trait = monstrous_heritage
-						has_discrimination_trait = bird_heritage
+				AND = {
+					culture = {
+						OR = {
+							has_discrimination_trait = monstrous_heritage
+							has_discrimination_trait = bird_heritage
+						}
 					}
+					NOT = { culture = cu:vampire }
+					NOT = { culture = cu:sunkissed }
 				}
+
 			}
 		}
 	}

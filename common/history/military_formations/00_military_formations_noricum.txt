@@ -1,0 +1,64 @@
+﻿MILITARY_FORMATIONS = {
+	c:JUR = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_worlds_end
+			name = Jurians_Brightest
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_HUNTERS_HILL
+				count = 6
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_HUNTERS_HILL
+				count = 2
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_MAESBELAN
+				count = 2
+			}
+			save_scope_as = jurians_brightest_army
+		}
+
+		create_character = {
+			template = JUR_alfred_morgan
+			save_scope_as = morgan_gen
+		}
+
+		scope:morgan_gen = {
+			transfer_to_formation = scope:jurians_brightest_army
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_worlds_end
+			name = incinerator_armada
+		
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_MAESBELAN
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_MAESBELAN
+				count = 3
+			}
+			save_scope_as = incinerator_armada_fleet
+		}
+
+		create_character = {
+			template = JUR_samuel_grimm
+			save_scope_as = grimm_adm
+		}
+		scope:grimm_adm = {
+			transfer_to_formation = scope:incinerator_armada_fleet
+		}
+	}
+}

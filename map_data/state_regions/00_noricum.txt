@@ -283,7 +283,7 @@ STATE_TEMPLE_HILL = {
     mine = x97C3C0
     port = xAE5BF2
     arable_land = 60
-    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_vineyard_plantations" }
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_vineyard_plantations" }
     capped_resources = {
         bg_logging = 11
         bg_fishing = 7
@@ -354,8 +354,13 @@ STATE_RAVENCLIFF = {
     wood = x86E2FC
     farm = x8BDAEA
     mine = x97C2CC
-    port = xAE6DEA
-
+    arable_land = 60
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 36
+        bg_iron_mining = 36
+        bg_logging = 9
+    }
 }
 STATE_HUNTERS_HILL = {
     id = 4022
@@ -365,8 +370,11 @@ STATE_HUNTERS_HILL = {
     wood = xA793F7
     farm = xAD94DF
     mine = xBF89F8
-    port = xDADF53
-
+    arable_land = 60
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 17
+    }
 }
 STATE_CROWNSHADE = {
     id = 4023
@@ -636,7 +644,7 @@ STATE_COLNAIG = {
     mine = xE0F627
     port = xE2E6EB
     arable_land = 20
-    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_vineyard_plantations" }
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_vineyard_plantations" }
     capped_resources = {
         bg_iron_mining = 9
         bg_logging = 7
@@ -745,7 +753,7 @@ STATE_FALNALECK = {
     mine = xB964E3
     port = xB9BC98
     arable_land = 40
-    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_vineyard_plantations" }
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_vineyard_plantations" }
     capped_resources = {
         bg_sulfur_mining = 48
         bg_logging = 8
@@ -773,8 +781,13 @@ STATE_SHROUDGUARD = {
     wood = x9FB4F5
     farm = xCBDECE
     mine = xCFDB66
-    port = xD7D0C4
-
+    arable_land = 80
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 84
+        bg_lead_mining = 60
+        bg_logging = 13
+    }
 }
 STATE_THORNWALL = {
     id = 4053
@@ -874,7 +887,13 @@ STATE_BANCFAN = {
     farm = x65F8BD
     mine = x71B2D8
     port = x7DD0B7
-
+    arable_land = 60
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 11
+        bg_fishing = 10
+    }
+    naval_exit_id = 3007
 }
 STATE_GELLIBRITH = {
     id = 4062
@@ -894,7 +913,14 @@ STATE_MAESBELAN = {
     farm = x8CD3AF
     mine = x98A5F2
     port = xA2E6F0
-
+    arable_land = 30
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_iron_mining = 12
+        bg_logging = 11
+        bg_fishing = 8
+    }
+    naval_exit_id = 3007
 }
 STATE_CAECARW = {
     id = 4064
@@ -905,7 +931,14 @@ STATE_CAECARW = {
     farm = x91EFD0
     mine = xBD97D9
     port = xC7F6C0
-
+    wood = "xD29762"
+    arable_land = 30
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 9
+        bg_fishing = 8
+    }
+    naval_exit_id = 3007
 }
 STATE_PONTBRAN = {
     id = 4065
@@ -916,7 +949,13 @@ STATE_PONTBRAN = {
     farm = x64C4E9
     mine = x9FD8D8
     port = xA0F5A3
-
+    arable_land = 60
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 13
+        bg_fishing = 2
+    }
+    naval_exit_id = 3007
 }
 STATE_ALLTBRAN = {
     id = 4066
@@ -937,8 +976,12 @@ STATE_YSTRAD = {
     wood = x98FEFE
     farm = xBFDC82
     mine = xC9A8F6
-    port = xD7A9CB
-
+    arable_land = 100
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 84
+        bg_logging = 8
+    }
 }
 STATE_GLYNFFORDD = {
     id = 4068
@@ -1039,7 +1082,11 @@ STATE_BLACKDON = {
     farm = xA1EE8B
     mine = xB78EB2
     port = xB7BBAE
-
+    arable_land = 100
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 13
+    }
 }
 STATE_KIRDON = {
     id = 4077

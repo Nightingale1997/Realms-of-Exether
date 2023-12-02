@@ -1,0 +1,67 @@
+﻿vampire = {
+    template = "caucasian_base"
+    
+     skin_color = {
+       10 = { 0.7 1.0 0.8 1.0 }
+     }
+    eye_color = {
+        60 = { 0.0 0.45 0.0 0.8 }
+    }
+    hair_color = {
+        # Blonde
+        10 = { 0.0 0.0 0.0 0.0 }
+    }
+    
+    gene_mouth_corner_height = {
+
+        74 = { name = mouth_corner_height   range = { 1.0 1.0 }      }
+
+    }
+
+    gene_mouth_open = {
+
+        74 = { name = mouth_open   range = { 0.7 0.7 }      }
+
+    }
+
+    gene_bs_body_type = {
+
+        74 = { name = body_fat_head_fat_full   range = { 0.0 0.2 }      }
+
+    }
+
+    gene_eyebrows_shape = {
+        10 = {  name = avg_spacing_avg_thickness             range = { 0.35 0.75 }     }
+        # 5 = {  name = avg_spacing_high_thickness             range = { 0.5 1.0 }     }
+        10 = {  name = avg_spacing_low_thickness             range = { 0.35 0.75 }    }
+        5 = {  name = avg_spacing_lower_thickness             range = { 0.35 0.75 }    }
+
+        10 = {  name = far_spacing_avg_thickness             range = { 0.35 0.75 }     }
+        # 5 = {  name = far_spacing_high_thickness             range = { 0.5 1.0 }     }
+        10 = {  name = far_spacing_low_thickness             range = { 0.35 0.75 }    }
+        5 = {  name = far_spacing_lower_thickness             range = { 0.35 0.75 }    }
+
+        2 = {  name = close_spacing_avg_thickness             range = { 0.35 0.75 }     }
+        # 5 = {  name = close_spacing_high_thickness             range = { 0.5 1.0 }     }
+        1 = {  name = close_spacing_low_thickness             range = { 0.35 0.75 }    }
+        1 = {  name = close_spacing_lower_thickness             range = { 0.35 0.75 }    }
+    }
+
+    gene_eyebrows_fullness = {
+        10 = {  name = layer_2_avg_thickness             range = { 0.25 0.75 }     }
+        # 10 = {  name = layer_2_avg_thickness             range = { 0.5 0.75 }     }
+        # 5 = {  name = layer_2_high_thickness             range = { 0.25 0.75 }     }
+        # 5 = {  name = layer_2_high_thickness             range = { 0.5 0.75 }     }
+        10 = {  name = layer_2_low_thickness             range = { 0.25 0.75 }     }
+        # 10 = {  name = layer_2_low_thickness             range = { 0.5 0.75 }     }
+        10 = {  name = layer_2_lower_thickness             range = { 0.25 0.75 }     }
+    }
+
+} 
+
+sunkissed = {
+    template = "vampire"
+    eye_color = {
+        60 = { 1.0 0.0 1.0 0.0 }
+    }
+}

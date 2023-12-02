@@ -396,12 +396,42 @@ POPS = {
 
 
     s:STATE_RAVENCLIFF = {
-
+      region_state:RVC = {
+        create_pop = {
+          culture = meriwyn
+          size = 897396
+        }
+        create_pop = {
+          culture = jalian
+          size = 32000
+        }
+        create_pop = {
+          culture = dumonian
+          size = 12400
+        }
+        create_pop = {
+          culture = vampire
+          size = 28000
+        }
+      }
   }
 
 
     s:STATE_HUNTERS_HILL = {
-
+        region_state:JUR = {
+          create_pop = {
+            culture = meriwyn
+            size = 602804
+          }
+          create_pop = {
+            culture = vampire
+            size = 2000
+          }
+          create_pop = {
+            culture = sunkissed
+            size = 20000
+          }
+        }
   }
 
 
@@ -720,7 +750,24 @@ POPS = {
 
 
     s:STATE_SHROUDGUARD = {
-
+      region_state:RVC = {
+        create_pop = {
+          culture = meriwyn
+          size = 1057396
+        }
+        create_pop = {
+          culture = jalian
+          size = 24000
+        }
+        create_pop = {
+          culture = dumonian
+          size = 8000
+        }
+        create_pop = {
+          culture = vampire
+          size = 20000
+        }
+      }
   }
 
 
@@ -765,7 +812,24 @@ POPS = {
 
 
     s:STATE_BANCFAN = {
-
+      region_state:ROF = {
+        create_pop = {
+          culture = meriwyn
+          size = 1047496
+        }
+        create_pop = {
+          culture = dumonian
+          size = 71996
+        }
+        create_pop = {
+          culture = jalian
+          size = 53408
+        }
+        create_pop = {
+          culture = hag
+          size = 900
+        }
+      }
   }
 
 
@@ -780,17 +844,64 @@ POPS = {
 
 
     s:STATE_MAESBELAN = {
-
+      region_state:JUR = {
+        create_pop = {
+          culture = sunkissed
+          size = 3900
+        }
+        create_pop = {
+          culture = meriwyn
+          size = 690000
+        }
+        create_pop = {
+          culture = hag
+          size = 400
+        }
+        create_pop = {
+          culture = vampire
+          size = 300
+        }
+      }
   }
 
 
     s:STATE_CAECARW = {
-
+      region_state:ROF = {
+        create_pop = {
+          culture = meriwyn
+          size = 573800
+        }
+        create_pop = {
+          culture = jalian
+          size = 17392
+        }
+        create_pop = {
+          culture = dumonian
+          size = 14600
+        }
+      }
   }
 
 
     s:STATE_PONTBRAN = {
-
+      region_state:RVC = {
+        create_pop = {
+          culture = jalian
+          size = 111796
+        }
+        create_pop = {
+          culture = meriwyn
+          size = 729000
+        }
+        create_pop = {
+          culture = dumonian
+          size = 24000
+        }
+        create_pop = {
+          culture = vampire
+          size = 8000
+        }
+      }
   }
 
 
@@ -800,7 +911,24 @@ POPS = {
 
 
     s:STATE_YSTRAD = {
-
+      region_state:RVC = {
+        create_pop = {
+          culture = meriwyn
+          size = 1676000
+        }
+        create_pop = {
+          culture = jalian
+          size = 20000
+        }
+        create_pop = {
+          culture = dumonian
+          size = 28004
+        }
+        create_pop = {
+          culture = vampire
+          size = 16000
+        }
+      }
   }
 
 
@@ -845,7 +973,28 @@ POPS = {
 
 
     s:STATE_BLACKDON = {
-
+      region_state:RVC = {
+        create_pop = {
+          culture = jalian
+          size = 143992
+        }
+        create_pop = {
+          culture = meriwyn
+          size = 698996
+        }
+        create_pop = {
+          culture = dumonian
+          size = 5996
+        }
+        create_pop = {
+          culture = vampire
+          size = 5996
+        }
+        create_pop = {
+          culture = hag
+          size = 996
+        }
+      }
   }
 
 

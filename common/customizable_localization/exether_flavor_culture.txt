@@ -3,6 +3,19 @@
 	random_valid = no
 
 	text = {
+		trigger = {
+			this = cu:sunkissed
+		}
+		localization_key = sunkissed_flavor
+	}
+	text = {
+		trigger = {
+			this = cu:vampire
+		}
+		localization_key = vampire_flavor
+	}
+
+	text = {
 		localization_key = culture_flavor_loc_default
 		fallback = yes
 	}
