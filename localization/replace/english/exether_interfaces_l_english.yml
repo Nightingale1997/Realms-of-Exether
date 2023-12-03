@@ -6,7 +6,7 @@
   MAGIC_EXCESS_EFFECT_HEADER: "\n$TOOLTIP_DELIMITER$\nEffects from #v 100%#! or more #g excess#! @magic! [concept_magic_reserves] (generation is higher than usage):\nStuff here"
   MAGIC_DEFICIT_EFFECT_HEADER: "\n$TOOLTIP_DELIMITER$\nEffects from #v 100%#! @magic! [concept_magic_reserves] #n deficit#! (usage is higher than generation):\nStuff here"
   MAGIC_BASE_VALUE_BONUS: "\n#g +100#! from Base Value"
-  MAGIC_INSTITUTION_RESERVE_BONUS: "\n[AccessPlayer.MakeScope.ScriptValue('magic_institution_bonus_loc')|=+D] from Magical Focus"
+  MAGIC_INSTITUTION_RESERVE_BONUS: "\n[AccessPlayer.MakeScope.ScriptValue('magic_institution_bonus')|=+D] from [GetInstitutionType('institution_magical_focus').GetName]"
 magical_focus_institution_tooltip: "test"
 
  DAY_MONDAY: "Moonday"

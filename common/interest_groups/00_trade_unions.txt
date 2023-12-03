@@ -1,13 +1,14 @@
-﻿ig_industrialists = {
-	color = hsv{ 0.06 0.60 0.89 }
-	texture = "gfx/interface/icons/ig_icons/industrialists.dds"
-	layer = "revolution_dynamic_industrialists"
-	index = 2
+﻿ig_trade_unions = {
+	color = hsv{ 0 0.56 0.58 }
+	texture = "gfx/interface/icons/ig_icons/trade_unions.dds"
+	layer = "revolution_dynamic_trade_unions"
+	index = 7
 
 	ideologies = {
-		ideology_plutocratic
-		ideology_laissez_faire
-		ideology_individualist
+		ideology_proletarian
+		ideology_egalitarian
+		ideology_populist
+		ideology_anti_slavery
 	}
 
 	enable = {
@@ -16,26 +17,50 @@
 
 	# Deprecated; use on_enable effect to assign traits instead
 	traits = {
-		ig_trait_job_creators
-		ig_trait_engines_of_progress
-		ig_trait_tax_avoidance
+		ig_trait_solidarity
+		ig_trait_industrial_organizers
+		ig_trait_work_to_rule
 	}
 	
 	on_enable = {
-		ig:ig_industrialists = {
+		ig:ig_trade_unions = {
 			if = {
 				limit = {
-					owner = { c:ARR ?= this }
+					has_dlc_feature = voice_of_the_people_content
+					owner = { c:FRA ?= this }
 				}
-				set_interest_group_name = ig_astral_consortium
-				set_ig_trait = ig_trait:ig_trait_zaibatsu_withdrawal
-				set_ig_trait = ig_trait:ig_trait_engines_of_progress
-				set_ig_trait = ig_trait:ig_trait_zaibatsu_cooperation
+				set_ig_trait = ig_trait:ig_trait_work_to_rule
+				set_ig_trait = ig_trait:ig_trait_industrial_organizers
+				set_ig_trait = ig_trait:ig_trait_bourse_du_travail
 			}
 			else = {
-				set_ig_trait = ig_trait:ig_trait_tax_avoidance
-				set_ig_trait = ig_trait:ig_trait_engines_of_progress
-				set_ig_trait = ig_trait:ig_trait_job_creators
+				set_ig_trait = ig_trait:ig_trait_work_to_rule
+				set_ig_trait = ig_trait:ig_trait_industrial_organizers
+				set_ig_trait = ig_trait:ig_trait_solidarity
+			}
+		}
+		
+		### Socialism
+		if = {
+			limit = {
+				has_technology_researched = socialism
+			}
+			ig:ig_trade_unions = {
+				add_ideology = ideology_socialist
+			}
+		}
+
+		### Feminism
+		if = {
+			limit = {
+				has_technology_researched = feminism
+			}
+			every_interest_group = {
+				limit = {
+					has_ideology = ideology:ideology_egalitarian
+				}
+				remove_ideology = ideology_egalitarian
+				add_ideology = ideology_egalitarian_modern
 			}
 		}
 	}
@@ -44,13 +69,33 @@
 	on_character_ig_membership = {}
 
 	pop_potential = {
-		OR = {
+		NOR = {
+			is_pop_type = aristocrats
 			is_pop_type = capitalists
-			is_pop_type = engineers
 			is_pop_type = shopkeepers
+			is_pop_type = officers
+		}
+		OR = {
 			AND = {
-				is_pop_type = wizards
-				has_law = law_type:law_artificer_guilds
+				custom_tooltip = {
+					text = owner_has_modern_agriculture_tt
+					owner = {
+						OR = {
+							has_law = law_type:law_commercialized_agriculture
+							has_law = law_type:law_collectivized_agriculture
+						}
+					}
+				}
+				strata = poor
+				NOR = {
+					pop_employment_building_group = bg_subsistence_agriculture
+					pop_employment_building_group = bg_subsistence_ranching
+				}
+			}
+			NOR = {
+				pop_employment_building_group = bg_agriculture
+				pop_employment_building_group = bg_ranching
+				pop_employment_building_group = bg_plantations
 			}
 		}
 	}
@@ -59,48 +104,42 @@
 		value = 0
 
 		add = {
-			desc = "POP_CAPITALISTS"
+			desc = "URBAN_POP"
 			if = {
 				limit = {
-					is_pop_type = capitalists
-				}
-				value = 250
-				add = this.standard_of_living
-			}
-		}
-
-		add = {
-			desc = "POP_ENGINEERS"
-			if = {
-				limit = {
-					is_pop_type = engineers
-				}
-				value = 50
-				add = this.standard_of_living
-			}
-		}
-
-		add = {
-			desc = "POP_SHOPKEEPERS"
-			if = {
-				limit = {
-					is_pop_type = shopkeepers
-				}
-				value = 50
-				add = this.standard_of_living
-			}
-		}
-
-		add = {
-			desc = "ARTIFICER_LAW"
-			if = {
-				limit = {
-					is_pop_type = wizards
-					owner = {
-						has_law = law_type:law_artificer_guilds
+					NOR = {
+						pop_employment_building_group = bg_agriculture
+						pop_employment_building_group = bg_ranching
+						pop_employment_building_group = bg_plantations
 					}
 				}
-				value = 25
+				value = 50
+				if = {
+					limit = {
+						strata = middle
+					}
+					divide = 2
+				}
+			}
+		}
+
+		add = {
+			desc = "POP_MACHINISTS"
+			if = {
+				limit = {
+					is_pop_type = machinists
+				}
+				value = 100
+			}
+		}
+
+		add = {
+			desc = "POP_LABORERS"
+			if = {
+				limit = {
+					is_pop_type = laborers
+				}
+				value = 50
 			}
 		}
 
@@ -114,6 +153,34 @@
 					max = 1.25
 					min = 0.75
 				}
+			}
+		}
+
+		multiply = {
+			desc = "NO_LABOR_MOVEMENT"
+			value = 1.0
+
+			if = {
+				limit = {
+					owner = {
+						NOT = { has_technology_researched = labor_movement }
+					}
+				}
+				value = 0.5
+			}
+		}
+
+		multiply = {
+			desc = "NO_EGALITARIANISM"
+			value = 1.0
+
+			if = {
+				limit = {
+					owner = {
+						NOT = { has_technology_researched = egalitarianism }
+					}
+				}
+				value = 0.5
 			}
 		}
 
@@ -173,7 +240,7 @@
 	}
 
 	monarch_weight = {
-		value = 1
+		value = 0.1 # this is just inherently unlikely
 		# Monarch is not likely to adopt a marginal IG
 		if = {
 			limit = {
@@ -192,47 +259,22 @@
 				value = 2
 			}
 		}
-		# More likely with Wealth Voting or Oligarchy
+		# More likely with Worker's Protections
 		if = {
 			limit = {
 				owner = {
-					OR = {
-						has_law = law_type:law_oligarchy
-						has_law = law_type:law_wealth_voting
-					}
+					has_law = law_type:law_worker_protections
 				}
 			}
 			multiply = {
 				value = 2
 			}
 		}
-		# Slightly more likely with LF
+		# Impossible with No Workers Rights
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_laissez_faire
-				}
-			}
-			multiply = {
-				value = 1.25
-			}
-		}
-		# Less likely before researching Mutual Funds
-		if = {
-			limit = {
-				owner = {
-					NOT = { has_technology_researched = mutual_funds }
-				}
-			}
-			multiply = {
-				value = 0.5
-			}
-		}
-		# Impossible without Currency Standards
-		if = {
-			limit = {
-				owner = {
-					NOT = { has_technology_researched = currency_standards }
+					has_law = law_type:law_no_workers_rights
 				}
 			}
 			multiply = {
@@ -243,11 +285,11 @@
 
 	agitator_weight = {
 		# Agitators more likely to come from populist IG's rather than elitist
-		value = 0.25
+		value = 1.0
 		# Agitators will never be part of a marginalized IG
 		if = {
 			limit = {
-				owner.ig:ig_industrialists = {
+				owner.ig:ig_trade_unions = {
 					is_marginal = yes
 				}
 			}
@@ -262,7 +304,7 @@
 	}
 
 	noble_chance = {
-		value = 0.3
+		value = 0.1
 	}
 
 	female_commander_chance = {
@@ -292,7 +334,7 @@
 
 			}
 			add = {
-				value = 0.975
+				value = 0.95
 			}
 		}
 		else_if = {
@@ -303,13 +345,13 @@
 
 			}
 			add = {
-				value = 0.025
+				value = 0.05
 			}
 		}
 	}
 
 	female_agitator_chance = {
-		value = 0.025
+		value = 0.05
 		
 		if = {
 			limit = {
@@ -319,7 +361,7 @@
 
 			}
 			add = {
-				value = 0.025
+				value = 0.05
 			}
 		}	
 		
@@ -331,7 +373,7 @@
 
 			}
 			add = {
-				value = 0.025
+				value = 0.05
 			}
 		}
 
@@ -343,10 +385,10 @@
 
 			}
 			add = {
-				value = 0.025
+				value = 0.05
 			}
-		}	
-		
+		}		
+
 		if = {
 			limit = {
 				owner = {
@@ -355,9 +397,9 @@
 
 			}
 			add = {
-				value = 0.95
+				value = 0.9
 			}
-		}
+		}	
 	}
 
 	# The chance that a commander belonging to this IG takes over leadership when it changes

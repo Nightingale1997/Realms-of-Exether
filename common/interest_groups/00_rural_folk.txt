@@ -23,9 +23,42 @@
 
 	on_enable = {
 		ig:ig_rural_folk = {
-			set_ig_trait = ig_trait:ig_trait_old_ways
-			set_ig_trait = ig_trait:ig_trait_honest_work
-			set_ig_trait = ig_trait:ig_trait_farmers_markets
+			if = {
+				limit = {
+					owner = { c:RUS ?= this }
+				}
+				set_ig_trait = ig_trait:ig_trait_old_ways
+				set_ig_trait = ig_trait:ig_trait_honest_work
+				set_ig_trait = ig_trait:ig_trait_obshchina
+			}
+			else_if = {
+				limit = {
+					owner = { c:EGY ?= this }
+				}
+				set_interest_group_name = ig_fellahin
+				set_ig_trait = ig_trait:ig_trait_old_ways
+				set_ig_trait = ig_trait:ig_trait_fellahin
+				set_ig_trait = ig_trait:ig_trait_farmers_markets
+			}
+			else_if = {
+				limit = {
+				owner = { 
+					religion = {
+						has_discrimination_trait = nature_domain
+					}
+				}
+				}
+				set_interest_group_name = ig_foragers
+				set_ig_trait = ig_trait:ig_trait_old_ways
+				set_ig_trait = ig_trait:ig_trait_fellahin
+				set_ig_trait = ig_trait:ig_trait_guests_of_the_forest
+				add_ideology = ideology_luddite_devout
+			}
+			else = {
+				set_ig_trait = ig_trait:ig_trait_old_ways
+				set_ig_trait = ig_trait:ig_trait_honest_work
+				set_ig_trait = ig_trait:ig_trait_farmers_markets
+			}
 		}
 	}
 	on_disable = {}
@@ -236,12 +269,35 @@
 
 	female_commander_chance = {
 		value = 0.0
+
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_matriarchy
+				}
+
+			}
+			add = {
+				value = 1.0
+			}
+		}
 	}
 
 	female_politician_chance = {
 		value = 0.0
 
 		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_matriarchy
+				}
+
+			}
+			add = {
+				value = 0.975
+			}
+		}
+		else_if = {
 			limit = {
 				owner = {
 					has_law = law_type:law_womens_suffrage
@@ -292,6 +348,18 @@
 				value = 0.025
 			}
 		}		
+
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_matriarchy
+				}
+
+			}
+			add = {
+				value = 0.95
+			}
+		}
 	}
 
 	# The chance that a commander belonging to this IG takes over leadership when it changes

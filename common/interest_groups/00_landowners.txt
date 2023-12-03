@@ -23,10 +23,43 @@
 
 	on_enable = {
 		ig:ig_landowners = {
-			set_ig_trait = ig_trait:ig_trait_noble_privileges
-			set_ig_trait = ig_trait:ig_trait_family_ties
-			set_ig_trait = ig_trait:ig_trait_noblesse_oblige
+			if = {
+				limit = {
+					owner = { c:DUM ?= this }
+				}
+				set_interest_group_name = ig_clansraad
+				set_ig_trait = ig_trait:ig_trait_bad_boyars
+				set_ig_trait = ig_trait:ig_trait_family_ties
+				set_ig_trait = ig_trait:ig_trait_wiener_walzer
+			}
+			else = {
+				set_ig_trait = ig_trait:ig_trait_noble_privileges
+				set_ig_trait = ig_trait:ig_trait_family_ties
+				set_ig_trait = ig_trait:ig_trait_noblesse_oblige
+			}
 		}
+
+		if = {
+			limit = {
+				OR = {
+					owner = {
+						religion = rel:orc_mother
+						any_primary_culture = {
+							has_discrimination_trait = southern_elf
+						}
+						any_primary_culture = {
+							this = cu:hag
+						}
+					}
+				}
+				
+			}
+			ig:ig_devout = {
+				remove_ideology = ideology_patriarchal
+				add_ideology = ideology_matriarchal
+			}
+		}
+
 	}
 	on_disable = {}
 	on_character_ig_membership = {}
@@ -230,12 +263,35 @@
 
 	female_commander_chance = {
 		value = 0.0
+
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_matriarchy
+				}
+
+			}
+			add = {
+				value = 1.0
+			}
+		}
 	}
 
 	female_politician_chance = {
 		value = 0.0
 
 		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_matriarchy
+				}
+
+			}
+			add = {
+				value = 0.99
+			}
+		}
+		else_if = {
 			limit = {
 				owner = {
 					has_law = law_type:law_womens_suffrage
@@ -285,7 +341,19 @@
 			add = {
 				value = 0.01
 			}
-		}		
+		}	
+		
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_matriarchy
+				}
+
+			}
+			add = {
+				value = 0.98
+			}
+		}
 	}
 
 	# The chance that a commander belonging to this IG takes over leadership when it changes

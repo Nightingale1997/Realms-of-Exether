@@ -263,64 +263,6 @@ ideology_pious = {
 	}
 }
 
-ideology_pious_dark = {
-	icon = "gfx/interface/icons/ideology_icons/pious.dds"
-
-	lawgroup_health_system = {
-		law_charitable_health_system = approve
-		law_public_health_insurance = neutral
-		law_no_health_system = disapprove
-		law_private_health_insurance = disapprove
-	}
-	
-	lawgroup_education_system = {
-		law_religious_schools = approve
-		law_no_schools = neutral
-		law_public_schools = disapprove
-		law_private_schools = disapprove	
-		law_magical_schools = disapprove		
-	}	
-
-	lawgroup_magic = {
-		law_no_magic = neutral
-		law_divine_miracles = disapprove
-		law_druidic_circles = neutral
-		law_artificer_guilds = neutral
-		law_astrological_studies = neutral
-		law_dark_arts = strongly_approve
-		law_mage_hunters = neutral
-	}
-}
-
-ideology_pious_magoclast = {
-	icon = "gfx/interface/icons/ideology_icons/pious.dds"
-
-	lawgroup_health_system = {
-		law_charitable_health_system = approve
-		law_public_health_insurance = neutral
-		law_no_health_system = disapprove
-		law_private_health_insurance = disapprove
-	}
-	
-	lawgroup_education_system = {
-		law_religious_schools = approve
-		law_no_schools = neutral
-		law_public_schools = disapprove
-		law_private_schools = disapprove	
-		law_magical_schools = disapprove		
-	}	
-
-	lawgroup_magic = {
-		law_no_magic = approve
-		law_divine_miracles = disapprove
-		law_druidic_circles = disapprove
-		law_artificer_guilds = disapprove
-		law_astrological_studies = strongly_disapprove
-		law_dark_arts = disapprove
-		law_mage_hunters = strongly_approve
-	}
-}
-
 ideology_agrarian = {
 	icon = "gfx/interface/icons/ideology_icons/agrarian.dds"
 	
@@ -868,33 +810,6 @@ ideology_pro_slavery = {
 		law_legacy_slavery = approve
 		law_slavery_banned = strongly_disapprove
 	}
-}
-
-ideology_luddite_devout = {
-	icon = "gfx/interface/icons/ideology_icons/luddite.dds"
-
-	lawgroup_economic_system = {
-		law_industry_banned = strongly_approve
-		law_agrarianism = approve
-		law_cooperative_ownership = neutral
-		law_traditionalism = neutral
-		law_laissez_faire = strongly_disapprove
-		law_interventionism = strongly_disapprove
-		law_command_economy = strongly_disapprove
-	}
-	
-	lawgroup_trade_policy = {
-		law_free_trade = strongly_disapprove
-		law_mercantilism = neutral
-		law_protectionism = approve		
-		law_isolationism = strongly_approve
-	}
-
-	lawgroup_magic = {
-		law_divine_miracles = approve
-		law_druidic_circles = strongly_approve
-	}
-
 }
 
 ideology_corporatist = {

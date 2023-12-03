@@ -24,23 +24,45 @@
 
 	on_enable = {
 		ig:ig_intelligentsia = {
-			set_ig_trait = ig_trait:ig_trait_social_criticism
-			set_ig_trait = ig_trait:ig_trait_avant_garde
-			set_ig_trait = ig_trait:ig_trait_propagandists
+			if = {
+				limit = {
+					owner = { c:DIS ?= this }
+				}
+				set_ig_trait = ig_trait:ig_trait_social_criticism
+				set_ig_trait = ig_trait:ig_trait_avant_garde
+				set_ig_trait = ig_trait:ig_trait_restoration
+			}
+			else_if = {
+				limit = {
+					owner = { 
+						OR = { 
+							c:YUL ?= this
+							c:RVC ?= this
+						}
+					}
+				}
+				set_ig_trait = ig_trait:ig_trait_crisis_of_identity
+				set_ig_trait = ig_trait:ig_trait_avant_garde
+				set_ig_trait = ig_trait:ig_trait_propagandists
+			}
+			else = {
+				set_ig_trait = ig_trait:ig_trait_social_criticism
+				set_ig_trait = ig_trait:ig_trait_avant_garde
+				set_ig_trait = ig_trait:ig_trait_propagandists
+			}
 		}
-		# Brazilian Intelligentsia
-		else_if = {
+
+		if = {
 			limit = {
-				has_dlc_feature = rp1_content
-				c:BRZ ?= THIS
+				owner = { 
+					OR = { 
+						c:AUM ?= this
+						c:DRO ?= this
+					}
+				}
 			}
 			ig:ig_intelligentsia = {
-				set_ig_trait = ig_trait:ig_trait_brasilidade
-				set_ig_trait = ig_trait:ig_trait_bachareis
-				set_ig_trait = ig_trait:ig_trait_social_criticism
-
-				remove_ideology = ideology_republican
-				add_ideology = ideology_constitutionalist
+				remove_ideology = ideology_anti_clerical
 			}
 		}
 		
@@ -305,10 +327,34 @@
 
 	female_commander_chance = {
 		value = 0.0
+
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_matriarchy
+				}
+
+			}
+			add = {
+				value = 1.0
+			}
+		}
 	}
 
 	female_politician_chance = {
 		value = 0.0
+
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_matriarchy
+				}
+
+			}
+			add = {
+				value = 0.965
+			}
+		}
 
 		if = {
 			limit = {
@@ -361,6 +407,18 @@
 				value = 0.035
 			}
 		}		
+
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_matriarchy
+				}
+
+			}
+			add = {
+				value = 0.95
+			}
+		}
 	}
 
 	# The chance that a commander belonging to this IG takes over leadership when it changes

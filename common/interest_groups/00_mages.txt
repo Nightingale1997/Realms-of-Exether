@@ -317,12 +317,35 @@
 
 	female_commander_chance = {
 		value = 0.0
+
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_matriarchy
+				}
+
+			}
+			add = {
+				value = 1.0
+			}
+		}
 	}
 
 	female_politician_chance = {
 		value = 0.0
 
 		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_matriarchy
+				}
+
+			}
+			add = {
+				value = 0.965
+			}
+		}
+		else_if = {
 			limit = {
 				owner = {
 					has_law = law_type:law_womens_suffrage
@@ -373,6 +396,18 @@
 				value = 0.035
 			}
 		}		
+
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_matriarchy
+				}
+
+			}
+			add = {
+				value = 0.95
+			}
+		}
 	}
 
 	# The chance that a commander belonging to this IG takes over leadership when it changes

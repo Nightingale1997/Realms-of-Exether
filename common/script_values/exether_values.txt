@@ -54,7 +54,9 @@ magic_institution_level = {
   magic_institution_bonus = {
 	value = 0
 
-	add = magic_institution_level * 100
+	add = magic_institution_level
+
+	multiply = 100
   }
 
 magic_reserves_total = {

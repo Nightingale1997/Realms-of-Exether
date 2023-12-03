@@ -689,6 +689,33 @@ on_character_death = {
 				trigger_event = expedition_events.110
 			}
 		}
+
+
+				### Force-generating female rulers if something goes wrong
+				if = {
+					limit = {
+						is_ruler = yes
+						owner = {
+							NOT = {
+								any_scope_character = {
+									is_heir = yes
+								}
+							}
+						}
+					}
+					if = {
+						limit = { 
+							owner = {
+								has_law = law_type:law_matriarchy
+							}
+						}
+						owner = {
+							create_character = {
+								template = female_default
+							}
+						}
+					}
+				}
 	}
 }
 
