@@ -42,6 +42,22 @@
 		if = {
 			limit = {
 				OR = {
+					AND = {
+						c:ARR ?= this
+					}
+					country_has_primary_culture = cu:dorite
+				}
+			}
+			ig:ig_landowners = {
+				set_interest_group_name = ig_magnates
+				remove_ideology = ideology_paternalistic
+				add_ideology = ideology_republican_paternalistic
+			}
+		}
+
+		if = {
+			limit = {
+				OR = {
 					owner = {
 						religion = rel:orc_mother
 						any_primary_culture = {
