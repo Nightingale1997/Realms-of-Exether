@@ -638,12 +638,16 @@ POPS = {
 
 
   s:STATE_HAG_MARSHES = {
-      region_state:HAG = {
-        create_pop = {
-          culture = hag
-          size = 28000
-        }
-      }
+		region_state:HAG = {
+			create_pop = {
+				culture = vampire
+				size = 7980
+			}
+			create_pop = {
+				culture = hag
+				size = 40000
+			}
+		}
   }
 
 
@@ -810,7 +814,11 @@ POPS = {
       region_state:HEX = {
         create_pop = {
           culture = hag
-          size = 26000
+          size = 55990
+        }
+        create_pop = {
+          culture = vampire
+          size = 12800
         }
       }
   }
@@ -919,7 +927,11 @@ POPS = {
       region_state:WIT = {
         create_pop = {
           culture = hag
-          size = 22000
+          size = 19780
+        }
+        create_pop = {
+          culture = vampire
+          size = 4968
         }
       }
   }
@@ -1041,14 +1053,12 @@ POPS = {
     s:STATE_MALDARBLANE = {
       region_state:WIT = {
         create_pop = {
-          culture = hag
-          size = 18000
-        }
-      }
-      region_state:WIT = {
-        create_pop = {
           culture = vampire
-          size = 2000
+          size = 8000
+        }		
+        create_pop = {
+          culture = hag
+          size = 35200
         }
       }
   }

@@ -610,7 +610,16 @@ STATE_HAG_MARSHES = {
     farm = x916FFA
     mine = x938EF1
     port = x94E1B9
-
+    arable_land = 20
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_iron_mining = 24
+        bg_lead_mining = 24
+        bg_logging = 8
+        bg_whaling = 6
+        bg_fishing = 10
+    }
+    naval_exit_id = 3025
 }
 STATE_BALLYNE = {
     id = 4040
@@ -865,7 +874,15 @@ STATE_TOLFAR = {
     farm = xB8F5BF
     mine = xC1BEDC
     port = xC3DDF6
-
+    arable_land = 40
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 44
+        bg_lead_mining = 54
+        bg_logging = 11
+        bg_fishing = 8
+    }
+    naval_exit_id = 3025
 }
 STATE_KENLYNE = {
     id = 4060
@@ -966,7 +983,20 @@ STATE_ALLTBRAN = {
     farm = x9DE27E
     mine = xBCFD55
     port = xD1FD5E
-
+    arable_land = 20
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 32
+        bg_logging = 11
+        bg_whaling = 8
+        bg_fishing = 10
+    }
+    resource = {
+        type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
+        undiscovered_amount = 12
+    }
+    naval_exit_id = 3025
 }
 STATE_YSTRAD = {
     id = 4067
@@ -1154,7 +1184,21 @@ STATE_MALDARBLANE = {
     farm = x8DC8AD
     mine = xA68BD1
     port = xA7B8B0
-
+    arable_land = 40
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 28
+        bg_sulfur_mining = 36
+        bg_logging = 17
+        bg_whaling = 6
+        bg_fishing = 9
+    }
+    resource = {
+        type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
+        undiscovered_amount = 8
+    }
+    naval_exit_id = 3025
 }
 STATE_TYMANS_FOLLY = {
     id = 4083
