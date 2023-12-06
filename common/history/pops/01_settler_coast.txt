@@ -93,11 +93,45 @@ POPS = {
   }
 
   s:STATE_THE_AMBER_RUN = {
-
+		region_state:ARR = {
+			create_pop = {
+				culture = bossardi
+				size = 1949056
+			}
+			create_pop = {
+				culture = mousefolk
+				size = 69270
+			}
+			create_pop = {
+				culture = dorite
+				size = 9298
+			}
+      create_pop = {
+				culture = wealder
+				size = 19298
+			}
+		}
   }
 
   s:STATE_MISTREACH = {
-
+		region_state:ARR = {
+			create_pop = {
+				culture = bossardi
+				size = 1153438
+			}
+			create_pop = {
+				culture = dorite
+				size = 3472
+			}
+			create_pop = { # Givet area Walloon
+				culture = wealder
+				size = 4167
+			}
+			create_pop = {
+				culture = mousefolk
+				size = 868
+			}
+		}
   }
 
   s:STATE_VICEROYS_PEARL = {
@@ -124,20 +158,41 @@ POPS = {
 
   s:STATE_FAR_SHORE = {
 		region_state:THI = {
-
+			create_pop = {
+				culture = bossardi
+				size = 1709209
+			}
 			create_pop = {
 				culture = thiralian
-				size = 408014
+				size = 711985
 			}
 			create_pop = {
 				culture = dorite
-				size = 186786
+				religion = protestant
+				size = 78428
+			}
+			create_pop = {
+				culture = vandori
+				size = 889
 			}
 		}
   }
 
   s:STATE_DURANS_LAND = {
-
+		region_state:ARR = {
+			create_pop = {
+				culture = bossardi
+				size = 1693584
+			}
+			create_pop = {
+				culture = dorite
+				size = 10362
+			}
+			create_pop = {
+				culture = clearbough
+				size = 30094
+			}
+		}
   }
 
   s:STATE_FIRST_BOROUGH = {
@@ -359,6 +414,20 @@ POPS = {
   }
 
   s:STATE_TARBANK = {
+    region_state:THI = {
+			create_pop = {
+				culture = bossardi
+				size = 1561366
+			}
+			create_pop = {
+				culture = thiralian
+				size = 12350
+			}
+			create_pop = {
+				culture = vandori
+				size = 595
+			}
+		}
 
   }
 
