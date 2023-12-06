@@ -60,7 +60,7 @@ CER = {
 
 #Clearbough Estates
 CLR = {
-	color = rgb{ 0  100  100 } 
+	color = rgb{ 100  150  100 } 
 
 	country_type = recognized 
 
@@ -132,7 +132,7 @@ MOO = {
 
 #Braisebranch
 BRB = {
-	color = rgb{ 0  90  200 } 
+	color = rgb{ 0  90  120 } 
 
 	country_type = recognized
 
@@ -140,6 +140,30 @@ BRB = {
 
 	cultures = { highland_halfling } 
 	capital = STATE_OVERBURROW
+}
+
+#Greenhand
+GRH = {
+	color = rgb{ 0  120  30 } 
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { highland_halfling } 
+	capital = STATE_UPPER_GOLDENLEAF
+}
+
+#Fairhearth
+FTH = {
+	color = rgb{ 120  90  0 } 
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { highland_halfling } 
+	capital = STATE_NEWBANKS
 }
 
 #Saltboot Borough
@@ -152,6 +176,18 @@ SLB = {
 
 	cultures = { coast_halfling } 
 	capital = STATE_FIRST_BOROUGH
+}
+
+#Smallcoast
+SMA = {
+	color = rgb{ 180  60  0 } 
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { coast_halfling } 
+	capital = STATE_OUTER_MOORWEALD
 }
 
 #Mimic Demesne

@@ -33,7 +33,16 @@ POPS = {
   }
 
   s:STATE_LANDING_AT_SEA = {
-
+		region_state:CER = {
+			create_pop = {
+				culture = ceraunian
+				size = 1599083
+			}
+			create_pop = {
+				culture = dorite #Change when we add minority cultures to ceraun
+				size = 1018017
+			}
+		}
   }
 
   s:STATE_VIRULENT_EGRESS = {

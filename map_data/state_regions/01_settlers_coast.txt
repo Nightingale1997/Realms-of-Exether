@@ -95,7 +95,13 @@ STATE_LANDING_AT_SEA = {
     farm = x5CD5FE
     mine = x69F1F2
     port = x71B6E8
-
+    arable_land = 120
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_logging = 11
+        bg_fishing = 15
+    }
+    naval_exit_id = 3030
 }
 STATE_VIRULENT_EGRESS = {
     id = 4145
