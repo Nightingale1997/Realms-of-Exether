@@ -661,7 +661,20 @@ POPS = {
   }
     
   s:STATE_ESPRANOOR = {
-
+		region_state:AHO = {
+			create_pop = {
+				culture = achonian
+				size = 284860
+			}
+			create_pop = {
+				culture = changeling
+				size = 40000
+			}
+			create_pop = {
+				culture = qinnaat
+				size = 12400
+			}
+		}
   }
     
   s:STATE_ZAFIRAN = {

@@ -2,7 +2,16 @@
   # Monarchies
   gov_jarldom: "Jarldom"
   gov_jarldom_desc: "This is a [concept_government_type] where the power rests mainly with the [Concept('concept_ruler','$RULER_TITLE_KING$')].\n\n$TRANSFER_OF_POWER_NAME_DESC$"
-
+ gov_magocracy: "Magocracy"
+ gov_magocracy_desc: "This is a [concept_government_type] where the [concept_country] is ruled by the mages.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ gov_magocratic_dictatorship: "Magocratic Dictatorship"
+ gov_magocratic_dictatorship_desc: "This is a [concept_government_type] where the [concept_country] is ruled by the head of a magical order.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ gov_magocratic_oligarchy: "Magocratic Oligarchy"
+ gov_magocratic_oligarchy_desc: "This is a [concept_government_type] where the [concept_country] is ruled by a class of rich and powerful mages.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ gov_magocratic_democracy: "Magocratic Democracy"
+ gov_magocratic_democracy_desc: "This is a [concept_government_type] that is ruled by mages who are [Concept('concept_election','$concept_elected$')] by the people.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ gov_magocratic_single_party_state: "Magocratic Regime"
+ gov_magocratic_single_party_state_desc: "This is a [concept_government_type] that is ruled by mages who are [Concept('concept_election','$concept_elected$')] by members of a single legal ruling party.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
   #Titles
  RULER_TITLE_JARL: "Jarl"

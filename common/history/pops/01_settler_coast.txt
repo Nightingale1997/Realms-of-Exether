@@ -241,11 +241,33 @@ POPS = {
   }
 
   s:STATE_RUNEPORT_GALESTRUM = {
-
+	region_state:EBR = {
+		create_pop = {
+			culture = eberri
+			size = 647996
+		}
+		create_pop = {
+			culture = achonian
+			size = 4400
+		}
+		create_pop = {
+			culture = dorite
+			size = 4400
+		}
+	}
   }
 
   s:STATE_TWOTORS = {
-
+	region_state:EBR = {
+		create_pop = {
+			culture = eberri
+			size = 530908
+		}
+		create_pop = {
+			culture = achonian
+			size = 18908
+		}
+	}
   }
 
   s:STATE_ACHONIAN_HIGHLANDS = {
@@ -273,11 +295,29 @@ POPS = {
   }
 
   s:STATE_THUNDERSPELL_COAST = {
-
+	region_state:AHO = {
+		create_pop = {
+			culture = achonian
+			size = 345800
+		}
+		create_pop = {
+			culture = changeling
+			size = 7000
+		}
+	}
   }
 
   s:STATE_SOLEMN_STONES = {
-
+	region_state:AHO = {
+		create_pop = {
+			culture = achonian
+			size = 500800
+		}
+		create_pop = {
+			culture = changeling
+			size = 46800
+		}
+	}
   }
 
   s:STATE_VYNDERVOHT = {
@@ -395,7 +435,16 @@ POPS = {
   }
 
   s:STATE_AZURETHORN = {
-
+	region_state:AHO = {
+		create_pop = {
+			culture = achonian
+			size = 12000
+		}
+		create_pop = {
+			culture = changeling
+			size = 500
+		}
+	}
   }
 
   s:STATE_FERNSEA = {

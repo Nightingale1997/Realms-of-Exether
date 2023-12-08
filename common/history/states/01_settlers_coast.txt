@@ -316,18 +316,18 @@ add_homeland = cu:dorite
 
 s:STATE_RUNEPORT_GALESTRUM = {
     create_state = {
-        country = c:AHO
+        country = c:EBR
         owned_provinces = { "x4ACCF6" "x50E3DE" "x94B9F3" "x95F694" "x97E6DC" "x9CDAC0" "xA0DCAA" "xA7D0BE" "xB0E76B" "xB1FBED" "xB6FE67" "xC5E090" "xC9A98C" "xCCD97D" "xD6DEC4" "xDC7AFD" "xDEB5B5" "xE0F732" "xE27CF8" "xEFB466" "xF3AF5B" "xF6E5B9" "xFDAE4C" }
 }
-add_homeland = cu:dorite
+add_homeland = cu:eberri
 }
 
 s:STATE_TWOTORS = {
     create_state = {
-        country = c:AHO
+        country = c:EBR
         owned_provinces = { "x5ADBED" "x78DBF2" "x86F0EC" "x93B3BA" "xA7EE61" "xAED1E4" "xB7BA8A" "xBB5DF2" "xBFD56F" "xDAEC33" "xE1BBB3" "xF8E0A6" "xFE817E" }
 }
-add_homeland = cu:dorite
+add_homeland = cu:eberri
 }
 
 s:STATE_ACHONIAN_HIGHLANDS = {
@@ -335,7 +335,7 @@ s:STATE_ACHONIAN_HIGHLANDS = {
         country = c:AHO
         owned_provinces = { "x80DFC0" "x90D796" "x91DAA2" "xB3EAC7" "xC87BD5" "xCBFAEB" "xCCCE99" "xCEF4DC" "xE9C1D6" "xECCDF6" "xF7A8D4" "xFB94F1" "xFD06FE" }
 }
-add_homeland = cu:dorite
+add_homeland = cu:achonian
 }
 
 s:STATE_GLIMMERING_COAST = {
@@ -343,7 +343,7 @@ s:STATE_GLIMMERING_COAST = {
         country = c:AHO
         owned_provinces = { "x89EECA" "xB2C7DF" "xB89DB3" "xB9A5C1" "xD03CEA" "xD4E4BA" "xDE8FDE" "xDFEF29" "xE3E3D7" "xEE81BC" "xF18EA9" "xFB4CF4" }
 }
-add_homeland = cu:dorite
+add_homeland = cu:achonian
 }
 
 s:STATE_LEYLINE_COAST = {
@@ -351,15 +351,14 @@ s:STATE_LEYLINE_COAST = {
         country = c:AHO
         owned_provinces = { "x62E5C6" "x7FF4FB" "x9DDE98" "xA5A5D7" "xBB83EE" "xD28BB0" "xD7DBBD" "xD9BCCD" "xDF6EBD" "xF977B5" }
 }
-add_homeland = cu:dorite
-}
+add_homeland = cu:achonian
 
 s:STATE_HORSELORDS_DEMESNE = {
     create_state = {
-        country = c:AHO
+        country = c:EBR
         owned_provinces = { "x3EDEEB" "x69B6D9" "x6AC9CD" "x7F8EEC" "x89F1E6" "xA5A9C4" "xB770E4" "xC175E5" "xCBE7A9" "xCEDAE6" "xCF7AD8" "xCFED9F" "xD2BDF1" "xD59CF2" "xD8879A" "xD89C8E" "xE2B384" "xE4BDCD" "xEAD951" "xF86FC0" "xFABB77" }
 }
-add_homeland = cu:dorite
+add_homeland = cu:eberri
 }
 
 s:STATE_ROCHENSTONE = {
@@ -367,7 +366,7 @@ s:STATE_ROCHENSTONE = {
         country = c:AHO
         owned_provinces = { "x2BEAEA" "x5EB7E6" "x65D7FE" "x72E4AA" "x80ABD8" "x9CC4BF" "x9D8ED3" "xA0E9DC" "xB091FA" "xB8E3D7" "xB9A9BD" "xBAFDB1" "xC3FBBB" "xC4C4D3" "xD363C9" "xDCA2D3" "xDCF343" "xE067E9" "xE1C157" "xE3E2BC" "xE78F89" "xE8B660" "xF493A3" "xFA879F" "xFAFAA8" "xFE5DC0" }
 }
-add_homeland = cu:dorite
+add_homeland = cu:achonian
 }
 
 s:STATE_SJETTSZCEK_MIRE = {
@@ -375,7 +374,8 @@ s:STATE_SJETTSZCEK_MIRE = {
         country = c:AHO
         owned_provinces = { "x8FC5A5" "x94FEB0" "x9DEC95" "xBF8CFD" "xC8C8EF" "xD0E06E" "xD2A29A" "xD8D59C" "xDBD575" "xDBF546" "xE4AFF0" "xE5B1DF" "xEB5BFB" "xF1D2B2" "xF6F775" "xFEF3EF" }
 }
-add_homeland = cu:dorite
+add_homeland = cu:achonian
+add_homeland = cu:changeling
 }
 
 s:STATE_THUNDERSPELL_COAST = {
@@ -383,7 +383,7 @@ s:STATE_THUNDERSPELL_COAST = {
         country = c:AHO
         owned_provinces = { "x97F17F" "xA7E28C" "xA888EF" "xBAFA59" "xBD92ED" "xC1AD90" "xD0AECC" "xD7D6BA" "xDF22FA" "xE9DCCF" "xEAD269" "xF4FCF1" "xFD6D94" }
 }
-add_homeland = cu:dorite
+add_homeland = cu:achonian
 }
 
 s:STATE_SOLEMN_STONES = {
@@ -391,7 +391,8 @@ s:STATE_SOLEMN_STONES = {
         country = c:AHO
         owned_provinces = { "x83B4DB" "x868AF1" "x8EA4EA" "x90DDC3" "x92E3B0" "x95EE9C" "x9CEBDF" "x9DD7D7" "xA5CAD1" "xA9FC7E" "xAFEDB4" "xB17AD5" "xBDF783" "xD7DBA0" "xD7F743" "xE0FAF4" "xE1B591" "xE2F57B" "xE4F9E0" "xE7E874" "xEBB576" "xECCE3B" "xF381A8" "xF4F8D9" "xF6F83C" "xF83AE5" "xF850C4" "xFDFB7B" "xFE67ED" }
 }
-add_homeland = cu:dorite
+add_homeland = cu:achonian
+add_homeland = cu:changeling
 }
 
 s:STATE_VYNDERVOHT = {
@@ -399,7 +400,7 @@ s:STATE_VYNDERVOHT = {
         country = c:VHT
         owned_provinces = { "x73EFAC" "x83CAF1" "x849EF2" "xA2D395" "xCE87FB" "xD9DAA6" "xDDA57F" "xEBA3D5" "xEEE533" "xF16EF6" "xFB4AF5" "xFD8AD1" }
 }
-add_homeland = cu:dorite
+add_homeland = cu:vynduri
 }
 
 s:STATE_SHIFTING_SCAR = {

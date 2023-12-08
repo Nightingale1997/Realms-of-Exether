@@ -451,7 +451,13 @@ STATE_RUNEPORT_GALESTRUM = {
     farm = x94B9F3
     mine = x95F694
     port = x97E6DC
-
+    arable_land = 25
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 4
+        bg_fishing = 12
+    }
+    naval_exit_id = 3019
 }
 STATE_TWOTORS = {
     id = 4174
@@ -462,7 +468,13 @@ STATE_TWOTORS = {
     farm = x86F0EC
     mine = x93B3BA
     port = xA7EE61
-
+    arable_land = 35
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 6
+        bg_fishing = 10
+    }
+    naval_exit_id = 3026
 }
 STATE_ACHONIAN_HIGHLANDS = {
     id = 4175
@@ -539,7 +551,14 @@ STATE_THUNDERSPELL_COAST = {
     farm = xA888EF
     mine = xBAFA59
     port = xBD92ED
-
+    arable_land = 20
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_iron_mining = 18
+        bg_logging = 11
+        bg_fishing = 5
+    }
+    naval_exit_id = 3002
 }
 STATE_SOLEMN_STONES = {
     id = 4182
@@ -550,7 +569,14 @@ STATE_SOLEMN_STONES = {
     farm = x8EA4EA
     mine = x90DDC3
     port = x92E3B0
-
+    arable_land = 20
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_sulfur_mining = 20
+        bg_logging = 14
+        bg_fishing = 15
+    }
+    naval_exit_id = 3002
 }
 STATE_VYNDERVOHT = {
     id = 4183
@@ -801,7 +827,13 @@ STATE_AZURETHORN = {
     farm = x9CFB9A
     mine = xA3AABD
     port = xA3FAF9
-
+    arable_land = 2
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 2
+        bg_fishing = 2
+    }
+    naval_exit_id = 3026
 }
 STATE_FERNSEA = {
     id = 4202
