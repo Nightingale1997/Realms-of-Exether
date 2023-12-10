@@ -1037,6 +1037,8 @@ STATE_FARGHANOV = {
     farm = xE2EF62
     mine = xE4D5C8
     port = xEC35E6
+	arable_land = 15
+	arable_resources = { "bg_livestock_ranches" }
 
 }
 STATE_GHAZNINSKIY = {
@@ -1081,6 +1083,11 @@ STATE_RUKHAM = {
     farm = x3EF8FE
     mine = x84D8D2
     port = x84D8E8
+	arable_land = 20
+	arable_resources = { "bg_livestock_ranches" }
+	capped_resources = {
+        bg_opium_plantations = 28
+    }
 
 }
 STATE_KARAKAR = {
@@ -1092,6 +1099,12 @@ STATE_KARAKAR = {
     farm = x61F3FB
     mine = x69CDC3
     port = x76DEE4
+	arable_land = 10
+	arable_resources = { "bg_livestock_ranches" }
+	capped_resources = {
+		bg_iron_mining = 27
+        bg_opium_plantations = 16
+    }
 
 }
 STATE_HARQOM = {
@@ -1103,6 +1116,12 @@ STATE_HARQOM = {
     farm = x79D7A8
     mine = x85C9B0
     port = x93C6AC
+	arable_land = 12
+	arable_resources = { "bg_livestock_ranches" }
+	capped_resources = {
+		bg_sulfur_mining = 27
+        bg_opium_plantations = 18
+    }
 
 }
 STATE_KHUBEK = {
@@ -1114,6 +1133,12 @@ STATE_KHUBEK = {
     farm = x78FB8A
     mine = x7C9EE7
     port = x85E0AB
+	arable_land = 15
+	arable_resources = { "bg_livestock_ranches" }
+	capped_resources = {
+		bg_sulfur_mining = 24
+        bg_opium_plantations = 19
+    }
 
 }
 STATE_TABLAG = {
@@ -1125,6 +1150,12 @@ STATE_TABLAG = {
     farm = x62CCEB
     mine = x76D4BF
     port = x7DD1F2
+	arable_land = 13
+	arable_resources = { "bg_livestock_ranches" }
+	capped_resources = {
+		bg_coal_mining = 27
+        bg_opium_plantations = 21
+    }
 
 }
 STATE_WUTAK = {
@@ -1136,5 +1167,11 @@ STATE_WUTAK = {
     farm = x6ABFDF
     mine = x6EF199
     port = x75F0DF
+	arable_land = 16
+	arable_resources = { "bg_livestock_ranches" }
+	capped_resources = {
+		bg_lead_mining = 18
+        bg_opium_plantations = 24
+    }
 
 }
