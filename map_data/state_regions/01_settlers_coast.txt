@@ -570,7 +570,14 @@ STATE_ACHONIAN_HIGHLANDS = {
     farm = x91DAA2
     mine = xB3EAC7
     port = xC87BD5
-
+    arable_land = 45
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_coal_mining = 60
+        bg_iron_mining = 30
+        bg_logging = 34
+        bg_monuments = 1
+    }
 }
 STATE_GLIMMERING_COAST = {
     id = 4176
@@ -581,8 +588,16 @@ STATE_GLIMMERING_COAST = {
     farm = xB89DB3
     mine = xB9A5C1
     port = xD03CEA
-
+    arable_land = 20
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 17
+        bg_whaling = 4
+        bg_fishing = 8
+    }
+    naval_exit_id = 3026
 }
+
 STATE_LEYLINE_COAST = {
     id = 4177
     subsistence_building = "building_subsistence_farms"
@@ -592,7 +607,13 @@ STATE_LEYLINE_COAST = {
     farm = x9DDE98
     mine = xA5A5D7
     port = xBB83EE
-
+    arable_land = 40
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 11
+        bg_fishing = 5
+    }
+    naval_exit_id = 3026
 }
 STATE_HORSELORDS_DEMESNE = {
     id = 4178
@@ -682,8 +703,15 @@ STATE_SHIFTING_SCAR = {
     wood = x51E0D7
     farm = x58CAF0
     mine = x5FD7C1
-    port = x62E9AE
-
+    arable_land = 30
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 4
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 5
+    }
 }
 STATE_OVERBURROW = {
     id = 4185

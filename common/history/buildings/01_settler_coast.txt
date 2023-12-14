@@ -1085,15 +1085,156 @@ BUILDINGS = {
   }
 
   s:STATE_ACHONIAN_HIGHLANDS = {
-
+	region_state:AHO={
+		create_building={
+			building="building_government_administration"
+			level=4
+			reserves=1
+			activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+		}
+		create_building={
+			building="building_construction_sector"
+			level=2
+			reserves=1
+			activate_production_methods={ "pm_wooden_buildings" }
+		}			
+		create_building={
+			building="building_tooling_workshops"
+			level=7
+			reserves=1
+			activate_production_methods={ "pm_pig_iron" "pm_automation_disabled" "pm_privately_owned_building_tooling_workshops" }
+		}
+		create_building={
+			building="building_university"
+			level=2
+			reserves=1
+			activate_production_methods={ "pm_scholastic_education" }
+		}
+		create_building={
+			building="building_textile_mills"
+			level=3
+			reserves=1
+			activate_production_methods={ "pm_handsewn_clothes" "pm_craftsman_sewing" "pm_traditional_looms" "pm_merchant_guilds_building_textile_mills" }
+		}
+		create_building={
+			building="building_furniture_manufacturies"
+			level=6
+			reserves=1
+			activate_production_methods={ "pm_handcrafted_furniture" "pm_merchant_guilds_building_furniture_manufacturies" "pm_automation_disabled" "pm_luxury_furniture" }
+		}
+		create_building={
+			building="building_logging_camp"
+			level=10
+			reserves=1
+			activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" "pm_privately_owned_building_logging_camp" }
+		}
+		create_building={
+			building="building_iron_mine"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" "pm_merchant_guilds_building_iron_mine" }
+		}
+	}
   }
 
   s:STATE_GLIMMERING_COAST = {
-
+	region_state:AHO={
+		create_building={
+			building="building_government_administration"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+		}
+		create_building={
+			building="building_furniture_manufacturies"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_lathe" "pm_luxury_furniture" "pm_automation_disabled" "pm_privately_owned_building_furniture_manufacturies" }
+		}
+		create_building={
+			building="building_logging_camp"
+			level=3
+			reserves=1
+			activate_production_methods={ "pm_saw_mills" "pm_privately_owned_building_logging_camp" "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
+		}
+		create_building={
+			building="building_shipyards"
+			level=2
+			reserves=1
+			activate_production_methods={ "pm_basic_shipbuilding" "pm_merchant_guilds_building_shipyards" }
+		}
+		create_building={
+			building="building_fishing_wharf"
+			level=3
+			reserves=1
+			activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+		}
+		create_building={
+			building="building_port"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_basic_port" }
+		}			
+	}
   }
 
   s:STATE_LEYLINE_COAST = {
-
+	region_state:AHO={
+		create_building={
+			building="building_government_administration"
+			level=10
+			reserves=1
+			activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+		}
+		create_building={
+			building="building_construction_sector"
+			level=2
+			reserves=1
+			activate_production_methods={ "pm_wooden_buildings" }
+		}			
+		create_building={
+			building="building_textile_mills"
+			level=2
+			reserves=1
+			activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_traditional_looms" "pm_merchant_guilds_building_textile_mills" }
+		}
+		create_building={
+			building="building_glassworks"
+			level=3
+			reserves=1
+			activate_production_methods={ "pm_forest_glass" "pm_merchant_guilds_building_glassworks" "pm_manual_glassblowing" "pm_ceramics" }
+		}
+		create_building={
+			building="building_arts_academy"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_traditional_art" }
+		}
+		create_building={
+			building="building_artillery_foundries"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_cannons" "pm_automation_disabled" "pm_merchant_guilds_building_artillery_foundries" }
+		}
+		create_building={
+			building="building_rye_farm"
+			level=3
+			reserves=1
+			activate_production_methods={ "pm_simple_farming" "pm_privately_owned" "pm_tools_disabled" "pm_potatoes" }
+		}
+		create_building={
+			building="building_port"
+			level=3
+			reserves=1
+			activate_production_methods={ "pm_basic_port" }
+		}
+		create_building={
+			building="building_military_shipyards"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_merchant_guilds_building_military_shipyards" "pm_military_shipbuilding_wooden" }
+		}
+	}
   }
 
   s:STATE_HORSELORDS_DEMESNE = {

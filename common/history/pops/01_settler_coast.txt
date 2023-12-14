@@ -468,15 +468,50 @@ POPS = {
   }
 
   s:STATE_ACHONIAN_HIGHLANDS = {
-
+	region_state:AHO = {
+		create_pop = {
+			culture = achonian
+			size = 653196
+		}
+		create_pop = {
+			culture = changeling
+			size = 2200
+		}
+	}
   }
 
   s:STATE_GLIMMERING_COAST = {
-
+	region_state:AHO = {
+		create_pop = {
+			culture = changeling
+			size = 16000
+		}
+		create_pop = {
+			culture = achonian
+			size = 381228
+		}
+	}
   }
 
   s:STATE_LEYLINE_COAST = {
-
+	region_state:AHO = {
+		create_pop = {
+			culture = achonian
+			size = 858808
+		}
+		create_pop = {
+			culture = eberri
+			size = 32000
+		}
+		create_pop = {
+			culture = changeling
+			size = 88000
+		}
+		create_pop = {
+			culture = vandori
+			size = 5600
+		}
+	}
   }
 
   s:STATE_HORSELORDS_DEMESNE = {
@@ -522,7 +557,21 @@ POPS = {
   }
 
   s:STATE_SHIFTING_SCAR = {
-
+	region_state:MMD = {
+		create_pop = {
+			culture = changeling
+			size = 324396
+		}
+		create_pop = {
+			culture = nightwalker
+			size = 94004
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = achonian
+			size = 50400
+		}
+	}
   }
 
   s:STATE_OVERBURROW = {
