@@ -1,4 +1,23 @@
-﻿gov_provisional_government = {
+﻿gov_captain_regency = {
+	transfer_of_power = dictatorial
+
+	male_ruler = "RULER_TITLE_CAPTAIN_REGENT"
+	female_ruler = "RULER_TITLE_CAPTAIN_REGENT"
+	
+	possible = {
+		has_law = law_type:law_presidential_republic
+		has_law = law_type:law_technocracy
+	}
+
+	on_government_type_change = {
+		change_to_dictatorial = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_dictatorial = yes
+	}
+}
+
+gov_provisional_government = {
 	transfer_of_power = dictatorial
 
 	male_ruler = "RULER_TITLE_PRESIDENT"
