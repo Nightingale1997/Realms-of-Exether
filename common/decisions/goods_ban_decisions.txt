@@ -33,33 +33,6 @@ ban_opium = {
     }	
 }
 
-remove_opium_ban = {
-	is_shown = {
-		is_banning_goods = g:opium
-		exists = market
-		market.owner = root
-	}
-
-	possible = {
-		always = yes
-	}
-
-	when_taken = {
-		remove_banned_goods = g:opium
-		remove_modifier = opium_ban_authority
-	}
-	
-   ai_chance = {
-      base = 0
-		modifier = {
-			trigger = {
-				has_strategy = ai_strategy_progressive_agenda
-			}
-			add = 10
-		}		 
-   }	
-}
-
 ban_liquor = {
 	is_shown = {
 		has_variable = prohibition_laws_var
@@ -120,3 +93,26 @@ remove_liquor_ban = {
 		}		 
    }	
 }
+
+remove_opium_ban = {
+	is_shown = {
+		exists = market
+		market.owner = root
+		NOT = { has_journal_entry = je_opium_obsession }
+		is_banning_goods = g:opium
+	}
+
+	possible = {
+		is_banning_goods = g:opium
+	}
+
+	when_taken = {
+		remove_banned_goods = g:opium	
+	}
+	
+   ai_chance = {
+      base = 0		 
+   }	
+}
+
+

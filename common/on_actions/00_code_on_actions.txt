@@ -512,12 +512,10 @@ on_battle_ended = {}
 # scope:state = location state
 on_battle_won = {
 	events = {
-		texan_war_of_independence.3
 
 	}
 	random_events = {
 		80 = 0
-		20 = culture_brazil.1
 	}
 }
 
@@ -722,97 +720,15 @@ on_character_death = {
 # Root = Character
 on_new_ruler = {
 	effect = {
-		post_notification = new_ruler
 		if = {
 			limit = {
 				owner = {
-					c:RUS ?= this
-					has_law = law_type:law_monarchy
-				}
-				is_ruler = yes
-			}
-			if = {
-				limit = {
-					has_template = RUS_alexander_ii
-				}
-				owner = {
-					trigger_event = { id = russia_monarchy.1 popup = yes }
-				}
-			}
-			else_if = {
-				limit = {
-					has_template = RUS_tsarevich_nicholas_alexandrovich
-				}
-				owner = {
-					trigger_event = { id = russia_monarchy.3 popup = yes }
-				}
-			}
-			else_if = {
-				limit = {
-					has_template = RUS_alexander_iii
-				}
-				owner = {
-					trigger_event = { id = russia_monarchy.4 popup = yes }
-				}
-			}
-			else_if = {
-				limit = {
-					has_template = RUS_nicholas_ii
-				}
-				owner = {
-					trigger_event = { id = russia_monarchy.5 popup = yes }
-				}
-			}
-			else_if = {
-				limit = {
-					has_template = RUS_alexei_ii
-				}
-				owner = {
-					trigger_event = { id = russia_monarchy.9 popup = yes }
-				}
-			}
-			else_if = {
-				limit = {
-					has_template = RUS_michael_ii
-				}
-				owner = {
-					trigger_event = { id = russia_monarchy.10 popup = yes }
-				}
-			}
-			else_if = {
-				limit = {
-					has_template = RUS_george_i
-				}
-				owner = {
-					trigger_event = { id = russia_monarchy.11 popup = yes }
-				}
-			}
-		}
-		if = {
-			limit = {
-				owner = {
-					c:PRG ?= this
-				}
-				has_template = PRG_francisco_solano_lopez
-				is_ruler = yes
-			}
-			owner = {
-				random_scope_character = {
-					limit = {
-						has_template = PRG_francisco_solano_lopez
-					}
-					if = {
-						limit = {
-							has_modifier = napoleon_of_the_americas_modifier
-						}
-						remove_modifier = napoleon_of_the_americas_modifier
-					}
-					add_modifier = {
-						name = napoleon_of_the_americas_modifier
-						multiplier = 2
+					NOT = {
+						has_variable = hide_ruler_change_notification
 					}
 				}
 			}
+			post_notification = new_ruler
 		}
 	}
 }
