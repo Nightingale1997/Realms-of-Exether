@@ -553,7 +553,20 @@ POPS = {
   }
 
   s:STATE_VYNDERVOHT = {
-
+	region_state:VHT = {
+		create_pop = {
+			culture = vynduri
+			size = 677296
+		}
+		create_pop = {
+			culture = changeling
+			size = 5996
+		}
+		create_pop = {
+			culture = achonian
+			size = 13504
+		}
+	}
   }
 
   s:STATE_SHIFTING_SCAR = {

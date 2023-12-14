@@ -301,3 +301,10 @@ is_arid_region = {
 		region = sr:region_west_mindrend_sands
 	}
 }
+
+state_has_mountain = {
+	OR = {
+		#has_state_trait = state_trait_rhine_river
+		always = yes
+	}
+}

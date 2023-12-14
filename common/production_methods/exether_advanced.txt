@@ -189,3 +189,119 @@ pm_objects_of_power = {
 		}
 	}
 }
+
+pm_anchorage_airship = {
+	texture = "gfx/interface/icons/production_method_icons/anchorage.dds"
+	
+	low_pop_method = yes # AI will activate this method for states with low population
+	
+	building_modifiers = {
+
+		workforce_scaled = {	
+			goods_input_cloudsilver_add = 5
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 500
+			building_employment_clerks_add = 350
+			building_employment_bureaucrats_add = 150
+		}
+	}
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_convoys_capacity_add = 20
+		}
+	}
+}			
+
+pm_basic_port_airship = {
+	texture = "gfx/interface/icons/production_method_icons/basic_port.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {	
+			goods_input_clippers_add = 5
+			goods_input_cloudsilver_add = 5
+		}
+		level_scaled = {
+			building_employment_laborers_add = 3000
+			building_employment_clerks_add = 1500
+			building_employment_bureaucrats_add = 500
+		}
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_convoys_capacity_add = 150
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_infrastructure_add = 5
+		}
+	}
+}		
+
+pm_industrial_port_airship = {
+	texture = "gfx/interface/icons/production_method_icons/industrial_port.dds"
+
+	unlocking_technologies = {
+		gantry_cranes
+	}
+
+	building_modifiers = {
+		workforce_scaled = {	
+			goods_input_steamers_add = 5
+			goods_input_cloudsilver_add = 10
+		}
+		level_scaled = {
+			building_employment_laborers_add = 2000
+			building_employment_machinists_add = 500
+			building_employment_clerks_add = 1000
+			building_employment_bureaucrats_add = 500
+		}
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_convoys_capacity_add = 175
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_infrastructure_add = 7.5
+		}
+	}	
+}
+
+pm_modern_port_airship = {
+	texture = "gfx/interface/icons/production_method_icons/modern_port.dds"
+	unlocking_technologies = {
+		concrete_dockyards
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {	
+			goods_input_cloudsilver_add = 10
+			goods_input_steamers_add = 5	
+			goods_input_oil_add = 5
+		}
+		level_scaled = {
+			building_employment_laborers_add = 750
+			building_employment_machinists_add = 250
+			building_employment_clerks_add = 500
+			building_employment_bureaucrats_add = 500
+		}
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_convoys_capacity_add = 200
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_infrastructure_add = 10
+		}
+	}
+}	

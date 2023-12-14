@@ -25,6 +25,11 @@ goods_output_cloudsilver_add = {
 	percent = no
 }
 
+goods_output_gizmos_add = {
+	good = yes
+	percent = no
+}
+
 goods_input_trinkets_add = {
 	good = no
 	percent = no
@@ -35,8 +40,18 @@ goods_input_cloudsilver_add = {
 	percent = no
 }
 
+goods_input_gizmos_add = {
+	good = no
+	percent = no
+}
 
 goods_input_wishstone_add = {
 	good = no
 	percent = no
+}
+
+state_building_airship_dock_max_level_add = {
+	good = yes
+	percent = no
+	num_decimals = 0
 }

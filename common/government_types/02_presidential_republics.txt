@@ -6,7 +6,8 @@ gov_captain_regency = {
 	
 	possible = {
 		has_law = law_type:law_presidential_republic
-		has_law = law_type:law_technocracy
+		has_law = law_type:law_autocracy
+		AND = { exists = c:VAI c:VAI = ROOT }
 	}
 
 	on_government_type_change = {
@@ -14,6 +15,29 @@ gov_captain_regency = {
 	}
 	on_post_government_type_change = {
 		post_change_to_dictatorial = yes
+	}
+}
+
+gov_thalorian_remnant = {
+	transfer_of_power = presidential_elective
+	new_leader_on_reform_government = no
+
+	male_ruler = "RULER_TITLE_ARCH_SHERIFF"
+	female_ruler = "RULER_TITLE_ARCH_SHERIFF"
+	
+	possible = {
+		has_law = law_type:law_presidential_republic
+		OR = {
+			country_has_primary_culture = cu:west_thalorian
+			country_has_primary_culture = cu:lake_thalorian
+		}
+	}
+
+	on_government_type_change = {
+		change_to_presidential_elective = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_presidential_elective = yes
 	}
 }
 
