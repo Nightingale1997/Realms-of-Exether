@@ -1,0 +1,14 @@
+﻿COUNTRIES = {
+	c:RSE = {
+		ig:ig_landowners = {
+			add_ruling_interest_group = yes
+		}
+		effect_starting_technology_tier_6_tech = yes
+				
+		effect_starting_politics_traditional = yes
+		
+		activate_law = law_type:law_denominational_exclusion
+
+		set_tax_level = medium
+	}
+}
