@@ -37,6 +37,18 @@ old_faith = {
 	color = { 0.6 0.7 0.55 }
 }
 
+salt_crucible = {
+	texture = "gfx/interface/icons/religion_icons/protestant.dds"
+	traits = {
+		animist_heritage war_domain
+	}
+	color = { 0.8 0.7 0.4 }
+	
+	taboos = {
+		fruit
+	} 
+}
+
 cult_of_the_sun = {
 	texture = "gfx/interface/icons/religion_icons/orthodox.dds"
 	traits = {
