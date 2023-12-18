@@ -50,7 +50,9 @@
 			is_pop_type = shopkeepers
 			AND = {
 				is_pop_type = wizards
-				has_law = law_type:law_artificer_guilds
+				owner = {
+					has_law = law_type:law_artificer_guilds
+				}
 			}
 		}
 	}

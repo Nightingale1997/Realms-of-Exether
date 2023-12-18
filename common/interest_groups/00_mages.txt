@@ -42,7 +42,9 @@
 			is_pop_type = clergymen
 			AND = {
 				is_pop_type = academics
-				has_law = law_type:law_astrological_studies
+				owner = {
+					has_law = law_type:law_astrological_studies
+				}
 			}
 		}
 	}

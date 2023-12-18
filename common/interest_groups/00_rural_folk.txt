@@ -80,7 +80,9 @@
 			}
 			AND = {
 				is_pop_type = wizards
-				has_law = law_type:law_druidic_circles
+				owner = {
+					has_law = law_type:law_druidic_circles
+				}
 			}
 		}
 	}
