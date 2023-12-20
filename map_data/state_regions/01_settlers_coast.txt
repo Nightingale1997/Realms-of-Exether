@@ -7,6 +7,11 @@
     farm = x67BBED
     mine = x85D898
     port = x98A8DB
+    arable_land = 65
+    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_wheat_farms" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_fishing = 3        
+    }     
     naval_exit_id = 3060
 }
 STATE_CHANTSIRENE = {
@@ -19,6 +24,15 @@ STATE_CHANTSIRENE = {
     farm = x90E0AB
     mine = x9DEBA6
     port = xA8DBDE
+    arable_land = 75
+    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_wheat_farms" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_coal_mining = 10
+        bg_iron_mining = 20
+        bg_gold_mining = 4
+        bg_logging = 3
+        bg_fishing = 6        
+    }    
     naval_exit_id = 3060
 }
 STATE_MERACIEL_AUBELAC = {
@@ -31,6 +45,13 @@ STATE_MERACIEL_AUBELAC = {
     farm = x8AD7AB
     mine = x9D8CD7
     port = xB8E0CF
+    arable_land = 60
+    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_wheat_farms" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_iron_mining = 2
+        bg_logging = 2
+        bg_fishing = 8        
+    }      
     naval_exit_id = 3060
 }
 STATE_ABAISSE_DE_MARBRUN = {
@@ -41,8 +62,14 @@ STATE_ABAISSE_DE_MARBRUN = {
     city = x67EAF7
     wood = x709AF7
     farm = x93AEB7
-    mine = x9BFAE7
+    mine = x9BFAE7 
     port = xA1ABD6
+    arable_land = 20
+    arable_resources = { "bg_cotton_plantations" }    
+    capped_resources = {
+        bg_logging = 20
+        bg_fishing = 4        
+    }     
     naval_exit_id = 3060
 }
 STATE_VALSANG = {
@@ -54,6 +81,12 @@ STATE_VALSANG = {
     farm = x8DD0E3
     mine = xABB29C
     port = xB96CE8
+    arable_land = 90
+    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_wheat_farms" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_iron_mining = 3
+        bg_logging = 4        
+    }     
     naval_exit_id = 3060
 }
 STATE_AZURSOL = {
@@ -65,6 +98,12 @@ STATE_AZURSOL = {
     farm = x7AC6BF
     mine = x7CFD81
     port = x94DEF9
+    arable_land = 55
+    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_wheat_farms" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_logging = 3
+        bg_fishing = 8        
+    }       
     naval_exit_id = 3060
 }
 STATE_SAINT_MER = {
