@@ -20,6 +20,10 @@ POPS = {
 				      size = 760745
 			    }
 			    create_pop = {
+				      culture = vozi
+				      size = 113312
+			    }				    
+			    create_pop = {
 				      culture = aridrun
 				      size = 50312
 			    }			         
@@ -35,7 +39,11 @@ POPS = {
 			    create_pop = {
 				      culture = aridrun
 				      size = 210328
-			    }			        
+			    }
+			    create_pop = {
+				      culture = vozi
+				      size = 8025
+			    }				    			        
 		  }
   }
 
@@ -67,7 +75,16 @@ POPS = {
   }
 
   s:STATE_SAINT_MER = {
-
+		  region_state:CER = {
+			    create_pop = {
+				      culture = ocelian 
+				      size = 30004
+			    }
+			    create_pop = {
+				      culture = ceraunian
+				      size = 320881
+			    }			         
+		  }
   }
 
   s:STATE_CAEL_VALEN = {
@@ -88,7 +105,12 @@ POPS = {
   }
 
   s:STATE_VIRULENT_EGRESS = {
-
+		  region_state:ALC = {
+			    create_pop = {
+				      culture = ocelian 
+				      size = 150279
+			    }		         
+		  }
   }
 
   s:STATE_THE_CHASM = {
