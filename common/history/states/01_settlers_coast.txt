@@ -137,7 +137,7 @@ s:STATE_EASTERN_PLAGUEWOOD = {
         country = c:RTD
         owned_provinces = { "x53FCDC" "x54A3FE" "x5BEDAE" "x62CEDF" "x69F9B7" "x77D2F9" "x809EF1" "x84D0E7" "x8DDDC1" "x92EC98" "x94D0E8" "xA1C0C3" "xA3B1CB" "xA3B2E0" "xA4C6B4" "xA6D7AC" "xACC392" "xAED8C1" "xB29BD0" "xB57BE4" "xB5B28E" "xB5E487" "xB6BDC8" "xC07EF9" "xCCB086" "xCCCCC7" "xCE96A0" "xD39DB3" "xD3E2EA" "xD5B9FC" "xD735F5" "xDAD0F3" "xE0BEAA" "xE6DED8" "xEB33EB" "xEE5FB2" "xEF5EF9" "xF07899" "xF0A9DB" "xF0DED8" "xF1A098" "xF1B891" "xF36EF7" "xF47FD8" "xF4C371" "xF4DDDE" "xF4F234" "xF5A48B" "xF5EBA8" "xF739EC" "xF8ABAC" "xF926E1" "xF97B82" "xFACD77" "xFEFE7A" }
 }
-add_homeland = cu:dorite
+add_homeland = cu:plaguedweller
 }
 
 s:STATE_FORESTS_HEART = {
@@ -150,10 +150,10 @@ add_homeland = cu:dorite
 
 s:STATE_PLAGUEWOOD_HINTERLANDS = {
     create_state = {
-        country = c:BRC
+        country = c:BDB
         owned_provinces = { "x37DFFC" "x49DEFE" "x4CDAD5" "x7ACFE9" "x83F8E4" "x8CDBA9" "x91BDEC" "x92EA8F" "x97F989" "xA190F2" "xA3ADCE" "xABDE87" "xAC65F9" "xAF8BED" "xB1DFBC" "xB394D4" "xB9E382" "xBB4FF9" "xBEF08E" "xC060F3" "xC096BE" "xC998FD" "xD0D4D1" "xD1C670" "xD3A8C6" "xD4F456" "xD99CD8" "xD9F86B" "xDACBC5" "xE087DE" "xE6DED2" "xE8DB33" "xEBE557" "xED9F6B" "xEEB798" "xEEB873" "xEFA681" "xF2EC8C" "xF2FEFB" "xF8D27E" "xFA70A7" "xFAED99" "xFC39CF" }
 }
-add_homeland = cu:dorite
+add_homeland = cu:plaguedweller
 }
 
 s:STATE_ASHWICK = {
@@ -161,7 +161,7 @@ s:STATE_ASHWICK = {
         country = c:ASW
         owned_provinces = { "x25FCE1" "x4FE2FC" "x56FBF7" "x5CE8D4" "x60DBCE" "x63FCE2" "x68E4F3" "x7CEABF" "x7CF2BC" "x81B5C4" "x89ABDB" "x8BCD9E" "x96B8B4" "xA9EE6F" "xACF971" "xB4FDAF" "xB6DD79" "xB798EA" "xBBDBC6" "xC2E295" "xCC76DB" "xD167F1" "xD2AFA0" "xD48BEA" "xD5C8F8" "xD5D09F" "xD8BECB" "xD8F7E1" "xDCEEDA" "xDEAD86" "xE590EE" "xE6EF23" "xE7D7D0" "xE97AAE" "xE9F1BC" "xED89D1" "xED8FA8" "xF3F312" "xF69DE7" "xF749C1" "xF7DD51" "xFA9689" "xFAF86C" "xFE5AEF" }
 }
-add_homeland = cu:dorite
+add_homeland = cu:plaguedweller
 add_claim = c:ARR
 }
 
@@ -630,4 +630,6 @@ s:STATE_IRON_HALLS = {
     }
     add_homeland = cu:clearbough
     }
+}
+
 }

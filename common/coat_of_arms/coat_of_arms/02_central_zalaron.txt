@@ -83,13 +83,85 @@ TIS = {
 		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
 	}	
 
+
+	
+}
+
+#Lisinia
+LIS = {
+	pattern = "pattern_solid.tga"
+	color1 = "green_dark"
+
+	colored_emblem = {
+		texture = "ce_roe_khussite_waves.dds"
+		color1 = "white"
+		color2 = "yellow"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}	
+
+	
+	
+}
+
+#Solnomo
+SNM = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+
+	colored_emblem = {
+		texture = "ce_bicolor_left.dds"
+		color1 = "white"
+		color2 = "orange"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}	
+	
+	colored_emblem = {
+		texture = "ce_flags_wave_single_vertical.dds"
+		color1 = "white"
+		color2 = "sapphire"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}	
+
+	colored_emblem = {
+		texture = "ce_emblem_pot_cape_colony.dds"
+		color1 = "white"
+		color2 = "orange"
+		instance = { scale = { 0.25 0.25 } position = { 0.75 0.75 } }	
+	}	
+
+	colored_emblem = {
+		texture = "ce_emblem_pot_cape_colony.dds"
+		color1 = "white"
+		color2 = "orange"
+		instance = { scale = { 0.25 0.25 } position = { 0.75 0.25 } }	
+	}	
+}
+
+#Verkisirio
+VER = {
+	pattern = "pattern_solid.tga"
+	color1 = "orange"
+
+	colored_emblem = {
+		texture = "ce_bicolor_bottom.dds"
+		color1 = "white"
+		color2 = "orange"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}	
+	
+	colored_emblem = {
+		texture = "ce_roe_khussite_pattern_left.dds"
+		color1 = "white"
+		color2 = "orange"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}	
+
 	colored_emblem = {
 		texture = "ce_trident.dds"
 		color1 = "white"
 		color2 = "yellow"
-		instance = { scale = { 0.5 0.5 } position = { 0.52 0.28 } }	
+		instance = { scale = { 0.5 0.5 } position = { 0.52 0.25 } }	
 	}	
-	
 }
 
 #Zubayra
@@ -145,6 +217,29 @@ RLP = {
 		color2 = "yellow"
 		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
 	}	
+
+}
+
+
+
+#Redmane
+RDM = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	
+	colored_emblem = {
+		texture = "ce_stripes_09.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		instance = { scale = { 0.5 1 } position = { 0.75 0.5 } }	
+	}
+	
+	colored_emblem = {
+		texture = "ce_wild_rose.dds"
+		color1 = "yellow"
+		color2 = "black"
+		instance = { scale = { 0.5 0.5 } position = { 0.25 0.5 } }	
+	}
 
 }
 

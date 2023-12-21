@@ -89,7 +89,7 @@ VOZ = {
 
 	country_type = recognized 
 
-	tier = principality
+	tier = kingdom
 
 	cultures = { vozi } 
 	capital = STATE_SKYPIERCER_PEAK
@@ -101,10 +101,22 @@ DRO = {
 
 	country_type = recognized 
 
-	tier = principality
+	tier = kingdom
 
 	cultures = { aridrun } 
 	capital = STATE_ELF2
+}
+
+#Union of the Sands
+UTS = {
+	color = hsv360{ 20  60  80 }
+
+	country_type = recognized 
+
+	tier = empire
+
+	cultures = { vozi aridrun } 
+	capital = STATE_SKYPIERCER_PEAK
 }
 
 #Whisker Fields
@@ -277,25 +289,26 @@ SEB = {
 
 #Rotdrinker
 RTD = {
-	color = rgb{ 10  10  180 } 
+	color = rgb{ 50  95  50 } 
+	
 
 	country_type = unrecognized 
 
 	tier = principality
 
-	cultures = { dumonian } 
+	cultures = { plaguedweller } 
 	capital = STATE_EASTERN_PLAGUEWOOD
 }
 
 #Bloodbound
 BDB = {
-	color = rgb{ 10  10  160 } 
+	color = rgb{ 120  10  80 } 
 
 	country_type = unrecognized 
 
 	tier = principality
 
-	cultures = { dumonian } 
+	cultures = { plaguedweller } 
 	capital = STATE_FORESTS_HEART
 }
 
@@ -307,7 +320,7 @@ BRC = {
 
 	tier = principality
 
-	cultures = { dumonian } 
+	cultures = { plaguedweller } 
 	capital = STATE_PLAGUEWOOD_HINTERLANDS
 }
 
@@ -319,18 +332,18 @@ CLD = {
 
 	tier = principality
 
-	cultures = { dumonian } 
+	cultures = { plaguedweller } 
 	capital = STATE_PLAGUES_END
 }
 
 #Rivercrosser
 RCR = {
-	color = rgb{ 10  10  140 } 
+	color = rgb{ 10  20  80 } 
 
-	country_type = unrecognized 
+	country_type = decentralized
 
 	tier = principality
 
-	cultures = { dumonian } 
+	cultures = { plaguedweller } 
 	capital = STATE_DILAFSHAN
 }
