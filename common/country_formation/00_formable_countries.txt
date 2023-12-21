@@ -13,3 +13,36 @@ TLE = {
 	
 	ai_will_do = { always = yes }
 }
+
+UTS = {
+	states = {
+		STATE_COGSREST
+		STATE_NOGI_SANDS
+		STATE_ELF1
+		STATE_ELF2
+		STATE_ELF3
+		STATE_ELF4
+		STATE_GRAVELROCK_ROAD
+		STATE_VOZMEAD_LOWLANDS
+		STATE_DWARVENHAMMER
+		STATE_SUNKEN_CLIFFS
+	}
+
+	required_states_fraction = 0.75	
+	
+	possible = {
+		OR = {
+			c:VOZ ?= this
+			c:DRO ?= this
+		}
+		has_technology_researched = pan-nationalism
+		cu:vozi = {
+			NOT = { culture_is_discriminated_in = ROOT }
+		}
+		cu:aridrun = {
+			NOT = { culture_is_discriminated_in = ROOT }
+		}
+	}
+
+	ai_will_do = { always = yes }
+}
