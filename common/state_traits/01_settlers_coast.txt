@@ -14,3 +14,34 @@ state_trait_lake_bossard = {
 		state_infrastructure_add = 15
 	}	
 }
+
+state_trait_plaguewood = {
+	icon = "gfx/interface/icons/state_trait_icons/resources_lumber.dds"
+	modifier = {
+		state_construction_mult = -0.2
+		state_infrastructure_mult = -0.2
+		goods_output_hardwood_mult = 0.25
+		state_non_homeland_mortality_mult = 0.15
+	}
+}
+
+state_trait_nogi_sands = {
+    icon = "gfx/interface/icons/state_trait_icons/dry_climate.dds"
+		   
+	modifier = {
+        building_group_bg_ranching_throughput_add = -0.1
+		building_group_bg_agriculture_throughput_add = -0.2
+		building_group_bg_plantations_throughput_add = -0.2
+		state_construction_mult = -0.25
+		state_infrastructure_mult = -0.25
+    }
+}
+
+state_trait_ocelian_wetlands = {
+	icon = "gfx/interface/icons/state_trait_icons/swamp.dds"
+	
+	modifier = {
+		state_construction_mult = -0.15
+		state_infrastructure_mult = -0.15
+	}
+}
