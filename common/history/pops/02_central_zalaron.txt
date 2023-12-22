@@ -826,7 +826,21 @@ POPS = {
   }
     
   s:STATE_FARASHIL = {
-
+		region_state:SET = {
+			create_pop = {
+				culture = seleni
+				size = 416996
+			}
+			create_pop = {
+				culture = tefereti
+				size = 36000
+			}
+			create_pop = {
+				culture = nightwalker
+				size = 33600
+				pop_type = slaves
+			}
+		}
   }
     
   s:STATE_ALNAHFID = {

@@ -1902,6 +1902,18 @@ STATE_FARASHIL = {
     farm = x68D0EC
     mine = x75E2C3
     port = x80F6E0
+    arable_land = 70
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_tea_plantations" "bg_sugar_plantations" "bg_tobacco_plantations" }
+    capped_resources = {
+        bg_coal_mining = 22
+        bg_iron_mining = 11
+        bg_logging = 20
+        bg_opium_plantations = 22
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 20
+    }
     naval_exit_id = 3060
 }
 STATE_ALNAHFID = {

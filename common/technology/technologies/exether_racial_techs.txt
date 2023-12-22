@@ -6,7 +6,8 @@
 	can_research = no
 	
 	modifier = {
-		
+	country_military_tech_research_speed_mult = 0.1
+	
 	}
 	
 	ai_weight = {
@@ -38,7 +39,10 @@ elf_tech = {
 	can_research = no
 	
 	modifier = {
-		
+		country_influence_mult = 0.05
+		country_infamy_decay_mult = 0.15
+		state_birth_rate_mult = -0.1
+		state_mortality_mult = -0.1
 	}
 	
 	ai_weight = {
@@ -87,7 +91,7 @@ dragon_tech = {
 	can_research = no
 	
 	modifier = {
-		
+	country_prestige_mult = 0.05
 	}
 	
 	ai_weight = {
@@ -103,7 +107,8 @@ goblin_tech = {
 	can_research = no
 	
 	modifier = {
-		
+	state_conscription_rate_mult = 0.1
+	country_military_goods_cost_mult = -0.05
 	}
 	
 	ai_weight = {
@@ -135,7 +140,10 @@ ogre_tech = {
 	can_research = no
 	
 	modifier = {
-		
+		country_prestige_from_army_power_projection_mult = 0.05
+		unit_devastation_mult = 0.15
+		unit_kill_rate_add = 0.1
+		country_infamy_generation_mult = 0.2
 	}
 	
 	ai_weight = {
@@ -151,7 +159,8 @@ monster_tech = {
 	can_research = no
 	
 	modifier = {
-		
+		unit_supply_consumption_mult = -0.1
+		state_construction_mult = 0.05
 	}
 	
 	ai_weight = {
@@ -167,7 +176,10 @@ bird_tech = {
 	can_research = no
 	
 	modifier = {
-		
+		state_rich_expected_sol = 1
+		country_authority_mult = 0.05
+		unit_defense_elevated_mult = 0.15
+		unit_offense_elevated_mult = 0.15
 	}
 	
 	ai_weight = {
@@ -199,7 +211,10 @@ orc_tech = {
 	can_research = no
 	
 	modifier = {
-		
+		country_prestige_from_army_power_projection_mult = 0.05
+		unit_devastation_mult = 0.15
+		unit_morale_damage_mult = 0.1
+		country_infamy_generation_mult = 0.1
 	}
 	
 	ai_weight = {
@@ -215,7 +230,8 @@ halfling_tech = {
 	can_research = no
 	
 	modifier = {
-		
+		state_standard_of_living_add = 1
+		state_migration_pull_mult = 0.2
 	}
 	
 	ai_weight = {
@@ -231,7 +247,8 @@ hippo_tech = {
 	can_research = no
 	
 	modifier = {
-		
+		country_prestige_from_navy_power_projection_mult = 0.05
+		country_trade_route_competitiveness_mult = 0.2
 	}
 	
 	ai_weight = {
@@ -247,7 +264,8 @@ giant_tech = {
 	can_research = no
 	
 	modifier = {
-		
+		country_legitimacy_headofstate_add = 10
+		unit_morale_loss_mult = -0.05
 	}
 	
 	ai_weight = {
@@ -263,7 +281,7 @@ psionic_tech = {
 	can_research = no
 	
 	modifier = {
-		
+		country_tech_spread_mult = 0.1
 	}
 	
 	ai_weight = {
