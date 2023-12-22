@@ -19,3 +19,12 @@ state_trait_kharaa_ur_desert = {
 		state_infrastructure_mult = -0.25
 	}
 }
+
+state_trait_golden_fields = {
+	icon = "gfx/interface/icons/state_trait_icons/good_soils.dds"
+	
+	modifier = {
+		building_group_bg_agriculture_throughput_add = 0.15
+		building_group_bg_plantations_throughput_add = 0.15
+	}
+}

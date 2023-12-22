@@ -272,10 +272,6 @@ POPS = {
     }
   }
     
-  s:STATE_ANWARTH = {
-
-  }
-    
   s:STATE_AHORNAU = {
     region_state:DMS = {
       create_pop = {
@@ -425,15 +421,41 @@ POPS = {
   }
     
   s:STATE_BROKENPILLAR = {
-
-  }
-    
-  s:STATE_GIANTS_CORPSE = {
-
+		region_state:ANW = {
+			create_pop = {
+				culture = anwarthi
+				size = 1731236
+			}
+			create_pop = {
+				culture = tefereti
+				size = 140996
+			}
+			create_pop = {
+				culture = seleni
+				size = 45000
+			}
+		}
   }
     
   s:STATE_ANWARTH_VALLEYS = {
-
+		region_state:ANW= {
+			create_pop = {
+				culture = vandori
+				size = 90356
+			}
+			create_pop = {
+				culture = tefereti
+				size = 120352
+			}
+			create_pop = {
+				culture = anwarthi
+				size = 1414404
+			}
+			create_pop = {
+				culture = seleni
+				size = 265004
+			}
+		}
   }
     
   s:STATE_SHADGOL = {
@@ -444,12 +466,22 @@ POPS = {
 
   }
     
-  s:STATE_EXETHERS_CRADLE = {
-
-  }
-    
   s:STATE_THINSILVER = {
+		region_state:ANW = {
+			create_pop = {
+				culture = anwarthi
+				size = 612392
+			}
+			create_pop = {
+				culture = seleni
+				size = 64000
+			}
+      create_pop = {
+				culture = tefereti
+				size = 44000
+			}
 
+		}
   }
     
   s:STATE_VERDFALDO = {
