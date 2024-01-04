@@ -1,31 +1,90 @@
 POPS = {
 
   s:STATE_SHARINDLARS_NEEDLE = {
-
+		  region_state:EME = {
+			    create_pop = {
+				      culture = ocelian 
+				      size = 280744
+			    }
+			    create_pop = {
+				      culture = aridrun
+				      size = 20881
+			    }			         
+		  }
   }
 
   s:STATE_CHANTSIRENE = {
-
+		  region_state:EME = {
+			    create_pop = {
+				      culture = ocelian 
+				      size = 760745
+			    }
+			    create_pop = {
+				      culture = vozi
+				      size = 113312
+			    }				    
+			    create_pop = {
+				      culture = aridrun
+				      size = 50312
+			    }			         
+		  }
   }
 
-  s:STATE_MERACIEL_AUBELAC = {
-
+  s:STATE_MERACIEL_AUBELAC = { 
+		  region_state:EME = {
+			    create_pop = {
+				      culture = ocelian
+				      size = 1520800
+			    } 
+			    create_pop = {
+				      culture = aridrun
+				      size = 210328
+			    }
+			    create_pop = {
+				      culture = vozi
+				      size = 8025
+			    }				    			        
+		  }
   }
 
   s:STATE_ABAISSE_DE_MARBRUN = {
-
+		  region_state:EME = {
+			    create_pop = {
+				      culture = ocelian 
+				      size = 453021
+			    }     
+		  }
   }
 
   s:STATE_VALSANG = {
-
+		  region_state:EME = {
+			    create_pop = {
+				      culture = ocelian 
+				      size = 360796
+			    }     
+		  }
   }
 
   s:STATE_AZURSOL = {
-
+		  region_state:EME = {
+			    create_pop = {
+				      culture = ocelian 
+				      size = 960796
+			    }     
+		  }
   }
 
   s:STATE_SAINT_MER = {
-
+		  region_state:CER = {
+			    create_pop = {
+				      culture = ocelian 
+				      size = 30004
+			    }
+			    create_pop = {
+				      culture = ceraunian
+				      size = 320881
+			    }			         
+		  }
   }
 
   s:STATE_CAEL_VALEN = {
@@ -46,7 +105,12 @@ POPS = {
   }
 
   s:STATE_VIRULENT_EGRESS = {
-
+		  region_state:ALC = {
+			    create_pop = {
+				      culture = ocelian 
+				      size = 150279
+			    }		         
+		  }
   }
 
   s:STATE_THE_CHASM = {

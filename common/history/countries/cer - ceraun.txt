@@ -12,21 +12,21 @@
 		set_tariffs_import_priority = g:clippers
 		
 		# Laws 
-		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_presidential_republic
 		activate_law = law_type:law_autocracy 
 		activate_law = law_type:law_freedom_of_conscience
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_per_capita_based_taxation
 		activate_law = law_type:law_appointed_bureaucrats
-		activate_law = law_type:law_national_supremacy # Poles were even excluded from Landrat posts in 1832. Germanization policies were in full swing by the mid-1830s
+		activate_law = law_type:law_national_supremacy 
 		activate_law = law_type:law_mercantilism
 		activate_law = law_type:law_interventionism
-		activate_law = law_type:law_public_schools
-		activate_law = law_type:law_local_police
+		activate_law = law_type:law_private_health_insurance		
+		activate_law = law_type:law_militarized_police
 		activate_law = law_type:law_per_capita_based_taxation
 		activate_law = law_type:law_professional_army
 		activate_law = law_type:law_censorship
-
+		activate_law = law_type:law_secret_police
 		
 		set_institution_investment_level = {
 			institution = institution_schools

@@ -5,7 +5,7 @@ s:STATE_SHARINDLARS_NEEDLE = {
         country = c:EME
         owned_provinces = { "x57DEF9" "x65B3F5" "x67BBED" "x85D898" "x98A8DB" "x9990CE" "xA0FECA" "xB6CDCC" "xCD41FE" "xD48AEB" "xD5A78B" "xD6C967" "xD78D96" "xDB80A3" "xDEB4C5" "xDFF34D" "xE3E093" "xF4D1DE" "xF6B684" "xF7AB9E" }
 }
-add_homeland = cu:dorite
+    add_homeland = cu:ocelian   
 }
 #
 s:STATE_CHANTSIRENE = {
@@ -13,7 +13,7 @@ s:STATE_CHANTSIRENE = {
         country = c:EME
         owned_provinces = { "x3FE3F3" "x5CFDD0" "x90E0AB" "x9DEBA6" "xA8DBDE" "xADD8DB" "xAFD584" "xB5FBEE" "xB878E8" "xB8FAF0" "xC8BB85" "xCF9EC1" "xCFF82E" "xE38DA2" "xE791B2" "xEBD1FE" "xF5D4B8" "xFB68F7" }
 }
-add_homeland = cu:dorite
+    add_homeland = cu:ocelian
 }
 #
 s:STATE_MERACIEL_AUBELAC = {
@@ -21,7 +21,7 @@ s:STATE_MERACIEL_AUBELAC = {
         country = c:EME
         owned_provinces = { "x5CC5F8" "x77EFF7" "x8AD7AB" "x9D8CD7" "xB8E0CF" "xBABEC4" "xBEC9D2" "xBFD6A2" "xC664E6" "xC9F0DD" "xDF4AF6" "xDFDBC3" "xE047D9" "xE1A9D4" "xE5BE90" "xEECDF9" "xEF68EB" "xF385AE" "xFB9E73" }
 }
-add_homeland = cu:dorite
+    add_homeland = cu:ocelian
 }
 #
 s:STATE_ABAISSE_DE_MARBRUN = {
@@ -29,7 +29,7 @@ s:STATE_ABAISSE_DE_MARBRUN = {
         country = c:EME
         owned_provinces = { "x67EAF7" "x709AF7" "x93AEB7" "x9BFAE7" "xA1ABD6" "xA2D6BF" "xA6BBD8" "xABE0C8" "xB0D4E8" "xB5A5CB" "xB978FD" "xBAB2A3" "xD1ACA4" "xD25EF9" "xD2B772" "xDCFE6B" "xDFAAAD" "xE6F533" "xEACDEA" "xEBAAE2" "xECF4D1" "xEDBBAF" "xEF6ABA" "xF4CCFE" "xF69DC1" "xF7FA4A" "xFBD46B" "xFCA686" "xFE75E5" }
     }
-    add_homeland = cu:dorite
+    add_homeland = cu:ocelian
     }
 # lit. Sänkta Mar(marchés, marknader)-brun
 
@@ -38,7 +38,7 @@ s:STATE_VALSANG = {
         country = c:EME
         owned_provinces = { "x80AFEC" "x8990F6" "x8DD0E3" "xABB29C" "xB96CE8" "xC3E16D" "xC4A7DF" "xC983F4" "xD2B678" "xE0FE1B" "xE3D5A1" "xE5EC8E" "xEDB26D" "xF054E8" "xF89E71" "xFB3AF6" }
     }
-    add_homeland = cu:dorite
+    add_homeland = cu:ocelian
     }
 # lit. Val(valeur, värde)-blod
 
@@ -47,7 +47,7 @@ s:STATE_AZURSOL = {
         country = c:EME
         owned_provinces = { "x49F6C1" "x77BBE3" "x7AC6BF" "x7CFD81" "x94DEF9" "x9AAAFB" "x9AF6C4" "xA0E98C" "xA2B8E3" "xA5D1E2" "xACD1D6" "xB2E571" "xC482E0" "xCBD85E" "xCCF633" "xD48AC1" "xD89BD3" "xD968E5" "xDDA478" "xE23CFE" "xE260DB" "xE3FB7C" "xE6DCC0" "xE891F0" "xE92BFE" "xEDBCAC" "xEDC5BE" "xEDDFFD" "xF3E786" "xF89081" "xF9B2B8" "xFAE075" }
     }
-    add_homeland = cu:dorite
+    add_homeland = cu:ocelian    
     }
 # lit. blå-mark
 
@@ -80,7 +80,8 @@ s:STATE_VIRULENT_EGRESS = {
         country = c:ALC
         owned_provinces = { "x28E2F9" "x3BEBD2" "x5AB3FD" "x6FF5E5" "x71B3D5" "x78ABF4" "x83FADB" "x8BCBE2" "x8CD0F5" "x8DBAD5" "x8DBEDD" "x8F92DE" "x8FB4EA" "x8FDDAD" "xA1D2BC" "xA1D7CE" "xA5A5B3" "xABED60" "xB4FB83" "xB8A3B2" "xB8E090" "xBFB799" "xC1F1C8" "xC3BFEA" "xC3F28D" "xC7E15F" "xC9B2C4" "xC9DF4F" "xCC84B9" "xCCEBE9" "xCCF8B9" "xCDE597" "xD9F9A9" "xDB96A3" "xDFC275" "xE483E0" "xE4B77C" "xE8B197" "xE8EB24" "xEA1DFE" "xEBC4CC" "xEEF79E" "xF333E1" "xF4928E" "xF954F7" "xFAAE60" }
 }
-add_homeland = cu:dorite
+    add_homeland = cu:ocelian
+add_claim = c:EME
 }
 
 s:STATE_THE_CHASM = {
@@ -135,7 +136,7 @@ create_state = {
     country = c:CDW
     owned_provinces = { "x8C82FA" "xC0D0A2" "xFDEAF9" "xDE84F6" "xC13EFC" "xF0A29F" "x96EF9A" "xEAD7D3" "xB893EC" "x76F6EF" "xDD96D1" "xF444F1" "x9ECFDD" "xEFAFA9" "x4DCFEC" "xD79791" "x64D7D4" }
 }
-add_homeland = cu:dorite
+    add_homeland = cu:ocelian
 }
 
 s:STATE_EASTERN_PLAGUEWOOD = {
@@ -510,7 +511,7 @@ s:STATE_GRAVELROCK_ROAD = {
         country = c:VOZ
         owned_provinces = { "x58BEF1" "x63DAD0" "x65C7FA" "x69F6FB" "x6A94FC" "x6ADBDC" "x8FA2F7" "xA7D1FE" "xA9A4DE" "xA9F281" "xAEF0F3" "xB58BCD" "xC1EDA1" "xC9D4E6" "xCA98D7" "xCFA8C1" "xD6BD7D" "xDAFE2F" "xDC76D7" "xDC90AB" "xE0ACD7" "xE7AC99" "xE7CF8E" "xE8F925" "xF8F1C7" "xF94FF0" "xFA99C7" "xFAE19F" "xFDE638" }
 }
-add_homeland = cu:dorite
+    add_homeland = cu:vozi
 }
 
 s:STATE_ELF1 = {
@@ -574,7 +575,7 @@ s:STATE_SKYPIERCER_PEAK = {
         country = c:VOZ
         owned_provinces = { "x45F8C3" "x9DEC7F" "xA0D3C7" "xAAC8BA" "xACBEA9" "xAF96F1" "xB1E57D" "xBEBA9D" "xC8F8FE" "xCDF356" "xD2AF86" "xD2BBE5" "xD464C4" "xE98BF3" "xF0F4C5" "xF6C9B0" "xFC9BF4" }
 }
-add_homeland = cu:dorite
+    add_homeland = cu:vozi
 }
 
 s:STATE_CLOUDSILVER_SPINE = {
@@ -582,7 +583,7 @@ s:STATE_CLOUDSILVER_SPINE = {
         country = c:VOZ
         owned_provinces = { "x68FDFD" "xA36BF7" "xB3FCA7" "xB5D8D3" "xBACAF9" "xBCBCFA" "xC9B6B2" "xC9CA89" "xCEF874" "xD5BDF3" "xD5D4E4" "xDBC095" "xDC55EA" "xDFA7BA" "xE1DA53" "xE759C5" "xE9FA22" "xEA70F7" "xEBA581" "xEF28E1" "xF3E83D" "xF6D5A6" "xF8A9D6" "xFB58C3" }
 }
-add_homeland = cu:dorite
+    add_homeland = cu:vozi
 }
 
 s:STATE_VOZMEAD_LOWLANDS = {
@@ -590,7 +591,7 @@ s:STATE_VOZMEAD_LOWLANDS = {
         country = c:VOZ
         owned_provinces = { "x4EBDEA" "x6CFD98" "x8BDBC2" "xA4E4B9" "xA7E7FD" "xAA73E0" "xADCCE7" "xBFFA46" "xC9FAA0" "xCACB87" "xD3D697" "xD5B9E2" "xD74BD5" "xD8A6E2" "xE82EF7" "xE883BF" "xE96EE4" "xEA68FD" "xEA69A9" "xECE968" "xEEB9F6" "xF0EE79" "xF669C8" "xF89CFB" "xF8F3B2" }
 }
-add_homeland = cu:dorite
+    add_homeland = cu:vozi
 }
 
 s:STATE_SUNKEN_CLIFFS = {
@@ -598,7 +599,7 @@ s:STATE_SUNKEN_CLIFFS = {
         country = c:VOZ
         owned_provinces = { "x79E6DA" "x85C7FB" "x8DDDE1" "x94EFA3" "x9FDA93" "xA660F1" "xAB97CB" "xAEF4B7" "xB3C5A1" "xB3E9FA" "xB6F6C8" "xBAA7CC" "xC29CED" "xC3C1A4" "xC952EC" "xCC97A4" "xD290D8" "xD4FDAB" "xE1D7EF" "xE2D0F2" "xEA3CDD" "xF693CB" "xFCF467" }
 }
-add_homeland = cu:dorite
+    add_homeland = cu:vozi
 }
 
 s:STATE_DWARVENHAMMER = {
@@ -606,7 +607,7 @@ s:STATE_DWARVENHAMMER = {
         country = c:VOZ
         owned_provinces = { "x7EF8DF" "x86C6AF" "x94D5CD" "xA3B6E7" "xA5EFA2" "xC7F9C5" "xC9A2E1" "xCDB9EF" "xE3E19B" "xE7CB65" "xEAEF6E" "xEF4FF8" "xF08595" "xFBB76D" }
 }
-add_homeland = cu:dorite
+    add_homeland = cu:vozi
 }
 
 s:STATE_TARBANK = {

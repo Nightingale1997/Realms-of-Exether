@@ -15,6 +15,35 @@ state_trait_lake_bossard = {
 	}	
 }
 
+state_trait_brindelle_marshes = {
+	icon = "gfx/interface/icons/state_trait_icons/swamp.dds"
+	
+	modifier = {
+		state_construction_mult = -0.15
+		state_infrastructure_mult = -0.15
+	}	
+}
+
+state_trait_nevosas = {
+	icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
+	
+	modifier = {
+		state_construction_mult = -0.15
+		state_infrastructure_mult = -0.15
+	}	
+}
+
+state_trait_cauront_bay = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	
+	modifier = {
+		building_shipyards_throughput_add = 0.1
+		building_military_shipyards_throughput_add = 0.1
+		state_building_port_max_level_add = 2
+		state_building_naval_base_max_level_add = 10
+	}	
+}
+
 state_trait_plaguewood = {
 	icon = "gfx/interface/icons/state_trait_icons/resources_lumber.dds"
 	modifier = {
@@ -35,13 +64,4 @@ state_trait_nogi_sands = {
 		state_construction_mult = -0.25
 		state_infrastructure_mult = -0.25
     }
-}
-
-state_trait_ocelian_wetlands = {
-	icon = "gfx/interface/icons/state_trait_icons/swamp.dds"
-	
-	modifier = {
-		state_construction_mult = -0.15
-		state_infrastructure_mult = -0.15
-	}
 }
