@@ -201,6 +201,31 @@ FEY = {
 	}
 }
 
+#Meddencross
+MID = {
+	pattern = "pattern_solid.tga" #Choose a base from gfx\coat_of_arms\patterns
+	color1 = "green" #Use a predefined colour or you can do 'color1 = rgb{ x x x }'.
+
+	colored_emblem = {
+		texture = "ce_bicolor_top.dds"
+		color1 = "orange"
+		instance = { scale = { 0.5 1 } position = { 0.25 0.5 } }
+	}
+
+	colored_emblem = {
+		texture = "ce_bicolor_bottom.dds"
+		color1 = "orange"
+		instance = { scale = { 0.5 1 } position = { 0.75 0.5 } }
+	}
+
+	colored_emblem = {
+		texture = "ce_stripe_center.dds"
+		color1 = "white"
+		instance = { scale = { 1 0.5 } position = { 0.5 0.25 } }
+		instance = { scale = { 1 0.5 } position = { 0.5 0.75 } }
+	}
+}
+
 #Dushambay
 DSB = {
 	pattern = "pattern_solid.tga" #Choose a base from gfx\coat_of_arms\patterns

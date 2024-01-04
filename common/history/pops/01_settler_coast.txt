@@ -126,14 +126,28 @@ POPS = {
   }
 
   s:STATE_RIVER_MEDDEN = {
-	region_state:SMA = {
+	region_state:MID = {
 		create_pop = {
 			culture = coast_halfling
-			size = 1400989
+			size = 1100989
 		}
 		create_pop = {
 			culture = mousefolk
-			size = 70307
+			size = 20307
+		}
+	}
+	region_state:CER = {
+		create_pop = {
+			culture = ceraunian
+			size = 600989
+		}
+		create_pop = {
+			culture = coast_halfling
+			size = 100989
+		}
+		create_pop = {
+			culture = mousefolk
+			size = 50307
 		}
 	}
   }
@@ -162,7 +176,7 @@ POPS = {
 	region_state:SMA = {
 		create_pop = {
 			culture = coast_halfling 
-			size = 2224197
+			size = 2024197
 		}
 		create_pop = {
 			culture = mousefolk
@@ -176,6 +190,14 @@ POPS = {
 			culture = ceraunian
 			size = 3361
 		}
+	}
+
+	region_state:MID = {
+		create_pop = {
+			culture = coast_halfling 
+			size = 224197
+		}
+
 	}
   }
 

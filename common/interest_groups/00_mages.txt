@@ -26,6 +26,20 @@
 			set_ig_trait = ig_trait:ig_trait_industrial_organizers
 			set_ig_trait = ig_trait:ig_trait_solidarity
 		}
+
+		if = {
+			limit = {
+				owner = { 
+					any_primary_culture = {
+						has_discrimination_trait = dwarf_heritage
+					}	
+				}
+			}
+			ig:ig_mages = {
+				set_interest_group_name = ig_runeseers
+			}
+		}
+
 	}
 
 	on_disable = {}
