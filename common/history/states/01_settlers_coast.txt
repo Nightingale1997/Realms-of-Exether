@@ -109,11 +109,17 @@ add_homeland = cu:dorite
 
 s:STATE_RIVER_MEDDEN = {
     create_state = {
-        country = c:SMA
-        owned_provinces = { "x32E5EF" "x60BBE0" "x72C0C8" "x73EAA5" "x75C7BD" "x7FABF5" "x9199F8" "x94EC97" "x98DBDE" "x9BE89B" "x9CF3C3" "x9CF4B4" "x9EC0A8" "xA0E88C" "xA4BBD6" "xABB8F0" "xAEB6BE" "xB0DD71" "xB28DE0" "xB48CBB" "xB7A2BE" "xC6E5ED" "xC76CD8" "xC9ABEF" "xD2B5FC" "xD579E6" "xDC35F7" "xDC72FE" "xDFF289" "xE1CE5C" "xE2C1D9" "xEBD6A6" "xEF60E4" "xEF67B3" "xEF82EF" "xF05DA9" "xF0DB6E" "xF317F9" "xF3E5CF" "xF49BBD" "xFAB155" }
+        country = c:CER
+        owned_provinces = { "x32E5EF" "x60BBE0" "x7FABF5" "x9199F8" "xA4BBD6" "xB0DD71" "xB28DE0" "xC6E5ED" "xC76CD8" "xD579E6"  "xDC72FE" "xDFF289" "xE1CE5C" "xE2C1D9" "xEBD6A6" "xEF60E4" "xEF82EF" "xF05DA9" "xF0DB6E" "xF49BBD" "xFAB155" }
 }
+create_state = {
+    country = c:MID
+    owned_provinces = { "xF3E5CF" "xB48CBB" "xDC35F7" "x9EC0A8" "x72C0C8"}
+}
+
 add_homeland = cu:coast_halfling
 add_homeland = cu:wealder
+add_claim = c:MID
 }
 
 s:STATE_VOZMEAD_BORDERLANDS = {
@@ -168,8 +174,12 @@ add_claim = c:ARR
 s:STATE_OUTER_MOORWEALD = {
     create_state = {
         country = c:SMA
-        owned_provinces = { "x32DCE8" "x32FAF2" "x37F6D5" "x52CBDC" "x58E8D0" "x61D1ED" "x65F5D8" "x76F2C3" "x78E2C4" "x87AFDA" "x8CD1C4" "x8DFDF8" "x93C1C0" "x94B7CC" "x9ADDDC" "x9E7FEF" "x9F9ED4" "xA6F7A0" "xAB93E9" "xACA8C1" "xB0DEF3" "xB1C9CF" "xB2E469" "xB3E97F" "xB6A3F0" "xBBCDC1" "xC082E1" "xC5EEEE" "xC8CF79" "xC9EC74" "xCBC3D5" "xCF92B0" "xD1CB63" "xD1E454" "xD2F2CA" "xD3C0B8" "xD5AB81" "xD5C1B3" "xD789E9" "xD8B79F" "xDB52D0" "xDBC4EE" "xDE8DEF" "xE0E3B4" "xE364BE" "xE961FB" "xEA98E7" "xEBF3DC" "xECC154" "xF18DD7" "xF253D2" "xF2CC45" "xF530F9" "xF8BFE4" "xF93CF0" "xFDF0C3" "xFEC93F" }
-}
+        owned_provinces = { "x32DCE8" "x32FAF2" "x37F6D5" "x52CBDC" "x58E8D0" "x61D1ED" "x65F5D8" "x76F2C3" "x78E2C4" "x87AFDA" "x8CD1C4" "x8DFDF8" "x93C1C0" "x94B7CC" "x94EC97" "x98DBDE" "x9ADDDC" "x9BE89B" "x9E7FEF" "x9F9ED4" "xA6F7A0" "xAB93E9" "xACA8C1" "xAEB6BE" "xB0DEF3" "xB1C9CF" "xB2E469" "xB3E97F" "xB6A3F0" "xBBCDC1" "xC082E1" "xC5EEEE" "xC8CF79" "xC9EC74" "xCBC3D5" "xCF92B0" "xD1CB63" "xD1E454"  "xD2F2CA" "xD3C0B8" "xD5AB81" "xD5C1B3" "xD789E9" "xD8B79F" "xDB52D0" "xDBC4EE" "xDE8DEF" "xE0E3B4" "xE364BE" "xE961FB" "xEA98E7" "xEBF3DC" "xECC154" "xF18DD7" "xF253D2" "xF2CC45" "xF317F9" "xF530F9" "xF8BFE4" "xF93CF0" "xFDF0C3" "xFEC93F" }
+    }
+    create_state = {
+        country = c:MID
+        owned_provinces = { "xD2B5FC" "x9CF4B4" "xB7A2BE" }
+    }
 add_homeland = cu:coast_halfling
 }
 
@@ -185,7 +195,7 @@ add_homeland = cu:coast_halfling
 s:STATE_WHISKER_FIELDS = {
     create_state = {
         country = c:WHI
-        owned_provinces = { "x8CF7BF" "x8DB7C8" "x9D90CA" "xA1E083" "xA561EF" "xAF5CF7" "xB98BF3" "xB9EF8C" "xBB73E1" "xC7EBE7" "xC8A1EB" "xC8D4A8" "xCAE9BC" "xCBF5D1" "xCDDE73" "xCDFDFD" "xD087C9" "xD8F644" "xE0EA6B" "xE270F8" "xE2F4AB" "xE37BB1" "xE4F0F4" "xE5F6B3" "xE8B6C0" "xE9A5B9" "xEB4AC5" "xEF7DC0" "xF1D060" "xF2A076" "xF6ECD2" }
+        owned_provinces = { "x73EAA5" "x75C7BD" "x8CF7BF" "x8DB7C8" "x9CF3C3" "x9D90CA" "xA0E88C" "xA1E083" "xA561EF" "xABB8F0" "xAF5CF7" "xB98BF3" "xB9EF8C" "xBB73E1" "xC7EBE7" "xC8A1EB" "xC8D4A8" "xC9ABEF" "xCAE9BC" "xCBF5D1" "xCDDE73" "xCDFDFD" "xD087C9" "xD8F644" "xE0EA6B" "xE270F8" "xE2F4AB" "xE37BB1" "xE4F0F4" "xE5F6B3" "xE8B6C0" "xE9A5B9" "xEB4AC5" "xEF67B3" "xEF7DC0" "xF1D060" "xF2A076" "xF6ECD2" }
 }
 add_homeland = cu:mousefolk
 }

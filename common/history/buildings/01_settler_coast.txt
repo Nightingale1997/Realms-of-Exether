@@ -108,22 +108,42 @@ BUILDINGS = {
   }
 
   s:STATE_RIVER_MEDDEN = {
-	region_state:SMA={
+	region_state:CER={
 		create_building={
 			building="building_textile_mills"
-			level=5
+			level=1
 			reserves=1
 			activate_production_methods={ "pm_dye_workshops" "pm_craftsman_sewing" "pm_traditional_looms" "pm_privately_owned_building_textile_mills" }
 		}
 		create_building={
 			building="building_wheat_farm"
-			level=5
+			level=2
 			reserves=1
 			activate_production_methods={ "pm_privately_owned" "pm_tools_disabled" "pm_simple_farming" }
 		}
 		create_building={
 			building="building_livestock_ranch"
-			level=2
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_sheep_farms" "pm_slaughterhouses" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+		}
+	}
+	region_state:MID={
+		create_building={
+			building="building_textile_mills"
+			level=4
+			reserves=1
+			activate_production_methods={ "pm_dye_workshops" "pm_craftsman_sewing" "pm_traditional_looms" "pm_privately_owned_building_textile_mills" }
+		}
+		create_building={
+			building="building_wheat_farm"
+			level=3
+			reserves=1
+			activate_production_methods={ "pm_privately_owned" "pm_tools_disabled" "pm_simple_farming" }
+		}
+		create_building={
+			building="building_livestock_ranch"
+			level=1
 			reserves=1
 			activate_production_methods={ "pm_sheep_farms" "pm_slaughterhouses" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
 		}
@@ -241,6 +261,27 @@ BUILDINGS = {
 			level=3
 			reserves=1
 			activate_production_methods={ "pm_basic_port" }
+		}
+	}
+
+	region_state:MID={
+		create_building={
+			building="building_government_administration"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+		}		
+		create_building={
+			building="building_wheat_farm"
+			level=2
+			reserves=1
+			activate_production_methods={ "pm_simple_farming" "pm_tools_disabled" "pm_privately_owned" }
+		}
+		create_building={
+			building="building_livestock_ranch"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
 		}
 	}
   }
