@@ -81,6 +81,7 @@ astral_path = {
 	color = { 0.4 0.7 0.3 }
 	
 	taboos = {
+		telephones
 	}
 }
 
@@ -217,6 +218,9 @@ mortals_burden = {
 	texture = "gfx/interface/icons/religion_icons/shinto.dds"
 	traits = {
 		monastic_heritage knowledge_domain life_domain
+	}
+	taboos = {
+		liquor wine
 	}
 	color = { 0.9 0.2 0.2 }
 }

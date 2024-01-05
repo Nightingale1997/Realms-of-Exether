@@ -1319,11 +1319,6 @@ ocelian = {
 	religion = church_of_man
 	traits = {  human_heritage }
 
-	# the best wine is from Occitania, of course.
-	obsessions = {
-		wine
-	}
-
 	male_common_first_names={
 		August Adrian Antonin Avit AristO_tel Andrieu Arnaut AnfO_s Alexandre Agustin AlE_xi Armand
 		Brut Bernat BerenguiE_r Beneset Bonifaci
@@ -1498,6 +1493,9 @@ thiralian={
 	color= hsv{ 0.62 0.54 0.72 }
 	religion = church_of_man
 	traits = {  human_heritage }
+	obsessions = {
+		wine
+	}
 	male_common_first_names={
 		Amos Anatole Aaron Augustin Achille
         Baptiste Bernard Bolivar Blaise Baudouin Branford Barnabe Benjamin
@@ -2763,6 +2761,9 @@ zemvelo={
 	color= hsv{ 0.60 0.38 0.51 }
 	religion = animist
 	traits = { human_heritage}
+	obsessions = {
+		coffee
+	}
 	male_common_first_names={
 		Mthuthuzeli
 		Nolizwe
