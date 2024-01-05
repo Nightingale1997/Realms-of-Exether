@@ -1054,30 +1054,143 @@ POPS = {
 
   }
   s:STATE_SAVAGE_LANDS = {
-	#TODO Salt Wastes
+	region_state:RSE = {
+		create_pop = {
+			culture = tqalt
+			size = 394586
+		}
+		create_pop = {
+			culture = rahoru
+			size = 82918
+		}
+		create_pop = {
+			culture = waste_walker
+			size = 23278
+		}
+	}
   }
   s:STATE_ROUGHSTONE_TERRITORY = {
-	#TODO Salt Wastes
+	region_state:RSE = {
+		create_pop = {
+			culture = tqalt
+			size = 84460
+		}
+		create_pop = {
+			culture = waste_walker
+			size = 13759
+		}
+	}
   }
   s:STATE_FIERCEHOLD = {
-	#TODO Salt Wastes
+	region_state:BLD = {
+		create_pop = {
+			culture = tqalt
+			size = 79620
+		}
+		create_pop = {
+			culture = waste_walker
+			size = 5320
+		}
+		create_pop = {
+			culture = stranfolk
+			size = 2698
+		}
+		create_pop = {
+			culture = glabrekthorn
+			size = 2962
+		}
+	}
+	region_state:BGR = {
+		create_pop = {
+			culture = waste_walker
+			size = 55225
+		}
+		create_pop = {
+			culture = tqalt
+			size = 3000
+		}
+	}
   }
   s:STATE_SAVAGE_REACH = {
-	#TODO Salt Wastes
+	region_state:RUX = {
+		create_pop = {
+			culture = tqalt
+			size = 85100
+		}
+		create_pop = {
+			culture = waste_walker
+			size = 6000
+		}
+	}
+	region_state:GMR = {
+		create_pop = {
+			culture = waste_walker
+			size = 11900
+		}
+		create_pop = {
+			culture = tqalt
+			size = 2000
+		}
+	}
   }
   s:STATE_SNAILBANE = {
-	#TODO Salt Wastes
+	region_state:SNL = {
+		create_pop = {
+			culture = tqalt
+			size = 56000
+		}
+	}
+	region_state:BGR = {
+		create_pop = {
+			culture = waste_walker
+			size = 11075
+		}
+	}
   }
   s:STATE_BLOODTHORN_WASTES = {
-	#TODO Salt Wastes
+	region_state:BLD = {
+		create_pop = {
+			culture = tqalt
+			size = 705060
+		}
+		create_pop = {
+			culture = waste_walker
+			size = 6004
+		}
+		create_pop = {
+			culture = glabrekthorn
+			size = 2336
+		}
+	}
   }
   s:STATE_SALTSHORE = {
 
   }
   s:STATE_BLOODAXE_TERRITORY = {
-	#TODO Salt Wastes
+	region_state:RUX = {
+		create_pop = {
+			culture = tqalt
+			size = 120635
+		}
+		create_pop = {
+			culture = waste_walker
+			size = 5515
+		}
+	}
   }
   s:STATE_MLIMASHWARI = {
 
+  }
+  s:STATE_THIRSTRIDGE = {
+	region_state:RUX = {
+		create_pop = {
+			culture = tqalt
+			size = 84740
+		}
+		create_pop = {
+			culture = waste_walker
+			size = 8010
+		}
+	}
   }
 }
