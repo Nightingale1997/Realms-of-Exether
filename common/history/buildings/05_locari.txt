@@ -1,0 +1,553 @@
+BUILDINGS = {
+	s:STATE_DHARMARAJYA = {
+	
+	}
+	s:STATE_PANNYA = {
+	
+	}
+
+	s:STATE_SHANTINAGAR = {
+	
+	}
+
+	s:STATE_SURYANAGARI = {
+	
+	}
+
+	s:STATE_BHAVANASARA = {
+	
+	}
+
+	s:STATE_SUKHODAYA = {
+	
+	}
+
+	s:STATE_BODHISATTVA = {
+	
+	}
+
+	s:STATE_VIJAYAPURA = {
+	
+	}
+
+	s:STATE_ANANTAPURI = {
+	
+	}
+
+	s:STATE_SAUBHAGYAVATI = {
+	
+	}
+
+	s:STATE_JIVANASUTA = {
+	
+	}
+
+	s:STATE_SADHANA_MANDAL = {
+	
+	}
+
+	s:STATE_VISHUDDHIKARA = {
+	
+	}
+
+	s:STATE_SUKHIBHAVA = {
+	
+	}
+
+	s:STATE_ANANDAVATI = {
+		region_state:SAP={
+			create_building={
+				building="building_textile_mills"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_handsewn_clothes" "pm_merchant_guilds_building_textile_mills" "pm_traditional_looms" "pm_no_luxury_clothes" }
+			}
+			create_building={
+				building="building_gold_mine"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_gold_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" "pm_merchant_guilds_building_gold_mine" }
+			}			
+			create_building={
+				building="building_coffee_plantation"
+				level=4
+				reserves=1
+				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+			}
+			create_building={
+				building="building_dye_plantation"
+				level=5
+				reserves=1
+				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+			}
+			create_building={
+				building="building_barracks"
+				level=5
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+			}
+		}
+	}
+
+	s:STATE_CHINTANAGIRI = {
+	
+	}
+
+	s:STATE_PRABUDHYAMANA = {
+	
+	}
+
+	s:STATE_ANUTTARAPUR = {
+		region_state:SAP={
+			create_building={
+				building="building_tea_plantation"
+				level=3
+				reserves=1
+				activate_production_methods={ "default_building_tea_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+			}
+			create_building={
+				building="building_barracks"
+				level=6
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+			}
+		}
+	}
+
+	s:STATE_SAMYAKVARTA = {
+		region_state:SAP={
+			create_building={
+				building="building_sugar_plantation"
+				level=4
+				reserves=1
+				activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+			}
+		}
+	}
+
+	s:STATE_NIRVANANANDA = {
+		region_state:SAP={
+			create_building={
+				building="building_government_administration"
+				level=5
+				reserves=1
+				activate_production_methods={ "pm_simple_organization" }
+			}		
+			create_building={
+				building="building_glassworks"
+				level=3
+				reserves=1
+				activate_production_methods={ "pm_forest_glass" "pm_merchant_guilds_building_glassworks" "pm_manual_glassblowing" "pm_ceramics" }
+			}
+			create_building={
+				building="building_cotton_plantation"
+				level=2
+				reserves=1
+				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+			}
+			create_building={
+				building="building_sugar_plantation"
+				level=3
+				reserves=1
+				activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+			}
+			create_building={
+				building="building_barracks"
+				level=10
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+			}
+		}
+	}
+
+	s:STATE_BUDAKURRI = {
+	
+	}
+
+	s:STATE_YARLUWANDU = {
+	
+	}
+
+	s:STATE_MOGORRTI = {
+	
+	}
+
+	s:STATE_WANGADARRI = {
+	
+	}
+
+	s:STATE_KURUBBA = {
+	
+	}
+
+	s:STATE_BOODJARRA = {
+	
+	}
+
+	s:STATE_GASHAWARRA = {
+	
+	}
+
+	s:STATE_YARRAGANBALA = {
+		create_building={
+			building="building_fishing_wharf"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+		}
+		region_state:AMR={
+			create_building={
+				building="building_wheat_farm"
+				level=4
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_citrus_orchards" "pm_tools_disabled" "pm_privately_owned" }
+			}				
+			create_building={
+				building="building_livestock_ranch"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+			}			
+			create_building={
+				building="building_barracks"
+				level= 8
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+			}
+		}
+	}
+
+	s:STATE_WADAWURRUM = {
+	
+	}
+
+	s:STATE_JALAGAMKATTA = {
+	
+	}
+
+	s:STATE_KARINGARRI = {
+	
+	}
+
+	s:STATE_KULUWANDU = {
+	
+	}
+
+	s:STATE_BUDAMURAYIRI = {
+	
+	}
+
+	s:STATE_MARLIYAGIRRA = {
+	
+	}
+
+	s:STATE_DAMARLARA = {
+	
+	}
+
+	s:STATE_KURRADUYARRA = {
+	
+	}
+
+	s:STATE_WARRANGBANU = {
+	
+	}
+
+	s:STATE_BANUBABU = {
+	
+	}
+
+	s:STATE_BULARRANG = {
+	
+	}
+
+	s:STATE_DANKASEMBE = {
+	
+	}
+
+	s:STATE_CRESI = {
+	
+	}
+
+	s:STATE_TSEGYALNIPIY = {
+	
+	}
+
+	s:STATE_LHAMOOSKIWAN = {
+	
+	}
+
+	s:STATE_TSEPO = {
+	
+	}
+
+	s:STATE_DHARMASHALAPIMIY = {
+	
+	}
+
+	s:STATE_SAKYAASKIY = {
+	
+	}
+
+	s:STATE_NYINGMAWASKAHIKAN = {
+	
+	}
+
+	s:STATE_POTALANIPIY = {
+	
+	}
+
+	s:STATE_GANDNI = {
+	
+	}
+
+	s:STATE_KHANGYO = {
+	
+	}
+
+	s:STATE_TSURWA = {
+	
+	}
+
+	s:STATE_YAMYAM = {
+	
+	}
+
+	s:STATE_NAMTSOOSKIWAN = {
+	
+	}
+
+	s:STATE_SHIGATSENIPIY = {
+	
+	}
+
+	s:STATE_DHACREE = {
+	
+	}
+
+	s:STATE_GANDENASKIY = {
+	
+	}
+
+	s:STATE_THOLINGNIPIY = {
+	
+	}
+
+	s:STATE_KHAMOSKIWAN = {
+	
+	}
+
+	s:STATE_CREEGYAL = {
+	
+	}
+
+	s:STATE_LHASHI = {
+	
+	}
+
+	s:STATE_ARIMOS = {
+	
+	}
+
+	s:STATE_GREGAN = {
+	
+	}
+
+	s:STATE_HERMENIA = {
+	
+	}
+
+	s:STATE_HALLEOS = {
+	
+	}
+
+	s:STATE_DILMELIA = {
+	
+	}
+
+	s:STATE_GREOS = {
+	
+	}
+
+	s:STATE_HELLENOVA = {
+	
+	}
+
+	s:STATE_KOTAYNOS = {
+	
+	}
+
+	s:STATE_YERNAGRIA = {
+	
+	}
+
+	s:STATE_ARTAXIAHAN = {
+	
+	}
+
+	s:STATE_ZANPIQ = {
+	
+	}
+
+	s:STATE_ELENIKAR = {
+	
+	}
+
+	s:STATE_ARGYSTSIK = {
+	
+	}
+
+	s:STATE_GRAEA = {
+	
+	}
+
+	s:STATE_JERMENION = {
+	
+	}
+
+	s:STATE_ARTHERA = {
+	
+	}
+
+	s:STATE_COCOHAYAT = {
+	
+	}
+
+	s:STATE_NIKA = {
+	
+	}
+
+	s:STATE_HELARM = {
+	
+	}
+
+	s:STATE_MYTHOS = {
+	
+	}
+
+	s:STATE_KABUSKAYA = {
+	
+	}
+
+	s:STATE_MOSKHAN = {
+	
+	}
+
+	s:STATE_HERASLAV = {
+	
+	}
+
+	s:STATE_TASHKAVSK = {
+	
+	}
+
+	s:STATE_NEFUDISTAN = {
+	
+	}
+
+	s:STATE_SAMARKH = {
+	
+	}
+
+	s:STATE_DUSHANBARYA = {
+		region_state:AMR={
+			create_building={
+				building="building_fishing_wharf"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+			}
+			create_building={
+				building="building_wheat_farm"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled" "pm_privately_owned" }
+			}
+			create_building={
+				building="building_tea_plantation"
+				level=1
+				reserves=1
+				activate_production_methods={ "default_building_tea_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+			}
+			create_building={
+				building="building_livestock_ranch"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+			}
+			create_building={
+				building="building_barracks"
+				level=20
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+			}
+		}
+	}
+
+	s:STATE_MAZAROV = {
+	
+	}
+
+	s:STATE_KHOSTOV = {
+	
+	}
+
+	s:STATE_BALKHSK = {
+	
+	}
+
+	s:STATE_KUNDUZOV = {
+	
+	}
+
+	s:STATE_PULIKOTSK = {
+	
+	}
+
+	s:STATE_TERMEZSK = {
+	
+	}
+
+	s:STATE_JALALABAKOV = {
+	
+	}
+
+	s:STATE_FARGHANOV = {
+	}
+
+	s:STATE_GHAZNINSKIY = {
+	
+	}
+
+	s:STATE_ANDIZHANSK = {
+	
+	}
+
+	s:STATE_BAMIANOV = {
+	
+	}
+
+	s:STATE_RUKHAM = {
+
+	}
+
+	s:STATE_KARAKAR = {
+
+	}
+
+	s:STATE_HARQOM = {
+
+	}
+
+	s:STATE_KHUBEK = {
+
+	}
+
+	s:STATE_TABLAG = {
+
+	}
+
+	s:STATE_WUTAK = {
+
+	}
+}

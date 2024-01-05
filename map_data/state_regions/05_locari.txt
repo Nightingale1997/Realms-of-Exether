@@ -154,14 +154,22 @@ STATE_SUKHIBHAVA = {
 }
 STATE_ANANDAVATI = {
     id = 4848
-    subsistence_building = "building_subsistence_farms"
+    subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x46FEC5" "x8185F7" "x93B4C3" "xC1B8EF" "xD3DE71" }
     city = x46FEC5
     wood = x8185F7
     farm = x93B4C3
     mine = xC1B8EF
     port = xD3DE71
-    naval_exit_id = 3060
+    arable_land = 100
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_gold_mining = 4
+        bg_iron_mining = 24
+        bg_logging = 14
+        bg_fishing = 5
+    }
+    naval_exit_id = 3024
 }
 STATE_CHINTANAGIRI = {
     id = 4849
@@ -187,35 +195,52 @@ STATE_PRABUDHYAMANA = {
 }
 STATE_ANUTTARAPUR = {
     id = 4851
-    subsistence_building = "building_subsistence_farms"
+    subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x34E9F0" "x9892DA" "xAAF4F0" "xAC9CE5" "xD092A9" "xD7A7E4" "xE1F6A6" "xFBA982" "xFCCE4F" "xFD9D66" }
     city = x34E9F0
     wood = x9892DA
     farm = xAAF4F0
     mine = xAC9CE5
     port = xD092A9
-    naval_exit_id = 3060
+    arable_land = 80
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 11
+        bg_fishing = 10
+    }
+    naval_exit_id = 3024
 }
 STATE_SAMYAKVARTA = {
     id = 4852
-    subsistence_building = "building_subsistence_farms"
+    subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x52DBE1" "x6EEAA8" "x83CBD3" "xB0D7CD" "xE37BF2" "xFAA96C" }
     city = x52DBE1
     wood = x6EEAA8
     farm = x83CBD3
     mine = xB0D7CD
     port = xE37BF2
-    naval_exit_id = 3060
+    arable_land = 50
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_opium_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_iron_mining = 30
+        bg_lead_mining = 45
+        bg_fishing = 7
+    }
+    naval_exit_id = 3024
 }
 STATE_NIRVANANANDA = {
     id = 4853
-    subsistence_building = "building_subsistence_farms"
+    subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x5DFDD1" "x7DDAED" "xE4EA4C" "xE883E8" "xF79182" "xFC72E6" }
     city = x5DFDD1
     wood = x7DDAED
     farm = xE4EA4C
     mine = xE883E8
-    port = xF79182
+    arable_land = 250
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 13
+    }
     naval_exit_id = 3060
 }
 STATE_BUDAKURRI = {
@@ -297,13 +322,19 @@ STATE_GASHAWARRA = {
 }
 STATE_YARRAGANBALA = {
     id = 4861
-    subsistence_building = "building_subsistence_farms"
+    subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "xB6DD76" "xCBADE3" "xE1AAAB" "xE76CB4" }
     city = xB6DD76
     wood = xCBADE3
     farm = xE1AAAB
     mine = xE76CB4
-    naval_exit_id = 3060
+    arable_land = 30
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_tea_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_logging = 6
+        bg_fishing = 4
+    }
+    naval_exit_id = 3024
 }
 STATE_WADAWURRUM = {
     id = 4862
@@ -942,14 +973,20 @@ STATE_SAMARKH = {
 }
 STATE_DUSHANBARYA = {
     id = 4920
-    subsistence_building = "building_subsistence_farms"
+    subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x5ECFF8" "x67C7E1" "x67D2C9" "x8BFE8A" "xC8C0D5" }
     city = x5ECFF8
     wood = x67C7E1
     farm = x67D2C9
     mine = x8BFE8A
     port = xC8C0D5
-    naval_exit_id = 3060
+    arable_land = 100
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_sugar_plantations" }
+    capped_resources = {
+        bg_sulfur_mining = 40
+        bg_fishing = 6
+    }
+    naval_exit_id = 3024
 }
 STATE_MAZAROV = {
     id = 4921

@@ -55,7 +55,22 @@ POPS = {
 	}
 
 	s:STATE_ANANDAVATI = {
-	
+		region_state:SAP = {
+			create_pop = {
+				culture = gulf_naga
+				size = 2332290
+			}
+			create_pop = {
+				culture = gulf_naga
+				religion = animist
+				size = 133290
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = awakened
+				size = 20000
+			}
+		}
 	}
 
 	s:STATE_CHINTANAGIRI = {
@@ -67,15 +82,64 @@ POPS = {
 	}
 
 	s:STATE_ANUTTARAPUR = {
-	
+		region_state:SAP = {
+			create_pop = {
+				culture = gulf_naga
+				size = 704000
+			}
+			create_pop = {
+				culture = gulf_naga
+				religion = animist
+				size = 192400
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = awakened
+				size = 90000
+			}
+		}
 	}
 
 	s:STATE_SAMYAKVARTA = {
-	
+		region_state:SAP = {
+			create_pop = {
+				culture = gulf_naga
+				size = 869092
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = awakened
+				size = 30900
+			}
+		}
 	}
 
 	s:STATE_NIRVANANANDA = {
-	
+		region_state:SAP = {
+			create_pop = {
+				culture = gulf_naga
+				size = 6724685
+			}
+			create_pop = {
+				culture = jungle_naga
+				size = 951351
+			}
+			create_pop = {
+				culture = gulf_naga
+				religion = awakened
+				size = 1164904
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = gulf_naga
+				size = 60000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = awakened
+				size = 80500
+			}
+		}
 	}
 
 	s:STATE_BUDAKURRI = {
@@ -107,7 +171,17 @@ POPS = {
 	}
 
 	s:STATE_YARRAGANBALA = {
-	
+		region_state:AMR = {
+			create_pop = {
+				culture = gulf_naga
+				size = 655212
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = qadimra
+				size = 13000
+			}
+		}
 	}
 
 	s:STATE_WADAWURRUM = {
@@ -343,7 +417,27 @@ POPS = {
 	}
 
 	s:STATE_DUSHANBARYA = {
-	
+		region_state:AMR = {
+			create_pop = {
+				culture = gulf_naga
+				size = 1644600
+			}
+			create_pop = {
+				culture = gulf_naga
+				religion = animist
+				size = 248000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = qadimra
+				size = 31000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = gulf_naga
+				size = 12000
+			}
+		}
 	}
 
 	s:STATE_MAZAROV = {
