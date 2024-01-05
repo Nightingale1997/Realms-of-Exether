@@ -105,21 +105,89 @@
 	
 	}
 	s:STATE_URQUNAYUQ = {
-		#TODO Salt Wastes
+		region_state:HOR = {
+			create_pop = {
+				culture = rahoru
+				size = 402907
+			}
+			create_pop = {
+				culture = tqalt
+				size = 15531
+			}
+		}
 	}
 	s:STATE_TAYTAQOCHA = {
-		#TODO Salt Wastes
+		region_state:HOR = {
+			create_pop = {
+				culture = rahoru
+				size = 428375
+			}
+			create_pop = {
+				culture = tqalt
+				size = 9200
+			}
+			create_pop = {
+				culture = waste_walker
+				size = 7650
+			}
+			create_pop = {
+				culture = lacustrine_thalorian
+				size = 7275
+			}
+		}
 	}
 	s:STATE_KUNTURPAMPA = {
-		#TODO Salt Wastes
+		region_state:HOR = {
+			create_pop = {
+				culture = rahoru
+				size = 720000
+			}
+			create_pop = {
+				culture = lacustrine_thalorian
+				size = 32500
+			}
+		}
 	}
 	s:STATE_NAWIYANU = {
-		#TODO Salt Wastes
+		region_state:HOR = {
+			create_pop = {
+				culture = rahoru
+				size = 214688
+			}
+			create_pop = {
+				culture = waste_walker
+				size = 45938
+			}
+			create_pop = {
+				culture = tqalt
+				size = 29625
+			}
+		}
+		region_state:GMR = {
+			create_pop = {
+				culture = waste_walker
+				size = 106335
+			}
+			create_pop = {
+				culture = tqalt
+				size = 12510
+			}
+			create_pop = {
+				culture = rahoru
+				size = 6255
+			}
+		}
 	}
 	s:STATE_TINKUYUQ = {
-		#TODO Salt Wastes
-	}
-	s:STATE_THIRSTRIDGE = {
-		#TODO Salt Wastes
+		region_state:HOR = {
+			create_pop = {
+				culture = rahoru
+				size = 261025
+			}
+			create_pop = {
+				culture = waste_walker
+				size = 10428
+			}
+		}
 	}
 }
