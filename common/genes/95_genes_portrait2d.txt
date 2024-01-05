@@ -31,19 +31,32 @@
 		}
 
 		gene_bird_blue_skin = {
-			index = 3
+			index = 2
 			male = {
-				1 = bird_white_1
-				1 = bird_white_2
-				1 = bird_white_3
-				1 = bird_white_4
-				1 = bird_white_5
-				1 = bird_white_6
-				1 = bird_white_7
+				1 = bird_blue_1
+				1 = bird_blue_2
+				1 =	bird_blue_3
+				1 =	bird_blue_4
+				1 =	bird_blue_5
 			}
 			female = {
-				1 = bird_female_white_1
-				1 = bird_female_white_2
+				1 = bird_female_blue_1
+			}
+			boy = male
+			girl = female
+		}
+
+		gene_bird_black_skin = {
+			index = 3
+			male = {
+				1 = bird_black_1
+				1 = bird_black_2
+				1 = bird_black_3
+				1 = bird_black_4
+			}
+			female = {
+				1 = bird_female_black_1
+				1 = bird_female_black_2
 			}
 			boy = male
 			girl = female
