@@ -105,21 +105,35 @@
 	
 	}
 	s:STATE_URQUNAYUQ = {
-		#TODO Salt Wastes
+		region_state:HOR = {
+		}
 	}
 	s:STATE_TAYTAQOCHA = {
-		#TODO Salt Wastes
+		region_state:HOR = {
+			create_building={
+				building="building_government_administration"
+				level=3
+				reserves=1
+				activate_production_methods={ "pm_simple_organization" }
+			}
+		}
 	}
 	s:STATE_KUNTURPAMPA = {
-		#TODO Salt Wastes
+		region_state:HOR = {
+			create_building={
+				building="building_banana_plantation"
+				level=2
+				reserves=1
+				activate_production_methods={ "default_building_banana_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+			}
+		}
 	}
 	s:STATE_NAWIYANU = {
-		#TODO Salt Wastes
+		region_state:HOR = {
+		}
 	}
 	s:STATE_TINKUYUQ = {
-		#TODO Salt Wastes
-	}
-	s:STATE_THIRSTRIDGE = {
-		#TODO Salt Wastes
+		region_state:HOR = {
+		}
 	}
 }
