@@ -1,16 +1,27 @@
 ﻿CHARACTERS = {
 	c:HOR = {
-#TODO Salt Wastes
 		create_character = {
-			first_name = "Fatmir"
-			last_name = "Kryeziu"
+			first_name = "Saleh"
+			last_name = "Horkaatai"
 			historical = yes
 			ruler = yes
-			age = 12
+			age = 81
 			interest_group = ig_landowners
-			ideology = ideology_market_liberal
+			ideology = ideology_traditionalist
 			traits = {
-				trait_child
+				pious
+			}
+		}
+		create_character = {
+			first_name = "Girma"
+			last_name = "Horkaatai"
+			historical = yes
+			heir = yes
+			age = 21
+			interest_group = ig_landowners
+			ideology = ideology_moderate
+			traits = {
+				cautious
 			}
 		}
 	}
