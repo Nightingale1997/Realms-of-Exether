@@ -1,13 +1,68 @@
 POPS = {
 	s:STATE_DHARMARAJYA = {
-	
+		region_state:KAY = {
+			create_pop = {
+				culture = gulf_naga
+				size = 1841220
+			}
+			create_pop = {
+				culture = gulf_naga
+				religion = animist
+				size = 228000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = awakened
+				size = 20100
+			}
+		}
 	}
 	s:STATE_PANNYA = {
-	
+		region_state:GDY = {
+			create_pop = {
+				culture = jungle_naga
+				size = 6634412
+			}
+			create_pop = {
+				culture = jungle_naga
+				religion = animist
+				size = 81200
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = jungle_naga
+				size = 110000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = navrozdok
+				size = 6000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = awakened
+				size = 30088
+			}
+		}
 	}
 
 	s:STATE_SHANTINAGAR = {
-	
+		region_state:AKB = {
+			create_pop = {
+				culture = jungle_naga
+				size = 787900
+			}
+			create_pop = {
+				culture = jungle_naga
+				religion = animist
+				size = 415600
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = awakened
+				size = 40000
+			}
+		}
 	}
 
 	s:STATE_SURYANAGARI = {
@@ -43,11 +98,55 @@ POPS = {
 	}
 
 	s:STATE_SADHANA_MANDAL = {
-	
+		region_state:AKB = {
+			create_pop = {
+				culture = jungle_naga
+				size = 1059596
+			}
+			create_pop = {
+				culture = jungle_naga
+				religion = animist
+				size = 68000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = awakened
+				size = 50000
+			}
+		}
 	}
 
 	s:STATE_VISHUDDHIKARA = {
-	
+		region_state:VIP = {
+			create_pop = {
+				culture = jungle_naga
+				size = 12479910
+			}
+			create_pop = {
+				culture = gulf_naga
+				size = 871981
+			}
+			create_pop = {
+				culture = gulf_naga
+				religion = animist
+				size = 565099
+			}
+			create_pop = {
+				culture = jungle_naga
+				religion = animist
+				size = 109374
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = awakened
+				size = 250000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = jungle_naga
+				size = 34000
+			}
+		}
 	}
 
 	s:STATE_SUKHIBHAVA = {
@@ -74,11 +173,41 @@ POPS = {
 	}
 
 	s:STATE_CHINTANAGIRI = {
-	
+		region_state:WLR = {
+			create_pop = {
+				culture = jungle_naga
+				size = 626096
+			}
+			create_pop = {
+				culture = jungle_naga
+				religion = animist
+				size = 267500
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = awakened
+				size = 30200
+			}
+		}
 	}
 
 	s:STATE_PRABUDHYAMANA = {
-	
+		region_state:AKB = {
+			create_pop = {
+				culture = jungle_naga
+				size = 553996
+			}
+			create_pop = {
+				culture = jungle_naga
+				religion = animist
+				size = 68000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = awakened
+				size = 30000
+			}
+		}
 	}
 
 	s:STATE_ANUTTARAPUR = {
@@ -147,11 +276,41 @@ POPS = {
 	}
 
 	s:STATE_YARLUWANDU = {
-	
+		region_state:AKB = {
+			create_pop = {
+				culture = jungle_naga
+				size = 498000
+			}
+			create_pop = {
+				culture = jungle_naga
+				religion = animist
+				size = 138400
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = awakened
+				size = 40000
+			}
+		}
 	}
 
 	s:STATE_MOGORRTI = {
-	
+		region_state:BHR = {
+			create_pop = {
+				culture = gulf_naga
+				size = 2040333
+			}
+			create_pop = {
+				culture = gulf_naga
+				religion = animist
+				size = 216000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = awakened
+				size = 30063
+			}
+		}
 	}
 
 	s:STATE_WANGADARRI = {
@@ -159,15 +318,70 @@ POPS = {
 	}
 
 	s:STATE_KURUBBA = {
-	
+		region_state:MAI = {
+			create_pop = {
+				culture = gulf_naga
+				size = 849208
+			}
+			create_pop = {
+				culture = gulf_naga
+				religion = animist
+				size = 194000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = awakened
+				size = 21000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = gulf_naga
+				size = 6400
+			}
+		}
 	}
 
 	s:STATE_BOODJARRA = {
-	
+		region_state:JIV = {
+			create_pop = {
+				culture = gulf_naga
+				size = 9712168
+			}
+			create_pop = {
+				culture = gulf_naga
+				religion = animist
+				size = 326095
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = awakened
+				size = 50000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = jungle_naga
+				size = 10000
+			}
+		}
 	}
 
 	s:STATE_GASHAWARRA = {
-	
+		region_state:BHR = {
+			create_pop = {
+				culture = gulf_naga
+				size = 10312854
+			}
+			create_pop = {
+				culture = gulf_naga
+				religion = animist
+				size = 2032854
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = awakened
+				size = 41000
+			}
+		}
 	}
 
 	s:STATE_YARRAGANBALA = {
@@ -197,11 +411,60 @@ POPS = {
 	}
 
 	s:STATE_KULUWANDU = {
-	
+		region_state:MAI = {
+			create_pop = {
+				culture = gulf_naga
+				size = 455996
+			}
+			create_pop = {
+				culture = gulf_naga
+				religion = animist
+				size = 262309
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = gulf_naga
+				size = 12000
+			}
+			create_pop = {
+				culture = awakened
+				size = 14002
+			}
+		}
 	}
 
 	s:STATE_BUDAMURAYIRI = {
-	
+		region_state:VIP = {
+			create_pop = {
+				culture = gulf_naga
+				size = 9370101
+			}
+			create_pop = {
+				culture = bengali
+				religion = animist
+				size = 109096
+			}
+			create_pop = {
+				culture = jungle_naga
+				size = 6602700
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = awakened
+				size = 200310
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = jungle_naga
+				religion = animist
+				size = 10007
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = jungle_naga
+				size = 60063
+			}
+		}
 	}
 
 	s:STATE_MARLIYAGIRRA = {
@@ -209,7 +472,33 @@ POPS = {
 	}
 
 	s:STATE_DAMARLARA = {
-	
+		region_state:JIV = {
+			create_pop = {
+				culture = gulf_naga
+				size = 2804314
+			}
+			create_pop = {
+				culture = gulf_naga
+				religion = animist
+				size = 1614700
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = awakened
+				size = 50200
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = gulf_naga
+				size = 20700
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = gulf_naga
+				religion = animist
+				size = 50071
+			}
+		}
 	}
 
 	s:STATE_KURRADUYARRA = {
@@ -225,7 +514,28 @@ POPS = {
 	}
 
 	s:STATE_BULARRANG = {
-	
+		region_state:JIV = {
+			create_pop = {
+				culture = gulf_naga
+				religion = animist
+				size = 382000
+			}
+			create_pop = {
+				culture = gulf_naga
+				size = 4004000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = gulf_naga
+				religion = animist
+				size = 34000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = awakened
+				size = 104000
+			}
+		}
 	}
 
 	s:STATE_DANKASEMBE = {
