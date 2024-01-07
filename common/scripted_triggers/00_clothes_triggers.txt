@@ -4,7 +4,10 @@
 			exists = scope:character
 			scope:character = {
 				culture = {
-					has_discrimination_trait = bird_heritage
+					OR = {
+						has_discrimination_trait = bird_heritage
+						has_discrimination_trait = beast
+					}
 				}
 			}
 		}
@@ -12,7 +15,11 @@
 			exists = scope:pop
 			scope:pop = {
 				culture = {
-					has_discrimination_trait = bird_heritage
+					OR = {
+						has_discrimination_trait = bird_heritage
+						has_discrimination_trait = beast
+					}
+					
 				}
 			}
 		}

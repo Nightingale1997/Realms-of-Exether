@@ -285,6 +285,27 @@ DRO = {
 
 }
 
+#Emerald League
+EME = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+
+	colored_emblem = {
+		texture = "ce_bicolor_bottom.dds"
+		color1 = "brown_light"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}
+	
+	colored_emblem = {
+		texture = "ce_fess_fimbriated.dds"
+		color1 = "green_light"
+		color2 = "white"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}
+
+
+}
+
 #Ebridor
 EBR = {
 	pattern = "pattern_solid.tga"
