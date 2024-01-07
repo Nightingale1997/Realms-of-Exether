@@ -1,0 +1,139 @@
+﻿BUILDINGS = {
+	s:STATE_KILIMASAWA = {
+
+	}
+	s:STATE_MAJIMBA = {
+
+	}
+	s:STATE_PWANIQWA = {
+
+	}
+	s:STATE_SAWAMAJI = {
+
+	}
+	s:STATE_JITOKANYA = {
+
+	}
+	s:STATE_MAWINGUCHANYA = {
+
+	}
+	s:STATE_PWANIQILIMA = {
+
+	}
+	s:STATE_UZURIPWA = {
+
+	}
+	s:STATE_SAWAMREMBO = {
+
+	}
+	s:STATE_MAJILIMA = {
+
+	}
+	s:STATE_KIJITOQWA = {
+
+	}
+	s:STATE_KILIMADADA = {
+
+	}
+	s:STATE_PWAKUISHI = {
+
+	}
+	s:STATE_MAWIMBIMAJI = {
+
+	}
+	s:STATE_UZURIKILIMA = {
+
+	}
+	s:STATE_KILIMASHWARI = {
+
+	}
+	s:STATE_JITOMREMBO = {
+
+	}
+	s:STATE_PWAWAKATI = {
+
+	}
+	s:STATE_PACHAQULLU = {
+
+	}
+	s:STATE_INTIWINA = {
+
+	}
+	s:STATE_WAYLLAPAMPA = {
+
+	}
+	s:STATE_MALLKIYAKU = {
+
+	}
+	s:STATE_QAQAMANTA = {
+
+	}
+	s:STATE_SUYANAKU = {
+	
+	}
+	s:STATE_WAMANPATA = {
+	
+	}
+	s:STATE_LLANKAYUQ = {
+	
+	}
+	s:STATE_TIKAQULLU = {
+	
+	}
+	s:STATE_PUKARAQOCHA = {
+	
+	}
+	s:STATE_KUCHUYPATA = {
+	
+	}
+	s:STATE_YANAPAYUQ = {
+	
+	}
+	s:STATE_MIKHUYUQ = {
+	
+	}
+	s:STATE_PISQUPATA = {
+	
+	}
+	s:STATE_CHAKAPAMPA = {
+	
+	}
+	s:STATE_QOMERQOCHA = {
+	
+	}
+	s:STATE_ANTAQAQA = {
+	
+	}
+	s:STATE_URQUNAYUQ = {
+		region_state:HOR = {
+		}
+	}
+	s:STATE_TAYTAQOCHA = {
+		region_state:HOR = {
+			create_building={
+				building="building_government_administration"
+				level=3
+				reserves=1
+				activate_production_methods={ "pm_simple_organization" }
+			}
+		}
+	}
+	s:STATE_KUNTURPAMPA = {
+		region_state:HOR = {
+			create_building={
+				building="building_banana_plantation"
+				level=2
+				reserves=1
+				activate_production_methods={ "default_building_banana_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+			}
+		}
+	}
+	s:STATE_NAWIYANU = {
+		region_state:HOR = {
+		}
+	}
+	s:STATE_TINKUYUQ = {
+		region_state:HOR = {
+		}
+	}
+}
