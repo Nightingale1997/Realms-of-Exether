@@ -428,6 +428,12 @@ STATE_SAHONDRA = {
     wood = xDDEFDE
     farm = xEA7BA4
     mine = xF56EDA
+    arable_land = 120
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_dye_plantations" "bg_sugar_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_coal_mining = 40
+        bg_sulfur_mining = 52
+    }
     naval_exit_id = 3060
 }
 STATE_MAROMITA = {
