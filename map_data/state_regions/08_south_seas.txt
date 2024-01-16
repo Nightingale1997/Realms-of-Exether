@@ -347,7 +347,7 @@ STATE_IVONDRO = {
     farm = xAECCEA
     mine = xBCA8FE
     port = xC3F6DC
-    naval_exit_id = 3060
+    naval_exit_id = 3021
 }
 STATE_MAHALATSAKA = {
     id = 3971
@@ -358,7 +358,23 @@ STATE_MAHALATSAKA = {
     farm = xB4DEDA
     mine = xBBCAA8
     port = xCECB7A
-    naval_exit_id = 3060
+    arable_land = 10
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_sulfur_mining = 40
+        bg_logging = 30
+        bg_fishing = 15
+    }
+    resource = {
+        type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
+        undiscovered_amount = 4
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 5
+    }
+    naval_exit_id = 3021
 }
 STATE_FIANARIVO = {
     id = 3972
@@ -369,7 +385,7 @@ STATE_FIANARIVO = {
     farm = xA1F995
     mine = xB057F4
     port = xB786EE
-    naval_exit_id = 3060
+    naval_exit_id = 3021
 }
 STATE_VAROTSOA = {
     id = 3973
@@ -380,7 +396,7 @@ STATE_VAROTSOA = {
     farm = x6EE1BC
     mine = x81DEBA
     port = x9DE1C4
-    naval_exit_id = 3060
+    naval_exit_id = 3021
 }
 STATE_TSIMIHAVANA = {
     id = 3974
@@ -391,7 +407,18 @@ STATE_TSIMIHAVANA = {
     farm = xB4E176
     mine = xCCF491
     port = xCFEFA2
-    naval_exit_id = 3060
+    arable_land = 150
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 32
+        bg_sulfur_mining = 20
+        bg_fishing = 7
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 5
+    }
+    naval_exit_id = 3021
 }
 STATE_SAHONDRA = {
     id = 3975
@@ -412,7 +439,19 @@ STATE_MAROMITA = {
     farm = xEAABA6
     mine = xED68AE
     port = xF47B97
-    naval_exit_id = 3060
+    arable_land = 30
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 7
+        bg_whaling = 4
+        bg_fishing = 10
+    }
+    resource = {
+        type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
+        undiscovered_amount = 6
+    }
+    naval_exit_id = 3021
 }
 STATE_TOMBONT = {
     id = 3977
@@ -423,7 +462,17 @@ STATE_TOMBONT = {
     farm = xA172E5
     mine = xB6C797
     port = xC8E97D
-    naval_exit_id = 3060
+    arable_land = 70
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_coal_mining = 60
+        bg_lead_mining = 24
+        bg_sulfur_mining = 32
+        bg_logging = 20
+        bg_whaling = 3
+        bg_fishing = 10
+    }
+    naval_exit_id = 3021
 }
 STATE_ANKAZOBE = {
     id = 3978
@@ -434,27 +483,34 @@ STATE_ANKAZOBE = {
     farm = xB1BC8A
     mine = xCAB39D
     port = xD960E5
-    naval_exit_id = 3060
+    arable_land = 10
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_whaling = 3
+        bg_fishing = 2
+    }
+    naval_exit_id = 3021
 }
 STATE_IVOLOINA = {
     id = 3979
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x9AD398" "x9E98F4" "xCFB7CD" "xE0DD76" "xF0A4A1" }
-    city = x9AD398
+    provinces = { "x9AD398" "x9E98F4" "xA0EAF0" "xB59DE3" "xCFB7CD" "xE0DD76" "xEBE4DE" "xF0A4A1" "xA0EAF0" "xB59DE3" "xEBE4DE"}
+    city = xA0EAF0
     wood = x9E98F4
     farm = xCFB7CD
     mine = xE0DD76
     port = xF0A4A1
-    naval_exit_id = 3060
-}
-STATE_TAITSIKA = {
-    id = 3980
-    subsistence_building = "building_subsistence_farms"
-    provinces = { "xA0EAF0" "xB59DE3" "xEBE4DE" }
-    city = xA0EAF0
-    wood = xB59DE3
-    farm = xEBE4DE
-    naval_exit_id = 3060
+    arable_land = 50
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_gold_mining = 5
+        bg_iron_mining = 33
+        bg_sulfur_mining = 36
+        bg_logging = 6
+        bg_whaling = 2
+        bg_fishing = 8
+    }
+    naval_exit_id = 3021
 }
 STATE_MARITIMLIS = {
     id = 3981

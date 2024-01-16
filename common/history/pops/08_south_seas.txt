@@ -129,6 +129,16 @@
 	}
 
 	s:STATE_MAHALATSAKA = {
+		region_state:AYE = {
+			create_pop = {
+				culture = lacertian
+				size = 28200
+			}
+			create_pop = {
+				culture = cithrel
+				size = 2200
+			}
+		}
 
 	}
 
@@ -141,7 +151,20 @@
 	}
 
 	s:STATE_TSIMIHAVANA = {
-
+		region_state:EOO = {
+			create_pop = {
+				culture = lacertian
+				size = 31100
+			}
+			create_pop = {
+				culture = jazamandroso
+				size = 978
+			}	
+			create_pop = {
+				culture = cithrel
+				size = 7000
+			}			
+		}
 	}
 
 	s:STATE_SAHONDRA = {
@@ -149,23 +172,47 @@
 	}
 
 	s:STATE_MAROMITA = {
-
+		region_state:AYE = {
+			create_pop = {
+				culture = lacertian
+				size = 64000
+			}
+		}
 	}
 
 	s:STATE_TOMBONT = {
-
+		region_state:LIR = {
+			create_pop = {
+				culture = cithrel
+				size = 204892
+			}
+			create_pop = {
+				culture = lacertian
+				size = 48000
+			}
+		}
 	}
 
 	s:STATE_ANKAZOBE = {
-
+		region_state:SPH = {
+			create_pop = {
+				culture = west_lacertian
+				size = 14540
+			}
+		}
 	}
 
 	s:STATE_IVOLOINA = {
-
-	}
-
-	s:STATE_TAITSIKA = {
-
+		region_state:LIR = {
+			create_pop = {
+				culture = cithrel
+				size = 655608
+			}
+			create_pop = {
+				culture = lacertian
+				size = 1200
+			}
+		}
 	}
 
 	s:STATE_MARITIMLIS = {
