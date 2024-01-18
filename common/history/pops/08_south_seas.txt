@@ -121,11 +121,39 @@
 	}
 
 	s:STATE_ALAHAZOTRA = {
-
+		region_state:DEV = {
+			create_pop = {
+				culture = jazamandroso
+				size = 466396
+			}
+			create_pop = {
+				culture = lacertian
+				size = 17000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = lacertian
+				size = 3000
+			}
+		}
 	}
 
 	s:STATE_IVONDRO = {
-
+		region_state:DEV = {
+			create_pop = {
+				culture = jazamandroso
+				size = 87792
+			}
+			create_pop = {
+				culture = lacertian
+				size = 28300
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = lacertian
+				size = 4100
+			}
+		}
 	}
 
 	s:STATE_MAHALATSAKA = {
@@ -143,11 +171,47 @@
 	}
 
 	s:STATE_FIANARIVO = {
-
+		region_state:DEV = {
+			create_pop = {
+				culture = jazamandroso
+				size = 269804
+			}
+			create_pop = {
+				culture = cithrel
+				size = 12000
+			}
+			create_pop = {
+				culture = lacertian
+				size = 162004
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = lacertian
+				size = 62000
+			}
+		}
 	}
 
 	s:STATE_VAROTSOA = {
-
+		region_state:DEV = {
+			create_pop = {
+				culture =jazamandroso
+				size = 194400
+			}
+			create_pop = {
+				culture = cithrel
+				size = 3000
+			}
+			create_pop = {
+				culture = lacertian
+				size = 32000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = lacertian
+				size = 8000
+			}
+		}
 	}
 
 	s:STATE_TSIMIHAVANA = {
@@ -241,7 +305,25 @@
 	}
 
 	s:STATE_LAIVINMAR = {
-
+		region_state:MYK = {
+			create_pop = {
+				culture = akmuociai
+				size = 266908
+			}
+			create_pop = {
+				culture = west_lacertian
+				size = 8004
+			}
+			create_pop = {
+				culture = hulutit
+				size = 60208
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = west_lacertian
+				size = 24004
+			}
+		}
 	}
 
 	s:STATE_VANDECATAL = {
@@ -257,7 +339,25 @@
 	}
 
 	s:STATE_BANGALINIS = {
-
+		region_state:MYK = {
+			create_pop = {
+				culture = akmuociai
+				size = 88000
+			}
+			create_pop = {
+				culture = hulutit
+				size = 9996
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = west_lacertian
+				size = 2400
+			}
+			create_pop = {
+				culture = west_lacertian
+				size = 27996
+			}
+		}
 	}
 
 	s:STATE_LIUTUKATAL = {
@@ -285,7 +385,20 @@
 	}
 
 	s:STATE_SMILTYNECAT = {
-
+		region_state:DEL = {
+			create_pop = {
+				culture = akmuociai
+				size = 32000
+			}
+			create_pop = {
+				culture = dales_togrul
+				size = 1700
+			}
+			create_pop = {
+				culture = west_lacertian
+				size = 3200
+			}
+		}
 	}
 
 	s:STATE_UOSTOCATAL = {
@@ -293,11 +406,48 @@
 	}
 
 	s:STATE_AKVALITVA = {
-
+		region_state:DEL = {
+			create_pop = {
+				culture = akmuociai
+				size = 332100
+			}
+			create_pop = {
+				culture = hulutit
+				size = 72600
+			}
+			create_pop = {
+				culture = west_lacertian
+				size = 427596
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = dales_togrul
+				size = 84429
+			}		
+		}
 	}
 
 	s:STATE_RAMUMARI = {
-
+		region_state:MYK = {
+			create_pop = {
+				culture = akmuociai
+				size = 325608
+			}
+			create_pop = {
+				culture = west_lacertian
+				size = 8004
+			}
+			create_pop = {
+				culture = hulutit
+				size = 72200
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = west_lacertian
+				size = 25300
+			}
+			
+		}
 	}
 
 	s:STATE_RANJITA = {
