@@ -1112,13 +1112,8 @@ POPS = {
 			size = 5320
 		}
 		create_pop = {
-			culture = stranfolk
-			size = 2698
-			pop_type = slaves
-		}
-		create_pop = {
 			culture = glabrekthorn
-			size = 2962
+			size = 2336
 			pop_type = slaves
 		}
 	}
@@ -1163,7 +1158,7 @@ POPS = {
   s:STATE_SNAILBANE = {
 	region_state:SNL = {
 		create_pop = {
-			culture = tqalt
+			culture = waste_walker
 			size = 56000
 		}
 	}
@@ -1190,8 +1185,13 @@ POPS = {
 			size = 6004
 		}
 		create_pop = {
+			culture = stranfolk
+			size = 2698
+			pop_type = slaves
+		}
+		create_pop = {
 			culture = glabrekthorn
-			size = 2336
+			size = 2962
 			pop_type = slaves
 		}
 	}
