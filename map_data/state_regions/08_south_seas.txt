@@ -7,7 +7,15 @@
     farm = x60FD9A
     mine = x64C1FD
     port = x7C9EFD
-    naval_exit_id = 3060
+    arable_land = 50
+    arable_resources = { "bg_maize_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_iron_mining = 36
+        bg_sulfur_mining = 32
+        bg_logging = 11
+        bg_fishing = 4
+    }
+    naval_exit_id = 3018
 }
 STATE_GONJOLA = {
     id = 3940
@@ -18,7 +26,18 @@ STATE_GONJOLA = {
     farm = x5DF1F5
     mine = x70B4E6
     port = x8797D7
-    naval_exit_id = 3060
+    arable_land = 40
+    arable_resources = { "bg_maize_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_gold_mining = 6
+        bg_iron_mining = 21
+        bg_lead_mining = 30
+        bg_sulfur_mining = 28
+        bg_logging = 11
+        bg_whaling = 5
+        bg_fishing = 7
+    }
+    naval_exit_id = 3018
 }
 STATE_BEXAMBA = {
     id = 3941
@@ -29,7 +48,24 @@ STATE_BEXAMBA = {
     farm = xBED3E8
     mine = xBFDDD3
     port = xC048FB
-    naval_exit_id = 3060
+    arable_land = 60
+    arable_resources = { "bg_maize_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_coal_mining = 20
+        bg_logging = 6
+        bg_whaling = 3
+        bg_fishing = 7
+    }
+    resource = {
+        type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
+        undiscovered_amount = 4
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 5
+    }
+    naval_exit_id = 3018
 }
 STATE_LEMBONA = {
     id = 3942
@@ -51,7 +87,15 @@ STATE_XABELO = {
     farm = x82F8A5
     mine = x8487F2
     port = x9EFC5C
-    naval_exit_id = 3060
+    arable_land = 25
+    arable_resources = { "bg_maize_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_iron_mining = 21
+        bg_sulfur_mining = 32
+        bg_logging = 4
+        bg_fishing = 5
+    }
+    naval_exit_id = 3020
 }
 STATE_MAZALINO = {
     id = 3944
@@ -73,7 +117,7 @@ STATE_GONDEVA = {
     farm = xE1C776
     mine = xE5F31E
     port = xE81CF5
-    naval_exit_id = 3060
+    naval_exit_id = 3018
 }
 STATE_LUMBELO = {
     id = 3946
@@ -84,7 +128,7 @@ STATE_LUMBELO = {
     farm = xA6ADCA
     mine = xCA6BD5
     port = xD8AA9B
-    naval_exit_id = 3060
+    naval_exit_id = 3018
 }
 STATE_MAXANGA = {
     id = 3947
@@ -139,7 +183,15 @@ STATE_AMALUMA = {
     farm = x89BFE1
     mine = x8CBCE3
     port = xA06BEF
-    naval_exit_id = 3060
+    arable_land = 10
+    arable_resources = { "bg_livestock_ranches" "bg_dye_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_iron_mining = 18
+        bg_sulfur_mining = 24
+        bg_whaling = 3
+        bg_fishing = 5
+    }
+    naval_exit_id = 3020
 }
 STATE_MABRAGA = {
     id = 3952
@@ -149,7 +201,15 @@ STATE_MABRAGA = {
     wood = x8D93FC
     farm = xA2F784
     mine = xCC71D9
-    port = xDBEFEC
+    arable_land = 5
+    arable_resources = { "bg_maize_farms" "bg_livestock_ranches" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 15
+    }
+    resource = {
+        type = "bg_rubber"
+        discovered_amount = 15
+    }
     naval_exit_id = 3060
 }
 STATE_UMAGAMA = {
@@ -161,7 +221,14 @@ STATE_UMAGAMA = {
     farm = x7DEBDC
     mine = x8BF6B4
     port = xA2C3D7
-    naval_exit_id = 3060
+    arable_land = 10
+    arable_resources = { "bg_rice_farms" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 4
+        bg_whaling = 8
+        bg_fishing = 5
+    }
+    naval_exit_id = 3018
 }
 STATE_ALMADOURO = {
     id = 3954

@@ -1,15 +1,81 @@
 ﻿POPS = {
 
 	s:STATE_MALANDA = {
-
+		region_state:AZI = {
+			create_pop = {
+				culture = zemvelo
+				size = 92904
+			}
+			create_pop = {
+				culture = lacertian
+				size = 3350
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = lacertian
+				size = 650
+			}
+			create_pop = {
+				culture = east_lacertian
+				size = 292804
+			}
+			create_pop = {
+				culture = south_sea_ravager
+				size = 12000
+			}
+		}
 	}
 
 	s:STATE_GONJOLA = {
-
+		region_state:AZI = {
+			create_pop = {
+				culture = zemvelo
+				size = 248000
+			}
+			create_pop = {
+				culture = east_lacertian
+				size = 212000
+			}
+			create_pop = {
+				culture = lacertian
+				size = 21900
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = lacertian
+				size = 6200
+			}
+			create_pop = {
+				culture = south_sea_ravager
+				size = 16000
+			}
+		}
 	}
 
 	s:STATE_BEXAMBA = {
-
+		region_state:AZI = {
+			create_pop = {
+				culture = zemvelo
+				size = 91804
+			}
+			create_pop = {
+				culture = lacertian
+				size = 12000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = lacertian
+				size = 4000
+			}
+			create_pop = {
+				culture = south_sea_ravager
+				size = 12000
+			}
+			create_pop = {
+				culture = east_lacertian
+				size = 186696
+			}
+		}
 	}
 
 	s:STATE_LEMBONA = {
@@ -17,7 +83,29 @@
 	}
 
 	s:STATE_XABELO = {
-
+		region_state:AZI = {
+			create_pop = {
+				culture = zemvelo
+				size = 48000
+			}
+			create_pop = {
+				culture = bakibi
+				size = 80400
+			}
+			create_pop = {
+				culture = east_lacertian
+				size = 146500
+			}
+			create_pop = {
+				culture = lacertian
+				size = 2000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = lacertian
+				size = 500
+			}
+		}
 	}
 
 	s:STATE_MAZALINO = {
@@ -49,15 +137,59 @@
 	}
 
 	s:STATE_AMALUMA = {
-
+		region_state:AZI = {
+			create_pop = {
+				culture = zemvelo
+				size = 12000
+			}
+			create_pop = {
+				culture = bakibi
+				size = 38500
+			}
+			create_pop = {
+				culture = east_lacertian
+				size = 1200
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = east_lacertian
+				size = 300
+			}
+		}
 	}
 
 	s:STATE_MABRAGA = {
-
+		region_state:AZI = {
+			create_pop = {
+				culture = bakibi
+				size = 16100
+			}
+			create_pop = {				
+				culture = zemvelo
+				size = 160
+			}
+			create_pop = {
+				culture = lacertian
+				size = 90
+			}
+		}
 	}
 
 	s:STATE_UMAGAMA = {
-
+		region_state:AZI = {
+			create_pop = {
+				culture = zemvelo
+				size = 139004
+			}
+			create_pop = {
+				culture = bakibi
+				size = 160
+			}
+			create_pop = {
+				culture = east_lacertian
+				size = 30400
+			}
+		}
 	}
 
 	s:STATE_ALMADOURO = {
