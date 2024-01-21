@@ -126,9 +126,32 @@ SNL = {
 
 	tier = principality
 
-	cultures = { tqalt } 
+	cultures = { waste_walker } 
 	capital = STATE_SNAILBANE
-	is_named_from_capital = yes
+}
+
+#Bonegnawer
+BGR = {
+	color = rgb{ 110 120 90 }
+	
+	country_type = monstrous
+	
+	tier = principality
+	
+	cultures = { waste_walker }
+	capital = STATE_SAVAGE_REACH
+}
+
+#Ghostmurder
+GMR = {
+	color = rgb{ 10 220 170 }
+	
+	country_type = monstrous
+	
+	tier = principality
+	
+	cultures = { waste_walker }
+	capital = STATE_FIERCEHOLD
 }
 
 #Yakuway

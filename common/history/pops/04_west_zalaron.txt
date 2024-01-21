@@ -1054,30 +1054,186 @@ POPS = {
 
   }
   s:STATE_SAVAGE_LANDS = {
-
+	region_state:RSE = {
+		create_pop = {
+			culture = tqalt
+			size = 390000
+		}
+		create_pop = {
+			culture = tqalt
+			religion = orc_mother
+			size = 4586
+		}
+		create_pop = {
+			culture = rahoru
+			size = 60000
+		}
+		create_pop = {
+			culture = rahoru
+			religion = orc_father
+			size = 22918
+		}
+		create_pop = {
+			culture = waste_walker
+			size = 23278
+		}
+	}
   }
   s:STATE_ROUGHSTONE_TERRITORY = {
-
+	region_state:RSE = {
+		create_pop = {
+			culture = tqalt
+			size = 80400
+		}
+		create_pop = {
+			culture = tqalt
+			religion = orc_mother
+			size = 4060
+		}
+		create_pop = {
+			culture = waste_walker
+			size = 13759
+		}
+	}
   }
   s:STATE_FIERCEHOLD = {
-
+	region_state:BLD = {
+		create_pop = {
+			culture = tqalt
+			size = 78000
+		}
+		create_pop = {
+			culture = tqalt
+			religion = orc_mother
+			size = 1620
+		}
+		create_pop = {
+			culture = waste_walker
+			size = 5320
+		}
+		create_pop = {
+			culture = glabrekthorn
+			size = 2336
+			pop_type = slaves
+		}
+	}
+	region_state:BGR = {
+		create_pop = {
+			culture = waste_walker
+			size = 55225
+		}
+		create_pop = {
+			culture = tqalt
+			size = 3000
+		}
+	}
   }
   s:STATE_SAVAGE_REACH = {
-
+	region_state:RUX = {
+		create_pop = {
+			culture = tqalt
+			size = 83100
+		}
+		create_pop = {
+			culture = tqalt
+			religion = orc_mother
+			size = 2100
+		}
+		create_pop = {
+			culture = waste_walker
+			size = 6000
+		}
+	}
+	region_state:GMR = {
+		create_pop = {
+			culture = waste_walker
+			size = 11900
+		}
+		create_pop = {
+			culture = tqalt
+			size = 2000
+		}
+	}
   }
   s:STATE_SNAILBANE = {
-
+	region_state:SNL = {
+		create_pop = {
+			culture = waste_walker
+			size = 56000
+		}
+	}
+	region_state:BGR = {
+		create_pop = {
+			culture = waste_walker
+			size = 11075
+		}
+	}
   }
   s:STATE_BLOODTHORN_WASTES = {
-
+	region_state:BLD = {
+		create_pop = {
+			culture = tqalt
+			size = 695060
+		}
+		create_pop = {
+			culture = tqalt
+			religion = orc_mother
+			size = 10000
+		}
+		create_pop = {
+			culture = waste_walker
+			size = 6004
+		}
+		create_pop = {
+			culture = stranfolk
+			size = 2698
+			pop_type = slaves
+		}
+		create_pop = {
+			culture = glabrekthorn
+			size = 2962
+			pop_type = slaves
+		}
+	}
   }
   s:STATE_SALTSHORE = {
 
   }
   s:STATE_BLOODAXE_TERRITORY = {
-
+	region_state:RUX = {
+		create_pop = {
+			culture = tqalt
+			size = 112635
+		}
+		create_pop = {
+			culture = tqalt
+			religion = orc_mother
+			size = 8000
+		}
+		create_pop = {
+			culture = waste_walker
+			size = 5515
+		}
+	}
   }
   s:STATE_MLIMASHWARI = {
 
+  }
+  s:STATE_THIRSTRIDGE = {
+	region_state:RUX = {
+		create_pop = {
+			culture = tqalt
+			size = 80740
+		}
+		create_pop = {
+			culture = tqalt
+			religion = orc_mother
+			size = 4000
+		}
+		create_pop = {
+			culture = waste_walker
+			size = 8010
+		}
+	}
   }
 }

@@ -1,0 +1,217 @@
+﻿BUILDINGS = {
+	s:STATE_KILIMASAWA = {
+
+	}
+	s:STATE_MAJIMBA = {
+
+	}
+	s:STATE_PWANIQWA = {
+
+	}
+	s:STATE_SAWAMAJI = {
+
+	}
+	s:STATE_JITOKANYA = {
+
+	}
+	s:STATE_MAWINGUCHANYA = {
+
+	}
+	s:STATE_PWANIQILIMA = {
+
+	}
+	s:STATE_UZURIPWA = {
+
+	}
+	s:STATE_SAWAMREMBO = {
+
+	}
+	s:STATE_MAJILIMA = {
+
+	}
+	s:STATE_KIJITOQWA = {
+
+	}
+	s:STATE_KILIMADADA = {
+
+	}
+	s:STATE_PWAKUISHI = {
+
+	}
+	s:STATE_MAWIMBIMAJI = {
+
+	}
+	s:STATE_UZURIKILIMA = {
+
+	}
+	s:STATE_KILIMASHWARI = {
+
+	}
+	s:STATE_JITOMREMBO = {
+
+	}
+	s:STATE_PWAWAKATI = {
+
+	}
+	s:STATE_PACHAQULLU = {
+
+	}
+	s:STATE_INTIWINA = {
+
+	}
+	s:STATE_WAYLLAPAMPA = {
+
+	}
+	s:STATE_MALLKIYAKU = {
+
+	}
+	s:STATE_QAQAMANTA = {
+
+	}
+	s:STATE_SUYANAKU = {
+	
+	}
+	s:STATE_WAMANPATA = {
+	
+	}
+	s:STATE_LLANKAYUQ = {
+	
+	}
+	s:STATE_TIKAQULLU = {
+	
+	}
+	s:STATE_PUKARAQOCHA = {
+	
+	}
+	s:STATE_KUCHUYPATA = {
+	
+	}
+	s:STATE_YANAPAYUQ = {
+	
+	}
+	s:STATE_MIKHUYUQ = {
+	
+	}
+	s:STATE_PISQUPATA = {
+	
+	}
+	s:STATE_CHAKAPAMPA = {
+	
+	}
+	s:STATE_QOMERQOCHA = {
+	
+	}
+	s:STATE_ANTAQAQA = {
+	
+	}
+	s:STATE_URQUNAYUQ = {
+		region_state:HOR = {
+			create_building={
+				building="building_fishing_wharf"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+			}
+			create_building={
+				building="building_wheat_farm"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_privately_owned" "pm_tools_disabled" "pm_citrus_orchards" }
+			}
+			create_building={
+				building="building_barracks"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+			}
+		}
+	}
+	s:STATE_TAYTAQOCHA = {
+		region_state:HOR = {
+			create_building={
+				building="building_government_administration"
+				level=3
+				reserves=1
+				activate_production_methods={ "pm_simple_organization" }
+			}
+			create_building={
+				building="building_textile_mills"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_traditional_looms" "pm_merchant_guilds_building_textile_mills" }
+			}
+			create_building={
+				building="building_cotton_plantation"
+				level=1
+				reserves=1
+				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+			}
+			create_building={
+				building="building_barracks"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+			}
+		}
+	}
+	s:STATE_KUNTURPAMPA = {
+		region_state:HOR = {
+			create_building={
+				building="building_banana_plantation"
+				level=2
+				reserves=1
+				activate_production_methods={ "default_building_banana_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+			}
+			create_building={
+				building="building_tobacco_plantation"
+				level=1
+				reserves=1
+				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+			}
+			create_building={
+				building="building_wheat_farm"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_privately_owned" "pm_tools_disabled" "pm_citrus_orchards" }
+			}
+			create_building={
+				building="building_barracks"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+			}
+		}
+	}
+	s:STATE_NAWIYANU = {
+		region_state:HOR = {
+			create_building={
+				building="building_wheat_farm"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_privately_owned" "pm_tools_disabled" "pm_citrus_orchards" }
+			}
+			create_building={
+				building="building_barracks"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+			}
+		}
+	}
+	s:STATE_TINKUYUQ = {
+		region_state:HOR = {
+			create_building={
+				building="building_logging_camp"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" "pm_merchant_guilds_building_logging_camp" }
+			}
+			create_building={
+				building="building_barracks"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+			}
+		}
+	}
+}
