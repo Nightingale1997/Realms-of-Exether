@@ -7,7 +7,7 @@
     farm = x8DDFA5
     mine = x9197F9
     port = xA3FAAE
-    naval_exit_id = 3060
+    naval_exit_id = 3001
 }
 STATE_VALBARDA = {
     id = 2401
@@ -18,7 +18,7 @@ STATE_VALBARDA = {
     farm = x73D3CA
     mine = x76D4D9
     port = xB2F85C
-    naval_exit_id = 3060
+    naval_exit_id = 3001
 }
 STATE_DURRESIA = {
     id = 2402
@@ -89,6 +89,19 @@ STATE_VLORIANA = {
     farm = xACFDE2
     mine = xB1C0B0
     port = xC3EC7D
+    arable_land = 90
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 23
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 20
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 10
+    }
     naval_exit_id = 3060
 }
 STATE_GJAKOVA = {
@@ -100,7 +113,21 @@ STATE_GJAKOVA = {
     farm = xAF80ED
     mine = xB885FA
     port = xBBCEFA
-    naval_exit_id = 3060
+    arable_land = 50
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 14
+        bg_fishing = 5
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 22
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 5
+    }
+    naval_exit_id = 3001
 }
 STATE_LEZHANIA = {
     id = 2407
@@ -111,7 +138,17 @@ STATE_LEZHANIA = {
     farm = xB1FE59
     mine = xC099B3
     port = xD572D7
-    naval_exit_id = 3060
+    arable_land = 75
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 6
+        bg_fishing = 6
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 16
+    }
+    naval_exit_id = 3001
 }
 STATE_KRUJANA = {
     id = 2408
@@ -165,7 +202,17 @@ STATE_GJILANIJA = {
     farm = xAAF781
     mine = xACEC97
     port = xC9E5E6
-    naval_exit_id = 3060
+    arable_land = 60
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 14
+        bg_fishing = 2
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 22
+    }
+    naval_exit_id = 3001
 }
 STATE_FIERANA = {
     id = 2412
@@ -197,7 +244,18 @@ STATE_KURBULL = {
     farm = x77EBD6
     mine = x93BEBD
     port = xCF8AD7
-    naval_exit_id = 3060
+    arable_land = 70
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_iron_mining = 33
+        bg_logging = 11
+        bg_fishing = 7
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 20
+    }
+    naval_exit_id = 3028
 }
 STATE_PESHKOPINA = {
     id = 2414
@@ -208,7 +266,18 @@ STATE_PESHKOPINA = {
     farm = x9CE0CB
     mine = xA0EAB7
     port = xCFEFB0
-    naval_exit_id = 3060
+    arable_land = 70
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_iron_mining = 36
+        bg_logging = 11
+        bg_fishing = 6
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 28
+    }
+    naval_exit_id = 3028
 }
 STATE_BERATIA = {
     id = 2415
@@ -236,6 +305,16 @@ STATE_VOSKOPOJANA = {
     farm = xAF68E4
     mine = xCED2FC
     port = xCEE4F0
+    arable_land = 60
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 48
+        bg_logging = 4
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 5
+    }
     naval_exit_id = 3060
 }
 STATE_SARANDOVA = {
@@ -319,7 +398,19 @@ STATE_DIBRA = {
     farm = x9291EC
     mine = x977DF0
     port = xACB5F7
-    naval_exit_id = 3060
+    arable_land = 80
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_coal_mining = 48
+        bg_iron_mining = 36
+        bg_logging = 9
+        bg_fishing = 3
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 16
+    }
+    naval_exit_id = 3001
 }
 STATE_KERCOVA = {
     id = 2424
@@ -330,7 +421,7 @@ STATE_KERCOVA = {
     farm = x93F0D0
     mine = x9583E0
     port = x9DBACC
-    naval_exit_id = 3060
+    naval_exit_id = 3001
 }
 STATE_STRUGOVA = {
     id = 2425
@@ -440,7 +531,7 @@ STATE_ZATYRE = {
     farm = x679EF9
     mine = x839FDC
     port = xA3D29F
-    naval_exit_id = 3060
+    naval_exit_id = 3001
 }
 STATE_BREZHKE = {
     id = 2435
@@ -495,7 +586,7 @@ STATE_TEPELENA = {
     farm = xABBE90
     mine = xBB6AE5
     port = xC5BAC4
-    naval_exit_id = 3060
+    naval_exit_id = 3001
 }
 STATE_BELSHIA = {
     id = 2440
@@ -572,7 +663,7 @@ STATE_VITHKUQJA = {
     farm = x8BD0A1
     mine = xAAD58A
     port = xC090AD
-    naval_exit_id = 3060
+    naval_exit_id = 3001
 }
 STATE_MILOTI = {
     id = 2447
@@ -1119,7 +1210,7 @@ STATE_KAINAVA = {
     farm = xAA7EE7
     mine = xBCCEEB
     port = xC094A6
-    naval_exit_id = 3060
+    naval_exit_id = 3001
 }
 STATE_DIYINAKHAD = {
     id = 2518
@@ -1130,7 +1221,7 @@ STATE_DIYINAKHAD = {
     farm = x6CF5D1
     mine = x6EE8AC
     port = x70E8AC
-    naval_exit_id = 3060
+    naval_exit_id = 3001
 }
 STATE_NASHAYAZH = {
     id = 2519
@@ -1141,7 +1232,7 @@ STATE_NASHAYAZH = {
     farm = xA784D0
     mine = xB7D1C1
     port = xC070CC
-    naval_exit_id = 3060
+    naval_exit_id = 3001
 }
 STATE_KEENAVOK = {
     id = 2520
@@ -1163,7 +1254,7 @@ STATE_SHIMAKAI = {
     farm = x95F3A3
     mine = xA4F2BC
     port = xB49FDE
-    naval_exit_id = 3060
+    naval_exit_id = 3001
 }
 STATE_YAZHIDZI = {
     id = 2522
@@ -1174,7 +1265,7 @@ STATE_YAZHIDZI = {
     farm = x97A1D5
     mine = x9BCAF4
     port = x9DF09B
-    naval_exit_id = 3060
+    naval_exit_id = 3001
 }
 STATE_SHINOGOZH = {
     id = 2523
@@ -1944,7 +2035,7 @@ STATE_LIONS_ROOST = {
     farm = x97EE9F
     mine = xA2CEC6
     port = xB9E89F
-    naval_exit_id = 3060
+    naval_exit_id = 3001
 }
 STATE_WINDMERE = {
     id = 2787
@@ -1999,7 +2090,7 @@ STATE_AMBERWICK = {
     farm = x9FB3F0
     mine = xABF79D
     port = xADEDC7
-    naval_exit_id = 3060
+    naval_exit_id = 3001
 }
 STATE_STONEHAVEN = {
     id = 2792

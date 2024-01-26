@@ -97,13 +97,69 @@ BUILDINGS = {
 		}
   }
   s:STATE_VLORIANA = {
-
+	region_state:LGZ={
+		create_building={
+			building="building_government_administration"
+			level=2
+			reserves=1
+			activate_production_methods={ "pm_simple_organization" }
+		}
+		create_building={
+			building="building_textile_mills"
+			level=2
+			reserves=1
+			activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_traditional_looms" "pm_merchant_guilds_building_textile_mills" }
+		}
+		create_building={
+			building="building_tobacco_plantation"
+			level=2
+			reserves=1
+			activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+		}
+		create_building={
+			building="building_millet_farm"
+			level=2
+			reserves=1
+			activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled" "pm_privately_owned" }
+		}
+		create_building={
+			building="building_livestock_ranch"
+			level=2
+			reserves=1
+			activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+		}
+		create_building={
+			building="building_barracks"
+			level=20
+			reserves=1
+			activate_production_methods={ "pm_no_organization" }
+		}
+	}
   }
   s:STATE_GJAKOVA = {
 
   }
   s:STATE_LEZHANIA = {
-
+	region_state:REM={
+		create_building={
+			building="building_millet_farm"
+			level=2
+			reserves=1
+			activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled" "pm_privately_owned" }
+		}
+		create_building={
+			building="building_fishing_wharf"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+		}
+		create_building={
+			building="building_barracks"
+			level=15
+			reserves=1
+			activate_production_methods={ "pm_no_organization" }
+		}
+	}
   }
   s:STATE_KRUJANA = {
 		region_state:REM={
@@ -153,7 +209,26 @@ BUILDINGS = {
 
   }
   s:STATE_GJILANIJA = {
-
+	region_state:REM={
+		create_building={
+			building="building_millet_farm"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled" "pm_privately_owned" }
+		}
+		create_building={
+			building="building_fishing_wharf"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+		}
+		create_building={
+			building="building_barracks"
+			level=7
+			reserves=1
+			activate_production_methods={ "pm_no_organization" }
+		}
+	}
   }
   s:STATE_FIERANA = {
 		region_state:ZIX={
@@ -190,10 +265,42 @@ BUILDINGS = {
 		}
   }
   s:STATE_KURBULL = {
-
+	region_state:LGZ={
+		create_building={
+			building="building_millet_farm"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled" "pm_privately_owned" }
+		}
+		create_building={
+			building="building_coffee_plantation"
+			level=2
+			reserves=1
+			activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+		}
+		create_building={
+			building="building_port"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_anchorage" }
+		}
+	}
   }
   s:STATE_PESHKOPINA = {
-
+	region_state:LGZ={
+		create_building={
+			building="building_millet_farm"
+			level=2
+			reserves=1
+			activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled" "pm_privately_owned" }
+		}
+		create_building={
+			building="building_port"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_anchorage" }
+		}
+	}
   }
   s:STATE_BERATIA = {
 		region_state:ZIX={
@@ -212,6 +319,20 @@ BUILDINGS = {
 		}
   }
   s:STATE_VOSKOPOJANA = {
+	region_state:LGZ={
+		create_building={
+			building="building_livestock_ranch"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+		}	
+		create_building={
+			building="building_barracks"
+			level=5
+			reserves=1
+			activate_production_methods={ "pm_no_organization" }
+		}	
+	}
 
   }
   s:STATE_SARANDOVA = {
@@ -252,7 +373,26 @@ BUILDINGS = {
 
   }
   s:STATE_DIBRA = {
-
+	region_state:REM={
+		create_building={
+			building="building_millet_farm"
+			level=2
+			reserves=1
+			activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled" "pm_privately_owned" }
+		}
+		create_building={
+			building="building_livestock_ranch"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+		}
+		create_building={
+			building="building_barracks"
+			level=20
+			reserves=1
+			activate_production_methods={ "pm_no_organization" }
+		}
+	}
   }
   s:STATE_KERCOVA = {
 
