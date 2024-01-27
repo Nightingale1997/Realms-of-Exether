@@ -1,0 +1,14 @@
+types magic_panel
+{
+	type magic_panel = default_block_window {
+		name = "magic_panel"
+		
+		blockoverride "window_header_name" {
+			raw_text = "MAGIC_PANEL_HEADER"
+		}
+		
+		#blockoverride "scrollarea_content" {
+		#	
+		#}
+	}
+}
