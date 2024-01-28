@@ -2,6 +2,11 @@
   concept_magic_reserves: "Magical Reserves"
   concept_magic_reserves_desc: "@magic! Magical Reserves are a [concept_capacity] used for performing supernatural actions."
 
+  concept_adventurer_coverage_added: "[GetBuildingType('building_adventuring_guild').GetName]"
+
+  concept_adventurer_coverage: "Adventurer Coverage"
+  concept_adventurer_coverage_desc: "$concept_adventurer_coverage$ is provided by [Concept('concept_building','$concept_buildings$')] like [SelectLocalization(GetPlayer.IsValid,'concept_adventurer_coverage_added','Adventuring Guild')]. It influences the wellbeing of the state, reducing [Concept('concept_pop_growth', '$concept_pop_growth_mortality$')].
+
   concept_divine_banishment: "Divine Banishment"
   concept_divine_banishment_desc: "The divine banishment was a grand scheme orchestrated by a handful of gods during the [concept_age_of_gods] to erect a [concept_veil] around the [concept_material_plane] in order to protect the world from the apocalyptic wars between deities. This event began the [age_of_man]."
 

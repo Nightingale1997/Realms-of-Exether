@@ -29,4 +29,39 @@
 			localization_key = MAGIC_INSTITUTION_RESERVE_BONUS
 		}
 	}
-	
+
+	adventurer_coverage_bonus_loc = {
+		type = state
+
+		text = {
+			trigger = {
+				modifier:state_adventurer_coverage_add > 0
+			}
+			localization_key = ADVENTURER_COVERAGE_BUILDING_BONUS
+		}
+	}
+
+	adventurer_coverage_demand_bonus_loc = {
+		type = state
+
+		text = {
+			trigger = {
+				this.pollution_generation > 0
+			}
+			localization_key = ADVENTURER_COVERAGE_POLLUTION
+		}
+	}
+
+	adventurer_coverage_demand_urban_bonus_loc = {
+		type = state
+
+		text = {
+			trigger = {
+				any_scope_building = {
+					is_building_type = building_urban_center
+					level > 0
+				}
+			}
+			localization_key = ADVENTURER_COVERAGE_DEMAND_BASE_VALUE_BONUS
+		}
+	}

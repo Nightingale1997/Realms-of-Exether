@@ -652,6 +652,12 @@ BUILDINGS = {
           reserves=1
           activate_production_methods={ "pm_basic_port" }
         }
+		create_building={
+			building="building_adventuring_guild"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_traditional_adventuring" "pm_trophy_hunting" }
+		  }
       }
     
   }
