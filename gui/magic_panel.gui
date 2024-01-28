@@ -1,11 +1,98 @@
+# COPY-PASTED FOR NOW
+@panel_width_minus_10 = 530			# used to be 450
+@panel_width_minus_20 = 520
+@panel_width = 540  				# used to be 460
+@panel_width_half = 270				# used to be 230
+@panel_width_plus_10 = 550  		# used to be 470
+@panel_width_plus_14 = 554			# used to be 474
+@panel_width_plus_14_half = 277		# used to be 237
+@panel_width_plus_20 = 560			# used to be 480
+@panel_width_plus_30 = 570			# used to be 490
+@panel_width_plus_70 = 610			# used to be 530
+
+template magic_panel_visibility {
+	visible = "[GetVariableSystem.Exists('show_magic')]"
+}
+
 types magic_panel
 {
 	type magic_panel = default_block_window {
 		name = "magic_panel"
+		using = magic_panel_visibility
+
+		blockoverride "animation_state_block" {
+			state = {
+				name = _show
+				start_sound = {
+					soundeffect = "event:/SFX/UI/SideBar/companies"
+				}
+			}
+		
+			state = {
+				name = _hide
+				start_sound = {
+					soundeffect = "event:/SFX/UI/SideBar/companies_stop"
+				}
+			}
+		}
+
+		blockoverride "header_close_button" {
+			onclick = "[GetVariableSystem.Toggle('show_magic')]"
+		}
+
+		blockoverride "entire_back_button" {
+			back_button_large = {
+				position = { 8 30 }
+				onclick = "[GetVariableSystem.Toggle('show_magic')]"
+				visible = "[GetVariableSystem.Exists('show_magic')]"
+				input_action = "back"
+			}
+
+			back_button_large = {
+				position = { 8 30 }
+				onclick = "[GetVariableSystem.Toggle('show_magic')]"
+				visible = "[Not(GetVariableSystem.Exists('show_magic'))]"
+				input_action = "back"
+			}
+		}
 		
 		blockoverride "window_header_name" {
 			raw_text = "MAGIC_PANEL_HEADER"
 		}
+
+				#TOP
+				blockoverride "fixed_top" {
+					top_illu = {
+						datacontext = "[AccessPlayer]"
+						blockoverride "illu" {
+							texture = "gfx/interface/illustrations/top_illus/top_illu_companies.dds"
+						}
+		
+						flowcontainer = {
+							direction = vertical
+							margin_top = 15
+							margin_bottom = 15
+		
+							textbox = {	
+								margin_top = 2			
+								text = "BONUS_FOR_ESTABLISHED_COMPANIES"
+								using = fontsize_xl
+								using = companies_header_texts
+							}
+		
+							textbox = {				
+								text = "COMPANY_THROUGHPUT_BONUS_HEADER"
+								using = companies_header_texts
+							}
+		
+		
+							textbox = {				
+								text = "COMPANY_CONSTRUCTION_BONUS_HEADER"
+								using = companies_header_texts
+							}
+						}
+					}
+				}
 		
 		#blockoverride "scrollarea_content" {
 		#	

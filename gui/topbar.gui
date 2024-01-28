@@ -430,7 +430,7 @@ types topbar_components
 									size = { 100 40 }
 									tooltip = "MAGIC_TOOLTIP"
 									using = tooltip_below
-									onclick = "[InformationPanelBar.OpenPanelTab('diplomatic_overview', 'default')]"
+									onclick = "[GetVariableSystem.Toggle('show_magic')]"
 									enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 									
 									icon = {

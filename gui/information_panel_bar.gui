@@ -17,7 +17,7 @@
 @companies_position = 470
 @magic_position = 510
 
-@spacing_widget_2_position = 510
+@spacing_widget_2_position = 550
 
 @maplist_position = 650
 
@@ -51,7 +51,7 @@ types information_panel_bar_types {
 				alpha = 1
 				margin_right = 40
 				margin_top = -5
-				margin_left = -25
+				margin_left = 0
 				margin_bottom = -5
 
 				modify_texture = {
@@ -456,7 +456,8 @@ types information_panel_bar_types {
 					enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 					position = { -100 @magic_position }
 					blockoverride "onclick" {
-						onclick = "[InformationPanelBar.OpenPanel('magic_panel')]"
+						onclick = "[GetVariableSystem.Toggle('show_magic')]"
+						onclick = "[InformationPanelBar.ClosePanel]"
 						input_action = "open_magic"
 					}
 				}
@@ -472,16 +473,17 @@ types information_panel_bar_types {
 					using = sidebar_button_size_small
 					using = selected_sidepanel_animation_small
 					blockoverride "selected_visibility" {
-						visible = "[GetVariableSystem.HasValue('roe_magic_panel', 'roe_magic_panel_tab1')]"
+						visible = "[GetVariableSystem.Exists('show_magic')]"
 					}
 					sidepanel_button_small = {
 						blockoverride "icon" {
-							texture = "gfx/interface/main_hud/companies_btn.dds"
+							texture = "gfx/interface/main_hud/magic_btn.dds"
 						}
 						blockoverride "button_selected" {
-							visible = "[GetVariableSystem.HasValue('roe_magic_panel', 'roe_magic_panel_tab1')]"
+							visible = "[GetVariableSystem.Exists('show_magic')]"
 						}
-						onclick = "[InformationPanelBar.OpenPanel('magic_panel')]"
+						onclick = "[GetVariableSystem.Toggle('show_magic')]"
+						onclick = "[InformationPanelBar.ClosePanel]"
 					}
 				}
 				sidebar_tooltip_area_small = {
