@@ -138,7 +138,7 @@ animist = {
 }
 
 lords_of_avarice = {
-	texture = "gfx/interface/icons/religion_icons/hindu.dds"
+	texture = "gfx/interface/icons/religion_icons/bloody_coins.dds"
 	traits = {
 		evil_heritage trickery_domain
 	}
@@ -148,7 +148,7 @@ lords_of_avarice = {
 }
 
 hobgoblin_faith = {
-	texture = "gfx/interface/icons/religion_icons/shinto.dds"
+	texture = "gfx/interface/icons/religion_icons/axe.dds"
 	traits = {
 		goblin_pantheon order_domain magoclast
 	}
@@ -200,7 +200,7 @@ mountain_worship = {
 }
 
 marktarian = {
-	texture = "gfx/interface/icons/religion_icons/shinto.dds"
+	texture = "gfx/interface/icons/religion_icons/marktarian.dds"
 	traits = {
 		marktarian_heritage arcana_domain knowledge_domain
 	}
@@ -208,7 +208,7 @@ marktarian = {
 }
 
 marktarian_antimagic = {
-	texture = "gfx/interface/icons/religion_icons/shinto.dds"
+	texture = "gfx/interface/icons/religion_icons/marktarian_new.dds"
 	traits = {
 		marktarian_heritage peace_domain knowledge_domain magoclast
 	}
@@ -239,7 +239,7 @@ mortals_burden = {
 
 
 death_worship = {
-	texture = "gfx/interface/icons/religion_icons/shinto.dds"
+	texture = "gfx/interface/icons/religion_icons/raven.dds"
 	traits = {
 		vitic_heritage grave_domain twilight_domain
 	}
@@ -247,9 +247,9 @@ death_worship = {
 }
 
 dwarven_dark_magic = {
-	texture = "gfx/interface/icons/religion_icons/shinto.dds"
+	texture = "gfx/interface/icons/religion_icons/dark_arrow.dds"
 	traits = {
-		evil_heritage psionic_heritage death_domain
+		evil_heritage psionic_heritage death_domain forge_domain
 	}
 	color = { 0.9 0.2 0.2 }
 }
@@ -332,8 +332,41 @@ teomakti = {
 	}
 }
 
+rose_court = {
+	texture = "gfx/interface/icons/religion_icons/rose.dds"
+	traits = {
+		naga_heritage psionic_heritage nature_domain 
+	}
+	color = { 0.5 0.8 0.3 }
+	
+	taboos = {
+		luxury_furniture
+	}
+}
 
+rose_court = {
+	texture = "gfx/interface/icons/religion_icons/rose.dds"
+	traits = {
+		chivalrous_heritage light_domain nature_domain 
+	}
+	color = { 0.8 0.6 0.8 }
+	
+	taboos = {
 
+	}
+}
+
+verglas_crown = {
+	texture = "gfx/interface/icons/religion_icons/ice_crown.dds"
+	traits = {
+		evil_heritage tempest_domain trickery_domain 
+	}
+	color = { 0.0 0.0 0.7 }
+	
+	taboos = {
+
+	}
+}
 
 
 atheist = {
