@@ -108,6 +108,7 @@ types information_panel_bar_types {
 					blockoverride "onclick" {
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('politics', 'default|interest_groups|laws|institutions')]"
 						onclick = "[GetVariableSystem.Clear('politics_overview_exile_pool')]"
+						onclick = "[GetVariableSystem.Clear('show_magic')]"
 						input_action = "open_politics"
 					}
 				}
@@ -132,6 +133,7 @@ types information_panel_bar_types {
 						}
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('politics', 'default|interest_groups|laws|institutions')]"
 						onclick = "[GetVariableSystem.Clear('politics_overview_exile_pool')]"
+						onclick = "[GetVariableSystem.Clear('show_magic')]"
 
 						animated_progresspie = {
 							parentanchor = center
@@ -156,6 +158,7 @@ types information_panel_bar_types {
 					position = { -100 @budget_position }
 					blockoverride "onclick" {
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('budget', 'default|states|assets')]"
+						onclick = "[GetVariableSystem.Clear('show_magic')]"
 						input_action = "open_budget"
 					}
 				}
@@ -180,6 +183,7 @@ types information_panel_bar_types {
 							visible = "[InformationPanelBar.IsPanelOpen('budget')]"
 						}
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('budget', 'default|states|assets')]"
+						onclick = "[GetVariableSystem.Clear('show_magic')]"
 					}
 				}
 				sidebar_tooltip_area = {
@@ -193,6 +197,7 @@ types information_panel_bar_types {
 					position = { -100 @buildings_position }
 					blockoverride "onclick" {
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('production_methods', 'urban|rural|development|construction_queues')]"
+						onclick = "[GetVariableSystem.Clear('show_magic')]"
 						input_action = "open_buildings"
 					}
 				}
@@ -217,6 +222,7 @@ types information_panel_bar_types {
 							visible = "[InformationPanelBar.IsPanelOpen('production_methods')]"
 						}
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('production_methods', 'urban|rural|development|construction_queues')]"
+						onclick = "[GetVariableSystem.Clear('show_magic')]"
 					}
 				}
 				sidebar_tooltip_area = {
@@ -230,6 +236,7 @@ types information_panel_bar_types {
 					position = { -100 @trade_position }
 					blockoverride "onclick" {
 						onclick = "[InformationPanelBar.OpenMarketPanelCycleTabs(AccessPlayer.AccessFirstMarket, 'market', 'default|trade_routes|trade_suggestions|states')]"
+						onclick = "[GetVariableSystem.Clear('show_magic')]"
 						input_action = "open_market"
 					}
 				}
@@ -254,6 +261,7 @@ types information_panel_bar_types {
 							visible = "[InformationPanelBar.IsPanelOpen('market')]"
 						}
 						onclick = "[InformationPanelBar.OpenMarketPanelCycleTabs(AccessPlayer.AccessFirstMarket, 'market', 'default|trade_routes|trade_suggestions|states')]"
+						onclick = "[GetVariableSystem.Clear('show_magic')]"
 					}
 				}
 				sidebar_tooltip_area = {
@@ -267,6 +275,7 @@ types information_panel_bar_types {
 					position = { -100 @military_position }
 					blockoverride "onclick" {
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('military', 'army|mobilization|navy')]"
+						onclick = "[GetVariableSystem.Clear('show_magic')]"
 						input_action = "open_military"
 					}
 				}
@@ -291,6 +300,7 @@ types information_panel_bar_types {
 							visible = "[InformationPanelBar.IsPanelOpen('military')]"
 						}
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('military', 'army|mobilization|navy')]"
+						onclick = "[GetVariableSystem.Clear('show_magic')]"
 					}
 				}
 				sidebar_tooltip_area = {
@@ -314,6 +324,7 @@ types information_panel_bar_types {
 					position = { -100 @diplomatic_position }
 					blockoverride "onclick" {
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('diplomatic_overview', 'default|release_subject')]"
+						onclick = "[GetVariableSystem.Clear('show_magic')]"
 						input_action = "open_diplomatic"
 					}
 				}
@@ -339,6 +350,7 @@ types information_panel_bar_types {
 							visible = "[InformationPanelBar.IsPanelOpen('diplomatic_overview')]"
 						}
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('diplomatic_overview', 'default|release_subject')]"
+						onclick = "[GetVariableSystem.Clear('show_magic')]"
 					}
 				}
 				sidebar_tooltip_area_small = {
@@ -353,6 +365,7 @@ types information_panel_bar_types {
 					position = { -100 @technology_position }
 					blockoverride "onclick" {
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('tech_tree', 'production|military|society')]"
+						onclick = "[GetVariableSystem.Clear('show_magic')]"
 						input_action = "open_technology"
 					}
 				}
@@ -378,6 +391,7 @@ types information_panel_bar_types {
 							visible = "[InformationPanelBar.IsPanelOpen('tech_tree')]"
 						}
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('tech_tree', 'production|military|society')]"
+						onclick = "[GetVariableSystem.Clear('show_magic')]"
 
 						animated_progresspie = {
 							visible = "[Technology.IsValid]"
@@ -418,6 +432,7 @@ types information_panel_bar_types {
 					position = { -100 @companies_position }
 					blockoverride "onclick" {
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('companies', 'default|potential_companies')]"
+						onclick = "[GetVariableSystem.Clear('show_magic')]"
 						input_action = "open_companies"
 					}
 				}
@@ -443,6 +458,7 @@ types information_panel_bar_types {
 							visible = "[InformationPanelBar.IsPanelOpen('companies')]"
 						}
 						onclick = "[InformationPanelBar.OpenPanel('companies')]"
+						onclick = "[GetVariableSystem.Clear('show_magic')]"
 					}
 				}
 				sidebar_tooltip_area_small = {
@@ -498,6 +514,7 @@ types information_panel_bar_types {
 					position = { -100 @culture_position }
 					blockoverride "onclick" {
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('culture', 'default|nation_formation')]"
+						onclick = "[GetVariableSystem.Clear('show_magic')]"
 						input_action = "open_culture"
 					}
 				}
@@ -523,6 +540,7 @@ types information_panel_bar_types {
 							visible = "[InformationPanelBar.IsPanelOpen('culture')]"
 						}
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('culture', 'default|nation_formation')]"
+						onclick = "[GetVariableSystem.Clear('show_magic')]"
 					}
 				}
 				sidebar_tooltip_area_small = {
@@ -537,6 +555,7 @@ types information_panel_bar_types {
 					position = { -100 @population_position }
 					blockoverride "onclick" {
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('pops_overview', 'default|population_charts|pop_list')]"
+						onclick = "[GetVariableSystem.Clear('show_magic')]"
 						input_action = "open_population"
 					}
 				}
@@ -562,6 +581,7 @@ types information_panel_bar_types {
 							visible = "[InformationPanelBar.IsPanelOpen('pops_overview')]"
 						}
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('pops_overview', 'default|population_charts|pop_list')]"
+						onclick = "[GetVariableSystem.Clear('show_magic')]"
 					}
 				}
 				sidebar_tooltip_area_small = {
@@ -584,6 +604,7 @@ types information_panel_bar_types {
 					size = { 0 0 }
 					input_action = "open_decisions"
 					onclick = "[InformationPanelBar.OpenPanelTab('journal', 'decisions')]"
+					onclick = "[GetVariableSystem.Clear('show_magic')]"
 				}
 				sidebar_label_text_small = {
 					position = { -100 @journal_position }
@@ -607,6 +628,7 @@ types information_panel_bar_types {
 							visible = "[InformationPanelBar.IsPanelOpen('journal')]"
 						}
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('journal', 'default|decisions')]"
+						onclick = "[GetVariableSystem.Clear('show_magic')]"
 					}
 					textbox = {
 						parentanchor = right|top
@@ -634,6 +656,7 @@ types information_panel_bar_types {
 					position = { -100 @outliner_position }
 					blockoverride "onclick" {
 						onclick = "[InformationPanelBar.OpenPanel('outliner')]"
+						onclick = "[GetVariableSystem.Clear('show_magic')]"
 						input_action = "open_outliner"
 					}
 				}
@@ -660,6 +683,7 @@ types information_panel_bar_types {
 							visible = "[InformationPanelBar.IsPanelOpen('outliner')]"
 						}
 						onclick = "[InformationPanelBar.OpenPanel('outliner')]"
+						onclick = "[GetVariableSystem.Clear('show_magic')]"
 					}
 				}
 				sidebar_tooltip_area_small = {
@@ -681,6 +705,7 @@ types information_panel_bar_types {
 					position = { -100 @maplist_position }
 					blockoverride "onclick" {
 						onclick = "[MapListPanelManager.ToggleCurrentPanel]"
+						onclick = "[GetVariableSystem.Clear('show_magic')]"
 						input_action = map_list
 					}
 				}
@@ -706,6 +731,7 @@ types information_panel_bar_types {
 							visible = "[MapListPanelManager.IsVisible]"
 						}
 						onclick = "[MapListPanelManager.ToggleCurrentPanel]"
+						onclick = "[GetVariableSystem.Clear('show_magic')]"
 					}
 				}
 

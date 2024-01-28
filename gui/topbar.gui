@@ -306,6 +306,7 @@ types topbar_components
 									tooltip = "BUREAUCRACY_TOOLTIP"
 									using = tooltip_below
 									onclick = "[InformationPanelBar.OpenPanelTab('politics', 'institutions')]"
+									onclick = "[GetVariableSystem.Clear('show_magic')]"
 									enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 							
 									icon = {
@@ -348,6 +349,7 @@ types topbar_components
 									tooltip = "AUTHORITY_TOOLTIP"
 									using = tooltip_below
 									onclick = "[InformationPanelBar.OpenPanelTab('politics', 'default')]"
+									onclick = "[GetVariableSystem.Clear('show_magic')]"
 									enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 							
 									icon = {
@@ -390,6 +392,7 @@ types topbar_components
 									tooltip = "INFLUENCE_TOOLTIP"
 									using = tooltip_below
 									onclick = "[InformationPanelBar.OpenPanelTab('diplomatic_overview', 'default')]"
+									onclick = "[GetVariableSystem.Clear('show_magic')]"
 									enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 									
 									icon = {
@@ -431,6 +434,7 @@ types topbar_components
 									tooltip = "MAGIC_TOOLTIP"
 									using = tooltip_below
 									onclick = "[GetVariableSystem.Toggle('show_magic')]"
+									onclick = "[InformationPanelBar.ClosePanel]"
 									enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 									
 									icon = {
@@ -529,6 +533,7 @@ types topbar_components
 									using = tooltip_below
 									using = money_tooltip_with_graph
 									onclick = "[InformationPanelBar.OpenPanelTab('budget', 'default')]"
+									onclick = "[GetVariableSystem.Clear('show_magic')]"
 									enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 								
 									icon = {
