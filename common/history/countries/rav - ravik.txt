@@ -1,0 +1,43 @@
+﻿COUNTRIES = {
+	c:RAV = {
+
+		set_tax_level = low
+		
+		effect_starting_technology_tier_1_tech = yes
+		
+		set_market_capital = STATE_TROMMELKUST
+		
+		set_tariffs_export_priority = g:fabric
+		
+		effect_starting_politics_liberal = yes
+		activate_law = law_type:law_technocracy
+		activate_law = law_type:law_public_schools
+		activate_law = law_type:law_legacy_slavery
+		activate_law = law_type:law_racial_segregation
+		activate_law = law_type:law_protectionism
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_right_of_assembly
+		activate_law = law_type:law_no_workers_rights
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_local_police
+		activate_law = law_type:law_no_womens_rights 
+		activate_law = law_type:law_dark_arts
+		activate_law = law_type:law_censorship
+		
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 2
+		}
+
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 2
+		}
+
+		ig:ig_armed_forces = { 
+			add_ruling_interest_group = yes
+		}
+
+	}
+}
