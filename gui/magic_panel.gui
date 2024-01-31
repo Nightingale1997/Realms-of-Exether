@@ -113,7 +113,7 @@ types magic_panel
 							visible = "[Not(IsDataModelEmpty(AccessPlayer.GetCompanies))]"
 							minimumsize = { @panel_width -1 }
 							maximumsize = { @panel_width -1 }
-							datamodel = "[AccessPlayer.GetCompanies]"
+							datamodel = "[GetGlobalList('ritual_id_list')]"
 							direction = vertical
 							spacing = 10
 
@@ -127,15 +127,15 @@ types magic_panel
 				}
 				
 				section_header_button = {
-					visible = "[Not(IsDataModelEmpty(AccessPlayer.GetAvailableCompanies))]"
+					visible = "[Not(IsDataModelEmpty(GetGlobalList('ritual_id_list')))]"
 						
 					blockoverride "left_text" {
-						text = "AVAILABLE_COMPANIES"
+						text = "ACTIVE_RITUALS"
 					}
 
 					blockoverride "right_text" {
 						section_header_right_text = {
-							text = "[GetDataModelSize(AccessPlayer.GetAvailableCompanies)]"
+							text = "[GetDataModelSize(GetGlobalList('ritual_id_list'))]"
 						}
 					}
 
@@ -152,7 +152,7 @@ types magic_panel
 					}
 				}
 
-				### AVAILABLE COMPANIES
+				### ACTIVE RITUALS
 				flowcontainer = {
 					parentanchor = hcenter
 					direction = vertical
@@ -160,8 +160,8 @@ types magic_panel
 
 					flowcontainer = {
 						parentanchor = hcenter
-						visible = "[Not(IsDataModelEmpty(AccessPlayer.GetAvailableCompanies))]"
-						datamodel = "[AccessPlayer.GetAvailableCompanies]"
+						visible = "[Not(IsDataModelEmpty(GetGlobalList('ritual_id_list')))]"
+						datamodel = "[GetGlobalList('ritual_id_list')]"
 						direction = vertical
 						spacing = 5
 
@@ -174,7 +174,7 @@ types magic_panel
 				# ATTAINABLE COMPANIES
 				section_header_button = {
 					blockoverride "left_text" {
-						text = "ATTAINABLE_COMPANIES"
+						text = "AVAILABLE_RITUALS"
 					}
 
 					blockoverride "right_text" {
@@ -203,8 +203,8 @@ types magic_panel
 
 					flowcontainer = {
 						parentanchor = hcenter
-						visible = "[Not(IsDataModelEmpty(AccessPlayer.GetAttainableCompanies))]"
-						datamodel = "[AccessPlayer.GetAttainableCompanies]"
+						visible = "[Not(IsDataModelEmpty(GetGlobalList('ritual_id_list')))]"
+						datamodel = "[GetGlobalList('ritual_id_list')]"
 						direction = vertical
 						spacing = 5
 
@@ -217,7 +217,7 @@ types magic_panel
 				# POTENTIAL COMPANIES
 				section_header_button = {
 					blockoverride "left_text" {
-						text = "POTENTIAL_COMPANIES"
+						text = "ATTAINABLE_RITUALS"
 					}
 
 					blockoverride "right_text" {
@@ -247,7 +247,7 @@ types magic_panel
 					flowcontainer = {
 						parentanchor = hcenter
 						visible = "[Not(IsDataModelEmpty(AccessPlayer.GetPotentialCompanies))]"
-						datamodel = "[AccessPlayer.GetPotentialCompanies]"
+						datamodel = "[GetGlobalList('ritual_id_list')]"
 						direction = vertical
 						spacing = 5
 
@@ -515,7 +515,7 @@ types magic_panel
 				}
 
 				textbox = {
-					text = "[CompanyType.GetName]"
+					text = "RITUAL_NAME"
 					default_format = "#header"
 					autoresize = yes
 					multiline = no
@@ -535,13 +535,13 @@ types magic_panel
 				parentanchor = vcenter
 				icon = {
 					size = { 130 130 }
-					texture = "[CompanyType.GetIcon]"
+					texture = "gfx/interface/icons/company_icons/basic_agriculture_2.dds"
 				}
 
 				button = {
 					using = default_button
 					size = { 130 40 }
-					text = "ESTABLISH_COMPANY"
+					text = "CAST_RITUAL"
 					onclick = "[Execute(GetPlayer.CreateCompany(CompanyType.Self))]"
 					onclick = "[GetVariableSystem.Clear('hide_current_companies')]"
 					onclick = "[ScrollPanelToTop('companies_panel')]"
@@ -560,25 +560,29 @@ types magic_panel
 				spacing = 4
 
 				background = {
-					texture = "[CompanyType.GetBackground]"
+					texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rice.dds"
 				}
 			
 				background = {
 					using = entry_bg_simple
 				}
 
-				flowcontainer = {
-					direction = horizontal
-					spacing = 5							
-					datamodel = "[CompanyType.AccessBuildingTypes]"
-					
-					item = {
-						company_building_item = {}
-					}
+				textbox = {				
+					text = "Test"
+					tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
+					using = ritual_item_text
+					margin_top = 5
 				}	
 
 				textbox = {				
-					text = "COMPANY_TYPE_PRODUCTIVITY"
+					text = "Test"
+					tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
+					using = ritual_item_text
+					margin_top = 5
+				}	
+
+				textbox = {				
+					text = "Test"
 					tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
 					using = ritual_item_text
 					margin_top = 5
@@ -587,7 +591,7 @@ types magic_panel
 				widget = { size = { 5 5 } }
 
 				textbox = {
-					text = "COMPANY_PROSPERITY_MODIFIER_HEADER"
+					text = "Test"
 					using = ritual_item_text
 				}			
 				
@@ -596,7 +600,7 @@ types magic_panel
 					autoresize = yes
 					multiline = no
 					elide = right
-					text = "COMPANY_TYPE_PROSPERITY_MODIFIER"
+					text = "RITUAL_COST"
 					using = ritual_item_text
 				}	
 			}		
