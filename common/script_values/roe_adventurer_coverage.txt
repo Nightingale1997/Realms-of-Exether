@@ -1,0 +1,42 @@
+﻿state_adventurer_coverage_value = {
+	value = 50 #Base Value
+	add = modifier:state_adventurer_coverage_add
+	min = 0
+}
+
+state_adventurer_coverage_demand_urban_center_reduction = {
+	value = 0
+	if = {
+		limit = {
+			any_scope_building = {
+				is_building_type = building_urban_center
+			}
+		}
+		add = this.b:building_urban_center.level
+	}
+}
+
+state_adventurer_coverage_demand_arable_land = {
+	value = 0
+	add = this.arable_land
+}
+
+state_adventurer_coverage_demand_pollution = {
+	value = 0
+	add = pollution_generation
+}
+
+state_adventurer_coverage_demand = {
+	value = 0
+	add = state_adventurer_coverage_demand_arable_land
+	add = state_adventurer_coverage_demand_pollution
+	subtract = state_adventurer_coverage_demand_urban_center_reduction
+
+	min = 0
+}
+
+state_adventurer_coverage_balance = {
+	value = 0
+	add = state_adventurer_coverage_value
+	subtract = state_adventurer_coverage_demand
+}

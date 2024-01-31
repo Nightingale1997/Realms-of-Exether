@@ -10,7 +10,7 @@
 
   modifier_country_wizards_voting_power_add: "[concept_political_strength] from the [concept_votes] of $wizards$"
 
- POP_BUREAUCRATS_MAGES: "Owner has [GetLawType('law_court_mages').GetName]"
+  POP_BUREAUCRATS_MAGES: "Owner has [GetLawType('law_court_mages').GetName]"
 
   modifier_goods_input_trinkets_add: "@trinkets! Trinkets input"
   modifier_goods_input_trinkets_add_desc: "The amount of @trinkets! Trinkets consumed by buildings"
@@ -42,4 +42,6 @@
   modifier_building_employment_wizards_mult_desc: "$modifier_building_employment_wizards_add_desc$"
   modifier_goods_input_opium_add:0 "@chimesilt! Chimesilt input"
   modifier_goods_input_opium_add_desc:0 "The amount of @chimesilt! Chimesilt consumed by buildings"
+  modifier_state_adventurer_coverage_add: "Adventurer Coverage"
+  modifier_state_adventurer_coverage_add_desc: "A bonus or penalty to the [Concept('concept_state','$concept_state_possessive$')] [concept_adventurer_coverage]"
 
