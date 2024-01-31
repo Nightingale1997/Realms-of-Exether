@@ -1,4 +1,74 @@
-﻿ritual_cost = {
+﻿ritual_duration = {
+	value = 0
+
+	if = {
+		limit = {
+			OR = {
+				this = 1
+				this = 6
+				this = 11
+				this = 16
+				this = 21
+				this = 26
+			}
+		}
+		add = 6
+	}
+	else_if = {
+		limit = {
+			OR = {
+				this = 2
+				this = 7
+				this = 12
+				this = 17
+				this = 22
+				this = 27
+			}
+		}
+		add = 12
+	}
+	else_if = {
+		limit = {
+			OR = {
+				this = 3
+				this = 8
+				this = 13
+				this = 18
+				this = 23
+				this = 28
+			}
+		}
+		add = 18
+	}
+	else_if = {
+		limit = {
+			OR = {
+				this = 4
+				this = 9
+				this = 14
+				this = 19
+				this = 24
+				this = 29
+			}
+		}
+		add = 24
+	}
+	else_if = {
+		limit = {
+			OR = {
+				this = 5
+				this = 10
+				this = 15
+				this = 20
+				this = 25
+				this = 30
+			}
+		}
+		add = 30
+	}
+}
+
+ritual_cost = {
 	value = 0
 
 	if = {

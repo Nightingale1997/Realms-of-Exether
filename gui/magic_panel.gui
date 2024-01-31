@@ -535,6 +535,12 @@ types magic_panel
 				parentanchor = vcenter
 				icon = {
 					size = { 130 130 }
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1')]"
+					texture = "gfx/interface/icons/company_icons/basic_agriculture_1.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2')]"
+					size = { 130 130 }
 					texture = "gfx/interface/icons/company_icons/basic_agriculture_2.dds"
 				}
 
@@ -561,6 +567,36 @@ types magic_panel
 
 				background = {
 					texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rice.dds"
+				}
+
+				background = {
+					visible =  "[And(GreaterThan_int32(FixedPointToInt(Scope.GetValue), '(int32)0'), LessThanOrEqualTo_int32(FixedPointToInt(Scope.GetValue), '(int32)5'))]"
+					texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rye.dds"
+				}
+
+				background = {
+					visible =  "[And(GreaterThan_int32(FixedPointToInt(Scope.GetValue), '(int32)5'), LessThanOrEqualTo_int32(FixedPointToInt(Scope.GetValue), '(int32)10'))]"
+					texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_corn.dds"
+				}
+
+				background = {
+					visible =  "[And(GreaterThan_int32(FixedPointToInt(Scope.GetValue), '(int32)10'), LessThanOrEqualTo_int32(FixedPointToInt(Scope.GetValue), '(int32)15'))]"
+					texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+				}
+
+				background = {
+					visible =  "[And(GreaterThan_int32(FixedPointToInt(Scope.GetValue), '(int32)15'), LessThanOrEqualTo_int32(FixedPointToInt(Scope.GetValue), '(int32)20'))]"
+					texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+				}
+
+				background = {
+					visible =  "[And(GreaterThan_int32(FixedPointToInt(Scope.GetValue), '(int32)20'), LessThanOrEqualTo_int32(FixedPointToInt(Scope.GetValue), '(int32)25'))]"
+					texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
+				}
+
+				background = {
+					visible =  "[And(GreaterThan_int32(FixedPointToInt(Scope.GetValue), '(int32)25'), LessThanOrEqualTo_int32(FixedPointToInt(Scope.GetValue), '(int32)30'))]"
+					texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 				}
 			
 				background = {
@@ -591,7 +627,7 @@ types magic_panel
 				widget = { size = { 5 5 } }
 
 				textbox = {
-					text = "Test"
+					text = "RITUAL_DURATION"
 					using = ritual_item_text
 				}			
 				
