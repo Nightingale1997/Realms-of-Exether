@@ -480,6 +480,7 @@ types topbar_components
 									tooltip = "CONVOY_TOPBAR_TOOLTIP"
 									using = tooltip_below
 									onclick = "[InformationPanelBar.OpenMarketPanelTab(AccessPlayer.AccessFirstMarket, 'trade_routes')]"
+									onclick = "[GetVariableSystem.Clear('show_magic')]"
 									enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 									alpha = "[TransparentIfZero(GetPlayer.GetSupplyNetworkStrength)]"
 									
