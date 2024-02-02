@@ -99,6 +99,9 @@ types magic_panel
 						blockoverride "text1" {
 							text = "MAGICAL_RITUALS"
 						}
+						blockoverride "text2" {
+							text = "[GetDataModelSize(GetPlayer.MakeScope.GetList('active_ritual_id_list'))|0v]"
+						}
 					}
 
 					flowcontainer = {
@@ -110,10 +113,9 @@ types magic_panel
 						### COMPANIES
 						flowcontainer = {
 							parentanchor = hcenter
-							visible = "[Not(IsDataModelEmpty(AccessPlayer.GetCompanies))]"
 							minimumsize = { @panel_width -1 }
 							maximumsize = { @panel_width -1 }
-							datamodel = "[GetGlobalList('ritual_id_list')]"
+							datamodel = "[GetPlayer.MakeScope.GetList('active_ritual_id_list')]"
 							direction = vertical
 							spacing = 10
 
@@ -125,53 +127,8 @@ types magic_panel
 
 					}
 				}
-				
-				section_header_button = {
-					visible = "[Not(IsDataModelEmpty(GetGlobalList('ritual_id_list')))]"
-						
-					blockoverride "left_text" {
-						text = "ACTIVE_RITUALS"
-					}
 
-					blockoverride "right_text" {
-						section_header_right_text = {
-							text = "[GetDataModelSize(GetGlobalList('ritual_id_list'))]"
-						}
-					}
-
-					blockoverride "onclick" {
-						onclick = "[GetVariableSystem.Toggle('active_spells')]"
-					}
-					
-					blockoverride "onclick_showmore" {
-						visible = "[GetVariableSystem.Exists('active_spells')]"
-					}
-
-					blockoverride "onclick_showless" {
-						visible = "[Not(GetVariableSystem.Exists('active_spells'))]"
-					}
-				}
-
-				### ACTIVE RITUALS
-				flowcontainer = {
-					parentanchor = hcenter
-					direction = vertical
-					visible = "[Not(GetVariableSystem.Exists('active_spells'))]"
-
-					flowcontainer = {
-						parentanchor = hcenter
-						visible = "[Not(IsDataModelEmpty(GetGlobalList('ritual_id_list')))]"
-						datamodel = "[GetGlobalList('ritual_id_list')]"
-						direction = vertical
-						spacing = 5
-
-						item = {
-							potential_ritual_item = {}
-						}
-					}
-				}
-
-				# ATTAINABLE COMPANIES
+				# AVAILABLE COMPANIES
 				section_header_button = {
 					blockoverride "left_text" {
 						text = "AVAILABLE_RITUALS"
@@ -179,7 +136,7 @@ types magic_panel
 
 					blockoverride "right_text" {
 						section_header_right_text = {
-							text = "[GetDataModelSize(AccessPlayer.GetAttainableCompanies)]"
+							text = "[GetDataModelSize(GetPlayer.MakeScope.GetList('available_ritual_id_list'))]"
 						}
 					}
 					blockoverride "onclick" {
@@ -204,7 +161,7 @@ types magic_panel
 					flowcontainer = {
 						parentanchor = hcenter
 						visible = "[Not(IsDataModelEmpty(GetGlobalList('ritual_id_list')))]"
-						datamodel = "[GetGlobalList('ritual_id_list')]"
+						datamodel = "[GetPlayer.MakeScope.GetList('available_ritual_id_list')]"
 						direction = vertical
 						spacing = 5
 
@@ -214,7 +171,7 @@ types magic_panel
 					}
 				}		
 
-				# POTENTIAL COMPANIES
+				# ATTAINABLE COMPANIES
 				section_header_button = {
 					blockoverride "left_text" {
 						text = "ATTAINABLE_RITUALS"
@@ -222,7 +179,7 @@ types magic_panel
 
 					blockoverride "right_text" {
 						section_header_right_text = {
-							text = "[GetDataModelSize(AccessPlayer.GetPotentialCompanies)]"
+							text = "[GetDataModelSize(GetPlayer.MakeScope.GetList('attainable_ritual_id_list'))]"
 						}
 					}
 					blockoverride "onclick" {
@@ -246,8 +203,8 @@ types magic_panel
 
 					flowcontainer = {
 						parentanchor = hcenter
-						visible = "[Not(IsDataModelEmpty(AccessPlayer.GetPotentialCompanies))]"
-						datamodel = "[GetGlobalList('ritual_id_list')]"
+						visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('attainable_ritual_id_list')))]"
+						datamodel = "[GetPlayer.MakeScope.GetList('attainable_ritual_id_list')]"
 						direction = vertical
 						spacing = 5
 
@@ -304,7 +261,7 @@ types magic_panel
 							multiline = no
 							fontsize_min = 12
 							elide = right
-							text = "[Company.GetName]"
+							text = "RITUAL_NAME"
 							default_format = "#header"
 							using = fontsize_large
 							using = ritual_item_text
@@ -322,31 +279,6 @@ types magic_panel
 						}
 					}
 				}	
-
-				flowcontainer = {
-					parentanchor = right|vcenter
-					spacing = 5
-					margin_right = 10
-					button_icon_pin = {
-						size = { 26 26 }
-						visible = "[Company.IsPinnedInOutliner]"
-						onclick = "[Company.TogglePinInOutliner]"
-						tooltip = "UNPIN_COMPANY"
-					}
-
-					button_icon_unpin = {
-						size = { 26 26 }
-						visible = "[Not(Company.IsPinnedInOutliner)]"
-						onclick = "[Company.TogglePinInOutliner]"
-						tooltip = "PIN_COMPANY"
-					}
-					
-					button_icon_edit = {
-						size = { 26 26 }
-						onclick = "[PopupManager.ShowCompanyChangeName(Company.Self)]"
-						tooltip = "CHANGE_NAME"
-					}
-				}
 			}
 
 			flowcontainer = {
@@ -361,7 +293,13 @@ types magic_panel
 
 					icon = {
 						size = { 130 130 }
-						texture = "[CompanyType.GetIcon]"
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1')]"
+						texture = "gfx/interface/icons/company_icons/basic_agriculture_1.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/company_icons/basic_agriculture_2.dds"
 					}
 
 					button = {
@@ -383,83 +321,79 @@ types magic_panel
 					spacing = 8
 
 					background = {
-						texture = "[Company.AccessCompanyType.GetBackground]"
-					}	
+						texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rice.dds"
+					}
+	
+					background = {
+						visible =  "[And(GreaterThan_int32(FixedPointToInt(Scope.GetValue), '(int32)0'), LessThanOrEqualTo_int32(FixedPointToInt(Scope.GetValue), '(int32)5'))]"
+						texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rye.dds"
+					}
+	
+					background = {
+						visible =  "[And(GreaterThan_int32(FixedPointToInt(Scope.GetValue), '(int32)5'), LessThanOrEqualTo_int32(FixedPointToInt(Scope.GetValue), '(int32)10'))]"
+						texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_corn.dds"
+					}
+	
+					background = {
+						visible =  "[And(GreaterThan_int32(FixedPointToInt(Scope.GetValue), '(int32)10'), LessThanOrEqualTo_int32(FixedPointToInt(Scope.GetValue), '(int32)15'))]"
+						texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+					}
+	
+					background = {
+						visible =  "[And(GreaterThan_int32(FixedPointToInt(Scope.GetValue), '(int32)15'), LessThanOrEqualTo_int32(FixedPointToInt(Scope.GetValue), '(int32)20'))]"
+						texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+					}
+	
+					background = {
+						visible =  "[And(GreaterThan_int32(FixedPointToInt(Scope.GetValue), '(int32)20'), LessThanOrEqualTo_int32(FixedPointToInt(Scope.GetValue), '(int32)25'))]"
+						texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
+					}
+	
+					background = {
+						visible =  "[And(GreaterThan_int32(FixedPointToInt(Scope.GetValue), '(int32)25'), LessThanOrEqualTo_int32(FixedPointToInt(Scope.GetValue), '(int32)30'))]"
+						texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+					}
 
 					background = {
 						using = entry_bg_simple
 					}
 				
-					flowcontainer = {
-						direction = horizontal
-						spacing = 5						
-						datamodel = "[Company.AccessCompanyType.AccessBuildingTypes]"
-						
-						item = {
-							company_building_item = { 
-								blockoverride "icon_size" {
-									size = { 40 40 }
-								}
-							}
-						}
-					}		
-
-					textbox = {
-						text = "COMPANY_PROSPERITY_MODIFIER_HEADER"
+					textbox = {				
+						text = "Test"
+						tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
 						using = ritual_item_text
-					}
-
-					widget = {		
-						size = { 190 28 }
-						tooltip = "COMPANY_PROSPERITY_TOOLTIP"
-						
-						changed_value_increased_progressbar_horizontal = {
-							size = { 100% 100% }
-							visible = "[And(GreaterThan_CFixedPoint(Company.CalcProsperityChange,'(CFixedPoint)0'), LessThan_CFixedPoint(Company.GetProsperity, GetDefine('NEconomy', 'COMPANY_PROSPERITY_MAX')))]"
-							blockoverride "values" {
-								min = 0
-								max = "[GetDefine('NEconomy','COMPANY_PROSPERITY_MAX')]"
-								value = "[Company.GetProsperity]"
-							}
-							blockoverride "animate_negative_change" {
-								animate_negative_changes = no
-							}
-							blockoverride "arrow_texture_density" {
-								texture_density = 4 #use to match height of progressbar
-							}
-						}
-
-						changed_value_decreased_progressbar_horizontal = {
-							size = { 100% 100% }
-							visible = "[And(LessThan_CFixedPoint(Company.CalcProsperityChange,'(CFixedPoint)0'), LessThan_CFixedPoint(Company.GetProsperity, GetDefine('NEconomy', 'COMPANY_PROSPERITY_MAX')))]"
-
-							blockoverride "values" {
-								min = 0
-								max = "[GetDefine('NEconomy','COMPANY_PROSPERITY_MAX')]"
-								value = "[Company.GetProsperity]"
-							}
-							blockoverride "arrow_texture_density" {
-								texture_density = 4 #use to match height of progressbar
-							}
-						}
-
-						default_progressbar_horizontal = {
-							size = { 100% 100% }
-							visible = "[Or(EqualTo_CFixedPoint(Company.CalcProsperityChange,'(CFixedPoint)0'), GreaterThanOrEqualTo_CFixedPoint(Company.GetProsperity, GetDefine('NEconomy', 'COMPANY_PROSPERITY_MAX')))]"
-
-							blockoverride "values" {
-								min = 0
-								max = "[GetDefine('NEconomy','COMPANY_PROSPERITY_MAX')]"
-								value = "[Company.GetProsperity]"
-							}
-						}
-
-						textbox = {				
-							text = "COMPANY_PROSPERITY"
-							using = ritual_item_text
-							parentanchor = vcenter
-							margin_left = 10
-						}
+						margin_top = 5
+					}	
+	
+					textbox = {				
+						text = "Test"
+						tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
+						using = ritual_item_text
+						margin_top = 5
+					}	
+	
+					textbox = {				
+						text = "Test"
+						tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
+						using = ritual_item_text
+						margin_top = 5
+					}	
+	
+					widget = { size = { 5 5 } }
+	
+					textbox = {
+						text = "RITUAL_DURATION"
+						using = ritual_item_text
+					}			
+					
+					textbox = {
+						fontsize_min = 12
+						autoresize = yes
+						multiline = no
+						elide = right
+						text = "RITUAL_COST"
+						using = ritual_item_text
+					}	
 					}
 
 
@@ -684,3 +618,4 @@ template companies_header_texts {
 	align = hcenter|nobaseline
 	parentanchor = hcenter
 }
+

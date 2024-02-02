@@ -471,9 +471,11 @@ types information_panel_bar_types {
 				sidebar_label_button_small = {
 					enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 					position = { -100 @magic_position }
+					datacontext = "[GetScriptedGui('recalculate_ritual_lists')]"
 					blockoverride "onclick" {
 						onclick = "[GetVariableSystem.Toggle('show_magic')]"
 						onclick = "[InformationPanelBar.ClosePanel]"
+						onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope)).End)]"
 						input_action = "open_magic"
 					}
 				}
@@ -492,6 +494,7 @@ types information_panel_bar_types {
 						visible = "[GetVariableSystem.Exists('show_magic')]"
 					}
 					sidepanel_button_small = {
+						datacontext = "[GetScriptedGui('recalculate_ritual_lists')]"
 						blockoverride "icon" {
 							texture = "gfx/interface/main_hud/magic_btn.dds"
 						}
@@ -499,6 +502,7 @@ types information_panel_bar_types {
 							visible = "[GetVariableSystem.Exists('show_magic')]"
 						}
 						onclick = "[GetVariableSystem.Toggle('show_magic')]"
+						onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope)).End)]"
 						onclick = "[InformationPanelBar.ClosePanel]"
 					}
 				}
