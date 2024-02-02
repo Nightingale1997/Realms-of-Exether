@@ -1,0 +1,18 @@
+﻿cast_ritual_button_effect = {
+	saved_scopes = { ritual_id }
+	effect = {
+		pick_ritual = yes
+	}
+	is_valid = {
+		AND = {
+			ritual_is_valid = yes
+			scope:ritual_id = {
+				custom_tooltip = {
+					text = has_reserves_tt
+					root.magic_reserves_total >= ritual_cost
+				}
+			}
+		}
+       
+    }
+}

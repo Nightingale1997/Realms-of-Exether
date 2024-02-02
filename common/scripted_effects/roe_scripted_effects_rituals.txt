@@ -31,3 +31,156 @@
 	add_to_global_variable_list = { name = ritual_id_list target = 29 } #Antimagic 4
 	add_to_global_variable_list = { name = ritual_id_list target = 30 } #Antimagic 5	
 }
+
+pick_ritual = {
+	if = { 
+		limit {
+			 scope:ritual_id = 1
+		} 
+		ritual_divine_1 = yes
+    }
+	else_if = {
+		limit {
+			scope:ritual_id = 2
+	   } 
+	   ritual_divine_2 = yes
+	}
+	else_if = {
+		limit {
+			scope:ritual_id = 3
+	   } 
+	   ritual_divine_3 = yes
+	}
+	else_if = {
+		limit {
+			scope:ritual_id = 4
+	   } 
+	   ritual_divine_4 = yes
+	}
+	else_if = {
+		limit {
+			scope:ritual_id = 5
+	   } 
+	   ritual_divine_5 = yes
+	}
+}
+
+ritual_divine_1 = {
+	activate_law = law_type:law_state_religion
+}
+
+ritual_divine_2 = {
+	
+}
+
+ritual_divine_3 = {
+	
+}
+
+ritual_divine_4 = {
+	
+}
+
+ritual_divine_5 = {
+	
+}
+
+ritual_druidic_1 = {
+
+}
+
+ritual_druidic_2 = {
+	
+}
+
+ritual_druidic_3 = {
+	
+}
+
+ritual_druidic_4 = {
+	
+}
+
+ritual_druidic_5 = {
+	
+}
+
+ritual_artificer_1 = {
+
+}
+
+ritual_artificer_2 = {
+	
+}
+
+ritual_artificer_3 = {
+	
+}
+
+ritual_artificer_4 = {
+	
+}
+
+ritual_artificer_5 = {
+	
+}
+
+ritual_astrology_1 = {
+
+}
+
+ritual_astrology_2 = {
+	
+}
+
+ritual_astrology_3 = {
+	
+}
+
+ritual_astrology_4 = {
+	
+}
+
+ritual_astrology_5 = {
+	
+}
+
+ritual_dark_1 = {
+
+}
+
+ritual_dark_2 = {
+	
+}
+
+ritual_dark_3 = {
+	
+}
+
+ritual_dark_4 = {
+	
+}
+
+ritual_dark_5 = {
+	
+}
+
+ritual_antimagic_1 = {
+
+}
+
+ritual_antimagic_2 = {
+	
+}
+
+ritual_antimagic_3 = {
+	
+}
+
+ritual_antimagic_4 = {
+	
+}
+
+ritual_antimagic_5 = {
+	
+}

@@ -543,17 +543,16 @@ types magic_panel
 					size = { 130 130 }
 					texture = "gfx/interface/icons/company_icons/basic_agriculture_2.dds"
 				}
-
-				button = {
-					using = default_button
-					size = { 130 40 }
-					text = "CAST_RITUAL"
-					onclick = "[Execute(GetPlayer.CreateCompany(CompanyType.Self))]"
-					onclick = "[GetVariableSystem.Clear('hide_current_companies')]"
-					onclick = "[ScrollPanelToTop('companies_panel')]"
-					enabled = "[IsValid(GetPlayer.CreateCompany(CompanyType.Self))]"
-					tooltip = "CREATE_COMPANY_DESC"
-				}
+                button = {
+					#using = default_button_primary_action pretty button
+                    using = default_button
+                    size = { 130 40 }
+                    text = "CAST_RITUAL"
+                    datacontext = "[GetScriptedGui('cast_ritual_button_effect')]"
+                    onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id', MakeScopeValue(Scope.GetValue)).End)]"
+                    enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id', MakeScopeValue(Scope.GetValue)).End)]"
+                    tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id', MakeScopeValue(Scope.GetValue)).End)]"
+                }
 			}
 
 			# COMPANY DETAILS

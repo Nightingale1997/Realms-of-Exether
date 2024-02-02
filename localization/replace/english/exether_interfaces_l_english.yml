@@ -88,3 +88,6 @@ RITUAL_NAME: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoi
 RITUAL_COST: "Cost: #r -#![Scope.ScriptValue('ritual_cost')|D-] @magic! #bold [concept_magic_reserves]#!"
 RITUAL_DURATION: "Duration: [Scope.ScriptValue('ritual_duration')|0v] months"
 CAST_RITUAL: "Perform Ritual"
+CAST_RITUAL_DESC: "#header Cast the $RITUAL_NAME$ ritual#!\n$TOOLTIP_DELIMITER$\n [ScriptedButton.GetEffectDesc]"
+
+has_reserves_tt: "[SCOPE.GetRootScope.GetCountry.GetName] does not have [Scope.ScriptValue('ritual_cost')|0v] @magic! #bold [concept_magic_reserves]"
