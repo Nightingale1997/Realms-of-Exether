@@ -394,7 +394,7 @@ types magic_panel
 						text = "RITUAL_COST"
 						using = ritual_item_text
 					}	
-					}
+					
 
 
 					textbox = {				
@@ -575,32 +575,6 @@ types magic_panel
 			}		
 		}		
 	}
-
-	type company_building_item = button {
-		texture = "[BuildingType.GetTexture]"
-		onrightclick = "[RightClickMenuManager.ShowForBuildingType(BuildingType.AccessSelf)]"
-		effectname = "NoHighlight"
-		distribute_visual_state = no
-		inherit_visual_state = no
-		alpha = "[TransparentIfZero_int32(BuildingType.GetLevelCountInCountry(GetPlayer.Self))]"
-
-		block "icon_size" {
-			size = { 50 50 }	
-		}
-
-		textbox = {
-			text = "BUILDING_TYPE_COUNT"
-			autoresize = yes
-			position = { 5 -2 }
-			parentanchor = bottom
-			align = right|nobaseline
-			visible = "[NotEqualTo_int32( BuildingType.GetLevelCountInCountry(GetPlayer.Self), '(int32)0')]"
-		}
-
-		tooltipwidget = {
-			FancyTooltip_BuildingType = {}
-		}
-	}	
 }
 
 template ritual_item_text {
