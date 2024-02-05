@@ -17,6 +17,13 @@
     }
 }
 
+dispel_ritual_button_effect = {
+	saved_scopes = { ritual_id }
+	effect = {
+		pick_dispel_ritual = yes
+	}
+}
+
 recalculate_ritual_lists = {
 	effect = {
 		calculate_rituals = yes

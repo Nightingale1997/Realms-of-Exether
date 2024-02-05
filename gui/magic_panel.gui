@@ -11,7 +11,7 @@
 @panel_width_plus_70 = 610			# used to be 530
 
 template magic_panel_visibility {
-	visible = "[GetVariableSystem.Exists('show_magic')]"
+	visible = "[And(GetVariableSystem.Exists('show_magic'), Not(InformationPanelBar.IsAnyPanelOpen()))]"
 }
 
 types magic_panel
@@ -287,9 +287,6 @@ types magic_panel
 				flowcontainer = {
 					direction = vertical
 					parentanchor = vcenter
-					spacing = 5
-
-					datacontext = "[Company.GetCompanyType]"
 
 					icon = {
 						size = { 130 130 }
@@ -303,12 +300,13 @@ types magic_panel
 					}
 
 					button = {
-						using = default_button
+						using = default_button_primary_action
 						size = { 130 40 }
-						text = "DISBAND_COMPANY"
-						onclick = "[Execute(GetPlayer.RemoveCompany(CompanyType.Self))]"
-						enabled = "[IsValid(GetPlayer.RemoveCompany(CompanyType.Self))]"
-						tooltip = "REMOVE_COMPANY_DESC"
+						text = "DISPEL_RITUAL"
+						datacontext = "[GetScriptedGui('dispel_ritual_button_effect')]"
+						onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id', MakeScopeValue(Scope.GetValue)).End)]"
+						enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id', MakeScopeValue(Scope.GetValue)).End)]"
+						tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id', MakeScopeValue(Scope.GetValue)).End)]"
 					}
 				}
 
@@ -382,7 +380,7 @@ types magic_panel
 					widget = { size = { 5 5 } }
 	
 					textbox = {
-						text = "RITUAL_DURATION"
+						text = "RITUAL_SOURCE"
 						using = ritual_item_text
 					}			
 					
@@ -478,8 +476,7 @@ types magic_panel
 					texture = "gfx/interface/icons/company_icons/basic_agriculture_2.dds"
 				}
                 button = {
-					#using = default_button_primary_action pretty button
-                    using = default_button
+					using = default_button_primary_action
                     size = { 130 40 }
                     text = "CAST_RITUAL"
                     datacontext = "[GetScriptedGui('cast_ritual_button_effect')]"
@@ -560,7 +557,7 @@ types magic_panel
 				widget = { size = { 5 5 } }
 
 				textbox = {
-					text = "RITUAL_DURATION"
+					text = "RITUAL_SOURCE"
 					using = ritual_item_text
 				}			
 				
