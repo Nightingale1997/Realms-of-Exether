@@ -404,6 +404,10 @@ calculate_rituals = {
 }
 
 pick_ritual = {
+	add_modifier = {
+		name = country_ritual_cooldown
+		days = 1
+	}
 	if = { 
 		limit = {
 			 scope:ritual_id = 1
@@ -770,6 +774,10 @@ ritual_antimagic_5 = {
 
 
 pick_dispel_ritual = {
+	add_modifier = {
+		name = country_ritual_cooldown
+		days = 1
+	}
 	if = { 
 		limit = {
 			 scope:ritual_id = 1

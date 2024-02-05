@@ -505,6 +505,19 @@ types information_panel_bar_types {
 						onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope)).End)]"
 						onclick = "[InformationPanelBar.ClosePanel]"
 					}
+					textbox = {
+						parentanchor = right|top
+						position = { -2 2 }
+						autoresize = yes
+						raw_text = "#bold [GetDataModelSize(GetPlayer.MakeScope.GetList('active_ritual_id_list'))]#!"
+						visible = "[GreaterThan_int32(GetDataModelSize(GetPlayer.MakeScope.GetList('active_ritual_id_list')), '(int32)0')]"
+						align = left|nobaseline
+						using = fontsize_small
+						background = {
+							using = default_background
+							margin = { 8 5 }
+						}
+					}
 				}
 				sidebar_tooltip_area_small = {
 					position = { 0 @magic_position }

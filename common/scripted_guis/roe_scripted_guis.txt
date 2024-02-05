@@ -5,6 +5,9 @@
 	}
 	is_valid = {
 		AND = {
+			NOT = { 
+				has_modifier = country_ritual_cooldown
+			}
 			ritual_is_valid = yes
 			scope:ritual_id = {
 				custom_tooltip = {
@@ -22,6 +25,11 @@ dispel_ritual_button_effect = {
 	effect = {
 		pick_dispel_ritual = yes
 	}
+	is_valid = {
+		NOT = { 
+			has_modifier = country_ritual_cooldown
+		}
+    }
 }
 
 recalculate_ritual_lists = {
