@@ -204,15 +204,16 @@ country_ritual_artificer_5 = {
 }
 country_ritual_druidic_1 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	
+	state_infrastructure_mult = 0.05
 }
 country_ritual_druidic_2 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	
+	building_group_bg_agriculture_throughput_add = 0.05
+	building_group_bg_plantations_throughput_add = 0.05
 }
 country_ritual_druidic_3 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	
+	state_adventurer_coverage_mult = 0.1
 }
 country_ritual_druidic_4 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
@@ -232,7 +233,7 @@ country_ritual_divine_2 = {
 }
 country_ritual_divine_3 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	
+
 }
 country_ritual_divine_4 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
