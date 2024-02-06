@@ -1,4 +1,4 @@
-﻿magic_reserves_base = 100
+﻿
 
 magic_institution_level = {
 	value = 0
@@ -60,19 +60,9 @@ magic_institution_level = {
   }
 
 magic_reserves_total = {
-	value = 0
+	value = 100 #Base Value
 
-	add = magic_reserves_base
-
-	if = {
-		limit = {
-			NOT = {
-				has_law = law_type:law_mage_hunters
-			}
-		}
-		add = magic_institution_bonus
-	}
-
+	add = modifier:country_magical_reserves_add
 
   }
 

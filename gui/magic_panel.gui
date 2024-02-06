@@ -1,0 +1,846 @@
+# COPY-PASTED FOR NOW
+@panel_width_minus_10 = 530			# used to be 450
+@panel_width_minus_20 = 520
+@panel_width = 540  				# used to be 460
+@panel_width_half = 270				# used to be 230
+@panel_width_plus_10 = 550  		# used to be 470
+@panel_width_plus_14 = 554			# used to be 474
+@panel_width_plus_14_half = 277		# used to be 237
+@panel_width_plus_20 = 560			# used to be 480
+@panel_width_plus_30 = 570			# used to be 490
+@panel_width_plus_70 = 610			# used to be 530
+
+template magic_panel_visibility {
+	visible = "[And(GetVariableSystem.Exists('show_magic'), Not(InformationPanelBar.IsAnyPanelOpen()))]"
+}
+
+types magic_panel
+{
+	type magic_panel = default_block_window {
+		name = "magic_panel"
+		using = magic_panel_visibility
+
+		blockoverride "animation_state_block" {
+			state = {
+				name = _show
+				start_sound = {
+					soundeffect = "event:/SFX/UI/SideBar/companies"
+				}
+			}
+		
+			state = {
+				name = _hide
+				start_sound = {
+					soundeffect = "event:/SFX/UI/SideBar/companies_stop"
+				}
+			}
+		}
+
+		blockoverride "header_close_button" {
+			onclick = "[GetVariableSystem.Toggle('show_magic')]"
+		}
+
+		blockoverride "entire_back_button" {
+			back_button_large = {
+				position = { 8 30 }
+				onclick = "[GetVariableSystem.Toggle('show_magic')]"
+				visible = "[GetVariableSystem.Exists('show_magic')]"
+				input_action = "back"
+			}
+
+			back_button_large = {
+				position = { 8 30 }
+				onclick = "[GetVariableSystem.Toggle('show_magic')]"
+				visible = "[Not(GetVariableSystem.Exists('show_magic'))]"
+				input_action = "back"
+			}
+		}
+		
+		blockoverride "window_header_name" {
+			raw_text = "MAGIC_PANEL_HEADER"
+		}
+
+		#TOP
+		blockoverride "fixed_top"
+		{
+			### TOP PART
+			top_illu = {
+				blockoverride "illu" {
+					texture = "gfx/interface/illustrations/top_illus/top_illu_budget.dds"
+				}
+				textbox = {
+					name = "tutorial_highlight_magic_reserves"
+					parentanchor = center
+					using = fontsize_mega
+					raw_text = "@magic![AccessPlayer.MakeScope.ScriptValue('magic_reserves_total')|=+D]"
+					autoresize = yes
+					align = center|nobaseline
+					tooltip = "MAGIC_TOOLTIP"
+				}
+			}
+			
+			widget = { size = { 1 10 }}
+		}
+		
+		blockoverride "scrollarea_content"
+		{
+			flowcontainer = {
+				using = default_list_position
+				direction = vertical
+				minimumsize = { @panel_width_plus_14 -1 }
+				maximumsize = { @panel_width_plus_14 -1 }
+				datacontext = "[AccessPlayer]"
+
+				flowcontainer = {
+					visible = "[Not(GetVariableSystem.Exists('hide_current_companies'))]"
+					parentanchor = hcenter
+					direction = vertical
+					default_header_2texts = {
+						blockoverride "text1" {
+							text = "MAGICAL_RITUALS"
+						}
+						blockoverride "text2" {
+							text = "[GetDataModelSize(GetPlayer.MakeScope.GetList('active_ritual_id_list'))|0v]"
+						}
+					}
+
+					flowcontainer = {
+						direction = vertical
+						parentanchor = hcenter
+						margin = { 0 10 }
+						spacing = 10
+
+						### COMPANIES
+						flowcontainer = {
+							parentanchor = hcenter
+							minimumsize = { @panel_width -1 }
+							maximumsize = { @panel_width -1 }
+							datamodel = "[GetPlayer.MakeScope.GetList('active_ritual_id_list')]"
+							direction = vertical
+							spacing = 10
+
+							item = {
+								ritual_item = {}
+							}
+						}
+
+
+					}
+				}
+
+				# AVAILABLE COMPANIES
+				section_header_button = {
+					blockoverride "left_text" {
+						text = "AVAILABLE_RITUALS"
+					}
+
+					blockoverride "right_text" {
+						section_header_right_text = {
+							text = "[GetDataModelSize(GetPlayer.MakeScope.GetList('available_ritual_id_list'))]"
+						}
+					}
+					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Toggle('potential_rituals')]"
+					}
+					
+					blockoverride "onclick_showmore" {
+						visible = "[Not(GetVariableSystem.Exists('potential_rituals'))]"
+					}
+
+					blockoverride "onclick_showless" {
+						visible = "[GetVariableSystem.Exists('potential_rituals')]"
+					}
+				}
+
+				### ATTAINABLE COMPANIES
+				flowcontainer = {
+					parentanchor = hcenter
+					direction = vertical
+					visible = "[GetVariableSystem.Exists('potential_rituals')]"
+
+					flowcontainer = {
+						parentanchor = hcenter
+						visible = "[Not(IsDataModelEmpty(GetGlobalList('ritual_id_list')))]"
+						datamodel = "[GetPlayer.MakeScope.GetList('available_ritual_id_list')]"
+						direction = vertical
+						spacing = 5
+
+						item = {
+							potential_ritual_item = {}
+						}
+					}
+				}		
+
+				# ATTAINABLE COMPANIES
+				section_header_button = {
+					blockoverride "left_text" {
+						text = "ATTAINABLE_RITUALS"
+					}
+
+					blockoverride "right_text" {
+						section_header_right_text = {
+							text = "[GetDataModelSize(GetPlayer.MakeScope.GetList('attainable_ritual_id_list'))]"
+						}
+					}
+					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Toggle('unavailable_rituals')]"
+					}
+					
+					blockoverride "onclick_showmore" {
+						visible = "[Not(GetVariableSystem.Exists('unavailable_rituals'))]"
+					}
+
+					blockoverride "onclick_showless" {
+						visible = "[GetVariableSystem.Exists('unavailable_rituals')]"
+					}
+				}
+
+				### POTENTIAL COMPANIES
+				flowcontainer = {
+					parentanchor = hcenter
+					direction = vertical
+					visible = "[GetVariableSystem.Exists('unavailable_rituals')]"
+
+					flowcontainer = {
+						parentanchor = hcenter
+						visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('attainable_ritual_id_list')))]"
+						datamodel = "[GetPlayer.MakeScope.GetList('attainable_ritual_id_list')]"
+						direction = vertical
+						spacing = 5
+
+						item = {
+							potential_ritual_item = {}
+						}
+					}
+				}			
+			}
+		}
+	}
+
+	type ritual_item = container {
+
+		flowcontainer = {
+			direction = vertical
+			minimumsize = { @panel_width -1 }		
+			maximumsize = { @panel_width -1 }
+			margin = { 10 10 }
+			spacing = 5		
+			margin_top = 3
+			
+			background = {
+					using = simple_frame
+			}
+
+			tooltipwidget = {
+				FancyTooltip_Company = {}
+			}
+
+			container = {
+				minimumsize = { 536 -1 }
+				parentanchor = hcenter
+
+				flowcontainer = {
+					minimumsize = { @panel_width_minus_10 -1 }
+					parentanchor = vcenter
+					spacing = 5
+					margin_left = 10
+
+					background = {
+						using = fade_right_simple
+					}
+
+					flowcontainer = {
+						direction = vertical
+						margin_top = 2
+						margin_bottom = 2
+
+						textbox = {
+							minimumsize = { 450 -1 }
+							maximumsize = { 450 -1 }
+							autoresize = yes
+							multiline = no
+							fontsize_min = 12
+							elide = right
+							text = "RITUAL_NAME"
+							default_format = "#header"
+							using = fontsize_large
+							using = ritual_item_text
+						}
+
+						textbox = {
+							minimumsize = { 450 -1 }
+							maximumsize = { 450 -1 }
+							autoresize = yes
+							multiline = no
+							fontsize_min = 12
+							elide = right
+							text = "COMPANY_ESTABLISHED"
+							using = ritual_item_text
+						}
+					}
+				}	
+			}
+
+			flowcontainer = {
+				spacing = 10
+
+				flowcontainer = {
+					direction = vertical
+					parentanchor = vcenter
+
+					icon = {
+						size = { 130 130 }
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1')]"
+						texture = "gfx/interface/icons/rituals/druid_leaf.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+					}
+					icon = {
+						size = { 130 130 }
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)6')]"
+						texture = "gfx/interface/icons/rituals/druid_leaf.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)7')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)8')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/druid_thorns.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)9')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)10')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+					}
+					icon = {
+						size = { 130 130 }
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)11')]"
+						texture = "gfx/interface/icons/rituals/druid_leaf.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)12')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)13')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)14')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)15')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+					}
+					icon = {
+						size = { 130 130 }
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)16')]"
+						texture = "gfx/interface/icons/rituals/druid_leaf.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)17')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)18')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)19')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)20')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+					}
+					icon = {
+						size = { 130 130 }
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)21')]"
+						texture = "gfx/interface/icons/rituals/druid_leaf.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)22')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)23')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)24')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)25')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+					}
+					icon = {
+						size = { 130 130 }
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)26')]"
+						texture = "gfx/interface/icons/rituals/druid_leaf.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)27')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)28')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)29')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)30')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+					}
+
+					button = {
+						using = default_button_primary_action
+						size = { 130 40 }
+						text = "DISPEL_RITUAL"
+						datacontext = "[GetScriptedGui('dispel_ritual_button_effect')]"
+						onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id', MakeScopeValue(Scope.GetValue)).End)]"
+						enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id', MakeScopeValue(Scope.GetValue)).End)]"
+						tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id', MakeScopeValue(Scope.GetValue)).End)]"
+					}
+				}
+
+				flowcontainer = {
+					direction = vertical
+					parentanchor = vcenter
+					minimumsize = { 380 -1 }
+					maximumsize = { 380 -1 }
+					margin = { 10 10 }
+					spacing = 4
+					datacontext = "[GetScriptedGui('cast_ritual_description')]"
+	
+					background = {
+						texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rice.dds"
+					}
+	
+					background = {
+						visible =  "[And(GreaterThan_int32(FixedPointToInt(Scope.GetValue), '(int32)0'), LessThanOrEqualTo_int32(FixedPointToInt(Scope.GetValue), '(int32)5'))]"
+						texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rye.dds"
+					}
+	
+					background = {
+						visible =  "[And(GreaterThan_int32(FixedPointToInt(Scope.GetValue), '(int32)5'), LessThanOrEqualTo_int32(FixedPointToInt(Scope.GetValue), '(int32)10'))]"
+						texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_corn.dds"
+					}
+	
+					background = {
+						visible =  "[And(GreaterThan_int32(FixedPointToInt(Scope.GetValue), '(int32)10'), LessThanOrEqualTo_int32(FixedPointToInt(Scope.GetValue), '(int32)15'))]"
+						texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+					}
+	
+					background = {
+						visible =  "[And(GreaterThan_int32(FixedPointToInt(Scope.GetValue), '(int32)15'), LessThanOrEqualTo_int32(FixedPointToInt(Scope.GetValue), '(int32)20'))]"
+						texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+					}
+	
+					background = {
+						visible =  "[And(GreaterThan_int32(FixedPointToInt(Scope.GetValue), '(int32)20'), LessThanOrEqualTo_int32(FixedPointToInt(Scope.GetValue), '(int32)25'))]"
+						texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
+					}
+	
+					background = {
+						visible =  "[And(GreaterThan_int32(FixedPointToInt(Scope.GetValue), '(int32)25'), LessThanOrEqualTo_int32(FixedPointToInt(Scope.GetValue), '(int32)30'))]"
+						texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+					}
+
+					background = {
+						using = entry_bg_simple
+					}
+				
+					textbox = {				
+						text = "RITUAL_DESC"
+						tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
+						using = ritual_item_text
+						margin_top = 5
+					}	
+	
+					textbox = {				
+						text = "[ScriptedGui.ExecuteTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id', MakeScopeValue(Scope.GetValue)).End)]"
+						tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
+						using = ritual_item_text
+						margin_top = 5
+					}	
+	
+					widget = { size = { 5 5 } }
+	
+					textbox = {
+						text = "RITUAL_SOURCE"
+						using = ritual_item_text
+					}			
+					
+					textbox = {
+						fontsize_min = 12
+						autoresize = yes
+						multiline = no
+						elide = right
+						text = "RITUAL_COST"
+						using = ritual_item_text
+					}
+				}
+			}
+			
+		}		
+	}
+	
+	type potential_ritual_item = flowcontainer {
+		direction = vertical
+		minimumsize = { @panel_width -1 }		
+		maximumsize = { @panel_width -1 }
+		margin = { 10 10 }
+		margin_top = 3
+		spacing = 5		
+			
+		background = {
+			using = simple_frame
+		}
+
+		tooltipwidget = {
+			FancyTooltip_CompanyType = {
+				datacontext = "[GetPlayer]"
+			}
+		}
+
+		container = {
+			minimumsize = { 536 -1 }
+			parentanchor = hcenter
+
+			flowcontainer = {
+				minimumsize = { 536 -1 }
+				parentanchor = vcenter
+				spacing = 5
+				margin_left = 10
+				margin_top = 2
+				margin_bottom = 2
+
+				background = {
+					using = fade_right_simple
+				}
+
+				textbox = {
+					text = "RITUAL_NAME"
+					default_format = "#header"
+					autoresize = yes
+					multiline = no
+					using = fontsize_large
+					using = ritual_item_text
+					margin_bottom = 5
+				}	
+			}	
+		}
+
+		flowcontainer = {
+			spacing = 10
+
+			# COMPANY LOGO
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				icon = {
+					size = { 130 130 }
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1')]"
+					texture = "gfx/interface/icons/rituals/druid_leaf.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2')]"
+					size = { 130 130 }
+					texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3')]"
+					size = { 130 130 }
+					texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4')]"
+					size = { 130 130 }
+					texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5')]"
+					size = { 130 130 }
+					texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+				}
+				icon = {
+					size = { 130 130 }
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)6')]"
+					texture = "gfx/interface/icons/rituals/druid_leaf.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)7')]"
+					size = { 130 130 }
+					texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)8')]"
+					size = { 130 130 }
+					texture = "gfx/interface/icons/rituals/druid_thorns.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)9')]"
+					size = { 130 130 }
+					texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)10')]"
+					size = { 130 130 }
+					texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+				}
+				icon = {
+					size = { 130 130 }
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)11')]"
+					texture = "gfx/interface/icons/rituals/druid_leaf.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)12')]"
+					size = { 130 130 }
+					texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)13')]"
+					size = { 130 130 }
+					texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)14')]"
+					size = { 130 130 }
+					texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)15')]"
+					size = { 130 130 }
+					texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+				}
+				icon = {
+					size = { 130 130 }
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)16')]"
+					texture = "gfx/interface/icons/rituals/druid_leaf.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)17')]"
+					size = { 130 130 }
+					texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)18')]"
+					size = { 130 130 }
+					texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)19')]"
+					size = { 130 130 }
+					texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)20')]"
+					size = { 130 130 }
+					texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+				}
+				icon = {
+					size = { 130 130 }
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)21')]"
+					texture = "gfx/interface/icons/rituals/druid_leaf.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)22')]"
+					size = { 130 130 }
+					texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)23')]"
+					size = { 130 130 }
+					texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)24')]"
+					size = { 130 130 }
+					texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)25')]"
+					size = { 130 130 }
+					texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+				}
+				icon = {
+					size = { 130 130 }
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)26')]"
+					texture = "gfx/interface/icons/rituals/druid_leaf.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)27')]"
+					size = { 130 130 }
+					texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)28')]"
+					size = { 130 130 }
+					texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)29')]"
+					size = { 130 130 }
+					texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)30')]"
+					size = { 130 130 }
+					texture = "gfx/interface/icons/rituals/druid_cloud.dds"
+				}
+                button = {
+					using = default_button_primary_action
+                    size = { 130 40 }
+                    text = "CAST_RITUAL"
+                    datacontext = "[GetScriptedGui('cast_ritual_button_effect')]"
+                    onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id', MakeScopeValue(Scope.GetValue)).End)]"
+                    enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id', MakeScopeValue(Scope.GetValue)).End)]"
+                    tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id', MakeScopeValue(Scope.GetValue)).End)]"
+                }
+			}
+
+			# COMPANY DETAILS
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				minimumsize = { 380 -1 }
+				maximumsize = { 380 -1 }
+				margin = { 10 10 }
+				spacing = 4
+				datacontext = "[GetScriptedGui('cast_ritual_description')]"
+
+				background = {
+					texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rice.dds"
+				}
+
+				background = {
+					visible =  "[And(GreaterThan_int32(FixedPointToInt(Scope.GetValue), '(int32)0'), LessThanOrEqualTo_int32(FixedPointToInt(Scope.GetValue), '(int32)5'))]"
+					texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rye.dds"
+				}
+
+				background = {
+					visible =  "[And(GreaterThan_int32(FixedPointToInt(Scope.GetValue), '(int32)5'), LessThanOrEqualTo_int32(FixedPointToInt(Scope.GetValue), '(int32)10'))]"
+					texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_corn.dds"
+				}
+
+				background = {
+					visible =  "[And(GreaterThan_int32(FixedPointToInt(Scope.GetValue), '(int32)10'), LessThanOrEqualTo_int32(FixedPointToInt(Scope.GetValue), '(int32)15'))]"
+					texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+				}
+
+				background = {
+					visible =  "[And(GreaterThan_int32(FixedPointToInt(Scope.GetValue), '(int32)15'), LessThanOrEqualTo_int32(FixedPointToInt(Scope.GetValue), '(int32)20'))]"
+					texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+				}
+
+				background = {
+					visible =  "[And(GreaterThan_int32(FixedPointToInt(Scope.GetValue), '(int32)20'), LessThanOrEqualTo_int32(FixedPointToInt(Scope.GetValue), '(int32)25'))]"
+					texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
+				}
+
+				background = {
+					visible =  "[And(GreaterThan_int32(FixedPointToInt(Scope.GetValue), '(int32)25'), LessThanOrEqualTo_int32(FixedPointToInt(Scope.GetValue), '(int32)30'))]"
+					texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+				}
+			
+				background = {
+					using = entry_bg_simple
+				}
+
+				textbox = {				
+					text = "RITUAL_DESC"
+					tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
+					using = ritual_item_text
+					margin_top = 5
+				}	
+
+				textbox = {				
+					text = "[ScriptedGui.ExecuteTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
+					using = ritual_item_text
+					margin_top = 5
+				}	
+
+				widget = { size = { 5 5 } }
+
+				textbox = {
+					text = "RITUAL_SOURCE"
+					using = ritual_item_text
+				}			
+				
+				textbox = {
+					fontsize_min = 12
+					autoresize = yes
+					multiline = no
+					elide = right
+					text = "RITUAL_COST"
+					using = ritual_item_text
+				}	
+			}		
+		}		
+	}
+}
+
+template ritual_item_text {
+	align = nobaseline
+	autoresize = yes
+	maximumsize = { 350 -1 }
+	multiline = yes
+}
+
+template companies_header_texts {
+	minimumsize = { @panel_width_plus_14 -1 }
+	maximumsize = { @panel_width_plus_14 -1 }
+	autoresize = yes
+	multiline = yes
+	align = hcenter|nobaseline
+	parentanchor = hcenter
+}
+
