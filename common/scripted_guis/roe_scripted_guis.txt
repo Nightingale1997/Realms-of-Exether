@@ -1,7 +1,12 @@
 ﻿cast_ritual_button_effect = {
 	saved_scopes = { ritual_id }
 	effect = {
+		add_modifier = {
+			name = country_ritual_cooldown
+			days = 1
+		}
 		pick_ritual = yes
+		pick_ritual_cost = yes
 	}
 	is_valid = {
 		AND = {
@@ -18,6 +23,13 @@
 		}
        
     }
+}
+
+cast_ritual_description = {
+	saved_scopes = { ritual_id }
+	effect = {
+		pick_ritual = yes
+	}
 }
 
 dispel_ritual_button_effect = {

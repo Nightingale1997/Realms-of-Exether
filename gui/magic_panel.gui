@@ -316,8 +316,9 @@ types magic_panel
 					minimumsize = { 380 -1 }
 					maximumsize = { 380 -1 }
 					margin = { 10 10 }
-					spacing = 8
-
+					spacing = 4
+					datacontext = "[GetScriptedGui('cast_ritual_description')]"
+	
 					background = {
 						texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rice.dds"
 					}
@@ -357,21 +358,14 @@ types magic_panel
 					}
 				
 					textbox = {				
-						text = "Test"
+						text = "RITUAL_DESC"
 						tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
 						using = ritual_item_text
 						margin_top = 5
 					}	
 	
 					textbox = {				
-						text = "Test"
-						tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
-						using = ritual_item_text
-						margin_top = 5
-					}	
-	
-					textbox = {				
-						text = "Test"
+						text = "[ScriptedGui.ExecuteTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id', MakeScopeValue(Scope.GetValue)).End)]"
 						tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
 						using = ritual_item_text
 						margin_top = 5
@@ -390,20 +384,6 @@ types magic_panel
 						multiline = no
 						elide = right
 						text = "RITUAL_COST"
-						using = ritual_item_text
-					}	
-					
-
-
-					textbox = {				
-						text = "COMPANY_PRODUCTIVITY"
-						using = ritual_item_text
-					}			
-			
-					
-					textbox = {
-						text = "COMPANY_PROSPERITY_MODIFIER"
-						alpha = "[TransparentIfFalse(Company.ProvidesProsperityBonus)]"
 						using = ritual_item_text
 					}
 				}
@@ -494,6 +474,7 @@ types magic_panel
 				maximumsize = { 380 -1 }
 				margin = { 10 10 }
 				spacing = 4
+				datacontext = "[GetScriptedGui('cast_ritual_description')]"
 
 				background = {
 					texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rice.dds"
@@ -534,21 +515,14 @@ types magic_panel
 				}
 
 				textbox = {				
-					text = "Test"
+					text = "RITUAL_DESC"
 					tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
 					using = ritual_item_text
 					margin_top = 5
 				}	
 
 				textbox = {				
-					text = "Test"
-					tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
-					using = ritual_item_text
-					margin_top = 5
-				}	
-
-				textbox = {				
-					text = "Test"
+					text = "[ScriptedGui.ExecuteTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id', MakeScopeValue(Scope.GetValue)).End)]"
 					tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
 					using = ritual_item_text
 					margin_top = 5
