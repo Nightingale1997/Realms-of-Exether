@@ -1,1 +1,28 @@
-﻿
+﻿AKB = {
+	pattern = "pattern_solid.tga"
+	color1 = "black"
+
+	colored_emblem = {
+		texture = "ce_roe_aztec.dds"
+		color1 = "red"
+		color2 = "yellow"
+		color3 = "blue"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}	
+
+}
+
+
+VIP = {
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_roe_script_numbers.dds"
+		color1 = "green"
+		color2 = "purple"
+		color3 = "red"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}	
+
+}

@@ -328,3 +328,69 @@ EBR = {
 	}	
 
 }
+
+CDW = {
+	pattern = "pattern_solid.tga"
+	color1 = "orange"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = "white"
+		color2 = "orange"
+		color3 = "red"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}	
+
+	colored_emblem = {
+		texture = "ce_bicolor_left_third.dds"
+		color1 = "black"
+		color2 = "yellow"
+		color3 = "blue"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}	
+
+	
+	colored_emblem = {
+		texture = "ce_crossed_kris_daggers.dds"
+		color1 = "white"
+		color2 = "yellow"
+		color3 = "blue"
+		instance = { scale = { 0.5 0.5 } position = { 0.175 0.5 } }	
+	}	
+
+	colored_emblem = {
+		texture = "ce_star_04.dds"
+		color1 = "white"
+		color2 = "yellow"
+		color3 = "blue"
+		instance = { scale = { 0.1 0.1 } position = { 0.075 0.5 } }	
+		instance = { scale = { 0.1 0.1 } position = { 0.275 0.5 } }	
+		instance = { scale = { 0.1 0.1 } position = { 0.175 0.35 } }	
+		instance = { scale = { 0.1 0.1 } position = { 0.175 0.7 } }	
+	}	
+
+}
+
+FTH = {
+	pattern = "pattern_solid.tga"
+	color1 = "yellow_light"
+
+
+	colored_emblem = {
+		texture = "ce_border_compony.dds"
+		color1 = "red"
+		color2 = "green"
+		color3 = "red_light"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}	
+
+	colored_emblem = {
+		texture = "ce_cornucopias.dds"
+		color1 = "brown_light"
+		color2 = "green"
+		color3 = "red_light"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}	
+
+	
+}

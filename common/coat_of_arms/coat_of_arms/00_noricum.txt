@@ -183,19 +183,200 @@ YAN = {
 #Zakoniw
 ZKW = {
 	pattern = "pattern_solid.tga"
-	color1 = "green_light"
+	color1 = "green_dark"
 
 	colored_emblem = {
 		texture = "ce_fusang.dds"
 		color1 = "white"
-		color2 = "orange"
+		color2 = "brown"
 		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
 	}	
 
 	colored_emblem = {
 		texture = "ce_roe_swords.dds"
-		color1 = "orange"
+		color1 = "brown_light"
 		color2 = "orange"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}	
+
+	
+}
+
+
+FOX = {
+	pattern = "pattern_solid.tga"
+	color1 = "black"
+	
+	colored_emblem = {
+		texture = "ce_tricolor_vertical.dds"
+		color1 = "white"
+		color2 = "yellow"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}	
+
+
+	colored_emblem = {
+		texture = "ce_shield_accolade_03.dds"
+		color1 = "black"
+		color2 = "white"
+		color3 = "white"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}	
+
+	colored_emblem = {
+		texture = "ce_deer.dds"
+		color1 = "white"
+		color2 = "white"
+		color3 = "white"
+		instance = { scale = { 0.5 0.5 } position = { 0.5 0.5 } }	
+	}	
+
+}
+
+ABR = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+
+	colored_emblem = {
+		texture = "ce_frame_square.dds"
+		color1 = "sapphire"
+		instance = { scale = { 1 2 } position = { 0.7 1.15 }  rotation = 63 }	
+	}	
+
+	colored_emblem = {
+		texture = "ce_crancelin.dds"
+		color1 = "yellow"
+		color2 = "purple"
+		color3 = "purple"
+		instance = { scale = { -1 1 } position = { 0.5 0.5 } }	
+	}	
+
+	colored_emblem = {
+		texture = "ce_roe_dumonian_dragon.dds"
+		color1 = "yellow"
+		color2 = "orange"
+		instance = { scale = { 0.3 0.3 } position = { 0.2 0.25 } }	
+	}
+
+	colored_emblem = {
+		texture = "ce_swan.dds"
+		color1 = "white"
+		color2 = "orange"
+		instance = { scale = { -0.5 0.5 } position = { 0.825 0.725 } }	
+	}
+
+
+	
+}
+
+RVC = {
+	pattern = "pattern_solid.tga"
+	color1 = "black"
+
+	colored_emblem = {
+		texture = "ce_flag_flame_cross_2c.dds"
+		color1 = "purple"
+		color2 = "black"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}	
+
+	colored_emblem = {
+		texture = "ce_coa_pointed_round_base.dds"
+		color1 = "red"
+		color2 = "black"
+		color3 = "grey"
+		instance = { scale = { 0.65 0.6 } position = { 0.5 0.5 } }	
+	}	
+
+	colored_emblem = {
+		texture = "ce_emblem_eagle_wenceslas_base.dds"
+		color1 = "black"
+		color2 = "yellow"
+		color3 = "grey"
+		instance = { scale = { 0.5 0.5 } position = { 0.5 0.5 } }	
+	}	
+
+	
+}
+
+DOV = {
+	pattern = "pattern_solid.tga"
+	color1 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_tricolor_fimbriated_large.dds"
+		color1 = "blue_light"
+		color2 = "white"
+		color3 = "blue_light"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}	
+
+	colored_emblem = {
+		texture = "ce_emblem_dove_with_branch.dds"
+		color1 = "white"
+		color2 = "green"
+		instance = { scale = { 0.4 0.4 } position = { 0.5 0.5 } }	
+	}	
+
+	
+}
+
+DRK = {
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_checker_06.dds"
+		color1 = "blue"
+		color2 = "white"
+		color3 = "blue_light"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}	
+
+	colored_emblem = {
+		texture = "ce_shield_accolade_02.dds"
+		color1 = "red"
+		color2 = "white"
+		instance = { scale = { 0.9 1 } position = { 0.5 0.5 } }	
+	}	
+
+
+	colored_emblem = {
+		texture = "ce_castle.dds"
+		color1 = "white"
+		color2 = "blue"
+		instance = { scale = { 0.5 0.5 } position = { 0.5 0.5 } }	
+	}	
+
+	
+}
+
+
+
+PTD = {
+	pattern = "pattern_solid.tga"
+	color1 = "green_light"
+
+	colored_emblem = {
+		texture = "ce_wildman.dds"
+		color1 = "beige"
+		color2 = "brown"
+		color3 = "green"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}	
+
+	
+}
+
+LEL = {
+	pattern = "pattern_solid.tga"
+	color1 = "black"
+
+	colored_emblem = {
+		texture = "ce_dalship.dds"
+		color1 = "white"
+		color2 = "brown"
+		color3 = "green"
 		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
 	}	
 
