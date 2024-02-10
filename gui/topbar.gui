@@ -36,6 +36,17 @@ types topbar_components
 					using = Animation_Curve_Default
 				}
 			}
+
+			icon = {
+				size = { 500 333 }
+				# Using medium size textures in small flag for better downscaling of flag details
+				texture = "[Country.GetFlag.GetLargeFlagTexture]"
+				frame = "[Country.GetFlag.GetLargeFlagFrame]"
+				framesize = "[GetLargeFlagFrameSize]"
+				using = flag_overlay
+				
+
+			}
 			
 			background = {
 				using = dark_area_rounded
