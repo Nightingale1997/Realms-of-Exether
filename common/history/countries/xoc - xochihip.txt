@@ -1,0 +1,16 @@
+﻿COUNTRIES = {
+	c:XOC = {
+		ig:ig_landowners = {
+			add_ruling_interest_group = yes
+		}
+		
+		effect_starting_technology_tier_3_tech = yes
+		
+		effect_starting_politics_conservative = yes
+		activate_law = law_type:law_women_own_property
+		activate_law = law_type:law_legacy_slavery
+
+		set_tax_level = medium
+		
+	}
+}
