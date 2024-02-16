@@ -231,40 +231,40 @@ BUILDINGS = {
 	
 	}
 
-	s:STATE_ANANDAVATI = {
-		region_state:SAP={
-			create_building={
-				building="building_textile_mills"
-				level=1
-				reserves=1
-				activate_production_methods={ "pm_handsewn_clothes" "pm_merchant_guilds_building_textile_mills" "pm_traditional_looms" "pm_no_luxury_clothes" }
-			}
-			create_building={
-				building="building_gold_mine"
-				level=2
-				reserves=1
-				activate_production_methods={ "pm_picks_and_shovels_building_gold_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" "pm_merchant_guilds_building_gold_mine" }
-			}			
-			create_building={
-				building="building_coffee_plantation"
-				level=4
-				reserves=1
-				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
-			}
-			create_building={
-				building="building_dye_plantation"
-				level=5
-				reserves=1
-				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
-			}
-			create_building={
-				building="building_barracks"
-				level=5
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
-			}
-		}
-	}
+#	s:STATE_ANANDAVATI = {
+#		region_state:SAP={
+#			create_building={
+#				building="building_textile_mills"
+#				level=1
+#				reserves=1
+#				activate_production_methods={ "pm_handsewn_clothes" "pm_merchant_guilds_building_textile_mills" "pm_traditional_looms" "pm_no_luxury_clothes" }
+#			}
+#			create_building={
+#				building="building_gold_mine"
+#				level=2
+#				reserves=1
+#				activate_production_methods={ "pm_picks_and_shovels_building_gold_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" "pm_merchant_guilds_building_gold_mine" }
+#			}			
+#			create_building={
+#				building="building_coffee_plantation"
+#				level=4
+#				reserves=1
+#				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+#			}
+#			create_building={
+#				building="building_dye_plantation"
+#				level=5
+#				reserves=1
+#				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+#			}
+#			create_building={
+#				building="building_barracks"
+#				level=5
+#				reserves=1
+#				activate_production_methods={ "pm_no_organization" }
+#			}
+#		}
+#	}
 
 	s:STATE_CHINTANAGIRI = {
 		region_state:WLR={
@@ -691,34 +691,34 @@ BUILDINGS = {
 	
 	}
 
-	s:STATE_BULARRANG = {
-		region_state:JIV={
-			create_building={
-				building="building_government_administration"
-				level=1
-				reserves=1
-				activate_production_methods={ "pm_simple_organization" }
-			}
-			create_building={
-				building="building_glassworks"
-				level=2
-				reserves=1
-				activate_production_methods={ "pm_forest_glass" "pm_merchant_guilds_building_glassworks" "pm_manual_glassblowing" "pm_ceramics" }
-			}
-			create_building={
-				building="building_dye_plantation"
-				level=12
-				reserves=1
-				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
-			}
-			create_building={
-				building="building_barracks"
-				level=20
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
-			}
-		}
-	}
+#	s:STATE_BULARRANG = {
+#		region_state:JIV={
+#			create_building={
+#				building="building_government_administration"
+#				level=1
+#				reserves=1
+#				activate_production_methods={ "pm_simple_organization" }
+#			}
+#			create_building={
+#				building="building_glassworks"
+#				level=2
+#				reserves=1
+#				activate_production_methods={ "pm_forest_glass" "pm_merchant_guilds_building_glassworks" "pm_manual_glassblowing" "pm_ceramics" }
+#			}
+#			create_building={
+#				building="building_dye_plantation"
+#				level=12
+#				reserves=1
+#				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+#			}
+#			create_building={
+#				building="building_barracks"
+#				level=20
+#				reserves=1
+#				activate_production_methods={ "pm_no_organization" }
+#			}
+#		}
+#	}
 
 	s:STATE_DANKASEMBE = {
 	
