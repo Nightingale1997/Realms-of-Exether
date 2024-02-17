@@ -220,7 +220,6 @@ STATE_CHINTANAGIRI = {
     }
     naval_exit_id = 3066
 }
-
 #STATE_PRABUDHYAMANA = {
 #    id = 4850
 #    subsistence_building = "building_subsistence_orchards"
@@ -528,7 +527,6 @@ STATE_WARRANGBANU = {
     port = xDEE692
     naval_exit_id = 3066
 }
-
 #STATE_BULARRANG = {
 #    id = 4872
 #    subsistence_building = "building_subsistence_rice_paddies"
@@ -991,7 +989,7 @@ STATE_PULIKOTSK = {
 STATE_TERMEZSK = {
     id = 4927
     subsistence_building = "building_subsistence_rice_paddies"
-    provinces = { "x40FEC7" "x8BFC73" "x9DDDEC" "xA1A6D6" "xA2FBF5" "xCE8AB4" "xCE96A6" "xCEEE9A" "xEDADDE" "xF5BDF4" }
+    provinces = { "x40FEC7" "x8BFC73" "x9DDDEC" "xA1A6D6" "xA2FBF5" "xCE8AB4" "xCE96A6" "xCEEE9A" "xDBC9B1" "xEDADDE" "xF5BDF4" }
     city = x8BFC73
     wood = xA2FBF5
     farm = xCE96A6
@@ -1045,17 +1043,7 @@ STATE_ANDIZHANSK = {
     port = xDF997E
     naval_exit_id = 3066
 }
-STATE_BAMIANOV = {
-    id = 4932
-    subsistence_building = "building_subsistence_rice_paddies"
-    provinces = { "xDBC9B1" }
-    city = x40FEC7
-    wood = x9DDDEC
-    farm = xA1A6D6
-    mine = xCE8AB4
-    port = xCEEE9A
-    naval_exit_id = 3066
-}
+
 STATE_RUKHAM = {
     id = 4933
     subsistence_building = "building_subsistence_pastures"
