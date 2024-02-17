@@ -289,22 +289,22 @@ BUILDINGS = {
 		}
 	}
 
-	s:STATE_PRABUDHYAMANA = {
-		region_state:AKB={
-			create_building={
-				building="building_tea_plantation"
-				level=1
-				reserves=1
-				activate_production_methods={ "default_building_tea_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
-			}
-			create_building={
-				building="building_barracks"
-				level=5
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
-			}
-		}
-	}
+#	s:STATE_PRABUDHYAMANA = {
+#		region_state:AKB={
+#			create_building={
+#				building="building_tea_plantation"
+#				level=1
+#				reserves=1
+#				activate_production_methods={ "default_building_tea_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+#			}
+#			create_building={
+#				building="building_barracks"
+#				level=5
+#				reserves=1
+#				activate_production_methods={ "pm_no_organization" }
+#			}
+#		}
+#	}
 
 	s:STATE_ANUTTARAPUR = {
 		region_state:SAP={
@@ -687,10 +687,6 @@ BUILDINGS = {
 	
 	}
 
-	s:STATE_BANUBABU = {
-	
-	}
-
 #	s:STATE_BULARRANG = {
 #		region_state:JIV={
 #			create_building={
@@ -724,23 +720,7 @@ BUILDINGS = {
 	
 	}
 
-	s:STATE_CRESI = {
-	
-	}
-
 	s:STATE_TSEGYALNIPIY = {
-	
-	}
-
-	s:STATE_LHAMOOSKIWAN = {
-	
-	}
-
-	s:STATE_DHARMASHALAPIMIY = {
-	
-	}
-
-	s:STATE_SAKYAASKIY = {
 	
 	}
 
@@ -764,19 +744,11 @@ BUILDINGS = {
 	
 	}
 
-	s:STATE_YAMYAM = {
-	
-	}
-
 	s:STATE_NAMTSOOSKIWAN = {
 	
 	}
 
 	s:STATE_SHIGATSENIPIY = {
-	
-	}
-
-	s:STATE_DHACREE = {
 	
 	}
 
@@ -793,10 +765,6 @@ BUILDINGS = {
 	}
 
 	s:STATE_ARIMOS = {
-	
-	}
-
-	s:STATE_GREGAN = {
 	
 	}
 
