@@ -100,14 +100,6 @@ s:STATE_SUKHIBHAVA = {
 add_homeland = cu:awakened
 }
 
-s:STATE_ANANDAVATI = {
-	create_state = {
-		country = c:SAP
-		owned_provinces = { "x46FEC5" "x8185F7" "x93B4C3" "xC1B8EF" "xD3DE71" }
-}
-add_homeland = cu:gulf_naga
-}
-
 s:STATE_CHINTANAGIRI = {
 	create_state = {
 		country = c:WLR
@@ -115,14 +107,6 @@ s:STATE_CHINTANAGIRI = {
 }
 add_homeland = cu:jungle_naga
 add_homeland = cu:awakened
-}
-
-s:STATE_PRABUDHYAMANA = {
-	create_state = {
-		country = c:AKB
-		owned_provinces = { "x80DAED" "x83C2B1" "xA8BBE4" "xBAE1D5" "xEE7B8D" "xF0FC34" }
-}
-add_homeland = cu:jungle_naga
 }
 
 s:STATE_ANUTTARAPUR = {
@@ -261,22 +245,6 @@ s:STATE_WARRANGBANU = {
 add_homeland = cu:awakened
 }
 
-s:STATE_BANUBABU = {
-	create_state = {
-		country = c:NWU
-		owned_provinces = { "xBBEE67" "xCF6CFE" "xEAEA6E" "xF93DCC" "xFB7394" }
-}
-add_homeland = cu:awakened
-}
-
-s:STATE_BULARRANG = {
-	create_state = {
-		country = c:JIV
-		owned_provinces = { "xA1F265" "xD9D9F9" "xEB9482" "xFEE069" }
-}
-add_homeland = cu:gulf_naga
-}
-
 s:STATE_DANKASEMBE = {
 	create_state = {
 		country = c:NWU
@@ -285,42 +253,10 @@ s:STATE_DANKASEMBE = {
 add_homeland = cu:awakened
 }
 
-s:STATE_CRESI = {
-	create_state = {
-		country = c:SSC
-		owned_provinces = { "x5FC6F8" "x8AC3D6" "x8EE8D6" "xC7E993" "xCEA4D4" "xF0A069" "xF751C9" }
-}
-add_homeland = cu:navrozdok
-}
-
 s:STATE_TSEGYALNIPIY = {
 	create_state = {
 		country = c:IZA
 		owned_provinces = { "x9BF678" "xA7EDD1" "xB4F1A0" "xB8C7D8" "xBE6EE2" "xCA8FA2" "xD04EFE" "xD57FCF" "xD5C6F2" "xDAED53" "xDBAAE9" "xEFB0E9" "xF3679B" "xF482FB" }
-}
-add_homeland = cu:navrozdok
-}
-
-s:STATE_LHAMOOSKIWAN = {
-	create_state = {
-		country = c:ZOM
-		owned_provinces = { "x64D2FD" "x6AE4C3" "xA5E6B9" "xA6D59F" "xABF5A5" "xEE9CD2" "xF2BCAB" }
-}
-add_homeland = cu:navrozdok
-}
-
-s:STATE_DHARMASHALAPIMIY = {
-	create_state = {
-		country = c:SEK
-		owned_provinces = { "x54CFE9" "xD0CFD9" "xD297E0" "xEE8CDD" "xFBE6F0" "xFD4DC7" }
-}
-add_homeland = cu:navrozdok
-}
-
-s:STATE_SAKYAASKIY = {
-	create_state = {
-		country = c:GAH
-		owned_provinces = { "x88E5D6" "x9992CC" "xBDC1C3" "xC776E4" "xDAED53" "xE4D9E6" "xF93FDD" }
 }
 add_homeland = cu:navrozdok
 }
@@ -365,14 +301,6 @@ s:STATE_TSURWA = {
 add_homeland = cu:navrozdok
 }
 
-s:STATE_YAMYAM = {
-	create_state = {
-		country = c:SSC
-		owned_provinces = { "xBFDEB9" "xC88CB4" "xD04EFE" "xDBAAE9" "xE076D4" }
-}
-add_homeland = cu:navrozdok
-}
-
 s:STATE_NAMTSOOSKIWAN = {
 	create_state = {
 		country = c:SEK
@@ -385,14 +313,6 @@ s:STATE_SHIGATSENIPIY = {
 	create_state = {
 		country = c:SSC
 		owned_provinces = { "x5FC6F8" "x6ED7B5" "x8EE8D6" "xB586D3" "xC7E993" "xCEA4D4" "xD5F5B3" "xE076D4" "xE4E863" "xECEE46" "xF0A069" "xF4D537" "xF98B8A" }
-}
-add_homeland = cu:navrozdok
-}
-
-s:STATE_DHACREE = {
-	create_state = {
-		country = c:ONO
-		owned_provinces = { "x44CFF2" "x9EF0CD" "xB3C096" "xC596F4" "xD6FA4C" }
 }
 add_homeland = cu:navrozdok
 }
@@ -425,14 +345,6 @@ s:STATE_ARIMOS = {
 	create_state = {
 		country = c:PAY
 		owned_provinces = { "x53FEB6" "x54CDF7" "x93B6AE" "x94D1DD" "x9ACDB8" "xB49EBC" "xC4F3F2" "xD2EDCE" }
-}
-add_homeland = cu:lusakaran
-}
-
-s:STATE_GREGAN = {
-	create_state = {
-		country = c:PAY
-		owned_provinces = { "x8CBAC2" "xB1D8FE" "xB6ADCE" "xBBEDF9" "xD5CF5C" "xE567D9" "xF29EC9" }
 }
 add_homeland = cu:lusakaran
 }
@@ -650,7 +562,7 @@ add_homeland = cu:awakened_east
 s:STATE_TERMEZSK = {
 	create_state = {
 		country = c:GAN
-		owned_provinces = { "x8BFC73" "xA2FBF5" "xCE96A6" "xEDADDE" "xF5BDF4" }
+		owned_provinces = { "x40FEC7" "x8BFC73" "x9DDDEC" "xA1A6D6" "xA2FBF5" "xCE8AB4" "xCE96A6" "xCEEE9A" "xDBC9B1" "xEDADDE" "xF5BDF4" }
 }
 add_homeland = cu:awakened_east
 }
@@ -683,14 +595,6 @@ s:STATE_ANDIZHANSK = {
 	create_state = {
 		country = c:AYS
 		owned_provinces = { "x4BF0BA" "x80D6EF" "xA770FC" "xADFB7B" "xBD96CE" "xC193C7" "xDF997E" "xE21CFC" "xEA97DB" "xFABCD8" "xFB7AD7" }
-}
-add_homeland = cu:awakened_east
-}
-
-s:STATE_BAMIANOV = {
-	create_state = {
-		country = c:GAN
-		owned_provinces = { "x40FEC7" "x9DDDEC" "xA1A6D6" "xCE8AB4" "xCEEE9A" "xDBC9B1" }
 }
 add_homeland = cu:awakened_east
 }

@@ -179,25 +179,25 @@ STATE_SUKHIBHAVA = {
     port = xD778E0
     naval_exit_id = 3066
 }
-STATE_ANANDAVATI = {
-    id = 4848
-    subsistence_building = "building_subsistence_rice_paddies"
-    provinces = {}
-    city = x46FEC5
-    wood = x8185F7
-    farm = x93B4C3
-    mine = xC1B8EF
-    port = xD3DE71
-    arable_land = 100
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
-    capped_resources = {
-        bg_gold_mining = 4
-        bg_iron_mining = 24
-        bg_logging = 14
-        bg_fishing = 5
-    }
-    naval_exit_id = 3024
-}
+#STATE_ANANDAVATI = {
+#    id = 4848
+#    subsistence_building = "building_subsistence_rice_paddies"
+#    provinces = {}
+#    city = x46FEC5
+#    wood = x8185F7
+#    farm = x93B4C3
+#    mine = xC1B8EF
+#    port = xD3DE71
+#    arable_land = 100
+#    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+#    capped_resources = {
+#        bg_gold_mining = 4
+#        bg_iron_mining = 24
+#        bg_logging = 14
+#        bg_fishing = 5
+#    }
+#    naval_exit_id = 3024
+#}
 STATE_CHINTANAGIRI = {
     id = 4849
     subsistence_building = "building_subsistence_rice_paddies"
@@ -220,6 +220,27 @@ STATE_CHINTANAGIRI = {
     }
     naval_exit_id = 3066
 }
+#STATE_PRABUDHYAMANA = {
+#    id = 4850
+#    subsistence_building = "building_subsistence_orchards"
+#    provinces = { "x80DAED" "x83C2B1" "xA8BBE4" "xBAE1D5" "xEE7B8D" "xF0FC34" }
+#    city = x80DAED
+#    wood = x83C2B1
+#    farm = xA8BBE4
+#    mine = xBAE1D5
+#    arable_land = 20
+#    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tea_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+#    capped_resources = {
+#        bg_coal_mining = 20
+#        bg_lead_mining = 27
+#        bg_logging = 17
+#    }
+#    resource = {
+#        type = "bg_rubber"
+#        undiscovered_amount = 2
+#    }
+#    naval_exit_id = 3066
+#}
 
 STATE_ANUTTARAPUR = {
     id = 4851
@@ -506,22 +527,21 @@ STATE_WARRANGBANU = {
     port = xDEE692
     naval_exit_id = 3066
 }
-
-STATE_BULARRANG = {
-    id = 4872
-    subsistence_building = "building_subsistence_rice_paddies"
-    provinces = {}
-    city = xA1F265
-    wood = xD9D9F9
-    farm = xEB9482
-    mine = xFEE069
-    arable_land = 250
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" }
-    capped_resources = {
-        bg_logging = 17
-    }
-    naval_exit_id = 3024
-}
+#STATE_BULARRANG = {
+#    id = 4872
+#    subsistence_building = "building_subsistence_rice_paddies"
+#    provinces = {}
+#    city = xA1F265
+#    wood = xD9D9F9
+#    farm = xEB9482
+#    mine = xFEE069
+#    arable_land = 250
+#    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" }
+#    capped_resources = {
+#        bg_logging = 17
+#    }
+#    naval_exit_id = 3024
+#}
 STATE_DANKASEMBE = {
     id = 4873
     subsistence_building = "building_subsistence_rice_paddies"
@@ -969,7 +989,7 @@ STATE_PULIKOTSK = {
 STATE_TERMEZSK = {
     id = 4927
     subsistence_building = "building_subsistence_rice_paddies"
-    provinces = { "x40FEC7" "x8BFC73" "x9DDDEC" "xA1A6D6" "xA2FBF5" "xCE8AB4" "xCE96A6" "xCEEE9A" "xEDADDE" "xF5BDF4" }
+    provinces = { "x40FEC7" "x8BFC73" "x9DDDEC" "xA1A6D6" "xA2FBF5" "xCE8AB4" "xCE96A6" "xCEEE9A" "xDBC9B1" "xEDADDE" "xF5BDF4" }
     city = x8BFC73
     wood = xA2FBF5
     farm = xCE96A6
@@ -1023,17 +1043,7 @@ STATE_ANDIZHANSK = {
     port = xDF997E
     naval_exit_id = 3066
 }
-STATE_BAMIANOV = {
-    id = 4932
-    subsistence_building = "building_subsistence_rice_paddies"
-    provinces = { "xDBC9B1" }
-    city = x40FEC7
-    wood = x9DDDEC
-    farm = xA1A6D6
-    mine = xCE8AB4
-    port = xCEEE9A
-    naval_exit_id = 3066
-}
+
 STATE_RUKHAM = {
     id = 4933
     subsistence_building = "building_subsistence_pastures"
