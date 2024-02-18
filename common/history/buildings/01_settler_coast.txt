@@ -1855,7 +1855,24 @@ BUILDINGS = {
   }
 
   s:STATE_HAZELDEEP = {
-
+	region_state:THI = {
+		create_pop = {
+			culture = astreval
+			size = 7320008
+		}
+		create_pop = {
+			culture = bossardi
+			size = 3350008
+		}
+		create_pop = {
+			culture = buramog
+			size = 32000
+		}
+		create_pop = {
+			culture = thiralian
+			size = 4000
+		}
+	}
   }
 
   s:STATE_AZURETHORN = {
