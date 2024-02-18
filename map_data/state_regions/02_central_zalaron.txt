@@ -252,6 +252,17 @@ STATE_EASTERN_EMBERLAND = {
     farm = x8FD7C4
     mine = x9AE5F2
     port = x9B8AD9
+    arable_land = 100
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 80
+        bg_iron_mining = 75
+        bg_logging = 25
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 60
+    }
     naval_exit_id = 3063
 }
 STATE_WESTERN_EMBERLAND = {
@@ -263,6 +274,12 @@ STATE_WESTERN_EMBERLAND = {
     farm = x3FD5F2
     mine = x8AD39D
     port = xA0AEC3
+    arable_land = 90
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 68
+        bg_logging = 11
+    }
     naval_exit_id = 3063
 }
 STATE_CHANSONBOIS = {
@@ -274,6 +291,11 @@ STATE_CHANSONBOIS = {
     farm = x7D98F1
     mine = x83ABE6
     port = x8988E7
+    arable_land = 200
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 18
+    }
     naval_exit_id = 3063
 }
 STATE_DRUIDS_CHANT = {
@@ -308,6 +330,11 @@ STATE_CASTLECOURT = {
     farm = x62D7CA
     mine = x69C9D8
     port = x74A2F2
+    arable_land = 165
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 25
+    }
     naval_exit_id = 3063
 }
 STATE_HAAR_FEN = {
@@ -338,6 +365,16 @@ STATE_FAERONDALE = {
     farm = x75E2C0
     mine = x7F97F3
     port = x8AE69F
+    arable_land = 150
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_iron_mining = 45
+        bg_logging = 8
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 60
+    }
     naval_exit_id = 3063
 }
 STATE_GIANTS_STRIDE = {

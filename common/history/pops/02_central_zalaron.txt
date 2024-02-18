@@ -188,15 +188,46 @@ POPS = {
   }
     
   s:STATE_EASTERN_EMBERLAND = {
-
+		region_state:FEY = {
+			create_pop = {
+				culture = erdei
+				size = 1903944
+			}
+			create_pop = {
+				culture = clearbough
+				size = 6000
+			}
+			create_pop = {
+				culture = thiralian
+				size = 20000
+			}
+		}
   }
     
   s:STATE_WESTERN_EMBERLAND = {
-
+		region_state:FEY = {
+			create_pop = {
+				culture = erdei
+				size = 1093200
+			}
+			create_pop = {
+				culture = thiralian
+				size = 164800
+			}
+		}
   }
     
   s:STATE_CHANSONBOIS = {
-
+		region_state:FEY = {
+			create_pop = {
+				culture = erdei
+				size = 3295600
+			}
+			create_pop = {
+				culture = thiralian
+				size = 228000
+			}
+		}
   }
     
   s:STATE_DRUIDS_CHANT = {
@@ -213,7 +244,24 @@ POPS = {
   }
     
   s:STATE_CASTLECOURT = {
-
+		region_state:THI = {
+			create_pop = {
+				culture = erdei
+				size = 2655124
+			}
+			create_pop = {
+				culture = thiralian
+				size = 692996
+			}
+			create_pop = {
+				culture = nuzaptan
+				size = 20000
+			}
+      create_pop = {
+				culture = rannorian
+				size = 62000
+			}
+		}
   }
     
   s:STATE_HAAR_FEN = {
@@ -226,7 +274,20 @@ POPS = {
   }
     
   s:STATE_FAERONDALE = {
-
+		region_state:FEY = {
+			create_pop = {
+				culture = erdei
+				size = 2656396
+			}
+			create_pop = {
+				culture = tefereti
+				size = 24000
+			}
+			create_pop = {
+				culture = thiralian
+				size = 35996
+			}
+		}
   }
     
   s:STATE_GIANTS_STRIDE = {

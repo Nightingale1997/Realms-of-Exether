@@ -220,11 +220,11 @@ add_homeland = cu:erdei
 
 s:STATE_CASTLECOURT = {
     create_state = {
-        country = c:FEY
+        country = c:THI
         owned_provinces = { "x1DEDFE" "x40E5DE" "x4BF5DC" "x4FFBCB" "x5DFCF9" "x62D7CA" "x69C9D8" "x74A2F2" "x82BDBD" "x84D0DA" "xA7D0A5" "xB7E69C" "xB9DAF5" "xC55CD9" "xC8F1D9" "xCCE69D" "xD156FA" "xD390AC" "xD3E3B6" "xDF9AC7" "xE49AD1" "xE5F37D" "xE9DCF7" "xEA69C5" "xEAFE77" "xEC9680" "xF0CFB6" "xF45DE2" "xF4DF84" "xF795F8" }
-}
+        state_type = unincorporated
+    }
 add_homeland = cu:erdei
-add_homeland = cu:thiralian
 }
 
 s:STATE_HAAR_FEN = {
