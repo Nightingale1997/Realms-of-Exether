@@ -1009,6 +1009,13 @@ STATE_HAZELDEEP = {
     farm = x75DDC0
     mine = x789BFE
     port = x78C7E0
+    arable_land = 80
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 44
+        bg_iron_mining = 27
+        bg_logging = 26
+    }
     naval_exit_id = 3062
 }
 STATE_AZURETHORN = {
