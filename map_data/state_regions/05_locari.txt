@@ -39,7 +39,7 @@ STATE_PANNYA = {
         type = "bg_oil_extraction"
         undiscovered_amount = 10
     }
-    naval_exit_id = 3024
+    naval_exit_id = 3058
 }
 STATE_SHANTINAGAR = {
     id = 4836
@@ -71,7 +71,7 @@ STATE_SURYANAGARI = {
     farm = xAA90D9
     mine = xC1B399
     port = xD5FCCD
-    naval_exit_id = 3066
+    naval_exit_id = 3058
 }
 STATE_BHAVANASARA = {
     id = 4838
@@ -82,7 +82,7 @@ STATE_BHAVANASARA = {
     farm = xA2C6C5
     mine = xA3C1E3
     port = xA683E5
-    naval_exit_id = 3066
+    naval_exit_id = 3058
 }
 STATE_SUKHODAYA = {
     id = 4839
@@ -104,7 +104,7 @@ STATE_BODHISATTVA = {
     farm = x94D4DD
     mine = xB7E4AA
     port = xBCA8F1
-    naval_exit_id = 3066
+    naval_exit_id = 3058
 }
 
 STATE_ANANTAPURI = {
@@ -644,7 +644,7 @@ STATE_SHIGATSENIPIY = {
     farm = xD5F5B3
     mine = xE4E863
     port = xECEE46
-    naval_exit_id = 3066
+    naval_exit_id = 3058
 }
 
 STATE_GANDENASKIY = {
@@ -689,7 +689,7 @@ STATE_ARIMOS = {
     farm = x93B6AE
     mine = x94D1DD
     port = x9ACDB8
-    naval_exit_id = 3066
+    naval_exit_id = 3012
 }
 STATE_HERMENIA = {
     id = 4896
@@ -700,7 +700,7 @@ STATE_HERMENIA = {
     farm = x99F8EE
     mine = xAFB2D4
     port = xBFCF88
-    naval_exit_id = 3066
+    naval_exit_id = 3012
 }
 STATE_DILMELIA = {
     id = 4898
@@ -749,7 +749,7 @@ STATE_KOTAYNOS = {
 STATE_YERNAGRIA = {
     id = 4902
     subsistence_building = "building_subsistence_rice_paddies"
-    provinces = { "x52F7FC" "x5CF8D1" "x6FE2FB" "x8495F6" "x86A0DB" "x92F6C6" "xA4F7D2" "xBCB0CE" "xD5E33E" "xF914F2" }
+    provinces = { "x52F7FC" "x5CF8D1" "x8495F6" "x88C1F7" "x92F6C6" "xA4F7D2" "xD0A4AB" "xE1C776" "xE5F31E" "xE81CF5" "xEEF348" "xF914F2" "xFAC8CF" "xFD19E3" }
     city = x52F7FC
     wood = x5CF8D1
     farm = x6FE2FB
@@ -777,7 +777,7 @@ STATE_ZANPIQ = {
     farm = xC259F2
     mine = xD3AAFB
     port = xD9FE4F
-    naval_exit_id = 3066
+    naval_exit_id = 3012
 }
 STATE_ELENIKAR = {
     id = 4905
@@ -793,35 +793,35 @@ STATE_ELENIKAR = {
 STATE_ARGYSTSIK = {
     id = 4906
     subsistence_building = "building_subsistence_fishing_villages"
-    provinces = { "x75F9E9" "xABCCCB" "xDA27F5" "xE0D343" "xE2F61D" "xE382DA" "xE5CF60" "xEAFBAC" "xF19382" "xF4C349" "xFE28F4" }
+    provinces = { "x75F9E9" "x7988FC" "x7AFE8E" "x8CE6C8" "xABCCCB" "xB7D0AA" "xC56FD5" "xE0D343" "xE0EF45" "xE5CF60" "xEEC77F" "xF19382" "xF4C349" "xFE28F4" }
     city = x75F9E9
     wood = xABCCCB
     farm = xDA27F5
     mine = xE0D343
     port = xE2F61D
-    naval_exit_id = 3066
+    naval_exit_id = 3012
 }
 STATE_GRAEA = {
     id = 4907
     subsistence_building = "building_subsistence_fishing_villages"
-    provinces = { "x70DDCE" "xA47AE2" "xC8F95C" "xC9B7AA" "xCEB082" "xD0A4DD" "xD1B4F1" "xEC90CC" "xF55DA5" "xF97AB4" "xFAFA5B" "xFEBD81" }
+    provinces = { "x70DDCE" "xA47AE2" "xC8F95C" "xC9B7AA" "xCEB082" "xD0A4DD" "xD1B4F1" "xDA27F5" "xE2F61D" "xE382DA" "xEC90CC" "xF55DA5" "xF97AB4" "xFAFA5B" "xFEBD81" }
     city = x70DDCE
     wood = xA47AE2
     farm = xC8F95C
     mine = xC9B7AA
     port = xCEB082
-    naval_exit_id = 3066
+    naval_exit_id = 3012
 }
 STATE_JERMENION = {
     id = 4908
     subsistence_building = "building_subsistence_rice_paddies"
-    provinces = { "x14E5FD" "x4CD3E9" "x5AB8EA" "xB4A69D" "xBACED2" "xC43EFE" "xCD43F7" "xCF82B6" "xD488A7" "xD883C6" "xDAFCC4" "xF27EB4" "xF565AD" "xF5FE31" "xF78F80" }
+    provinces = { "x14E5FD" "x4CD3E9" "x5AB8EA" "x86A0DB" "xB4A69D" "xBACED2" "xC43EFE" "xCD43F7" "xCF82B6" "xD488A7" "xD883C6" "xDAFCC4" "xF27EB4" "xF565AD" "xF5FE31" "xF78F80" }
     city = x14E5FD
     wood = x4CD3E9
     farm = x5AB8EA
     mine = xB4A69D
     port = xBACED2
-    naval_exit_id = 3066
+    naval_exit_id = 3012
 }
 STATE_ARTHERA = {
     id = 4909
@@ -832,7 +832,7 @@ STATE_ARTHERA = {
     farm = xB4D8E0
     mine = xBDF0EF
     port = xC085C6
-    naval_exit_id = 3066
+    naval_exit_id = 3012
 }
 STATE_COCOHAYAT = {
     id = 4910
@@ -843,29 +843,18 @@ STATE_COCOHAYAT = {
     farm = x73ACFB
     mine = x78E0F1
     port = x85DDC3
-    naval_exit_id = 3066
-}
-STATE_NIKA = {
-    id = 4911
-    subsistence_building = "building_subsistence_fishing_villages"
-    provinces = { "x7988FC" "x7AFE8E" "x8CE6C8" "xB7D0AA" "xC56FD5" "xE0EF45" "xEEC77F" }
-    city = x7988FC
-    wood = x7AFE8E
-    farm = x8CE6C8
-    mine = xB7D0AA
-    port = xC56FD5
-    naval_exit_id = 3066
+    naval_exit_id = 3012
 }
 STATE_HELARM = {
     id = 4912
     subsistence_building = "building_subsistence_rice_paddies"
-    provinces = { "x28DAF7" "x2EE8EE" "x58BBE2" "x62F5EC" "x65FBDC" "x93FBFD" "x95F7A4" "x99DDB5" "xD754CA" "xF465B8" "xFDEDFA" }
+    provinces = { "x28DAF7" "x2EE8EE" "x58BBE2" "x62F5EC" "x65FBDC" "x6FE2FB" "x93FBFD" "x95F7A4" "x99DDB5" "xBCB0CE" "xD754CA" "xF465B8" "xFDEDFA" }
     city = x28DAF7
     wood = x2EE8EE
     farm = x58BBE2
     mine = x62F5EC
     port = x65FBDC
-    naval_exit_id = 3066
+    naval_exit_id = 3012
 }
 STATE_MYTHOS = {
     id = 4913
@@ -876,7 +865,7 @@ STATE_MYTHOS = {
     farm = x7CD0C9
     mine = xAAC99E
     port = xBAE166
-    naval_exit_id = 3066
+    naval_exit_id = 3012
 }
 
 STATE_MOSKHAN = {
@@ -888,7 +877,7 @@ STATE_MOSKHAN = {
     farm = x9FD2EF
     mine = xAFDFDA
     port = xC7A3C0
-    naval_exit_id = 3066
+    naval_exit_id = 3024
 }
 
 STATE_TASHKAVSK = {
@@ -922,7 +911,7 @@ STATE_SAMARKH = {
     farm = xAFE19E
     mine = xB599AB
     port = xDA90A4
-    naval_exit_id = 3066
+    naval_exit_id = 3024
 }
 STATE_DUSHANBARYA = {
     id = 4920
@@ -950,7 +939,7 @@ STATE_MAZAROV = {
     farm = xCABB9B
     mine = xCF38F2
     port = xE1E7F0
-    naval_exit_id = 3066
+    naval_exit_id = 3024
 }
 STATE_KHOSTOV = {
     id = 4922
@@ -995,7 +984,7 @@ STATE_TERMEZSK = {
     farm = xCE96A6
     mine = xEDADDE
     port = xF5BDF4
-    naval_exit_id = 3066
+    naval_exit_id = 3024
 }
 STATE_JALALABAKOV = {
     id = 4928
@@ -1030,7 +1019,7 @@ STATE_GHAZNINSKIY = {
     farm = x8DDC8C
     mine = xA5EF6C
     port = xA9A1AB
-    naval_exit_id = 3066
+    naval_exit_id = 3024
 }
 STATE_ANDIZHANSK = {
     id = 4931
@@ -1041,7 +1030,7 @@ STATE_ANDIZHANSK = {
     farm = xA770FC
     mine = xC193C7
     port = xDF997E
-    naval_exit_id = 3066
+    naval_exit_id = 3024
 }
 
 STATE_RUKHAM = {

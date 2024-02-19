@@ -1,7 +1,7 @@
 ﻿STATE_MALANDA = {
     id = 3939
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x1AE4FD" "x44CEFE" "x60FD9A" "x64C1FD" "x7C9EFD" "xB6ACF3" "xBDC6A6" "xC2F871" "xC990A9" "xCFBDCD" "xD2D4EE" "xD5C296" "xDFD67A" "xE5B1D0" "xE68D86" "xE8ACF1" "xEBF184" "xECF723" "xF2D541" "xF2E1FB" "xF2EA67" "xF3BD8C" "xF9B948" "xFB0BEF" }
+    provinces = { "x1AE4FD" "x44CEFE" "x60FD9A" "x64C1FD" "x7C9EFD" "xB6ACF3" "xBDC6A6" "xC2F871" "xCFBDCD" "xD2D4EE" "xD5C296" "xE5B1D0" "xE68D86" "xE8ACF1" "xEBF184" "xECF723" "xF2D541" "xF2E1FB" "xF2EA67" "xF3BD8C" "xF9B948" "xFB0BEF" }
     city = x1AE4FD
     wood = x44CEFE
     farm = x60FD9A
@@ -70,7 +70,7 @@ STATE_BEXAMBA = {
 STATE_LEMBONA = {
     id = 3942
     subsistence_building = "building_subsistence_orchards"
-    provinces = { "x77F2DF" "xAEABDD" "xB162E7" "xB6D46D" "xB8CAAE" "xD3D6ED" "xD4E465" "xE4D18C" "xEE6CF3" "xF7CC84" "xFBA079" }
+    provinces = { "x4BC0F6" "x5DF0A8" "x77F2DF" "x9CFA9C" "xAEABDD" "xB162E7" "xB6D46D" "xB8CAAE" "xBDCAE6" "xCFBC82" "xD3D6ED" "xD4E465" "xE4D18C" "xED9AF6" "xEE6CF3" "xF2D888" "xF7CC84" "xFBA079" }
     city = x77F2DF
     wood = xAEABDD
     farm = xB162E7
@@ -108,17 +108,6 @@ STATE_MAZALINO = {
     port = xC6F0F3
     naval_exit_id = 3067
 }
-STATE_GONDEVA = {
-    id = 3945
-    subsistence_building = "building_subsistence_farms"
-    provinces = { "x88C1F7" "xD0A4AB" "xE1C776" "xE5F31E" "xE81CF5" "xEEF348" "xFAC8CF" "xFD19E3" "xFD1DED" }
-    city = x88C1F7
-    wood = xD0A4AB
-    farm = xE1C776
-    mine = xE5F31E
-    port = xE81CF5
-    naval_exit_id = 3018
-}
 STATE_LUMBELO = {
     id = 3946
     subsistence_building = "building_subsistence_farms"
@@ -139,12 +128,12 @@ STATE_MAXANGA = {
     farm = xBCAADE
     mine = xBFF5B2
     port = xC1F979
-    naval_exit_id = 3067
+    naval_exit_id = 3012
 }
 STATE_BEMVULA = {
     id = 3948
     subsistence_building = "building_subsistence_orchards"
-    provinces = { "x5CEDF6" "x75FDDF" "x7F89F7" "xA48DE9" "xBDCAE6" "xDD75AB" "xEC41F1" "xF685FD" "xF98E9D" }
+    provinces = { "x5CEDF6" "x75FDDF" "x7F89F7" "xA48DE9" "xAC9CD7" "xDD75AB" "xEC41F1" "xF685FD" "xF98E9D" "xF9EE78" }
     city = x5CEDF6
     wood = x75FDDF
     farm = x7F89F7
@@ -155,7 +144,7 @@ STATE_BEMVULA = {
 STATE_BELOZA = {
     id = 3949
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x6EF1FC" "x9975F4" "x9FF2FD" "xB8AD95" "xC683B9" "xD2ECEA" "xD6DB8E" "xE6AFD7" "xE6B0C7" "xEAF1A6" "xED98E2" }
+    provinces = { "x6EF1FC" "x9975F4" "x9FF2FD" "xD2ECEA" "xD6DB8E" "xE6AFD7" "xE6B0C7" "xEAF1A6" "xED98E2" }
     city = x6EF1FC
     wood = x9975F4
     farm = x9FF2FD
@@ -166,7 +155,7 @@ STATE_BELOZA = {
 STATE_JOVEXA = {
     id = 3950
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x7DBCD2" "x8C93E3" "x94E8DC" "x96E5F4" "x98B8A8" "xA8E2D7" "xC2CB9C" "xD6C2C1" "xDB8FFE" "xE774FC" "xE9909D" }
+    provinces = { "x7DBCD2" "x8C93E3" "x94E8DC" "x96E5F4" "x98B8A8" "xA8E2D7" "xC2CB9C" "xD5E33E" "xD6C2C1" "xDB8FFE" "xE774FC" "xE9909D" "xFD1DED" }
     city = x7DBCD2
     wood = x8C93E3
     farm = x94E8DC
@@ -196,7 +185,7 @@ STATE_AMALUMA = {
 STATE_MABRAGA = {
     id = 3952
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x51ECBE" "x8D93FC" "xA2F784" "xCC71D9" "xDBEFEC" "xDCED9F" "xDE7FBD" "xE6C0DF" "xF5DD2A" }
+    provinces = { "x51ECBE" "x8D93FC" "xA2F784" "xC990A9" "xCC71D9" "xDBEFEC" "xDCED9F" "xDE7FBD" "xDFD67A" "xE6C0DF" "xF5DD2A" }
     city = x51ECBE
     wood = x8D93FC
     farm = xA2F784
@@ -239,7 +228,7 @@ STATE_ALMADOURO = {
     farm = x93F7FA
     mine = x9BF8FB
     port = xA3D9F0
-    naval_exit_id = 3067
+    naval_exit_id = 3020
 }
 STATE_CIDADOURO = {
     id = 3955
@@ -250,12 +239,12 @@ STATE_CIDADOURO = {
     farm = x90A7CE
     mine = xA8D3CF
     port = xC1EB80
-    naval_exit_id = 3067
+    naval_exit_id = 3018
 }
 STATE_MOZAGAL = {
     id = 3956
     subsistence_building = "building_subsistence_orchards"
-    provinces = { "x9DAFD3" "xA86CFA" "xAE86CA" "xB897E9" "xC78BAA" "xCBBBD6" "xD37CAB" "xD4F7DA" "xDE96CA" "xECBD95" }
+    provinces = { "x82ABC9" "x97EBCB" "x9DAFD3" "xA4C4DD" "xA86CFA" "xAE86CA" "xB897E9" "xC78BAA" "xCBBBD6" "xCD8AE9" "xD37CAB" "xD4F7DA" "xDB82EB" "xDE96CA" "xE793CD" "xECAC98" "xECBD95" }
     city = x9DAFD3
     wood = xA86CFA
     farm = xAE86CA
@@ -266,59 +255,49 @@ STATE_MOZAGAL = {
 STATE_ALENMAR = {
     id = 3957
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x6FF2E7" "x75B2F2" "x7FFCC0" "x82F88A" "x94F0E4" "x95CF92" "x96E7EF" "x9AC6A4" "xA5C2B8" "xACBFB2" "xB2DCB4" "xBD57F6" "xCBB8AA" "xCBEFC4" "xDC8FBF" "xE53FE2" "xF4DA32" "xFD5EF5" }
+    provinces = { "x6FF2E7" "x75B2F2" "x7FFCC0" "x82F88A" "x94F0E4" "x95CF92" "x96E7EF" "x9AC6A4" "xA5C2B8" "xACBFB2" "xB2DCB4" "xBD57F6" "xCBB8AA" "xCBEFC4" "xDC8FBF" "xDE99D6" "xE53FE2" "xF4DA32" "xFD5EF5" }
     city = x6FF2E7
     wood = x75B2F2
     farm = x7FFCC0
     mine = x82F88A
     port = x94F0E4
-    naval_exit_id = 3067
+    naval_exit_id = 3020
 }
 STATE_TERRABELA = {
     id = 3958
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x82ABC9" "x8DEFD4" "xBDCF6F" "xBFF55A" "xD0D3F4" "xD69ECC" "xDB69EA" "xDCE8F3" "xDE99D6" "xE793CD" "xE87EE2" "xFCF6A0" }
+    provinces = { "x8DEFD4" "xBDCF6F" "xBFF55A" "xD0D3F4" "xD69ECC" "xDB69EA" "xDCE8F3" "xE1F9B3" "xE87EE2" "xFCF6A0" }
     city = x82ABC9
     wood = x8DEFD4
     farm = xBDCF6F
     mine = xBFF55A
     port = xD0D3F4
-    naval_exit_id = 3067
+    naval_exit_id = 3020
 }
 STATE_MALANJAPORT = {
     id = 3959
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x61DCFA" "x83A6FB" "x9CC99C" "xB5DE64" "xB8CAAD" "xC8D06C" "xCF77CE" "xE1B5CE" }
+    provinces = { "x83A6FB" "xA691CA" "xB8CAAD" "xC296CA" "xC8D06C" "xCF77CE" "xD4E1F2" "xDDEFDC" "xE1B5CE" "xF53BFB" }
     city = x61DCFA
     wood = xB5DE64
     farm = xB8CAAD
     mine = xC8D06C
     port = xCF77CE
-    naval_exit_id = 3067
+    naval_exit_id = 3012
 }
 
 STATE_MAPACHECO = {
     id = 3961
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x36FCD4" "x51D4D5" "x6898FC" "xC6F16C" "xCFB3FC" "xD0C5DA" "xDD9E7E" "xFEE29B" }
+    provinces = { "x36FCD4" "x51D4D5" "x6898FC" "x7EB8FD" "xC6F16C" "xCFB3FC" "xD0C5DA" "xDD9E7E" "xDFF56A" "xE09DAC" "xE1E999" "xEAFBAC" "xEE4CD8" "xFEC3B0" "xFEE29B" }
     city = x36FCD4
     wood = x51D4D5
     farm = x6898FC
     mine = xC6F16C
     port = xCFB3FC
-    naval_exit_id = 3067
+    naval_exit_id = 3012
 }
-STATE_LESORICO = {
-    id = 3962
-    subsistence_building = "building_subsistence_fishing_villages"
-    provinces = { "x7EB8FD" "xDFF56A" "xE09DAC" "xE1E999" "xEE4CD8" "xFEC3B0" }
-    city = x7EB8FD
-    wood = xDFF56A
-    farm = xE09DAC
-    mine = xE1E999
-    port = xEE4CD8
-    naval_exit_id = 3067
-}
+
 STATE_APAFONTE = {
     id = 3963
     subsistence_building = "building_subsistence_farms"
@@ -328,12 +307,12 @@ STATE_APAFONTE = {
     farm = x76B0DE
     mine = x7BB5D0
     port = x83A3F5
-    naval_exit_id = 3067
+    naval_exit_id = 3020
 }
 STATE_PORTANGA = {
     id = 3964
     subsistence_building = "building_subsistence_orchards"
-    provinces = { "x8EC7DD" "xAC9CD7" "xBFC9CD" "xE27BCA" "xE6D370" "xE9A693" "xF031E9" "xF2D888" "xF4F445" "xF9EE78" }
+    provinces = { "x61DCFA" "x8EC7DD" "x9CC99C" "xB5DE64" "xB8AD95" "xBFC9CD" "xC683B9" "xC999B7" "xE27BCA" "xE6D370" "xE9A693" "xEDAC80" "xF031E9" "xF4F445" }
     city = x8EC7DD
     wood = xAC9CD7
     farm = xBFC9CD
@@ -344,47 +323,26 @@ STATE_PORTANGA = {
 STATE_LISAZISA = {
     id = 3965
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x4CE8E7" "x5BB7FD" "x7DD0F4" "xD07AE4" "xDECC5F" "xF2D3A8" "xF8F85F" "xFD5AE6" "xFE5AC3" }
+    provinces = { "x4CE8E7" "x5BB7FD" "x7DD0F4" "x8EE2D1" "xD07AE4" "xDECC5F" "xF2D3A8" "xF855F2" "xF8F85F" "xFD5AE6" "xFE5AC3" }
     city = x4CE8E7
     wood = x5BB7FD
     farm = x7DD0F4
     mine = xD07AE4
     port = xDECC5F
-    naval_exit_id = 3067
-}
-STATE_XHOZITHOBE = {
-    id = 3966
-    subsistence_building = "building_subsistence_farms"
-    provinces = { "xA691CA" "xB4C4AF" "xC296CA" "xD4E1F2" "xDDEFDC" "xF53BFB" }
-    city = xA691CA
-    wood = xB4C4AF
-    farm = xC296CA
-    mine = xD4E1F2
-    port = xDDEFDC
-    naval_exit_id = 3067
+    naval_exit_id = 3012
 }
 STATE_BELENDLE = {
     id = 3967
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x45DDFE" "x8EE2D1" "x9E9DE6" "xC2E567" "xC4A3F5" "xC6D063" "xC761CD" "xCA83A9" "xD6C89C" "xD89EE7" "xE8D990" "xF855F2" }
+    provinces = { "x45DDFE" "x9E9DE6" "xB4C4AF" "xC2E567" "xC4A3F5" "xC6D063" "xC761CD" "xCA83A9" "xD6C89C" "xD89EE7" "xE8D990" }
     city = x45DDFE
     wood = x8EE2D1
     farm = x9E9DE6
     mine = xC4A3F5
     port = xC6D063
-    naval_exit_id = 3067
+    naval_exit_id = 3012
 }
-STATE_QONDWENI = {
-    id = 3968
-    subsistence_building = "building_subsistence_orchards"
-    provinces = { "x4BC0F6" "x5DF0A8" "x97EBCB" "x9CFA9C" "xA4C4DD" "xC999B7" "xCD8AE9" "xCFBC82" "xDB82EB" "xE1F9B3" "xECAC98" "xED9AF6" "xEDAC80" }
-    city = x4BC0F6
-    wood = x5DF0A8
-    farm = x97EBCB
-    mine = x9CFA9C
-    port = xA4C4DD
-    naval_exit_id = 3067
-}
+
 STATE_ALAHAZOTRA = {
     id = 3969
     subsistence_building = "building_subsistence_farms"
@@ -637,7 +595,7 @@ STATE_MARITIMLIS = {
         type = "bg_rubber"
         undiscovered_amount = 16
     }
-    naval_exit_id = 3067
+    naval_exit_id = 3055
 }
 STATE_APLUKACAL = {
     id = 3982
@@ -654,7 +612,7 @@ STATE_APLUKACAL = {
         bg_logging = 8
         bg_fishing = 4
     }
-    naval_exit_id = 3067
+    naval_exit_id = 3055
 }
 STATE_BALTIJOSCAT = {
     id = 3983
@@ -681,7 +639,7 @@ STATE_BALTIJOSCAT = {
         type = "bg_oil_extraction"
         undiscovered_amount = 60
     }
-    naval_exit_id = 3067
+    naval_exit_id = 3055
 }
 STATE_JURUTILVA = {
     id = 3984
@@ -776,7 +734,7 @@ STATE_ZVEJYCATIA = {
         type = "bg_oil_extraction"
         undiscovered_amount = 30
     }
-    naval_exit_id = 3067
+    naval_exit_id = 3033
 }
 STATE_PLACIUKATAL = {
     id = 3988
@@ -822,7 +780,7 @@ STATE_LIUTUKATAL = {
         type = "bg_rubber"
         undiscovered_amount = 6
     }
-    naval_exit_id = 3067
+    naval_exit_id = 3055
 }
 STATE_UPESTARR = {
     id = 3991
@@ -844,7 +802,7 @@ STATE_UPESTARR = {
         type = "bg_rubber"
         undiscovered_amount = 16
     }
-    naval_exit_id = 3067
+    naval_exit_id = 3033
 }
 STATE_SALASLITVA = {
     id = 3992
@@ -887,7 +845,7 @@ STATE_PAPLUDIMIS = {
         type = "bg_rubber"
         undiscovered_amount = 16
     }
-    naval_exit_id = 3067
+    naval_exit_id = 3055
 }
 STATE_KRIOKLYKATAL = {
     id = 3994
@@ -937,7 +895,7 @@ STATE_BANGALITVA = {
         type = "bg_oil_extraction"
         undiscovered_amount = 50
     }
-    naval_exit_id = 3067
+    naval_exit_id = 3055
 }
 STATE_SMILTYNECAT = {
     id = 3996
@@ -963,7 +921,7 @@ STATE_SMILTYNECAT = {
         type = "bg_oil_extraction"
         undiscovered_amount = 5
     }
-    naval_exit_id = 3067
+    naval_exit_id = 3083
 }
 STATE_UOSTOCATAL = {
     id = 3997
@@ -1057,7 +1015,7 @@ STATE_RANJITA = {
         type = "bg_rubber"
         undiscovered_amount = 14
     }
-    naval_exit_id = 3067
+    naval_exit_id = 3055
 }
 STATE_VEDAMALA = {
     id = 3397
@@ -1141,7 +1099,7 @@ STATE_SUSHOBHANA = {
         type = "bg_rubber"
         undiscovered_amount = 18
     }
-    naval_exit_id = 3067
+    naval_exit_id = 3085
 }
 STATE_DHARMILA = {
     id = 3401
@@ -1163,7 +1121,7 @@ STATE_DHARMILA = {
         type = "bg_rubber"
         undiscovered_amount = 9
     }
-    naval_exit_id = 3067
+    naval_exit_id = 3085
 }
 STATE_MILINDRA = {
     id = 3402
@@ -1189,7 +1147,7 @@ STATE_MILINDRA = {
         type = "bg_oil_extraction"
         undiscovered_amount = 30
     }
-    naval_exit_id = 3067
+    naval_exit_id = 3055
 }
 STATE_MANASI = {
     id = 3403
@@ -1215,7 +1173,7 @@ STATE_MANASI = {
         type = "bg_oil_extraction"
         undiscovered_amount = 10
     }
-    naval_exit_id = 3067
+    naval_exit_id = 3085
 }
 STATE_SAMARTHYA = {
     id = 3404
