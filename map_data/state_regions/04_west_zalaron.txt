@@ -1170,24 +1170,24 @@ STATE_THASAMAKI = {
 }
 STATE_SAWABARA = {
     id = 2508
-    subsistence_building = "building_subsistence_farms"
-    provinces = { "x3EEADB" "x50F5EA" "x5BC2D9" "x78F09E" "x7CE4AC" "x7D99EF" "x91DC9F" "x94C6F4" "x95AFBE" "x96FC99" "x9CC1D7" "xA09AC6" "xA2E699" "xA6A3EF" "xC1CE9D" "xC4D97C" "xC9C0E5" "xCAF43E" "xD7C96F" "xE2D941" "xE5C665" "xE5CFFA" "xE755E3" "xE7E32B" "xE8E947" "xEAA375" "xF4AFB2" "xFC06FA" }
+    subsistence_building = "building_subsistence_rice_paddies"
+    provinces = { "x3EEADB" "x50F5EA" "x5BC2D9" "x78F09E" "x7CE4AC" "x7D99EF" "x91DC9F" "x94C6F4" "x95AFBE" "x95D9D6" "x96FC99" "x9AEBE8" "x9CC1D7" "xA09AC6" "xA2E699" "xA6A3EF" "xC1CE9D" "xC4D97C" "xC9C0E5" "xCAF43E" "xCBDC52" "xD4AC78" "xD7C96F" "xDFE296" "xE2D941" "xE5C665" "xE5CFFA" "xE755E3" "xE7E32B" "xE8E947" "xEAA375" "xECA0BE" "xEEE0D8" "xF4AFB2" "xF5E2A1" "xF98A91" "xFC06FA" }
     city = x3EEADB
     wood = x50F5EA
     farm = x5BC2D9
     mine = x78F09E
     port = x7CE4AC
-    arable_land = 53
+    arable_land = 105
     arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
     capped_resources = {
-        bg_logging = 12
-        bg_fishing = 10
+        bg_logging = 17
+        bg_fishing = 25
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 9
+        undiscovered_amount = 19
     }
-    naval_exit_id = 3064
+    naval_exit_id = 3085
 }
 STATE_KISITONG = {
     id = 2509
@@ -1208,28 +1208,7 @@ STATE_KISITONG = {
         type = "bg_rubber"
         undiscovered_amount = 16
     }
-    naval_exit_id = 3064
-}
-STATE_MAWIMBEUNG = {
-    id = 2510
-    subsistence_building = "building_subsistence_fishing_villages"
-    provinces = { "x78AFF7" "x95D9D6" "x9AEBE8" "xCBDC52" "xD4AC78" "xDFE296" "xECA0BE" "xEEE0D8" "xF5E2A1" "xF98A91" }
-    city = x78AFF7
-    wood = x95D9D6
-    farm = x9AEBE8
-    mine = xCBDC52
-    port = xD4AC78
-    arable_land = 65
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
-    capped_resources = {
-        bg_logging = 5
-        bg_fishing = 16
-    }
-    resource = {
-        type = "bg_rubber"
-        undiscovered_amount = 10
-    }
-    naval_exit_id = 3064
+    naval_exit_id = 3015
 }
 STATE_NAVAKAI = {
     id = 2511
