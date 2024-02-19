@@ -384,19 +384,88 @@ POPS = {
 		}
   }
   s:STATE_TETOVAJA = {
-
+	region_state:DTH = {
+		create_pop = {
+			culture = xhurlob
+			size = 298128
+		}
+		create_pop = {
+			culture = dales_togrul
+			size = 30000
+		}
+		create_pop = {
+			culture = atiukura
+			size = 30000
+		}
+	}
   }
   s:STATE_KAVAJANA = {
-
+	region_state:DTH = {
+		create_pop = {
+			culture = xhurlob
+			size = 301928
+		}
+		create_pop = {
+			culture = dales_togrul
+			size = 15000
+		}
+		create_pop = {
+			culture = atiukura
+			size = 35000
+		}
+	}
   }
   s:STATE_PODBARDISHTA = {
-
+	region_state:EKA = {
+		create_pop = {
+			culture = dales_togrul
+			size = 475000
+		}
+		create_pop = {
+			culture = atiukura
+			size = 24000
+		}
+		create_pop = {
+			culture = west_lacertian
+			size = 32000
+		}
+	}
   }
   s:STATE_RUSYLESH = {
-
+	region_state:EKA = {
+		create_pop = {
+			culture = dales_togrul
+			size = 465000
+		}
+		create_pop = {
+			culture = atiukura
+			size = 33500
+		}
+		create_pop = {
+			culture = west_lacertian
+			size = 79500
+		}
+	}
   }
   s:STATE_ZARJAPE = {
-
+	region_state:EKA = {
+		create_pop = {
+			culture = dales_togrul
+			size = 375000
+		}
+		create_pop = {
+			culture = atiukura
+			size = 37500
+		}
+		create_pop = {
+			culture = xhurlob
+			size = 37500
+		}
+		create_pop = {
+			culture = west_lacertian
+			size = 49000
+		}
+	}
   }
   s:STATE_DIBRA = {
 	region_state:REM = {
@@ -423,16 +492,55 @@ POPS = {
 
   }
   s:STATE_STRUGOVA = {
-
+	region_state:EKA = {
+		create_pop = {
+			culture = dales_togrul
+			size = 381928
+		}
+		create_pop = {
+			culture = atiukura
+			size = 44000
+		}
+		create_pop = {
+			culture = west_lacertian
+			size = 27000
+		}
+	}
   }
   s:STATE_PRESPIA = {
 
   }
   s:STATE_KRUSHEVA = {
-
+	region_state:EKA = {
+		create_pop = {
+			culture = dales_togrul
+			size = 311928
+		}
+		create_pop = {
+			culture = xhurlob
+			size = 55000
+		}
+		create_pop = {
+			culture = atiukura
+			size = 55000
+		}
+	}
   }
   s:STATE_DEBARIA = {
-
+	region_state:EKA = {
+		create_pop = {
+			culture = dales_togrul
+			size = 321928
+		}
+		create_pop = {
+			culture = xhurlob
+			size = 55000
+		}
+		create_pop = {
+			culture = atiukura
+			size = 55000
+		}
+	}
   }
   s:STATE_SHKUMBINIA = {
 
@@ -474,25 +582,103 @@ POPS = {
 
   }
   s:STATE_KLOSI = {
-
+	region_state:EKA = {
+		create_pop = {
+			culture = dales_togrul
+			size = 221928
+		}
+		create_pop = {
+			culture = xhurlob
+			size = 65000
+		}
+		create_pop = {
+			culture = atiukura
+			size = 59000
+		}
+	}
   }
   s:STATE_SKRAPARIA = {
-
+	region_state:EKA = {
+		create_pop = {
+			culture = dales_togrul
+			size = 421928
+		}
+		create_pop = {
+			culture = xhurlob
+			size = 69000
+		}
+		create_pop = {
+			culture = atiukura
+			size = 67000
+		}
+	}
   }
   s:STATE_XHAMADHANI = {
-
+	region_state:ZIN = {
+		create_pop = {
+			culture = atiukura
+			size = 302028
+		}
+		create_pop = {
+			culture = xhurlob
+			size = 53000
+		}
+		create_pop = {
+			culture = dales_togrul
+			size = 57000
+		}
+	}
   }
   s:STATE_KORCOVA = {
-
+	region_state:ZIN = {
+		create_pop = {
+			culture = atiukura
+			size = 260189
+		}
+		create_pop = {
+			culture = xhurlob
+			size = 56000
+		}
+		create_pop = {
+			culture = dales_togrul
+			size = 54000
+		}
+	}
   }
   s:STATE_VITHKUQJA = {
 
   }
   s:STATE_MILOTI = {
-
+	region_state:ZIN = {
+		create_pop = {
+			culture = atiukura
+			size = 326092
+		}
+		create_pop = {
+			culture = xhurlob
+			size = 57500
+		}
+		create_pop = {
+			culture = dales_togrul
+			size = 52500
+		}
+	}
   }
   s:STATE_LISIJA = {
-
+	region_state:EKA = {
+		create_pop = {
+			culture = dales_togrul
+			size = 371928
+		}
+		create_pop = {
+			culture = atiukura
+			size = 69000
+		}
+		create_pop = {
+			culture = onisazae
+			size = 57000
+		}
+	}
   }
   s:STATE_LATORIIVE = {
 
@@ -713,7 +899,12 @@ POPS = {
 		}
   }
   s:STATE_KLONGLALA = {
-
+	region_state:XOC = {
+		create_pop = {
+			culture = giff
+			size = 390000
+		}
+	}
   }
   s:STATE_MAJIWAZIRI = {
 		region_state:SNB = {
@@ -821,10 +1012,20 @@ POPS = {
 		}
   }
   s:STATE_SAWABARA = {
-
+	region_state:COC = {
+		create_pop = {
+			culture = giff
+			size = 850000
+		}
+	}
   }
   s:STATE_KISITONG = {
-
+	region_state:COC = {
+		create_pop = {
+			culture = giff
+			size = 250000
+		}
+	}
   }
   s:STATE_MAWIMBEUNG = {
 
