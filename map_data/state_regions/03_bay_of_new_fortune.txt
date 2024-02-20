@@ -7,7 +7,7 @@
     farm = x9F60FD
     mine = xBDFD75
     port = xC4C6D7
-    naval_exit_id = 3065
+    naval_exit_id = 3015
 }
 STATE_MAJIMBA = {
     id = 4451
@@ -128,30 +128,9 @@ STATE_KILIMADADA = {
     farm = x7FBFCA
     mine = x8DD5E7
     port = x90B5E8
-    naval_exit_id = 3065
+    naval_exit_id = 3015
 }
-STATE_PWAKUISHI = {
-    id = 4462
-    subsistence_building = "building_subsistence_farms"
-    provinces = { "x9ACBF6" "xBF7DC2" "xBFD678" "xCDEDEE" "xCFC2E0" "xDAC7B7" "xDFB5DA" "xE6ED84" "xF993C5" }
-    city = x9ACBF6
-    wood = xBF7DC2
-    farm = xBFD678
-    mine = xCDEDEE
-    port = xCFC2E0
-    arable_land = 32
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_banana_plantations" }
-    capped_resources = {
-        bg_coal_mining = 17
-        bg_logging = 8
-        bg_fishing = 10
-    }
-    resource = {
-        type = "bg_rubber"
-        undiscovered_amount = 6
-    }
-    naval_exit_id = 3065
-}
+
 STATE_MAWIMBIMAJI = {
     id = 4463
     subsistence_building = "building_subsistence_pastures"
@@ -176,7 +155,7 @@ STATE_MLIMASHWARI = {
 }
 STATE_UZURIKILIMA = {
     id = 4465
-    subsistence_building = "building_subsistence_farms"
+    subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x3CF3E1" "x69FB95" "x6AFAEF" "x7EE8D2" "x9E79EF" "xC1D080" "xD0ECDB" "xE1F583" "xE567F2" "xE7A4FC" "xEDAB69" }
     city = x3CF3E1
     wood = x69FB95
@@ -194,28 +173,29 @@ STATE_UZURIKILIMA = {
         type = "bg_rubber"
         undiscovered_amount = 12
     }
-    naval_exit_id = 3065
+    naval_exit_id = 3015
 }
 STATE_KILIMASHWARI = {
     id = 4466
-    subsistence_building = "building_subsistence_farms"
-    provinces = { "x6EF6CC" "x8AE99D" "x8BC5C1" "x91C8CE" "xA1DCB3" "xBBDF7F" "xE2AFDC" "xE6F025" "xFEAED4" }
+    subsistence_building = "building_subsistence_rice_paddies"
+    provinces = { "x6EF6CC" "x8AE99D" "x8BC5C1" "x91C8CE" "x9ACBF6" "xA1DCB3" "xBBDF7F" "xBF7DC2" "xBFD678" "xCDEDEE" "xCFC2E0" "xDAC7B7" "xDFB5DA" "xE2AFDC" "xE6ED84" "xE6F025" "xF993C5" "xFEAED4" }
     city = x6EF6CC
     wood = x8AE99D
     farm = x8BC5C1
     mine = x91C8CE
     port = xA1DCB3
-    arable_land = 51
+    arable_land = 76
     arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
     capped_resources = {
-        bg_logging = 10
-        bg_fishing = 6
+        bg_coal_mining = 17
+        bg_logging = 18
+        bg_fishing = 16
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 6
+        undiscovered_amount = 12
     }
-    naval_exit_id = 3065
+    naval_exit_id = 3015
 }
 STATE_JITOMREMBO = {
     id = 4467
@@ -248,7 +228,7 @@ STATE_PACHAQULLU = {
     farm = x59EBD1
     mine = x5FA2F6
     port = x70E8EE
-    naval_exit_id = 3065
+    naval_exit_id = 3051
 }
 STATE_INTIWINA = {
     id = 4470
@@ -270,7 +250,7 @@ STATE_WAYLLAPAMPA = {
     farm = x98C9A2
     mine = xBEB098
     port = xD77BAA
-    naval_exit_id = 3065
+    naval_exit_id = 3051
 }
 STATE_MALLKIYAKU = {
     id = 4472
@@ -281,7 +261,7 @@ STATE_MALLKIYAKU = {
     farm = x96F5BF
     mine = x9BD4E3
     port = xA0AABF
-    naval_exit_id = 3065
+    naval_exit_id = 3051
 }
 STATE_QAQAMANTA = {
     id = 4473
@@ -319,7 +299,7 @@ STATE_WAMANPATA = {
 STATE_LLANKAYUQ = {
     id = 4476
     subsistence_building = "building_subsistence_pastures"
-    provinces = { "x22E7F4" "x67B5ED" "x67F0E4" "x68CBD1" "x69ADEC" "x6CFDBF" "x74EFD7" "x7FD8A0" "x82EAB6" "x82ECA7" "x9DB7DB" "xA0ADEF" "xA1E9C2" "xA6AAC1" "xAADE87" "xABFAC3" "xAC8DFC" "xAEF076" "xB0D0EF" "xB39FD8" "xB6CCEE" "xB7AEE1" "xBA8ACD" "xC17DC7" "xC1EFA1" "xC2ECDF" "xCAB890" "xCBA9DC" "xCD78F5" "xCDC57B" "xCEE1D8" "xCEF5A4" "xCF83E0" "xD8F1B0" "xDBABDF" "xDE8EC6" "xE0A9A7" "xE0DFAE" "xE1B5D1" "xEBC672" "xF171B1" "xF180B6" "xF3B264" "xF4C0BD" "xF4D4ED" "xF5F15C" "xF6ADD8" "xF7C759" "xF7D653" "xF7EC4E" "xF844E4" "xF97CA5" }
+    provinces = { "x22E7F4" "x55F4CB" "x64D6F4" "x67B5ED" "x67F0E4" "x68CBD1" "x69ADEC" "x6BDDDD" "x6CFDBF" "x73DFF9" "x74EFD7" "x7CC4F1" "x7FD8A0" "x82C4EB" "x82EAB6" "x82ECA7" "x8595ED" "x8AF0F7" "x9AA4C0" "x9AD6AE" "x9DB7DB" "x9E7FDC" "xA0ADEF" "xA1E9C2" "xA49BC6" "xA6AAC1" "xA99AB5" "xAADE87" "xABFAC3" "xAC8DFC" "xACD7D1" "xAEF076" "xB0D0EF" "xB0D4F2" "xB0FAAA" "xB39FD8" "xB3CFF1" "xB5CBE4" "xB6CCEE" "xB7AEE1" "xB997FD" "xBA8ACD" "xBB7EC2" "xBDC58F" "xBDFD63" "xBE94EE" "xC17DC7" "xC1EE7C" "xC1EFA1" "xC2D463" "xC2ECDF" "xC378D5" "xC3FC8D" "xCAB890" "xCBA9DC" "xCD78F5" "xCDC57B" "xCECDCC" "xCEE1D8" "xCEF5A4" "xCF83E0" "xCFD980" "xD2FCC3" "xD8F1B0" "xDBABDF" "xDE8EC6" "xE0A9A7" "xE0DFAE" "xE1B5D1" "xE39BAF" "xE5CCD8" "xE6E437" "xE7C4A6" "xE7C6BB" "xEAFCD8" "xEBC672" "xF171B1" "xF180B6" "xF2C645" "xF3B264" "xF4C0BD" "xF4D4ED" "xF59491" "xF5F15C" "xF66AAA" "xF6ADD8" "xF7C759" "xF7D653" "xF7EC4E" "xF844E4" "xF97CA5" "xFEC854" }
     city = x22E7F4
     wood = x67B5ED
     farm = x67F0E4
@@ -336,7 +316,7 @@ STATE_TIKAQULLU = {
     farm = x99C1A5
     mine = xACE5B0
     port = xB5CF8C
-    naval_exit_id = 3065
+    naval_exit_id = 3051
 }
 STATE_PUKARAQOCHA = {
     id = 4478
@@ -358,7 +338,7 @@ STATE_KUCHUYPATA = {
     farm = x81FCCB
     mine = x84E7BD
     port = x96F1FC
-    naval_exit_id = 3065
+    naval_exit_id = 3051
 }
 STATE_YANAPAYUQ = {
     id = 4480
@@ -391,17 +371,6 @@ STATE_PISQUPATA = {
     farm = x5EFCBB
     mine = x6DF7FA
     port = x7CFDD5
-    naval_exit_id = 3065
-}
-STATE_CHAKAPAMPA = {
-    id = 4483
-    subsistence_building = "building_subsistence_pastures"
-    provinces = { "x55F4CB" "x64D6F4" "x6BDDDD" "x73DFF9" "x7CC4F1" "x82C4EB" "x8595ED" "x8AF0F7" "x9AA4C0" "x9AD6AE" "x9E7FDC" "xA49BC6" "xA99AB5" "xACD7D1" "xB0D4F2" "xB0FAAA" "xB3CFF1" "xB5CBE4" "xB997FD" "xBB7EC2" "xBDC58F" "xBDFD63" "xBE94EE" "xC1EE7C" "xC2D463" "xC378D5" "xC3FC8D" "xCECDCC" "xCFD980" "xD2FCC3" "xE39BAF" "xE5CCD8" "xE6E437" "xE7C4A6" "xE7C6BB" "xEAFCD8" "xF2C645" "xF59491" "xF66AAA" "xFEC854" }
-    city = x55F4CB
-    wood = x64D6F4
-    farm = x6BDDDD
-    mine = x73DFF9
-    port = x7CC4F1
     naval_exit_id = 3065
 }
 STATE_QOMERQOCHA = {
