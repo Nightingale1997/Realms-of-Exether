@@ -784,19 +784,19 @@
   HUB_NAME_STATE_SANGARI_mine: "HUB_NAME_STATE_SANGARI_mine"
   HUB_NAME_STATE_SANGARI_wood: "HUB_NAME_STATE_SANGARI_wood"
   HUB_NAME_STATE_SANGARI_port: "HUB_NAME_STATE_SANGARI_port"
-#const generate = () => {
-#
-#    stateStrings = [ ]
+#let generate = () => {
+#    /* Paste state names into the stateStrings array, comma separated and surrounded by #quotes.
+#    stateStrings = []
 #
 #    newStateStrings = []
 #
 #    stateStrings.forEach( state => {
 #
-#        newStateStrings.push("HUB_NAME_"+state+"_city"+': "'+"HUB_NAME_"#+state+"_city"+'"')
-#        newStateStrings.push("HUB_NAME_"+state+"_farm"+': "'+"HUB_NAME_"#+state+"_farm"+'"')
-#        newStateStrings.push("HUB_NAME_"+state+"_mine"+': "'+"HUB_NAME_"#+state+"_mine"+'"')
-#        newStateStrings.push("HUB_NAME_"+state+"_wood"+': "'+"HUB_NAME_"#+state+"_wood"+'"')
-#        newStateStrings.push("HUB_NAME_"+state+"_port"+': "'+"HUB_NAME_"#+state+"_port"+'"')
+#        newStateStrings.push("HUB_NAME_"+state+"_city"+': "'+"HUB_NAME_"+state+"_city"#+'"')
+#        newStateStrings.push("HUB_NAME_"+state+"_farm"+': "'+"HUB_NAME_"+state+"_farm"#+'"')
+#        newStateStrings.push("HUB_NAME_"+state+"_mine"+': "'+"HUB_NAME_"+state+"_mine"#+'"')
+#        newStateStrings.push("HUB_NAME_"+state+"_wood"+': "'+"HUB_NAME_"+state+"_wood"#+'"')
+#        newStateStrings.push("HUB_NAME_"+state+"_port"+': "'+"HUB_NAME_"+state+"_port"#+'"')
 #
 #    })
 #
