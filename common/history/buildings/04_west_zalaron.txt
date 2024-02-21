@@ -368,6 +368,12 @@ BUILDINGS = {
 			reserves=1
 			activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
 		}
+		create_building={
+          building="building_military_shipyards"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_merchant_guilds_building_military_shipyards" "pm_military_shipbuilding_wooden" }
+        }
 	}
   }
   s:STATE_PODBARDISHTA = {
@@ -376,7 +382,7 @@ BUILDINGS = {
 			building="building_logging_camp"
 			level=1
 			reserves=1
-			activate_production_methods={ "pm_saw_mills" "pm_privately_owned_building_logging_camp" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
+			activate_production_methods={ "pm_saw_mills" "pm_privately_owned_building_logging_camp" "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
 		}
 		create_building={
           building="building_military_shipyards"
@@ -443,12 +449,6 @@ BUILDINGS = {
 			reserves=1
 			activate_production_methods={ "pm_anchorage" }
 		}
-		create_building={
-          building="building_naval_base"
-          level=3
-          reserves=1
-          activate_production_methods={ "pm_no_naval_theory" }
-        }
 	}
   }
   s:STATE_PRESPIA = {
@@ -467,6 +467,12 @@ BUILDINGS = {
 			level=1
 			reserves=1
 			activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" "pm_merchant_guilds_building_iron_mine" }
+		}
+		create_building={
+			building="building_artillery_foundries"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_cannons" "pm_automation_disabled" "pm_merchant_guilds_building_artillery_foundries" }
 		}
 	}
   }
@@ -952,6 +958,18 @@ BUILDINGS = {
 			level=1
 			reserves=1
 			activate_production_methods={ "pm_anchorage" }
+		}
+		create_building={
+			building="building_arms_industry"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_muskets" "pm_merchant_guilds_building_arms_industry" }
+		}
+		create_building={
+			building="building_military_shipyards"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_merchant_guilds_building_military_shipyards" "pm_military_shipbuilding_wooden" }
 		}
 	}
   }
