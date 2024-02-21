@@ -1,0 +1,200 @@
+﻿MILITARY_FORMATIONS = {
+	c:PEL = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_vindon_narrows
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_PLACIUKATAL
+				count = 6
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_PLACIUKATAL
+				count = 2
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_PLACIUKATAL
+				count = 2
+			}
+			save_scope_as = jurians_brightest_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_vindon_narrows
+			save_scope_as = pel_general
+		}
+		scope:pel_general = {
+			transfer_to_formation = scope:pel_army
+		}
+	}
+	c:LEM = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_vindon_narrows
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ZVEJYCATIA
+				count = 3
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_ZVEJYCATIA
+				count = 3
+			}
+			save_scope_as = lem_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_vindon_narrows
+			save_scope_as = lem_general
+		}
+		scope:lem_general = {
+			transfer_to_formation = scope:lem_army
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_vindon_narrows
+		
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_ZVEJYCATIA
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_ZVEJYCATIA
+				count = 3
+			}
+			save_scope_as = lem_fleet
+		}
+
+		create_character = {
+			is_admiral = yes
+			hq = region_vindon_narrows
+			save_scope_as = lem_admiral
+		}
+		scope:lem_admiral = {
+			transfer_to_formation = scope:lem_fleet
+		}
+	}
+	c:COC = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_lotus_isles
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_VEDAMALA
+				count = 4
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_VEDAMALA
+				count = 1
+			}
+			save_scope_as = coc_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_lotus_isles
+			interest_group = ig_armed_forces
+			save_scope_as = coc_general
+		}
+		scope:coc_general = {
+			transfer_to_formation = scope:coc_army
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_lotus_isles
+		
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_VEDAMALA
+				count = 2
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_VEDAMALA
+				count = 4
+			}
+			save_scope_as = incinerator_armada_fleet
+		}
+
+		create_character = {
+			is_admiral = yes
+			hq = region_lotus_isles
+			interest_group = ig_armed_forces
+			save_scope_as = coc_admiral
+		}
+		scope:coc_admiral = {
+			transfer_to_formation = scope:coc_fleet
+		}
+	}
+	c:XOC = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_sanbang
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KLONGLALA
+				count = 3
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_KLONGLALA
+				count = 1
+			}
+
+			save_scope_as = xoc_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_sanbang
+			interest_group = ig_landowners
+			save_scope_as = xoc_general
+		}
+		scope:xoc_general = {
+			transfer_to_formation = scope:xoc_army
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_sanbang
+		
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_KLONGLALA
+				count = 2
+			}
+			save_scope_as = xoc_fleet
+		}
+
+		create_character = {
+			is_admiral = yes
+			hq = region_sanbang
+			interest_group = ig_armed_forces
+			save_scope_as = xoc_admiral
+		}
+		scope:xoc_admiral = {
+			transfer_to_formation = scope:xoc_fleet
+		}
+	}
+}
