@@ -252,6 +252,7 @@ s:STATE_WHISPERPINE_WOODS = {
 	owned_provinces = { "x61F3EF" "x88FCC5" "x9E99C7" "xA5BAE0" "xA6CE94" "xB5E56B" "xBEEAA3" "xC1CC6B" "xD097E6" "xDFF5E2" "xEBD19E" "xF8F2D0" }
 	}
 	add_homeland = cu:wood_giant #Sets the state to be a homeland for whatever culture you put here.
+	add_claim = c:ZKW
 }
 
 s:STATE_BANEKERT = {
@@ -741,7 +742,7 @@ s:STATE_CZERWIONKA = {
 	country = c:ZKW
 	owned_provinces = { "x6CD6D3" "x8185F8" "x8AB0D8" "x91F2E4" "x95EEA3" "x979DDD" "x97B8C7" "xABA9C5" "xAEF7B0" "xBCFC88" "xCF60E6" "xD197D5" "xD443FC" "xD58FBC" "xD75ADE" "xDAC2D0" "xE99C87" "xEAF51D" "xEBB38C" "xF2EBAA" "xF6DCDD" "xF8E1E8" "xF8F4C4" "xFAC356" }
 	}
-	add_homeland = cu:zakonish #Sets the state to be a homeland for whatever culture you put here.
+	add_homeland = cu:wood_giant
 }
 s:STATE_SKALKA = {
 	create_state = {
@@ -749,6 +750,7 @@ s:STATE_SKALKA = {
 	owned_provinces = { "x69D7B5" "x75F5BB" "x77A2E6" "x7FF397" "x85FDD1" "x91F689" "x95AEED" "x9E95F3" "xB5EF55" "xB8BFC8" "xD0D4ED" "xD1B686" "xDC9CB4" "xDE69E3" "xE6F7F2" "xEC789B" "xF35FB7" "xF6DB38" "xF8A75D" "xFD68D7" }
 	}
 	add_homeland = cu:wood_giant #Sets the state to be a homeland for whatever culture you put here.
+	add_claim = c:ZKW
 }
 s:STATE_YGGHAMN = {
 	create_state = {
@@ -769,7 +771,8 @@ s:STATE_JAWOREK = {
 	country = c:ZKW
 	owned_provinces = { "x46F5D6" "x6CE2AC" "x8490FD" "x8CE1A2" "x9ED1AF" "x9EF794" "xB9A8DD" "xC958E0" "xDE77F5" "xDFC959" "xE09794" "xE667AD" "xEA60BD" "xF457CE" "xF86DEA" }
 	}
-	add_homeland = cu:zakonish #Sets the state to be a homeland for whatever culture you put here.
+	add_homeland = cu:zakonish
+	add_homeland = cu:wood_giant
 }
 s:STATE_MARAMAROVA = {
 	create_state = {

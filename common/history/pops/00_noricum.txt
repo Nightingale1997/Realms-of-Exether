@@ -1159,7 +1159,24 @@ POPS = {
 
 
     s:STATE_ZAWADKA = {
-
+      region_state:VAI = {
+        create_pop = {
+          culture = vairian
+          size = 366792
+        }
+        create_pop = {
+          culture = zakonish
+          size = 12200
+        }
+        create_pop = {
+          culture = wood_giant
+          size = 23400
+        }
+        create_pop = {
+          culture = frost_giant
+          size = 6902
+        }
+      }
   }
 
 
@@ -1169,12 +1186,38 @@ POPS = {
 
 
     s:STATE_NIWKA = {
-
+      region_state:ZKW = {
+        create_pop = {
+          culture = glethach
+          size = 667
+        }
+        create_pop = {
+          culture = wood_giant
+          size = 52800
+        }
+        create_pop = {
+          culture = zakonish
+          size = 256573
+        }
+        create_pop = {
+          culture = vairian
+          size = 3333
+        }
+      }
   }
 
 
     s:STATE_CZERWIONKA = {
-
+      region_state:ZKW = {
+        create_pop = {
+          culture = wood_giant
+          size = 11980
+        }
+        create_pop = {
+          culture = frost_giant
+          size = 980
+        }
+      }
   }
 
 
@@ -1189,12 +1232,38 @@ POPS = {
 
 
     s:STATE_ZARKI = {
-
+      region_state:ZKW = {
+        create_pop = {
+          culture = zakonish
+          size = 547200
+        }
+        create_pop = {
+          culture = wood_giant
+          size = 5000
+        }
+        create_pop = {
+          culture = vairian
+          size = 3000
+        }
+      }
   }
 
 
     s:STATE_JAWOREK = {
-
+      region_state:ZKW = {
+        create_pop = {
+          culture = zkw
+          size = 14848
+        }		
+        create_pop = {
+          culture = vairian
+          size = 16000
+        }
+        create_pop = {
+          culture = wood_giant
+          size = 33994
+        }
+      }
   }
 
 
