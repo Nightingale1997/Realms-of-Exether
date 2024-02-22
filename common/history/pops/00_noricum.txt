@@ -279,17 +279,64 @@ POPS = {
 
 
     s:STATE_WEST_YANGER_STEPPE = {
-
+      region_state:YAN = {
+        create_pop = {
+          culture = yanger
+          size = 190000
+        }
+        create_pop = {
+          culture = dumonian
+          size = 2000
+        }
+        create_pop = {
+          culture = jalian
+          size = 38000
+        }
+      }
   }
 
 
     s:STATE_EAST_YANGER_STEPPE = {
-
+      region_state:YAN = {
+        create_pop = {
+          culture = yanger
+          size = 276396
+        }
+        create_pop = {
+          culture = dumonian
+          size = 7400
+        }
+        create_pop = {
+          culture = jalian
+          size = 16000
+        }
+        create_pop = {
+          culture = meriwyn
+          size = 13000
+        }
+      }
   }
 
 
     s:STATE_RIDERS_MOOT = {
-
+      region_state:YAN = {
+        create_pop = {
+          culture = yanger
+          size = 1852396
+        }
+        create_pop = {
+          culture = dumonian
+          size = 10204
+        }
+        create_pop = {
+          culture = jalian
+          size = 36000
+        }
+        create_pop = {
+          culture = vandori
+          size = 8000
+        }
+      }
   }
 
 
@@ -436,6 +483,20 @@ POPS = {
 
 
     s:STATE_CROWNSHADE = {
+      region_state:YAN = {
+        create_pop = {
+          culture = yanger
+          size = 50000
+        }
+        create_pop = {
+          culture = dumonian
+          size = 4000
+        }
+        create_pop = {
+          culture = jalian
+          size = 1200
+        }
+      }
 
   }
 
@@ -613,7 +674,7 @@ POPS = {
           size = 65087
         }
         create_pop = {
-          culture = meriwyn
+          culture = jalian
           size = 3001
         }
         create_pop = {
@@ -626,7 +687,7 @@ POPS = {
     s:STATE_KILCREE = {
       region_state:DUM = {
         create_pop = {
-          culture = meriwyn
+          culture = jalian
           size = 464400
         }
         create_pop = {
@@ -657,7 +718,20 @@ POPS = {
 
 
     s:STATE_URIKS_GIFT = {
-
+      region_state:YAN = {
+        create_pop = {
+          culture = yanger
+          size = 426004
+        }
+        create_pop = {
+          culture = avalorean
+          size = 37004
+        }
+        create_pop = {
+          culture = dumonian
+          size = 6004
+        }
+      }
   }
 
 

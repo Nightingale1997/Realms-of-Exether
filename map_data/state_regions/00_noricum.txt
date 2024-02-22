@@ -214,6 +214,7 @@ STATE_TAR_PITS = {
 }
 STATE_WEST_YANGER_STEPPE = {
     id = 4012
+    traits = { "state_trait_yanger_steppe" }
     subsistence_building = "building_subsistence_pastures"
     provinces = { "x22E6F3" "x4FD5E2" "x62A1F5" "x66DBE6" "x70C7D5" "x71BFF1" "x73A3E7" "x7B8BFA" "x8AF3DF" "x9686F9" "x9ADDFD" "x9DF583" "x9EAACF" "xA0EA8B" "xA0F09C" "xA2C5CA" "xA3D3F8" "xA3F0ED" "xA976DB" "xA9E5E0" "xAA70F8" "xADFCA3" "xB2A6A5" "xB573EA" "xB6B5CF" "xB9F085" "xBAA8C8" "xBE85EE" "xBEDC64" "xC5A6D5" "xC5F4E7" "xC7C767" "xCF8EE1" "xD0FBD3" "xD4EA48" "xDBA1D2" "xDBEAE4" "xDDDB7A" "xDEBA9A" "xDF73D7" "xE1F8DA" "xE3CC68" "xE757D7" "xE92AF6" "xEB93E9" "xEFCAC6" "xF0A7DD" "xF0CE8A" "xF279C2" "xF4AFBC" "xF57FEC" "xF8E18D" "xFA52F2" "xFAD96F" "xFE9D62" "xFEC74B" }
     city = x22E6F3
@@ -221,7 +222,12 @@ STATE_WEST_YANGER_STEPPE = {
     farm = x62A1F5
     mine = x66DBE6
     port = x70C7D5
-
+    arable_land = 30
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_iron_mining = 21
+        bg_logging = 5
+    }
 }
 STATE_EAST_YANGER_STEPPE = {
     id = 4013
@@ -232,10 +238,15 @@ STATE_EAST_YANGER_STEPPE = {
     farm = x5CF4AD
     mine = x6BF2E1
     port = x6CD7D5
-
+    arable_land = 20
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 4
+    }
 }
 STATE_RIDERS_MOOT = {
     id = 4014
+    traits = { "state_trait_yanger_steppe" }
     subsistence_building = "building_subsistence_pastures"
     provinces = { "x61BBE2" "x78B5D8" "x99FAB1" "xA087DF" "xAF7EE4" "xBB96E6" "xBBB5D0" "xC4D0A8" "xC9BC7B" "xCF93B9" "xDAD9DF" "xDEB1B1" "xE5DF4F" "xEC69E6" "xEDC3DC" "xF76EF4" "xF7B05E" }
     city = x61BBE2
@@ -243,7 +254,11 @@ STATE_RIDERS_MOOT = {
     farm = x99FAB1
     mine = xA087DF
     port = xAF7EE4
-
+    arable_land = 100
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_tea_plantations" }
+    capped_resources = {
+        bg_logging = 6
+    }
 }
 STATE_FROSTGATE = {
     id = 4015
@@ -382,7 +397,8 @@ STATE_HUNTERS_HILL = {
 }
 STATE_CROWNSHADE = {
     id = 4023
-    subsistence_building = "building_subsistence_farms"
+    traits = { "state_trait_yanger_steppe" }
+    subsistence_building = "building_subsistence_pastures"
     provinces = { "x65A8F5" "x69F9EB" "x94C2B8" "x95E4D4" "x9EEA90" "xBFEE70" "xCADD9E" "xD1C77D" "xF58BD1" "xF9EC10" "xFECE83" }
     impassable = { "x9EEA90" "x69F9EB" "xFECE83" "xD1C77D" "xCADD9E" }
     city = x65A8F5
@@ -390,7 +406,12 @@ STATE_CROWNSHADE = {
     farm = x94C2B8
     mine = x95E4D4
     port = x9EEA90
-
+    arable_land = 30
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 28
+        bg_logging = 4
+    }
 }
 STATE_TANISTS_RETREAT = {
     id = 4024
@@ -647,7 +668,16 @@ STATE_URIKS_GIFT = {
     farm = x65F4DB
     mine = x69E4DE
     port = x6CD1BC
-
+    arable_land = 35
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_sulfur_mining = 40
+        bg_logging = 2
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 30
+    }
 }
 STATE_COLNAIG = {
     id = 4042
