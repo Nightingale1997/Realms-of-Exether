@@ -1,0 +1,73 @@
+﻿building_ship_graveyard = {   #when using this building, set it to deplete into either a building_fishing_wharf or a building_whaling_station
+	building_group = bg_ship_graveyard
+	#texture = 
+	city_type = port
+	levels_per_mesh = 5
+	buildable = no
+	expandable = no
+		possible = {
+		error_check = {
+			severity = fail
+			is_sea_adjacent = yes
+		}
+	}
+	production_method_groups = {
+		pmg_base_building_ship_graveyard
+	}
+}
+building_nonmagical_comet = {   
+	building_group = bg_nonmagical_comet
+	#texture = 
+	#city_type = port
+	levels_per_mesh = 5
+	buildable = no
+	expandable = no
+	production_method_groups = {
+		pmg_base_building_nonmagical_comet
+	}
+}
+building_cloudsilver_comet = { 
+	building_group = bg_magical_comet
+	#texture = 
+	#city_type = port
+	levels_per_mesh = 5
+	buildable = no
+	expandable = no
+
+	production_method_groups = {
+		pmg_base_building_cloudsilver_comet
+	}
+
+}
+building_feywild_reserve = {
+building_group = bg_feywild_reserve
+	texture = "gfx/interface/icons/building_icons/logging_camp.dds"
+	city_type = wood
+	buildable = no
+	expandable = no
+	terrain_manipulator = forestry
+	levels_per_mesh = 5
+	production_method_groups = {
+		pmg_base_building_feywild_reserve
+		pmg_equipment
+		pmg_transportation_building_logging_camp
+		pmg_ownership_capital_building_logging_camp
+	}
+}
+building_jellyfish_wharf = { 
+	building_group = bg_flammable_jellyfish
+	#texture = 
+	city_type = port
+	levels_per_mesh = 5
+	buildable = yes #this might be wonky
+	expandable = yes #ibid
+		possible = {
+		error_check = {
+			severity = fail
+			is_sea_adjacent = yes
+		}
+	}
+	production_method_groups = {
+		pmg_base_building_jellyfish_wharf
+	}
+}
