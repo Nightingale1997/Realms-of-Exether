@@ -234,31 +234,6 @@ bg_plantations = {
 	economy_of_scale_ai_factor = 1.5
 }
 
-bg_chimesilt_mounds = {
-	category = rural
-
-	capped_by_resources = yes
-	
-	economy_of_scale = yes
-	
-	can_use_slaves = yes
-	
-	default_building = building_logging_camp
-	
-	lens = forestry	
-	
-	cash_reserves_max = 25000
-	
-	urbanization = 5
-	infrastructure_usage_per_level = 1
-	
-	should_auto_expand = { 
-		default_auto_expand_rule = yes
-	}
-	
-	economy_of_scale_ai_factor = 1.5
-}
-
 bg_coffee_plantations = {
 	parent_group = bg_plantations
 	
@@ -284,6 +259,7 @@ bg_dye_plantations = {
 	default_building = building_dye_plantation
 }
 
+#Changed for exether
 bg_opium_plantations = {
 	parent_group = bg_chimesilt_mounds
 	
@@ -757,71 +733,3 @@ bg_skyscraper = {
 bg_monuments_hidden = {
 	always_possible = yes
 }
-
-#Exether
-
-bg_adventuring = {
-	parent_group = bg_urban_facilities
-	infrastructure_usage_per_level = 0.5
-}
-
-bg_cloud_collecting = {
-	parent_group = bg_mining
-	
-	default_building = building_cloud_collectors
-
-	can_use_slaves = yes
-}
-
-bg_wishstone_extraction = {
-	category = rural
-
-	capped_by_resources = yes
-	
-	economy_of_scale = yes
-	
-	discoverable_resource = yes
-	
-	default_building = building_wishstone_excavation
-	
-	lens = mine
-	
-	cash_reserves_max = 25000
-	
-	urbanization = 10
-	infrastructure_usage_per_level = 2
-	
-	should_auto_expand = { 
-		default_auto_expand_rule = yes
-	}
-	
-	can_use_slaves = yes
-
-	economy_of_scale_ai_factor = 2.0
-}
-
-bg_wishstone_extraction_sea = {
-	category = rural
-
-	capped_by_resources = yes
-	
-	economy_of_scale = yes
-	
-	default_building = building_whaling_station
-	
-	lens = fishing
-	
-	cash_reserves_max = 25000
-	
-	urbanization = 5
-	infrastructure_usage_per_level = 1
-	
-	should_auto_expand = { 
-		default_auto_expand_rule = yes
-	}
-	
-	can_use_slaves = yes
-
-	economy_of_scale_ai_factor = 2.0
-}
-

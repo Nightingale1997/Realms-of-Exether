@@ -24,6 +24,98 @@
 
 
 
+#Exether
+
+bg_adventuring = {
+	parent_group = bg_urban_facilities
+	infrastructure_usage_per_level = 0.5
+}
+
+bg_cloud_collecting = {
+	parent_group = bg_mining
+	
+	default_building = building_cloud_collectors
+
+	can_use_slaves = yes
+}
+
+bg_wishstone_extraction = {
+	category = rural
+
+	capped_by_resources = yes
+	
+	economy_of_scale = yes
+	
+	discoverable_resource = yes
+	
+	default_building = building_wishstone_excavation
+	
+	lens = mine
+	
+	cash_reserves_max = 25000
+	
+	urbanization = 10
+	infrastructure_usage_per_level = 2
+	
+	should_auto_expand = { 
+		default_auto_expand_rule = yes
+	}
+	
+	can_use_slaves = yes
+
+	economy_of_scale_ai_factor = 2.0
+}
+
+bg_wishstone_extraction_sea = {
+	category = rural
+
+	capped_by_resources = yes
+	
+	economy_of_scale = yes
+	
+	default_building = building_whaling_station
+	
+	lens = fishing
+	
+	cash_reserves_max = 25000
+	
+	urbanization = 5
+	infrastructure_usage_per_level = 1
+	
+	should_auto_expand = { 
+		default_auto_expand_rule = yes
+	}
+	
+	can_use_slaves = yes
+
+	economy_of_scale_ai_factor = 2.0
+}
+
+bg_chimesilt_mounds = {
+	category = rural
+
+	capped_by_resources = yes
+	
+	economy_of_scale = yes
+	
+	can_use_slaves = yes
+	
+	default_building = building_logging_camp
+	
+	lens = forestry	
+	
+	cash_reserves_max = 25000
+	
+	urbanization = 5
+	infrastructure_usage_per_level = 1
+	
+	should_auto_expand = { 
+		default_auto_expand_rule = yes
+	}
+	
+	economy_of_scale_ai_factor = 1.5
+}
+
 bg_special_depletables = {  #use with resource_depletion and resource_discovery settings
 	auto_place_buildings = yes
 
@@ -36,26 +128,31 @@ bg_special_depletables = {  #use with resource_depletion and resource_discovery 
 	
 	fired_pops_become_radical = no  #could change this to yes, but we might want to lower depletion amount if we do that so that 25000 people don't get fired all at once
 }
+
 bg_ship_graveyard = {  #deplete into building_fishing_wharf or building_whaling_station
 	parent_group = bg_special_depletables
 
 	default_building = building_ship_graveyard
 }
+
 bg_nonmagical_comet = {  
 	parent_group = bg_special_depletables
 
 	default_building = building_nonmagical_comet
 }
+
 bg_cloudsilver_comet = {  
 	parent_group = bg_special_depletables
 
 	default_building = building_cloudsilver_comet
 }
+
 bg_feywild_reserve = {  #represents a feywild area small enough to be dismantled entirely by private enterprise.  Probably should be activated by decision?
 parent_group = bg_special_depletables
 
 	default_building = building_feywild_reserve
 }
+
 bg_special_depletables_taxable = {  #use with resource_depletion and resource_discovery settings
 	auto_place_buildings = no
 
@@ -65,6 +162,7 @@ bg_special_depletables_taxable = {  #use with resource_depletion and resource_di
 	
 	fired_pops_become_radical = no  #could change this to yes, but we might want to lower depletion amount if we do that so that 25000 people don't get fired all at once
 }
+
 bg_flammable_jellyfish = { #name WIP
 	parent_group = bg_special_depletables_taxable
 
