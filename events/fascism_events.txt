@@ -75,36 +75,17 @@ fascism_events.1 = {
 		}
 		
 		#We add two fascist generals to replace them
-		if = {
-			limit = {
-				c:BRZ = this
-			}
-			create_character = {
-				is_general = yes
-				ig_leader = no
-				interest_group = scope:fascist_ig
-				ideology = ideology_integralist
-			}
-			create_character = {
-				is_general = yes
-				ig_leader = no
-				interest_group = scope:fascist_ig
-				ideology = ideology_integralist
-			}
+		create_character = {
+			is_general = yes
+			ig_leader = no
+			interest_group = scope:fascist_ig
+			ideology = ideology_fascist
 		}
-		else = {
-			create_character = {
-				is_general = yes
-				ig_leader = no
-				interest_group = scope:fascist_ig
-				ideology = ideology_fascist
-			}
-			create_character = {
-				is_general = yes
-				ig_leader = no
-				interest_group = scope:fascist_ig
-				ideology = ideology_fascist
-			}
+		create_character = {
+			is_general = yes
+			ig_leader = no
+			interest_group = scope:fascist_ig
+			ideology = ideology_fascist
 		}
 	}
 
