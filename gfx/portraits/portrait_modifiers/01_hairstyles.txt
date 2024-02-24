@@ -177,39 +177,6 @@
                     AND = {
                         OR = {
                             american_clothes_trigger = yes
-                            AND = {
-                                exists = c:CSA
-                                OR = {
-                                    AND = {
-                                        exists = scope:character
-                                        scope:character = {
-											exists = home_country
-											home_country = c:CSA
-										}
-                                    }
-                                    AND = {
-                                        exists = scope:pop
-                                        scope:pop = { home_country = c:CSA }
-                                    }
-                                }
-                            }
-                            AND = {
-                                exists = c:BRZ
-                                OR = {
-                                    AND = {
-                                        exists = scope:character
-                                        scope:character = {
-                                            exists = home_country
-                                            home_country = c:BRZ
-                                        }
-                                    }
-                                    AND = {
-                                        exists = scope:pop
-                                        scope:pop = { home_country = c:BRZ }
-                                    }
-                                }
-
-                            }
                         }
                         OR = {
                             AND = {

@@ -303,7 +303,7 @@
                 add = 90000
                 OR = {
                     scope:character ?= {
-                        has_template = BRZ_virgulino_ferreira
+                        always = no
                     }
                     AND = {
                         scope:character ?= {
@@ -565,7 +565,7 @@
                 add = 90000
 
                 scope:character ?= {
-                    has_template = BRZ_virgulino_ferreira
+                    always = no
                 }
             }
         }
@@ -598,7 +598,7 @@
                 add = 90000
 
                 scope:character ?= {
-                    has_template = BRZ_getulio_vargas_character_template
+                    always = no
                 }
             }
         }
@@ -1507,14 +1507,16 @@
                     AND = {
                         scope:character ?= {
                             age > 10
-                            exists = c:BRZ
+                           # exists = c:BRZ
+                           always = no
                             home_country = {
                                 OR = {
                                     AND = {
-                                        c:BRZ = this
+                                        always = no
                                         is_subject = no # preventing uniform conflicts if BRZ becomes a subject of another country with puppet uniforms
                                     }
-                                    is_subject_of = c:BRZ
+                                    #is_subject_of = c:BRZ
+                                    always = no
                                 }       
                             }
                         }
@@ -1529,14 +1531,17 @@
                     }
                     AND = {
                         scope:pop ?= {
-                            exists = c:BRZ
+                            #exists = c:BRZ
+                            always = no
                             home_country = {
                                 OR = {
                                     AND = {
-                                        c:BRZ = this
+                                       # c:BRZ = this
+                                       always = no
                                         is_subject = no # preventing uniform conflicts if BRZ becomes a subject of another country with puppet uniforms
                                     }
-                                    is_subject_of = c:BRZ
+                                   # is_subject_of = c:BRZ
+                                   always = no
                                 }       
                             }
                         }
@@ -1569,14 +1574,17 @@
                 add = 10000
 
                 scope:pop ?= {
-                    exists = c:BRZ
+                    #exists = c:BRZ
+                    always = no
                     home_country = {
                         OR = {
                             AND = {
-                                c:BRZ = this
+                                #c:BRZ = this
+                                always = no
                                 is_subject = no # preventing uniform conflicts if BRZ becomes a subject of another country with puppet uniforms
                             }
-                            is_subject_of = c:BRZ
+                            #is_subject_of = c:BRZ
+                            always = no
                         }       
                     }
                 }
