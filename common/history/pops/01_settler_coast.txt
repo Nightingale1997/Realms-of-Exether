@@ -785,7 +785,24 @@ POPS = {
   }
 
   s:STATE_HAZELDEEP = {
-
+	region_state:THI = {
+		create_pop = {
+			culture = astreval
+			size = 732008
+		}
+		create_pop = {
+			culture = bossardi
+			size = 335008
+		}
+		create_pop = {
+			culture = buramog
+			size = 32000
+		}
+		create_pop = {
+			culture = thiralian
+			size = 4000
+		}
+	}
   }
 
   s:STATE_AZURETHORN = {

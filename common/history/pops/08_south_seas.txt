@@ -112,10 +112,6 @@
 
 	}
 
-	s:STATE_GONDEVA = {
-
-	}
-
 	s:STATE_LUMBELO = {
 
 	}
@@ -216,15 +212,13 @@
 
 	}
 
-	s:STATE_KASAMANCA = {
-
-	}
+	
 
 	s:STATE_MAPACHECO = {
 
 	}
 
-	s:STATE_LESORICO = {
+	s:STATE_RICO = {
 
 	}
 
@@ -240,15 +234,7 @@
 
 	}
 
-	s:STATE_XHOZITHOBE = {
-
-	}
-
 	s:STATE_BELENDLE = {
-
-	}
-
-	s:STATE_QONDWENI = {
 
 	}
 
@@ -421,19 +407,48 @@
 	}
 
 	s:STATE_MARITIMLIS = {
-
+		region_state:LEM = {
+			create_pop = {
+				culture = hulutit
+				size = 347000
+			}
+			create_pop = {
+				culture = west_lacertian
+				size = 52000
+			}
+		}
 	}
 
 	s:STATE_APLUKACAL = {
-
+		region_state:LEM = {
+			create_pop = {
+				culture = hulutit
+				size = 455608
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = west_lacertian
+				size = 2000
+			}
+		}
 	}
 
 	s:STATE_BALTIJOSCAT = {
-
+		region_state:KUM = {
+			create_pop = {
+				culture = west_lacertian
+				size = 300000
+			}
+		}
 	}
 
 	s:STATE_JURUTILVA = {
-
+		region_state:KUM = {
+			create_pop = {
+				culture = west_lacertian
+				size = 50000
+			}
+		}
 	}
 
 	s:STATE_LAIVINMAR = {
@@ -459,15 +474,56 @@
 	}
 
 	s:STATE_VANDECATAL = {
-
+		region_state:LEM = {
+			create_pop = {
+				culture = hulutit
+				size = 75000
+			}
+			create_pop = {
+				culture = west_lacertian
+				size = 1000
+			}
+		}
 	}
 
 	s:STATE_ZVEJYCATIA = {
-
+		region_state:LEM = {
+			create_pop = {
+				culture = hulutit
+				size = 147000
+			}
+			create_pop = {
+				culture = west_lacertian
+				size = 72000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = west_lacertian
+				size = 2000
+			}
+		}
 	}
 
 	s:STATE_PLACIUKATAL = {
-
+		region_state:PEL = {
+			create_pop = {
+				culture = akmuociai
+				size = 220000
+			}
+			create_pop = {
+				culture = hulutit
+				size = 20000
+			}
+			create_pop = {
+				culture = west_lacertian
+				size = 200000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = west_lacertian
+				size = 1000
+			}
+		}
 	}
 
 	s:STATE_BANGALINIS = {
@@ -493,27 +549,69 @@
 	}
 
 	s:STATE_LIUTUKATAL = {
-
+		region_state:KUM = {
+			create_pop = {
+				culture = west_lacertian
+				size = 415000
+			}
+		}
 	}
 
 	s:STATE_UPESTARR = {
-
+		region_state:LEM = {
+			create_pop = {
+				culture = hulutit
+				size = 97000
+			}
+			create_pop = {
+				culture = west_lacertian
+				size = 86200
+			}
+		}
 	}
 
 	s:STATE_SALASLITVA = {
-
+		region_state:PEL = {
+			create_pop = {
+				culture = akmuociai
+				size = 130000
+			}
+			create_pop = {
+				culture = west_lacertian
+				size = 65000
+			}
+		}
 	}
 
 	s:STATE_PAPLUDIMIS = {
-
+		region_state:KUM = {
+			create_pop = {
+				culture = west_lacertian
+				size = 100000
+			}
+		}
 	}
 
 	s:STATE_KRIOKLYKATAL = {
-
+		region_state:LEM = {
+			create_pop = {
+				culture = hulutit
+				size = 197000
+			}
+			create_pop = {
+				culture = west_lacertian
+				size = 62000
+			}
+		}
 	}
 
 	s:STATE_BANGALITVA = {
-
+		region_state:KUM = {
+			create_pop = {
+				culture = west_lacertian
+				size = 75000
+			}
+		}
 	}
 
 	s:STATE_SMILTYNECAT = {
@@ -534,7 +632,16 @@
 	}
 
 	s:STATE_UOSTOCATAL = {
-
+		region_state:PEL = {
+			create_pop = {
+				culture = akmuociai
+				size = 100000
+			}
+			create_pop = {
+				culture = west_lacertian
+				size = 60000
+			}
+		}
 	}
 
 	s:STATE_AKVALITVA = {
@@ -583,11 +690,21 @@
 	}
 
 	s:STATE_RANJITA = {
-
+		region_state:LAG = {
+			create_pop = {
+				culture = west_lacertian
+				size = 250000
+			}
+		}
 	}
 
 	s:STATE_VEDAMALA = {
-
+		region_state:COC = {
+			create_pop = {
+				culture = giff
+				size = 750000
+			}
+		}
 	}
 
 	s:STATE_BHALCHANDRA = {
@@ -595,23 +712,52 @@
 	}
 
 	s:STATE_MADHURIYA = {
-
+		region_state:LAG = {
+			create_pop = {
+				culture = west_lacertian
+				size = 50000
+			}
+		}
 	}
 
 	s:STATE_SUSHOBHANA = {
-
+		region_state:LAG = {
+			create_pop = {
+				culture = west_lacertian
+				size = 150000
+			}
+		}
 	}
 
 	s:STATE_DHARMILA = {
-
+		region_state:LAG = {
+			create_pop = {
+				culture = west_lacertian
+				size = 150000
+			}
+		}
 	}
 
 	s:STATE_MILINDRA = {
-
+		region_state:LAG = {
+			create_pop = {
+				culture = west_lacertian
+				size = 150000
+			}
+		}
 	}
 
 	s:STATE_MANASI = {
-
+		region_state:COC = {
+			create_pop = {
+				culture = giff
+				size = 60000
+			}
+			create_pop = {
+				culture = west_lacertian
+				size = 150000
+			}
+		}
 	}
 
 	s:STATE_SAMARTHYA = {

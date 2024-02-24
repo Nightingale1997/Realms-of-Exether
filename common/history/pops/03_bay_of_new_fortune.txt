@@ -35,17 +35,34 @@
 	s:STATE_KILIMADADA = {
 
 	}
-	s:STATE_PWAKUISHI = {
-
-	}
 	s:STATE_MAWIMBIMAJI = {
 
 	}
 	s:STATE_UZURIKILIMA = {
-
+		region_state:XOC = {
+			create_pop = {
+				culture = giff
+				size = 480000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = gnoll
+				size = 2000
+			}
+		}
 	}
 	s:STATE_KILIMASHWARI = {
-
+		region_state:XOC = {
+			create_pop = {
+				culture = giff
+				size = 720000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = gnoll
+				size = 2000
+			}
+		}
 	}
 	s:STATE_JITOMREMBO = {
 
@@ -86,16 +103,10 @@
 	s:STATE_KUCHUYPATA = {
 	
 	}
-	s:STATE_YANAPAYUQ = {
-	
-	}
 	s:STATE_MIKHUYUQ = {
 	
 	}
 	s:STATE_PISQUPATA = {
-	
-	}
-	s:STATE_CHAKAPAMPA = {
 	
 	}
 	s:STATE_QOMERQOCHA = {

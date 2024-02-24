@@ -131,15 +131,7 @@ BUILDINGS = {
 	
 	}
 
-	s:STATE_VIJAYAPURA = {
-	
-	}
-
 	s:STATE_ANANTAPURI = {
-	
-	}
-
-	s:STATE_SAUBHAGYAVATI = {
 	
 	}
 
@@ -239,40 +231,40 @@ BUILDINGS = {
 	
 	}
 
-	s:STATE_ANANDAVATI = {
-		region_state:SAP={
-			create_building={
-				building="building_textile_mills"
-				level=1
-				reserves=1
-				activate_production_methods={ "pm_handsewn_clothes" "pm_merchant_guilds_building_textile_mills" "pm_traditional_looms" "pm_no_luxury_clothes" }
-			}
-			create_building={
-				building="building_gold_mine"
-				level=2
-				reserves=1
-				activate_production_methods={ "pm_picks_and_shovels_building_gold_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" "pm_merchant_guilds_building_gold_mine" }
-			}			
-			create_building={
-				building="building_coffee_plantation"
-				level=4
-				reserves=1
-				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
-			}
-			create_building={
-				building="building_dye_plantation"
-				level=5
-				reserves=1
-				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
-			}
-			create_building={
-				building="building_barracks"
-				level=5
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
-			}
-		}
-	}
+#	s:STATE_ANANDAVATI = {
+#		region_state:SAP={
+#			create_building={
+#				building="building_textile_mills"
+#				level=1
+#				reserves=1
+#				activate_production_methods={ "pm_handsewn_clothes" "pm_merchant_guilds_building_textile_mills" "pm_traditional_looms" "pm_no_luxury_clothes" }
+#			}
+#			create_building={
+#				building="building_gold_mine"
+#				level=2
+#				reserves=1
+#				activate_production_methods={ "pm_picks_and_shovels_building_gold_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" "pm_merchant_guilds_building_gold_mine" }
+#			}			
+#			create_building={
+#				building="building_coffee_plantation"
+#				level=4
+#				reserves=1
+#				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+#			}
+#			create_building={
+#				building="building_dye_plantation"
+#				level=5
+#				reserves=1
+#				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+#			}
+#			create_building={
+#				building="building_barracks"
+#				level=5
+#				reserves=1
+#				activate_production_methods={ "pm_no_organization" }
+#			}
+#		}
+#	}
 
 	s:STATE_CHINTANAGIRI = {
 		region_state:WLR={
@@ -297,22 +289,22 @@ BUILDINGS = {
 		}
 	}
 
-	s:STATE_PRABUDHYAMANA = {
-		region_state:AKB={
-			create_building={
-				building="building_tea_plantation"
-				level=1
-				reserves=1
-				activate_production_methods={ "default_building_tea_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
-			}
-			create_building={
-				building="building_barracks"
-				level=5
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
-			}
-		}
-	}
+#	s:STATE_PRABUDHYAMANA = {
+#		region_state:AKB={
+#			create_building={
+#				building="building_tea_plantation"
+#				level=1
+#				reserves=1
+#				activate_production_methods={ "default_building_tea_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+#			}
+#			create_building={
+#				building="building_barracks"
+#				level=5
+#				reserves=1
+#				activate_production_methods={ "pm_no_organization" }
+#			}
+#		}
+#	}
 
 	s:STATE_ANUTTARAPUR = {
 		region_state:SAP={
@@ -377,10 +369,6 @@ BUILDINGS = {
 		}
 	}
 
-	s:STATE_BUDAKURRI = {
-	
-	}
-
 	s:STATE_YARLUWANDU = {
 		region_state:AKB={
 			create_building={
@@ -431,10 +419,6 @@ BUILDINGS = {
 				activate_production_methods={ "pm_anchorage" }
 			}
 		}
-	}
-
-	s:STATE_WANGADARRI = {
-	
 	}
 
 	s:STATE_KURUBBA = {
@@ -678,10 +662,6 @@ BUILDINGS = {
 		}
 	}
 
-	s:STATE_MARLIYAGIRRA = {
-	
-	}
-
 	s:STATE_DAMARLARA = {
 		region_state:JIV={
 			create_building={
@@ -707,64 +687,40 @@ BUILDINGS = {
 	
 	}
 
-	s:STATE_BANUBABU = {
-	
-	}
-
-	s:STATE_BULARRANG = {
-		region_state:JIV={
-			create_building={
-				building="building_government_administration"
-				level=1
-				reserves=1
-				activate_production_methods={ "pm_simple_organization" }
-			}
-			create_building={
-				building="building_glassworks"
-				level=2
-				reserves=1
-				activate_production_methods={ "pm_forest_glass" "pm_merchant_guilds_building_glassworks" "pm_manual_glassblowing" "pm_ceramics" }
-			}
-			create_building={
-				building="building_dye_plantation"
-				level=12
-				reserves=1
-				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
-			}
-			create_building={
-				building="building_barracks"
-				level=20
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
-			}
-		}
-	}
+#	s:STATE_BULARRANG = {
+#		region_state:JIV={
+#			create_building={
+#				building="building_government_administration"
+#				level=1
+#				reserves=1
+#				activate_production_methods={ "pm_simple_organization" }
+#			}
+#			create_building={
+#				building="building_glassworks"
+#				level=2
+#				reserves=1
+#				activate_production_methods={ "pm_forest_glass" "pm_merchant_guilds_building_glassworks" "pm_manual_glassblowing" "pm_ceramics" }
+#			}
+#			create_building={
+#				building="building_dye_plantation"
+#				level=12
+#				reserves=1
+#				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+#			}
+#			create_building={
+#				building="building_barracks"
+#				level=20
+#				reserves=1
+#				activate_production_methods={ "pm_no_organization" }
+#			}
+#		}
+#	}
 
 	s:STATE_DANKASEMBE = {
 	
 	}
 
-	s:STATE_CRESI = {
-	
-	}
-
 	s:STATE_TSEGYALNIPIY = {
-	
-	}
-
-	s:STATE_LHAMOOSKIWAN = {
-	
-	}
-
-	s:STATE_TSEPO = {
-	
-	}
-
-	s:STATE_DHARMASHALAPIMIY = {
-	
-	}
-
-	s:STATE_SAKYAASKIY = {
 	
 	}
 
@@ -788,10 +744,6 @@ BUILDINGS = {
 	
 	}
 
-	s:STATE_YAMYAM = {
-	
-	}
-
 	s:STATE_NAMTSOOSKIWAN = {
 	
 	}
@@ -800,23 +752,11 @@ BUILDINGS = {
 	
 	}
 
-	s:STATE_DHACREE = {
-	
-	}
-
 	s:STATE_GANDENASKIY = {
 	
 	}
 
-	s:STATE_THOLINGNIPIY = {
-	
-	}
-
 	s:STATE_KHAMOSKIWAN = {
-	
-	}
-
-	s:STATE_CREEGYAL = {
 	
 	}
 
@@ -828,15 +768,7 @@ BUILDINGS = {
 	
 	}
 
-	s:STATE_GREGAN = {
-	
-	}
-
 	s:STATE_HERMENIA = {
-	
-	}
-
-	s:STATE_HALLEOS = {
 	
 	}
 
@@ -892,10 +824,6 @@ BUILDINGS = {
 	
 	}
 
-	s:STATE_NIKA = {
-	
-	}
-
 	s:STATE_HELARM = {
 	
 	}
@@ -904,15 +832,7 @@ BUILDINGS = {
 	
 	}
 
-	s:STATE_KABUSKAYA = {
-	
-	}
-
 	s:STATE_MOSKHAN = {
-	
-	}
-
-	s:STATE_HERASLAV = {
 	
 	}
 
@@ -971,10 +891,6 @@ BUILDINGS = {
 	
 	}
 
-	s:STATE_BALKHSK = {
-	
-	}
-
 	s:STATE_KUNDUZOV = {
 	
 	}
@@ -999,10 +915,6 @@ BUILDINGS = {
 	}
 
 	s:STATE_ANDIZHANSK = {
-	
-	}
-
-	s:STATE_BAMIANOV = {
 	
 	}
 

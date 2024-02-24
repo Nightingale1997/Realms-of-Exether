@@ -1,0 +1,32 @@
+﻿CHARACTERS = {
+	c:ZIN = {
+		create_character = {
+			first_name = "Mihrimah"
+			last_name = "Osmanoglu"
+			historical = yes
+			ruler = yes
+			is_general = yes
+			age = 38
+			female = yes
+			interest_group = ig_landowners
+			ideology = ideology_moderate
+			traits = {
+				wrathful
+				pillager
+			}
+		}
+		create_character = {
+			first_name = "Fatma"
+			last_name = "Osmanoglu"
+			historical = yes
+			heir = yes
+			age = 9
+			female = yes
+			interest_group = ig_landowners
+			ideology = ideology_abolitionist
+			traits = {
+				trait_child
+			}
+		}
+	}
+}

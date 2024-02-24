@@ -45,7 +45,16 @@ POPS = {
   }
     
   s:STATE_EASTERN_EQUINE_PLAIN = {
-
+		region_state:RDM = {
+			create_pop = {
+				culture = astreval
+				size = 1625400
+			}
+			create_pop = {
+				culture = buramog
+				size = 6996
+			}
+		}
   }
     
   s:STATE_BARIKHARGUL = {
@@ -53,75 +62,232 @@ POPS = {
   }
     
   s:STATE_WESTERN_EQUINE_PLAIN = {
-
+		region_state:DSB = {
+			create_pop = {
+				culture = astreval
+				size = 451000
+			}
+		}
   }
     
   s:STATE_DUSHAMBAY = {
-
+		region_state:DSB = {
+			create_pop = {
+				culture = astreval
+				size = 1303868
+			}
+			create_pop = {
+				culture = thiralian
+				size = 35596
+			}
+		}
   }
     
   s:STATE_AETHELBOSQUE = {
-
+		region_state:THI = {
+			create_pop = {
+				culture = astreval
+				size = 252000
+			}
+			create_pop = {
+				culture = thiralian
+				size = 14380
+			}
+		}
   }
     
   s:STATE_LILAC_SHORE = {
-
+		region_state:THI = {
+			create_pop = {
+				culture = astreval
+				size = 600448
+			}
+      create_pop = {
+				culture = thiralian
+				size = 60448
+			}
+		}
   }
     
   s:STATE_CAVES_OF_RIMELAC = {
-
+		region_state:THI = {
+			create_pop = {
+				culture = thiralian
+				size = 388408
+			}
+			create_pop = {
+				culture = astreval
+				size = 116004
+			}
+			create_pop = {
+				culture = bossardi
+				size = 4996
+			}
+		}
   }
     
   s:STATE_AUBERN_FLOW = {
-
+		region_state:THI = {
+			create_pop = {
+				culture = thiralian
+				size = 2257396
+			}
+      create_pop = {
+				culture = astreval
+				size = 357396
+			}
+		}
   }
     
   s:STATE_IRONWOOD_PENINSULA = {
-
+		region_state:THI = {
+			create_pop = {
+				culture = thiralian
+				size = 1647596
+			}
+		}
   }
     
   s:STATE_OLD_AUBERN = {
-
+		region_state:THI = {
+			create_pop = {
+				culture = thiralian
+				size = 1284392
+			}
+		}
   }
     
   s:STATE_WOODS_OF_THE_VOW = {
-
-  }
-    
-  s:STATE_MONSVERDE = {
-
+		region_state:THI = {
+			create_pop = {
+				culture = thiralian
+				size = 1071996
+			}
+			create_pop = {
+				culture = erdei
+				size = 23996
+			}
+		}
   }
     
   s:STATE_RAQUARTES_SHIELD = {
-
+		region_state:THI = {
+			create_pop = {
+				culture = thiralian
+				size = 677296
+			}
+			create_pop = {
+				culture = bossardi
+				size = 5996
+			}
+			create_pop = {
+				culture = erdei
+				size = 13504
+			}
+		}
   }
     
   s:STATE_EASTERN_EMBERLAND = {
-
+		region_state:FEY = {
+			create_pop = {
+				culture = erdei
+				size = 1903944
+			}
+			create_pop = {
+				culture = clearbough
+				size = 6000
+			}
+			create_pop = {
+				culture = thiralian
+				size = 20000
+			}
+		}
   }
     
   s:STATE_WESTERN_EMBERLAND = {
-
+		region_state:FEY = {
+			create_pop = {
+				culture = erdei
+				size = 1093200
+			}
+			create_pop = {
+				culture = thiralian
+				size = 164800
+			}
+		}
   }
     
   s:STATE_CHANSONBOIS = {
-
+		region_state:FEY = {
+			create_pop = {
+				culture = erdei
+				size = 3295600
+			}
+			create_pop = {
+				culture = thiralian
+				size = 228000
+			}
+		}
   }
     
   s:STATE_DRUIDS_CHANT = {
-
+		region_state:THI = {
+			create_pop = {
+				culture = thiralian
+				size = 122000
+			}
+			create_pop = {
+				culture = erdei
+				size = 130996
+			}
+		}
   }
     
   s:STATE_CASTLECOURT = {
-
+		region_state:THI = {
+			create_pop = {
+				culture = erdei
+				size = 2655124
+			}
+			create_pop = {
+				culture = thiralian
+				size = 692996
+			}
+			create_pop = {
+				culture = nuzaptan
+				size = 20000
+			}
+      create_pop = {
+				culture = rannorian
+				size = 62000
+			}
+		}
   }
     
   s:STATE_HAAR_FEN = {
-
+		region_state:THI = {
+			create_pop = {
+				culture = thiralian
+				size = 882848
+			}
+		}
   }
     
   s:STATE_FAERONDALE = {
-
+		region_state:FEY = {
+			create_pop = {
+				culture = erdei
+				size = 2656396
+			}
+			create_pop = {
+				culture = tefereti
+				size = 24000
+			}
+			create_pop = {
+				culture = thiralian
+				size = 35996
+			}
+		}
   }
     
   s:STATE_GIANTS_STRIDE = {
@@ -142,7 +308,16 @@ POPS = {
   }
     
   s:STATE_COBALT_KEEP = {
-
+		region_state:TEF = {
+			create_pop = {
+				culture = tefereti
+				size = 614264
+			}
+			create_pop = {
+				culture = kashtarnel
+				size = 32000
+			}
+		}	
   }
     
   s:STATE_EIREKS_WASH = {
@@ -157,10 +332,6 @@ POPS = {
         size = 184000
       }
     }
-  }
-    
-  s:STATE_ELDAMARA = {
-
   }
     
   s:STATE_CANDLEMIRE = {
@@ -308,10 +479,6 @@ POPS = {
     }
   }
     
-  s:STATE_FRONTALIERAS = {
-
-  }
-    
   s:STATE_RIVER_SOLILOQUE = {
 
   }
@@ -341,7 +508,16 @@ POPS = {
   }
     
   s:STATE_FAOLNA_PASS = {
-
+		region_state:TEF = {
+			create_pop = {
+				culture = nangarlith
+				size = 704308
+			}
+			create_pop = {
+				culture = tefereti
+				size = 316804
+			}
+		}
   }
     
   s:STATE_CAM_LIADRINE = {
@@ -361,55 +537,86 @@ POPS = {
   }
     
   s:STATE_AUTUMN_HILLS = {
-
+		region_state:TEF = {
+			create_pop = {
+				culture = nangarlith
+				size = 145244
+			}
+			create_pop = {
+				culture = tefereti
+				size = 28020
+			}
+      create_pop = {
+				culture = erdei
+				size = 58020
+			}
+		}
   }
     
   s:STATE_ZYRELIANAR = {
-
+		region_state:TEF = {
+			create_pop = {
+				culture = tefereti
+				size = 628528
+			}
+			create_pop = {
+				culture = erdei
+				size = 212264
+			}
+		}
   }
-    
-  s:STATE_ELAR_SHAH = {
 
-  }
-    
-  s:STATE_QARASHINOR = {
-
-  }
-    
   s:STATE_SHIRBIN_LOWLANDS = {
-
-  }
-    
-  s:STATE_ELENDINEYIR = {
-
+		region_state:TEF = {
+			create_pop = {
+				culture = tefereti
+				size = 509992
+			}
+      create_pop = {
+				culture = nangarlith
+				size = 76992
+			}
+		}
   }
     
   s:STATE_MARBLEGATE = {
-
-  }
-    
-  s:STATE_NEYRISHANAR = {
-
+		region_state:TEF = {
+			create_pop = {
+				culture = tefereti
+				size = 1430808
+			}
+		}
   }
     
   s:STATE_MARZEHZARIN = {
-
+		region_state:TEF = {
+			create_pop = {
+				culture = tefereti
+				size = 1268400
+			}
+		}
   }
     
   s:STATE_HIGH_HARAVA = {
-
-  }
-    
-  s:STATE_BLUEEARTH = {
-
-  }
-    
-  s:STATE_CAM_YARA = {
-
+		region_state:TEF = {
+			create_pop = {
+				culture = tefereti
+				size = 501200
+			}
+		}
   }
     
   s:STATE_PORCELAINGATE = {
-
+		region_state:TEF = {
+			create_pop = {
+				culture = tefereti
+				size = 649200
+			}
+			create_pop = {
+				culture = highland_halfling
+				size = 32220
+			}
+		}
   }
     
   s:STATE_LAERANELS_DESOLATION = {
@@ -417,7 +624,16 @@ POPS = {
   }
     
   s:STATE_POMMELFALL = {
-
+		region_state:TEF = {
+			create_pop = {
+				culture = tefereti
+				size = 989604
+			}
+			create_pop = {
+				culture = nangarlith
+				size = 490392
+			}
+		}
   }
     
   s:STATE_BROKENPILLAR = {
@@ -459,11 +675,21 @@ POPS = {
   }
     
   s:STATE_SHADGOL = {
-
+		region_state:TEF = {
+			create_pop = {
+				culture = tefereti
+				size = 1057592
+			}
+		}
   }
     
   s:STATE_ASARSHIR = {
-
+		region_state:TEF = {
+			create_pop = {
+				culture = tefereti
+				size = 1218404
+			}
+		}
   }
     
   s:STATE_THINSILVER = {
@@ -493,14 +719,6 @@ POPS = {
   }
     
   s:STATE_MONTARBORA = {
-
-  }
-    
-  s:STATE_RIVERGLITO = {
-
-  }
-    
-  s:STATE_MARBORDO = {
 
   }
     
@@ -572,10 +790,6 @@ POPS = {
 
   }
     
-  s:STATE_SANKTARAGO = {
-
-  }
-    
   s:STATE_TRANKVILEJO = {
 
   }
@@ -613,7 +827,20 @@ POPS = {
   }
     
   s:STATE_PINCER_PENINSULA = {
-
+		region_state:SHE = {
+			create_pop = {
+				culture = beithaven
+				size = 2367188
+			}
+			create_pop = {
+				culture = vandori
+				size = 93996
+			}
+			create_pop = {
+				culture = morastlinge
+				size = 2804
+			}
+		}
   }
     
   s:STATE_FOBAN = {
