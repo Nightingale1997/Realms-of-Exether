@@ -137,6 +137,7 @@ DISPEL_RITUAL_DESC: "#header Dispel the $RITUAL_NAME$ ritual#!\n$TOOLTIP_DELIMIT
 
 has_reserves_tt: "[SCOPE.GetRootScope.GetCountry.GetName] does not have [Scope.ScriptValue('ritual_cost')|0v] @magic! #bold [concept_magic_reserves]"
 
+VEIL_INTEGRITY_TITLE: "#bold #o Veil Integrity#!#!"
 VEIL_INTEGRITY_STATUS: "[AddLocalizationIf(GreaterThan_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_STATUS_STRENGTHENED')][AddLocalizationIf(EqualTo_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_STATUS_BALANCED')][AddLocalizationIf(LessThan_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_STATUS_WEAKENED')]"
 VEIL_INTEGRITY_STATUS_BALANCED: "#v Balanced#!"
 VEIL_INTEGRITY_STATUS_WEAKENED: "#bold #u Weakened#!#!"
@@ -146,7 +147,7 @@ VEIL_INTEGRITY_STATUS_STRENGTHENED: "#bold #o Strengthened#!#!"
 
   VEIL_INTEGRITY_TOOLTIP: "$VEIL_INTEGRITY_BALANCE$[GetPlayer.GetCustom('magic_reserves_loc')][SelectLocalization(GetMetaPlayer.GetPlayedOrObservedCountry.IsValid, 'VEIL_INTEGRITY_TOOLTIP_DELAYED', 'OBSERVER_NO_COUNTRY_SELECTED') ]"
   VEIL_INTEGRITY_TOOLTIP_DELAYED: "\n$TOOLTIP_DELIMITER$\nThe current [concept_veil_integrity] is $VEIL_INTEGRITY_VALUE_TEXT$ @magic![Nbsp]due to:\n WIP"
-  VEIL_INTEGRITY_BALANCE: "@magic! #bold [concept_veil_integrity]#!\nCurrent integrity: $VEIL_INTEGRITY_VALUE_TEXT$"
+  VEIL_INTEGRITY_BALANCE: "@magic! #bold [concept_veil_integrity]#!\nCurrent integrity: $VEIL_INTEGRITY_STATUS$"
 
 VEIL_INTEGRITY_VALUE_TEXT: "[AddLocalizationIf(GreaterThan_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_VALUE_GOLD')][AddLocalizationIf(EqualTo_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_VALUE')][AddLocalizationIf(LessThan_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_VALUE_BLUE')]"
 VEIL_INTEGRITY_VALUE: "#v [AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')]%#!"

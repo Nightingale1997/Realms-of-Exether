@@ -577,63 +577,37 @@ types timekeeper
 			}
 
 			widget = {
-				position = { 35 0 }
+				position = { 0 0 }
 				size = { 170 68 }
 
 				### Veil Integrity
 				button = {
+					position = { 35 0 }
 					name = "tutorial_highlight_magic"
 					using = glow_button
-					size = { 100 40 }
+					size = { 90 75 }
 					tooltip = "VEIL_INTEGRITY_TOOLTIP"
 					using = tooltip_below
 					onclick = "[GetVariableSystem.Toggle('show_magic')]"
 					onclick = "[InformationPanelBar.ClosePanel]"
 					enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 					
-					icon = {
-						size = { 32 32 }
-						position = { 5 22.5 }
-						name = magic_power_icon
-						texture = "gfx/interface/icons/topbar/magic_reserves_icon.dds"
-						parentanchor = vcenter
-					}
+
 
 					flowcontainer = {
-						position = { 35 -3 }
+						position = { 0 0 }
 						direction = vertical
 						minimumsize = { 90 52 }
 						margin_top = 10
-						spacing = 5
-		
+						spacing = 7.5
 						textbox = {
-							visible = "[GreaterThan_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50')]"
-							text = "VEIL_INTEGRITY_VALUE_GOLD"
-							align = right|nobaseline
-							using = fontsize_large
-							autoresize = yes
-							margin_right = 15
-							parentanchor = right
-						}
-	
-						textbox = {
-							visible = "[EqualTo_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50')]"
-							text = "VEIL_INTEGRITY_VALUE"
+							text = "VEIL_INTEGRITY_TITLE"
 							align = hcenter|nobaseline
-							using = fontsize_large
+							using = fontsize_medium
 							autoresize = yes
 							parentanchor = hcenter
 						}
-	
-						textbox = {
-							visible = "[LessThan_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50')]"
-							text = "VEIL_INTEGRITY_VALUE_BLUE"
-							align = left|nobaseline
-							using = fontsize_large
-							autoresize = yes
-							margin_left = 15
-							parentanchor = left
-						}
+
 						
 						double_direction_progressbar_gold = {
 							size = { 60 6 }
@@ -648,11 +622,32 @@ types timekeeper
 						}
 
 						textbox = {
-							text = "VEIL_INTEGRITY_STATUS"
+							visible = "[GreaterThan_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50')]"
+							text = "VEIL_INTEGRITY_VALUE_GOLD"
+							align = right|nobaseline
+							using = fontsize_medium
+							autoresize = yes
+							margin_right = 15
+							parentanchor = right
+						}
+	
+						textbox = {
+							visible = "[EqualTo_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50')]"
+							text = "VEIL_INTEGRITY_VALUE"
 							align = hcenter|nobaseline
-							using = fontsize_small
+							using = fontsize_medium
 							autoresize = yes
 							parentanchor = hcenter
+						}
+	
+						textbox = {
+							visible = "[LessThan_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50')]"
+							text = "VEIL_INTEGRITY_VALUE_BLUE"
+							align = left|nobaseline
+							using = fontsize_medium
+							autoresize = yes
+							margin_left = 15
+							parentanchor = left
 						}
 					}
 					
@@ -661,7 +656,7 @@ types timekeeper
 
 			### DATE
 			widget = {
-				position = { 175 2 }
+				position = { 150 2 }
 				size = { 170 68 }
 
 				### PAUSED DATE
