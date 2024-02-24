@@ -517,7 +517,7 @@ types timekeeper
 
 		### TOP RIGHT STUFF
 		widget = {
-			size = { 575 80 }
+			size = { 540 80 }
 			parentanchor = right
 			alwaystransparent = no
 
@@ -577,12 +577,11 @@ types timekeeper
 			}
 
 			widget = {
-				position = { 0 0 }
+				position = { 220 2 }
 				size = { 170 68 }
 
 				### Veil Integrity
 				button = {
-					position = { 35 0 }
 					name = "tutorial_highlight_magic"
 					using = glow_button
 					size = { 90 75 }
@@ -656,7 +655,7 @@ types timekeeper
 
 			### DATE
 			widget = {
-				position = { 150 2 }
+				position = { 35 2 }
 				size = { 170 68 }
 
 				### PAUSED DATE
@@ -776,16 +775,28 @@ types timekeeper
 					}
 				}
 
-				### PAUSED TEXT
+				### PAUSED TEXT - ASTRAL YEAR
 				textbox = {
 					visible = "[TimeKeeper.IsPaused]"
-					parentanchor = bottom
-					text = "CLOCK_PAUSED"
+					text = "ASTRAL_CALENDAR_YEAR"
 					autoresize = yes
 					using = fontsize_small
 					default_format = "#variable"
 					align = left|nobaseline
+					autoresize = yes
+					parentanchor = bottom
 					alpha = 0.5
+				}
+				### UNPAUSED TEXT - ASTRAL YEAR
+				textbox = {
+					visible = "[Not(TimeKeeper.IsPaused)]"
+					text = "ASTRAL_CALENDAR_YEAR"
+					autoresize = yes
+					using = fontsize_small
+					default_format = "#variable"
+					align = left|nobaseline
+					autoresize = yes
+					parentanchor = bottom
 				}
 			}
 
