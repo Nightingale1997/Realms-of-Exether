@@ -795,14 +795,17 @@
             modifier = {
                 add = 1000
                 scope:character ?= {
-                    exists = c:BRZ
+                    #exists = c:BRZ
+                    always = no
                     home_country = {
                         OR = {
                             AND = {
-                                c:BRZ = this
+                              #  c:BRZ = this
+                              always = no
                                 is_subject = no # preventing uniform conflicts if BRZ becomes a subject of another country with puppet uniforms
                             }
-                            is_subject_of = c:BRZ
+                            always = no
+                          #  is_subject_of = c:BRZ
                         }       
                     }
                     OR = {
@@ -833,14 +836,17 @@
             modifier = {
                 add = 100
                 scope:pop ?= {
-                    exists = c:BRZ
+                   # exists = c:BRZ
+                   always = no
                     home_country = {
                         OR = {
                             AND = {
-                                c:BRZ = this
+                               # c:BRZ = this
+                               always = no
                                 is_subject = no # preventing uniform conflicts if BRZ becomes a subject of another country with puppet uniforms
                             }
-                            is_subject_of = c:BRZ
+                           # is_subject_of = c:BRZ
+                           always = no
                         }       
                     }
                     is_pop_type = officers
@@ -863,14 +869,17 @@
             modifier = {
                 add = 100
                 scope:pop ?= {
-                    exists = c:BRZ
+                  #  exists = c:BRZ
+                  always = no
                     home_country = {
                         OR = {
                             AND = {
-                                c:BRZ = this
+                             #   c:BRZ = this
+                             always = no
                                 is_subject = no # preventing uniform conflicts if BRZ becomes a subject of another country with puppet uniforms
                             }
-                            is_subject_of = c:BRZ
+                           # is_subject_of = c:BRZ
+                           always = no
                         }       
                     }
                     is_pop_type = soldiers

@@ -2967,16 +2967,6 @@ ideology_humanitarian = {
 			}
 			add = -50
 		}
-		# Pedro JE victory
-		if = {
-			limit = {
-				owner = {
-					has_variable = brz_enduring_empire
-				}
-			}
-			add = 25
-		}
-		# liberal and/or radical leaders have a higher spawn chance if the Dreyfusards won.
 
 	}
 }
@@ -3259,15 +3249,6 @@ ideology_land_reformer = {
 				}
 			}
 			multiply = 0.01
-		}
-		# Pedro JE victory
-		if = {
-			limit = {
-				owner = {
-					has_variable = brz_enduring_empire
-				}
-			}
-			add = 50
 		}
 	}
 }
@@ -3899,15 +3880,6 @@ ideology_humanitarian_royalist = {
 				}
 			}
 			add = -50
-		}
-		# Pedro JE victory
-		if = {
-			limit = {
-				owner = {
-					has_variable = brz_enduring_empire
-				}
-			}
-			add = 100
 		}
 		# liberal and/or radical leaders have a higher spawn chance if the Dreyfusards won.
 		if = {
