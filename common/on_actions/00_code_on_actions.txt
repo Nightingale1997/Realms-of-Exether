@@ -27,6 +27,10 @@ on_monthly_pulse_country = {
 			}
 			kill_character = yes
 		}
+		change_global_variable = {
+			name = veil_integrity_var
+			add = modifier:country_veil_integrity_contribution
+		}
 	}
 	# Election Events
 	random_events = {
