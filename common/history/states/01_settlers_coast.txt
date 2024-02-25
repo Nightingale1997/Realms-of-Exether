@@ -428,7 +428,7 @@ add_homeland = cu:dorite
 s:STATE_OVERBURROW = {
     create_state = {
         country = c:BRB
-        owned_provinces = { "x12F9EE" "x2BE0F5" "x5DC9E9" "x6E98F8" "x99F872" "xA7A8D6" "xA9F676" "xAC8CF7" "xB2F4AA" "xC1B9F1" "xC2CAA8" "xD4DB49" "xDCDA6A" "xE15DE5" "xE169D8" "xE38EC9" "xE3F3F7" "xE5E36E" "xEBD639" "xEDAFAE" "xEDE6D9" "xEDED68" "xF266E7" "xF40EF4" }
+        owned_provinces = { "x12F9EE" "x24E2F0" "x2BE0F5" "x5DC9E9" "x6E98F8" "x99F872" "xA2F776" "xA7A8D6" "xA9F676" "xAC8CF7" "xB2F4AA" "xC1B9F1" "xC2CAA8" "xD4DB49" "xDCDA6A" "xE15DE5" "xE169D8" "xE38EC9" "xE3F3F7" "xE5E36E" "xEAEEA2" "xEBD639" "xEDAFAE" "xEDE6D9" "xEDED68" "xF266E7" "xF40EF4" "xFBD4C1" }
 }
 add_homeland = cu:highland_halfling
 }
@@ -444,7 +444,7 @@ add_homeland = cu:highland_halfling
 s:STATE_NEWBANKS = {
     create_state = {
         country = c:FTH
-        owned_provinces = { "x32CAFB" "x64EDF8" "x6FE4F3" "x70B4D7" "x89D1CC" "x9EE8B6" "xA4A5AC" "xB7B2A6" "xB8D1CB" "xBBDA9A" "xC382B1" "xC489EA" "xCAE1B9" "xD257E5" "xD3F835" "xE1F4D0" "xE5F151" "xE7D939" "xEAB566" "xEBA476" "xF037F2" "xF0CAC1" "xF28199" "xF2BE79" "xF8CA3D" "xFB59A5" "xFE0CFE" }
+        owned_provinces = { "x32CAFB" "xC0A0BD" "x93F0EA" "x64EDF8" "x6FE4F3" "x70B4D7" "x89D1CC" "x9EE8B6" "xA4A5AC"  "xB8D1CB" "xBBDA9A" "xC382B1" "xC489EA" "xCAE1B9" "xD257E5" "xD3F835" "xE1F4D0" "xE5F151" "xE7D939" "xEAB566" "xEBA476" "xF037F2" "xF0CAC1" "xF28199" "xF2BE79" "xF8CA3D" "xFB59A5" "xFE0CFE" }
 }
 add_homeland = cu:highland_halfling
 }
@@ -452,7 +452,7 @@ add_homeland = cu:highland_halfling
 s:STATE_STOUTHEART_BASIN = {
     create_state = {
         country = c:CLR
-        owned_provinces = { "x34D6FC" "x70ECFD" "x87DE96" "xA983FB" "xA9DBFB" "xD37AE2" "xE2E3C8" "xF3B5D3" "xF8D9C8" }
+        owned_provinces = { "x300BD3" "x34D6FC" "x3D111E" "x4B30D0" "x64CEF1" "x66C335" "x6A9ACB" "x70ECFD" "x87DE96" "x944D94" "xA983FB" "xA9DBFB" "xAD8C96" "xB7B2A6" "xBFE460" "xCEADF7" "xD0E348" "xD35AEA" "xD37AE2" "xD8AEBD" "xE1E965" "xE2E3C8" "xE53712" "xEE56BF" "xF1FBD7" "xF3B5D3" "xF8D9C8" }
 }
 add_homeland = cu:clearbough
 }
@@ -633,15 +633,6 @@ s:STATE_SILVERTARGE = {
         owned_provinces = { "x18EEF0" "x61D8DE" "x75C5E3" "x85EBA5" "x89BEE9" "x8BCAB6" "x9F99D1" "xA778E4" "xACB8AB" "xB8BAC6" "xBCF1A0" "xBDA6E0" "xC079ED" "xC7FCF0" "xC999F9" "xCCB8FB" "xD9C1E2" "xDA68C5" "xDEB3FA" "xE1DD71" "xE8F7D2" "xF1A1C3" "xF2FCA1" "xF3EE37" "xF595A1" "xFEF701" }
 }
 add_homeland = cu:clearbough
-}
-
-s:STATE_IRON_HALLS = {
-    create_state = {
-        country = c:CLR
-        owned_provinces = { "x64CEF1" "x93F0EA" "xBFE460" "xC0A0BD" "xCEADF7" "xD0E348" "xD8AEBD" "xE1E965" "xEE56BF" }
-    }
-    add_homeland = cu:clearbough
-    }
 }
 
 }
