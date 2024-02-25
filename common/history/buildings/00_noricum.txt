@@ -944,7 +944,14 @@ BUILDINGS = {
 
 
     s:STATE_WYRMBONE_CLIFFS = {
-
+      region_state:SDN={
+        create_building={
+          building="building_port"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_anchorage" }
+        }
+      }
   }
 
 
@@ -1480,12 +1487,6 @@ BUILDINGS = {
 
   }
 
-
-    s:STATE_GELLIBRITH = {
-
-  }
-
-
     s:STATE_MAESBELAN = {
       region_state:JUR={
         create_building={
@@ -1614,12 +1615,6 @@ BUILDINGS = {
     s:STATE_GLYNFFORDD = {
 
   }
-
-
-    s:STATE_PANTMARK = {
-
-  }
-
 
     s:STATE_ALLTGLAS = {
 
@@ -1768,7 +1763,8 @@ BUILDINGS = {
 
 
     s:STATE_HRAFNSDALR = {
-
+      region_state:SDN={
+      }
   }
 
 

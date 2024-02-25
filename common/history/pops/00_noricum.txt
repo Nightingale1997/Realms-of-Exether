@@ -553,7 +553,16 @@ POPS = {
 
 
     s:STATE_WYRMBONE_CLIFFS = {
-
+      region_state:SDN = {
+        create_pop = {
+          culture = cloud_giant
+          size = 20980
+        }
+        create_pop = {
+          culture = frost_giant
+          size = 4968
+        }
+      }
   }
 
 
@@ -955,12 +964,6 @@ POPS = {
 
   }
 
-
-    s:STATE_GELLIBRITH = {
-
-  }
-
-
     s:STATE_MAESBELAN = {
       region_state:JUR = {
         create_pop = {
@@ -1062,12 +1065,6 @@ POPS = {
     s:STATE_GLYNFFORDD = {
 
   }
-
-
-    s:STATE_PANTMARK = {
-
-  }
-
 
     s:STATE_ALLTGLAS = {
 
@@ -1207,7 +1204,16 @@ POPS = {
 
 
     s:STATE_HRAFNSDALR = {
-
+      region_state:SDN = {
+        create_pop = {
+          culture = cloud_giant
+          size = 8000
+        }
+        create_pop = {
+          culture =frost_giant
+          size = 4000
+        }
+      }
   }
 
 

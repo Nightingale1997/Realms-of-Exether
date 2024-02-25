@@ -380,7 +380,7 @@ s:STATE_GLASLIESH = {
 s:STATE_BALATHOUL = {
 	create_state = {
 	country = c:BFU
-	owned_provinces = { "x53BCFC" "x8CE5E1" "x8DDEEB" "x9A93D1" "xDC9A96" "xEC41D3" "xFDA0FC" }
+	owned_provinces = { "x4CB4F9" "x53BCFC" "x81BBCF" "x8CE5E1" "x8DDEEB" "x99E7BD" "x9A93D1" "xACF66B" "xDC9A96" "xDDE46F" "xEC41D3" "xF2DFD1" "xFDA0FC" }
 	}
 	add_homeland = cu:glethach #Sets the state to be a homeland for whatever culture you put here.
 }
@@ -514,14 +514,6 @@ s:STATE_BRISINGAMEN = {
 	add_homeland = cu:fire_giant
 	}
 
-s:STATE_GELLIBRITH = {
-	create_state = {
-	country = c:WHM
-	owned_provinces = { "x8CEAB2" "xF554F6" "xFDDCBB" }
-	}
-	add_homeland = cu:grendleth #Sets the state to be a homeland for whatever culture you put here.
-}
-
 s:STATE_MAESBELAN = {
 	create_state = {
 	country = c:JUR
@@ -571,18 +563,10 @@ s:STATE_GLYNFFORDD = {
 	add_homeland = cu:meriwyn #Sets the state to be a homeland for whatever culture you put here.
 }
 
-s:STATE_PANTMARK = {
-	create_state = {
-	country = c:BFU
-	owned_provinces = { "x4CB4F9" "x81BBCF" "x99E7BD" "xACF66B" "xDDE46F" "xF2DFD1" }
-	}
-	add_homeland = cu:glethach #Sets the state to be a homeland for whatever culture you put here.
-}
-
 s:STATE_ALLTGLAS = {
 	create_state = {
 	country = c:WHM
-	owned_provinces = { "x42E0D4" "xBEA9EF" "xBF9DF7" "xBFC18E" "xE579CC" "xE99CC7" }
+	owned_provinces = { "x42E0D4" "x8CEAB2" "xBEA9EF" "xBF9DF7" "xBFC18E" "xE579CC" "xE99CC7" "xF554F6" "xFDDCBB" }
 	}
 	add_homeland = cu:grendleth #Sets the state to be a homeland for whatever culture you put here.
 }
