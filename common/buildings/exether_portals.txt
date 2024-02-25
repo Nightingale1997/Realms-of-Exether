@@ -1,0 +1,55 @@
+﻿building_adventuring_guild= {
+	building_group = bg_adventuring
+
+	city_type = city
+	
+	levels_per_mesh = 5
+
+	unlocking_technologies = {
+		organized_adventuring
+	}
+
+	production_method_groups = {
+		pmg_base_building_adventuring_guild
+		pmg_adventuring_focus
+		pmg_ownership_building_adventuring_guild
+	}
+	
+	texture = "gfx/interface/icons/building_icons/adventuring_guild.dds"
+
+	required_construction = construction_cost_medium
+}
+
+building_airship_dock = {
+	building_group = bg_public_infrastructure
+	city_type = city
+	texture = "gfx/interface/icons/building_icons/airship_dock.dds"
+
+	enable_air_connection = yes
+
+	has_max_level = yes
+	ignore_stateregion_max_level = yes
+	port = yes
+
+	unlocking_technologies = { airshipyards }
+
+	production_method_groups = {
+		pmg_base_building_airship_dock
+	}
+
+	required_construction = construction_cost_medium
+	
+	possible = {
+		error_check = {
+			severity = fail
+			AND = {
+				OR = {
+					has_building = building_skyscraper
+					state_has_mountain = yes
+				}
+				NOT = { is_coastal = yes }
+			}
+
+		}
+	}
+}
