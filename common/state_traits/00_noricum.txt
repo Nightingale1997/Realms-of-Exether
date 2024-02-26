@@ -5,3 +5,14 @@
         building_group_bg_ranching_throughput_add = 0.1
 	}
 }
+
+state_trait_everfrost_terrain = {
+    icon = "gfx/interface/icons/state_trait_icons/cold_climate.dds"
+	
+	modifier = {
+		building_group_bg_ranching_throughput_add = -0.1
+		state_construction_mult = -0.2
+		state_infrastructure_mult = -0.2
+		state_migration_pull_mult = -0.5
+	}
+}

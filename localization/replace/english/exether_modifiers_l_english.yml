@@ -1,5 +1,5 @@
 ﻿l_english:
- ig_variant_mages: "[GetInterestGroupVariant('ig_mages',GetPlayer).GetNameWithCountryVariant]"
+  ig_variant_mages: "[GetInterestGroupVariant('ig_mages',GetPlayer).GetNameWithCountryVariant]"
   modifier_interest_group_ig_mages_pol_str_mult: "$ig_variant_mages$ [concept_political_strength]"
   modifier_interest_group_ig_mages_pol_str_mult_desc: "A bonus or penalty to the total [concept_political_strength] of the $ig_variant_mages$ [concept_interest_group]"
 
@@ -7,6 +7,8 @@
   modifier_country_wizards_pol_str_mult_desc: "An increase or decrease in the [concept_political_strength] of $wizards$"
   modifier_country_magical_reserves_add: "@magic! [concept_magic_reserves]"
   modifier_country_magical_reserves_add_desc: "An increase or decrease in @magic! [concept_magic_reserves]"
+  modifier_country_veil_integrity_contribution: "#v %#!@magic! [concept_veil_integrity] Contribution"
+  modifier_country_veil_integrity_contribution_desc: "An increase or decrease in @magic! [concept_veil_integrity]"
 
   modifier_country_wizards_voting_power_add: "[concept_political_strength] from the [concept_votes] of $wizards$"
 
@@ -81,7 +83,6 @@
   country_ritual_antimagic_4: "country_ritual_antimagic_4"
   country_ritual_antimagic_5: "country_ritual_antimagic_5"
   
-
   country_ritual_divine_1_desc: "country_ritual_divine_1_desc"
   country_ritual_divine_2_desc: "country_ritual_divine_2_desc"
   country_ritual_divine_3_desc: "country_ritual_divine_3"
@@ -174,3 +175,5 @@
   country_ritual_antimagic_3_cost_desc: "country_ritual_antimagic_3"
   country_ritual_antimagic_4_cost_desc: "country_ritual_antimagic_4_desc"
   country_ritual_antimagic_5_cost_desc: "country_ritual_antimagic_5_desc"
+
+  #Veil Integrity

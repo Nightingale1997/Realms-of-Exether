@@ -31,22 +31,22 @@ goods_output_gizmos_add = {
 }
 
 goods_input_trinkets_add = {
-	good = no
+	good = yes
 	percent = no
 }
 
 goods_input_cloudsilver_add = {
-	good = no
+	good = yes
 	percent = no
 }
 
 goods_input_gizmos_add = {
-	good = no
+	good = yes
 	percent = no
 }
 
 goods_input_wishstone_add = {
-	good = no
+	good = yes
 	percent = no
 }
 
@@ -64,5 +64,11 @@ state_adventurer_coverage_add = {
 state_adventurer_coverage_mult = {
 	good = yes
 	percent = yes
+	num_decimals = 0
+}
+
+country_veil_integrity_contribution = {
+	neutral = yes
+	percent = no
 	num_decimals = 0
 }
