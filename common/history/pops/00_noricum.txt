@@ -961,7 +961,16 @@ POPS = {
 
 
     s:STATE_BRISINGAMEN = {
-
+      region_state:IGM = {
+        create_pop = {
+          culture = frost_giant
+          size = 5000
+        }			
+        create_pop = {
+          culture = fire_giant
+          size = 18000
+        }
+      }
   }
 
     s:STATE_MAESBELAN = {
@@ -1172,7 +1181,16 @@ POPS = {
 
 
     s:STATE_NORDFJALL = {
-
+      region_state:SDN = {
+        create_pop = {
+          culture = cloud_giant
+          size = 20400
+        }
+        create_pop = {
+          culture = frost_giant
+          size = 15000
+        }
+      }
   }
 
 
@@ -1273,7 +1291,16 @@ POPS = {
 
 
     s:STATE_YGGHAMN = {
-
+      region_state:GRL = {
+        create_pop = {
+          culture = frost_giant
+          size = 14000
+        }
+        create_pop = {
+          culture = cloud_giant
+          size = 2000
+        }
+      }
   }
 
 
@@ -1371,7 +1398,16 @@ POPS = {
 
 
     s:STATE_VIGAKULL = {
-
+      region_state:FFG = {
+        create_pop = {
+          culture = frost_giant
+          size = 17396
+        }
+        create_pop = {
+          culture = frost_giant
+          size = 65200
+        }
+      }
   }
 
 
@@ -1422,7 +1458,12 @@ POPS = {
   }
 
     s:STATE_HALSTEAD = {
-
+      region_state:SJA = {
+        create_pop = {
+          culture = frost_giant
+          size = 11254
+        }
+      }
   }
 
 

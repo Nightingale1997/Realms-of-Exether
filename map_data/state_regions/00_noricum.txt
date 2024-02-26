@@ -1288,6 +1288,7 @@ STATE_HJELTIAS_GLACIER = {
 }
 STATE_NORDFJALL = {
     id = 4085
+    traits = { "state_trait_everfrost_terrain" }
     subsistence_building = "building_subsistence_pastures"
     provinces = { "x41F9DD" "x4CE9F6" "x53EDEC" "x5ED9F2" "x69E7DE" "x72D4E3" "x75E1F3" "x9087EE" "x90E884" "x9A91EE" "xA0A2CF" "xA4CABF" "xA5C9B7" "xA8E3BE" "xB273DE" "xB2C7D5" "xBBB3D2" "xC0B0DD" "xC68CF2" "xD27AD2" "xD39ACE" "xE1A77F" "xE5ADEC" "xE5E7F8" "xE995CC" "xEAFD36" "xEEDDB4" "xF3E95B" "xF4CEC3" "xF4F8F1" "xF55CDC" "xF6F5B0" }
     impassable = { "x9A91EE" "xA5C9B7" "xA8E3BE" "x69E7DE" "xEEDDB4" "xEAFD36" "xF3E95B" "xB273DE" "xC0B0DD" "x75E1F3" "xE5ADEC" "xF4CEC3" "xE995CC" "xBBB3D2" "xF66CDC" }
@@ -1296,6 +1297,17 @@ STATE_NORDFJALL = {
     farm = x53EDEC
     mine = x5ED9F2
     port = x69E7DE
+    arable_land = 40
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 48
+        bg_sulfur_mining = 32
+        bg_logging = 23
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 50
+    }
     naval_exit_id = 3061
 }
 STATE_HRAUNLUND = {
@@ -1622,6 +1634,16 @@ STATE_BRISINGAMEN = {
     farm = x7AFCE2
     mine = x91E6C6
     port = x95B1F9
+    arable_land = 60
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 40
+        bg_logging = 6
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 20
+    }
     naval_exit_id = 3061
 }
 STATE_PLACEHOLDER_EMPTY_3 = {
@@ -1645,6 +1667,20 @@ STATE_VIGAKULL = {
     farm = x969BF8
     mine = x9AC7BA
     port = x9EC6AA
+    arable_land = 40
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 28
+        bg_sulfur_mining = 36
+        bg_logging = 17
+        bg_whaling = 6
+        bg_fishing = 9
+    }
+    resource = {
+        type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
+        undiscovered_amount = 8
+    }
     naval_exit_id = 3022
 }
 STATE_FORRTORP = {
@@ -1820,6 +1856,12 @@ STATE_HALSTEAD = {
     farm = x9EFA5F
     mine = xAEBD92
     port = xB0AEA5
+    arable_land = 3
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_whaling = 5
+        bg_fishing = 3
+    }
     naval_exit_id = 3034
 }
 STATE_HODRSBORG = {
