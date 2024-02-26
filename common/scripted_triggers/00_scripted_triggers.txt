@@ -648,6 +648,18 @@ can_reach_target_country = {
 			has_port = yes
 			scope:target_country = { has_port = yes }
 		}
+		AND = {
+			any_scope_state = {
+				has_building = building_airship_dock
+			}
+			has_port = yes
+			scope:target_country = {
+				 has_port = yes 
+				 any_scope_state = {
+					has_building = building_airship_dock
+				}
+			}
+		}
 	}
 }
 
@@ -659,6 +671,18 @@ can_reach_target_state = {
 			navy_size >= 10
 			has_port = yes
 			scope:target_state = { is_coastal = yes }
+		}
+		AND = {
+			any_scope_state = {
+				has_building = building_airship_dock
+			}
+			has_port = yes
+			scope:target_country = {
+				 has_port = yes 
+				 any_scope_state = {
+					has_building = building_airship_dock
+				}
+			}
 		}
 	}
 }
