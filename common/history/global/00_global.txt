@@ -182,13 +182,95 @@ GLOBAL = {
 		}
 	}
 
+	# IMF
+	set_global_variable = {
+		name = imf_headquarters
+		value = s:STATE_MISTREACH.region_state:ARR
+	}
+	every_in_global_list = {
+		variable = imf_members
+		set_imf_vars = yes
+		onaction_order_by_value_currency = yes
+	}
 
-	#Not Yet Lost
+	# International List
 	every_country = {
 		limit = {
-			c:KRA ?= this
+			not = {
+				has_variable = un_member
+			}
 		}
-		set_variable = not_yet_lost_ach_possible
+		set_country_type = unrecognized
+	}
+	every_country = {
+		limit = {
+			has_variable = un_member
+		}
+		set_country_type = recognized
+	}
+	every_country = {
+		limit = {
+			has_variable = unsc_member
+		}
+		add_to_global_variable_list = {
+			name = unsc_members_list
+			target = THIS
+		}
+	}
+	every_country = {
+		limit = {
+			has_variable = un_member
+		}
+		add_to_global_variable_list = {
+			name = un_members_list
+			target = THIS
+		}
+	}
+	every_country = {
+		limit = {
+			has_variable = un_observer
+		}
+		add_to_global_variable_list = {
+			name = un_observers_list
+			target = THIS
+		}
+	}
+	every_country = {
+		limit = {
+			NOR = {
+				has_variable = un_observer
+				has_variable = un_member
+			}
+		}
+		add_to_global_variable_list = {
+			name = un_nonmember_list
+			target = THIS
+		}
+	}
+	every_country = {
+		limit = {
+			has_variable = un_headquarters_holder
+		}
+		add_to_global_variable_list = {
+			name = un_headquarters_holder
+			target = THIS
+		}
+	}
+	## UN Variables
+	random_country = {
+		set_global_variable = {
+			name = var_un_memberlist
+			value = 0
+		}
+	}
+	every_country = {
+		limit = {
+			has_variable = un_member
+		}
+		change_global_variable = {
+			name = var_un_memberlist
+			add = 1
+		}
 	}
 
 	#Event Variables
