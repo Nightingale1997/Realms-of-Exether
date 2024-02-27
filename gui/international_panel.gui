@@ -13,7 +13,7 @@ types international
 {	
 	type international_panel = default_block_window {
 		name = "information_panel_bar"
-		visible = "[GetVariableSystem.Exists('international_open')]"
+		visible = "[And(GetVariableSystem.Exists('international_open'), Not(InformationPanelBar.IsAnyPanelOpen()))]"
 		
 		blockoverride "animation_state_block" {
 			state = {
