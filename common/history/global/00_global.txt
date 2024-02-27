@@ -159,7 +159,7 @@ GLOBAL = {
 					AND = {
 						has_discrimination_trait = monstrous_heritage
 						NOT = { has_discrimination_trait = naga }
-						NOT = { has_discrimination_trait = awakened }
+						NOT = { has_discrimination_trait = beast  }
 						
 					}
 					
@@ -173,7 +173,7 @@ GLOBAL = {
 					OR = {
 						has_discrimination_trait = namkhazen_heritage
 						has_discrimination_trait = naga
-						has_discrimination_trait = awakened
+						has_discrimination_trait = beast
 					}
 					
 				}

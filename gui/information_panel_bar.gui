@@ -475,7 +475,6 @@ types information_panel_bar_types {
 					blockoverride "onclick" {
 						onclick = "[GetVariableSystem.Toggle('show_magic')]"
 						onclick = "[InformationPanelBar.ClosePanel]"
-						onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope)).End)]"
 						input_action = "open_magic"
 					}
 				}
@@ -502,7 +501,6 @@ types information_panel_bar_types {
 							visible = "[GetVariableSystem.Exists('show_magic')]"
 						}
 						onclick = "[GetVariableSystem.Toggle('show_magic')]"
-						onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope)).End)]"
 						onclick = "[InformationPanelBar.ClosePanel]"
 					}
 					textbox = {
