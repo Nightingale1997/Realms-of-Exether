@@ -210,7 +210,7 @@ types international
 							parentanchor = left|top
 							position = { 30 5 }
 							icon = {
-								texture = "gfx/interface/icons/cwp_icons/valkurian_concord.dds"
+								texture = "gfx/interface/icons/company_icons/basic_agriculture_2.dds"
 								tooltip = "[concept_valkurian_concord_desc]"
 								size = { 150 150 }
 								background = {
@@ -306,7 +306,7 @@ types international
 							button = {
 								visible = "[Not(Or(Or(GetPlayer.MakeScope.Var('concord_member').IsSet, GetPlayer.MakeScope.Var('concord_observer').IsSet), GetPlayer.MakeScope.Var('asked_concord_observer').IsSet))]"
 								size = { 100 45 }
-								using = default_button
+								using = default_button_primary_action
 								tooltip = "JOINASOBSERVERconcord_TOOLTIP"
 								text = "JOINASOBSERVERUN"
 								onclick = "[GetScriptedGui('join_concord_observer_sgui').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -316,7 +316,7 @@ types international
 								visible = "[And(GetPlayer.MakeScope.Var('concord_observer').IsSet, Not(GetPlayer.MakeScope.Var('application_progress_un').IsSet))]"
 								enabled = "[Not(GetPlayer.MakeScope.Var('concord_application_rejected').IsSet)]"
 								size = { 100 45 }
-								using = default_button
+								using = default_button_primary_action
 								tooltip = "STARTMEMBERSHIPconcord_TOOLTIP"
 								text = "STARTMEMBERSHIPUN"
 								onclick = "[GetScriptedGui('join_concord_member_sgui').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -351,7 +351,7 @@ types international
 							parentanchor = left|top
 							position = { 30 5 }
 							icon = {
-								texture = "gfx/interface/icons/cwp_icons/valkurian_concord.dds"
+								texture = "gfx/interface/icons/company_icons/basic_agriculture_2.dds"
 								tooltip = "[concept_drakewarden_council_desc]"
 								size = { 150 150 }
 								background = {
@@ -447,7 +447,7 @@ types international
 							button = {
 								visible = "[Not(Or(Or(GetPlayer.MakeScope.Var('dragon_member').IsSet, GetPlayer.MakeScope.Var('dragon_observer').IsSet), GetPlayer.MakeScope.Var('asked_dragon_observer').IsSet))]"
 								size = { 100 45 }
-								using = default_button
+								using = default_button_primary_action
 								tooltip = "JOINASOBSERVERUN_TOOLTIP"
 								text = "JOINASOBSERVERUN"
 								onclick = "[GetScriptedGui('join_dragon_observer_sgui').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -457,7 +457,7 @@ types international
 								visible = "[And(GetPlayer.MakeScope.Var('dragon_observer').IsSet, Not(GetPlayer.MakeScope.Var('application_progress_un').IsSet))]"
 								enabled = "[Not(GetPlayer.MakeScope.Var('dragon_application_rejected').IsSet)]"
 								size = { 100 45 }
-								using = default_button
+								using = default_button_primary_action
 								tooltip = "STARTMEMBERSHIPUN_TOOLTIP"
 								text = "STARTMEMBERSHIPUN"
 								onclick = "[GetScriptedGui('join_dragon_member_sgui').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -754,7 +754,7 @@ types international
 							parentanchor = left|top
 							position = { 30 5 }
 							icon = {
-								texture = "gfx/interface/icons/cwp_icons/valkurian_concord.dds"
+								texture = "gfx/interface/icons/company_icons/basic_agriculture_2.dds"
 								tooltip = "[concept_valkurian_concord_desc]"
 								size = { 150 150 }
 								background = {
@@ -769,7 +769,7 @@ types international
 								size = { 350 40 }
 							}
 							blockoverride "left_text" {
-								raw_text = "[concept_valkurian_concord]"
+								raw_text = "[concept_astral_consortium]"
 							}
 							blockoverride "onclick" {
 								onclick = "[GetVariableSystem.Toggle('consortium_panel')]"
@@ -850,7 +850,7 @@ types international
 							button = {
 								visible = "[Not(Or(Or(GetPlayer.MakeScope.Var('consortium_member').IsSet, GetPlayer.MakeScope.Var('consortium_observer').IsSet), GetPlayer.MakeScope.Var('asked_consortium_observer').IsSet))]"
 								size = { 100 45 }
-								using = default_button
+								using = default_button_primary_action
 								tooltip = "JOINASOBSERVERUN_TOOLTIP"
 								text = "JOINASOBSERVERUN"
 								onclick = "[GetScriptedGui('join_consortium_observer_sgui').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -860,7 +860,7 @@ types international
 								visible = "[And(GetPlayer.MakeScope.Var('concord_observer').IsSet, Not(GetPlayer.MakeScope.Var('application_progress_un').IsSet))]"
 								enabled = "[Not(GetPlayer.MakeScope.Var('concord_application_rejected').IsSet)]"
 								size = { 100 45 }
-								using = default_button
+								using = default_button_primary_action
 								tooltip = "STARTMEMBERSHIPconcord_TOOLTIP"
 								text = "STARTMEMBERSHIPUN"
 								onclick = "[GetScriptedGui('join_consortium_member_sgui').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -900,7 +900,7 @@ types international
 #							parentanchor = left|top
 #							position = { 30 5 }
 #							icon = {
-#								texture = "gfx/interface/icons/cwp_icons/valkurian_concord.dds"
+#								texture = "gfx/interface/icons/company_icons/basic_agriculture_2.dds"
 #								tooltip = "TEMPLATE ORGANIZATION"
 #								size = { 150 150 }
 #								background = {

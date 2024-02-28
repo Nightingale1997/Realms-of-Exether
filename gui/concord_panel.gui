@@ -40,7 +40,7 @@ types concord_panel
 			raw_text = "[concept_valkurian_concord]"
 			icon = {
 				position = { -80 -10 }
-				texture = "gfx/interface/icons/cwp_icons/valkurian_concord.dds"
+				texture = "gfx/interface/icons/company_icons/basic_agriculture_2.dds"
 				tooltip = "[concept_valkurian_concord_desc]"
 				size = { 70 70 }
 				background = {
@@ -74,7 +74,7 @@ types concord_panel
 				flowcontainer = {
 					parentanchor = left|top
 					direction = vertical
-					position = { 0 100 }
+					position = { 150 100 }
 					spacing = 10
 					flowcontainer = {
 						margin_bottom = -13
@@ -183,7 +183,7 @@ types concord_panel
 							parentanchor = hcenter						
 							textbox = {
 								autoresize = yes
-								raw_text = "#t Permanent UNSC Members#!"
+								raw_text = "#t Concert of Askalon#!"
 								using = header_font_fancy
 								using = fontsize_mega
 								align = center
@@ -226,7 +226,7 @@ types concord_panel
 							parentanchor = hcenter					
 							textbox = {
 								autoresize = yes
-								raw_text = "#t UN Member States#!"
+								raw_text = "#t Concord Signatories#!"
 								using = header_font_fancy
 								using = fontsize_mega
 							}
@@ -271,7 +271,7 @@ types concord_panel
 							parentanchor = hcenter					
 							textbox = {
 								autoresize = yes
-								raw_text = "#t UN Observer States#!"
+								raw_text = "#t Observer States#!"
 								using = header_font_fancy
 								using = fontsize_mega
 							}
@@ -1077,7 +1077,7 @@ types concord_panel
 													textbox = {
 														parentanchor = hcenter
 														align = center
-														raw_text = "#v [SelectLocalization(LessThan_CFixedPoint(Country.MakeScope.ScriptValue('cwp_gdp_with_inflation'), '(CFixedPoint)1000000000000'), 'CWP_NORMAL', 'CWP_TRILLION')|Dv] #!"
+														raw_text = "#v [Country.GetGDP|1*] #!"
 													}
 												}
 												flowcontainer = {

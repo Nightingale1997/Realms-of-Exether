@@ -16,10 +16,10 @@
 @outliner_position = 570
 @companies_position = 470
 @magic_position = 510
-@international_position = 610
+@international_position = 630
 @spacing_widget_2_position = 550
 
-@maplist_position = 650
+@maplist_position = 690
 
 types information_panel_bar_types {
 	type information_panel_bar = widget {
@@ -821,7 +821,7 @@ types information_panel_bar_types {
 					}
 					sidepanel_button_small = {
 						blockoverride "icon" {
-							texture = "gfx/interface/main_hud/international_btn.dds"
+							texture = "gfx/interface/main_hud/pol_btn.dds"
 						}
 						blockoverride "button_selected" {
 							visible = "[GetVariableSystem.Exists('international_open')]"

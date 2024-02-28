@@ -186,25 +186,38 @@ GLOBAL = {
 
 	every_country = {
 		limit = {
-			has_variable = concord_member
-		}
-		if = {
-			limit = {
-				limit = {
-					country_rank = rank_value:great_power
+			religion = {
+				OR = {
+					has_discrimination_trait = marktarian_heritage
+					has_discrimination_trait = uriks_pantheon
 				}
+				
 			}
-			effect_concord_major_member = yes
-			add_to_global_variable_list = {
-				name = concord_major_members_list
-				target = THIS
-			}
+		}
+		effect_concord_member = yes
+
+	}
+
+	every_country = {
+		limit = {
+			has_variable = concord_member
 		}
 		add_to_global_variable_list = {
 			name = concord_members_list
 			target = THIS
 		}
 	}
+
+	every_country = {
+		limit = {
+			has_variable = concord_major_member
+		}
+		add_to_global_variable_list = {
+			name = concord_major_members_list
+			target = THIS
+		}
+	}
+
 	every_country = {
 		limit = {
 			has_variable = concord_observer
@@ -330,33 +343,25 @@ GLOBAL = {
 				has_discrimination_trait = dragon_heritage
 			}
 		}
-		if = {
-			limit = {
-				any_primary_culture = {
-					has_discrimination_trait = dragonborn_culture_group
-				}
-			}
-			if = {
-				limit = {
-					country_rank = rank_value:great_power
-				}
-				effect_dragon_major_member = yes
-			}
 			effect_dragon_member = yes
 			add_to_global_variable_list = {
 				name = dragon_members_list
 				target = THIS
 			}
 		}
-		else = {
-			effect_dragon_observer = yes
+
+		every_country = {
+			limit = {
+				has_variable = dragon_major_member
+			}
 			add_to_global_variable_list = {
-				name = dragon_observers_list
+				name = dragon_major_members_list
 				target = THIS
 			}
 		}
 
-	}
+
+	
 
 	every_country = {
 		limit = {

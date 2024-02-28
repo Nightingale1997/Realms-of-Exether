@@ -9,12 +9,12 @@
 @panel_width_plus_30 = 730			# used to be 490
 @panel_width_plus_70 = 770			# used to be 530
 
-types consortium_panel
+types dragon_panel
 {
-	type consortium_panel = international_org_window {
-		visible = "[And(GetVariableSystem.Exists('consortium_panel'), GetVariableSystem.Exists('international_open'))]"
+	type dragon_panel = international_org_window {
+		visible = "[And(GetVariableSystem.Exists('dragon_panel'), GetVariableSystem.Exists('international_open'))]"
 
-		name = "consortium_panel"
+		name = "dragon_panel"
 		size = { 1305 0 }
 		background = {
 			using = dropdown_background
@@ -32,16 +32,16 @@ types consortium_panel
 			}
 		}
 		blockoverride "header_close_button" {
-			onclick = "[GetVariableSystem.Clear('consortium_panel')]" 
+			onclick = "[GetVariableSystem.Clear('dragon_panel')]" 
 		}
 
 		blockoverride "window_header_name" {
 			margin_left = 20
-			raw_text = "[concept_valkurian_concord]"
+			raw_text = "[concept_drakewarden_council]"
 			icon = {
 				position = { -80 -10 }
-				texture = "gfx/interface/icons/cwp_icons/valkurian_concord.dds"
-				tooltip = "[concept_valkurian_concord_desc]"
+				texture = "gfx/interface/icons/company_icons/basic_agriculture_2.dds"
+				tooltip = "[concept_drakewarden_council_desc]"
 				size = { 70 70 }
 				background = {
 				}
@@ -66,7 +66,7 @@ types consortium_panel
 							multiline = yes
 							autoresize = yes
 							align = left|nobaseline
-							text = "consortium_DESC"
+							text = "dragon_DESC"
 							margin = { 200 0 }
 						}
 					}
@@ -74,7 +74,7 @@ types consortium_panel
 				flowcontainer = {
 					parentanchor = left|top
 					direction = vertical
-					position = { 0 100 }
+					position = { 150 100 }
 					spacing = 10
 					flowcontainer = {
 						margin_bottom = -13
@@ -84,89 +84,89 @@ types consortium_panel
 							visible = "[GetVariableSystem.Exists('international_community')]"
 							size = { 250 50 }
 							using = expand_button_bg_no_fade
-							raw_text = "International Community"
+							raw_text = "Draconic Community"
 							onclick = "[GetVariableSystem.Toggle('international_community')]"
-							onclick = "[GetVariableSystem.Clear('consortium_floor')]"
-							onclick = "[GetVariableSystem.Clear('consortium_resolutions')]"
-							onclick = "[GetVariableSystem.Clear('consortium_applications')]"
+							onclick = "[GetVariableSystem.Clear('dragon_floor')]"
+							onclick = "[GetVariableSystem.Clear('dragon_resolutions')]"
+							onclick = "[GetVariableSystem.Clear('dragon_applications')]"
 						}
 						button = {
 							visible = "[Not(GetVariableSystem.Exists('international_community'))]"
 							size = { 250 50 }
 							using = expand_button_bg_no_fade
-							raw_text = "International Community"
+							raw_text = "Draconic Community"
 							onclick = "[GetVariableSystem.Toggle('international_community')]"
-							onclick = "[GetVariableSystem.Clear('consortium_floor')]"
-							onclick = "[GetVariableSystem.Clear('consortium_resolutions')]"
-							onclick = "[GetVariableSystem.Clear('consortium_applications')]"
+							onclick = "[GetVariableSystem.Clear('dragon_floor')]"
+							onclick = "[GetVariableSystem.Clear('dragon_resolutions')]"
+							onclick = "[GetVariableSystem.Clear('dragon_applications')]"
 							alpha = 0.5
 						}
 						button = {
-							visible = "[GetVariableSystem.Exists('consortium_floor')]"
+							visible = "[GetVariableSystem.Exists('dragon_floor')]"
 							size = { 250 50 }
 							using = expand_button_bg_no_fade
 							raw_text = "UN Floor"
-							onclick = "[GetVariableSystem.Toggle('consortium_floor')]"
+							onclick = "[GetVariableSystem.Toggle('dragon_floor')]"
 							onclick = "[GetVariableSystem.Clear('international_community')]"
-							onclick = "[GetVariableSystem.Clear('consortium_resolutions')]"
-							onclick = "[GetVariableSystem.Clear('consortium_applications')]"
+							onclick = "[GetVariableSystem.Clear('dragon_resolutions')]"
+							onclick = "[GetVariableSystem.Clear('dragon_applications')]"
 						}
 						button = {
-							visible = "[Not(GetVariableSystem.Exists('consortium_floor'))]"
+							visible = "[Not(GetVariableSystem.Exists('dragon_floor'))]"
 							size = { 250 50 }
 							using = expand_button_bg_no_fade
 							raw_text = "UN Floor"
-							onclick = "[GetVariableSystem.Toggle('consortium_floor')]"
+							onclick = "[GetVariableSystem.Toggle('dragon_floor')]"
 							onclick = "[GetVariableSystem.Clear('international_community')]"
-							onclick = "[GetVariableSystem.Clear('consortium_resolutions')]"
-							onclick = "[GetVariableSystem.Clear('consortium_applications')]"
+							onclick = "[GetVariableSystem.Clear('dragon_resolutions')]"
+							onclick = "[GetVariableSystem.Clear('dragon_applications')]"
 							alpha = 0.5
 						}
 						button = {
-							visible = "[GetVariableSystem.Exists('consortium_applications')]"
+							visible = "[GetVariableSystem.Exists('dragon_applications')]"
 							size = { 250 50 }
 							using = expand_button_bg_no_fade
 							raw_text = "Applications"
-							onclick = "[GetVariableSystem.Toggle('consortium_applications')]"
-							onclick = "[GetVariableSystem.Clear('consortium_floor')]"
+							onclick = "[GetVariableSystem.Toggle('dragon_applications')]"
+							onclick = "[GetVariableSystem.Clear('dragon_floor')]"
 							onclick = "[GetVariableSystem.Clear('international_community')]"
-							onclick = "[GetVariableSystem.Clear('consortium_resolutions')]"
+							onclick = "[GetVariableSystem.Clear('dragon_resolutions')]"
 						}
 						button = {
-							visible = "[Not(GetVariableSystem.Exists('consortium_applications'))]"
+							visible = "[Not(GetVariableSystem.Exists('dragon_applications'))]"
 							size = { 250 50 }
 							using = expand_button_bg_no_fade
 							raw_text = "Applications"
-							onclick = "[GetVariableSystem.Toggle('consortium_applications')]"
-							onclick = "[GetVariableSystem.Clear('consortium_floor')]"
+							onclick = "[GetVariableSystem.Toggle('dragon_applications')]"
+							onclick = "[GetVariableSystem.Clear('dragon_floor')]"
 							onclick = "[GetVariableSystem.Clear('international_community')]"
-							onclick = "[GetVariableSystem.Clear('consortium_resolutions')]"
+							onclick = "[GetVariableSystem.Clear('dragon_resolutions')]"
 							alpha = 0.5
 						}
 						button = {
-							visible = "[GetVariableSystem.Exists('consortium_resolutions')]"
+							visible = "[GetVariableSystem.Exists('dragon_resolutions')]"
 							size = { 250 50 }
 							using = expand_button_bg_no_fade
 							raw_text = "Resolutions"
-							onclick = "[GetVariableSystem.Toggle('consortium_resolutions')]"
-							onclick = "[GetVariableSystem.Clear('consortium_floor')]"
+							onclick = "[GetVariableSystem.Toggle('dragon_resolutions')]"
+							onclick = "[GetVariableSystem.Clear('dragon_floor')]"
 							onclick = "[GetVariableSystem.Clear('international_community')]"
-							onclick = "[GetVariableSystem.Clear('consortium_applications')]"
+							onclick = "[GetVariableSystem.Clear('dragon_applications')]"
 						}
 						button = {
-							visible = "[Not(GetVariableSystem.Exists('consortium_resolutions'))]"
+							visible = "[Not(GetVariableSystem.Exists('dragon_resolutions'))]"
 							size = { 250 50 }
 							using = expand_button_bg_no_fade
 							raw_text = "Resolutions"
-							onclick = "[GetVariableSystem.Toggle('consortium_resolutions')]"
-							onclick = "[GetVariableSystem.Clear('consortium_floor')]"
+							onclick = "[GetVariableSystem.Toggle('dragon_resolutions')]"
+							onclick = "[GetVariableSystem.Clear('dragon_floor')]"
 							onclick = "[GetVariableSystem.Clear('international_community')]"
-							onclick = "[GetVariableSystem.Clear('consortium_applications')]"
+							onclick = "[GetVariableSystem.Clear('dragon_applications')]"
 							alpha = 0.5
 						}
 					}
-				flowcontainer = { # International Community
-					visible = "[And(GetVariableSystem.Exists('consortium_panel'), GetVariableSystem.Exists('international_community'))]"
+				flowcontainer = { # Draconic Community
+					visible = "[And(GetVariableSystem.Exists('dragon_panel'), GetVariableSystem.Exists('international_community'))]"
 					parentanchor = left|top
 					direction = vertical
 					position = { 10 100 }
@@ -183,7 +183,7 @@ types consortium_panel
 							parentanchor = hcenter						
 							textbox = {
 								autoresize = yes
-								raw_text = "#t Permanent UNSC Members#!"
+								raw_text = "#t Sworn Protectors#!"
 								using = header_font_fancy
 								using = fontsize_mega
 								align = center
@@ -198,7 +198,7 @@ types consortium_panel
 								addrow = 50
 								datamodel_wrap = 15
 								flipdirection = yes
-								datamodel = "[GetGlobalList('consortium_major_members_list')]"
+								datamodel = "[GetGlobalList('dragon_major_members_list')]"
 								item = {
 									flowcontainer = {
 										margin_left = 80
@@ -210,7 +210,7 @@ types consortium_panel
 											blockoverride "flag_tooltip" {
 												tooltip = "[ContextualDiplomaticPact.GetTooltip]"
 											}
-											onclick = "[GetVariableSystem.Clear('consortium_panel')]"
+											onclick = "[GetVariableSystem.Clear('dragon_panel')]"
 											onclick = "[GetVariableSystem.Clear('international_open')]"
 										}
 									}
@@ -226,7 +226,7 @@ types consortium_panel
 							parentanchor = hcenter					
 							textbox = {
 								autoresize = yes
-								raw_text = "#t UN Member States#!"
+								raw_text = "#t Dragonborn States#!"
 								using = header_font_fancy
 								using = fontsize_mega
 							}
@@ -244,7 +244,7 @@ types consortium_panel
 										addrow = 50
 										datamodel_wrap = 15
 										flipdirection = yes
-										datamodel = "[GetGlobalList('consortium_members_list')]"
+										datamodel = "[GetGlobalList('dragon_members_list')]"
 										item = {
 											flowcontainer = {
 												datacontext = "[Scope.AccessCountry]"
@@ -253,7 +253,7 @@ types consortium_panel
 													using = tooltip_above
 													datacontext = "[Scope.AccessCountry]"						
 													tooltip = "[ContextualDiplomaticPact.GetTooltip]"
-													onclick = "[GetVariableSystem.Clear('consortium_panel')]"
+													onclick = "[GetVariableSystem.Clear('dragon_panel')]"
 													onclick = "[GetVariableSystem.Clear('international_open')]"
 												}
 											}
@@ -271,7 +271,7 @@ types consortium_panel
 							parentanchor = hcenter					
 							textbox = {
 								autoresize = yes
-								raw_text = "#t UN Observer States#!"
+								raw_text = "#t Kobold States#!"
 								using = header_font_fancy
 								using = fontsize_mega
 							}
@@ -289,7 +289,7 @@ types consortium_panel
 										addrow = 50
 										datamodel_wrap = 15
 										flipdirection = yes
-										datamodel = "[GetGlobalList('consortium_observers_list')]"
+										datamodel = "[GetGlobalList('dragon_observers_list')]"
 										item = {
 											flowcontainer = {
 												datacontext = "[Scope.AccessCountry]"
@@ -298,7 +298,7 @@ types consortium_panel
 													using = tooltip_above
 													datacontext = "[Scope.AccessCountry]"						
 													tooltip = "[ContextualDiplomaticPact.GetTooltip]"
-													onclick = "[GetVariableSystem.Clear('consortium_panel')]"
+													onclick = "[GetVariableSystem.Clear('dragon_panel')]"
 													onclick = "[GetVariableSystem.Clear('international_open')]"
 												}
 											}
@@ -316,7 +316,7 @@ types consortium_panel
 							parentanchor = hcenter					
 							textbox = {
 								autoresize = yes
-								raw_text = "#t NON UN States#!"
+								raw_text = "#t Uninvolved States#!"
 								using = header_font_fancy
 								using = fontsize_mega
 							}
@@ -334,7 +334,7 @@ types consortium_panel
 										addrow = 50
 										datamodel_wrap = 15
 										flipdirection = yes
-										datamodel = "[GetGlobalList('consortium_nonmember_list')]"
+										datamodel = "[GetGlobalList('dragon_nonmember_list')]"
 										item = {
 											flowcontainer = {
 												datacontext = "[Scope.AccessCountry]"
@@ -343,7 +343,7 @@ types consortium_panel
 													using = tooltip_above
 													datacontext = "[Scope.AccessCountry]"						
 													tooltip = "[ContextualDiplomaticPact.GetTooltip]"
-													onclick = "[GetVariableSystem.Clear('consortium_panel')]"
+													onclick = "[GetVariableSystem.Clear('dragon_panel')]"
 													onclick = "[GetVariableSystem.Clear('international_open')]"
 												}
 											}
@@ -355,7 +355,7 @@ types consortium_panel
 					}
 				}
 					flowcontainer = { #UN Floor
-						visible = "[And(GetVariableSystem.Exists('consortium_panel'), GetVariableSystem.Exists('consortium_floor'))]"
+						visible = "[And(GetVariableSystem.Exists('dragon_panel'), GetVariableSystem.Exists('dragon_floor'))]"
 						direction = vertical
 						parentanchor = left|top
 						spacing = 10
@@ -422,7 +422,7 @@ types consortium_panel
 										blockoverride "scrollbox_content" {
 											vbox = {
 												datamodel_wrap = 1
-												datamodel = "[GetGlobalList('consortium_members_list')]"
+												datamodel = "[GetGlobalList('dragon_members_list')]"
 												item = {
 													flowcontainer = {
 														direction = vertical
@@ -436,7 +436,7 @@ types consortium_panel
 																using = tooltip_above
 																datacontext = "[Scope.AccessCountry]"						
 																tooltip = "[ContextualDiplomaticPact.GetTooltip]"
-																onclick = "[GetVariableSystem.Clear('consortium_panel')]"
+																onclick = "[GetVariableSystem.Clear('dragon_panel')]"
 																onclick = "[GetVariableSystem.Clear('international_open')]"
 															}
 															textbox = {
@@ -462,10 +462,10 @@ types consortium_panel
 									onclick = "[GetScriptedGui('add_opposing').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 									onclick = "[GetVariableSystem.Toggle('opposevote')]"
 									onclick = "[GetVariableSystem.Clear('supportvote')]"
-									enabled = "[And(And(GetGlobalVariable('pending_resolution').IsSet , Not(GetVariableSystem.Exists('opposevote'))), GetPlayer.MakeScope.Var('consortium_member').IsSet)]"
+									enabled = "[And(And(GetGlobalVariable('pending_resolution').IsSet , Not(GetVariableSystem.Exists('opposevote'))), GetPlayer.MakeScope.Var('dragon_member').IsSet)]"
 								}
 								button = {
-									visible = "[GetPlayer.MakeScope.Var('consortium_major_member').IsSet]"
+									visible = "[GetPlayer.MakeScope.Var('dragon_major_member').IsSet]"
 									using = default_button_primary
 									position = { -50 -80 }
 									size = { 170 40 }
@@ -498,7 +498,7 @@ types consortium_panel
 										textbox = {
 											margin_bottom = 40
 											margin_left = -100
-											text = "[GetPlayer.GetCustom('consortium_voting_balance')]"
+											text = "[GetPlayer.GetCustom('dragon_voting_balance')]"
 											using = fontsize_medium
 										}
 										background = {
@@ -551,7 +551,7 @@ types consortium_panel
 										blockoverride "scrollbox_content" {
 											vbox = {
 												datamodel_wrap = 1
-												datamodel = "[GetGlobalList('consortium_members_list')]"
+												datamodel = "[GetGlobalList('dragon_members_list')]"
 												item = {
 													flowcontainer = {
 														datacontext = "[Scope.AccessCountry]"
@@ -564,7 +564,7 @@ types consortium_panel
 																using = tooltip_above
 																datacontext = "[Scope.AccessCountry]"						
 																tooltip = "[ContextualDiplomaticPact.GetTooltip]"
-																onclick = "[GetVariableSystem.Clear('consortium_panel')]"
+																onclick = "[GetVariableSystem.Clear('dragon_panel')]"
 																onclick = "[GetVariableSystem.Clear('international_open')]"
 															}
 															textbox = {
@@ -588,7 +588,7 @@ types consortium_panel
 									onclick = "[GetScriptedGui('add_supporting').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 									onclick = "[GetVariableSystem.Toggle('supportvote')]"
 									onclick = "[GetVariableSystem.Clear('opposevote')]"
-									enabled = "[And(And(GetGlobalVariable('pending_resolution').IsSet , Not(GetVariableSystem.Exists('supportvote'))), GetPlayer.MakeScope.Var('consortium_member').IsSet)]"
+									enabled = "[And(And(GetGlobalVariable('pending_resolution').IsSet , Not(GetVariableSystem.Exists('supportvote'))), GetPlayer.MakeScope.Var('dragon_member').IsSet)]"
 								}
 							}
 						}
@@ -616,7 +616,7 @@ types consortium_panel
                                                 addrow = 50
                                                 datamodel_wrap = 10
                                                 flipdirection = yes
-												datamodel = "[GetGlobalList('consortium_members_list')]"
+												datamodel = "[GetGlobalList('dragon_members_list')]"
 												item = {
 													flowcontainer = {
 														margin = { 5 5 }
@@ -626,7 +626,7 @@ types consortium_panel
 															using = tooltip_above
 															datacontext = "[Scope.AccessCountry]"						
 															tooltip = "[ContextualDiplomaticPact.GetTooltip]"
-															onclick = "[GetVariableSystem.Clear('consortium_panel')]"
+															onclick = "[GetVariableSystem.Clear('dragon_panel')]"
 															onclick = "[GetVariableSystem.Clear('international_open')]"
 														}
 													}
@@ -649,7 +649,7 @@ types consortium_panel
 					}
 				}
 				flowcontainer = { ####### UN RESOLUTIONS
-					visible = "[And(GetVariableSystem.Exists('consortium_panel'), GetVariableSystem.Exists('consortium_resolutions'))]"
+					visible = "[And(GetVariableSystem.Exists('dragon_panel'), GetVariableSystem.Exists('dragon_resolutions'))]"
 					direction = vertical
 					parentanchor = left|top
 					spacing = 10
@@ -691,13 +691,13 @@ types consortium_panel
 												text = "[concept_unclos1]"
 												onclick = "[GetScriptedGui('activate_unclos1_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 												using = fontsize_medium
-												enabled = "[And(GetPlayer.MakeScope.Var('consortium_member').IsSet, GetScriptedGui('unclos1_varcheck').IsShown( GuiScope.End ))]"
+												enabled = "[And(GetPlayer.MakeScope.Var('dragon_member').IsSet, GetScriptedGui('unclos1_varcheck').IsShown( GuiScope.End ))]"
 											}
 											button_icon_check = {
 												position = { 215 10 }
 												size = { 40 40 }
 												onclick = "[GetScriptedGui('activate_unclos1_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-												enabled = "[And(GetPlayer.MakeScope.Var('consortium_member').IsSet, GetScriptedGui('unclos1_varcheck').IsShown( GuiScope.End ))]"											
+												enabled = "[And(GetPlayer.MakeScope.Var('dragon_member').IsSet, GetScriptedGui('unclos1_varcheck').IsShown( GuiScope.End ))]"											
 											}
 										}
 										flowcontainer = {## UNCLOS II
@@ -740,15 +740,15 @@ types consortium_panel
 												size = { 210 45 }
 												using = expand_button_bg_no_fade
 												text = "[concept_anti_corruption_resolution]"
-												onclick = "[GetScriptedGui('activate_consortium_anti_corruption_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+												onclick = "[GetScriptedGui('activate_dragon_anti_corruption_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 												using = fontsize_medium
-												enabled = no #"[GetScriptedGui('consortium_anti_corruption_varcheck').IsShown( GuiScope.End )]"
+												enabled = no #"[GetScriptedGui('dragon_anti_corruption_varcheck').IsShown( GuiScope.End )]"
 											}
 											button_icon_check = {
 												position = { 215 10 }
 												size = { 40 40 }
-												onclick = "[GetScriptedGui('activate_consortium_anti_corruption_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-												enabled = no #"[GetScriptedGui('consortium_anti_corruption_varcheck').IsShown( GuiScope.End )]"											
+												onclick = "[GetScriptedGui('activate_dragon_anti_corruption_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+												enabled = no #"[GetScriptedGui('dragon_anti_corruption_varcheck').IsShown( GuiScope.End )]"											
 											}
 										}
 									}
@@ -770,16 +770,16 @@ types consortium_panel
 											button = {
 												size = { 210 45 }
 												using = expand_button_bg_no_fade
-												text = "[concept_consortium_headquarters_resolution]"
-												onclick = "[GetScriptedGui('activate_consortium_headquarters_resolution_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+												text = "[concept_dragon_headquarters_resolution]"
+												onclick = "[GetScriptedGui('activate_dragon_headquarters_resolution_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 												using = fontsize_medium
-												enabled = no #"[GetScriptedGui('consortium_headquarters_resolution_varcheck').IsShown( GuiScope.End )]"
+												enabled = no #"[GetScriptedGui('dragon_headquarters_resolution_varcheck').IsShown( GuiScope.End )]"
 											}
 											button_icon_check = {
 												position = { 215 10 }
 												size = { 40 40 }
-												onclick = "[GetScriptedGui('activate_consortium_headquarters_resolution_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-												enabled = no #"[GetScriptedGui('consortium_headquarters_resolution_varcheck').IsShown( GuiScope.End )]"											
+												onclick = "[GetScriptedGui('activate_dragon_headquarters_resolution_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+												enabled = no #"[GetScriptedGui('dragon_headquarters_resolution_varcheck').IsShown( GuiScope.End )]"											
 											}
 										}
 										flowcontainer = {## Human Rights Resolution
@@ -790,13 +790,13 @@ types consortium_panel
 												text = "[concept_human_rights_resolution]"
 												onclick = "[GetScriptedGui('activate_declaration_of_human_rights_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 												using = fontsize_medium
-												enabled = "[And(GetPlayer.MakeScope.Var('consortium_member').IsSet, GetScriptedGui('declaration_of_human_rights_varcheck').IsShown( GuiScope.End ))]"
+												enabled = "[And(GetPlayer.MakeScope.Var('dragon_member').IsSet, GetScriptedGui('declaration_of_human_rights_varcheck').IsShown( GuiScope.End ))]"
 											}
 											button_icon_check = {
 												position = { 215 10 }
 												size = { 40 40 }
 												onclick = "[GetScriptedGui('activate_declaration_of_human_rights_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-												enabled = "[And(GetPlayer.MakeScope.Var('consortium_member').IsSet, GetScriptedGui('declaration_of_human_rights_varcheck').IsShown( GuiScope.End ))]"											
+												enabled = "[And(GetPlayer.MakeScope.Var('dragon_member').IsSet, GetScriptedGui('declaration_of_human_rights_varcheck').IsShown( GuiScope.End ))]"											
 											}
 										}
 										flowcontainer = {## Decolonization Resolution
@@ -805,15 +805,15 @@ types consortium_panel
 												size = { 210 45 }
 												using = expand_button_bg_no_fade
 												text = "[concept_decolonization_resolution]"
-												onclick = "[GetScriptedGui('activate_consortium_decolonization_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+												onclick = "[GetScriptedGui('activate_dragon_decolonization_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 												using = fontsize_medium
-												enabled = "[And(GetPlayer.MakeScope.Var('consortium_member').IsSet, GetScriptedGui('decolonization_resolution_varcheck').IsShown( GuiScope.End ))]"	
+												enabled = "[And(GetPlayer.MakeScope.Var('dragon_member').IsSet, GetScriptedGui('decolonization_resolution_varcheck').IsShown( GuiScope.End ))]"	
 											}
 											button_icon_check = {
 												position = { 215 10 }
 												size = { 40 40 }
-												onclick = "[GetScriptedGui('activate_consortium_decolonization_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-												enabled = "[And(GetPlayer.MakeScope.Var('consortium_member').IsSet, GetScriptedGui('decolonization_resolution_varcheck').IsShown( GuiScope.End ))]"											
+												onclick = "[GetScriptedGui('activate_dragon_decolonization_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+												enabled = "[And(GetPlayer.MakeScope.Var('dragon_member').IsSet, GetScriptedGui('decolonization_resolution_varcheck').IsShown( GuiScope.End ))]"											
 											}
 										}
 										flowcontainer = {## Apartheid Resolution
@@ -822,15 +822,15 @@ types consortium_panel
 												size = { 210 45 }
 												using = expand_button_bg_no_fade
 												text = "[concept_apartheid_resolution]"
-												onclick = "[GetScriptedGui('activate_consortium_apartheid_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+												onclick = "[GetScriptedGui('activate_dragon_apartheid_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 												using = fontsize_medium
-												enabled = no #"[GetScriptedGui('consortium_apartheid_varcheck').IsShown( GuiScope.End )]"
+												enabled = no #"[GetScriptedGui('dragon_apartheid_varcheck').IsShown( GuiScope.End )]"
 											}
 											button_icon_check = {
 												position = { 215 10 }
 												size = { 40 40 }
-												onclick = "[GetScriptedGui('activate_consortium_apartheid_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-												enabled = no #"[GetScriptedGui('consortium_apartheid_varcheck').IsShown( GuiScope.End )]"											
+												onclick = "[GetScriptedGui('activate_dragon_apartheid_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+												enabled = no #"[GetScriptedGui('dragon_apartheid_varcheck').IsShown( GuiScope.End )]"											
 											}
 										}
 									}
@@ -935,13 +935,13 @@ types consortium_panel
 												text = "[concept_resolution_on_korea]"
 												onclick = "[GetScriptedGui('activate_korean_resolution_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 												using = fontsize_medium
-												enabled = "[And(GetPlayer.MakeScope.Var('consortium_member').IsSet, GetScriptedGui('korean_resolution_varcheck').IsShown( GuiScope.End ))]"		
+												enabled = "[And(GetPlayer.MakeScope.Var('dragon_member').IsSet, GetScriptedGui('korean_resolution_varcheck').IsShown( GuiScope.End ))]"		
 											}
 											button_icon_check = {
 												position = { 215 10 }
 												size = { 40 40 }
 												onclick = "[GetScriptedGui('activate_korean_resolution_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-												enabled = "[And(GetPlayer.MakeScope.Var('consortium_member').IsSet, GetScriptedGui('korean_resolution_varcheck').IsShown( GuiScope.End ))]"										
+												enabled = "[And(GetPlayer.MakeScope.Var('dragon_member').IsSet, GetScriptedGui('korean_resolution_varcheck').IsShown( GuiScope.End ))]"										
 											}
 										}
 									}
@@ -951,7 +951,7 @@ types consortium_panel
 					}
 				}
 				flowcontainer = { ####### UN Applications
-					visible = "[And(GetVariableSystem.Exists('consortium_panel'), GetVariableSystem.Exists('consortium_applications'))]"
+					visible = "[And(GetVariableSystem.Exists('dragon_panel'), GetVariableSystem.Exists('dragon_applications'))]"
 					direction = vertical
 					parentanchor = left|top
 					spacing = 10
@@ -968,7 +968,7 @@ types consortium_panel
 						margin_top = 30
 						parentanchor = hcenter
 						align = center|nobaseline
-						raw_text = "[concept_valkurian_concord] Applications"
+						raw_text = "[concept_drakewarden_council] Applications"
 						using = fontsize_mega
 					}
 					flowcontainer = { # Flag List
@@ -982,7 +982,7 @@ types consortium_panel
 								vbox = {
 									datamodel_wrap = 1
 									spacing = 20
-									datamodel = "[GetGlobalList('consortium_application_list')]"
+									datamodel = "[GetGlobalList('dragon_application_list')]"
 									item = {
 										flowcontainer = {
 											visible = "[Country.Exists]"
@@ -1007,7 +1007,7 @@ types consortium_panel
 														using = tooltip_above
 														datacontext = "[Scope.AccessCountry]"						
 														tooltip = "[ContextualDiplomaticPact.GetTooltip]"
-														onclick = "[GetVariableSystem.Clear('consortium_panel')]"
+														onclick = "[GetVariableSystem.Clear('dragon_panel')]"
 														onclick = "[GetVariableSystem.Clear('international_open')]"
 													}
 												}
@@ -1023,26 +1023,26 @@ types consortium_panel
 														button = {
 															using = default_button # Approve
 															text = "APPROVE"
-															enabled = "[GetScriptedGui('consortium_approve_membership_varcheck').IsShown( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('applicant_country_scope',Country.MakeScope).End)]"
-															onclick = "[GetScriptedGui('consortium_approve_membership').Execute( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('applicant_country_scope',Country.MakeScope).End)]"
+															enabled = "[GetScriptedGui('dragon_approve_membership_varcheck').IsShown( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('applicant_country_scope',Country.MakeScope).End)]"
+															onclick = "[GetScriptedGui('dragon_approve_membership').Execute( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('applicant_country_scope',Country.MakeScope).End)]"
 															size = { 70 30 }
-															tooltip = "APPROVE_consortium_MEMBERSHIP"
+															tooltip = "APPROVE_dragon_MEMBERSHIP"
 														}
 														button = {
 															using = default_button
 															text = "ABSTAIN" # Abstain
-															enabled = "[GetScriptedGui('consortium_abstain_membership_varcheck').IsShown( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('applicant_country_scope',Country.MakeScope).End)]"
-															onclick = "[GetScriptedGui('consortium_abstain_membership').Execute( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('applicant_country_scope',Country.MakeScope).End)]"
+															enabled = "[GetScriptedGui('dragon_abstain_membership_varcheck').IsShown( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('applicant_country_scope',Country.MakeScope).End)]"
+															onclick = "[GetScriptedGui('dragon_abstain_membership').Execute( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('applicant_country_scope',Country.MakeScope).End)]"
 															size = { 70 30 }
-															tooltip = "ABSTAIN_consortium_MEMBERSHIP"
+															tooltip = "ABSTAIN_dragon_MEMBERSHIP"
 														}
 														button = {
 															using = default_button
 															text = "REJECT" # Reject
-															enabled = "[GetScriptedGui('consortium_reject_membership_varcheck').IsShown( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('applicant_country_scope',Country.MakeScope).End)]"
-															onclick = "[GetScriptedGui('consortium_reject_membership').Execute( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('applicant_country_scope',Country.MakeScope).End)]"
+															enabled = "[GetScriptedGui('dragon_reject_membership_varcheck').IsShown( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('applicant_country_scope',Country.MakeScope).End)]"
+															onclick = "[GetScriptedGui('dragon_reject_membership').Execute( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('applicant_country_scope',Country.MakeScope).End)]"
 															size = { 70 30 }
-															tooltip = "REJECT_consortium_MEMBERSHIP"
+															tooltip = "REJECT_dragon_MEMBERSHIP"
 														}
 													}
 												}
@@ -1061,7 +1061,7 @@ types consortium_panel
 														align = center
 														raw_text = " Requires -#p  [Country.MakeScope.ScriptValue('required_support_un')] #v Support"
 													}
-													tooltip = "consortium_APPLICATION_BAR_TOOLTIP"
+													tooltip = "dragon_APPLICATION_BAR_TOOLTIP"
 												}
 												flowcontainer = {
 													margin_top = 5
@@ -1077,7 +1077,7 @@ types consortium_panel
 													textbox = {
 														parentanchor = hcenter
 														align = center
-														raw_text = "#v [SelectLocalization(LessThan_CFixedPoint(Country.MakeScope.ScriptValue('cwp_gdp_with_inflation'), '(CFixedPoint)1000000000000'), 'CWP_NORMAL', 'CWP_TRILLION')|Dv] #!"
+														raw_text = "#v [Country.GetGDP|1*] #!"
 													}
 												}
 												flowcontainer = {
@@ -1132,14 +1132,14 @@ types consortium_panel
 												datacontext = "[Scope.AccessCountry]"		
 												margin_left = 5
 												green_progressbar_horizontal = {
-													name = "consortium_application_progress_unbar"
+													name = "dragon_application_progress_unbar"
 													size = { 270 10 }
 													blockoverride "values" {
 														value = "[Country.MakeScope.ScriptValue('application_progress_un')]"
 														min = 0
 														max = 100
 													}
-													tooltip = "consortium_APPLICATION_BAR_TOOLTIP"
+													tooltip = "dragon_APPLICATION_BAR_TOOLTIP"
 												}
 											}
 										}

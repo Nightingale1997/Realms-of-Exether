@@ -40,7 +40,7 @@ types dragon_panel
 			raw_text = "[concept_drakewarden_council]"
 			icon = {
 				position = { -80 -10 }
-				texture = "gfx/interface/icons/cwp_icons/drakewarden_council.dds"
+				texture = "gfx/interface/icons/company_icons/basic_agriculture_2.dds"
 				tooltip = "[concept_drakewarden_council_desc]"
 				size = { 70 70 }
 				background = {
@@ -84,7 +84,7 @@ types dragon_panel
 							visible = "[GetVariableSystem.Exists('international_community')]"
 							size = { 250 50 }
 							using = expand_button_bg_no_fade
-							raw_text = "Draconic Community"
+							raw_text = "International Community"
 							onclick = "[GetVariableSystem.Toggle('international_community')]"
 							onclick = "[GetVariableSystem.Clear('dragon_floor')]"
 							onclick = "[GetVariableSystem.Clear('dragon_resolutions')]"
@@ -94,7 +94,7 @@ types dragon_panel
 							visible = "[Not(GetVariableSystem.Exists('international_community'))]"
 							size = { 250 50 }
 							using = expand_button_bg_no_fade
-							raw_text = "Draconic Community"
+							raw_text = "International Community"
 							onclick = "[GetVariableSystem.Toggle('international_community')]"
 							onclick = "[GetVariableSystem.Clear('dragon_floor')]"
 							onclick = "[GetVariableSystem.Clear('dragon_resolutions')]"
@@ -165,7 +165,7 @@ types dragon_panel
 							alpha = 0.5
 						}
 					}
-				flowcontainer = { # Draconic Community
+				flowcontainer = { # International Community
 					visible = "[And(GetVariableSystem.Exists('dragon_panel'), GetVariableSystem.Exists('international_community'))]"
 					parentanchor = left|top
 					direction = vertical
@@ -226,7 +226,7 @@ types dragon_panel
 							parentanchor = hcenter					
 							textbox = {
 								autoresize = yes
-								raw_text = "#t Dragonborn States#!"
+								raw_text = "#t Draconic States#!"
 								using = header_font_fancy
 								using = fontsize_mega
 							}
@@ -271,7 +271,7 @@ types dragon_panel
 							parentanchor = hcenter					
 							textbox = {
 								autoresize = yes
-								raw_text = "#t Kobold States#!"
+								raw_text = "#t Observer States#!"
 								using = header_font_fancy
 								using = fontsize_mega
 							}
@@ -1077,7 +1077,7 @@ types dragon_panel
 													textbox = {
 														parentanchor = hcenter
 														align = center
-														raw_text = "#v [SelectLocalization(LessThan_CFixedPoint(Country.MakeScope.ScriptValue('cwp_gdp_with_inflation'), '(CFixedPoint)1000000000000'), 'CWP_NORMAL', 'CWP_TRILLION')|Dv] #!"
+														raw_text = "#v [Country.GetGDP|1*] #!"
 													}
 												}
 												flowcontainer = {
