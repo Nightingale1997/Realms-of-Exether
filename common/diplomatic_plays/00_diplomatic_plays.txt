@@ -5,10 +5,12 @@
 
 	possible = {
 		NOT = { is_country_type = decentralized }
+		NOT = { is_country_type = organization }
 		aggressive_diplomatic_plays_permitted = yes
 		NOT = { is_subject_of = scope:target_country }		
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
+		NOT = { is_country_type = organization }
 			NOT = { is_subject_of = root }
 		}
 	}
@@ -28,10 +30,12 @@ dp_regime_change = {
 
 	possible = {
 		NOT = { is_country_type = decentralized }
+		NOT = { is_country_type = organization }
 		aggressive_diplomatic_plays_permitted = yes
 		NOT = { is_subject_of = scope:target_country }	
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
+		NOT = { is_country_type = organization }
 		}	
 	}
 
@@ -49,10 +53,12 @@ dp_ban_slavery = {
 
 	possible = {
 		NOT = { is_country_type = decentralized }
+		NOT = { is_country_type = organization }
 		aggressive_diplomatic_plays_permitted = yes
 		NOT = { is_subject_of = scope:target_country }	
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
+		NOT = { is_country_type = organization }
 		}	
 	}
 
@@ -70,10 +76,12 @@ dp_conquer_state = {
 	
 	possible = {
 		NOT = { is_country_type = decentralized }
+		NOT = { is_country_type = organization }
 		aggressive_diplomatic_plays_permitted = yes
 		NOT = { is_subject_of = scope:target_country }
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
+		NOT = { is_country_type = organization }
 			NOT = { is_subject_of = root }
 		}	
 		diplomatic_play_has_no_relations_blockers = yes		
@@ -95,10 +103,12 @@ dp_return_state = {
 	
 	possible = {
 		NOT = { is_country_type = decentralized }
+		NOT = { is_country_type = organization }
 		aggressive_diplomatic_plays_permitted = yes
 		NOT = { is_subject_of = scope:target_country }	
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
+		NOT = { is_country_type = organization }
 			NOT = { is_subject_of = root }
 		}
 		diplomatic_play_has_no_relations_blockers = yes
@@ -118,10 +128,12 @@ dp_liberate_subject = {
 
 	possible = {
 		NOT = { is_country_type = decentralized }
+		NOT = { is_country_type = organization }
 		aggressive_diplomatic_plays_permitted = yes
 		NOT = { is_subject_of = scope:target_country }	
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
+		NOT = { is_country_type = organization }
 			is_subject = yes
 			NOT = { is_subject_of = root }
 		}
@@ -142,6 +154,7 @@ dp_liberate_country = {
 
 	possible = {
 		NOT = { is_country_type = decentralized }
+		NOT = { is_country_type = organization }
 		aggressive_diplomatic_plays_permitted = yes
 		NOT = { is_subject_of = scope:target_country }	
 		diplomatic_play_has_no_relations_blockers = yes
@@ -163,6 +176,7 @@ dp_independence = {
 
 	possible = {
 		NOT = { is_country_type = decentralized }
+		NOT = { is_country_type = organization }
 	}
 
 	on_weekly_pulse = {}
@@ -180,10 +194,12 @@ dp_take_treaty_port = {
 	
 	possible = {
 		NOT = { is_country_type = decentralized }
+		NOT = { is_country_type = organization }
 		aggressive_diplomatic_plays_permitted = yes
 		NOT = { is_subject_of = scope:target_country }
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
+		NOT = { is_country_type = organization }
 			NOT = { is_subject_of = root }
 		}
 		diplomatic_play_has_no_relations_blockers = yes	
@@ -272,10 +288,12 @@ dp_transfer_subject = {
 	
 	possible = {	
 		NOT = { is_country_type = decentralized }
+		NOT = { is_country_type = organization }
 		aggressive_diplomatic_plays_permitted = yes
 		NOT = { is_subject_of = scope:target_country }	
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
+		NOT = { is_country_type = organization }
 			is_subject = yes
 			NOT = { is_subject_of = root }
 		}
@@ -296,9 +314,11 @@ dp_annex_subject = {
 	
 	possible = {
 		NOT = { is_country_type = decentralized }
+		NOT = { is_country_type = organization }
 		aggressive_diplomatic_plays_permitted = yes
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
+		NOT = { is_country_type = organization }
 			is_direct_subject_of = root
 			OR = {
 				has_diplomatic_pact = { who = root type = puppet }
@@ -370,6 +390,7 @@ dp_revolution = {
 
 	additional_involvement_trigger = {
 		NOT = { is_country_type = decentralized }
+		NOT = { is_country_type = organization }
 		aggressive_diplomatic_plays_permitted = yes
 	
 		scope:target_country = {
@@ -424,6 +445,7 @@ dp_secession = {
 
 	additional_involvement_trigger = {
 		NOT = { is_country_type = decentralized }
+		NOT = { is_country_type = organization }
 		aggressive_diplomatic_plays_permitted = yes
 	
 		scope:target_country = {
@@ -458,10 +480,12 @@ dp_contain_threat = {
 	
 	possible = {
 		NOT = { is_country_type = decentralized }
+		NOT = { is_country_type = organization }
 		aggressive_diplomatic_plays_permitted = yes
 		NOT = { is_subject_of = scope:target_country }
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
+		NOT = { is_country_type = organization }
 			NOT = { is_subject_of = root }
 		}	
 		custom_tooltip = {
@@ -476,6 +500,7 @@ dp_contain_threat = {
 
 	additional_involvement_trigger = {
 		NOT = { is_country_type = decentralized }
+		NOT = { is_country_type = organization }
 		country_rank >= rank_value:great_power
 		aggressive_diplomatic_plays_permitted = yes
 	}
@@ -507,6 +532,7 @@ dp_taiping_rebellion = {
 	
 	additional_involvement_trigger = {
 		NOT = { is_country_type = decentralized }
+		NOT = { is_country_type = organization }
 		aggressive_diplomatic_plays_permitted = yes
 	
 		scope:target_country = {
@@ -606,6 +632,7 @@ dp_unify_khus = {
 	possible = {
 		NOT = { exists = c:NEK }
 		NOT = { is_country_type = decentralized }
+		NOT = { is_country_type = organization }
 		has_technology_researched = nationalism
 	}
 	
@@ -632,6 +659,7 @@ dp_unify_gavkhan = {
 	possible = {
 		NOT = { exists = c:GAV }
 		NOT = { is_country_type = decentralized }
+		NOT = { is_country_type = organization }
 		has_technology_researched = nationalism
 	}
 	
@@ -658,6 +686,7 @@ dp_unify_thaloria = {
 	possible = {
 		NOT = { exists = c:TLA }
 		NOT = { is_country_type = decentralized }
+		NOT = { is_country_type = organization }
 		has_technology_researched = nationalism
 	}
 	
@@ -684,6 +713,7 @@ dp_unify_nagabumi = {
 	possible = {
 		NOT = { exists = c:NBI }
 		NOT = { is_country_type = decentralized }
+		NOT = { is_country_type = organization }
 		has_technology_researched = nationalism
 	}
 	

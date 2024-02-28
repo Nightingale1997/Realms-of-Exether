@@ -1,5 +1,13 @@
 ﻿STATES = {
     
+    s:STATE_CELESTIAL_CHATEAU = {
+        create_state = {
+            country = c:XXG
+            owned_provinces = { "x07C9B7"  }
+    }
+        add_homeland = cu:dorite
+    }
+
 s:STATE_SHARINDLARS_NEEDLE = {
     create_state = {
         country = c:EME
@@ -365,6 +373,7 @@ s:STATE_LEYLINE_COAST = {
         owned_provinces = { "x62E5C6" "x7FF4FB" "x9DDE98" "xA5A5D7" "xBB83EE" "xD28BB0" "xD7DBBD" "xD9BCCD" "xDF6EBD" "xF977B5" }
 }
 add_homeland = cu:achonian
+}
 
 s:STATE_HORSELORDS_DEMESNE = {
     create_state = {

@@ -1,0 +1,39 @@
+﻿je_subsidiary = {
+	icon = "gfx/interface/icons/lens_toolbar_icons/subsidiary.dds"
+	
+	group = je_group_internal_affairs
+
+	is_shown_when_inactive = {
+		is_subject_type = subject_type_subsidiary
+	}
+	
+	possible = {
+		is_subject_type = subject_type_subsidiary
+	}
+
+	complete = {
+		ig:ig_industrialists = { is_in_government = no 
+	}
+		OR = {
+			ig:ig_industrialists = { is_marginal = no 
+		}
+			ig:ig_trade_unions = {
+				 is_powerful = no
+				 is_in_government = yes
+		 }
+		}
+		
+	}
+
+	on_complete = {
+
+	}
+
+	invalid = {
+		NOT = { is_subject_type = subject_type_subsidiary }
+	}
+
+	can_deactivate = yes
+
+	weight = 100
+}
