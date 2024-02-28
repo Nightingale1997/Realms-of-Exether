@@ -210,7 +210,7 @@
                     arabic_clothes_trigger = yes
                     scope:character ?= {
                         culture = {
-                            has_discrimination_trait = vandori_heritage
+                            has_discrimination_trait = planetouched_heritage
                         }
                     }
                 }
@@ -750,7 +750,7 @@
                     scope:character ?= {
                         culture = {
                             OR = {
-                                has_discrimination_trait = vandori_heritage
+                                has_discrimination_trait = planetouched_heritage
                             }
                         }
                     }
@@ -2124,7 +2124,7 @@ arabic_clothes = {
                 arabic_clothes_trigger = yes
                 scope:character ?= {
                     culture = {
-                        has_discrimination_trait = vandori_heritage
+                        has_discrimination_trait = planetouched_heritage
                     }
                 }
             }
@@ -2151,7 +2151,7 @@ arabic_coats = {
                     arabic_clothes_pop_trigger = yes
                     scope:pop ?= {
                         culture = {
-                            has_discrimination_trait = vandori_heritage
+                            has_discrimination_trait = planetouched_heritage
                         }
                     }
                 }
@@ -3002,7 +3002,7 @@ chinese_upper_clothes = {
                     AND = {
                         scope:pop ?= {
                             culture = {
-                                has_discrimination_trait = vandori_heritage
+                                has_discrimination_trait = planetouched_heritage
                             }
                         }
                         OR = {

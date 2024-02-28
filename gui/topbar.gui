@@ -307,6 +307,7 @@ types topbar_components
 									using = tooltip_below
 									onclick = "[InformationPanelBar.OpenPanelTab('politics', 'institutions')]"
 									onclick = "[GetVariableSystem.Clear('show_magic')]"
+									onclick = "[GetVariableSystem.Clear('international_open')]"
 									enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 							
 									icon = {
@@ -350,6 +351,7 @@ types topbar_components
 									using = tooltip_below
 									onclick = "[InformationPanelBar.OpenPanelTab('politics', 'default')]"
 									onclick = "[GetVariableSystem.Clear('show_magic')]"
+									onclick = "[GetVariableSystem.Clear('international_open')]"
 									enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 							
 									icon = {
@@ -393,6 +395,7 @@ types topbar_components
 									using = tooltip_below
 									onclick = "[InformationPanelBar.OpenPanelTab('diplomatic_overview', 'default')]"
 									onclick = "[GetVariableSystem.Clear('show_magic')]"
+									onclick = "[GetVariableSystem.Clear('international_open')]"
 									enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 									
 									icon = {
@@ -435,6 +438,8 @@ types topbar_components
 									using = tooltip_below
 									onclick = "[GetVariableSystem.Toggle('show_magic')]"
 									onclick = "[InformationPanelBar.ClosePanel]"
+									onclick = "[MapListPanelManager.CloseCurrentPanel]"
+									onclick = "[GetVariableSystem.Clear('international_open')]"
 									enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 									
 									icon = {
@@ -481,6 +486,7 @@ types topbar_components
 									using = tooltip_below
 									onclick = "[InformationPanelBar.OpenMarketPanelTab(AccessPlayer.AccessFirstMarket, 'trade_routes')]"
 									onclick = "[GetVariableSystem.Clear('show_magic')]"
+									onclick = "[GetVariableSystem.Clear('international_open')]"
 									enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 									alpha = "[TransparentIfZero(GetPlayer.GetSupplyNetworkStrength)]"
 									
@@ -535,6 +541,7 @@ types topbar_components
 									using = money_tooltip_with_graph
 									onclick = "[InformationPanelBar.OpenPanelTab('budget', 'default')]"
 									onclick = "[GetVariableSystem.Clear('show_magic')]"
+									onclick = "[GetVariableSystem.Clear('international_open')]"
 									enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 								
 									icon = {

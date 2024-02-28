@@ -1,4 +1,4 @@
-BUILDINGS = {
+﻿BUILDINGS = {
 	s:STATE_DHARMARAJYA = {
 		region_state:KAY={
 			create_building={
@@ -534,13 +534,14 @@ BUILDINGS = {
 	}
 
 	s:STATE_YARRAGANBALA = {
-		create_building={
-			building="building_fishing_wharf"
-			level=1
-			reserves=1
-			activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
-		}
+
 		region_state:AMR={
+			create_building={
+				building="building_fishing_wharf"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+			}
 			create_building={
 				building="building_wheat_farm"
 				level=4

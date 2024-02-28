@@ -1,4 +1,4 @@
-POPS = {
+﻿POPS = {
 
   s:STATE_CROWNPEAK = {
 		region_state:DUM = {
@@ -11,16 +11,16 @@ POPS = {
 				size = 1996
 			}
 			create_pop = {
-				culture = hungarian
+				culture = uplander
 				size = 16000
 			}
 			create_pop = {
-				culture = czech
-				religion = catholic
+				culture = jalian
+				religion = cult_of_the_sun
 				size = 24000
 			}
 			create_pop = {
-				culture = hungarian
+				culture = uplander
 				religion = protestant
 				size = 8000
 			}
@@ -125,7 +125,7 @@ POPS = {
           size = 1397200
         }
         create_pop = {
-          culture = scottish
+          culture = uplander
           religion = cult_of_the_sun
           size = 188000
         }
@@ -836,7 +836,7 @@ POPS = {
         }
         create_pop = {
           culture = gelidrumin
-          religion = protestant
+          religion = cult_of_the_sun
           size = 3030
         }
         create_pop = {
@@ -1279,12 +1279,11 @@ POPS = {
         }
         create_pop = {
           culture = frost_giant
-          size = 1000
+          size = 2000
         }
         create_pop = {
-          culture = finnish
-          religion = orthodox
-          size = 37200
+          culture = zakonish
+          size = 7200
         }
       }
   }

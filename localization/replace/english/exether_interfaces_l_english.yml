@@ -37,7 +37,7 @@ STATE_ADVENTURER_COVERAGE_DEMAND_TOOLTIP: "#bold [concept_adventurer_coverage]#!
  ADVENTURER_COVERAGE_DEMAND_BASE_VALUE: "\n#r +[State.MakeScope.ScriptValue('state_adventurer_coverage_demand_arable_land')]#! from Arable Land"
  ADVENTURER_COVERAGE_DEMAND_BASE_VALUE_BONUS: "\n#g -[State.MakeScope.ScriptValue('state_adventurer_coverage_demand_urban_center_reduction')]#! from Urban Center"
  STATE_ADVENTURER_COVERAGE_INSUFFICIENT: "\n Insufficient Coverage"
- STATE_ADVENTURER_COVERAGE_INSUFFICIENT_LONG:0"\n\n@warning! Because usage is higher than capacity, the following effects are applied to the [concept_state]:\n[State.GetTaxCapacityEffectsDesc]"
+ STATE_ADVENTURER_COVERAGE_INSUFFICIENT_LONG: "\n\n@warning! Because usage is higher than capacity, the following effects are applied to the [concept_state]:\n[State.GetTaxCapacityEffectsDesc]"
  ADVENTURER_COVERAGE_BASE_VALUE_BONUS: "\n#g +50#! from Base Value"
  ADVENTURER_COVERAGE_BUILDING_BONUS: "\n#g +#![State.GetModifier.GetValueFor('state_adventurer_coverage_add')|D+] from Local Production"
  ADVENTURER_COVERAGE_POLLUTION: "\n#r +#![State.MakeScope.ScriptValue('state_adventurer_coverage_demand_pollution')|D-] from Pollution"

@@ -1,6 +1,5 @@
 # COPY-PASTED FOR NOW
 @panel_width_minus_10 = 530			# used to be 450
-@panel_width_minus_20 = 520
 @panel_width = 540  				# used to be 460
 @panel_width_half = 270				# used to be 230
 @panel_width_plus_10 = 550  		# used to be 470
@@ -835,7 +834,7 @@ template ritual_item_text {
 	multiline = yes
 }
 
-template companies_header_texts {
+template magic_header_texts {
 	minimumsize = { @panel_width_plus_14 -1 }
 	maximumsize = { @panel_width_plus_14 -1 }
 	autoresize = yes

@@ -1,0 +1,42 @@
+﻿COUNTRIES = {
+	c:XXG = {
+		
+		ig:ig_industrialists = {
+			add_ruling_interest_group = yes
+		}
+		
+		effect_starting_technology_tier_1_tech = yes
+
+		set_tax_level = medium
+
+		# Laws 
+		activate_law = law_type:law_presidential_republic
+		activate_law = law_type:law_oligarchy
+		activate_law = law_type:law_freedom_of_conscience
+		activate_law = law_type:law_women_own_property
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_censorship
+		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_protectionism
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_private_schools
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_charitable_health_system
+		activate_law = law_type:law_dedicated_police
+		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_tenant_farmers
+		activate_law = law_type:law_debt_slavery
+		
+		effect_concord_observer = yes
+
+		effect_consortium_major_member = yes
+		effect_consortium_member = yes
+
+		set_variable = {
+			name = consortium_headquarters_holder
+			value = 0
+		}
+
+	}
+}
