@@ -1388,7 +1388,12 @@
 
 
     s:STATE_MARAMAROVA = {
-
+      region_state:TSI = {
+        create_pop = {
+          culture = korafri
+          size = 56004
+        }
+      }
   }
 
 
@@ -1398,12 +1403,38 @@
 
 
     s:STATE_POLYNKALA = {
-
+      region_state:TSI = {
+        create_pop = {
+          culture = korafri
+          size = 169004
+        }
+      }
   }
 
 
     s:STATE_NGURULAN = {
-
+      region_state:LAR = {
+        create_pop = {
+          pop_type = clergy
+          culture = dumonian
+          religion = cult_of_the_sun
+          size = 100
+        }
+        create_pop = {
+          pop_type = capitalists
+          culture = dumonian
+          size = 1050
+        }
+        create_pop = {
+          culture = korafri
+          size = 182304
+        }
+        create_pop = {
+          culture = hawaiian
+          religion = cult_of_the_sun
+          size = 8500
+        }
+      }
   }
 
 
@@ -1412,17 +1443,40 @@
   }
 
     s:STATE_LUMO = {
-
+      region_state:DUM = {
+        create_pop = {
+          culture = korafri
+          size = 23840
+        }
+        create_pop = {
+          culture = dumonian
+          size = 563
+        }
+      }
   }
 
 
     s:STATE_ZEPHROPULU = {
-
+      region_state:DUF = {
+        create_pop = {
+          culture = korafri
+          size = 23840
+        }
+        create_pop = {
+          culture = dumonian
+          size = 384
+        }
+      }
   }
 
 
     s:STATE_BARICORA = {
-
+      region_state:DUF = {
+        create_pop = {
+          culture = korafri
+          size = 82000
+        }
+      }
   }
 
 

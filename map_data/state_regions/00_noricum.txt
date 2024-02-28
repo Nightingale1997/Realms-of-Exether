@@ -1507,6 +1507,13 @@ STATE_MARAMAROVA = {
     farm = x72EAB4
     mine = x74EDD7
     port = x76F6AE
+    arable_land = 5
+    arable_resources = { "bg_rice_farms" "bg_coffee_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_lead_mining = 8
+        bg_logging = 2
+        bg_fishing = 3
+    }
     naval_exit_id = 3041
 }
 STATE_HALDORHEIMR = {
@@ -1530,6 +1537,13 @@ STATE_POLYNKALA = {
     farm = xA9F5EF
     mine = xB3AACD
     port = xB4DD8E
+    arable_land = 10
+    arable_resources = { "bg_rice_farms" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 4
+        bg_whaling = 8
+        bg_fishing = 5
+    }
     naval_exit_id = 3041
 }
 STATE_NGURULAN = {
@@ -1541,6 +1555,14 @@ STATE_NGURULAN = {
     farm = x4DD4D7
     mine = x66F3F2
     port = x75B7E4
+    arable_land = 15
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_iron_mining = 12
+        bg_logging = 14
+        bg_whaling = 10
+        bg_fishing = 8
+    }
     naval_exit_id = 3041
 }
 STATE_HLIDSKJALF = {
@@ -1565,10 +1587,18 @@ STATE_LUMO = {
     farm = x8DF6EB
     mine = x95FA69
     port = xBCEFF1
+    arable_land = 5
+    arable_resources = { "bg_rice_farms" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 2
+        bg_whaling = 3
+        bg_fishing = 3
+    }
     naval_exit_id = 3041
 }
 STATE_ZEPHROPULU = {
     id = 4104
+    traits = { "state_trait_severe_malaria" }
     subsistence_building = "building_subsistence_fishing_villages"
     provinces = { "x37D5EB" "x6EAAE3" "x91F86D" "x97AAC0" "x9EC9C0" "xA7A3EF" "xBC92E0" "xBEBF79" "xD2AC7A" "xD3D2C6" "xD4B9DB" "xE495D9" "xE7C9C7" "xEC4FFD" "xF0E095" }
     city = x37D5EB
@@ -1576,10 +1606,18 @@ STATE_ZEPHROPULU = {
     farm = x97AAC0
     mine = x9EC9C0
     port = xA7A3EF
+    arable_land = 5
+    arable_resources = { "bg_rice_farms" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 2
+        bg_whaling = 3
+        bg_fishing = 3
+    }
     naval_exit_id = 3041
 }
 STATE_BARICORA = {
     id = 4105
+    traits = { "state_trait_severe_malaria" }
     subsistence_building = "building_subsistence_fishing_villages"
     provinces = { "x35F4ED" "x6DDCD3" "x6FDAD1" "x97BDA2" "xA8E7E0" "xA9E988" "xAAE5EB" "xC5A7E8" "xCC86BF" "xCEB4DE" "xD5CF79" "xD8D8A3" "xDFFE6E" "xE285A8" "xE8C3FA" "xECD7D8" "xEF987A" "xFBA7DA" }
     city = x6DDCD3
@@ -1587,6 +1625,13 @@ STATE_BARICORA = {
     farm = x91F86D
     mine = xAAE5EB
     port = xC5A7E8
+    arable_land = 5
+    arable_resources = { "bg_rice_farms" "bg_coffee_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 2
+        bg_whaling = 4
+        bg_fishing = 4
+    }
     naval_exit_id = 3041
 }
 STATE_ANGERTORP = {
