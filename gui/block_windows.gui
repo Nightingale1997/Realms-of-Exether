@@ -398,7 +398,7 @@ types windows {
 							block "header_close_button" {
 								onclick = "[InformationPanelBar.ClosePanel]"
 								onclick = "[GetVariableSystem.Clear('international_open')]" 
-								onclick = "[GetVariableSystem.Clear('un_panel')]" 
+								onclick = "[GetVariableSystem.Clear('concord_panel')]" 
 								onclick = "[GetVariableSystem.Clear('banks_panel')]" 
 								onclick = "[GetVariableSystem.Clear('nato_panel')]" 
 								onclick = "[GetVariableSystem.Clear('warsaw_pact_panel')]" 
@@ -847,7 +847,6 @@ types windows {
 		using = sidepanel_filler_bg
 
 		vbox = {
-			using = sidebar_margin
 			layoutpolicy_horizontal = preferred
 			layoutpolicy_vertical = expanding
 

@@ -57,7 +57,7 @@ pending_resolution_progress_value_round = {
 	divide = 100
 }
 
-un_applying_states = {
+concord_applying_states = {
 	every_country = {
 		limit = {
 			has_variable = application_progress_un
@@ -67,10 +67,10 @@ un_applying_states = {
 	round = yes
 }
 
-un_memberstates = {
+concord_memberstates = {
 	every_country = {
 		limit = {
-			has_variable = un_member
+			has_variable = concord_member
 		}	
 		add = 1
 	}
@@ -80,7 +80,7 @@ un_memberstates = {
 required_support_un = {
 	every_country = {
 		limit = {
-			has_variable = un_member
+			has_variable = concord_member
 		}	
 		add = 1
 	}
@@ -92,9 +92,9 @@ supporting_countries = {
 	value = 0
 	if = {
 		limit = {
-			exists = var:un_supporting_list_size
+			exists = var:concord_supporting_list_size
 		}
-		add = var:un_supporting_list_size
+		add = var:concord_supporting_list_size
 	}
 }
 

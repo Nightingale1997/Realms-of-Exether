@@ -793,15 +793,15 @@ types information_panel_bar_types {
 					blockoverride "onclick" {
 						onclick = "[GetVariableSystem.Toggle('international_open')]"
 						onclick = "[GetVariableSystem.Clear('show_magic')]"
-						onclick = "[GetVariableSystem.Clear('un_panel')]" 
+						onclick = "[GetVariableSystem.Clear('concord_panel')]" 
 						onclick = "[GetVariableSystem.Clear('imf_panel')]" 
 						onclick = "[InformationPanelBar.ClosePanel]"
 						onclick = "[MapListPanelManager.CloseCurrentPanel]"
-						onclick = "[GetScriptedGui('toggle_unsc_sgui_list').Execute( GuiScope.End )]"
-						onclick = "[GetScriptedGui('build_UN_nations_list_sgui').Execute( GuiScope.End )]"
-						onclick = "[GetScriptedGui('build_UN_observers_list_sgui').Execute( GuiScope.End )]"
-						onclick = "[GetScriptedGui('build_UN_nonmember_list_sgui').Execute( GuiScope.End )]"
-						onclick = "[GetScriptedGui('build_un_headquarters_holder_sgui').Execute( GuiScope.End )]"
+						onclick = "[GetScriptedGui('toggle_concord_major_sgui_list').Execute( GuiScope.End )]"
+						onclick = "[GetScriptedGui('build_concord_nations_list_sgui').Execute( GuiScope.End )]"
+						onclick = "[GetScriptedGui('build_concord_observers_list_sgui').Execute( GuiScope.End )]"
+						onclick = "[GetScriptedGui('build_concord_nonmember_list_sgui').Execute( GuiScope.End )]"
+						onclick = "[GetScriptedGui('build_concord_headquarters_holder_sgui').Execute( GuiScope.End )]"
 					}
 				}
 
@@ -830,7 +830,7 @@ types information_panel_bar_types {
 						onclick = "[MapListPanelManager.CloseCurrentPanel]"
 						onclick = "[GetVariableSystem.Clear('show_magic')]"
 						onclick = "[GetVariableSystem.Toggle('international_open')]"
-						onclick = "[GetVariableSystem.Clear('un_panel')]" 
+						onclick = "[GetVariableSystem.Clear('concord_panel')]" 
 						onclick = "[GetVariableSystem.Clear('banks_panel')]" 
 						onclick = "[GetVariableSystem.Clear('nato_panel')]" 
 						onclick = "[GetVariableSystem.Clear('warsaw_pact_panel')]" 

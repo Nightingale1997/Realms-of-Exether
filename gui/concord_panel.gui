@@ -9,12 +9,12 @@
 @panel_width_plus_30 = 730			# used to be 490
 @panel_width_plus_70 = 770			# used to be 530
 
-types un_panel
+types concord_panel
 {
-	type un_panel = international_org_window {
-		visible = "[And(GetVariableSystem.Exists('un_panel'), GetVariableSystem.Exists('international_open'))]"
+	type concord_panel = international_org_window {
+		visible = "[And(GetVariableSystem.Exists('concord_panel'), GetVariableSystem.Exists('international_open'))]"
 
-		name = "un_panel"
+		name = "concord_panel"
 		size = { 1305 0 }
 		background = {
 			using = dropdown_background
@@ -32,16 +32,16 @@ types un_panel
 			}
 		}
 		blockoverride "header_close_button" {
-			onclick = "[GetVariableSystem.Clear('un_panel')]" 
+			onclick = "[GetVariableSystem.Clear('concord_panel')]" 
 		}
 
 		blockoverride "window_header_name" {
 			margin_left = 20
-			raw_text = "[concept_united_nations]"
+			raw_text = "[concept_valkurian_concord]"
 			icon = {
 				position = { -80 -10 }
-				texture = "gfx/interface/icons/cwp_icons/united_nations.dds"
-				tooltip = "[concept_united_nations_desc]"
+				texture = "gfx/interface/icons/cwp_icons/valkurian_concord.dds"
+				tooltip = "[concept_valkurian_concord_desc]"
 				size = { 70 70 }
 				background = {
 				}
@@ -66,22 +66,15 @@ types un_panel
 							multiline = yes
 							autoresize = yes
 							align = left|nobaseline
-							text = "UN_DESC"
+							text = "concord_DESC"
 							margin = { 200 0 }
-						}
-
-						divider_clean = {
-							block "divider_size" {
-								size = { @panel_width 2 }
-							}
-							parentanchor = hcenter
 						}
 					}
 				}
 				flowcontainer = {
 					parentanchor = left|top
 					direction = vertical
-					position = { 150 100 }
+					position = { 0 100 }
 					spacing = 10
 					flowcontainer = {
 						margin_bottom = -13
@@ -93,9 +86,9 @@ types un_panel
 							using = expand_button_bg_no_fade
 							raw_text = "International Community"
 							onclick = "[GetVariableSystem.Toggle('international_community')]"
-							onclick = "[GetVariableSystem.Clear('un_floor')]"
-							onclick = "[GetVariableSystem.Clear('un_resolutions')]"
-							onclick = "[GetVariableSystem.Clear('un_applications')]"
+							onclick = "[GetVariableSystem.Clear('concord_floor')]"
+							onclick = "[GetVariableSystem.Clear('concord_resolutions')]"
+							onclick = "[GetVariableSystem.Clear('concord_applications')]"
 						}
 						button = {
 							visible = "[Not(GetVariableSystem.Exists('international_community'))]"
@@ -103,77 +96,77 @@ types un_panel
 							using = expand_button_bg_no_fade
 							raw_text = "International Community"
 							onclick = "[GetVariableSystem.Toggle('international_community')]"
-							onclick = "[GetVariableSystem.Clear('un_floor')]"
-							onclick = "[GetVariableSystem.Clear('un_resolutions')]"
-							onclick = "[GetVariableSystem.Clear('un_applications')]"
+							onclick = "[GetVariableSystem.Clear('concord_floor')]"
+							onclick = "[GetVariableSystem.Clear('concord_resolutions')]"
+							onclick = "[GetVariableSystem.Clear('concord_applications')]"
 							alpha = 0.5
 						}
 						button = {
-							visible = "[GetVariableSystem.Exists('un_floor')]"
+							visible = "[GetVariableSystem.Exists('concord_floor')]"
 							size = { 250 50 }
 							using = expand_button_bg_no_fade
 							raw_text = "UN Floor"
-							onclick = "[GetVariableSystem.Toggle('un_floor')]"
+							onclick = "[GetVariableSystem.Toggle('concord_floor')]"
 							onclick = "[GetVariableSystem.Clear('international_community')]"
-							onclick = "[GetVariableSystem.Clear('un_resolutions')]"
-							onclick = "[GetVariableSystem.Clear('un_applications')]"
+							onclick = "[GetVariableSystem.Clear('concord_resolutions')]"
+							onclick = "[GetVariableSystem.Clear('concord_applications')]"
 						}
 						button = {
-							visible = "[Not(GetVariableSystem.Exists('un_floor'))]"
+							visible = "[Not(GetVariableSystem.Exists('concord_floor'))]"
 							size = { 250 50 }
 							using = expand_button_bg_no_fade
 							raw_text = "UN Floor"
-							onclick = "[GetVariableSystem.Toggle('un_floor')]"
+							onclick = "[GetVariableSystem.Toggle('concord_floor')]"
 							onclick = "[GetVariableSystem.Clear('international_community')]"
-							onclick = "[GetVariableSystem.Clear('un_resolutions')]"
-							onclick = "[GetVariableSystem.Clear('un_applications')]"
+							onclick = "[GetVariableSystem.Clear('concord_resolutions')]"
+							onclick = "[GetVariableSystem.Clear('concord_applications')]"
 							alpha = 0.5
 						}
 						button = {
-							visible = "[GetVariableSystem.Exists('un_applications')]"
+							visible = "[GetVariableSystem.Exists('concord_applications')]"
 							size = { 250 50 }
 							using = expand_button_bg_no_fade
 							raw_text = "Applications"
-							onclick = "[GetVariableSystem.Toggle('un_applications')]"
-							onclick = "[GetVariableSystem.Clear('un_floor')]"
+							onclick = "[GetVariableSystem.Toggle('concord_applications')]"
+							onclick = "[GetVariableSystem.Clear('concord_floor')]"
 							onclick = "[GetVariableSystem.Clear('international_community')]"
-							onclick = "[GetVariableSystem.Clear('un_resolutions')]"
+							onclick = "[GetVariableSystem.Clear('concord_resolutions')]"
 						}
 						button = {
-							visible = "[Not(GetVariableSystem.Exists('un_applications'))]"
+							visible = "[Not(GetVariableSystem.Exists('concord_applications'))]"
 							size = { 250 50 }
 							using = expand_button_bg_no_fade
 							raw_text = "Applications"
-							onclick = "[GetVariableSystem.Toggle('un_applications')]"
-							onclick = "[GetVariableSystem.Clear('un_floor')]"
+							onclick = "[GetVariableSystem.Toggle('concord_applications')]"
+							onclick = "[GetVariableSystem.Clear('concord_floor')]"
 							onclick = "[GetVariableSystem.Clear('international_community')]"
-							onclick = "[GetVariableSystem.Clear('un_resolutions')]"
+							onclick = "[GetVariableSystem.Clear('concord_resolutions')]"
 							alpha = 0.5
 						}
 						button = {
-							visible = "[GetVariableSystem.Exists('un_resolutions')]"
+							visible = "[GetVariableSystem.Exists('concord_resolutions')]"
 							size = { 250 50 }
 							using = expand_button_bg_no_fade
 							raw_text = "Resolutions"
-							onclick = "[GetVariableSystem.Toggle('un_resolutions')]"
-							onclick = "[GetVariableSystem.Clear('un_floor')]"
+							onclick = "[GetVariableSystem.Toggle('concord_resolutions')]"
+							onclick = "[GetVariableSystem.Clear('concord_floor')]"
 							onclick = "[GetVariableSystem.Clear('international_community')]"
-							onclick = "[GetVariableSystem.Clear('un_applications')]"
+							onclick = "[GetVariableSystem.Clear('concord_applications')]"
 						}
 						button = {
-							visible = "[Not(GetVariableSystem.Exists('un_resolutions'))]"
+							visible = "[Not(GetVariableSystem.Exists('concord_resolutions'))]"
 							size = { 250 50 }
 							using = expand_button_bg_no_fade
 							raw_text = "Resolutions"
-							onclick = "[GetVariableSystem.Toggle('un_resolutions')]"
-							onclick = "[GetVariableSystem.Clear('un_floor')]"
+							onclick = "[GetVariableSystem.Toggle('concord_resolutions')]"
+							onclick = "[GetVariableSystem.Clear('concord_floor')]"
 							onclick = "[GetVariableSystem.Clear('international_community')]"
-							onclick = "[GetVariableSystem.Clear('un_applications')]"
+							onclick = "[GetVariableSystem.Clear('concord_applications')]"
 							alpha = 0.5
 						}
 					}
 				flowcontainer = { # International Community
-					visible = "[And(GetVariableSystem.Exists('un_panel'), GetVariableSystem.Exists('international_community'))]"
+					visible = "[And(GetVariableSystem.Exists('concord_panel'), GetVariableSystem.Exists('international_community'))]"
 					parentanchor = left|top
 					direction = vertical
 					position = { 10 100 }
@@ -205,7 +198,7 @@ types un_panel
 								addrow = 50
 								datamodel_wrap = 15
 								flipdirection = yes
-								datamodel = "[GetGlobalList('unsc_members_list')]"
+								datamodel = "[GetGlobalList('concord_major_members_list')]"
 								item = {
 									flowcontainer = {
 										margin_left = 80
@@ -217,7 +210,7 @@ types un_panel
 											blockoverride "flag_tooltip" {
 												tooltip = "[ContextualDiplomaticPact.GetTooltip]"
 											}
-											onclick = "[GetVariableSystem.Clear('un_panel')]"
+											onclick = "[GetVariableSystem.Clear('concord_panel')]"
 											onclick = "[GetVariableSystem.Clear('international_open')]"
 										}
 									}
@@ -251,7 +244,7 @@ types un_panel
 										addrow = 50
 										datamodel_wrap = 15
 										flipdirection = yes
-										datamodel = "[GetGlobalList('un_members_list')]"
+										datamodel = "[GetGlobalList('concord_members_list')]"
 										item = {
 											flowcontainer = {
 												datacontext = "[Scope.AccessCountry]"
@@ -260,7 +253,7 @@ types un_panel
 													using = tooltip_above
 													datacontext = "[Scope.AccessCountry]"						
 													tooltip = "[ContextualDiplomaticPact.GetTooltip]"
-													onclick = "[GetVariableSystem.Clear('un_panel')]"
+													onclick = "[GetVariableSystem.Clear('concord_panel')]"
 													onclick = "[GetVariableSystem.Clear('international_open')]"
 												}
 											}
@@ -296,7 +289,7 @@ types un_panel
 										addrow = 50
 										datamodel_wrap = 15
 										flipdirection = yes
-										datamodel = "[GetGlobalList('un_observers_list')]"
+										datamodel = "[GetGlobalList('concord_observers_list')]"
 										item = {
 											flowcontainer = {
 												datacontext = "[Scope.AccessCountry]"
@@ -305,7 +298,7 @@ types un_panel
 													using = tooltip_above
 													datacontext = "[Scope.AccessCountry]"						
 													tooltip = "[ContextualDiplomaticPact.GetTooltip]"
-													onclick = "[GetVariableSystem.Clear('un_panel')]"
+													onclick = "[GetVariableSystem.Clear('concord_panel')]"
 													onclick = "[GetVariableSystem.Clear('international_open')]"
 												}
 											}
@@ -341,7 +334,7 @@ types un_panel
 										addrow = 50
 										datamodel_wrap = 15
 										flipdirection = yes
-										datamodel = "[GetGlobalList('un_nonmember_list')]"
+										datamodel = "[GetGlobalList('concord_nonmember_list')]"
 										item = {
 											flowcontainer = {
 												datacontext = "[Scope.AccessCountry]"
@@ -350,7 +343,7 @@ types un_panel
 													using = tooltip_above
 													datacontext = "[Scope.AccessCountry]"						
 													tooltip = "[ContextualDiplomaticPact.GetTooltip]"
-													onclick = "[GetVariableSystem.Clear('un_panel')]"
+													onclick = "[GetVariableSystem.Clear('concord_panel')]"
 													onclick = "[GetVariableSystem.Clear('international_open')]"
 												}
 											}
@@ -362,7 +355,7 @@ types un_panel
 					}
 				}
 					flowcontainer = { #UN Floor
-						visible = "[And(GetVariableSystem.Exists('un_panel'), GetVariableSystem.Exists('un_floor'))]"
+						visible = "[And(GetVariableSystem.Exists('concord_panel'), GetVariableSystem.Exists('concord_floor'))]"
 						direction = vertical
 						parentanchor = left|top
 						spacing = 10
@@ -429,7 +422,7 @@ types un_panel
 										blockoverride "scrollbox_content" {
 											vbox = {
 												datamodel_wrap = 1
-												datamodel = "[GetGlobalList('un_members_list')]"
+												datamodel = "[GetGlobalList('concord_members_list')]"
 												item = {
 													flowcontainer = {
 														direction = vertical
@@ -443,7 +436,7 @@ types un_panel
 																using = tooltip_above
 																datacontext = "[Scope.AccessCountry]"						
 																tooltip = "[ContextualDiplomaticPact.GetTooltip]"
-																onclick = "[GetVariableSystem.Clear('un_panel')]"
+																onclick = "[GetVariableSystem.Clear('concord_panel')]"
 																onclick = "[GetVariableSystem.Clear('international_open')]"
 															}
 															textbox = {
@@ -469,10 +462,10 @@ types un_panel
 									onclick = "[GetScriptedGui('add_opposing').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 									onclick = "[GetVariableSystem.Toggle('opposevote')]"
 									onclick = "[GetVariableSystem.Clear('supportvote')]"
-									enabled = "[And(And(GetGlobalVariable('pending_resolution').IsSet , Not(GetVariableSystem.Exists('opposevote'))), GetPlayer.MakeScope.Var('un_member').IsSet)]"
+									enabled = "[And(And(GetGlobalVariable('pending_resolution').IsSet , Not(GetVariableSystem.Exists('opposevote'))), GetPlayer.MakeScope.Var('concord_member').IsSet)]"
 								}
 								button = {
-									visible = "[GetPlayer.MakeScope.Var('unsc_member').IsSet]"
+									visible = "[GetPlayer.MakeScope.Var('concord_major_member').IsSet]"
 									using = default_button_primary
 									position = { -50 -80 }
 									size = { 170 40 }
@@ -505,7 +498,7 @@ types un_panel
 										textbox = {
 											margin_bottom = 40
 											margin_left = -100
-											text = "[GetPlayer.GetCustom('un_voting_balance')]"
+											text = "[GetPlayer.GetCustom('concord_voting_balance')]"
 											using = fontsize_medium
 										}
 										background = {
@@ -558,7 +551,7 @@ types un_panel
 										blockoverride "scrollbox_content" {
 											vbox = {
 												datamodel_wrap = 1
-												datamodel = "[GetGlobalList('un_members_list')]"
+												datamodel = "[GetGlobalList('concord_members_list')]"
 												item = {
 													flowcontainer = {
 														datacontext = "[Scope.AccessCountry]"
@@ -571,7 +564,7 @@ types un_panel
 																using = tooltip_above
 																datacontext = "[Scope.AccessCountry]"						
 																tooltip = "[ContextualDiplomaticPact.GetTooltip]"
-																onclick = "[GetVariableSystem.Clear('un_panel')]"
+																onclick = "[GetVariableSystem.Clear('concord_panel')]"
 																onclick = "[GetVariableSystem.Clear('international_open')]"
 															}
 															textbox = {
@@ -595,7 +588,7 @@ types un_panel
 									onclick = "[GetScriptedGui('add_supporting').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 									onclick = "[GetVariableSystem.Toggle('supportvote')]"
 									onclick = "[GetVariableSystem.Clear('opposevote')]"
-									enabled = "[And(And(GetGlobalVariable('pending_resolution').IsSet , Not(GetVariableSystem.Exists('supportvote'))), GetPlayer.MakeScope.Var('un_member').IsSet)]"
+									enabled = "[And(And(GetGlobalVariable('pending_resolution').IsSet , Not(GetVariableSystem.Exists('supportvote'))), GetPlayer.MakeScope.Var('concord_member').IsSet)]"
 								}
 							}
 						}
@@ -623,7 +616,7 @@ types un_panel
                                                 addrow = 50
                                                 datamodel_wrap = 10
                                                 flipdirection = yes
-												datamodel = "[GetGlobalList('un_members_list')]"
+												datamodel = "[GetGlobalList('concord_members_list')]"
 												item = {
 													flowcontainer = {
 														margin = { 5 5 }
@@ -633,7 +626,7 @@ types un_panel
 															using = tooltip_above
 															datacontext = "[Scope.AccessCountry]"						
 															tooltip = "[ContextualDiplomaticPact.GetTooltip]"
-															onclick = "[GetVariableSystem.Clear('un_panel')]"
+															onclick = "[GetVariableSystem.Clear('concord_panel')]"
 															onclick = "[GetVariableSystem.Clear('international_open')]"
 														}
 													}
@@ -656,7 +649,7 @@ types un_panel
 					}
 				}
 				flowcontainer = { ####### UN RESOLUTIONS
-					visible = "[And(GetVariableSystem.Exists('un_panel'), GetVariableSystem.Exists('un_resolutions'))]"
+					visible = "[And(GetVariableSystem.Exists('concord_panel'), GetVariableSystem.Exists('concord_resolutions'))]"
 					direction = vertical
 					parentanchor = left|top
 					spacing = 10
@@ -698,13 +691,13 @@ types un_panel
 												text = "[concept_unclos1]"
 												onclick = "[GetScriptedGui('activate_unclos1_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 												using = fontsize_medium
-												enabled = "[And(GetPlayer.MakeScope.Var('un_member').IsSet, GetScriptedGui('unclos1_varcheck').IsShown( GuiScope.End ))]"
+												enabled = "[And(GetPlayer.MakeScope.Var('concord_member').IsSet, GetScriptedGui('unclos1_varcheck').IsShown( GuiScope.End ))]"
 											}
 											button_icon_check = {
 												position = { 215 10 }
 												size = { 40 40 }
 												onclick = "[GetScriptedGui('activate_unclos1_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-												enabled = "[And(GetPlayer.MakeScope.Var('un_member').IsSet, GetScriptedGui('unclos1_varcheck').IsShown( GuiScope.End ))]"											
+												enabled = "[And(GetPlayer.MakeScope.Var('concord_member').IsSet, GetScriptedGui('unclos1_varcheck').IsShown( GuiScope.End ))]"											
 											}
 										}
 										flowcontainer = {## UNCLOS II
@@ -747,15 +740,15 @@ types un_panel
 												size = { 210 45 }
 												using = expand_button_bg_no_fade
 												text = "[concept_anti_corruption_resolution]"
-												onclick = "[GetScriptedGui('activate_un_anti_corruption_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+												onclick = "[GetScriptedGui('activate_concord_anti_corruption_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 												using = fontsize_medium
-												enabled = no #"[GetScriptedGui('un_anti_corruption_varcheck').IsShown( GuiScope.End )]"
+												enabled = no #"[GetScriptedGui('concord_anti_corruption_varcheck').IsShown( GuiScope.End )]"
 											}
 											button_icon_check = {
 												position = { 215 10 }
 												size = { 40 40 }
-												onclick = "[GetScriptedGui('activate_un_anti_corruption_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-												enabled = no #"[GetScriptedGui('un_anti_corruption_varcheck').IsShown( GuiScope.End )]"											
+												onclick = "[GetScriptedGui('activate_concord_anti_corruption_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+												enabled = no #"[GetScriptedGui('concord_anti_corruption_varcheck').IsShown( GuiScope.End )]"											
 											}
 										}
 									}
@@ -777,16 +770,16 @@ types un_panel
 											button = {
 												size = { 210 45 }
 												using = expand_button_bg_no_fade
-												text = "[concept_un_headquarters_resolution]"
-												onclick = "[GetScriptedGui('activate_un_headquarters_resolution_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+												text = "[concept_concord_headquarters_resolution]"
+												onclick = "[GetScriptedGui('activate_concord_headquarters_resolution_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 												using = fontsize_medium
-												enabled = no #"[GetScriptedGui('un_headquarters_resolution_varcheck').IsShown( GuiScope.End )]"
+												enabled = no #"[GetScriptedGui('concord_headquarters_resolution_varcheck').IsShown( GuiScope.End )]"
 											}
 											button_icon_check = {
 												position = { 215 10 }
 												size = { 40 40 }
-												onclick = "[GetScriptedGui('activate_un_headquarters_resolution_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-												enabled = no #"[GetScriptedGui('un_headquarters_resolution_varcheck').IsShown( GuiScope.End )]"											
+												onclick = "[GetScriptedGui('activate_concord_headquarters_resolution_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+												enabled = no #"[GetScriptedGui('concord_headquarters_resolution_varcheck').IsShown( GuiScope.End )]"											
 											}
 										}
 										flowcontainer = {## Human Rights Resolution
@@ -797,13 +790,13 @@ types un_panel
 												text = "[concept_human_rights_resolution]"
 												onclick = "[GetScriptedGui('activate_declaration_of_human_rights_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 												using = fontsize_medium
-												enabled = "[And(GetPlayer.MakeScope.Var('un_member').IsSet, GetScriptedGui('declaration_of_human_rights_varcheck').IsShown( GuiScope.End ))]"
+												enabled = "[And(GetPlayer.MakeScope.Var('concord_member').IsSet, GetScriptedGui('declaration_of_human_rights_varcheck').IsShown( GuiScope.End ))]"
 											}
 											button_icon_check = {
 												position = { 215 10 }
 												size = { 40 40 }
 												onclick = "[GetScriptedGui('activate_declaration_of_human_rights_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-												enabled = "[And(GetPlayer.MakeScope.Var('un_member').IsSet, GetScriptedGui('declaration_of_human_rights_varcheck').IsShown( GuiScope.End ))]"											
+												enabled = "[And(GetPlayer.MakeScope.Var('concord_member').IsSet, GetScriptedGui('declaration_of_human_rights_varcheck').IsShown( GuiScope.End ))]"											
 											}
 										}
 										flowcontainer = {## Decolonization Resolution
@@ -812,15 +805,15 @@ types un_panel
 												size = { 210 45 }
 												using = expand_button_bg_no_fade
 												text = "[concept_decolonization_resolution]"
-												onclick = "[GetScriptedGui('activate_un_decolonization_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+												onclick = "[GetScriptedGui('activate_concord_decolonization_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 												using = fontsize_medium
-												enabled = "[And(GetPlayer.MakeScope.Var('un_member').IsSet, GetScriptedGui('decolonization_resolution_varcheck').IsShown( GuiScope.End ))]"	
+												enabled = "[And(GetPlayer.MakeScope.Var('concord_member').IsSet, GetScriptedGui('decolonization_resolution_varcheck').IsShown( GuiScope.End ))]"	
 											}
 											button_icon_check = {
 												position = { 215 10 }
 												size = { 40 40 }
-												onclick = "[GetScriptedGui('activate_un_decolonization_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-												enabled = "[And(GetPlayer.MakeScope.Var('un_member').IsSet, GetScriptedGui('decolonization_resolution_varcheck').IsShown( GuiScope.End ))]"											
+												onclick = "[GetScriptedGui('activate_concord_decolonization_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+												enabled = "[And(GetPlayer.MakeScope.Var('concord_member').IsSet, GetScriptedGui('decolonization_resolution_varcheck').IsShown( GuiScope.End ))]"											
 											}
 										}
 										flowcontainer = {## Apartheid Resolution
@@ -829,15 +822,15 @@ types un_panel
 												size = { 210 45 }
 												using = expand_button_bg_no_fade
 												text = "[concept_apartheid_resolution]"
-												onclick = "[GetScriptedGui('activate_un_apartheid_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+												onclick = "[GetScriptedGui('activate_concord_apartheid_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 												using = fontsize_medium
-												enabled = no #"[GetScriptedGui('un_apartheid_varcheck').IsShown( GuiScope.End )]"
+												enabled = no #"[GetScriptedGui('concord_apartheid_varcheck').IsShown( GuiScope.End )]"
 											}
 											button_icon_check = {
 												position = { 215 10 }
 												size = { 40 40 }
-												onclick = "[GetScriptedGui('activate_un_apartheid_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-												enabled = no #"[GetScriptedGui('un_apartheid_varcheck').IsShown( GuiScope.End )]"											
+												onclick = "[GetScriptedGui('activate_concord_apartheid_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+												enabled = no #"[GetScriptedGui('concord_apartheid_varcheck').IsShown( GuiScope.End )]"											
 											}
 										}
 									}
@@ -942,13 +935,13 @@ types un_panel
 												text = "[concept_resolution_on_korea]"
 												onclick = "[GetScriptedGui('activate_korean_resolution_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 												using = fontsize_medium
-												enabled = "[And(GetPlayer.MakeScope.Var('un_member').IsSet, GetScriptedGui('korean_resolution_varcheck').IsShown( GuiScope.End ))]"		
+												enabled = "[And(GetPlayer.MakeScope.Var('concord_member').IsSet, GetScriptedGui('korean_resolution_varcheck').IsShown( GuiScope.End ))]"		
 											}
 											button_icon_check = {
 												position = { 215 10 }
 												size = { 40 40 }
 												onclick = "[GetScriptedGui('activate_korean_resolution_je').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-												enabled = "[And(GetPlayer.MakeScope.Var('un_member').IsSet, GetScriptedGui('korean_resolution_varcheck').IsShown( GuiScope.End ))]"										
+												enabled = "[And(GetPlayer.MakeScope.Var('concord_member').IsSet, GetScriptedGui('korean_resolution_varcheck').IsShown( GuiScope.End ))]"										
 											}
 										}
 									}
@@ -958,7 +951,7 @@ types un_panel
 					}
 				}
 				flowcontainer = { ####### UN Applications
-					visible = "[And(GetVariableSystem.Exists('un_panel'), GetVariableSystem.Exists('un_applications'))]"
+					visible = "[And(GetVariableSystem.Exists('concord_panel'), GetVariableSystem.Exists('concord_applications'))]"
 					direction = vertical
 					parentanchor = left|top
 					spacing = 10
@@ -975,7 +968,7 @@ types un_panel
 						margin_top = 30
 						parentanchor = hcenter
 						align = center|nobaseline
-						raw_text = "[concept_united_nations] Applications"
+						raw_text = "[concept_valkurian_concord] Applications"
 						using = fontsize_mega
 					}
 					flowcontainer = { # Flag List
@@ -989,7 +982,7 @@ types un_panel
 								vbox = {
 									datamodel_wrap = 1
 									spacing = 20
-									datamodel = "[GetGlobalList('un_application_list')]"
+									datamodel = "[GetGlobalList('concord_application_list')]"
 									item = {
 										flowcontainer = {
 											visible = "[Country.Exists]"
@@ -1014,7 +1007,7 @@ types un_panel
 														using = tooltip_above
 														datacontext = "[Scope.AccessCountry]"						
 														tooltip = "[ContextualDiplomaticPact.GetTooltip]"
-														onclick = "[GetVariableSystem.Clear('un_panel')]"
+														onclick = "[GetVariableSystem.Clear('concord_panel')]"
 														onclick = "[GetVariableSystem.Clear('international_open')]"
 													}
 												}
@@ -1030,26 +1023,26 @@ types un_panel
 														button = {
 															using = default_button # Approve
 															text = "APPROVE"
-															enabled = "[GetScriptedGui('un_approve_membership_varcheck').IsShown( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('applicant_country_scope',Country.MakeScope).End)]"
-															onclick = "[GetScriptedGui('un_approve_membership').Execute( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('applicant_country_scope',Country.MakeScope).End)]"
+															enabled = "[GetScriptedGui('concord_approve_membership_varcheck').IsShown( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('applicant_country_scope',Country.MakeScope).End)]"
+															onclick = "[GetScriptedGui('concord_approve_membership').Execute( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('applicant_country_scope',Country.MakeScope).End)]"
 															size = { 70 30 }
-															tooltip = "APPROVE_UN_MEMBERSHIP"
+															tooltip = "APPROVE_concord_MEMBERSHIP"
 														}
 														button = {
 															using = default_button
 															text = "ABSTAIN" # Abstain
-															enabled = "[GetScriptedGui('un_abstain_membership_varcheck').IsShown( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('applicant_country_scope',Country.MakeScope).End)]"
-															onclick = "[GetScriptedGui('un_abstain_membership').Execute( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('applicant_country_scope',Country.MakeScope).End)]"
+															enabled = "[GetScriptedGui('concord_abstain_membership_varcheck').IsShown( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('applicant_country_scope',Country.MakeScope).End)]"
+															onclick = "[GetScriptedGui('concord_abstain_membership').Execute( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('applicant_country_scope',Country.MakeScope).End)]"
 															size = { 70 30 }
-															tooltip = "ABSTAIN_UN_MEMBERSHIP"
+															tooltip = "ABSTAIN_concord_MEMBERSHIP"
 														}
 														button = {
 															using = default_button
 															text = "REJECT" # Reject
-															enabled = "[GetScriptedGui('un_reject_membership_varcheck').IsShown( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('applicant_country_scope',Country.MakeScope).End)]"
-															onclick = "[GetScriptedGui('un_reject_membership').Execute( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('applicant_country_scope',Country.MakeScope).End)]"
+															enabled = "[GetScriptedGui('concord_reject_membership_varcheck').IsShown( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('applicant_country_scope',Country.MakeScope).End)]"
+															onclick = "[GetScriptedGui('concord_reject_membership').Execute( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('applicant_country_scope',Country.MakeScope).End)]"
 															size = { 70 30 }
-															tooltip = "REJECT_UN_MEMBERSHIP"
+															tooltip = "REJECT_concord_MEMBERSHIP"
 														}
 													}
 												}
@@ -1068,7 +1061,7 @@ types un_panel
 														align = center
 														raw_text = " Requires -#p  [Country.MakeScope.ScriptValue('required_support_un')] #v Support"
 													}
-													tooltip = "UN_APPLICATION_BAR_TOOLTIP"
+													tooltip = "concord_APPLICATION_BAR_TOOLTIP"
 												}
 												flowcontainer = {
 													margin_top = 5
@@ -1139,14 +1132,14 @@ types un_panel
 												datacontext = "[Scope.AccessCountry]"		
 												margin_left = 5
 												green_progressbar_horizontal = {
-													name = "un_application_progress_unbar"
+													name = "concord_application_progress_unbar"
 													size = { 270 10 }
 													blockoverride "values" {
 														value = "[Country.MakeScope.ScriptValue('application_progress_un')]"
 														min = 0
 														max = 100
 													}
-													tooltip = "UN_APPLICATION_BAR_TOOLTIP"
+													tooltip = "concord_APPLICATION_BAR_TOOLTIP"
 												}
 											}
 										}

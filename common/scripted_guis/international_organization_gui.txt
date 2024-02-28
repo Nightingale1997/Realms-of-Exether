@@ -1,112 +1,112 @@
-﻿toggle_unsc_sgui_list = {
+﻿toggle_concord_major_sgui_list = {
 	scope = country
 	ai_is_valid = {
 		always = no
 	}
 	effect = {
-		clear_global_variable_list = unsc_members_list
+		clear_global_variable_list = concord_major_members_list
 		every_country = {
 			limit = {
-				has_variable = unsc_member
+				has_variable = concord_major_member
 			}
 			add_to_global_variable_list = {
-				name = unsc_members_list
+				name = concord_major_members_list
 				target = THIS
 			}
 		}
 	}
 }
 
-build_UN_nations_list_sgui = {
+build_concord_nations_list_sgui = {
 	scope = country
 	ai_is_valid = {
 		always = no
 	}
 	effect = {
-		clear_global_variable_list = un_members_list
+		clear_global_variable_list = concord_members_list
 		every_country = {
 			limit = {
-				has_variable = un_member
+				has_variable = concord_member
 			}
 			add_to_global_variable_list = {
-				name = un_members_list
+				name = concord_members_list
 				target = THIS
 			}
 		}
 	}
 }
 
-build_UN_observers_list_sgui = {
+build_concord_observers_list_sgui = {
 	scope = country
 	ai_is_valid = {
 		always = no
 	}
 	effect = {
-		clear_global_variable_list = un_observers_list
+		clear_global_variable_list = concord_observers_list
 		every_country = {
 			limit = {
-				has_variable = un_observer
+				has_variable = concord_observer
 			}
 			add_to_global_variable_list = {
-				name = un_observers_list
+				name = concord_observers_list
 				target = THIS
 			}
 		}
 	}
 }
 
-build_UN_nonmember_list_sgui = {
+build_concord_nonmember_list_sgui = {
 	scope = country
 	ai_is_valid = {
 		always = no
 	}
 	effect = {
-		clear_global_variable_list = un_nonmember_list
+		clear_global_variable_list = concord_nonmember_list
 		every_country = {
 			limit = {
 				NOR = {
-					has_variable = un_observer
-					has_variable = un_member
+					has_variable = concord_observer
+					has_variable = concord_member
 				}
 			}
 			add_to_global_variable_list = {
-				name = un_nonmember_list
+				name = concord_nonmember_list
 				target = THIS
 			}
 		}
 	}
 }
 
-build_un_headquarters_holder_sgui = {
+build_concord_headquarters_holder_sgui = {
 	scope = country
 	ai_is_valid = {
 		always = no
 	}
 	effect = {
-		clear_global_variable_list = un_headquarters_holder
+		clear_global_variable_list = concord_headquarters_holder
 		every_country = {
 			limit = {
-				has_variable = un_headquarters_holder
+				has_variable = concord_headquarters_holder
 			}
 			add_to_global_variable_list = {
-				name = un_headquarters_holder
+				name = concord_headquarters_holder
 				target = THIS
 			}
 		}
 	}
 }
 
-join_un_observer_sgui = {
+join_concord_observer_sgui = {
 	effect = {
-		effect_un_observer = yes
+		effect_concord_observer = yes
 		set_variable = {
-			name = asked_un_observer
+			name = asked_concord_observer
 			days = 50
 		}
 	}
 }
 
-join_un_member_sgui = {
+join_concord_member_sgui = {
 	effect = {
 		this = {
 			set_variable = {
@@ -114,11 +114,265 @@ join_un_member_sgui = {
 				value = 0
 			}
 			set_variable = {
-				name = un_supporting_list_size
+				name = concord_supporting_list_size
 				value = 0
 			}
 			add_to_global_variable_list = {
-				name = un_application_list
+				name = concord_application_list
+				target = THIS
+			}
+		}
+	}
+}
+
+toggle_dragon_major_sgui_list = {
+	scope = country
+	ai_is_valid = {
+		always = no
+	}
+	effect = {
+		clear_global_variable_list = dragon_major_members_list
+		every_country = {
+			limit = {
+				has_variable = dragon_major_member
+			}
+			add_to_global_variable_list = {
+				name = dragon_major_members_list
+				target = THIS
+			}
+		}
+	}
+}
+
+build_dragon_nations_list_sgui = {
+	scope = country
+	ai_is_valid = {
+		always = no
+	}
+	effect = {
+		clear_global_variable_list = dragon_members_list
+		every_country = {
+			limit = {
+				has_variable = dragon_member
+			}
+			add_to_global_variable_list = {
+				name = dragon_members_list
+				target = THIS
+			}
+		}
+	}
+}
+
+build_dragon_observers_list_sgui = {
+	scope = country
+	ai_is_valid = {
+		always = no
+	}
+	effect = {
+		clear_global_variable_list = dragon_observers_list
+		every_country = {
+			limit = {
+				has_variable = dragon_observer
+			}
+			add_to_global_variable_list = {
+				name = dragon_observers_list
+				target = THIS
+			}
+		}
+	}
+}
+
+build_dragon_nonmember_list_sgui = {
+	scope = country
+	ai_is_valid = {
+		always = no
+	}
+	effect = {
+		clear_global_variable_list = dragon_nonmember_list
+		every_country = {
+			limit = {
+				NOR = {
+					has_variable = dragon_observer
+					has_variable = dragon_member
+				}
+			}
+			add_to_global_variable_list = {
+				name = dragon_nonmember_list
+				target = THIS
+			}
+		}
+	}
+}
+
+build_dragon_headquarters_holder_sgui = {
+	scope = country
+	ai_is_valid = {
+		always = no
+	}
+	effect = {
+		clear_global_variable_list = dragon_headquarters_holder
+		every_country = {
+			limit = {
+				has_variable = dragon_headquarters_holder
+			}
+			add_to_global_variable_list = {
+				name = dragon_headquarters_holder
+				target = THIS
+			}
+		}
+	}
+}
+
+join_dragon_observer_sgui = {
+	effect = {
+		effect_dragon_observer = yes
+		set_variable = {
+			name = asked_dragon_observer
+			days = 50
+		}
+	}
+}
+
+join_dragon_member_sgui = {
+	effect = {
+		this = {
+			set_variable = {
+				name = application_progress_un
+				value = 0
+			}
+			set_variable = {
+				name = dragon_supporting_list_size
+				value = 0
+			}
+			add_to_global_variable_list = {
+				name = dragon_application_list
+				target = THIS
+			}
+		}
+	}
+}
+
+toggle_consortium_major_sgui_list = {
+	scope = country
+	ai_is_valid = {
+		always = no
+	}
+	effect = {
+		clear_global_variable_list = consortium_major_members_list
+		every_country = {
+			limit = {
+				has_variable = consortium_major_member
+			}
+			add_to_global_variable_list = {
+				name = consortium_major_members_list
+				target = THIS
+			}
+		}
+	}
+}
+
+build_consortium_nations_list_sgui = {
+	scope = country
+	ai_is_valid = {
+		always = no
+	}
+	effect = {
+		clear_global_variable_list = consortium_members_list
+		every_country = {
+			limit = {
+				has_variable = consortium_member
+			}
+			add_to_global_variable_list = {
+				name = consortium_members_list
+				target = THIS
+			}
+		}
+	}
+}
+
+build_consortium_observers_list_sgui = {
+	scope = country
+	ai_is_valid = {
+		always = no
+	}
+	effect = {
+		clear_global_variable_list = consortium_observers_list
+		every_country = {
+			limit = {
+				has_variable = consortium_observer
+			}
+			add_to_global_variable_list = {
+				name = consortium_observers_list
+				target = THIS
+			}
+		}
+	}
+}
+
+build_consortium_nonmember_list_sgui = {
+	scope = country
+	ai_is_valid = {
+		always = no
+	}
+	effect = {
+		clear_global_variable_list = consortium_nonmember_list
+		every_country = {
+			limit = {
+				NOR = {
+					has_variable = consortium_observer
+					has_variable = consortium_member
+				}
+			}
+			add_to_global_variable_list = {
+				name = consortium_nonmember_list
+				target = THIS
+			}
+		}
+	}
+}
+
+build_consortium_headquarters_holder_sgui = {
+	scope = country
+	ai_is_valid = {
+		always = no
+	}
+	effect = {
+		clear_global_variable_list = consortium_headquarters_holder
+		every_country = {
+			limit = {
+				has_variable = consortium_headquarters_holder
+			}
+			add_to_global_variable_list = {
+				name = consortium_headquarters_holder
+				target = THIS
+			}
+		}
+	}
+}
+
+join_consortium_observer_sgui = {
+	effect = {
+		effect_consortium_observer = yes
+		set_variable = {
+			name = asked_consortium_observer
+			days = 50
+		}
+	}
+}
+
+join_consortium_member_sgui = {
+	effect = {
+		this = {
+			set_variable = {
+				name = application_progress_un
+				value = 0
+			}
+			set_variable = {
+				name = consortium_supporting_list_size
+				value = 0
+			}
+			add_to_global_variable_list = {
+				name = consortium_application_list
 				target = THIS
 			}
 		}

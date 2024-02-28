@@ -28,18 +28,15 @@
 		activate_law = law_type:law_tenant_farmers
 		activate_law = law_type:law_debt_slavery
 		
-		effect_un_observer = yes
+		effect_concord_observer = yes
 
-		set_imf_member = yes
+		effect_consortium_major_member = yes
+		effect_consortium_member = yes
 
-				set_imf_starting_values = {
-					debtValue = 0
-					creditValue = 0
-					contributionValue = 67694282
-					debtYearsValue = 0
-					interestRateValue = 0
-					loanType = 1
-				}
+		set_variable = {
+			name = consortium_headquarters_holder
+			value = 0
+		}
 
 	}
 }

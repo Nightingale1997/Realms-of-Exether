@@ -81,7 +81,7 @@ dp_conquer_state = {
 		NOT = { is_subject_of = scope:target_country }
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = organization }
+			NOT = { is_country_type = organization }
 			NOT = { is_subject_of = root }
 		}	
 		diplomatic_play_has_no_relations_blockers = yes		

@@ -1,4 +1,4 @@
-﻿onaction_ai_imf_calculation = {
+﻿onaction_ai_consortium_calculation = {
     if = {
         limit = {
             is_ai = yes
@@ -12,7 +12,7 @@
 onaction_set_ai_percentages = {
 	set_variable = {
 		name = imf_contribution_percent
-		value = imf_ai_imf_wanted_contribution_percent_value
+		value = imf_ai_consortium_wanted_contribution_percent_value
 	}
 	remove_modifier = imf_contribution
 	add_modifier = {
@@ -45,11 +45,11 @@ imf_ai_loan_request = {
 		limit = {
 			nor = {
 				has_variable = imf_debt_years
-				has_variable = applied_to_imf_loan
+				has_variable = applied_to_consortium_loan
 				has_modifier = defaulted_on_international_loan
 				has_modifier = imf_austerity_measures
-				has_journal_entry = je_imf_austerity_measures
-				has_journal_entry = je_imf_bailout_loan
+				has_journal_entry = je_consortium_austerity_measures
+				has_journal_entry = je_consortium_bailout_loan
 				imf_ai_loan_amount_value <= 0
 				imf_ai_wants_loan <= 0
 			}
@@ -94,8 +94,8 @@ imf_ai_bailout_request = {
 		limit = {
 			scaled_debt_val >= 1
 			nor = {
-				has_journal_entry = je_imf_austerity_measures
-				has_journal_entry = je_imf_bailout_loan
+				has_journal_entry = je_consortium_austerity_measures
+				has_journal_entry = je_consortium_bailout_loan
 				imf_ai_wants_bailout <= 0
 			}
 		}

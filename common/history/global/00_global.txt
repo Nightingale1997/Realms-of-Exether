@@ -182,85 +182,220 @@ GLOBAL = {
 		}
 	}
 
-	# IMF
-	set_global_variable = {
-		name = imf_headquarters
-		value = s:STATE_MISTREACH.region_state:ARR
-	}
-	every_in_global_list = {
-		variable = imf_members
-		set_imf_vars = yes
-		onaction_order_by_value_currency = yes
-	}
-
 	# International List
+
 	every_country = {
 		limit = {
-			has_variable = un_member
+			has_variable = concord_member
 		}
-		set_country_type = recognized
-	}
-	every_country = {
-		limit = {
-			has_variable = unsc_member
+		if = {
+			limit = {
+				limit = {
+					country_rank = rank_value:great_power
+				}
+			}
+			effect_concord_major_member = yes
+			add_to_global_variable_list = {
+				name = concord_major_members_list
+				target = THIS
+			}
 		}
 		add_to_global_variable_list = {
-			name = unsc_members_list
+			name = concord_members_list
 			target = THIS
 		}
 	}
 	every_country = {
 		limit = {
-			has_variable = un_member
+			has_variable = concord_observer
 		}
 		add_to_global_variable_list = {
-			name = un_members_list
-			target = THIS
-		}
-	}
-	every_country = {
-		limit = {
-			has_variable = un_observer
-		}
-		add_to_global_variable_list = {
-			name = un_observers_list
+			name = concord_observers_list
 			target = THIS
 		}
 	}
 	every_country = {
 		limit = {
 			NOR = {
-				has_variable = un_observer
-				has_variable = un_member
+				has_variable = concord_observer
+				has_variable = concord_member
 			}
 		}
 		add_to_global_variable_list = {
-			name = un_nonmember_list
+			name = concord_nonmember_list
 			target = THIS
 		}
 	}
 	every_country = {
 		limit = {
-			has_variable = un_headquarters_holder
+			has_variable = concord_headquarters_holder
 		}
 		add_to_global_variable_list = {
-			name = un_headquarters_holder
+			name = concord_headquarters_holder
 			target = THIS
 		}
 	}
 	## UN Variables
 	random_country = {
 		set_global_variable = {
-			name = var_un_memberlist
+			name = var_concord_memberlist
 			value = 0
 		}
 	}
 	every_country = {
 		limit = {
-			has_variable = un_member
+			has_variable = concord_member
 		}
 		change_global_variable = {
-			name = var_un_memberlist
+			name = var_concord_memberlist
+			add = 1
+		}
+	}
+
+	every_country = {
+		limit = {
+			has_variable = consortium_major_member
+		}
+		add_to_global_variable_list = {
+			name = consortium_major_members_list
+			target = THIS
+		}
+	}
+	every_country = {
+		limit = {
+			has_variable = consortium_member
+		}
+		add_to_global_variable_list = {
+			name = consortium_members_list
+			target = THIS
+		}
+	}
+	every_country = {
+		limit = {
+			has_variable = consortium_observer
+		}
+		add_to_global_variable_list = {
+			name = consortium_observers_list
+			target = THIS
+		}
+	}
+	every_country = {
+		limit = {
+			NOR = {
+				has_variable = consortium_observer
+				has_variable = consortium_member
+			}
+		}
+		add_to_global_variable_list = {
+			name = consortium_nonmember_list
+			target = THIS
+		}
+	}
+	every_country = {
+		limit = {
+			has_variable = consortium_headquarters_holder
+		}
+		add_to_global_variable_list = {
+			name = consortium_headquarters_holder
+			target = THIS
+		}
+	}
+	## UN Variables
+	random_country = {
+		set_global_variable = {
+			name = var_consortium_memberlist
+			value = 0
+		}
+	}
+	every_country = {
+		limit = {
+			has_variable = consortium_member
+		}
+		change_global_variable = {
+			name = var_consortium_memberlist
+			add = 1
+		}
+	}
+		## Drakewarden Council
+		random_country = {
+			set_global_variable = {
+				name = var_dragon_memberlist
+				value = 0
+			}
+		}
+
+	every_country = {
+		limit = {
+			any_primary_culture = {
+				has_discrimination_trait = dragon_heritage
+			}
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = dragonborn_culture_group
+				}
+			}
+			if = {
+				limit = {
+					country_rank = rank_value:great_power
+				}
+				effect_dragon_major_member = yes
+			}
+			effect_dragon_member = yes
+			add_to_global_variable_list = {
+				name = dragon_members_list
+				target = THIS
+			}
+		}
+		else = {
+			effect_dragon_observer = yes
+			add_to_global_variable_list = {
+				name = dragon_observers_list
+				target = THIS
+			}
+		}
+
+	}
+
+	every_country = {
+		limit = {
+			has_variable = dragon_major_member
+		}
+		add_to_global_variable_list = {
+			name = dragon_major_members_list
+			target = THIS
+		}
+	}
+
+	every_country = {
+		limit = {
+			NOR = {
+				has_variable = dragon_observer
+				has_variable = dragon_member
+			}
+		}
+		add_to_global_variable_list = {
+			name = dragon_nonmember_list
+			target = THIS
+		}
+	}
+	every_country = {
+		limit = {
+			has_variable = dragon_headquarters_holder
+		}
+		add_to_global_variable_list = {
+			name = dragon_headquarters_holder
+			target = THIS
+		}
+	}
+
+	every_country = {
+		limit = {
+			has_variable = dragon_member
+		}
+		change_global_variable = {
+			name = var_dragon_memberlist
 			add = 1
 		}
 	}

@@ -42,25 +42,14 @@
 			level = 1
 		}
 
-		effect_un_member = yes
+		effect_concord_member = yes
 
-		effect_unsc_member = yes
+		effect_consortium_member = yes
 
 		set_variable = {
-			name = un_headquarters_holder
+			name = concord_headquarters_holder
 			value = 0
 		}
-
-				# IMF
-				set_imf_member = yes
-				set_imf_starting_values = {
-					debtValue = 0
-					creditValue = 0
-					contributionValue = 67694282
-					debtYearsValue = 0
-					interestRateValue = 0
-					loanType = 1
-				}
 
 	}
 }

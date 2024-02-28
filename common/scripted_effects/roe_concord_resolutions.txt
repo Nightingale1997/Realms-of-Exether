@@ -1,10 +1,10 @@
-﻿activate_un_decolonization_je = {
+﻿activate_concord_decolonization_je = {
 	every_country = {
 		if = {
 			limit = {
 				or = {
-					has_variable = unsc_member
-					has_variable = un_member
+					has_variable = concord_major_member
+					has_variable = concord_member
 				}
 			}
 			add_journal_entry = {
@@ -24,8 +24,8 @@ activate_declaration_of_human_rights_je = {
 		if = {
 			limit = {
 				or = {
-					has_variable = unsc_member
-					has_variable = un_member
+					has_variable = concord_major_member
+					has_variable = concord_member
 				}
 			}
 			add_journal_entry = {
@@ -45,8 +45,8 @@ activate_unclos1_je = {
 		if = {
 			limit = {
 				or = {
-					has_variable = unsc_member
-					has_variable = un_member
+					has_variable = concord_major_member
+					has_variable = concord_member
 				}
 			}
 			add_journal_entry = {
@@ -66,8 +66,8 @@ activate_korean_resolution_je = {
 		if = {
 			limit = {
 				or = {
-					has_variable = unsc_member
-					has_variable = un_member
+					has_variable = concord_major_member
+					has_variable = concord_member
 				}
 			}
 			add_journal_entry = {

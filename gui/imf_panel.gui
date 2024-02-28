@@ -37,11 +37,11 @@ types imf
 
 		blockoverride "window_header_name" {
 			margin_left = 20
-			raw_text = "[concept_imf]"
+			raw_text = "[concept_consortium]"
 			icon = {
 				position = { -80 -10 }
 				texture = "gfx/interface/icons/cwp_icons/imf.dds"
-				tooltip = "[concept_imf_desc]"
+				tooltip = "[concept_consortium_desc]"
 				size = { 70 70 }
 				background = {
 				}
@@ -152,7 +152,7 @@ types imf
 									}
 									textbox = {
 										using = tooltip_above					
-										raw_text = "#v 1#![GetPlayer.MakeScope.Var('cwp_currency').GetFlagName] is [GetPlayer.MakeScope.ScriptValue('currency_domestic_to_imf_currency')|vd] #gold #bold IMR#!#!"
+										raw_text = "#v 1#![GetPlayer.MakeScope.Var('cwp_currency').GetFlagName] is [GetPlayer.MakeScope.ScriptValue('currency_domestic_to_consortium_currency')|vd] #gold #bold IMR#!#!"
 									}
 									
 								}
@@ -408,7 +408,7 @@ types imf
 									}
 									
 									flowcontainer = {
-										visible = "[GetScriptedGui('has_imf_debt').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+										visible = "[GetScriptedGui('has_consortium_debt').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 										direction = vertical
 										spacing = 30
 										margin = { 20 20 }
@@ -738,8 +738,8 @@ types imf
 								using = expand_button_bg_no_fade
 								raw_text = "Apply for #gold IMF#! Loan"
 								onclick = "[GetVariableSystem.Toggle('ApplyLoan')]"
-								enabled = "[GetScriptedGui('can_apply_imf_loan').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-								tooltip = "APPLY_IMF_LOAN_TOOLTIP"
+								enabled = "[GetScriptedGui('can_apply_consortium_loan').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								tooltip = "APPLY_consortium_LOAN_TOOLTIP"
 							}
 							button = {
 								size = { 350 50 }
@@ -747,7 +747,7 @@ types imf
 								raw_text = "Request Bailout"
 								onclick = "[GetScriptedGui('imf_request_bailout').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								enabled = "[GetScriptedGui('imf_can_request_bailout').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-								tooltip = "REQUEST_BAILOUT_IMF_TOOLTIP"
+								tooltip = "REQUEST_BAILOUT_consortium_TOOLTIP"
 							}
 						}
 					}
@@ -907,7 +907,7 @@ types imf
 												raw_text = "-"
 												onclick = "[GetScriptedGui('imf_decrease_upfront_principal').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 												enabled = "[GreaterThan_CFixedPoint(GetPlayer.MakeScope.Var('imf_loan_application_upfront_principal').GetValue, '(CFixedPoint)1')]"
-												tooltip = "DECREASE_UPFRONT_PRINCIPAL_IMF_TOOLTIP"
+												tooltip = "DECREASE_UPFRONT_PRINCIPAL_consortium_TOOLTIP"
 											}
 											textbox = {
 												align = hcenter
@@ -923,7 +923,7 @@ types imf
 												raw_text = "+"
 												onclick = "[GetScriptedGui('imf_increase_upfront_principal').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 												enabled = "[LessThan_CFixedPoint(GetPlayer.MakeScope.Var('imf_loan_application_upfront_principal').GetValue, GetPlayer.MakeScope.ScriptValue('imf_application_loan_10_val'))]"
-												tooltip = "INCREASE_UPFRONT_PRINCIPAL_IMF_TOOLTIP"
+												tooltip = "INCREASE_UPFRONT_PRINCIPAL_consortium_TOOLTIP"
 											}
 											background = {
 												using = entry_bg_simple
