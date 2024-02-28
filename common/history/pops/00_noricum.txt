@@ -228,7 +228,7 @@
     s:STATE_ZENDEN = {
       region_state:DUM = {
         create_pop = {
-          culture = ralaurian
+          culture = dewaric
           size = 59044
         }
         create_pop = {
@@ -236,7 +236,7 @@
           size = 3000
         }
         create_pop = {
-          culture = dewaric
+          culture = ralaurian
           size = 90004
         }
         create_pop = {
@@ -1072,7 +1072,20 @@
 
 
     s:STATE_GLYNFFORDD = {
-
+      region_state:FOX = {
+        create_pop = {
+          culture = jalian
+          size = 1283122
+        }
+        create_pop = {
+          culture = meriwyn
+          size = 675084
+        }
+        create_pop = {
+          culture = vampire
+          size = 6485
+        }
+      }
   }
 
     s:STATE_ALLTGLAS = {
@@ -1086,7 +1099,20 @@
 
 
     s:STATE_GWYNWEN = {
-
+      region_state:FOX = {
+        create_pop = {
+          culture = jalian
+          size = 1877581
+        }
+        create_pop = {
+          culture = meriwyn
+          size = 180989
+        }
+        create_pop = {
+          culture = vampire 
+          size = 900
+        }
+      }
   }
 
 
@@ -1137,12 +1163,34 @@
 
 
     s:STATE_HARTHALGH = {
-
+      region_state:FOX = {
+        create_pop = {
+          culture = jalian # Catholics
+          size = 1349428
+        }
+        create_pop = {
+          culture = meriwyn # Anglicans
+          size = 28463
+        }
+      }
   }
 
 
     s:STATE_INCHMARA = {
-
+      region_state:FOX = {
+        create_pop = {
+          culture = jalian # Catholics
+          size = 2514388
+        }
+        create_pop = {
+          culture = meriwyn
+          size = 81856
+        }
+        create_pop = {
+          culture = vampire 
+          size = 4040
+        }
+      }
   }
 
 

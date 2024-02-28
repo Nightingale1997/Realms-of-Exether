@@ -1613,7 +1613,32 @@
 
 
     s:STATE_GLYNFFORDD = {
-
+      region_state:FOX={
+        create_building={
+          building="building_livestock_ranch"
+          level=2
+          reserves=1
+          activate_production_methods={ "pm_sheep_farms" "pm_slaughterhouses" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+        }
+        create_building={
+          building="building_rye_farm"
+          level=3
+          reserves=1
+          activate_production_methods={ "pm_soil_enriching_farming" "pm_potatoes" "pm_tools" "pm_privately_owned" }
+        }	
+        create_building={
+          building="building_logging_camp"
+          level=2
+          reserves=1
+          activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" "pm_privately_owned_building_logging_camp" }
+        }
+        create_building={
+          building="building_port"
+          level=2
+          reserves=1
+          activate_production_methods={ "pm_basic_port" }
+        }			
+      }
   }
 
     s:STATE_ALLTGLAS = {
@@ -1627,7 +1652,38 @@
 
 
     s:STATE_GWYNWEN = {
-
+      region_state:FOX={
+        create_building={
+          building="building_university"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_scholastic_education" }
+        }
+        create_building={
+          building="building_lead_mine"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_picks_and_shovels_building_lead_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" "pm_privately_owned_building_lead_mine" }
+        }
+        create_building={
+          building="building_food_industry"
+          level=4
+          reserves=1
+          activate_production_methods={ "pm_sweeteners" "pm_disabled_canning" "pm_pot_stills" "pm_manual_dough_processing" "pm_merchant_guilds_building_food_industry" }
+        }
+        create_building={
+          building="building_rye_farm"
+          level=5
+          reserves=1
+          activate_production_methods={ "pm_soil_enriching_farming" "pm_potatoes" "pm_tools" "pm_privately_owned" }
+        }
+        create_building={
+          building="building_port"
+          level=3
+          reserves=1
+          activate_production_methods={ "pm_basic_port" }
+        }
+      }
   }
 
 
@@ -1670,12 +1726,38 @@
 
 
     s:STATE_HARTHALGH = {
-
+      region_state:FOX={
+        create_building={
+          building="building_rye_farm"
+          level=2
+          reserves=1
+          activate_production_methods={ "pm_soil_enriching_farming" "pm_potatoes" "pm_tools" "pm_privately_owned" }
+        }
+        create_building={
+          building="building_port"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_basic_port" }
+        }			
+      }
   }
 
 
     s:STATE_INCHMARA = {
-
+      region_state:FOX={
+        create_building={
+          building="building_rye_farm"
+          level=3
+          reserves=1
+          activate_production_methods={ "pm_soil_enriching_farming" "pm_potatoes" "pm_tools" "pm_privately_owned" }
+        }
+        create_building={
+          building="building_port"
+          level=2
+          reserves=1
+          activate_production_methods={ "pm_basic_port" }
+        }
+      }
   }
 
 

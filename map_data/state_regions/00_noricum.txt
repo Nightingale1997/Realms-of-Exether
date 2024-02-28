@@ -1095,7 +1095,12 @@ STATE_GLYNFFORDD = {
     farm = x76EB97
     mine = x7DFBAF
     port = x84D2F9
-
+    arable_land = 130
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 6
+        bg_fishing = 11
+    }
 }
 STATE_ALLTGLAS = {
     id = 4070
@@ -1130,6 +1135,14 @@ STATE_GWYNWEN = {
     farm = x8CBBE0
     mine = xC87BEF
     port = xD1ACEB
+    arable_land = 95
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_iron_mining = 33
+        bg_lead_mining = 27
+        bg_logging = 6
+        bg_fishing = 6
+    }
     naval_exit_id = 3025
 }
 STATE_CASTELL_DRYSGOLMARK = {
@@ -1202,6 +1215,13 @@ STATE_HARTHALGH = {
     farm = xD2D2D2
     mine = xDCF684
     port = xDEF5BB
+    arable_land = 75
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_sulfur_mining = 48
+        bg_logging = 7
+        bg_fishing = 4
+    }
     naval_exit_id = 3025
 }
 STATE_INCHMARA = {
@@ -1213,6 +1233,13 @@ STATE_INCHMARA = {
     farm = xA284F5
     mine = xA872DC
     port = xC2AE90
+    arable_land = 130
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_lead_mining = 24
+        bg_logging = 4
+        bg_fishing = 12
+    }
     naval_exit_id = 3025
 }
 STATE_GLASINBLAIR = {
