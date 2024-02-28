@@ -105,7 +105,7 @@ types concord_panel
 							visible = "[GetVariableSystem.Exists('concord_floor')]"
 							size = { 250 50 }
 							using = expand_button_bg_no_fade
-							raw_text = "UN Floor"
+							raw_text = "Debate Floor"
 							onclick = "[GetVariableSystem.Toggle('concord_floor')]"
 							onclick = "[GetVariableSystem.Clear('international_community')]"
 							onclick = "[GetVariableSystem.Clear('concord_resolutions')]"
@@ -115,7 +115,7 @@ types concord_panel
 							visible = "[Not(GetVariableSystem.Exists('concord_floor'))]"
 							size = { 250 50 }
 							using = expand_button_bg_no_fade
-							raw_text = "UN Floor"
+							raw_text = "Debate Floor"
 							onclick = "[GetVariableSystem.Toggle('concord_floor')]"
 							onclick = "[GetVariableSystem.Clear('international_community')]"
 							onclick = "[GetVariableSystem.Clear('concord_resolutions')]"
@@ -316,7 +316,7 @@ types concord_panel
 							parentanchor = hcenter					
 							textbox = {
 								autoresize = yes
-								raw_text = "#t NON UN States#!"
+								raw_text = "#t Observer States#!"
 								using = header_font_fancy
 								using = fontsize_mega
 							}
@@ -354,7 +354,7 @@ types concord_panel
 						}
 					}
 				}
-					flowcontainer = { #UN Floor
+					flowcontainer = { #Debate Floor
 						visible = "[And(GetVariableSystem.Exists('concord_panel'), GetVariableSystem.Exists('concord_floor'))]"
 						direction = vertical
 						parentanchor = left|top

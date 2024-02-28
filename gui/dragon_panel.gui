@@ -105,7 +105,7 @@ types dragon_panel
 							visible = "[GetVariableSystem.Exists('dragon_floor')]"
 							size = { 250 50 }
 							using = expand_button_bg_no_fade
-							raw_text = "UN Floor"
+							raw_text = "Debate Floor"
 							onclick = "[GetVariableSystem.Toggle('dragon_floor')]"
 							onclick = "[GetVariableSystem.Clear('international_community')]"
 							onclick = "[GetVariableSystem.Clear('dragon_resolutions')]"
@@ -115,7 +115,7 @@ types dragon_panel
 							visible = "[Not(GetVariableSystem.Exists('dragon_floor'))]"
 							size = { 250 50 }
 							using = expand_button_bg_no_fade
-							raw_text = "UN Floor"
+							raw_text = "Debate Floor"
 							onclick = "[GetVariableSystem.Toggle('dragon_floor')]"
 							onclick = "[GetVariableSystem.Clear('international_community')]"
 							onclick = "[GetVariableSystem.Clear('dragon_resolutions')]"
@@ -354,7 +354,7 @@ types dragon_panel
 						}
 					}
 				}
-					flowcontainer = { #UN Floor
+					flowcontainer = { #Debate Floor
 						visible = "[And(GetVariableSystem.Exists('dragon_panel'), GetVariableSystem.Exists('dragon_floor'))]"
 						direction = vertical
 						parentanchor = left|top
