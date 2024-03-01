@@ -1133,13 +1133,72 @@
 				size = 81204
 			}
     
+    }
   }
-  }
+  s:STATE_SUKONCO_3 = {
+  region_state:EAH = {
+			create_pop = {
+				culture = vandori
+				size = 1104504
+			}
+			create_pop = {
+				culture = koshiri
+				size = 336949
+			}
+      create_pop = {
+				culture = beithaven
+				size = 254683
+			}
+    }
     
   s:STATE_INAMGI = {
-
+    region_state:CHR = {
+			create_pop = {
+				culture = vandori
+				size = 976507
+			}
+			create_pop = {
+				culture = koshiri
+				size = 83005
+			}
+      create_pop = {
+				culture = beithaven
+				size = 325784
+			}
+    }
   }
-    
+
+  s:STATE_INAMGI_2 = {
+    region_state:CHR = {
+			create_pop = {
+				culture = vandori
+				size = 844504
+			}
+			create_pop = {
+				culture = koshiri
+				size = 356446
+			}
+      create_pop = {
+				culture = beithaven
+				size = 95784
+			}
+    }
+  } 
+  s:STATE_INAMGI_3 = {
+    region_state:CHR = {
+			create_pop = {
+				culture = vandori
+				size = 844504
+			}
+			create_pop = {
+				culture = beithaven
+				size = 367486
+      create_pop = {
+				culture = koshiri
+				size = 96984
+			}
+    }
+  } 
   s:STATE_KUNCHI = {
 
   }
@@ -1147,5 +1206,17 @@
   s:STATE_SANGARI = {
 
   }
-
+  s:STATE_SANGARI_2 = {
+  region_state:CHR = {
+			create_pop = {
+				culture = vandori
+				size = 874544
+			}
+			create_pop = {
+				culture = beithaven
+				size = 3367486
+      
+    }
+  }
+  }
 }
