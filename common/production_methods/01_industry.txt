@@ -2190,6 +2190,35 @@ pm_perfect_synthetic_oil_production = {
 	}
 }
 
+pm_synthetic_oil_standard_production = {
+	texture = "gfx/interface/icons/production_method_icons/no_explosives.dds"
+}
+
+pm_synthetic_oil_military_production = {
+	 texture = "gfx/interface/icons/production_method_icons/nitroglycerin.dds"
+	
+	unlocking_technologies = {
+		#to do
+	}
+
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			# output goods
+			goods_output_synthetic_oil_add = -15
+			goods_output_munitions_add = 15
+		}
+
+		unscaled = {
+	
+			# mortality
+			building_laborers_mortality_mult = 0.2
+			building_machinists_mortality_mult = 0.1
+		}
+	}
+}
+
 pm_dye_production = {
 	texture = "gfx/interface/icons/production_method_icons/synthetic_dyes.dds"
 	

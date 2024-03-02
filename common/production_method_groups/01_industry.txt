@@ -273,6 +273,13 @@ pmg_synthetic_oil = {
 		pm_perfect_synthetic_oil_production
 	}
 }
+pmg_synthetic_oil_military_production = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = { 
+	pm_synthetic_oil_standard_production
+	pm_synthetic_oil_military_production
+	}
+}
 
 pmg_synthetic_silk = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
