@@ -42,15 +42,16 @@
 			}
 			else_if = {
 				limit = {
-				owner = { 
-					religion = {
-						AND = {
-							has_discrimination_trait = nature_domain
-							NOT = {
-								has_discrimination_trait = chivalrous_heritage
-						}
+					owner = { 
+						religion = {
+							AND = {
+								has_discrimination_trait = nature_domain
+								NOT = {
+									has_discrimination_trait = chivalrous_heritage
+								}
+							}
+						}	
 					}
-				}
 				}
 				set_interest_group_name = ig_foragers
 				set_ig_trait = ig_trait:ig_trait_old_ways
@@ -65,6 +66,7 @@
 			}
 		}
 	}
+
 	on_disable = {}
 	on_character_ig_membership = {}
 

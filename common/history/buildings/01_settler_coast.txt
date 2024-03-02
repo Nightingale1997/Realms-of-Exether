@@ -1,4 +1,4 @@
-BUILDINGS = {
+﻿BUILDINGS = {
 
   s:STATE_SHARINDLARS_NEEDLE = {
 		  region_state:EME={  
@@ -103,7 +103,7 @@ BUILDINGS = {
 				      activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled" "pm_privately_owned" }
 			    }    			    	    			    			    		    
       }
-
+  }
   s:STATE_ABAISSE_DE_MARBRUN = {
 		  region_state:EME={  
           create_building={
@@ -141,8 +141,8 @@ BUILDINGS = {
 				reserves=1
 				activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts" "pm_privately_owned_building_logging_camp" }
 			}					    	
+  	}
   }
-
   s:STATE_AZURSOL = {
 		  region_state:EME={ 
 			    create_building={
@@ -1552,8 +1552,8 @@ BUILDINGS = {
 			reserves=1
 			activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts" "pm_privately_owned_building_logging_camp" }
 		}
+    	}
   }
-
   s:STATE_SHIFTING_SCAR = {
 
   }
@@ -1948,9 +1948,4 @@ BUILDINGS = {
   s:STATE_SILVERTARGE = {
 
   }
-
-  s:STATE_IRON_HALLS = {
-
-  }
-
 }

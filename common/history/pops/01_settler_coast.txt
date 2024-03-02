@@ -1,4 +1,13 @@
-POPS = {
+﻿POPS = {
+
+	s:STATE_CELESTIAL_CHATEAU = {
+		region_state:XXG = {
+			  create_pop = {
+					culture = dorite
+					size = 7
+			  }		         
+		}
+}
 
   s:STATE_SHARINDLARS_NEEDLE = {
 		  region_state:EME = {
@@ -471,7 +480,7 @@ POPS = {
 			size = 10279
 		}
 		create_pop = {
-			culture = eberru
+			culture = eberri
 			size = 70121
 		}
 		create_pop = {
@@ -795,7 +804,7 @@ POPS = {
 			size = 335008
 		}
 		create_pop = {
-			culture = buramog
+			culture = plaguedweller
 			size = 32000
 		}
 		create_pop = {
@@ -882,10 +891,6 @@ POPS = {
   }
 
   s:STATE_SILVERTARGE = {
-
-  }
-
-  s:STATE_IRON_HALLS = {
 
   }
 

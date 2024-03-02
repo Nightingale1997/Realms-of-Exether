@@ -1,8 +1,8 @@
-POPS = {
+﻿POPS = {
 	s:STATE_DHARMARAJYA = {
 		region_state:KAY = {
 			create_pop = {
-				culture = gulf_naga
+				culture = jungle_naga
 				size = 1841220
 			}
 			create_pop = {
@@ -246,8 +246,7 @@ POPS = {
 				size = 951351
 			}
 			create_pop = {
-				culture = gulf_naga
-				religion = awakened
+				culture = awakened
 				size = 1164904
 			}
 			create_pop = {
@@ -424,7 +423,7 @@ POPS = {
 				size = 9370101
 			}
 			create_pop = {
-				culture = bengali
+				culture = gulf_naga
 				religion = animist
 				size = 109096
 			}
@@ -631,11 +630,21 @@ POPS = {
 	}
 
 	s:STATE_MOSKHAN = {
-	
+		region_state:VOL = {
+			create_pop = {
+				culture = awakened_east
+				size = 724817
+			}
+		}
 	}
 
 	s:STATE_TASHKAVSK = {
-	
+		region_state:VOL = {
+			create_pop = {
+				culture = awakened_east
+				size = 709922
+			}
+		}
 	}
 
 	s:STATE_NEFUDISTAN = {
@@ -643,7 +652,12 @@ POPS = {
 	}
 
 	s:STATE_SAMARKH = {
-	
+		region_state:VOL = {
+			create_pop = {
+				culture = awakened_east
+				size = 697456
+			}
+		}
 	}
 
 	s:STATE_DUSHANBARYA = {
@@ -671,27 +685,80 @@ POPS = {
 	}
 
 	s:STATE_MAZAROV = {
-	
+		region_state:DOB = {
+			create_pop = {
+				culture = hornodukh
+				size = 1250000
+			}
+			create_pop = {
+				culture = awakened_east
+				size = 40000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = awakened_east
+				size = 10000
+			}
+		}
 	}
 
 	s:STATE_KHOSTOV = {
-	
+		region_state:YAS = {
+			create_pop = {
+				culture = qadimra
+				size = 400000
+			}
+			create_pop = {
+				culture = awakened_east
+				size = 100000
+			}
+		}
 	}
 	
 	s:STATE_KUNDUZOV = {
-	
+		region_state:DOB = {
+			create_pop = {
+				culture = hornodukh
+				size = 998000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = hornodukh
+				size = 2000
+			}
+		}
 	}
 
 	s:STATE_PULIKOTSK = {
-	
+		region_state:ZAR = {
+			create_pop = {
+				culture = awakened_east
+				size = 381836
+			}
+		}
 	}
 
 	s:STATE_TERMEZSK = {
-	
+		region_state:GAN = {
+			create_pop = {
+				culture = awakened_east
+				size = 797012
+			}
+		}
 	}
 
 	s:STATE_JALALABAKOV = {
-	
+		region_state:DOB = {
+			create_pop = {
+				culture = hornodukh
+				size = 1620000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = hornodukh
+				size = 5000
+			}
+		}
 	}
 
 	s:STATE_FARGHANOV = {
@@ -704,11 +771,21 @@ POPS = {
 	}
 
 	s:STATE_GHAZNINSKIY = {
-	
+		region_state:YKG = {
+			create_pop = {
+				culture = awakened_east
+				size = 992817
+			}
+		}
 	}
 
 	s:STATE_ANDIZHANSK = {
-	
+		region_state:AYS = {
+			create_pop = {
+				culture = awakened_east
+				size = 497437
+			}
+		}
 	}
 
 	s:STATE_RUKHAM = {

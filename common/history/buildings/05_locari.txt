@@ -1,4 +1,4 @@
-BUILDINGS = {
+﻿BUILDINGS = {
 	s:STATE_DHARMARAJYA = {
 		region_state:KAY={
 			create_building={
@@ -534,13 +534,14 @@ BUILDINGS = {
 	}
 
 	s:STATE_YARRAGANBALA = {
-		create_building={
-			building="building_fishing_wharf"
-			level=1
-			reserves=1
-			activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
-		}
+
 		region_state:AMR={
+			create_building={
+				building="building_fishing_wharf"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+			}
 			create_building={
 				building="building_wheat_farm"
 				level=4
@@ -884,7 +885,26 @@ BUILDINGS = {
 	}
 
 	s:STATE_MAZAROV = {
-	
+		region_state:DOB={
+			create_building={
+				building="building_tea_plantation"
+				level=2
+				reserves=1
+				activate_production_methods={ "default_building_tea_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+			}
+			create_building={
+				building="building_dye_plantation"
+				level=1
+				reserves=1
+				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+			}
+			create_building={
+				building="building_livestock_ranch"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+			}
+		}
 	}
 
 	s:STATE_KHOSTOV = {
@@ -892,7 +912,20 @@ BUILDINGS = {
 	}
 
 	s:STATE_KUNDUZOV = {
-	
+		region_state:DOB={
+			create_building={
+				building="building_furniture_manufacturies"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_handcrafted_furniture" "pm_merchant_guilds_building_furniture_manufacturies" "pm_automation_disabled" "pm_luxury_furniture" }
+			}
+			create_building={
+				building="building_logging_camp"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_forestry" "pm_merchant_guilds_building_logging_camp" "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
+			}
+		}
 	}
 
 	s:STATE_PULIKOTSK = {
@@ -904,7 +937,32 @@ BUILDINGS = {
 	}
 
 	s:STATE_JALALABAKOV = {
-	
+		region_state:DOB={
+			create_building={
+				building="building_construction_sector"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_wooden_buildings" }
+			}	
+			create_building={
+				building="building_government_administration"
+				level=5
+				reserves=1
+				activate_production_methods={ "pm_simple_organization" }
+			}
+			create_building={
+				building="building_glassworks"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_forest_glass" "pm_merchant_guilds_building_glassworks" "pm_manual_glassblowing" "pm_ceramics" }
+			}
+			create_building={
+				building="building_wheat_farm"
+				level=5
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_citrus_orchards" "pm_tools_disabled" "pm_privately_owned" }
+			}
+		}
 	}
 
 	s:STATE_FARGHANOV = {

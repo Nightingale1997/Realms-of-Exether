@@ -3226,29 +3226,6 @@ ai_strategy_default = {
 					max = 2.0
 				}				
 			}
-			# Britain will prioritize ending slavery in Brazil if they have the Aberdeen Act JE
-			if = {
-				limit = {
-					has_journal_entry = je_aberdeen_act
-					scope:target_country = {
-						c:BRZ ?= this
-					}
-				}
-				add = 50
-			}
-			# Great Powers with slavery banned will prioritize ending slavery in Brazil if that country failed its slavery JE
-			if = {
-				limit = {
-					has_law = law_type:law_slavery_banned
-					country_rank >= rank_value:great_power
-					scope:target_country = {
-						c:BRZ ?= this
-						has_modifier = brazil_slaving_pariah_modifier
-						has_law = law_type:law_slave_trade
-					}
-				}
-				add = 30
-			}
 
 			min = 0
 			max = 100

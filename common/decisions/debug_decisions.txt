@@ -1,0 +1,45 @@
+﻿
+
+add_integrity = {
+	is_shown = {
+		always = yes
+	}
+
+	possible = {
+		always = yes
+	}
+
+	when_taken = {
+		add_modifier = {
+			name = country_test_veil_integrity_add
+			months = 24
+		}
+	}
+	
+   ai_chance = {
+      base = 0		 
+   }	
+}
+
+remove_integrity = {
+	is_shown = {
+		always = yes
+	}
+
+	possible = {
+		always = yes
+	}
+
+	when_taken = {
+		add_modifier = {
+			name = country_test_veil_integrity_remove
+			months = 24
+		}
+	}
+	
+   ai_chance = {
+      base = 0		 
+   }	
+}
+
+

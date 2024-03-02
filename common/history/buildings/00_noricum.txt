@@ -1,4 +1,4 @@
-BUILDINGS = {
+﻿BUILDINGS = {
 
   s:STATE_CROWNPEAK = {
 		region_state:DUM={
@@ -944,12 +944,19 @@ BUILDINGS = {
 
 
     s:STATE_WYRMBONE_CLIFFS = {
-
+      region_state:SDN={
+        create_building={
+          building="building_port"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_anchorage" }
+        }
+      }
   }
 
 
     s:STATE_WHISPERPINE_WOODS = {
-
+      region_state:PTD={}
   }
 
 
@@ -1480,12 +1487,6 @@ BUILDINGS = {
 
   }
 
-
-    s:STATE_GELLIBRITH = {
-
-  }
-
-
     s:STATE_MAESBELAN = {
       region_state:JUR={
         create_building={
@@ -1612,14 +1613,33 @@ BUILDINGS = {
 
 
     s:STATE_GLYNFFORDD = {
-
+      region_state:FOX={
+        create_building={
+          building="building_livestock_ranch"
+          level=2
+          reserves=1
+          activate_production_methods={ "pm_sheep_farms" "pm_slaughterhouses" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+        }
+        create_building={
+          building="building_rye_farm"
+          level=3
+          reserves=1
+          activate_production_methods={ "pm_soil_enriching_farming" "pm_potatoes" "pm_tools" "pm_privately_owned" }
+        }	
+        create_building={
+          building="building_logging_camp"
+          level=2
+          reserves=1
+          activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" "pm_privately_owned_building_logging_camp" }
+        }
+        create_building={
+          building="building_port"
+          level=2
+          reserves=1
+          activate_production_methods={ "pm_basic_port" }
+        }			
+      }
   }
-
-
-    s:STATE_PANTMARK = {
-
-  }
-
 
     s:STATE_ALLTGLAS = {
 
@@ -1632,7 +1652,38 @@ BUILDINGS = {
 
 
     s:STATE_GWYNWEN = {
-
+      region_state:FOX={
+        create_building={
+          building="building_university"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_scholastic_education" }
+        }
+        create_building={
+          building="building_lead_mine"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_picks_and_shovels_building_lead_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" "pm_privately_owned_building_lead_mine" }
+        }
+        create_building={
+          building="building_food_industry"
+          level=4
+          reserves=1
+          activate_production_methods={ "pm_sweeteners" "pm_disabled_canning" "pm_pot_stills" "pm_manual_dough_processing" "pm_merchant_guilds_building_food_industry" }
+        }
+        create_building={
+          building="building_rye_farm"
+          level=5
+          reserves=1
+          activate_production_methods={ "pm_soil_enriching_farming" "pm_potatoes" "pm_tools" "pm_privately_owned" }
+        }
+        create_building={
+          building="building_port"
+          level=3
+          reserves=1
+          activate_production_methods={ "pm_basic_port" }
+        }
+      }
   }
 
 
@@ -1675,12 +1726,38 @@ BUILDINGS = {
 
 
     s:STATE_HARTHALGH = {
-
+      region_state:FOX={
+        create_building={
+          building="building_rye_farm"
+          level=2
+          reserves=1
+          activate_production_methods={ "pm_soil_enriching_farming" "pm_potatoes" "pm_tools" "pm_privately_owned" }
+        }
+        create_building={
+          building="building_port"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_basic_port" }
+        }			
+      }
   }
 
 
     s:STATE_INCHMARA = {
-
+      region_state:FOX={
+        create_building={
+          building="building_rye_farm"
+          level=3
+          reserves=1
+          activate_production_methods={ "pm_soil_enriching_farming" "pm_potatoes" "pm_tools" "pm_privately_owned" }
+        }
+        create_building={
+          building="building_port"
+          level=2
+          reserves=1
+          activate_production_methods={ "pm_basic_port" }
+        }
+      }
   }
 
 
@@ -1768,7 +1845,8 @@ BUILDINGS = {
 
 
     s:STATE_HRAFNSDALR = {
-
+      region_state:SDN={
+      }
   }
 
 
@@ -1815,7 +1893,7 @@ BUILDINGS = {
 
 
     s:STATE_SKALKA = {
-
+      region_state:PTD={}
   }
 
 
@@ -1901,16 +1979,6 @@ BUILDINGS = {
   }
 
 
-    s:STATE_PSOFRICA = {
-
-  }
-
-
-    s:STATE_PANGEI = {
-
-  }
-
-
     s:STATE_HALDORHEIMR = {
 
   }
@@ -1922,44 +1990,93 @@ BUILDINGS = {
 
 
     s:STATE_NGURULAN = {
-
-  }
-
+      region_state:LAR={
+        create_building={
+          building="building_sugar_plantation"
+          level=1
+          reserves=1
+          activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+        }
+        create_building={
+          building="building_rice_farm"
+          level=1
+          reserves=1
+          activate_production_methods={
+            "pm_simple_farming_building_rice_farm"
+            "pm_no_secondary"
+            "pm_tools_disabled"
+            "pm_privately_owned"
+          }
+        }
+        create_building={ # Actually pineapple plantation, but pineapples don't exist
+          building="building_banana_plantation"
+          level=1
+          reserves=1
+          activate_production_methods={
+            "default_building_banana_plantation"
+            "pm_road_carts"
+            "pm_privately_owned_plantation"
+          }
+        }
+        create_building={
+          building="building_logging_camp"
+          level=1
+          reserves=1
+          activate_production_methods={
+            "pm_simple_forestry"
+            "pm_hardwood"
+            "pm_no_equipment"
+            "pm_road_carts"
+            "pm_government_run_building_logging_camp"
+          }
+        }
+        create_building={
+          building="building_fishing_wharf"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+        }
+        create_building={
+          building="building_port"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_anchorage" }
+        }
+      }
+    }
 
     s:STATE_HLIDSKJALF = {
 
   }
 
-
-    s:STATE_PANGO = {
-
-  }
-
-
     s:STATE_LUMO = {
+      region_state:DUM={
+        create_building={
+          building="building_port"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_basic_port" }
+        }
+      }
 
   }
 
 
     s:STATE_ZEPHROPULU = {
-
+      region_state:DUF={
+      }
   }
 
 
     s:STATE_BARICORA = {
-
+      region_state:DUF={
+      }
   }
 
 
     s:STATE_ANGERTORP = {
 
   }
-
-
-    s:STATE_KALEA = {
-
-  }
-
 
     s:STATE_RAGNARKULL = {
 
@@ -1994,12 +2111,6 @@ BUILDINGS = {
     s:STATE_EIRIKSHOF = {
 
   }
-
-
-    s:STATE_FRIGSHAVN = {
-
-  }
-
 
     s:STATE_HALSTEAD = {
 

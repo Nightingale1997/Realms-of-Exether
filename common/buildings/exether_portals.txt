@@ -1,0 +1,22 @@
+﻿building_sample_portal = {
+	building_group = bg_canals  #we should make a bg_portals with a lower urbanization cost
+	#texture = "gfx/interface/icons/building_icons/panama_canal.dds"
+	canal = portal_name #defined in common/canals.  needs a connection in adjancencies.csv as well as a spline connection between the states
+	buildable = no #placed by event
+	expandable = no
+	downsizeable = no
+	unique = yes
+	
+	
+	#entity_constructed = { "canal_panamacanal_01_entity" }  
+	#locator = "canal_panama_locator"
+
+	#city_gfx_interactions = {   #we could have some FUN with this
+	#	clear_collision_mesh_area = yes
+	#	clear_size_area = no
+	#}
+
+	#production_method_groups = {  #could do something with employment around the portal.  not sure if the portal will work without a dummy pm
+	#	pmg_canal
+	#}
+}

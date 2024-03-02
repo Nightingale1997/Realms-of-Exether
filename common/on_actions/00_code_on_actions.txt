@@ -5,12 +5,6 @@ on_monthly_pulse_country = {
 	events = {
 		communism.8 # Red Army
 		unable_to_enact.1
-		colonial_administration_events.2 # African Colony Radicals
-		caudillo.1
-		sa_migration.5
-		amazonas.1 # Taming Amazonia
-		paraguay.11 # Paraguay War
-		acw_events.9 # CSA victory event
 
 		# Exile Agitators Events
 		yeet_agitator_events.1
@@ -26,6 +20,10 @@ on_monthly_pulse_country = {
 				popularity <= 15
 			}
 			kill_character = yes
+		}
+		change_global_variable = {
+			name = veil_integrity_var
+			add = modifier:country_veil_integrity_contribution
 		}
 	}
 	# Election Events
@@ -327,8 +325,6 @@ on_yearly_pulse_country = {
 		#nationalism
 		20 = fascism_events.8
 
-		20 = dreadnought_hoax.1
-
 		20 = autocracy.2
 		20 = autocracy.3
 
@@ -336,9 +332,6 @@ on_yearly_pulse_country = {
 		10 = diplomatic_friction.1
 		10 = diplomatic_friction.2
 		10 = diplomatic_friction.20
-		
-		# Titanic
-		10 = titanic.1
 
 		# trains
 		5 = trains.1
@@ -946,141 +939,8 @@ on_country_released_as_overlord_subject = {
 # Root = Country
 on_country_formed = {
 	effect = {
-		if = {
-			limit = {
-				c:LAO ?= ROOT
-			}
-			trigger_event = { id = formation.1 popup = yes }
-		}
-        else_if = {
-			limit = {
-				c:PLT ?= THIS
-				was_formed_from = PRG
-				has_variable = patino_paraguay_var
-			}
-			add_primary_culture = cu:guarani
-		}
-		else_if = {
-			limit = {
-				c:UBD ?= ROOT
-			}
-			trigger_event = { id = formation.2 popup = yes }
-		}
-		else_if = {
-			limit = {
-				c:BYZ ?= ROOT
-			}
-			trigger_event = { id = formation.3 popup = yes }
-		}
-		else_if = {
-			limit = {
-				c:IBE ?= ROOT
-			}
-			trigger_event = { id = formation.5 popup = yes }
-		}
-		else_if = {
-			limit = {
-				OR = {
-					c:BRZ ?= ROOT
-					c:USA ?= ROOT
-					c:SAF ?= ROOT
-				}
-			}
-			trigger_event = { id = formation.6 popup = yes }
-		}
-		else_if = {
-			limit = {
-				c:KUK ?= ROOT
-			}
-			trigger_event = { id = formation.7 popup = yes }
-		}
-		else_if = {
-			limit = {
-				c:ARA ?= ROOT
-			}
-			trigger_event = { id = formation.8 popup = yes }
-		}
-		else_if = {
-			limit = {
-				c:YUG ?= ROOT
-			}
-			trigger_event = { id = formation.9 popup = yes }
-		}
-		else_if = {
-			limit = {
-				c:SCA ?= ROOT
-			}
-			trigger_event = { id = formation.10 popup = yes }
-		}
-		else_if = {
-			limit = {
-				c:MAL ?= ROOT
-			}
-			trigger_event = { id = formation.11 popup = yes }
-		}
-		else_if = {
-			limit = {
-				c:TRH ?= ROOT
-			}
-			trigger_event = { id = formation.12 popup = yes }
-		}
-		else_if = {
-			limit = {
-				c:IDN ?= ROOT
-			}
-			trigger_event = { id = formation.13 popup = yes }
-		}
-		else_if = {
-			limit = {
-				c:BHT ?= ROOT
-			}
-			trigger_event = { id = formation.14 popup = yes }
-		}
-		else_if = {
-			limit = {
-				c:YEM ?= ROOT
-			}
-			trigger_event = { id = formation.15 popup = yes }
-		}
-		else_if = {
-			limit = {
-				c:KAZ ?= ROOT
-			}
-			trigger_event = { id = formation.16 popup = yes }
-		}
-		else_if = {
-			limit = {
-				c:HRE ?= ROOT
-			}
-			trigger_event = { id = formation.18 popup = yes }
-		}
-		else_if = {
-			limit = {
-				c:UNL ?= ROOT
-			}
-			trigger_event = { id = formation.19 popup = yes }
-		}
-		else_if = {
-			limit = {
-				c:RHN ?= ROOT
-			}
-			trigger_event = { id = formation.20 popup = yes }
-		}
-		else_if = {
-			limit = {
-				c:GER ?= ROOT
-			}
-			trigger_event = { id = german_unification.4 popup = yes }
-		}
-		else_if = {
-			limit = {
-				c:ITA ?= ROOT
-			}
-			trigger_event = { id = italian_unification.1 popup = yes }
-		}
-		else = {
-			trigger_event = { id = formation.17 popup = yes }
-		}
+		#Add custom unification events here later
+		trigger_event = { id = formation.17 popup = yes }
 	}
 }
 
@@ -2250,12 +2110,6 @@ on_election_campaign_start = {
 on_election_campaign_end = {
 	effect = {
 		debug_log = "Election Campaign Ended"
-		if = {
-			limit = {
-				c:BRZ ?= this
-			}
-			set_variable = { name = brz_election_done months = 3 }
-		}
 	}
 }
 

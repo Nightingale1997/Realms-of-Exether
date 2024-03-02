@@ -1,4 +1,4 @@
-BUILDINGS = {
+﻿BUILDINGS = {
   
   s:STATE_SHKODERIA = {
 
@@ -562,12 +562,14 @@ BUILDINGS = {
 
   }
   s:STATE_MILOTI = {
+	region_state:ZIN={
 	create_building={
         building="building_tea_plantation"
         level=1
         reserves=1
         activate_production_methods={ "default_building_tea_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
       }
+	}
   }
   s:STATE_LISIJA = {
 	region_state:EKA={
@@ -987,14 +989,14 @@ BUILDINGS = {
 				reserves=1
 				activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" "pm_privately_owned_building_logging_camp" }
 			}		
-		}
-    create_building={
-      building="building_port"
-      level=1
-      reserves=1
-      activate_production_methods={ "pm_basic_port" }
-    }	
-  }
+			create_building={
+			building="building_port"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_basic_port" }
+			}	
+  		} 
+	}
   s:STATE_JUALALA = {
 		region_state:SNB={
 			create_building={
@@ -1071,13 +1073,13 @@ BUILDINGS = {
 				reserves=1
 				activate_production_methods={ "pm_simple_farming_building_rice_farm" "pm_no_secondary" "pm_tools_disabled" "pm_privately_owned" }
 			}
-		}
-    create_building={
-      building="building_port"
-      level=1
-      reserves=1
-      activate_production_methods={ "pm_basic_port" }
-    }	
+	create_building={
+		building="building_port"
+		level=1
+		reserves=1
+		activate_production_methods={ "pm_basic_port" }
+		}	
+	}
   }
   s:STATE_THASAMAKI = {
 		region_state:SNB={

@@ -37,7 +37,7 @@ STATE_ADVENTURER_COVERAGE_DEMAND_TOOLTIP: "#bold [concept_adventurer_coverage]#!
  ADVENTURER_COVERAGE_DEMAND_BASE_VALUE: "\n#r +[State.MakeScope.ScriptValue('state_adventurer_coverage_demand_arable_land')]#! from Arable Land"
  ADVENTURER_COVERAGE_DEMAND_BASE_VALUE_BONUS: "\n#g -[State.MakeScope.ScriptValue('state_adventurer_coverage_demand_urban_center_reduction')]#! from Urban Center"
  STATE_ADVENTURER_COVERAGE_INSUFFICIENT: "\n Insufficient Coverage"
- STATE_ADVENTURER_COVERAGE_INSUFFICIENT_LONG:0"\n\n@warning! Because usage is higher than capacity, the following effects are applied to the [concept_state]:\n[State.GetTaxCapacityEffectsDesc]"
+ STATE_ADVENTURER_COVERAGE_INSUFFICIENT_LONG: "\n\n@warning! Because usage is higher than capacity, the following effects are applied to the [concept_state]:\n[State.GetTaxCapacityEffectsDesc]"
  ADVENTURER_COVERAGE_BASE_VALUE_BONUS: "\n#g +50#! from Base Value"
  ADVENTURER_COVERAGE_BUILDING_BONUS: "\n#g +#![State.GetModifier.GetValueFor('state_adventurer_coverage_add')|D+] from Local Production"
  ADVENTURER_COVERAGE_POLLUTION: "\n#r +#![State.MakeScope.ScriptValue('state_adventurer_coverage_demand_pollution')|D-] from Pollution"
@@ -136,3 +136,39 @@ DISPEL_RITUAL_DESC: "#header Dispel the $RITUAL_NAME$ ritual#!\n$TOOLTIP_DELIMIT
 
 
 has_reserves_tt: "[SCOPE.GetRootScope.GetCountry.GetName] does not have [Scope.ScriptValue('ritual_cost')|0v] @magic! #bold [concept_magic_reserves]"
+
+VEIL_INTEGRITY_TITLE: "#bold #o Veil Integrity#!"
+VEIL_INTEGRITY_STATUS: "[AddLocalizationIf(GreaterThan_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_STATUS_STRENGTHENED')][AddLocalizationIf(EqualTo_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_STATUS_BALANCED')][AddLocalizationIf(LessThan_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_STATUS_WEAKENED')]"
+VEIL_INTEGRITY_STATUS_BALANCED: "#v Balanced#!"
+VEIL_INTEGRITY_STATUS_WEAKENED: "#bold #u Weakened#!#!"
+VEIL_INTEGRITY_STATUS_STRENGTHENED: "#bold #o Strengthened#!#!"
+
+
+
+  VEIL_INTEGRITY_TOOLTIP: "$VEIL_INTEGRITY_BALANCE$[GetPlayer.GetCustom('magic_reserves_loc')][SelectLocalization(GetMetaPlayer.GetPlayedOrObservedCountry.IsValid, 'VEIL_INTEGRITY_TOOLTIP_DELAYED', 'OBSERVER_NO_COUNTRY_SELECTED') ]"
+  VEIL_INTEGRITY_TOOLTIP_DELAYED: "\n$TOOLTIP_DELIMITER$\nThe current [concept_veil_integrity] is $VEIL_INTEGRITY_VALUE_TEXT$ @magic![Nbsp]due to:\n WIP"
+  VEIL_INTEGRITY_BALANCE: "@magic! #bold [concept_veil_integrity]#!\nCurrent integrity: $VEIL_INTEGRITY_STATUS$"
+
+VEIL_INTEGRITY_VALUE_TEXT: "[AddLocalizationIf(GreaterThan_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_VALUE_GOLD')][AddLocalizationIf(EqualTo_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_VALUE')][AddLocalizationIf(LessThan_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_VALUE_BLUE')]"
+VEIL_INTEGRITY_VALUE: "#v [AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')]%#!"
+VEIL_INTEGRITY_VALUE_GOLD: "#bold #o [AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')]%#!#!"
+VEIL_INTEGRITY_VALUE_BLUE: "#bold #u [AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')]%#!#!"
+
+ASTRAL_CALENDAR_YEAR: "Year of the $ASTRAL_CALENDAR_YEAR_SIGN$"
+
+ASTRAL_CALENDAR_YEAR_SIGN: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'RITUAL_1_desc')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'RITUAL_2_desc')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'RITUAL_3_desc')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'RITUAL_4_desc')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'RITUAL_5_desc')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)6'), 'RITUAL_6_desc')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)7'), 'RITUAL_7_desc')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)8'), 'RITUAL_8_desc')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)9'), 'RITUAL_9_desc')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)10'), 'RITUAL_10_desc')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)11'), 'RITUAL_11_desc')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)12'), 'RITUAL_12_desc')]"
+
+ASTRAL_CALENDAR_YEAR_SIGN: "[AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)1'), 'ASTRAL_CALENDAR_SIGN_1')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)2'), 'ASTRAL_CALENDAR_SIGN_2')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)3'), 'ASTRAL_CALENDAR_SIGN_3')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)4'), 'ASTRAL_CALENDAR_SIGN_4')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)5'), 'ASTRAL_CALENDAR_SIGN_5')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)6'), 'ASTRAL_CALENDAR_SIGN_6')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)7'), 'ASTRAL_CALENDAR_SIGN_7')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)8'), 'ASTRAL_CALENDAR_SIGN_8')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)9'), 'ASTRAL_CALENDAR_SIGN_9')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)10'), 'ASTRAL_CALENDAR_SIGN_10')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)11'), 'ASTRAL_CALENDAR_SIGN_11')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)12'), 'ASTRAL_CALENDAR_SIGN_12')]"
+
+ASTRAL_CALENDAR_SIGN_1: "[concept_storm_giant]"
+ASTRAL_CALENDAR_SIGN_2: "[concept_hive]"
+ASTRAL_CALENDAR_SIGN_3: "[concept_sphinx]"
+ASTRAL_CALENDAR_SIGN_4: "[concept_golem]"
+ASTRAL_CALENDAR_SIGN_5: "[concept_unicorn]"
+ASTRAL_CALENDAR_SIGN_6: "[concept_fey]"
+ASTRAL_CALENDAR_SIGN_7: "[concept_phoenix]"
+ASTRAL_CALENDAR_SIGN_8: "[concept_djinn]"
+ASTRAL_CALENDAR_SIGN_9: "[concept_horror]"
+ASTRAL_CALENDAR_SIGN_10: "[concept_kraken]"
+ASTRAL_CALENDAR_SIGN_11: "[concept_fiend]"
+ASTRAL_CALENDAR_SIGN_12: "[concept_angel]"
