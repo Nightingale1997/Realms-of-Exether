@@ -675,6 +675,7 @@
   }
 
   s:STATE_POMMELFALL_2 = {
+    region_state:ANW= {
     create_pop = {
 				culture = anwarthi
 				size = 144404
@@ -688,6 +689,7 @@
 				size = 30369
 			}
   }  
+}
   s:STATE_SHADGOL = {
 		region_state:TEF = {
 			create_pop = {
@@ -1139,18 +1141,18 @@
   region_state:EAH = {
 			create_pop = {
 				culture = vandori
-				size = 1104504
+				size = 504504
 			}
 			create_pop = {
 				culture = koshiri
-				size = 336949
+				size = 176949
 			}
       create_pop = {
 				culture = beithaven
-				size = 254683
+				size = 74683
 			}
     }
-    
+  }
   s:STATE_INAMGI = {
     region_state:CHR = {
 			create_pop = {
@@ -1172,11 +1174,11 @@
     region_state:CHR = {
 			create_pop = {
 				culture = vandori
-				size = 844504
+				size = 744504
 			}
 			create_pop = {
 				culture = koshiri
-				size = 356446
+				size = 256446
 			}
       create_pop = {
 				culture = beithaven
@@ -1188,14 +1190,15 @@
     region_state:CHR = {
 			create_pop = {
 				culture = vandori
-				size = 844504
+				size = 594504
 			}
 			create_pop = {
 				culture = beithaven
-				size = 367486
+				size = 207246
+      }
       create_pop = {
 				culture = koshiri
-				size = 96984
+				size = 66984
 			}
     }
   } 
@@ -1207,16 +1210,19 @@
 
   }
   s:STATE_SANGARI_2 = {
-  region_state:CHR = {
+  region_state:STH = {
 			create_pop = {
 				culture = vandori
-				size = 874544
+				size = 254544
 			}
 			create_pop = {
 				culture = beithaven
-				size = 3367486
-      
+				size = 1267486
+    }
+    create_pop = {
+				culture = morastlinge
+				size = 22381
     }
   }
   }
-}
+  }

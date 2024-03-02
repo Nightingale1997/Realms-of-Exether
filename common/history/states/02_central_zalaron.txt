@@ -556,10 +556,11 @@ s:STATE_POMMELFALL = {
 add_homeland = cu:tefereti
 add_homeland = cu:nangarlith
 }
+
 s:STATE_POMMELFALL_2 = {
     create_state = {
         country = c:ANW
-        owned_provinces = { x59FDEF" "x78E8AE" "x8185F9" "x8BFBF9" "x90ECCA" "xB3B1A2" "xCAA0F5" "xE3B7E8" "xE669C7" "xF8EFB9" "xFBA699" "xFC8DF2" }
+        owned_provinces = { "x59FDEF" "x78E8AE" "x8185F9" "x8BFBF9" "x90ECCA" "xB3B1A2" "xCAA0F5" "xE3B7E8" "xE669C7" "xF8EFB9" "xFBA699" "xFC8DF2" }
 }
 add_homeland = cu:nangarlith
 add_homeland = cu:anwarthi
@@ -1273,7 +1274,7 @@ add_homeland = cu:tefereti
 }
 
 s:STATE_KUMASKA = {
-    create_state = {EB090" 
+    create_state = {
         country = c:SAZ
         owned_provinces = { "x2BE7EC" "x3CE3FC" "x5DDDC0" "x6CBBF9" "x7DE3F4" "x7DEDC9" "xAEE368" "xB0F0AB" "xB6EBDE" "xB7B5FB" "xD155D3" "xD291A5" "xE4AE67" "xEB45F0" "xF35AEE" "xF39C7F" "xF76E9E" "xFD9578" }
 }

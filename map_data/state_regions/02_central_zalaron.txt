@@ -2132,12 +2132,12 @@ STATE_INAMGI_2 = {
         bg_lead_mining = 9
     }
 }
-STATE_IMAMGI_3 = {
+STATE_INAMGI_3 = {
     id = 4416
-    subsistence_building = "building_subsistence_farms"
+    subsistence_building = "building_subsistence_pastures"
     provinces = { "x26F1F0" "x3FDDF0" "xA15EFA" "xABC7B4" "xAFBD8F" "xD051E6" "xD664CE" "xECDB70" "xEECAF6" "xFAA8C1" "xFABE9E" }
-    arable_land = 79
-    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tea_plantations" "bg_tobacco_plantations" }
+    arable_land = 61
+    arable_resources = { "bg_livestock_ranches" "bg_cotton_plantations" }
 }
 STATE_KUNCHI = {
     id = 4411
@@ -2167,7 +2167,7 @@ STATE_SUKONCO_2 = {
     provinces = { "x1EF8E8" "x4C117A" "x6BFAD3" "x6E55FE" "x74EDE0" "x78ADFD" "x81EAF0" "x92E6F4" "xA3C8E1" "xA4ACFD" "xAAE578" "xAE8AFE" "xB91874" "xC8F65A" "xD182DF" "xE040FD" "xEC9ED1" "xEEA9AC" "xF53EFB" "xF6EE4F" }
     impassable = { "xE040FD" "xc8f65a" "xae8afe" "x92E6F4" "x81EAF0" "xB91874" "xF6EE4F" "x74EDE0" "x6BFAD3"}
     arable_land = 26
-    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_tea_plantations" "bg_tobacco_plantations" }
+    arable_resources = { "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_tea_plantations" "bg_tobacco_plantations" }
     capped_resources = {
         bg_coal_mining = 7
         bg_iron_mining = 18
@@ -2179,8 +2179,8 @@ STATE_SUKONCO_3 = {
     id = 4415
     subsistence_building = "building_subsistence_pastures"
     provinces = { "x61DAC2" "x639AF9" "x84B3D7" "x86E1A1" "x9387FE" "xACEBFE" "xADF776" "xB9DFAF" "xBAD6E4" "xC6DC70" "xD1F062" "xDBA08F" "xE629E6" "xF4A6C4" "xFCB9F1" "xFED12F" }
-    arable_land = 69
-    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_opium_plantations" "bg_tea_plantations" "bg_tobacco_plantations" }
+    arable_land = 32
+    arable_resources = { "bg_livestock_ranches"  }
     capped_resources = {
         bg_logging = 20
     }
@@ -2192,13 +2192,13 @@ STATE_SUKONCO_4 = {
 }
 STATE_SANGARI_2 = {
     id = 4418
-    subsistence_building = "default_building_subsistence_rice_paddies"
+    subsistence_building = "default_building_subsistence_farms"
     provinces = { "x73EBB9" "x9C92FE" "xA291CF" "xA6EA7E" "xA891F8" "xAEF58E" "xB6F174" "xBA98AE" "xBDF175" "xC687C1" "xD65FDB" "xEDCA3F" "xFEA76C" }
-    arable_land = 111
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_opium_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    arable_land = 76
+    arable_resources = { "bg_maize_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_vineyard_plantations"  }
     capped_resources = {
         bg_logging = 8
-        bg_fishing = 16
+        bg_fishing = 12
     }
     resource = {
         type = "bg_oil_extraction"
