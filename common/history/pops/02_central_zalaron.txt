@@ -661,11 +661,11 @@
 			}
 			create_pop = {
 				culture = tefereti
-				size = 120352
+				size = 100352
 			}
 			create_pop = {
 				culture = anwarthi
-				size = 1414404
+				size = 1314404
 			}
 			create_pop = {
 				culture = seleni
@@ -673,7 +673,23 @@
 			}
 		}
   }
-    
+
+  s:STATE_POMMELFALL_2 = {
+    region_state:ANW= {
+    create_pop = {
+				culture = anwarthi
+				size = 144404
+			}
+      create_pop = {
+				culture = nangarlith
+				size = 60392
+			}
+      create_pop = {
+				culture = tefereti
+				size = 30369
+			}
+  }  
+}
   s:STATE_SHADGOL = {
 		region_state:TEF = {
 			create_pop = {
@@ -1097,11 +1113,95 @@
   s:STATE_SUKONCO = {
 
   }
-    
-  s:STATE_INAMGI = {
 
-  }
+  s:STATE_SUKONCO_2 = {
+  region_state:EAH = {
+			create_pop = {
+				culture = vandori
+				size = 170504
+			}
+			create_pop = {
+				culture = koshiri
+				size = 116549
+			}
+    }
+  region_state:KAM = {
+    create_pop = {
+				culture = koshiri
+				size = 220694
+			}
+      create_pop = {
+				culture = vandori
+				size = 81204
+			}
     
+    }
+  }
+  s:STATE_SUKONCO_3 = {
+  region_state:EAH = {
+			create_pop = {
+				culture = vandori
+				size = 504504
+			}
+			create_pop = {
+				culture = koshiri
+				size = 176949
+			}
+      create_pop = {
+				culture = beithaven
+				size = 74683
+			}
+    }
+  }
+  s:STATE_INAMGI = {
+    region_state:CHR = {
+			create_pop = {
+				culture = vandori
+				size = 976507
+			}
+			create_pop = {
+				culture = koshiri
+				size = 83005
+			}
+      create_pop = {
+				culture = beithaven
+				size = 325784
+			}
+    }
+  }
+
+  s:STATE_INAMGI_2 = {
+    region_state:CHR = {
+			create_pop = {
+				culture = vandori
+				size = 744504
+			}
+			create_pop = {
+				culture = koshiri
+				size = 256446
+			}
+      create_pop = {
+				culture = beithaven
+				size = 95784
+			}
+    }
+  } 
+  s:STATE_INAMGI_3 = {
+    region_state:CHR = {
+			create_pop = {
+				culture = vandori
+				size = 594504
+			}
+			create_pop = {
+				culture = beithaven
+				size = 207246
+      }
+      create_pop = {
+				culture = koshiri
+				size = 66984
+			}
+    }
+  } 
   s:STATE_KUNCHI = {
 
   }
@@ -1109,5 +1209,20 @@
   s:STATE_SANGARI = {
 
   }
-
-}
+  s:STATE_SANGARI_2 = {
+  region_state:STH = {
+			create_pop = {
+				culture = vandori
+				size = 254544
+			}
+			create_pop = {
+				culture = beithaven
+				size = 1267486
+    }
+    create_pop = {
+				culture = morastlinge
+				size = 22381
+    }
+  }
+  }
+  }
