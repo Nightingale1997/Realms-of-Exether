@@ -132,19 +132,6 @@ BRR = {
 	cultures = { grendleth } 
 	capital = STATE_TANISTS_RETREAT
 }
-
-#Thrumbar
-THR = {
-	color = rgb{ 180  195  155 } 
-
-	country_type = unrecognized
-
-	tier = principality
-
-	cultures = { grendleth } 
-	capital = STATE_DALROCH
-}
-
 #Obsidian Exiles
 OEX = {
 	color = rgb{ 30  20  20 } 
@@ -253,28 +240,17 @@ CRY = {
 	cultures = { fire_giant } 
 	capital = STATE_HERVIK
 }
+
 #Hrafnheim
+
 HRA = {
 	color = rgb{ 240  150  175 } 
 
 	country_type = decentralized
-
 	tier = principality
 
 	cultures = {  frost_giant  } 
 	capital = STATE_HODRSBORG
-}
-
-#Askahall
-ASK = {
-	color = rgb{ 240  50  175 } 
-
-	country_type = decentralized
-
-	tier = principality
-
-	cultures = {  frost_giant  } 
-	capital = STATE_LOFNSTAD
 }
 
 #Mjollgaarde
@@ -410,18 +386,6 @@ SRO = {
 	capital = STATE_ANGERTORP
 }
 
-#Uaine Fuar
-UAR = {
-	color = rgb{ 10  10  235 } 
-
-	country_type = unrecognized
-
-	tier = principality
-
-	cultures = { glethach } 
-	capital = STATE_EINHERJARHOLT
-}
-
 #Ard Siorbhan
 ASI = { 
 	color = rgb{ 70  80  135 } 
@@ -554,7 +518,7 @@ DOV = {
 
 	religion = church_of_man
 	cultures = { jalian } 
-	capital = STATE_KIRDON
+	capital = STATE_ROSKIRK
 }
 
 #Rosecroft
