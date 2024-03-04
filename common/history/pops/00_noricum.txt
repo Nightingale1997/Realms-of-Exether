@@ -228,7 +228,7 @@
     s:STATE_ZENDEN = {
       region_state:DUM = {
         create_pop = {
-          culture = ralaurian
+          culture = dewaric
           size = 59044
         }
         create_pop = {
@@ -236,7 +236,7 @@
           size = 3000
         }
         create_pop = {
-          culture = dewaric
+          culture = ralaurian
           size = 90004
         }
         create_pop = {
@@ -1072,7 +1072,20 @@
 
 
     s:STATE_GLYNFFORDD = {
-
+      region_state:FOX = {
+        create_pop = {
+          culture = jalian
+          size = 1283122
+        }
+        create_pop = {
+          culture = meriwyn
+          size = 675084
+        }
+        create_pop = {
+          culture = vampire
+          size = 6485
+        }
+      }
   }
 
     s:STATE_ALLTGLAS = {
@@ -1086,7 +1099,20 @@
 
 
     s:STATE_GWYNWEN = {
-
+      region_state:FOX = {
+        create_pop = {
+          culture = jalian
+          size = 1877581
+        }
+        create_pop = {
+          culture = meriwyn
+          size = 180989
+        }
+        create_pop = {
+          culture = vampire 
+          size = 900
+        }
+      }
   }
 
 
@@ -1137,12 +1163,34 @@
 
 
     s:STATE_HARTHALGH = {
-
+      region_state:FOX = {
+        create_pop = {
+          culture = jalian # Catholics
+          size = 1349428
+        }
+        create_pop = {
+          culture = meriwyn # Anglicans
+          size = 28463
+        }
+      }
   }
 
 
     s:STATE_INCHMARA = {
-
+      region_state:FOX = {
+        create_pop = {
+          culture = jalian # Catholics
+          size = 2514388
+        }
+        create_pop = {
+          culture = meriwyn
+          size = 81856
+        }
+        create_pop = {
+          culture = vampire 
+          size = 4040
+        }
+      }
   }
 
 
@@ -1340,7 +1388,12 @@
 
 
     s:STATE_MARAMAROVA = {
-
+      region_state:TSI = {
+        create_pop = {
+          culture = korafri
+          size = 56004
+        }
+      }
   }
 
 
@@ -1350,12 +1403,38 @@
 
 
     s:STATE_POLYNKALA = {
-
+      region_state:TSI = {
+        create_pop = {
+          culture = korafri
+          size = 169004
+        }
+      }
   }
 
 
     s:STATE_NGURULAN = {
-
+      region_state:LAR = {
+        create_pop = {
+          pop_type = clergy
+          culture = dumonian
+          religion = cult_of_the_sun
+          size = 100
+        }
+        create_pop = {
+          pop_type = capitalists
+          culture = dumonian
+          size = 1050
+        }
+        create_pop = {
+          culture = korafri
+          size = 182304
+        }
+        create_pop = {
+          culture = hawaiian
+          religion = cult_of_the_sun
+          size = 8500
+        }
+      }
   }
 
 
@@ -1364,17 +1443,40 @@
   }
 
     s:STATE_LUMO = {
-
+      region_state:DUM = {
+        create_pop = {
+          culture = korafri
+          size = 23840
+        }
+        create_pop = {
+          culture = dumonian
+          size = 563
+        }
+      }
   }
 
 
     s:STATE_ZEPHROPULU = {
-
+      region_state:DUF = {
+        create_pop = {
+          culture = korafri
+          size = 23840
+        }
+        create_pop = {
+          culture = dumonian
+          size = 384
+        }
+      }
   }
 
 
     s:STATE_BARICORA = {
-
+      region_state:DUF = {
+        create_pop = {
+          culture = korafri
+          size = 82000
+        }
+      }
   }
 
 

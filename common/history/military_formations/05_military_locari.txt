@@ -1,0 +1,35 @@
+﻿MILITARY_FORMATIONS = {
+	c:DOB = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_thoughtsmith_ridge
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_JALALABAKOV
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KUNDUZOV
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_MAZAROV
+				count = 5
+			}
+
+			save_scope_as = dob_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_thoughtsmith_ridge
+			save_scope_as = dob_general
+		}
+		scope:dob_general = {
+			transfer_to_formation = scope:dob_army
+		}
+	}
+}

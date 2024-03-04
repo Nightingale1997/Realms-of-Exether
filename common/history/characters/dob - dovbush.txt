@@ -1,0 +1,30 @@
+﻿CHARACTERS = {
+	c:DOB = {
+		create_character = {
+			first_name = "Hryhoriy"
+			last_name = "Hrushevsky"
+			historical = yes
+			ruler = yes
+			general = yes
+			age = 30
+			interest_group = ig_landowners
+			ideology = ideology_traditionalist
+			traits = {
+				honorable
+				traditionalist_commander
+			}
+		}
+		create_character = {
+			first_name = "Mikhail"
+			last_name = "Hrushevsky"
+			historical = yes
+			heir = yes
+			age = 2
+			interest_group = ig_landowners
+			ideology = ideology_traditionalist
+			traits = {
+				trait_child
+			}
+		}
+	}
+}
