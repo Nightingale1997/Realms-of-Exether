@@ -1783,7 +1783,19 @@ STATE_SOLVIK = {
     farm = x8FC0B7
     mine = xB083D5
     port = xCB84C6
-
+    arable_land = 10
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 32
+        bg_iron_mining = 45
+        bg_logging = 11
+        bg_whaling = 3
+        bg_fishing = 7
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 5
+    }
     naval_exit_id = 3017
 }
 STATE_PLACEHOLDER_EMPTY_5 = {

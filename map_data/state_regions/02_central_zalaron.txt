@@ -1143,6 +1143,13 @@ STATE_VERDFALDO = {
     farm = xA5D18B
     mine = xAED3F8
     port = xBAEF64
+    arable_land = 40
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" }
+    capped_resources = {
+        bg_iron_mining = 24
+        bg_sulfur_mining = 32
+        bg_logging = 11
+    }
     naval_exit_id = 3063
 }
 STATE_SUNFLORO = {
@@ -1154,6 +1161,15 @@ STATE_SUNFLORO = {
     farm = xAFE9AC
     mine = xD1F5CF
     port = xDCAC79
+    arable_land = 130
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_tea_plantations" "bg_tobacco_plantations" }
+    capped_resources = {
+        bg_iron_mining = 36
+        bg_lead_mining = 30
+        bg_logging = 9
+        bg_whaling = 7
+        bg_fishing = 10
+    }
     naval_exit_id = 3063
 }
 STATE_MONTARBORA = {
@@ -1178,6 +1194,22 @@ STATE_STELINSULO = {
     farm = xD0CFC2
     mine = xDEE1C6
     port = xF8B55C
+    arable_land = 20
+    arable_resources = { "bg_rice_farms" "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 36
+        bg_iron_mining = 33
+        bg_lead_mining = 36
+        bg_sulfur_mining = 32
+        bg_logging = 9
+        bg_whaling = 8
+        bg_fishing = 10
+    }
+    resource = {
+        type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
+        undiscovered_amount = 8
+    }
     naval_exit_id = 3063
 }
 STATE_NOVAJLANDIO = {
@@ -1189,6 +1221,11 @@ STATE_NOVAJLANDIO = {
     farm = xE88CBD
     mine = xEAEA54
     port = xFE5ADA
+    arable_land = 15
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tea_plantations" "bg_tobacco_plantations" }
+    capped_resources = {
+        bg_fishing = 5
+    }
     naval_exit_id = 3063
 }
 STATE_VENTAFALCO = {
@@ -1200,6 +1237,12 @@ STATE_VENTAFALCO = {
     farm = x8AE68E
     mine = xCB67FC
     port = xD7F466
+    arable_land = 190
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_tea_plantations" "bg_tobacco_plantations" }
+    capped_resources = {
+        bg_logging = 9
+        bg_fishing = 10
+    }
     naval_exit_id = 3063
 }
 STATE_MONTEGO = {
@@ -1222,6 +1265,15 @@ STATE_PLUVPINTO = {
     farm = x9499F9
     mine = xA3EFEF
     port = xCAD15C
+    arable_land = 80
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_iron_mining = 60
+        bg_lead_mining = 45
+        bg_logging = 15
+        bg_whaling = 6
+        bg_fishing = 15
+    }
     naval_exit_id = 3063
 }
 STATE_INSULBELA = {
@@ -1332,6 +1384,14 @@ STATE_VESPERVIDO = {
     farm = xDDC4AA
     mine = xE37DB1
     port = xEAACDE
+    arable_land = 75
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" }
+    capped_resources = {
+        bg_lead_mining = 24
+        bg_sulfur_mining = 40
+        bg_logging = 20
+        bg_fishing = 12
+    }
     naval_exit_id = 3063
 }
 
@@ -1355,6 +1415,14 @@ STATE_SONGBIENO = {
     farm = xD3B1F6
     mine = xE84DD4
     port = xEBFA6B
+    arable_land = 100
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" }
+    capped_resources = {
+        bg_coal_mining = 72
+        bg_lead_mining = 36
+        bg_sulfur_mining = 40
+        bg_fishing = 18
+    }
     naval_exit_id = 3063
 }
 STATE_LAGOEKRANO = {
@@ -1377,6 +1445,17 @@ STATE_FELICGRUNDO = {
     farm = xC39ACF
     mine = xC951F2
     port = xD052E0
+    arable_land = 150
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_lead_mining = 33
+        bg_logging = 16
+        bg_fishing = 16
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 30
+    }
     naval_exit_id = 3063
 }
 STATE_RADIANTAJO = {
