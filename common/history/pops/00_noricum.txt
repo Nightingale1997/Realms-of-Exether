@@ -799,11 +799,6 @@
     }
 
 
-    s:STATE_DALROCH = {
-
-  }
-
-
     s:STATE_GLASLIESH = {
 
   }
@@ -1154,11 +1149,6 @@
           size = 996
         }
       }
-  }
-
-
-    s:STATE_KIRDON = {
-
   }
 
 
@@ -1548,12 +1538,6 @@
       }
   }
 
-
-    s:STATE_EINHERJARHOLT = {
-
-  }
-
-
     s:STATE_EIRIKSHOF = {
 
   }
@@ -1566,17 +1550,6 @@
         }
       }
   }
-
-
-    s:STATE_HODRSBORG = {
-
-  }
-
-
-    s:STATE_LOFNSTAD = {
-
-  }
-
 
     s:STATE_FREYRSFJORDR = {
       region_state:SPR = {
@@ -1608,7 +1581,16 @@
 
 
     s:STATE_SOLVIK = {
-
+      region_state:LEL = {
+        create_pop = {
+          culture = glethach
+          size = 34004
+        }
+        create_pop = {
+          culture = frost_giant
+          size = 6000
+        }
+      }
   }
 
 
