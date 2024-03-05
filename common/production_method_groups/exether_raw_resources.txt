@@ -30,19 +30,19 @@ pmg_arcane_building_cloud_collector = {
 	}
 }
 
-pmg_synthetic_oil = {
+pmg_blubber = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		pm_basic_synthetic_oil_production
-		pm_advanced_synthetic_oil_production
-		pm_perfect_synthetic_oil_production
+		pm_basic_blubber_production
+		pm_advanced_blubber_production
+		pm_perfect_blubber_production
 	}
 }
 
-pmg_synthetic_oil_military_production = {
+pmg_blubber_military_production = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = { 
-	pm_synthetic_oil_standard_production
-	pm_synthetic_oil_military_production
+	pm_blubber_standard_production
+	pm_blubber_military_production
 	}
 }

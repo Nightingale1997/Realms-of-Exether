@@ -466,7 +466,7 @@ pm_coal-fired_plant = {
 	}
 }
 
-pm_synthetic_oil-fired_plant = {
+pm_blubber_fired_plant = {
 	texture = "gfx/interface/icons/production_method_icons/oil_fired_plant.dds"
 
 	unlocking_technologies = {
@@ -482,7 +482,7 @@ pm_synthetic_oil-fired_plant = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_engines_add = 20
-			goods_input_synthetic_oil_add = 40
+			goods_input_blubber_add = 40
 			goods_output_electricity_add = 150
 		}
 

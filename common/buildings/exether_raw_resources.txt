@@ -63,7 +63,7 @@ building_wishstone_reefs = {
 	}
 }
 
-building_synthetic_oil_plants = {
+building_blubber_plants = {
 	building_group = bg_heavy_industry
 	texture = "gfx/interface/icons/building_icons/synthetics_plants.dds"
 	city_type = city
@@ -74,8 +74,8 @@ building_synthetic_oil_plants = {
 	}
 	
 	production_method_groups = {
-		pmg_synthetic_oil
-		pmg_synthetic_oil_military_production
+		pmg_blubber
+		pmg_blubber_military_production
 		pmg_ownership_capital_building_synthetics_plants
 	}
 	

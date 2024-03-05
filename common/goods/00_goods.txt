@@ -275,7 +275,7 @@ coal = {
 	consumption_tax_cost = 200
 }
 
-synthetic_oil = { #name WIP
+blubber = {
 	texture = "gfx/interface/icons/goods_icons/oil.dds"
 	cost = 40
 	category = industrial
@@ -348,6 +348,16 @@ gizmos = {
 	traded_quantity = 4
 	convoy_cost_multiplier = 1.5
 }
+
+thaumacore = {
+	texture = "gfx/interface/icons/goods_icons/gizmo.dds" #Replace icon later
+	cost = 100
+	category = industrial
+	
+	prestige_factor = 10
+	traded_quantity = 4
+}
+
 
 steel = {
 	texture = "gfx/interface/icons/goods_icons/steel.dds"

@@ -279,7 +279,7 @@ pm_cloud_compactor_cloud_collector = {
 	}
 }
 
-pm_basic_synthetic_oil_production = {
+pm_basic_blubber_production = {
 	texture = "gfx/interface/icons/production_method_icons/synthetic_dyes.dds"
 	
 	state_modifiers = {
@@ -294,7 +294,7 @@ pm_basic_synthetic_oil_production = {
 			goods_input_coal_add = 35
 
 			# output goods
-			goods_output_synthetic_oil_add = 30
+			goods_output_blubber_add = 30
 		}
 
 		level_scaled = {
@@ -306,7 +306,7 @@ pm_basic_synthetic_oil_production = {
 	}
 }
 
-pm_advanced_synthetic_oil_production = {
+pm_advanced_blubber_production = {
 	texture = "gfx/interface/icons/production_method_icons/synthetic_dyes.dds"
 	
 	unlocking_technologies = {
@@ -325,7 +325,7 @@ pm_advanced_synthetic_oil_production = {
 			goods_input_coal_add = 66
 			goods_input_lead_add = 4  #lol.  lmao, even
 			# output goods
-			goods_output_synthetic_oil_add = 60
+			goods_output_blubber_add = 60
 		}
 
 		level_scaled = {
@@ -337,7 +337,7 @@ pm_advanced_synthetic_oil_production = {
 	}
 }
 
-pm_perfect_synthetic_oil_production = {
+pm_perfect_blubber_production = {
 	texture = "gfx/interface/icons/production_method_icons/synthetic_dyes.dds"
 	
 	unlocking_technologies = {
@@ -356,7 +356,7 @@ pm_perfect_synthetic_oil_production = {
 			goods_input_coal_add = 90
 			goods_input_lead_add = 8  #lol.  lmao, even
 			# output goods
-			goods_output_synthetic_oil_add = 92
+			goods_output_blubber_add = 92
 		}
 
 		level_scaled = {
@@ -368,11 +368,11 @@ pm_perfect_synthetic_oil_production = {
 	}
 }
 
-pm_synthetic_oil_standard_production = {
+pm_blubber_standard_production = {
 	texture = "gfx/interface/icons/production_method_icons/no_explosives.dds"
 }
 
-pm_synthetic_oil_military_production = {
+pm_blubber_military_production = {
 	 texture = "gfx/interface/icons/production_method_icons/nitroglycerin.dds"
 	
 	unlocking_technologies = {
@@ -384,7 +384,7 @@ pm_synthetic_oil_military_production = {
 		workforce_scaled = {
 			# input goods
 			# output goods
-			goods_output_synthetic_oil_add = -15
+			goods_output_blubber_add = -15
 			goods_output_munitions_add = 15
 		}
 
