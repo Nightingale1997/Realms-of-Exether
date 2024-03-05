@@ -275,6 +275,16 @@ coal = {
 	consumption_tax_cost = 200
 }
 
+blubber = {
+	texture = "gfx/interface/icons/goods_icons/oil.dds"
+	cost = 40
+	category = industrial
+	
+	prestige_factor = 5
+	
+	consumption_tax_cost = 200
+}	
+
 iron = {
 	texture = "gfx/interface/icons/goods_icons/iron.dds"
 	cost = 40
@@ -338,6 +348,16 @@ gizmos = {
 	traded_quantity = 4
 	convoy_cost_multiplier = 1.5
 }
+
+thaumacore = {
+	texture = "gfx/interface/icons/goods_icons/gizmo.dds" #Replace icon later
+	cost = 100
+	category = industrial
+	
+	prestige_factor = 10
+	traded_quantity = 4
+}
+
 
 steel = {
 	texture = "gfx/interface/icons/goods_icons/steel.dds"

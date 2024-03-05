@@ -26,16 +26,16 @@ building_nonmagical_comet = {
 		pmg_base_building_nonmagical_comet
 	}
 }
-building_cloudsilver_comet = { 
-	building_group = bg_magical_comet
+building_wishstone_comet = { 
+	building_group = bg_wishstone_comet
 	#texture = 
-	#city_type = port
+	city_type = mine
 	levels_per_mesh = 5
 	buildable = no
 	expandable = no
 
 	production_method_groups = {
-		pmg_base_building_cloudsilver_comet
+		pmg_base_building_wishstone_comet
 	}
 
 }
