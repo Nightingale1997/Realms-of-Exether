@@ -141,10 +141,10 @@ bg_nonmagical_comet = {
 	default_building = building_nonmagical_comet
 }
 
-bg_cloudsilver_comet = {  
+bg_wishstone_comet = {  
 	parent_group = bg_special_depletables
 
-	default_building = building_cloudsilver_comet
+	default_building = building_wishstone_comet
 }
 
 bg_feywild_reserve = {  #represents a feywild area small enough to be dismantled entirely by private enterprise.  Probably should be activated by decision?
@@ -163,8 +163,24 @@ bg_special_depletables_taxable = {  #use with resource_depletion and resource_di
 	fired_pops_become_radical = no  #could change this to yes, but we might want to lower depletion amount if we do that so that 25000 people don't get fired all at once
 }
 
-bg_flammable_jellyfish = { #name WIP
+bg_flammable_jellyfish = { #name WIP  godfish maybe?
 	parent_group = bg_special_depletables_taxable
 
 	default_building = building_jellyfish_wharf
+}
+
+bg_wishstone_fields = {
+	parent_group = bg_mining
+
+	auto_place_buildings = yes
+
+	discoverable_resource = yes
+	
+	#depletable_resource = yes  #this is the final, lowest tier of wishstone accumulation.  Do we want it to deplete?
+	
+	pays_taxes = no
+
+	default_building = building_gold_fields
+	
+	fired_pops_become_radical = no
 }

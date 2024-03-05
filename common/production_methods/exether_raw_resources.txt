@@ -396,3 +396,28 @@ pm_synthetic_oil_military_production = {
 		}
 	}
 }
+
+default_building_wishstone_fields = {
+	texture = "gfx/interface/icons/production_method_icons/gold_mining.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_wishstone_add = 25
+			goods_output_gold_add = 3
+		}
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 3500
+		}
+		unscaled = {
+			building_shopkeepers_shares_add = 3
+			building_laborers_shares_add = 1
+		}
+	}
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_minting_add = 500
+		}
+	}
+}
