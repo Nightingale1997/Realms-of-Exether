@@ -612,3 +612,23 @@ pm_steam_leviathan_ships = {
 	}
 }
 
+pm_leviathan_airplanes = {
+	#texture =
+}
+
+pm_leviathan_airplanes = {
+
+	unlocking_technologies = {
+		military_aviation
+	}
+
+	workforce_scaled = {
+		# input
+		goods_input_aeroplanes_add = 10
+		goods_input_steel_add = 5
+		goods_input_explosives_add = 5
+		goods_output_meat_add = -8
+		goods_output_synthetic_oil_add = 25
+		goods_output_monster_essence_add = 15
+}
+}
