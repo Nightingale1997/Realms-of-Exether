@@ -46,3 +46,61 @@ pmg_blubber_military_production = {
 	pm_blubber_military_production
 	}
 }
+
+pmg_base_building_wishstone_fields = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		default_building_wishstone_fields
+	}
+}
+pmg_base_building_seasnake_wharf = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_simple_fishing
+		pm_seasnake_trawlers
+		pm_seasnake_clippers
+		pm_steam_seasnake_trawlers
+	}
+}
+pmg_medical_supplies_seasnake_wharf = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_medical
+		pm_drink_and_a_prayer #make sure building causes at least 10% mortality else the liquor makes the workers live longer
+		pm_proper_medical_supplies_snakes
+		pm_potions_of_fortitude_snakes
+	}
+}
+pmg_base_building_leviathan_outpost = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+				pm_wooden_whaling_ships
+				pm_leviathan_clippers
+				pm_steam_leviathan_ships
+			}
+}
+pmg_medical_supplies_leviathan_outpost = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_medical
+		pm_drink_and_a_prayer #make sure building causes at least 10% mortality else the liquor makes the workers live longer
+		pm_proper_medical_supplies_leviathan
+		pm_potions_of_fortitude_leviathan
+	}
+}
+pmg_airplanes_leviathan_outpost = {
+	#texture =
+	production_methods = {
+		pm_leviathan_no_airplanes
+		pm_leviathan_airplanes
+	}
+}
+pmg_refrigeration_building_seasnake_wharf = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_unrefrigerated
+		pm_refrigerated_storage_building_seasnake_wharf
+		pm_refrigerated_rail_cars_building_seasnake_wharf
+		pm_flash_freezing_building_seasnake_wharf
+	}
+}
