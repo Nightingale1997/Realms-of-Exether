@@ -3,8 +3,11 @@
  DATA_GOODS_NAME_TOOLTIP: "[ConcatIfNeitherEmpty( Goods.GetStateGoodsShortageDesc, '\n')][ConcatIfNeitherEmpty( SelectLocalization( Goods.GetState.IsValid, 'CONTEXTUAL_GOODS_GENERATION_INFO_STATE', ''), '\n\n')][ConcatIfNeitherEmpty( Goods.GetMarketGoodsShortageDesc, '\n\n')][ConcatIfNeitherEmpty( SelectLocalization( Goods.GetMarket.IsValid, 'CONTEXTUAL_GOODS_GENERATION_INFO_MARKET', ''), '\n\n')][ConcatIfNeitherEmpty( Goods.GetBuildingsProducingThisDesc, '\n\n')][ConcatIfNeitherEmpty( Goods.GetBuildingsUsingThisDesc, '\n\n')][Goods.GetNeedLevelsContainingThisDesc][AddLocalizationIf(Goods.HasMarketContext, 'GOODS_LEADERBOARD_HEADER')][SelectLocalization(Goods.IsTradeable, '', 'NON_TRADEABLE_DESC')]$DATA_GOODS_NAME_TOOLTIP_DESC$"
   DATA_GOODS_NAME_TOOLTIP_DESC: "#lore [ConcatIfNeitherEmpty('\n$TOOLTIP_DELIMITER$\n', Goods.GetCustom('goods_flavor_loc'))]#!"
   # Goods Flavor
-  trinkets_flavor: ""
+  blubber_flavor: ""
+  godsblood_flavor: ""
+  monster_essence_flavor: ""
   chimesilt_flavor: ""
   wishstone_flavor: ""
+  thaumacore_flavor: ""
   cloudsilver_flavor: "Cloudsilver is a lighter-than air metal. Theorized to come from the trapped souls of petrified dwarves who crumbled during the [concept_long_slumber] and had their souls merge with the mountain. This metal behaves much like dwarves afflicted with [concept_curse_of_the_mountain], in that it wants to seek out open areas like the sky."
   goods_flavor_loc_default: ""
