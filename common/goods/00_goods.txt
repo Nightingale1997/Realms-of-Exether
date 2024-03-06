@@ -275,16 +275,6 @@ coal = {
 	consumption_tax_cost = 200
 }
 
-blubber = {
-	texture = "gfx/interface/icons/goods_icons/blubber.dds"
-	cost = 40
-	category = industrial
-	
-	prestige_factor = 5
-	
-	consumption_tax_cost = 200
-}	
-
 iron = {
 	texture = "gfx/interface/icons/goods_icons/iron.dds"
 	cost = 40
@@ -401,16 +391,6 @@ explosives = {
 	prestige_factor = 10
 	
 	traded_quantity = 4
-	convoy_cost_multiplier = 1.5
-}
-
-wishstone = {
-	texture = "gfx/interface/icons/goods_icons/wishstone.dds"
-	cost = 50
-	category = industrial
-	
-	prestige_factor = 10
-	
 	convoy_cost_multiplier = 1.5
 }
 
@@ -598,6 +578,10 @@ fine_art = {
 	traded_quantity = 2
 }
 
+##############
+#  Exether   #
+##############
+
 trinkets = {
 	texture = "gfx/interface/icons/goods_icons/trinkets.dds"
 	cost = 200
@@ -613,6 +597,34 @@ cloudsilver = {
 	texture = "gfx/interface/icons/goods_icons/cloudsilver.dds"
 	cost = 45
 	category = industrial
+	
+	prestige_factor = 5
+}
+
+blubber = {
+	texture = "gfx/interface/icons/goods_icons/blubber.dds"
+	cost = 40
+	category = industrial
+	
+	prestige_factor = 5
+	
+	consumption_tax_cost = 200
+}	
+
+wishstone = {
+	texture = "gfx/interface/icons/goods_icons/wishstone.dds"
+	cost = 50
+	category = industrial
+	
+	prestige_factor = 10
+	
+	convoy_cost_multiplier = 1.5
+}
+
+monster_essence = {
+	texture = "gfx/interface/icons/goods_icons/monster_essence.dds"
+	cost = 40
+	category = industrial #WIP?
 	
 	prestige_factor = 5
 }

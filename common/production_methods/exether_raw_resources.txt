@@ -421,3 +421,214 @@ default_building_wishstone_fields = {
 		}
 	}
 }
+pm_shore_snaking = {
+	texture = "gfx/interface/icons/production_method_icons/simple_fishing.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# output
+			goods_output_fish_add = 20
+			goods_output_monster_essence_add = 10
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 4500
+		}
+		unscaled = {
+			building_laborers_mortality_mult = 0.15
+		}
+	}
+}
+
+pm_seasnake_trawlers = {
+	texture = "gfx/interface/icons/production_method_icons/trawlers.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input
+			goods_input_clippers_add = 8
+			
+			# output
+			goods_output_fish_add = 40
+			goods_output_monster_essence_add = 20
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 4000
+			building_employment_machinists_add = 500
+		}
+		unscaled = {
+			# mortality
+			building_laborers_mortality_mult = 0.3
+			building_machinists_mortality_mult = 0.2
+			building_adventurers_mortality_mult = 0.15
+		}
+	}
+}
+
+pm_steam_seasnake_trawlers = {
+	texture = "gfx/interface/icons/production_method_icons/steam_trawlers.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	
+	unlocking_technologies = {
+		ironclad_tech
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input
+			goods_input_steamers_add = 8
+			goods_input_coal_add = 15
+			
+			# output
+			goods_output_fish_add = 80
+			goods_output_monster_essence_add = 40
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 3000
+			building_employment_machinists_add = 1000
+			building_employment_engineers_add = 500
+		}
+	}
+}
+pm_wooden_leviathan_ships = {
+	texture = "gfx/interface/icons/production_method_icons/wooden_whaling_ships.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input
+			goods_input_clippers_add = 9 
+			
+			# output
+			goods_output_meat_add = 8
+			goods_output_monster_essence_add = 20
+			goods_output_blubber_add =  30
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 3500
+			building_employment_machinists_add = 500
+			building_employment_adventurers_add = 500
+		}
+
+		unscaled = {
+			# mortality
+			building_laborers_mortality_mult = 0.8
+			building_machinists_mortality_mult = 0.5
+			building_adventurers_mortality_mult = 0.4
+		}
+	}
+}
+
+pm_manowar_leviathan_ships = {
+	texture = "gfx/interface/icons/production_method_icons/wooden_whaling_ships.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input
+			goods_input_manowars_add = 9 
+			
+			# output
+			goods_output_meat_add = 12
+			goods_output_monster_essence_add = 30
+			goods_output_blubber_add = 42
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 3500
+			building_employment_machinists_add = 500
+			building_employment_adventurers_add = 500
+		}
+		
+		unscaled = {
+			# mortality
+			building_laborers_mortality_mult = 0.6
+			building_machinists_mortality_mult = 0.35
+			building_adventurers_mortality_mult = 0.3
+		}
+	}
+}
+pm_steam_leviathan_ships = {
+	texture = "gfx/interface/icons/production_method_icons/steam_whaling_ships.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	
+	unlocking_technologies = {
+		ironclad_tech
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input
+			goods_input_steamers_add = 9
+			goods_input_coal_add = 20
+			
+			goods_output_meat_add = 18
+			goods_output_monster_essence_add = 40
+			goods_output_blubber_add = 62
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 3000
+			building_employment_machinists_add = 1000
+			building_employment_adventurers_add = 500
+		}
+		unscaled = {
+			# mortality
+			building_laborers_mortality_mult = 0.55
+			building_machinists_mortality_mult = 0.3
+			building_adventurers_mortality_mult = 0.25
+		}
+	}
+	}
+	pm_no_medical = {
+		#texture = "gfx/interface/icons/production_method_icons/simple_fishing.dds"
+	}
+	pm_drink_and_a_prayer = {
+		#texture = "gfx/interface/icons/production_method_icons/simple_fishing.dds"
+		workforce_scaled = {
+			# input
+			goods_input_liquor_add = 2
+	}
+	unscaled = {
+		# mortality
+		building_laborers_mortality_mult = -0.1
+		building_machinists_mortality_mult = -0.1
+		building_adventurers_mortality_mult = -0.05
+	}
+}
+
+pm_leviathan_airplanes = {
+	#texture =
+}
+
+pm_leviathan_airplanes = {
+
+	unlocking_technologies = {
+		military_aviation
+	}
+
+	workforce_scaled = {
+		# input
+		goods_input_aeroplanes_add = 10
+		goods_input_steel_add = 5
+		goods_input_explosives_add = 5
+		goods_output_meat_add = -8
+		goods_output_blubber_add = 25
+		goods_output_monster_essence_add = 15
+}
+}

@@ -40,6 +40,11 @@ goods_output_blubber_add = {
 	percent = no
 }
 
+goods_output_monster_essence_add = {
+	good = yes
+	percent = no
+}
+
 goods_input_trinkets_add = {
 	good = yes
 	percent = no
@@ -56,6 +61,11 @@ goods_input_thaumacores_add = {
 }
 
 goods_input_blubber_add = {
+	good = yes
+	percent = no
+}
+
+goods_input_monster_essence_add = {
 	good = yes
 	percent = no
 }
@@ -81,6 +91,14 @@ state_adventurer_coverage_mult = {
 	percent = yes
 	num_decimals = 0
 }
+
+building_adventurers_mortality_mult = {
+	good = no
+	percent = yes
+	num_decimals = 0
+}
+
+
 
 country_veil_integrity_contribution = {
 	neutral = yes
