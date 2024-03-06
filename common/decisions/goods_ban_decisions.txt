@@ -107,7 +107,11 @@ remove_opium_ban = {
 	}
 
 	when_taken = {
-		remove_banned_goods = g:opium	
+		remove_banned_goods = g:opium
+		if = {
+			limit = { has_modifier = opium_ban_authority }
+			remove_modifier = opium_ban_authority
+		}	
 	}
 	
    ai_chance = {
