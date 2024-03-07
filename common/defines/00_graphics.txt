@@ -454,6 +454,7 @@ NTravelNetwork = {
 	FORMATION_CATCHUP_DISTANCE = 40.0			# If a military formation 3D caravan is this distance behind where it is supposed to be, accelerate with catch-up speed
 	FORMATION_CATCHUP_SPEED_MULTIPLIER = 1.5	# Accelerate averaged speed by this multiplied when 'catching up'
 	FORMATION_CATCHUP_MIN_SPEED = 15.0			# Minimum speed for catching up
+	FORMATION_CATCHUP_MAX_SPEED = 75.0			# Maximum speed for catching up
 	FORMATION_SMOOTHING_STEP_COUNT = 5			# For smoothing visual movement speed, military formation speed is measured as a rolling average over X steps
 	FORMATION_SMOOTHING_STEP_TIME = 1.0			# Each step for the military formation speed smoothing is this long
 	FORMATION_SMOOTHING_SPEED_MULTIPLIER = 1.2  # General speed multiplier applied to the smoothing measurement (it's better to be "ahead" than "behind")

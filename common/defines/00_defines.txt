@@ -19,7 +19,7 @@ NAI = {
 
 	STRATEGY_RANDOM_FACTOR = 20.0 # The higher this is, the more random AI strategy selection will be
 	
-	TICKS_FOR_FULL_SPENDING_UPDATE = 50 # The higher this is, the less often AIs will update their spending priorities 
+	TICKS_FOR_FULL_SPENDING_UPDATE = 100 # The higher this is, the less often AIs will update their spending priorities 
 		
 	MIN_SUBJECT_TYPE_VALUE = 1 # ai_value for a subject type is never below this
 	
@@ -100,6 +100,16 @@ NAI = {
 	INFLUENCE_DEFICIT_BREAK_PACT_OVER_SPENDING_LIMIT_MULT = 0.1			# AI multiplies the value of pacts that are over their action-type spending limit by this when in an Influence deficit
 	
 	MIN_AVAILABLE_LABOR_FOR_NEW_BUILDING = 5000		# If state has less than this in available labor, we should be much less likely to build something (multiplied by 1 + number of ongoing constructions)
+	
+	# Formations with fewer units than whichever is smaller of these two values should not have a commander recruited for them
+	MIN_COMBAT_UNITS_FOR_COMMANDER_ABSOLUTE = 5		# Absolute number of combat units			
+	MIN_COMBAT_UNITS_FOR_COMMANDER_RELATIVE = 0.2	# Number of combat units relative to total army size	
+	
+	# Formations with at least the number of units than whichever is smaller of these two values should always have at least two commanders, so they can be dynamically split to cover multiple fronts
+	MIN_COMBAT_UNITS_FOR_MULTIPLE_COMMANDERS_ABSOLUTE = 10  # Absolute number of combat units	
+	MIN_COMBAT_UNITS_FOR_MULTIPLE_COMMANDERS_RELATIVE = 0.5	# Number of combat units relative to total army size	
+	
+	RETIRE_COMMANDER_INTERACTION_KEY = "retire_commander" # The AI will use this character interaction to retire excessive commanders
 	
 	COMMANDER_DESIRED_RANK_DISPARITY_IN_ARMY = 1 		  # Prefer promoting over recruiting new commanders if there isn't at least this rank disparity between any two generals in an army
 	COMMANDER_DESIRED_RANK_DISPARITY_IN_FLEET = 1 		  # Prefer promoting over recruiting new commanders if there isn't at least this rank disparity between any two admirals in a fleet
@@ -230,10 +240,12 @@ NAI = {
 	DIPLO_PLAY_DECIDE_ON_SUPPORT_ESCALATION = 30 # Above this escalation, AI will potentially start taking sides (or declare neutrality) even if not swayed
 	DIPLO_PLAY_TAKE_SIDES_MIN_BOLDNESS = 25 # Boldness must be at least this for AI to want to take a side with no gain (ignored for Great Powers in containment plays)
 	DIPLO_PLAY_TAKE_SIDES_CHANCE = 0.001 # Multiplied by boldness for chance of taking sides each tick
-	DIPLO_PLAY_DECLARE_NEUTRALITY_CHANCE = 0.001 # Multiplied by neutrality for chance of declaring neutrality each tick (only if there's no side the country prefers OR play has reached countdown to war)
-	DIPLO_PLAY_DECLARE_NEUTRALITY_HIGH_ESCALATION_MULT = 20 # Chance of declaring neutrality during countdown to war is multiplied by this
+	DIPLO_PLAY_DECLARE_NEUTRALITY_ESCALATION_MIN_BASE = 80 # Lowest escalation at which AI can declare neutrality, AIs with a preference will never declare neutrality before countdown to war
+	DIPLO_PLAY_DECLARE_NEUTRALITY_IMPACT_OF_NEUTRALITY_SCORE = 0.5 # AI's neutrality score * this is subtracted from DIPLO_PLAY_DECLARE_NEUTRALITY_ESCALATION_MIN_BASE
+	DIPLO_PLAY_DECLARE_NEUTRALITY_IMPACT_OF_NEUTRALITY_SCORE_MAX = 50 # DIPLO_PLAY_DECLARE_NEUTRALITY_IMPACT_OF_NEUTRALITY_SCORE cannot be higher than this
+	DIPLO_PLAY_DECLARE_NEUTRALITY_ESCALATION_MAX = 99 # Highest escalation at which AI can declare neutrality
 	DIPLO_PLAY_ABANDON_SUPPORT_CHANCE = 0.1 # Multiplied with negative support score
-	DIPLO_PLAY_SWAY_COUNTRIES_ESCALATION = 20 # Above this escalation, AI will potentially start swaying countries
+	DIPLO_PLAY_SWAY_COUNTRIES_ESCALATION = 10 # Above this escalation, AI will potentially start swaying countries
 	DIPLO_PLAY_REVERSE_SWAY_COUNTRIES_CHANCE_SCALED = 0.005 # Chance each tick that the AI will try to reverse-sway (scaled by boldness)
 	DIPLO_PLAY_REVERSE_SWAY_COUNTRIES_CHANCE_MAX = 0.5 # Max chance each tick that the AI will try to reverse-sway
 	DIPLO_PLAY_REVERSE_SWAY_LEANING_MULT = 5.0 # Applied to both scaled and max chance if the swaying country is already leaning towards a side
@@ -246,9 +258,9 @@ NAI = {
 	DIPLO_PLAY_ABANDON_ALLY_OR_SUBJECT_MIN_ENEMY_STRENGTH = 0.75 # If the enemy doesn't have at least this amount of troops compared to our side, never abandon an ally or subject
 	DIPLO_PLAY_ABANDON_ALLY_RELUCTANCE = 50 # Added to support score when considering whether to abandon an ally
 	DIPLO_PLAY_ABANDON_SUBJECT_RELUCTANCE = 100 # Added to support score when considering whether to abandon a subject
-	DIPLO_PLAY_SWAY_DAYS_LEFT_MAX = 6  # AI will not answer a sway offer when it has more than this amount of days left (should map to SWAY_OFFER_TIMEOUT_DAYS)
-	DIPLO_PLAY_SWAY_DAYS_LEFT_MIN = 2	# AI will always answer a sway offer when it has this or less amount of days left (should map to SWAY_OFFER_TIMEOUT_DAYS)
-	DIPLO_PLAY_SWAY_ANSWER_CHANCE = 10 # Chance per tick of AI answering a sway offer (1 = 1%)
+	DIPLO_PLAY_SWAY_DAYS_LEFT_MAX = 12  # AI will not answer a sway offer when it has more than this amount of days left (should map to SWAY_OFFER_TIMEOUT_DAYS)
+	DIPLO_PLAY_SWAY_DAYS_LEFT_MIN = 8	# AI will always answer a sway offer when it has this or less amount of days left (should map to SWAY_OFFER_TIMEOUT_DAYS)
+	DIPLO_PLAY_SWAY_ANSWER_CHANCE = 20 # Chance per tick of AI answering a sway offer (1 = 1%)
 	DIPLO_PLAY_WEAK_ARMY_THRESHOLD = 0.5 # If our army strength compared to the average for each country involved in the play is less than this, weak army effects will apply
 	DIPLO_PLAY_STRONG_ARMY_THRESHOLD = 1.0 # If our army strength compared to the average for each country involved in the play is at least than this, strong army effects will start to apply
 	DIPLO_PLAY_STRONG_ARMY_MAX = 3.0 # Maximum strong army effects apply at this threshold
@@ -385,6 +397,7 @@ NAI = {
 	DIPLO_PLAY_SWAY_UNWANTED_OFFER = -1000 # For being offered something they don't want
 	DIPLO_PLAY_SWAY_CALL_IN_OBLIGATION = 100 # When calling in an obligation
 	DIPLO_PLAY_SWAY_MINIMUM_OBLIGATION_VALUE = 10 # Obligations worth less than this are rejected
+	DIPLO_PLAY_SWAY_MINIMUM_PREFERENCE_FOR_SUBJUGATION = 1 # The AI will not sway or reverse-sway with 'become subject' unless the supporter's preference for the supported is at least this
 	DIPLO_PLAY_SWAY_WARGOAL_WEAK_SWAYER_CONFIDENT_IN_OWN_ARMY_FACTOR = 0.25 # This much of the penalty for a 'weak' sway offer is removed if the target believes they can achieve the wargoal themselves
 	DIPLO_PLAY_SWAY_WARGOAL_FACTOR = 1.0 # Multiplied by wargoal value
 	DIPLO_PLAY_SWAY_WARGOAL_THRESHOLD = 10 # A wargoal needs at least this base value to be wanted as part of sway offer
@@ -420,7 +433,7 @@ NAI = {
 	DIPLO_PLAY_REVERSE_SWAY_CALL_IN_OBLIGATION_FACTOR = -3.0 # Multiply by how much the AI values the obligation it holds and apply to reverse-sway acceptance for calling in obligation
 	DIPLO_PLAY_REVERSE_SWAY_STATE_VALUE_FACTOR = -2.0 # Multiplied by AI strategy value for owned state to determine reluctance to cede it in a reverse-sway
 	DIPLO_PLAY_REVERSE_SWAY_BECOME_SUBJECT_VALUE_FACTOR = 1.0 # Multiplied by how much the AI wants to become a subject of the sway target
-	DIPLO_PLAY_REVERSE_SWAY_TRANSFER_SUBJECT_VALUE_FACTOR = -1.5 # Multiplied by how much the AI values the subject they're offering to transfer to the sway target
+	DIPLO_PLAY_REVERSE_SWAY_TRANSFER_SUBJECT_VALUE_FACTOR = -1.0 # Multiplied by how much the AI values the subject they're offering to transfer to the sway target
 	DIPLO_PLAY_REVERSE_SWAY_CALL_ALLY_DESIRE = 25 # Added to AI scoring for reverse sway call ally even though call ally isn't actually valid for reverse-sways, so they can score it against other sway types
 	
 	DIPLO_PLAY_ADD_WARGOAL_MIN_SCORE = 20 # A wargoal needs at least this value for AI to add it to the play
@@ -455,6 +468,7 @@ NAI = {
 	DEFEND_STATE_NAVAL_BASE_MAX_WEIGHT = 10 # Per state
 	DEFEND_STATE_CAPITAL_WEIGHT = 25
 	DEFEND_STATE_CAPITAL_WAR_NEGOTIATOR_WEIGHT = 100
+	DEFEND_STATE_OWN_CAPITAL_WEIGHT_MULT = 5
 	DEFEND_STATE_WARGOAL_WEIGHT = 100
 	DEFEND_STATE_INCORPORATED_WEIGHT_MULT = 1.5	
 	
@@ -465,6 +479,7 @@ NAI = {
 	INVADE_STATE_NAVAL_BASE_MAX_WEIGHT = 10 # Per state
 	INVADE_STATE_CAPITAL_WEIGHT = 25
 	INVADE_STATE_CAPITAL_WAR_NEGOTIATOR_WEIGHT = 100
+	INVADE_STATE_OWN_CAPITAL_WEIGHT_MULT = 5
 	INVADE_STATE_WARGOAL_WEIGHT = 100
 	INVADE_STATE_INCORPORATED_WEIGHT_MULT = 1.5
 	
@@ -492,6 +507,18 @@ NAI = {
 	# Below data is for evaluating Commander Orders
 	FRONT_IMPORTANCE_OWN_FRONT_WEIGHT_MULT = 2.0 # Fronts that we 'own' have the importance of their states multiplied by this
 	HQ_STATIONING_IMPORTANCE_NOT_OWN_HQ_WEIGHT_MULT = 0.25 # HQs of allies have their importance multiplied by this as the AI prefers stationing in its own HQs
+	
+	# Undefended HQs and Fronts are given preference by this multiplier for assignment of formations there
+	HQ_OR_FRONT_UNDEFENDED_ASSIGNMENT_WEIGHT = 2.0
+	
+	# If splitting a force to cover undefended HQs/fronts, this is the fraction of the source formation that is sent when the two locations have an equal disparity in needed forces IF the army considered for splitting was not present
+	HQ_OR_FRONT_SPLIT_FORCE_BASE_FRACTION = 1.0
+	
+	# If splitting a force to cover undefended HQs/fronts, never send or leave behind less than this fraction of the source formation
+	HQ_OR_FRONT_SPLIT_FORCE_MIN_FRACTION = 0.1
+
+	# If splitting a force to cover undefended HQs/fronts, don't send splinter armies to already defended fronts if the split of the source formation ends up smaller than this
+	HQ_OR_FRONT_SPLIT_FORCE_DEFENDED_LOCATION_MIN_FRACTION_TO_SEND = 0.33
 
 	# A percentage [0.0, 1.0] representing how many AI units are on a front out of the total (AI's + Enemy's) units, used to
 	# determine when to start applying FRONT_IMPORTANCE_WEIGHT_WHEN_IN_DISADVANTAGE.
@@ -503,6 +530,7 @@ NAI = {
 	FRONT_OR_HQ_ACTIVE_WAR_MOVE_FACTOR = 1.0 # If a general is in an active war front, add this value to the divisor
 	
 	# The values below are all applied *after* FRONT_IMPORTANCE_MIN_SCORE is checked, so a front/HQ isn't going to be qualified or disqualified for AI actually caring about it by these multipliers
+	FRONT_CAPITAL_HQ_IMPORTANCE_MULT = 2.0 		# Fronts that threaten the AI's own capital HQ have their importance multiplied by this
 	FRONT_NON_WAR_ZONE_IMPORTANCE_MULT = 0.5 	# Fronts that are not being contested by the enemy have their importance multiplied by this
 	FRONT_WAR_ZONE_IMPORTANCE_MULT = 1.0		# Fronts that *are* being contested by the enemy have their importance multiplied by this
 	HQ_LANDLOCKED_IMPORTANCE_MULT = 0.0 	# Friendly HQs without a coast have their importance multiplied by this
@@ -511,7 +539,7 @@ NAI = {
 	
 	# At what fraction of combat strength and morale/org will the AI attack
 	FRONT_MIN_OVERALL_STRENGTH_FACTOR_TO_ATTACK = 0.8			# Must have at least this multiplier of overall power projection on the front compared to the enemy's to want to attack
-	FRONT_MIN_INDIVIDUAL_ARMY_STRENGTH_FACTOR_TO_ATTACK = 0.8 	# Must have at least this multiplier of average power projection of allied formations on the front to want to attack
+	FRONT_MIN_INDIVIDUAL_ARMY_STRENGTH_FACTOR_TO_ATTACK = 0.95 	# Must have at least this multiplier of average power projection of allied formations on the front to want to attack
 	FRONT_MIN_MORALE_TO_ATTACK = 0.8							# As a fraction of max morale (1)
 	FRONT_MIN_ORGANIZATION_TO_ATTACK = 0.8						# As a fraction of formation's max organization
 	
@@ -537,6 +565,7 @@ NAI = {
 	ADMIRAL_ORDERS_ESCORT_CONVOYS_MILITARY_IMPORTS_WAR_MULT = 2.0		# Score for shipping lanes that are importing military goods to our market while at war is multiplied by this
 	ADMIRAL_ORDERS_ESCORT_CONVOYS_ARMY_SUPPLY_ROUTE_MULT = 2.0			# Score for shipping lanes supporting our overseas armies is multiplied by this
 	ADMIRAL_ORDERS_ESCORT_CONVOYS_ACTIVE_RAIDERS_MULT = 2.0				# Score for shipping lanes that are being actively raided by the enemy is multiplied by this
+	ADMIRAL_ORDERS_ESCORT_CONVOYS_PROTECTED_CONVOYS_MULT = 0.01			# Score for shipping lanes multiplied by (1 + ( this * number of convoys that the fleet protects or would potentially protect in the sea node))
 	
 	ADMIRAL_ORDERS_INTERCEPTION_PEACE_NEGOTIATOR_CAPITAL_FACTOR = 300	# Score for defending allied peace negotiator capital region with interception order
 	ADMIRAL_ORDERS_INTERCEPTION_OWN_CAPITAL_FACTOR = 1000				# Score for defending our capital region with interception order
@@ -885,9 +914,12 @@ NAI = {
 	COMPANY_TYPE_COMPETITION_FACTOR = 2					# Divisor for AI weight of companies is increased by 1 + ( number of building types on existing companies that compete * this )
 	COMPANY_TYPE_BUILDING_GROUP_WEIGHT_IMPACT = 1.5		# The AI's average strategy weight mult for the building groups associated with this company is modulated towards 1 by this value and applied to AI preference for the company (ie; if this is 0.5, then the difference between the average AI preference and 1 is halved - 1.5 becomes 1.25, 0.5 becomes 0.75 etc)
 
-	MILITARY_UNITS_PER_FORMATION_BASE = 100				# For each this number of battalions we create another military formation in a HQ
-	MILITARY_UNITS_MIN_FOR_GARRISON_FORMATION = 15 		# If a HQ has at least this number of units we set the minimum number of formations to 2, so that there will be a garrison formation present
-	MILITARY_UNITS_GARRISON_BATTALION_MULT = 0.33		# The garrison formation (the last formation in each HQ) should receive only this number of troops compared to the other formations in the HQ
+	MILITARY_UNITS_PER_FORMATION_ARMY = 50				# The AI aims to have armies of roughly this size, and will create new formations in land HQs accordingly
+	MILITARY_UNITS_PER_FORMATION_FLEET = 30				# The AI aims to have fleets of roughly this size, and will create new formations in naval HQs accordingly
+	MILITARY_UNITS_MIN_FOR_GARRISON_FORMATION = 15 		# If a land HQ has at least this number of units we set the minimum number of formations to 2, so that there will be a garrison formation present
+	MILITARY_UNITS_MIN_FOR_GARRISON_FORMATION_IN_CAPITAL_HQ = 5 		# Overrides MILITARY_UNITS_MIN_FOR_GARRISON_FORMATION for the capital land HQ, since not leaving the capital undefended is extremely critical
+	MILITARY_UNITS_GARRISON_BATTALION_MULT = 0.33		# The garrison formation in each HQ should receive this portion of its total number of battalions
+	MILITARY_UNITS_MIN_DELTA_TO_TRANSFER_UNITS = 0.05   # There must be at least this delta between the fraction of a HQ's units that a formation wants and the fraction that it has to bother with transfering units to/from it
 }
 
 NCountry = {
@@ -978,8 +1010,10 @@ NPolitics = {
 	
 	RECENT_PARTY_DAYS = 14				# Party is considered recently formed if activated within RECENT_PARTY_DAYS days range
 	
-	MAX_GOVERNMENT_ALTERNATIVES_TO_CONSIDER_AI = 12			# When evaluating government reform options (for AI), only consider this many constellations (sorted by average clout, descending) [>=1]
-	MAX_GOVERNMENT_ALTERNATIVES_TO_CONSIDER_PLAYER = 256	# When evaluating government reform options (the 3 suggested to the player in the UI), only consider this many constellations (sorted by average clout, descending) [>=3]
+	MAX_GOVERNMENT_ALTERNATIVES_TO_CONSIDER_AI = 12					# When evaluating government reform options (for AI), only consider this many constellations (sorted by average clout, descending) [>=1]
+	MAX_GOVERNMENT_ALTERNATIVES_TO_CONSIDER_PLAYER = 256			# When evaluating government reform options (the 3 suggested to the player in the UI), only consider this many constellations (sorted by average clout, descending) [>=3]
+	MAX_GOVERNMENT_ALTERNATIVES_OPTIONS_WANTED_FOR_VALIDATION = 8	# When evaluating government reform options during government validation stage
+	MAX_GOVERNMENT_ALTERNATIVES_TO_CONSIDER_FOR_VALIDATION = 256	# When evaluating government reform options during government validation stage
 
 	DEFAULT_LAW_ACTIVATION_DATE = "1836.1.1"	
 	
@@ -1226,8 +1260,8 @@ NEconomy = {
 
 	EARNINGS_RATIO_HIGH_THRESHOLD = 1.5			# Buildings whose productivity exceeds this factor of the average will be considered high-productivity buildings
 	EARNINGS_RATIO_LOW_THRESHOLD = 0.66			# Buildings whose productivity is below this factor of the average will be considered low-productivity buildings
-	EARNINGS_ABSOLUTE_HIGH_THRESHOLD = 50		# Buildings whose productivity exceeds this amount will ALWAYS be considered high-productivity buildings
-	EARNINGS_ABSOLUTE_LOW_THRESHOLD = 2			# Buildings whose productivity is below this amount will ALWAYS be considered low-productivity buildings
+	EARNINGS_ABSOLUTE_HIGH_THRESHOLD = 30		# Buildings whose productivity exceeds this amount will ALWAYS be considered high-productivity buildings
+	EARNINGS_ABSOLUTE_LOW_THRESHOLD = 3			# Buildings whose productivity is below this amount will ALWAYS be considered low-productivity buildings
 	
 	SLAVE_BASKET_DEFAULT = 8					# Default level of consumer goods that a building will buy for its slaves
 	SLAVE_BASKET_MIN = 1						# Min level of consumer goods that a building will buy for its slaves (the highest of this and SLAVE_BASKET_SCALED_MIN is used)
@@ -1338,9 +1372,7 @@ NMilitary = {
     GENERAL_TRAVEL_OVERSEAS_SCALE = 1.25            # Used if a general is traveling overseas. So the total duration of the travel becomes Duration * GENERAL_TRAVEL_OVERSEAS_SCALE
     GENERAL_TRAVEL_AUTO_REASSIGN_INSTANTLY = 15		# If General is being auto reassigned (front destruction for example) and travel time is below this number of days make them travel instantly
     GENERAL_INVALID_TRAVEL_DAYS = 0                 # If our system fails to compute travel time due to invalid front/HQ position, then use this value as travel time instead. This prevents such cases from causing >300 days travels. This ignores GENERAL_TRAVEL_AUTO_REASSIGN_INSTANTLY.
-	FORMATION_TRAVEL_SPEED = 5.55					# The speed of formations when they travel, in pixels per tick [> 0]
 
-	USE_TRAVEL_NETWORK = yes						# (Temp) toggle for using direct travel vs travel network
 	FORMATION_TRAVEL_NETWORK_SPEED = 15				# (Temp) base speed of formations when they travel via the travel network
 
 	BATTLE_PLAN_ADVANCE_PROGRESS_TO_LAUNCH = 100 			# required accumulated advance progress to launch
@@ -1379,8 +1411,6 @@ NMilitary = {
 	INTERCEPTION_DELAY_MAX_RANDOM_DAYS_FACTOR = 10			# up to this many extra days between each admiral interception attempt
 	INTERCEPTION_BASE_CHANCE = 0.1							# base chance when trying to intercept enemy admirals
 
-	ADMIRAL_BATTLE_LOSS_REPAIR_TIME_DAYS = 28				# deprecated in 1.5.x+; number of days after loosing a naval battle that an admiral cannot perform any new Orders
-
 	DEMOBILIZATION_TIME_DAYS = 90				# Number of days it takes to fully demobilize after a formation has returned home
 
 	MOBILIZATION_INFRASTRUCTURE_FACTOR = 0.01	# amount of mobilization generated per point of infrastructure. one battalion takes one full point of mobilization to mobilize
@@ -1394,7 +1424,7 @@ NMilitary = {
 	BATTLE_CONDITION_CHANCE_TO_UPDATE_PER_EXTRA_TICK = 0.01 # For each tick that has passed since the minimum number of ticks, this chance to refresh battle conditions (i.e. 13 ticks after min, there's 13% chance of switching)
 	
 	DEFAULT_ORDER_GENERAL = "advance"						# Default order for generals
-	DEFAULT_ORDER_ADMIRAL = "patrol_coast"					# Default order for admirals
+	DEFAULT_ORDER_ADMIRAL = "interception_coast"			# Default order for admirals
 	
 	MAX_NUM_COMMANDERS_PER_FORMATION = 4	# The maximum number of commanders in a given Military Formation
 	
@@ -1471,7 +1501,7 @@ NDiplomacy = {
 	TENSION_INCREASE_RATE_ADJACENT = 0.5 # Multiplied to tension increase when it is neighboring countries' provinces that are colonized
 	TENSION_UPRISING_CHANCE = 0.02 # Chance of war breaking out instead of the next province being colonized (base when tension is at least TENSION_THRESHOLD_VOLATILE)
 	
-	SWAY_OFFER_TIMEOUT_DAYS = 7
+	SWAY_OFFER_TIMEOUT_DAYS = 14
 	SWAY_OFFER_REJECTED_COOLDOWN_DAYS = 7 # Must wait this many days before trying to sway a country that rejected your previous sway
 	SWAY_OFFER_CALL_IN_OBLIGATION_MANEUVERS_COST = 10
 	SWAY_OFFER_OWE_OBLIGATION_MANEUVERS_COST = 10
@@ -1502,7 +1532,7 @@ NDiplomacy = {
 	SWAY_OFFER_WARGOAL_MANEUVERS_COST_LIBERATE_SUBJECT = 20
 	SWAY_OFFER_WARGOAL_MANEUVERS_COST_FORCE_RECOGNITION = 30
 	SWAY_OFFER_WARGOAL_MANEUVERS_COST_UNIFICATION = 100
-	SWAY_OFFER_WARGOAL_MANEUVERS_COST_INDEPENDENCE = 40
+	SWAY_OFFER_WARGOAL_MANEUVERS_COST_INDEPENDENCE = 20
 	SWAY_OFFER_WARGOAL_MANEUVERS_COST_SECESSION = 100
     SWAY_OFFER_WARGOAL_MANEUVERS_COST_POPULATION_SCALING_FACTOR = 10000 # The amount of population by which the factor below is multiplied
 	SWAY_OFFER_WARGOAL_MANEUVERS_COST_POPULATION_SCALING_MULTIPLIER = 0.03 # For each SWAY_OFFER_WARGOAL_MANEUVERS_COST_POPULATION_SCALING_FACTOR population in a country/state, multiply maneuvers cost by this
@@ -1525,6 +1555,7 @@ NDiplomacy = {
 	WAR_GOAL_BAN_SLAVERY_MONTHS = 60	# [>= 0]
 	WAR_GOAL_HUMILIATION_PACT_TYPE = "humiliation"
 	WAR_GOAL_HUMILIATION_MONTHS = 60	# [>= 0]
+	WAR_GOAL_CONTAIN_THREAT_MONTHS = 60	# [>= 0]
 	WAR_GOAL_MAKE_PROTECTORATE_SUBJECT_TYPE = "subject_type_protectorate"
 	WAR_GOAL_MAKE_TRIBUTARY_SUBJECT_TYPE = "subject_type_tributary"	
 	WAR_GOAL_FORCE_RECOGNITION_FROM_TYPE = "unrecognized"
@@ -1633,6 +1664,9 @@ NDiplomacy = {
 	DAYS_TO_LOSE_POWER_RANK = 365
 	POWER_RANK_LOSS_THRESHOLD = 0.9
 	
+	ARMY_POWER_PROJECTION_MODIFIER_MAX_SCALING = 1000 # Above this amount of army power projection, the country_army_power_projection static modifier provides no further benefit
+	NAVY_POWER_PROJECTION_MODIFIER_MAX_SCALING = 1000 # Above this amount of army power projection, the country_navy_power_projection static modifier provides no further benefit
+	
 	DEFAULT_STATES_REQUIRED_TO_RELEASE_COUNTRY = 0 # Applied if nothing is specified in country_creation
 	DEFAULT_STATES_REQUIRED_TO_FORM_COUNTRY = 0.75 # Applied if nothing is specified in country_formation
 	RELEASE_COUNTRY_AS_SUBJECT_RELATIONS_BOOST = 30
@@ -1685,6 +1719,10 @@ NPops = {
 	MAX_DEMAND_ADJUSTMENT_BASE_AMOUNT = 0.01	# Controls how much a pop can change demand of a substituable goods in a single update (base)
 	MAX_DEMAND_ADJUSTMENT_SCALED_AMOUNT = 0.09	# Controls how much a pop can change demand of a substituable goods in a single update (scaled)
 	MAX_DEMAND_ADJUSTMENT_SCALE = 1.0			# At this delta between target and current demand, apply max demand adjustment scale
+	
+	# To allow local goods to properly compete with non-local ones in large markets, we add a fraction of the market production of the local good that is equal to ( 1 - the state's GDP share ) * this
+	# This is only done for the purposes of goods substitution supply and *not* for price calculations
+	LOCAL_GOODS_SUBSTITUTION_SUPPLY_GDP_FACTOR = 0.25	
 
 	OBSESSION_POP_NEED_EXPENSE_MULT = 0.25		# Total spent on pop needs including obsessions is changed by this (scaled by number of obsessions, money is given or taken from other needs)
 	TABOO_POP_NEED_EXPENSE_MULT = -0.25			# Total spent on pop needs including taboos is changed by this (scaled by number of taboos, money is given or taken from other needs)
@@ -1705,59 +1743,83 @@ NPops = {
 	LOW_POP_THRESHOLD = 5000					# If a state has less than this amount of pops per arable land, apply the low pop modifier
 	HIGH_POP_THRESHOLD = 100000					# If a state has more than this amount of pops per arable land, apply the high pop modifier
 	
-	MIGRATION_PULL_EMPTY_STATE = 100						# If a state has no pops at all, give it a huge migration pull
-	MIGRATION_PULL_FROM_LIVING_STANDARD = 1					# Migration pull from each point of average living standard in target state	
-	MIGRATION_PULL_FROM_AVAILABLE_EMPLOYMENT = 0.5			# Migration pull is increased by for each 10k available non subsistence jobs
-	MIGRATION_PULL_FROM_AVAILABLE_EMPLOYMENT_MAX = 10		# Migration pull from available non subsistence jobs cannot exceed this
-	MIGRATION_PULL_FROM_AVAILABLE_ARABLE_LAND_MAX_EMPLOYMENT_MULTIPLIER = 0.75		# Count available arable land as though the subsistence farm has only this fraction of its max employment, so that massive states in China with mostly full subsistence farms don't get a huge migration boost
-	MIGRATION_PULL_FROM_AVAILABLE_ARABLE_LAND = 0.5			# Migration pull is increased by for each 10k available subsistence jobs
-	MIGRATION_PULL_FROM_AVAILABLE_ARABLE_LAND_MAX = 25		# Migration pull from available subsistence jobs cannot exceed this
-	MIGRATION_PULL_REDUCTION_FROM_UNEMPLOYMENT = 1			# Migration pull is reduced by this for each 10k unemployed pops
-	MIGRATION_PULL_REDUCTION_FROM_UNEMPLOYMENT_MAX = 50		# Migration pull reduction from unemployment cannot exceed this
+##### MIGRATION #####
 
+## General ##
+	MIGRATION_MIN_STATE_POPS = 20000											# A state with less population than this will not get emigration
+	MIGRATION_STATE_POPULATION_THRESHOLD = 100000								# States with less pops than this have reduced market emigration numbers to avoid total depopulation
+	MIGRATION_MAX_PER_STATE_BASE = 500											# No more than this amount of people can move from or to a state in a single week (base)
+	MIGRATION_MAX_PER_STATE_INFRASTRUCTURE = 5									# No more than this amount of people can move from or to a state in a single week (scales with infrastructure)
+	MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION = 0.005						# Max emigration per week is clamped to this fraction of a state's population
+	MIGRATION_MAX_PER_STATE_UNEMPLOYMENT_ORIGIN_FRACTION = 0.05					# The amount of unemployed workers in a state * this value is added to how many people can move from it (after clamping from MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION)
+	MIGRATION_MAX_PER_STATE_UNEMPLOYMENT_TARGET_FRACTION = 0.05					# The amount of unemployed workers in a state * this value is removed from how many people can move to it (after clamping from MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION)
+
+	# Migration Desire #
+	MIGRATION_DESIRE_BASE = 0													# Base desire to migrate
+	MIGRATION_DESIRE_FROM_DISCRIMINATION = 100									# Being discriminated will increase desire to migrate by this much
+	MIGRATION_DESIRE_FROM_JOB_SATISFACTION_FACTOR = -1.0						# A pop's desire to migrate will be affected by its job satisfaction multiplied by this value.
+
+	# Cultural Communities #
+	CULTURAL_COMMUNITY_LINGER_TIME_WEEKS = 3									# When the last pop of a given culture leaves a state, the corresponding cultural community will be removed after this long
+	CULTURAL_COMMUNITY_MAX_PER_MONTH_CHANCE = 0.04
+
+	# Slavery #
+	MIGRATION_MIN_POP_AMOUNT = 1												# No less than this amount of a pop can migrate each week (if any migration at all should happen)
+
+	# UX/UI Labeling #
+	MIGRATION_PULL_HIGH_THRESHOLD = 1.25										# State must have a migration pull of at least market average * this to get market immigration
+	MIGRATION_PULL_LOW_THRESHOLD = 0.75											# State must have a migration pull of less or equal than market average * this to get full amount of emigration
+
+## Migration Attraction ##
+	MIGRATION_PULL_EMPTY_STATE = 100											# If a state has no pops at all, give it a huge migration pull
+	MIGRATION_PULL_FROM_LIVING_STANDARD = 2										# Migration pull from each point of average living standard in target state
+	MIGRATION_PULL_FROM_AVAILABLE_EMPLOYMENT = 1.5								# Migration pull is increased by for each 10k available non subsistence jobs
+	MIGRATION_PULL_FROM_AVAILABLE_EMPLOYMENT_MAX = 30							# Migration pull from available non subsistence jobs cannot exceed this
+	MIGRATION_PULL_FROM_AVAILABLE_ARABLE_LAND_MAX_EMPLOYMENT_MULTIPLIER = 0.75	# Count available arable land as though the subsistence farm has only this fraction of its max employment, so that massive states in China with mostly full subsistence farms don't get a huge migration boost
+	MIGRATION_PULL_FROM_AVAILABLE_ARABLE_LAND_EMPLOYMENT = 0.5					# Migration pull is increased by for each 10k available subsistence jobs
+	MIGRATION_PULL_FROM_AVAILABLE_ARABLE_LAND_EMPLOYMENT_MAX = 30				# Migration pull from available subsistence jobs cannot exceed this
+	MIGRATION_PULL_REDUCTION_FROM_UNEMPLOYMENT = 1								# Migration pull is reduced by this for each 10k unemployed pops
+	MIGRATION_PULL_REDUCTION_FROM_UNEMPLOYMENT_MAX = 50							# Migration pull reduction from unemployment cannot exceed this
+
+## Market Migrations ##
+	# Market Migration Processing #
+	MARKET_MIGRATION_STATE_ATTRACTION_FRACTION = 0.75							# States with at least this fraction of the most attractive state's migration attraction will receive migration
+	MARKET_MIGRATION_PER_WEEK_FACTOR = 5										# This number of individuals will migrate for each point of difference in migration pull
+	MARKET_MIGRATION_PER_WEEK_PER_TOTAL_POPULATION = 100000						# Additionally, one more individual will migrate per this number of population for each point of difference in migration pull
+	MARKET_MIGRATION_MIN_DIFFERENCE_IN_MIGRATION_ATTRACTION_TO_MOVE = 5			# Pops will not migrate if their best option is to a state with a lower delta in migration pull than this number
+	MARKET_MIGRATION_MIN_POP_FRACTION_TO_MOVE = 0.05							# If the people wanting to migrate constitues less than this fraction of a pop, no new pop will be created and they won't migrate.
+	MIGRATION_PULL_MULT_FROM_NO_DISCRIMINATION = 0.5							# Migration pull multiplier increased by this if pop is moving from discrimination to no discrimination (not applied to mass migration targets)
+	MIGRATION_PULL_MULT_FROM_HOMELANDS = 0.2									# Migration pull multiplier increased by this if pop is moving to cultural homelands (not applied to mass migration targets)
+
+## Mass Migrations ##
+	# Mass Migration Setup #
+	MASS_MIGRATION_ORIGIN_MIN_TURMOIL = 0.15									# Must have at least this much turmoil in cultural homelands to create a migration target
+	MASS_MIGRATION_ORIGIN_MIN_EMIGRANTS = 100000								# A country must have at least this many possible migrants to trigger a mass migration
+	MASS_MIGRATION_TARGET_MAX_TURMOIL = 0.30									# Must have this or less turmoil among the culture for a country to be picked as a mass migration target
+	MASS_MIGRATION_TARGET_MIN_ARABLE_LAND = 20									# A state must have at least this much arable land to be a mass migration target
+	MASS_MIGRATION_STATE_MIN_MARKET_ACCESS = 0.7								# A state must have at least this much market access to their market to be a mass migration target or origin state
+	MASS_MIGRATION_SPAWN_CHANCE = 2 											# Per week for each potential mass migration, scales with turmoil (1 = 1%)
+	MASS_MIGRATION_SPAWN_CHANCE_STRUGGLING_FACTOR = 0.2 						# Chance increases by this for each point of SoL below 10 for a culture in a country
+	MASS_MIGRATION_SPAWN_CHANCE_STARVING_FACTOR = 1 							# Chance increases by this for each point of SoL below 5 for a culture in a country (added on top of struggling factor)
+	MASS_MIGRATION_TARGET_COUNTRY_RANDOM_FACTOR = 0.5							# The higher this is, the more random the selection of mass migration country targets will be
+	MASS_MIGRATION_TARGET_STATE_RANDOM_FACTOR = 0.5								# The higher this is, the more random the selection of mass migration state targets in the target country will be
+	MASS_MIGRATION_DURATION_MONTHS = 12											# How long does a mass migration last in months
+	MASS_MIGRATION_COOLDOWN_MONTHS = 48											# How many months before the same culture can mass migrate from a country again
+	MASS_MIGRATION_NUM_TARGET_STATES_FOR_NO_PENALTY = 4							# Countries with at least this number of possible target states do not receive any penalty to their mass migration target score
+	MASS_MIGRATION_FEW_TARGET_STATES_PENALTY = 0.2								# Mass migration target score is reduced by a fraction of itself equal to this times number of possible target states less than MASS_MIGRATION_NUM_TARGET_STATES_FOR_NO_PENALTY. Or Score = Score - Score * this * PossibleStatesDiff
+
+	# Mass Migration Processing #
+	MASS_MIGRATION_PER_WEEK_FACTOR = 10											#
+	MASS_MIGRATION_PER_WEEK_PER_TOTAL_POPULATION = 100000						#
+	MASS_MIGRATION_MIN_DIFFERENCE_IN_MIGRATION_ATTRACTION_TO_MOVE = 10			#
 	# The below factors are applied *after* migration pull threshold checks, so they only impact how large a share of migration a state gets
-	MIGRATION_PULL_MULT_FROM_CULTURE_TARGET = 20.0			# Migration pull multiplied by this from target state being a cultural migration target
-	MIGRATION_PULL_MULT_FROM_CULTURE_TARGET_ADJACENCY = 5.0	# Migration pull multiplied by this from target state being next to a cultural migration target
-	MIGRATION_PULL_MULT_FROM_NO_DISCRIMINATION = 1.0		# Migration pull multiplier increased by this if pop is moving from discrimination to no discrimination (not applied to mass migration targets)
-	MIGRATION_PULL_MULT_FROM_HOMELANDS = 0.5				# Migration pull multiplier increased by this if pop is moving to cultural homelands (not applied to mass migration targets)
-	MIGRATION_PULL_MULT_FROM_NO_TRADE_ROUTE = 0.5			# Migration pull multiplier penalty for not having trade route to migration target
-	
-	# General factors for how many pops will migrate
-	MIGRATION_PULL_HIGH_THRESHOLD = 1.25						#	State must have a migration pull of at least market average * this to get economic immigration
-	MIGRATION_PULL_LOW_THRESHOLD = 0.75							# State must have a migration pull of less or equal than market average * this to get full amount of emigration
-	ECONOMIC_MIGRATION_BASE = 0.03								# Base amount of a pop that wants to move for economic reasons
-	ECONOMIC_MIGRATION_FROM_SOL_DIFFERENCE = 0.01				# Each point of difference of pop SoL to the market's average SoL makes this fraction of the pop want to economically migrate (in %)
-	ECONOMIC_MIGRATION_STATE_POPULATION_THRESHOLD = 100000				# States with less pops than this have reduced economic emigration numbers to avoid total depopulation
-	CULTURAL_MIGRATION_BASE = 0.1								# Base amount of a pop that wants to move due to mass migration
-	CULTURAL_MIGRATION_FROM_RADICALS = 0.25						# At 100% radicals, this fraction of the pop wants to mass migrate
-	MIGRATION_UNEMPLOYMENT_MULT = 15.0							# Amount of migration from SoL is increased by this when a pop is unemployed
-	MIGRATION_MIN_STATE_POPS = 20000							# A state with less pops than this will not get emigration
-	MIGRATION_MIN_POP_AMOUNT = 1								# No less than this amount of a pop can migrate each week (if any migration at all should happen)
-	MIGRATION_MAX_POP_AMOUNT = 10000							# No more than this amount of a pop can migrate each week
-	MIGRATION_MAX_PER_STATE_BASE = 500							# No more than this amount of people can move from or to a state in a single week (base)	
-	MIGRATION_MAX_PER_STATE_INFRASTRUCTURE = 2					# No more than this amount of people can move from or to a state in a single week (scales with infrastructure)
-	MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION = 0.005		# Max emigration per week is clamped to this fraction of a state's population
-	MIGRATION_MAX_PER_STATE_UNEMPLOYMENT_ORIGIN_FRACTION = 0.05	# The amount of unemployed workers in a state * this value is added to how many people can move from it (after clamping from MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION)
-	MIGRATION_MAX_PER_STATE_UNEMPLOYMENT_TARGET_FRACTION = 0.005	# The amount of unemployed workers in a state * this value is removed from how many people can move to it (after clamping from MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION)
-	MIGRATION_MAX_PER_STATE_CULTURAL_EMIGRATION_MULT = 10.0		# Weekly emigration caps are multiplied by this amount by this for cultural-type migration (after clamping from MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION)
-	MIGRATION_MAX_PER_STATE_CULTURAL_IMMIGRATION_MULT = 30.0		# Weekly immigration caps are multiplied by this amount by this for cultural-type migration (after clamping from MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION)
-	MIGRATION_AVERAGE_ATTRACTION_EMIGRATION_MULT = 0.25			# States with an average migration attraction gets this multiplier to emigrants
-	
-	# Factors for creating mass migration targets
-	MASS_MIGRATION_ORIGIN_MIN_TURMOIL = 0.25			# Must have at least this much turmoil in cultural homelands to create a migration target
-	MASS_MIGRATION_ORIGIN_MIN_EMIGRANTS = 100000		# A country must have at least this many possible migrants to trigger a mass migration
-	MASS_MIGRATION_TARGET_MAX_TURMOIL = 0.20			# Must have this or less turmoil among the culture for a country to be picked as a mass migration target
-	MASS_MIGRATION_TARGET_MIN_ARABLE_LAND = 40			# A state must have at least this much arable land to be a mass migration target
-	MASS_MIGRATION_STATE_MIN_MARKET_ACCESS = 0.5		# A state must have at least this much market access to their market to be a mass migration target or origin state
-	MASS_MIGRATION_SPAWN_CHANCE = 0.5 					# Per week for each potential mass migration, scales with turmoil (1 = 1%)
-	MASS_MIGRATION_SPAWN_CHANCE_STRUGGLING_FACTOR = 0.1 # Chance increases by this for each point of SoL below 10 for a culture in a country
-	MASS_MIGRATION_SPAWN_CHANCE_STARVING_FACTOR = 0.5 	# Chance increases by this for each point of SoL below 5 for a culture in a country (added on top of struggling factor)
-	MASS_MIGRATION_TARGET_COUNTRY_RANDOM_FACTOR = 0.5	# The higher this is, the more random the selection of mass migration country targets will be
-	MASS_MIGRATION_TARGET_STATE_RANDOM_FACTOR = 0.5		# The higher this is, the more random the selection of mass migration state targets in the target country will be
-	MASS_MIGRATION_DURATION_MONTHS = 12					# How long does a mass migration last in months
-	MASS_MIGRATION_COOLDOWN_MONTHS = 60					# How many months before the same culture can mass migrate from a country again
-	MASS_MIGRATION_NUM_TARGET_STATES_FOR_NO_PENALTY = 5	# Countries with at least this number of possible target states do not receive any penalty to their mass migration target score
-	MASS_MIGRATION_FEW_TARGET_STATES_PENALTY = 0.25		# Mass migration target score is divided by ( 1 + this * number of possible target states less than MASS_MIGRATION_NUM_TARGET_STATES_FOR_NO_PENALTY )
+	MIGRATION_PULL_MULT_FROM_MASS_MIGRATION_TARGET = 1.5						# Migration pull multiplied by this from target state being a mass migration target
+	MIGRATION_PULL_MULT_FROM_MASS_MIGRATION_TARGET_ADJACENCY = 1.1				# Migration pull multiplied by this from target state being next to a mass migration target
+	MIGRATION_MAX_PER_STATE_MASS_EMIGRATION_MULT = 3.0							# Weekly emigration caps are multiplied by this amount by this for mass migrations (after clamping from MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION)
+	MIGRATION_MAX_PER_STATE_MASS_IMMIGRATION_MULT = 5.0						# Weekly immigration caps are multiplied by this amount by this for mass migrations (after clamping from MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION)
+	MASS_MIGRATION_NEIGHBORING_TARGET_STATE_LIMIT_FRACTION = 0.5				# Fraction of the limit a neighboring state gets compared to the main target state in a mass migration 
+
+##### End Migration #####
 
 	COLONIZATION_RIGHTS_GROWTH_MULTIPLIER = 2.0			# Colonial growth AND max colonial growth are multiplied by this if you have colonization rights
 	COLONIAL_GROWTH_BASE_FACTOR = 0.00001				# Colonial growth generated by a state is ( total pops / 1000 ) * this * modifier from institution
@@ -1780,10 +1842,7 @@ NPops = {
 	JOB_SATISFACTION_PER_SOL_ABOVE_STATE_STRATA_SOL = 2		# Job satisfaction gained per level of SoL above the state average for your strata
 	JOB_SATISFACTION_PER_SOL_ABOVE_COUNTRY_STRATA_SOL = 1	# Job satisfaction gained per level of SoL above the country average for your strata
 	JOB_SATISFACTION_PER_PERCENT_WAGE_RATE_ABOVE_NORMAL = 1	# Job satisfaction gained per pound of workplace wage rate (weekly wage of 10k laborers) above country normal
-	JOB_SATISFACTION_CAN_AFFORD_EXPENSES_THRESHOLD = 1.2	# If a pop's income is greater than this value times their expenses they are considered to be able to afford them
-	JOB_SATISFACTION_CANNOT_AFFORD_EXPENSES_THRESHOLD = 0.8	# If a pop's income is less than this value times their expenses they are considered not able to afford them
 	JOB_SATISFACTION_FROM_CAN_AFFORD_EXPENSES = 1000		# Job satisfaction gained from being able to afford your bug package (and taxes)
-	JOB_SATISFACTION_FROM_CAN_BARELY_AFFORD_EXPENSES = 0	# Job satisfaction gained from being able to barely afford your bug package (and taxes)
 	JOB_SATISFACTION_FROM_CANNOT_AFFORD_EXPENSES = -100		# Job satisfaction gained from not being able to afford your bug package (and taxes)
 	JOB_SATISFACTION_PER_PERCENT_HIGHER_STRATA_QUALIFICATION = -1 # Job satisfaction gained per percent of workforce qualified for a higher strata. Note that qualifications are assumed to overlap and the largest qualification is used in this calculation
 	JOB_SATISFACTION_FROM_EMPLOYMENT = 100					# Job satisfaction gained from having a job

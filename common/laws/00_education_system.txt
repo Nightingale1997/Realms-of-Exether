@@ -72,15 +72,6 @@ law_religious_schools = {
 				value = 0.33
 			}
 		}
-		add = {
-			desc = "POP_CLERGYMEN"			
-			if = {
-				limit = {
-					is_pop_type = clergymen
-				}
-				value = 0.33
-			}
-		}
 
 		add = {
 			desc = "POP_POVERTY"			
@@ -196,15 +187,6 @@ law_public_schools = {
 	
 	pop_support = {
 		value = 0
-		add = {
-			desc = "POP_ACADEMICS"			
-			if = {
-				limit = {
-					is_pop_type = academics
-				}
-				value = 0.25
-			}
-		}
 		add = {
 			desc = "POP_ACADEMICS"			
 			if = {

@@ -81,6 +81,7 @@ ideology_traditionalist = {
 				is_interest_group_type = ig_petty_bourgeoisie
 				is_interest_group_type = ig_landowners
 				is_interest_group_type = ig_devout
+				is_interest_group_type = ig_mages
 			}
 		}
 		scope:interest_group = {
@@ -1787,8 +1788,10 @@ ideology_fascist = {
 		if = {
 			limit = {
 				scope:interest_group = {
-					is_interest_group_type = ig_petty_bourgeoisie
-					is_interest_group_type = ig_armed_forces
+					OR = {
+						is_interest_group_type = ig_petty_bourgeoisie
+						is_interest_group_type = ig_armed_forces
+					}
 				}
 			}
 			add = 50
@@ -1797,8 +1800,10 @@ ideology_fascist = {
 		if = {
 			limit = {
 				scope:interest_group = {
-					is_interest_group_type = ig_trade_unions
-					is_interest_group_type = ig_intelligentsia
+					OR = {
+						is_interest_group_type = ig_trade_unions
+						is_interest_group_type = ig_intelligentsia
+					}
 				}
 			}
 			add = -25
@@ -3401,9 +3406,11 @@ ideology_integralist = {
 		if = {
 			limit = {
 				scope:interest_group = {
-					is_interest_group_type = ig_petty_bourgeoisie
-					is_interest_group_type = ig_devout
-					is_interest_group_type = ig_armed_forces
+					OR = {
+						is_interest_group_type = ig_petty_bourgeoisie
+						is_interest_group_type = ig_devout
+						is_interest_group_type = ig_armed_forces
+					}
 				}
 			}
 			add = 50
@@ -3412,8 +3419,10 @@ ideology_integralist = {
 		if = {
 			limit = {
 				scope:interest_group = {
-					is_interest_group_type = ig_trade_unions
-					is_interest_group_type = ig_intelligentsia
+					OR = {
+						is_interest_group_type = ig_trade_unions
+						is_interest_group_type = ig_intelligentsia
+					}
 				}
 			}
 			add = -25

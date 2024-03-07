@@ -29,3 +29,78 @@ pmg_arcane_building_cloud_collector = {
 		pm_cloud_compactor_cloud_collector
 	}
 }
+
+pmg_blubber = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_basic_blubber_production
+		pm_advanced_blubber_production
+		pm_perfect_blubber_production
+	}
+}
+
+pmg_blubber_military_production = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = { 
+	pm_blubber_standard_production
+	pm_blubber_military_production
+	}
+}
+
+pmg_base_building_wishstone_fields = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		default_building_wishstone_fields
+	}
+}
+pmg_base_building_seasnake_wharf = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_shore_snaking    #this sounds like a euphemism
+		pm_seasnake_trawlers
+		#pm_seasnake_manowars #not implemented yet
+		pm_steam_seasnake_trawlers
+	}
+}
+pmg_medical_supplies_seasnake_wharf = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_medical
+		pm_drink_and_a_prayer #make sure building causes at least 10% mortality else the liquor makes the workers live longer
+		pm_proper_medical_supplies_snakes
+		pm_potions_of_fortitude_snakes
+	}
+}
+pmg_base_building_leviathan_outpost = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+				pm_wooden_whaling_ships
+				pm_manowar_leviathan_ships
+				pm_steam_leviathan_ships
+			}
+}
+pmg_medical_supplies_leviathan_outpost = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_medical
+		pm_drink_and_a_prayer #make sure building causes at least 10% mortality else the liquor makes the workers live longer
+		pm_proper_medical_supplies_leviathan
+		pm_potions_of_fortitude_leviathan
+	}
+}
+pmg_airplanes_leviathan_outpost = {
+	#texture =
+	production_methods = {
+		pm_leviathan_no_airplanes
+		pm_leviathan_airplanes
+	}
+}
+pmg_refrigeration_building_seasnake_wharf = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_unrefrigerated
+		pm_refrigerated_storage_building_seasnake_wharf
+		pm_refrigerated_rail_cars_building_seasnake_wharf
+		pm_flash_freezing_building_seasnake_wharf
+	}
+}

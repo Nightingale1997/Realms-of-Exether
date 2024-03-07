@@ -51,24 +51,33 @@ base_building_nonmagical_comet = {
 		}
 	}
 }
-base_building_cloudsilver_comet = {
+base_building_wishstone_comet = {
 	#texture = "gfx/interface/icons/production_method_icons/gold_mining.dds"
 	
+	state_modifiers = {
+		
+		state_mortality_mult = -0.05  #could scale this to level so it stacks.  If we don't make it stackable, we should raise the base value
+		#workforce_scaled = {
+		#	state_pollution_generation_add = 5 #add magic pollution
+		#}
+	}
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_cloudsilver_add = 20
-			goods_output_gold_add = 2
-			goods_output_iron_add = 12
+			goods_output_wishstone_add = 80
+			goods_output_gold_add = 3
+			goods_output_iron_add = 4
 		}
 		level_scaled = {
 			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 3500
+			building_employment_laborers_add = 3000
 			building_employment_wizards_add = 500
+			building_employment_machinists_add = 500
 		}
 		unscaled = {
 			building_shopkeepers_shares_add = 2
-			building_wizards_shares_add = 2
+			building_wizards_shares_add = 3
 			building_laborers_shares_add = 1
+			building_machinists_shares_add = 1
 			building_wizards_mortality_mult = 0.1
 			building_laborers_mortality_mult = 0.2
 		}
@@ -76,7 +85,7 @@ base_building_cloudsilver_comet = {
 	
 	country_modifiers = {
 		workforce_scaled = {
-			country_minting_add = 500  #represents the government taxing the haul
+			country_minting_add = 1500  #represents the government taxing the haul
 		}
 	}
 }
