@@ -124,6 +124,30 @@ pm_steam_donkey_building_logging_camp = {
 	}
 }
 
+pm_treebonkers = { #name wip, but hilarious
+	texture = "gfx/interface/icons/production_method_icons/chainsaws.dds"
+	unlocking_technologies = {
+		atmospheric_engine  
+	}
+	disallowing_laws = {
+		law_industry_banned
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_gizmos_add = 10
+			goods_input_tools_add = 2
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = -2100
+			building_employment_machinists_add = 200
+			building_employment_wizards_add = 200
+		}
+	}
+}
+
 pm_chainsaws = {
 	texture = "gfx/interface/icons/production_method_icons/chainsaws.dds"
 	unlocking_technologies = {
@@ -136,7 +160,7 @@ pm_chainsaws = {
 		workforce_scaled = {
 			# input goods
 			goods_input_tools_add = 10
-			goods_input_oil_add = 5
+			goods_input_blubber_add = 5
 		}
 
 		level_scaled = {

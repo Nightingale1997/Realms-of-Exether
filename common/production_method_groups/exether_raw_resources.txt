@@ -56,9 +56,9 @@ pmg_base_building_wishstone_fields = {
 pmg_base_building_seasnake_wharf = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		pm_simple_fishing
+		pm_shore_snaking    #this sounds like a euphemism
 		pm_seasnake_trawlers
-		pm_seasnake_clippers
+		#pm_seasnake_manowars #not implemented yet
 		pm_steam_seasnake_trawlers
 	}
 }
@@ -75,7 +75,7 @@ pmg_base_building_leviathan_outpost = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 				pm_wooden_whaling_ships
-				pm_leviathan_clippers
+				pm_manowar_leviathan_ships
 				pm_steam_leviathan_ships
 			}
 }
