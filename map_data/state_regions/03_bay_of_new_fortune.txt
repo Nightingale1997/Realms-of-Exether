@@ -232,6 +232,15 @@ STATE_PACHAQULLU = {
     farm = x59EBD1
     mine = x5FA2F6
     port = x70E8EE
+    arable_land = 30
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_fishing = 5
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 30
+    }
     naval_exit_id = 3051
 }
 STATE_INTIWINA = {
@@ -243,6 +252,15 @@ STATE_INTIWINA = {
     farm = x51CBF2
     mine = x54F4B4
     port = x65C4DB
+    arable_land = 10
+    arable_resources = { "bg_livestock_ranches" }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 30
+    }
+    capped_resources = {
+        bg_opium_plantations = 42
+    }
     naval_exit_id = 3065
 }
 STATE_WAYLLAPAMPA = {
@@ -265,6 +283,11 @@ STATE_MALLKIYAKU = {
     farm = x96F5BF
     mine = x9BD4E3
     port = xA0AABF
+    arable_land = 30
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_fishing = 8
+    }
     naval_exit_id = 3051
 }
 STATE_QAQAMANTA = {

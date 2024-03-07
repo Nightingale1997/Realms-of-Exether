@@ -1339,7 +1339,7 @@ types construction_in_outliner
 							FancyTooltip_Building = {}
 						}
 						onclick = "[InformationPanelBar.OpenBuildingDetailsPanel(Building.AccessSelf)]"
-
+						using = tooltip_below
 						size = { 30 30 }
 						texture = "[Building.GetTexture]"
 
