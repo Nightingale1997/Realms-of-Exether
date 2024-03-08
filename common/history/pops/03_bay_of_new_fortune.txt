@@ -117,7 +117,29 @@
 		}
 	}
 	s:STATE_WAYLLAPAMPA = {
-
+		region_state:TIT = {
+			create_pop = {
+				culture = yachaymanchi
+				size = 245953
+			}
+			create_pop = {
+				culture = kusichaki
+				size = 904215
+			}
+			create_pop = {
+				culture = dunaq
+				size = 304215
+			}
+			create_pop = {
+				culture = vandori
+				size = 4646
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = gnoll
+				size = 32020
+			}
+		}
 	}
 	s:STATE_MALLKIYAKU = {
 		region_state:KUN = {
@@ -151,13 +173,65 @@
 	
 	}
 	s:STATE_WAMANPATA = {
-	
+		region_state:GKP = {
+			create_pop = {
+				culture = mgzavri
+				size = 342000
+			}
+			create_pop = {
+				culture = dunaq
+				size = 222396
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = kaalkid
+				size = 14000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = lake_thalorian
+				size = 5000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = kusichaki
+				size = 4000
+			}
+		}
 	}
 	s:STATE_LLANKAYUQ = {
 	
 	}
 	s:STATE_TIKAQULLU = {
-	
+		region_state:TIT = {
+			create_pop = {
+				culture = kusichaki
+				size = 1165804
+			}
+			create_pop = {
+				culture = yachaymanchi
+				pop_type = aristocrats
+				size = 19204
+			}
+			create_pop = {
+				culture = vandori
+				size = 2000
+			}
+			create_pop = {
+				culture = dunaq
+				size = 100000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = tqalt
+				size = 11000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = gnoll
+				size = 13000
+			}
+		}
 	}
 	s:STATE_PUKARAQOCHA = {
 	
@@ -295,14 +369,15 @@
 				size = 30000
 			}
 			create_pop = {
-				culture = lake_thalorian
-				religion = orc_mother
-				size = 2500
-			}
-			create_pop = {
-				culture = waste_walker
+				culture = dunaq
 				size = 1000
 				pop_type = slaves
+			}
+		}
+		region_state:KAW = {
+			create_pop = {
+				culture = dunaq
+				size = 210000
 			}
 		}
 	}
