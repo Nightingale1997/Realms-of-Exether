@@ -213,6 +213,10 @@
 			}
 		}
 	}
+	s:STATE_NAWI_OASIS = {
+		region_state:TAY={
+		}
+	}
 	s:STATE_LLANKAYUQ = {
 		region_state:KAN = {
 			create_pop = {
@@ -262,7 +266,30 @@
 		}
 	}
 	s:STATE_PUKARAQOCHA = {
-	
+		region_state:WAY = {
+			create_pop = {
+				culture = kusichaki
+				size = 21000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = rahoru
+				size = 2000
+			}
+			create_pop = {
+				culture = yachaymanchi
+				size = 2000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = gnoll
+				size = 5000
+			}
+			create_pop = {
+				culture = dunaq
+				size = 48396
+			}
+		}
 	}
 	s:STATE_KUCHUYPATA = {
 		region_state:PAC = {
@@ -303,7 +330,25 @@
 		}
 	}
 	s:STATE_PISQUPATA = {
-	
+		region_state:TAY = {
+			create_pop = {
+				culture = dunaq
+				size = 36000
+			}
+			create_pop = {
+				culture = kusichaki
+				size = 12000
+			}
+			create_pop = {
+				culture = yachaymanchi
+				size = 4000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = lake_thalorian
+				size = 4400
+			}
+		}
 	}
 	s:STATE_QOMERQOCHA = {
 	
