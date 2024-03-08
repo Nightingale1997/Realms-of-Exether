@@ -167,7 +167,21 @@
 		}
 	}
 	s:STATE_QAQAMANTA = {
-
+		region_state:KAN = {
+			create_pop = {
+				culture = dunaq
+				size = 124000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = kusichaki
+				size = 5200
+			}
+			create_pop = {
+				culture = kusichaki
+				size = 45000
+			}
+		}
 	}
 	s:STATE_SUYANAKU = {
 	
@@ -200,7 +214,21 @@
 		}
 	}
 	s:STATE_LLANKAYUQ = {
-	
+		region_state:KAN = {
+			create_pop = {
+				culture = mgzavri
+				size = 4000
+			}
+			create_pop = {
+				culture = dunaq
+				size = 40000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = kusichaki
+				size = 4000
+			}
+		}
 	}
 	s:STATE_TIKAQULLU = {
 		region_state:TIT = {
@@ -258,7 +286,21 @@
 		}
 	}
 	s:STATE_MIKHUYUQ = {
-	
+		region_state:KAW = {
+			create_pop = {
+				culture = dunaq
+				size = 65600
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = rahoru
+				size = 12400
+			}
+			create_pop = {
+				culture = kusichaki
+				size = 8004
+			}
+		}
 	}
 	s:STATE_PISQUPATA = {
 	

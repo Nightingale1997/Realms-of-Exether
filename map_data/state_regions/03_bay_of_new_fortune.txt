@@ -313,6 +313,17 @@ STATE_QAQAMANTA = {
     farm = x7FE1E2
     mine = x87BCD9
     port = x88E2F8
+    arable_land = 40
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 36
+        bg_lead_mining = 18
+        bg_sulfur_mining = 24
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 30
+    }
     naval_exit_id = 3065
 }
 STATE_SUYANAKU = {
@@ -356,6 +367,18 @@ STATE_LLANKAYUQ = {
     farm = x67F0E4
     mine = x68CBD1
     port = x69ADEC
+    arable_land = 10
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 16
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 5
+    }
+    capped_resources = {
+        bg_opium_plantations = 23
+    }
     naval_exit_id = 3065
 }
 STATE_TIKAQULLU = {
@@ -415,6 +438,15 @@ STATE_MIKHUYUQ = {
     farm = x5DAAFD
     mine = x82C6DF
     port = x83DCF7
+    arable_land = 10
+    arable_resources = { "bg_livestock_ranches" }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 5
+    }
+    capped_resources = {
+        bg_opium_plantations = 10
+    }
     naval_exit_id = 3065
 }
 STATE_PISQUPATA = {
