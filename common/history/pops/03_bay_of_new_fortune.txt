@@ -163,7 +163,25 @@
 	
 	}
 	s:STATE_KUCHUYPATA = {
-	
+		region_state:PAC = {
+			create_pop = {
+				culture = kusichaki
+				size = 374188
+			}
+			create_pop = {
+				culture = vandori
+				size = 12800
+			}
+			create_pop = {
+				culture = yachaymanchi
+				size = 71800
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = dunaq
+				size = 34000
+			}
+		}
 	}
 	s:STATE_MIKHUYUQ = {
 	

@@ -368,6 +368,13 @@ STATE_KUCHUYPATA = {
     farm = x81FCCB
     mine = x84E7BD
     port = x96F1FC
+    arable_land = 50
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_sugar_plantations" "bg_banana_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_logging = 6
+        bg_fishing = 7
+        bg_coal_mining = 6
+    }
     naval_exit_id = 3051
 }
 STATE_MIKHUYUQ = {
