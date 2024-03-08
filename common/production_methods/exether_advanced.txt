@@ -333,4 +333,19 @@ pm_modern_port_airship = {
 			state_infrastructure_add = 10
 		}
 	}
-}	
+}
+
+pm_magocrats = {
+	texture = "gfx/interface/icons/production_method_icons/ownership_aristocrats.dds"
+	
+	unlocking_laws = {
+		law_hereditary_bureaucrats #mage laws add
+	}
+	
+	building_modifiers = {
+		level_scaled = {
+			building_employment_wizards_add = 250
+			building_employment_bureaucrats_add = 250
+		}
+	}			
+}
