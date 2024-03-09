@@ -2122,7 +2122,29 @@
 	}
   }
   s:STATE_SALTSHORE = {
-
+	region_state:YKU = {
+		create_pop = {
+			culture = waste_walker
+			size = 378696
+		}
+		create_pop = {
+			culture = kusichaki
+			size = 578696
+		}
+		create_pop = {
+			culture = yachaymanchi
+			size = 116004
+		}
+		create_pop = {
+			culture = vandori
+			size = 70504
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = tqalt
+			size = 62000
+		}
+	}
   }
   s:STATE_BLOODAXE_TERRITORY = {
 	region_state:RUX = {
