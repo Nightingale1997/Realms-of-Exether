@@ -415,6 +415,11 @@ STATE_WADAWURRUM = {
     farm = xAE67F7
     mine = xAF9BBB
     port = xC49EA8
+	arable_land = 201
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 14
+    }
     naval_exit_id = 3066
 }
 STATE_JALAGAMKATTA = {
@@ -426,6 +431,11 @@ STATE_JALAGAMKATTA = {
     farm = xCDBBEF
     mine = xDBE287
     port = xE6CC95
+	arable_land = 92
+	arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_tea_plantations" }
+	capped_resources = {
+		bg_logging = 5
+	}
     naval_exit_id = 3066
 }
 STATE_KARINGARRI = {
@@ -437,6 +447,11 @@ STATE_KARINGARRI = {
     farm = xA98BD7
     mine = xAD92C4
     port = xBE9F9A
+	arable_land = 292
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 13
+    }
     naval_exit_id = 3066
 }
 STATE_KULUWANDU = {
@@ -514,6 +529,13 @@ STATE_KURRADUYARRA = {
     farm = xC8A79E
     mine = xE571DE
     port = xF2C2CB
+	arable_land = 88
+	arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_tea_plantations" }
+	capped_resources = {
+		bg_logging = 7
+		bg_iron_mining = 50
+		bg_lead_mining = 30
+	}
     naval_exit_id = 3066
 }
 STATE_WARRANGBANU = {
@@ -525,6 +547,13 @@ STATE_WARRANGBANU = {
     farm = xB593CE
     mine = xB8E97B
     port = xDEE692
+	arable_land = 102
+	arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_tea_plantations" }
+	capped_resources = {
+		bg_logging = 7
+		bg_coal_mining = 70
+		bg_iron_mining = 60
+	}
     naval_exit_id = 3066
 }
 #STATE_BULARRANG = {
@@ -551,6 +580,11 @@ STATE_DANKASEMBE = {
     farm = xD147F0
     mine = xF571AD
     port = xFDF0AC
+	arable_land = 237
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 18
+    }
     naval_exit_id = 3066
 }
 
@@ -962,6 +996,11 @@ STATE_NEFUDISTAN = {
     farm = x74F49F
     mine = xB783DF
     port = xCFE276
+	arable_land = 21
+	arable_resources = { "bg_livestock_ranches" }
+	capped_resources = {
+		bg_opium_plantations = 12
+	}
     naval_exit_id = 3066
 }
 STATE_SAMARKH = {
