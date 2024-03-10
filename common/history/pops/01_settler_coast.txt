@@ -84,20 +84,50 @@
   }
 
   s:STATE_SAINT_MER = {
-		  region_state:CER = {
-			    create_pop = {
-				      culture = ocelian 
-				      size = 30004
-			    }
-			    create_pop = {
-				      culture = ceraunian
-				      size = 320881
-			    }			         
-		  }
+	region_state:CER = {
+		create_pop = {
+			culture = ceraunian
+			size = 629796
+		}
+		create_pop = {
+			culture = vandori
+			size = 2600
+		}
+		create_pop = {
+			culture = ocelian
+			size = 117196
+		}
+		create_pop = {
+			culture = rivierling
+			religion = church_of_man
+			size = 81200
+		}
+		create_pop = {
+			culture = rivierling
+			size = 28000
+		}
+	}
   }
 
   s:STATE_CAEL_VALEN = {
-
+	region_state:CER = {
+		create_pop = {
+			culture = ceraunian
+			size = 1018800
+		}
+		create_pop = {
+			culture = rivierling
+			size = 104000
+		}
+		create_pop = {
+			culture = coast_halfling
+			size = 20000
+		}
+		create_pop = {
+			culture = vandori
+			size = 5000
+		}
+	}
   }
 
   s:STATE_LANDING_AT_SEA = {
@@ -107,8 +137,16 @@
 				size = 1599083
 			}
 			create_pop = {
-				culture = dorite #Change when we add minority cultures to ceraun
-				size = 1018017
+				culture = ocelian
+				size = 518017
+			}
+			create_pop = {
+				culture = rivierling
+				size = 158017
+			}
+			create_pop = {
+				culture = coast_halfling
+				size = 358017
 			}
 		}
   }
@@ -123,15 +161,68 @@
   }
 
   s:STATE_THE_CHASM = {
-
+	region_state:CER = {
+		create_pop = {
+			culture = ceraunian
+			size = 1453212
+		}
+		create_pop = {
+			culture = vandori
+			size = 5072
+		}
+		create_pop = { 
+			culture = rivierling
+			size = 150106
+		}
+		create_pop = {
+			culture = rivierling
+			religion = church_of_man
+			size = 50106
+		}
+	}
   }
 
   s:STATE_ORCBANE_PASS = {
-
+	region_state:CER = {
+		create_pop = {
+			culture = rivierling
+			size = 1196400
+		}
+		create_pop = {
+			culture = ceraunian
+			size = 383996
+		}
+		create_pop = {
+			culture = plaguedweller
+			size = 21000
+		}
+	}
   }
 
   s:STATE_PENDYM_GWYN = {
-
+	region_state:CER = {
+		create_pop = {
+			culture = ceraunian
+			size = 452400
+		}
+		create_pop = {
+			culture = vandori
+			size = 2200
+		}
+		create_pop = {
+			culture = rivierling
+			religion = church_of_man
+			size = 144000
+		}
+		create_pop = {
+			culture = rivierling
+			size = 188400
+		}
+		create_pop = {
+			culture = coast_halfling
+			size = 88400
+		}
+	}
   }
 
   s:STATE_RIVER_MEDDEN = {
@@ -147,11 +238,15 @@
 	}
 	region_state:CER = {
 		create_pop = {
-			culture = ceraunian
+			culture = rivierling
 			size = 600989
 		}
 		create_pop = {
 			culture = coast_halfling
+			size = 15989
+		}
+		create_pop = {
+			culture = ceraunian
 			size = 100989
 		}
 		create_pop = {
@@ -828,7 +923,20 @@
   }
 
   s:STATE_FERNSEA = {
-
+	region_state:CER = {
+		create_pop = {
+			culture = ceraunian
+			size = 1598704
+		}
+		create_pop = {
+			culture = vandori
+			size = 8800
+		}
+		create_pop = {
+			culture = rivierling
+			size = 20000
+		}
+	}
   }
 
   s:STATE_SKYPIERCER_PEAK = {

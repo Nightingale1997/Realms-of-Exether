@@ -64,7 +64,8 @@ s:STATE_SAINT_MER = {
         country = c:CER
         owned_provinces = { "x41EBFE" "x5EC2F7" "x8FEFF0" "x9AF899" "x9DEECB" "xA49DC5" "xAEA1E3" "xAED79F" "xBF81D9" "xC1D0A3" "xD25FE4" "xDCEFAC" "xE08DEE" "xE0BD66" "xE465DD" "xE4E0CC" "xE5D2EC" "xE5DD60" "xE65EE6" "xF360BD" "xF375DB" "xF39279" "xF6E529" "xF7D28F" "xFBE6ED" }
 }
-add_homeland = cu:dorite
+add_homeland = cu:ceraunian
+add_homeland = cu:ocelian
 }
 
 s:STATE_CAEL_VALEN = {
@@ -72,7 +73,7 @@ s:STATE_CAEL_VALEN = {
         country = c:CER
         owned_provinces = { "x38FAE1" "x3CFCCC" "x3DCFEF" "x4EDAED" "x4FE6D1" "x51E2F8" "x67D1F4" "x8EFDFC" "x9475F3" "x94E9A5" "xA182F8" "xA1F36F" "xA7F5C9" "xA9ACEA" "xA9EBDC" "xB1E5A7" "xB5ECCD" "xB998B8" "xC9B89B" "xCDBFCC" "xCDD1E4" "xCEB6B1" "xD588E9" "xDF63F9" "xE189A0" "xE4DDFA" "xE6F44F" "xE75EB6" "xE9C79D" "xED44DF" "xF0E728" "xF5EED9" "xF6D4CD" "xFC32E0" }
 }
-add_homeland = cu:dorite
+add_homeland = cu:ceraunian
 }
 
 s:STATE_LANDING_AT_SEA = {
@@ -98,7 +99,7 @@ s:STATE_THE_CHASM = {
         country = c:CER
         owned_provinces = { "x75CAEB" "x76D4D2" "x76F5D1" "x7EB0DF" "x83D2C4" "x84B2C3" "x89FCD6" "x8FA6DC" "x94F596" "x97E9A5" "xA0E3D4" "xA8EAE0" "xB29BF3" "xB3F3CE" "xB4C2DF" "xB581C0" "xB5FA65" "xB683EB" "xB87CF7" "xB9F4AD" "xC2D964" "xC3A4A4" "xC5CA9C" "xC77FB1" "xC94DE4" "xC998AE" "xCCA1E4" "xCDB8E8" "xCDCACD" "xCE7FBA" "xCECD8B" "xCFDD86" "xD1A2DE" "xD2CFCD" "xD845DE" "xDDEA60" "xDFFE27" "xE67CDA" "xE7A2BB" "xE7BEEB" "xE7D3D8" "xE999C3" "xEA9B86" "xEAEBFD" "xF28994" "xF3EFDA" "xF45EF9" "xF4F9E1" "xF7E181" "xFAC932" "xFCD52B" "xFD7DD6" "xFDCB47" "xFEF4C2" }
 }
-add_homeland = cu:dorite
+add_homeland = cu:ceraunian
 }
 
 s:STATE_ORCBANE_PASS = {
@@ -106,7 +107,7 @@ s:STATE_ORCBANE_PASS = {
         country = c:CER
         owned_provinces = { "x44EEC8" "x60D4C8" "x69C4D8" "x76BFF6" "x7AE3B2" "x7DD7BF" "x83E6DA" "x8ADF8D" "x8DE2FB" "x8EDF89" "x8FEFF8" "x90E7D5" "x92ADBF" "x95E3F8" "x98E5A0" "x99F1BB" "x9BDADA" "xA36CF6" "xA5EA72" "xA8AEFD" "xB2EEF7" "xBE7EC9" "xBEE7E5" "xC4D9AE" "xC4F960" "xC597CC" "xC7B1D1" "xDBDEB3" "xDDEC90" "xE0EB65" "xE2EB79" "xE9E5B6" "xEBE9CC" "xEFF4AE" "xF7D9B6" "xFA60F2" }
 }
-add_homeland = cu:dorite
+add_homeland = cu:rivierling
 }
 
 s:STATE_PENDYM_GWYN = {
@@ -114,7 +115,8 @@ s:STATE_PENDYM_GWYN = {
         country = c:CER
         owned_provinces = { "x2BFAE1" "x30F4F4" "x46E0E6" "x61EEB2" "x78CCF3" "x82BFE6" "x8EEBA0" "x8FD5F6" "x98F46C" "x9AC39E" "xA6CBDC" "xA772F5" "xAAF370" "xADC4E0" "xB98BF2" "xC5AAF5" "xC5FED6" "xC8F397" "xCAF4F6" "xCDCDF5" "xCDDBB4" "xCDE1F9" "xCF96DB" "xD3F1BA" "xD6D7A2" "xD6EFF2" "xD887A3" "xD9FA3A" "xE0B77F" "xE9C3C4" "xE9E651" "xEA7AD1" "xEB799F" "xEEA67F" "xF07F94" "xF3EB58" "xF48FF5" "xF4B5EF" "xF880E3" "xF9ACF2" "xF9DA83" "xFB40D5" "xFC6EA7" "xFC7DC5" "xFE56AC" }
 }
-add_homeland = cu:dorite
+add_homeland = cu:ceraunian
+add_homeland = cu:rivierling
 }
 
 s:STATE_RIVER_MEDDEN = {
@@ -128,7 +130,7 @@ create_state = {
 }
 
 add_homeland = cu:coast_halfling
-add_homeland = cu:wealder
+add_homeland = cu:rivierling
 add_claim = c:MID
 }
 
@@ -577,7 +579,7 @@ s:STATE_FERNSEA = {
         country = c:CER
         owned_provinces = { "x15FDEC" "x21F8E7" "x8188F9" "x89D8C4" "x8FCF9B" "xA370F4" "xA5D78C" "xAAE0A4" "xAAF997" "xAE66E2" "xAFF7D7" "xB0C6E5" "xB1EB76" "xB4E5D8" "xBEEDE2" "xCBA1D8" "xCDBCCA" "xD7E75B" "xDADB51" "xDB7CA5" "xE5F625" "xE8C34E" "xEA31E9" "xEAF64D" "xF249E4" }
 }
-add_homeland = cu:dorite
+add_homeland = cu:ceraunian
 }
 
 s:STATE_SKYPIERCER_PEAK = {

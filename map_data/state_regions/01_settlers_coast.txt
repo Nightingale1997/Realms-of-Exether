@@ -123,6 +123,12 @@ STATE_SAINT_MER = {
     farm = x8FEFF0
     mine = x9AF899
     port = x9DEECB
+    arable_land = 40
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 17
+        bg_fishing = 10
+    }
     naval_exit_id = 3062
 }
 STATE_CAEL_VALEN = {
@@ -134,6 +140,12 @@ STATE_CAEL_VALEN = {
     farm = x3DCFEF
     mine = x4EDAED
     port = x4FE6D1
+    arable_land = 55
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 11
+        bg_fishing = 10
+    }
     naval_exit_id = 3062
 }
 STATE_LANDING_AT_SEA = {
@@ -173,6 +185,14 @@ STATE_THE_CHASM = {
     farm = x76F5D1
     mine = x7EB0DF
     port = x83D2C4
+    arable_land = 100
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_coal_mining = 80
+        bg_iron_mining = 30
+        bg_sulfur_mining = 80
+        bg_logging = 6
+    }
     naval_exit_id = 3062
 }
 STATE_ORCBANE_PASS = {
@@ -184,6 +204,12 @@ STATE_ORCBANE_PASS = {
     farm = x69C4D8
     mine = x76BFF6
     port = x7AE3B2
+    arable_land = 75
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 44
+        bg_logging = 20
+    }
     naval_exit_id = 3062
 }
 STATE_PENDYM_GWYN = {
@@ -195,6 +221,13 @@ STATE_PENDYM_GWYN = {
     farm = x46E0E6
     mine = x61EEB2
     port = x78CCF3
+    arable_land = 40
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_sulfur_mining = 40
+        bg_logging = 8
+        bg_fishing = 10
+    }
     naval_exit_id = 3062
 }
 STATE_RIVER_MEDDEN = {
@@ -1055,6 +1088,12 @@ STATE_FERNSEA = {
     farm = x8188F9
     mine = x89D8C4
     port = x8FCF9B
+    arable_land = 50
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 44
+        bg_logging = 6
+    }
     naval_exit_id = 3062
 }
 STATE_SKYPIERCER_PEAK = {
