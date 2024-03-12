@@ -2121,28 +2121,81 @@
 		}
 	}
   }
+  s:STATE_BLOODTHORN_WASTES_2 = {
+	region_state:BLD = {
+		create_pop = {
+			culture = tqalt
+			size = 154375
+		}
+		create_pop = {
+			culture = tqalt
+			religion = orc_mother
+			size = 6000
+		}
+		create_pop = {
+			culture = waste_walker
+			size = 9004
+		}
+		create_pop = {
+			culture = stranfolk
+			size = 1998
+			pop_type = slaves
+		}
+		create_pop = {
+			culture = glabrekthorn
+			size = 1262
+			pop_type = slaves
+		}
+	}
+  }
+
   s:STATE_SALTSHORE = {
 	region_state:YKU = {
 		create_pop = {
 			culture = waste_walker
-			size = 378696
+			size = 315696
 		}
 		create_pop = {
 			culture = kusichaki
-			size = 578696
+			size = 537696
 		}
 		create_pop = {
 			culture = yachaymanchi
-			size = 116004
+			size = 101004
 		}
 		create_pop = {
 			culture = vandori
-			size = 70504
+			size = 60504
 		}
 		create_pop = {
 			pop_type = slaves
 			culture = tqalt
 			size = 62000
+		}
+	}
+  }
+  s:STATE_SALTSHORE_2 = {
+	region_state:YKU = {
+		create_pop = {
+			culture = waste_walker
+			size = 53356
+		}
+		create_pop = {
+			culture = kusichaki
+			size = 278496
+		}
+		create_pop = {
+			culture = yachaymanchi
+			size = 46407
+		}
+		create_pop = {
+			culture = vandori
+			size = 20536
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = tqalt
+			size = 22000
 		}
 	}
   }
