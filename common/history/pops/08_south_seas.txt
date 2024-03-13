@@ -201,11 +201,61 @@
 	}
 
 	s:STATE_ALENMAR = {
-
+		region_state:LAC = {
+			create_pop = {
+				culture = bakibi
+				size = 12040
+			}
+			create_pop = {
+				culture = east_lacertian
+				size = 32788
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = east_lacertian
+				size = 2300
+			}
+			create_pop = {
+				culture = east_lacertian
+				religion = church_of_man
+				size = 3387
+			}
+			create_pop = {
+				culture = ocelian
+				size = 210
+			}
+		}
 	}
 
 	s:STATE_TERRABELA = {
-
+		region_state:LAC = {
+			create_pop = {
+				culture = east_lacertian
+				size = 90122
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = east_lacertian
+				size = 12212
+			}
+			create_pop = {
+				culture = ocelian
+				size = 300
+			}
+			create_pop = {
+				culture = bakibi
+				size = 24072
+			}
+			create_pop = {
+				culture = bakibi
+				religion = church_of_man
+				size = 2200
+			}
+			create_pop = {
+				culture = south_sea_ravager
+				size = 3400
+			}
+		}
 	}
 
 	s:STATE_MALANJAPORT = {
@@ -223,7 +273,34 @@
 	}
 
 	s:STATE_APAFONTE = {
-
+		region_state:LAC = {
+			create_pop = {
+				culture = east_lacertian
+				size = 130123
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = east_lacertian
+				size = 12422
+			}
+			create_pop = {
+				culture = ocelian
+				size = 800
+			}
+			create_pop = {
+				culture = bakibi
+				size = 44978
+			}
+			create_pop = {
+				culture = bakibi
+				religion = church_of_man
+				size = 5200
+			}
+			create_pop = {
+				culture = south_sea_ravager
+				size = 5120
+			}
+		}
 	}
 
 	s:STATE_PORTANGA = {
@@ -231,11 +308,45 @@
 	}
 
 	s:STATE_LISAZISA = {
-
+		region_state:COV = {
+			create_pop = {
+				culture = bakibi
+				size = 5007
+			}
+			create_pop = { 
+				culture = dumonian
+				size = 100626
+			}
+			create_pop = { 
+				culture = ocelian
+				size = 1013
+			}
+			create_pop = {
+				culture = south_sea_ravager
+				size = 19896
+			}
+			create_pop = { 
+				culture = east_lacertian
+				size = 4834
+			}
+		}
 	}
 
 	s:STATE_BELENDLE = {
-
+		region_state:COV = {
+			create_pop = { # Includes mulatto population.
+				culture = south_sea_ravager
+				size = 830824
+			}
+			create_pop = {
+				culture = dumonian
+				size = 13060
+			}
+			create_pop = { 
+				culture = east_lacertian
+				size = 13543
+			}
+		}
 	}
 
 	s:STATE_ALAHAZOTRA = {
