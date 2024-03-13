@@ -117,7 +117,12 @@
 	}
 
 	s:STATE_MAXANGA = {
-
+		region_state:RAT = {
+			create_pop = {
+				culture = east_lacertian
+				size = 400102
+			}
+		}
 	}
 
 	s:STATE_BEMVULA = {
@@ -125,7 +130,16 @@
 	}
 
 	s:STATE_BELOZA = {
-
+		region_state:RAT = {
+			create_pop = {
+				culture = east_lacertian
+				size = 351996
+			}
+			create_pop = {
+				culture = south_sea_ravager
+				size = 20404
+			}
+		}
 	}
 
 	s:STATE_JOVEXA = {

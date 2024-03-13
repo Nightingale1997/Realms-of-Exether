@@ -128,6 +128,23 @@ STATE_MAXANGA = {
     farm = xBCAADE
     mine = xBFF5B2
     port = xC1F979
+    arable_land = 30
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_dye_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_iron_mining = 24
+        bg_sulfur_mining = 32
+        bg_logging = 16
+        bg_fishing = 10
+        bg_whaling = 2
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 12
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 10
+    }
     naval_exit_id = 3012
 }
 STATE_BEMVULA = {
@@ -150,6 +167,22 @@ STATE_BELOZA = {
     farm = x9FF2FD
     mine = xB8AD95
     port = xC683B9
+    arable_land = 40
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_dye_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_iron_mining = 18
+        bg_logging = 20
+        bg_fishing = 9
+        bg_whaling = 2
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 8
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 10
+    }
     naval_exit_id = 3067
 }
 STATE_JOVEXA = {
