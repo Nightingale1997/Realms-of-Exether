@@ -360,7 +360,7 @@
 		region_state:ARR = {
 			create_pop = {
 				culture = bossardi
-				size = 1949056
+				size = 1049056
 			}
 			create_pop = {
 				culture = mousefolk
@@ -376,6 +376,48 @@
 			}
 		}
   }
+
+  s:STATE_THE_AMBER_RUN_2 = {
+	region_state:ARR = {
+		create_pop = {
+			culture = bossardi
+			size = 449056
+		}
+		create_pop = {
+			culture = mousefolk
+			size = 32770
+		}
+		create_pop = {
+			culture = dorite
+			size = 5248
+		}
+  create_pop = {
+			culture = wealder
+			size = 9598
+		}
+	}
+}
+
+s:STATE_THE_AMBER_RUN_3 = {
+	region_state:ARR = {
+		create_pop = {
+			culture = bossardi
+			size = 649056
+		}
+		create_pop = {
+			culture = mousefolk
+			size = 49750
+		}
+		create_pop = {
+			culture = dorite
+			size = 5248
+		}
+  create_pop = {
+			culture = wealder
+			size = 16598
+		}
+	}
+}
 
   s:STATE_MISTREACH = {
 		region_state:ARR = {
