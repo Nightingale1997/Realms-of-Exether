@@ -211,7 +211,7 @@ STATE_THE_CHASM = {
 STATE_ORCBANE_PASS = {
     id = 4147
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x60D4C8" "x69C4D8" "x76BFF6" "x76D4D2" "x83E6DA" "x8ADF8D" "x8FA6DC" "x8FEFF8" "x92ADBF" "x99F1BB" "xA36CF6" "xA5EA72" "xA8AEFD" "xA8EAE0" "xB2EEF7" "xB4C2DF" "xBEE7E5" "xC3A4A4" "xC4D9AE" "xC4F960" "xC5CA9C" "xC77FB1" "xD1A2DE" "xD2CFCD" "xE0EB65" "xE2EB79" "xE9E5B6" "xEBE9CC" "xEFF4AE" "xF4F9E1" "xF7D9B6" "xFA60F2" "xFCD52B" }
+    provinces = { "x60D4C8" "x69C4D8" "x76BFF6" "x76D4D2" "x83E6DA" "x8ADF8D" "x8FA6DC" "x8FEFF8" "x92ADBF" "x99F1BB" "xA36CF6" "xA5EA72" "xA8AEFD" "xA8EAE0" "xB2EEF7" "xB4C2DF" "xBEE7E5" "xC3A4A4" "xC4D9AE" "xC4F960" "xC5CA9C" "xC77FB1" "xD1A2DE" "xD2CFCD" "xE0EB65" "xE2EB79" "xE9E5B6" "xEBE9CC" "xEFF4AE" "xF0DED8" "xF4F9E1" "xF5EBA8" "xF7D9B6" "xFA60F2" "xFCD52B" }
     city = x44EEC8
     wood = x60D4C8
     farm = x69C4D8
@@ -228,7 +228,7 @@ STATE_ORCBANE_PASS = {
 STATE_ORCBANE_PASS_2 = {
     id = 4711
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x44EEC8" "x7AE3B2" "x7DD7BF" "x95E3F8" "x98E5A0" "x9BDADA" "xBE7EC9" "xC7B1D1" "xD6D7A2" "xDDEC90" }
+    provinces = { "x44EEC8" "x7AE3B2" "x7DD7BF" "x84D0E7" "x95E3F8" "x98E5A0" "x9BDADA" "xAED8C1" "xBE7EC9" "xC7B1D1" "xD6D7A2" "xDDEC90" }
 
     arable_land = 17
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" "bg_tobacco_plantations" }
@@ -289,7 +289,7 @@ STATE_EASTERN_PLAGUEWOOD = {
     traits = { "state_trait_plaguewood" }
     id = 4151
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x62CEDF" "x77D2F9" "x809EF1" "x8DE2FB" "x8EDF89" "x90E7D5" "x92EC98" "xA1C0C3" "xA3B2E0" "xACC392" "xB29BD0" "xB5E487" "xB6BDC8" "xCCB086" "xD39DB3" "xD3E2EA" "xDAD0F3" "xE6DED8" "xEE5FB2" "xF07899" "xF0A9DB" "xF0DED8" "xF1A098" "xF1B891" "xF36EF7" "xF47FD8" "xF4C371" "xF5A48B" "xF5EBA8" "xF926E1" "xFACD77" "xFEFE7A" }
+    provinces = { "x62CEDF" "x77D2F9" "x809EF1" "x8DE2FB" "x8EDF89" "x90E7D5" "x92EC98" "xA1C0C3" "xA3B2E0" "xACC392" "xB29BD0" "xB5E487" "xB6BDC8" "xCCB086" "xD39DB3" "xD3E2EA" "xDAD0F3" "xE6DED8" "xEE5FB2" "xF07899" "xF0A9DB" "xF1A098" "xF1B891" "xF36EF7" "xF47FD8" "xF4C371" "xF5A48B" "xF926E1" "xFACD77" "xFEFE7A" }
     city = x53FCDC
     wood = x54A3FE
     farm = x5BEDAE
@@ -301,7 +301,7 @@ STATE_EASTERN_PLAGUEWOOD_2 = {
     traits = { "state_trait_plaguewood" }
     id = 4705
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x53FCDC" "x54A3FE" "x5BEDAE" "x60DBCE" "x69F9B7" "x84D0E7" "x94D0E8" "xA3B1CB" "xA6D7AC" "xAED8C1" "xB57BE4" "xB5B28E" "xC07EF9" "xCCCCC7" "xCE96A0" "xD5B9FC" "xD735F5" "xE0BEAA" "xEB33EB" "xEF5EF9" "xF4DDDE" "xF4F234" "xF97B82" }
+    provinces = { "x53FCDC" "x54A3FE" "x5BEDAE" "x60DBCE" "x69F9B7" "x94D0E8" "xA3B1CB" "xA6D7AC" "xB57BE4" "xB5B28E" "xC07EF9" "xCCCCC7" "xCE96A0" "xD5B9FC" "xD735F5" "xE0BEAA" "xEB33EB" "xEF5EF9" "xF4DDDE" "xF4F234" "xF97B82" }
     city = x53FCDC
     wood = x54A3FE
     farm = x5BEDAE
@@ -313,7 +313,7 @@ STATE_FORESTS_HEART = {
     traits = { "state_trait_plaguewood" }
     id = 4152
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x37DFFC" "x4CDAD5" "x79A2FE" "x79CEB7" "x94E37F" "x97F989" "xA3ADCE" "xA3D8DB" "xB394D4" "xB6FCB5" "xB7BC82" "xB9E382" "xD1C670" "xDACBC5" "xE3B8E6" "xE69B99" "xE6DED2" "xE8DB33" "xEA94A4" "xEEABBF" "xF840CD" "xF9947A" "xFB9194" }
+    provinces = { "x79A2FE" "x79CEB7" "x89F4A6" "x94E37F" "xA0DD91" "xB6FCB5" "xB7BC82" "xCAE791" "xD4FA29" "xE3B8E6" "xEEABBF" "xF840CD" "xF9947A" "xFA6DDA" "xFB9194" }
     city = x2CF9D6
     wood = x47FBB3
     farm = x59D5FD
@@ -325,7 +325,7 @@ STATE_FORESTS_HEART_2 = {
     traits = { "state_trait_plaguewood" }
     id = 4709
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x2CF9D6" "x47FBB3" "x59D5FD" "x89F4A6" "xA0DBE2" "xA0DD91" "xA6F686" "xCAE791" "xD4FA29" "xDCEFD6" "xE5E178" "xF8FC4E" "xFA6DDA" }
+    provinces = { "x2CF9D6" "x47FBB3" "x59D5FD" "x83B2C3" "xA0DBE2" "xA6F686" "xB1D5B0" "xB3B9BA" "xC5F4C2" "xC955D8" "xD49B87" "xD8BECB" "xDCEFD6" "xE5E178" "xE795B9" "xEDF080" "xEDFCB9" "xF18A8B" "xF269D7" "xF8FC4E" "xFE6AE9" }
 
     naval_exit_id = 3062
 }
@@ -333,7 +333,16 @@ STATE_FORESTS_HEART_3 = {
     traits = { "state_trait_plaguewood" }
     id = 4710
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x49DEFE" "x83B2C3" "x83F8E4" "xA8CFE0" "xB1D5B0" "xB39CCC" "xB3B9BA" "xB4FC70" "xC28FFC" "xC5F4C2" "xC955D8" "xD1E0F6" "xD49B87" "xE795B9" "xEDF080" "xEDFCB9" "xF18A8B" "xF269D7" "xF2FEFB" "xFC39CF" "xFE6AE9" }
+    provinces = { "x49DEFE" "x83F8E4" "xA3D8DB" "xA8CFE0" "xB39CCC" "xB4FC70" "xB9E382" "xC28FFC" "xD1C670" "xD1E0F6" "xE69B99" "xEA94A4" "xF2FEFB" "xFC39CF" }
+
+    naval_exit_id = 3062
+}
+STATE_FORESTS_HEART_3_2 = {
+ #just try and stop me
+    traits = { "state_trait_plaguewood" }
+    id = 4714
+    subsistence_building = "building_subsistence_farms"
+    provinces = { "x37DFFC" "x4CDAD5" "x97F989" "xA3ADCE" "xB394D4" "xDACBC5" "xE6DED2" "xE8DB33" }
 
     naval_exit_id = 3062
 }
@@ -364,7 +373,7 @@ STATE_PLAGUEWOOD_HINTERLANDS_2 = {
 STATE_ASHWICK = {
     id = 4154
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x25FCE1" "x5CE8D4" "x63FCE2" "x7CF2BC" "x89ABDB" "x96B8B4" "xA9EE6F" "xACF971" "xB4FDAF" "xB6DD79" "xB798EA" "xBBDBC6" "xD2AFA0" "xD48BEA" "xD5C8F8" "xD5D09F" "xD8BECB" "xD8F7E1" "xDCEEDA" "xDD9596" "xE590EE" "xE97AAE" "xE9F1BC" "xED8FA8" "xF3F312" "xF69DE7" "xFA9689" }
+    provinces = { "x5CE8D4" "x7CF2BC" "xA9EE6F" "xACF971" "xB798EA" "xD5C8F8" "xD8F7E1" "xDCEEDA" "xDD9596" "xE590EE" "xE9F1BC" "xED8FA8" "xF3F312" "xFA9689" }
     city = x25FCE1
     wood = x4FE2FC
     farm = x56FBF7
@@ -373,9 +382,15 @@ STATE_ASHWICK = {
     naval_exit_id = 3062
 }
 STATE_ASHWICK_2 = {
-    id = 4411
+    id = 4712
     subsistence_building = "building_subsistence_farms"
     provinces = { "x4FE2FC" "x56FBF7" "x68E4F3" "x7CEABF" "x81B5C4" "x8BCD9E" "x8DDDC1" "xA4C6B4" "xC2E295" "xCC76DB" "xD167F1" "xDEAD86" "xE6EF23" "xE7D7D0" "xED89D1" "xF739EC" "xF749C1" "xF7DD51" "xF8ABAC" "xFAF86C" "xFE5AEF" }
+
+}
+STATE_ASHWICK_3 = {
+    id = 4713
+    subsistence_building = "building_subsistence_farms"
+    provinces = { "x25FCE1" "x63FCE2" "x89ABDB" "x96B8B4" "xB4FDAF" "xB6DD79" "xBBDBC6" "xD2AFA0" "xD48BEA" "xD5D09F" "xE97AAE" "xF69DE7" }
 
 }
 STATE_OUTER_MOORWEALD = {
