@@ -2,8 +2,10 @@
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_bakery
+		pm_live_dough
 		pm_sweeteners
 		pm_baking_powder
+		pm_monster_powder
 	}
 }
 
@@ -55,6 +57,15 @@ pmg_base_building_textile_mills = {
 	}
 }
 
+pmg_magical_enhancements_building_textile_mills = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_no_magic_clothes
+		pm_permanent_prestidigitation
+		pm_color_spray_guns
+	}
+}
+
 pmg_luxury_building_textile_mills = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	production_methods = {
@@ -68,7 +79,9 @@ pmg_automation_building_textile_mills = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	production_methods = {
 		pm_traditional_looms
+		pm_that_scary_ass_shit_from_sleeping_beauty
 		pm_mechanized_looms
+		pm_mechamagic_looms
 		pm_automatic_power_looms
 	}
 }
@@ -88,11 +101,20 @@ pmg_base_building_furniture_manufacturies = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_handcrafted_furniture
+		pm_santa_clause_style
 		pm_lathe
 		pm_mechanized_workshops
+		pm_mechamagic_workshops
 	}
 }
 
+pmg_magical_enhancements_furniture_manufacturies = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_no_magic_furniture
+		pm_permanent_prestidigitation_furniture
+	}
+}
 pmg_luxury_building_furniture_manufacturies = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	production_methods = {
@@ -318,6 +340,7 @@ pmg_base_building_motor_industry = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_steam_engines
+		pm_wishstone_engines
 		pm_electric_engines
 		pm_diesel_engines
 	}
