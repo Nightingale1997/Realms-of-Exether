@@ -957,6 +957,16 @@ STATE_YERNAGRIA = {
     farm = x6FE2FB
     mine = x8495F6
     port = x86A0DB
+    arable_land = 70
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_iron_mining = 33
+        bg_fishing = 6
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 14
+    }
     naval_exit_id = 3066
 }
 STATE_ARTAXIAHAN = {
@@ -1079,6 +1089,16 @@ STATE_HELARM = {
     farm = x58BBE2
     mine = x62F5EC
     port = x65FBDC
+    arable_land = 80
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 23
+        bg_fishing = 8
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 28
+    }
     naval_exit_id = 3012
 }
 STATE_MYTHOS = {

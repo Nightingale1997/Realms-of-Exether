@@ -887,7 +887,24 @@
 	}
 
 	s:STATE_YERNAGRIA = {
-	
+		region_state:RAS = {
+			create_pop = {
+				culture = kailando_lacertian
+				size = 383996
+			}
+			create_pop = {
+				culture = south_sea_ravager
+				size = 8396
+			}
+			create_pop = {
+				culture = east_lacertian
+				size = 96004
+			}
+			create_pop = {
+				culture = zemvelo
+				size = 12004
+			}
+		}
 	}
 
 	s:STATE_ARTAXIAHAN = {
@@ -961,7 +978,20 @@
 	}
 
 	s:STATE_HELARM = {
-	
+		region_state:RAS = {
+			create_pop = {
+				culture = kailando_lacertian
+				size = 690000
+			}
+			create_pop = {
+				culture = east_lacertian
+				size = 68996
+			}
+			create_pop = {
+				culture = south_sea_ravager
+				size = 60000
+			}
+		}
 	}
 
 	s:STATE_MYTHOS = {

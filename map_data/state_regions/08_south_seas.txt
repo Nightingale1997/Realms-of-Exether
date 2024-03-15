@@ -76,6 +76,17 @@ STATE_LEMBONA = {
     farm = xB162E7
     mine = xB6D46D
     port = xB8CAAE
+    arable_land = 150
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_coal_mining = 72
+        bg_iron_mining = 48
+        bg_logging = 23
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 28
+    }
     naval_exit_id = 3067
 }
 STATE_XABELO = {
@@ -106,6 +117,12 @@ STATE_MAZALINO = {
     farm = xAAA9AA
     mine = xB68EF8
     port = xC6F0F3
+    arable_land = 40
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 48
+        bg_logging = 5
+    }
     naval_exit_id = 3067
 }
 STATE_LUMBELO = {
@@ -117,6 +134,16 @@ STATE_LUMBELO = {
     farm = xA6ADCA
     mine = xCA6BD5
     port = xD8AA9B
+    arable_land = 80
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_logging = 6
+        bg_fishing = 5
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 16
+    }
     naval_exit_id = 3018
 }
 STATE_MAXANGA = {
@@ -156,6 +183,16 @@ STATE_BEMVULA = {
     farm = x7F89F7
     mine = xA48DE9
     port = xBDCAE6
+    arable_land = 90
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_iron_mining = 27
+        bg_logging = 18
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 20
+    }
     naval_exit_id = 3067
 }
 STATE_BELOZA = {
@@ -194,6 +231,16 @@ STATE_JOVEXA = {
     farm = x94E8DC
     mine = x96E5F4
     port = x98B8A8
+    arable_land = 60
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_coal_mining = 48
+        bg_logging = 7
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 16
+    }
     naval_exit_id = 3067
 }
 STATE_AMALUMA = {
@@ -283,6 +330,17 @@ STATE_MOZAGAL = {
     farm = xAE86CA
     mine = xB897E9
     port = xC78BAA
+    arable_land = 70
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_coal_mining = 44
+        bg_iron_mining = 33
+        bg_logging = 5
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 16
+    }
     naval_exit_id = 3067
 }
 STATE_ALENMAR = {
@@ -395,6 +453,16 @@ STATE_PORTANGA = {
     farm = xBFC9CD
     mine = xE27BCA
     port = xE6D370
+    arable_land = 60
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_coal_mining = 48
+        bg_logging = 14
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 22
+    }
     naval_exit_id = 3067
 }
 STATE_LISAZISA = {

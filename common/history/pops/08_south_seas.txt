@@ -12,7 +12,7 @@
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = lacertian
+				culture = kailando_lacertian
 				size = 650
 			}
 			create_pop = {
@@ -37,12 +37,12 @@
 				size = 212000
 			}
 			create_pop = {
-				culture = lacertian
+				culture = kailando_lacertian
 				size = 21900
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = lacertian
+				culture = kailando_lacertian
 				size = 6200
 			}
 			create_pop = {
@@ -59,12 +59,12 @@
 				size = 91804
 			}
 			create_pop = {
-				culture = lacertian
+				culture = kailando_lacertian
 				size = 12000
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = lacertian
+				culture = kailando_lacertian
 				size = 4000
 			}
 			create_pop = {
@@ -79,7 +79,31 @@
 	}
 
 	s:STATE_LEMBONA = {
-
+		region_state:NOT = {
+			create_pop = {
+				culture = east_lacertian
+				size = 631200
+			}
+			create_pop = {
+				culture = bakibi
+				size = 44400
+			}
+			create_pop = {
+				culture = zemvelo
+				size = 75300
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = bakibi
+				religion = animist
+				size = 25000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = zemvelo
+				size = 25000
+			}
+		}
 	}
 
 	s:STATE_XABELO = {
@@ -97,43 +121,101 @@
 				size = 146500
 			}
 			create_pop = {
-				culture = lacertian
+				culture = kailando_lacertian
 				size = 2000
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = lacertian
+				culture = kailando_lacertian
 				size = 500
 			}
 		}
 	}
 
 	s:STATE_MAZALINO = {
-
+		region_state:AES = {
+			create_pop = {
+				culture = kailando_lacertian
+				size = 60000
+			}
+			create_pop = {
+				culture = east_lacertian
+				size = 4000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = east_lacertian
+				size = 8000
+			}
+			create_pop = {
+				culture = zemvelo
+				size = 4000
+			}
+		}
 	}
 
 	s:STATE_LUMBELO = {
-
+		region_state:AES = {
+			create_pop = {
+				culture = kailando_lacertian
+				size = 572600
+			}
+			create_pop = {
+				culture = east_lacertian
+				size = 44000
+			}
+			create_pop = {
+				culture = zemvelo
+				size = 16004
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = east_lacertian
+				size = 30000
+			}
+		}
 	}
 
 	s:STATE_MAXANGA = {
 		region_state:RAT = {
 			create_pop = {
 				culture = east_lacertian
-				size = 400102
+				size = 120102
+			}
+			create_pop = {
+				culture = kailando_lacertian
+				size = 280102
 			}
 		}
 	}
 
 	s:STATE_BEMVULA = {
-
+		region_state:SEP = {
+			create_pop = {
+				culture = kailando_lacertian
+				size = 120400
+			}
+			create_pop = {
+				culture = east_lacertian
+				size = 200000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = east_lacertian
+				size = 15604
+			}
+		}
 	}
 
 	s:STATE_BELOZA = {
 		region_state:RAT = {
 			create_pop = {
 				culture = east_lacertian
-				size = 351996
+				size = 121996
+			}
+			create_pop = {
+				culture = kailando_lacertian
+				size = 231996
 			}
 			create_pop = {
 				culture = south_sea_ravager
@@ -143,7 +225,26 @@
 	}
 
 	s:STATE_JOVEXA = {
-
+		region_state:AES = {
+			create_pop = {
+				culture = kailando_lacertian
+				size = 185800
+			}
+			create_pop = {
+				culture = east_lacertian
+				size = 38396
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = south_sea_ravager
+				size = 13000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = east_lacertian
+				size = 4000
+			}
+		}
 	}
 
 	s:STATE_AMALUMA = {
@@ -179,7 +280,7 @@
 				size = 160
 			}
 			create_pop = {
-				culture = lacertian
+				culture = east_lacertian
 				size = 90
 			}
 		}
@@ -211,7 +312,26 @@
 	}
 
 	s:STATE_MOZAGAL = {
-
+		region_state:NOT = {
+			create_pop = {
+				culture = east_lacertian
+				size = 266800
+			}
+			create_pop = {
+				culture = bakibi
+				size = 58900
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = east_lacertian
+				size = 10000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = bakibi
+				size = 5000
+			}
+		}
 	}
 
 	s:STATE_ALENMAR = {
@@ -318,7 +438,25 @@
 	}
 
 	s:STATE_PORTANGA = {
-
+		region_state:SEP = {
+			create_pop = {
+				culture = kailando_lacertian
+				size = 87204
+			}
+			create_pop = {
+				culture = east_lacertian
+				size = 188000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = south_sea_ravager
+				size = 10000
+			}
+			create_pop = {
+				culture = south_sea_ravager
+				size = 20000
+			}
+		}
 	}
 
 	s:STATE_LISAZISA = {
