@@ -141,20 +141,20 @@ add_homeland = cu:lacertian
 
 s:STATE_ALENMAR = {
 	create_state = {
-		country = c:EME
+		country = c:LAC
 		owned_provinces = { "x6FF2E7" "x75B2F2" "x7FFCC0" "x82F88A" "x94F0E4" "x95CF92" "x96E7EF" "x9AC6A4" "xA5C2B8" "xACBFB2" "xB2DCB4" "xBD57F6" "xCBB8AA" "xCBEFC4" "xDC8FBF" "xDE99D6" "xE53FE2" "xF4DA32" "xFD5EF5" }
-		state_type = unincorporated
 	}
-add_homeland = cu:lacertian
+	add_homeland = cu:bakibi
+	add_homeland = cu:east_lacertian
 }
 
 s:STATE_TERRABELA = {
 	create_state = {
-		country = c:EME
+		country = c:LAC
 		owned_provinces = { "x8DEFD4" "xBDCF6F" "xBFF55A" "xD0D3F4" "xD69ECC" "xDB69EA" "xDCE8F3" "xE1F9B3" "xE87EE2" "xFCF6A0" }
-		state_type = unincorporated
 	}
-add_homeland = cu:lacertian
+add_homeland = cu:bakibi
+add_homeland = cu:east_lacertian
 }
 
 s:STATE_MALANJAPORT = {
@@ -177,11 +177,11 @@ add_homeland = cu:lacertian
 
 s:STATE_APAFONTE = {
 	create_state = {
-		country = c:EME
+		country = c:LAC
 		owned_provinces = { "x3BF9E4" "x49F4D4" "x76B0DE" "x7BB5D0" "x83A3F5" "x8E95E8" "x9AB3B1" "xA0BFAA" "xB1EC62" "xCAD3CA" "xCF66E7" "xE9B192" }
-		state_type = unincorporated
 	}
-add_homeland = cu:lacertian
+	add_homeland = cu:bakibi
+	add_homeland = cu:east_lacertian
 }
 
 s:STATE_PORTANGA = {
@@ -194,20 +194,18 @@ add_homeland = cu:lacertian
 
 s:STATE_LISAZISA = {
 	create_state = {
-		country = c:DUM
+		country = c:COV
 		owned_provinces = { "x4CE8E7" "x5BB7FD" "x7DD0F4" "x8EE2D1" "xD07AE4" "xDECC5F" "xF2D3A8" "xF855F2" "xF8F85F" "xFD5AE6" "xFE5AC3" }
-		state_type = unincorporated
 	}
-add_homeland = cu:lacertian
+add_homeland = cu:east_lacertian
 }
 
 s:STATE_BELENDLE = {
 	create_state = {
-		country = c:DUM
+		country = c:COV
 		owned_provinces = { "x45DDFE" "x9E9DE6" "xB4C4AF" "xC2E567" "xC4A3F5" "xC6D063" "xC761CD" "xCA83A9" "xD6C89C" "xD89EE7" "xE8D990" }
-		state_type = unincorporated
 	}
-add_homeland = cu:lacertian
+	add_homeland = cu:east_lacertian
 }
 
 s:STATE_ALAHAZOTRA = {
