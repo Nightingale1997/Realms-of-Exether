@@ -463,25 +463,42 @@ s:STATE_THE_AMBER_RUN_3 = {
   }
 
   s:STATE_FAR_SHORE = {
-		region_state:THI = {
-			create_pop = {
-				culture = bossardi
-				size = 1709209
-			}
-			create_pop = {
-				culture = thiralian
-				size = 711985
-			}
-			create_pop = {
-				culture = dorite
-				size = 78428
-			}
-			create_pop = {
-				culture = vandori
-				size = 889
-			}
+	region_state:THI = {
+		create_pop = {
+			culture = bossardi
+			size = 1071209
 		}
-  }
+		create_pop = {
+			culture = thiralian
+			size = 447985
+		}
+		create_pop = {
+			culture = dorite
+			size = 38428
+		}
+		create_pop = {
+			culture = vandori
+			size = 17889
+		}
+	}
+}
+
+s:STATE_FAR_SHORE_2 = {
+	region_state:THI = {
+		create_pop = {
+			culture = bossardi
+			size = 781209
+		}
+		create_pop = {
+			culture = thiralian
+			size = 247476
+		}
+		create_pop = {
+			culture = dorite
+			size = 22438
+		}
+	}
+}
 
   s:STATE_DURANS_LAND = {
 		region_state:ARR = {
@@ -538,7 +555,7 @@ s:STATE_THE_AMBER_RUN_3 = {
 	region_state:ARR = { # 
 		create_pop = {
 			culture = dorite # 'Walloon & French' in census data.
-			size = 1413476
+			size = 913476
 		}
 		create_pop = {
 			culture = bossardi
@@ -558,6 +575,24 @@ s:STATE_THE_AMBER_RUN_3 = {
 		}
 	}
   }
+
+  s:STATE_GREENCOURT_2 = {
+	region_state:ARR = { # 
+		create_pop = {
+			culture = dorite # 'Walloon & French' in census data.
+			size = 533476
+		}
+		create_pop = {
+			culture = bossardi
+			size = 51243
+		}
+		create_pop = {
+			culture = wealder # 'Flemish & Dutch' in census data.
+			size = 50405
+		}
+	}
+  }
+
 
   s:STATE_GOLDENACRE = {
 	region_state:ARR = {

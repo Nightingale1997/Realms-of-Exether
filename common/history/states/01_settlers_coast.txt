@@ -317,7 +317,7 @@ add_homeland = cu:mousefolk
 s:STATE_WAYFARE_MEADOWS = {
     create_state = {
         country = c:ARR
-        owned_provinces = { "x58F6B9" "x6BA6FA" "x6FBFD7" "x7B99E1" "x7E8FE8" "x99D4E8" "xA1E3B4" "xA4A1EA" "xB19EB5" "xBBF747" "xC16DF0" "xC69AF5" "xCCF09F" "xCF77C4" "xCFC4E3" "xD2C86D" "xD6FA7A" "xDBA8F3" "xDDF5B3" "xE67D99" "xE7CBC1" "xEBD66F" "xEFA992" "xF2F3A4" "xF2F7E7" "xFDFEBA" }
+        owned_provinces = { "x58F6B9" "x6BA6FA" "x6FBFD7" "x7B99E1" "x7E8FE8" "x99D4E8" "xA1E3B4" "xA4A1EA" "xB19EB5" "xBBF747" "xC16DF0" "xC69AF5" "xCCF09F" "xCF77C4" "xCFC4E3" "xD6FA7A" "xDBA8F3" "xDDF5B3" "xE67D99" "xE7CBC1" "xEBD66F" "xEFA992" "xF2F3A4" "xF2F7E7" "xFDFEBA" }
 }
 add_homeland = cu:wealder
 add_homeland = cu:mousefolk
@@ -368,7 +368,15 @@ s:STATE_VICEROYS_PEARL = {
 s:STATE_FAR_SHORE = {
     create_state = {
         country = c:THI
-        owned_provinces = { "x3FC9F7" "x5EE4D0" "x6CB9E9" "x7DF9FE" "x83B6E8" "x96F8A3" "x98E882" "x99C49F" "xA1B7A8" "xA7E07C" "xAFEF89" "xB4BA8F" "xB6F08A" "xB8F562" "xBBACA2" "xBED978" "xC3F554" "xC5D8B9" "xC6FEAA" "xC7DE75" "xCAC0AB" "xD0C669" "xD2A785" "xD5F23D" "xD9EE78" "xDBDE43" "xE082F5" "xEBEFAF" "xEE67B3" "xF0CE4A" "xF1F0A7" "xF2CF84" "xF3CB75" "xF3D47C" "xF4E6EB" "xF595E7" "xF6A4C6" "xF7FC32" "xFAFBEA" "xFBE2B6" "xFDAF62" }
+        owned_provinces = { "x7DF9FE" "x83B6E8" "x96F8A3" "x98E882" "x99C49F" "xA1B7A8" "xA7E07C" "xB4BA8F" "xB8F562" "xBBACA2" "xBED978" "xD0C669" "xD2A785" "xD9EE78" "xE082F5" "xF595E7" }
+}
+add_homeland = cu:bossardi
+}
+
+s:STATE_FAR_SHORE_2 = {
+    create_state = {
+        country = c:THI
+        owned_provinces = { "x3FC9F7" "x5EE4D0" "x6CB9E9" "xAFEF89" "xB6F08A" "xC5D8B9" "xC6FEAA" "xC7DE75" "xCAC0AB" "xD5F23D" "xDBDE43" "xEE67B3" "xF0CE4A" "xF3CB75" "xF3D47C" "xF4E6EB" "xF6A4C6" "xFAFBEA" "xFBE2B6" "xFDAF62" }
 }
 add_homeland = cu:bossardi
 }
@@ -401,7 +409,15 @@ add_homeland = cu:wealder
 s:STATE_GREENCOURT = {
     create_state = {
         country = c:ARR
-        owned_provinces = { "x32E9DC" "x38F9E8" "x6EFB9B" "x76D2E6" "x90C6AB" "x956AFA" "xAFFE4A" "xB373D9" "xB5D2CB" "xB690CD" "xB6AEA2" "xB8EF82" "xBCD2F0" "xC1FE51" "xC5FEDF" "xC9EF58" "xD185C3" "xD1DCB7" "xD7CD80" "xDD938E" "xE8C899" "xEDB3A4" "xF452FC" "xF6E1DE" "xF7DDF8" "xF7ED67" }
+        owned_provinces = { "x2ED4F9" "x76D2E6" "x90C6AB" "x956AFA" "xB373D9" "xB5D2CB" "xB6AEA2" "xBCD2F0" "xC999B8" "xD185C3" "xD1DCB7" "xDD938E" "xE8C899" "xF452FC" "xF6E1DE" "xF7DDF8" }
+}
+add_homeland = cu:dorite
+}
+
+s:STATE_GREENCOURT_2 = {
+    create_state = {
+        country = c:ARR
+        owned_provinces = { "x32E9DC" "x38F9E8" "xAFFE4A" "xB690CD" "xB8EF82" "xC1FE51" "xC5FEDF" "xC9EF58" "xD2C86D" "xD7CD80" "xE1CA72" "xEDB3A4" "xF5B592" "xFCB261" }
 }
 add_homeland = cu:dorite
 }
@@ -417,7 +433,7 @@ add_homeland = cu:dorite
 s:STATE_SHARPWOOD = {
     create_state = {
         country = c:ARR
-        owned_provinces = { "x2ED4F9" "x6BF7AB" "x79F2DA" "x88EAA4" "x9BB6C7" "xA4FDFD" "xA869F9" "xAEBDC4" "xB4FAF6" "xBDC9FB" "xD3AF9C" "xDDA18C" "xE0D3A0" "xE137EB" "xE7FB47" "xE8B279" "xF08592" "xFAE6DA" "xFC30FB" "xFD59F0" }
+        owned_provinces = { "x6BF7AB" "x6EFB9B" "x79F2DA" "x88EAA4" "x9BB6C7" "xA4FDFD" "xA869F9" "xAEBDC4" "xB4FAF6" "xBDC9FB" "xD3AF9C" "xDDA18C" "xE0D3A0" "xE137EB" "xE7FB47" "xE8B279" "xF08592" "xF7ED67" "xFAE6DA" "xFC30FB" "xFD59F0" }
 }
 add_homeland = cu:dorite
 }
@@ -450,7 +466,7 @@ add_homeland = cu:highland_halfling
 s:STATE_THE_MATCHES = {
     create_state = {
         country = c:ARR
-        owned_provinces = { "x23FEDD" "x4FBCED" "x6AE7CF" "x77CBDE" "x83D0EE" "x89CF9E" "x92E9A0" "x94A2F7" "x9AEDE7" "x9CC5AD" "x9CEF7B" "xA5AFF2" "xABD9C3" "xB3CBA3" "xB4BAF3" "xB9DE93" "xBF9EFA" "xC89BB2" "xC999B8" "xD39EEC" "xD9DA4B" "xDCC67D" "xE15AE8" "xE337ED" "xE4EE84" "xEDBEF1" "xF6B77F" "xFC5DF8" }
+        owned_provinces = { "x23FEDD" "x4FBCED" "x6AE7CF" "x77CBDE" "x83D0EE" "x89CF9E" "x92E9A0" "x94A2F7" "x9AEDE7" "x9CC5AD" "x9CEF7B" "xA5AFF2" "xABD9C3" "xB3CBA3" "xB4BAF3" "xB9DE93" "xBF9EFA" "xC89BB2" "xD39EEC" "xD9DA4B" "xDCC67D" "xE15AE8" "xE337ED" "xE4EE84" "xEDBEF1" "xF6B77F" "xFC5DF8" }
 }
 add_homeland = cu:dorite
 }
