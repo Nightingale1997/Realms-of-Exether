@@ -1,0 +1,19 @@
+﻿namespace = newspaper_superevent
+# Superevent template
+newspaper_superevent.1 = {
+	type = country_event
+	title = newspaper_superevent.1.t
+	flavor = newspaper_superevent.1.f
+	gui_window = newspaper_superevent
+	event_image = {
+		texture = "gfx/newspaper_mod/superevent_images/Great_Plains.dds"
+	}
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	duration = 1
+	option = {
+		# Should be the only option available
+		name = newspaper_superevent.1.a
+		custom_tooltip = newspaper_superevents_tt
+	}
+}

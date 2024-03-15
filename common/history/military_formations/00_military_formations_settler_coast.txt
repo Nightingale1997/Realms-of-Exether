@@ -1,0 +1,399 @@
+﻿MILITARY_FORMATIONS = {
+	c:CER ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_ceraun
+			name = first_fist
+
+			
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_CAEL_VALEN
+				count = 9
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cuirassiers
+				state_region = s:STATE_CAEL_VALEN
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_CAEL_VALEN
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_lancers
+				state_region = s:STATE_CAEL_VALEN
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_CAEL_VALEN
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_CAEL_VALEN
+				count = 1
+			}
+
+			
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_FERNSEA
+				count = 9
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cuirassiers
+				state_region = s:STATE_FERNSEA
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_FERNSEA
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_lancers
+				state_region = s:STATE_FERNSEA
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_FERNSEA
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_FERNSEA
+				count = 1
+			}
+
+			
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_FERNSEA
+				count = 9
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cuirassiers
+				state_region = s:STATE_FERNSEA
+				count = 2
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_FERNSEA
+				count = 2
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_FERNSEA
+				count = 1
+			}
+
+		}
+
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_plaguewood
+			name = plaguewood_bulwark
+
+			
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_ORCBANE_PASS
+				count = 5
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_ORCBANE_PASS
+				count = 4
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cuirassiers
+				state_region = s:STATE_ORCBANE_PASS
+				count = 2
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_ORCBANE_PASS
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_ORCBANE_PASS
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_ORCBANE_PASS
+				count = 1
+			}
+
+			
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_PENDYM_GWYN
+				count = 9
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cuirassiers
+				state_region = s:STATE_PENDYM_GWYN
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_PENDYM_GWYN
+				count = 2
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_lancers
+				state_region = s:STATE_PENDYM_GWYN
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_PENDYM_GWYN
+				count = 1
+			}
+
+			
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_RIVER_MEDDEN
+				count = 9
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cuirassiers
+				state_region = s:STATE_RIVER_MEDDEN
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_RIVER_MEDDEN
+				count = 2
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_lancers
+				state_region = s:STATE_RIVER_MEDDEN
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_RIVER_MEDDEN
+				count = 1
+			}
+
+			
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_FERNSEA
+				count = 9
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cuirassiers
+				state_region = s:STATE_FERNSEA
+				count = 2
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_FERNSEA
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_lancers
+				state_region = s:STATE_FERNSEA
+				count = 2
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_FERNSEA
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_FERNSEA
+				count = 1
+			}
+
+			save_scope_as = first_fist
+		}
+
+		create_character = {
+			is_general = yes
+			first_name = Heino
+			last_name = Angelus
+			historical = yes
+			hq = region_saint_mer
+			commander_rank = commander_rank_3
+			age = 62
+			traits = {
+				reserved
+			}
+			save_scope_as = wilhem_gen
+		}
+		
+		scope:wilhem_gen = {
+			transfer_to_formation = scope:first_fist
+		}
+
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_lagoon_coast
+			name = lagoonwatch
+
+			
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_SAINT_MER
+				count = 9
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATESAINT_MER
+				count = 2
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_lancers
+				state_region = s:STATESAINT_MER
+				count = 2
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATESAINT_MER
+				count = 1
+			}
+			save_scope_as = main_Armee
+		}
+
+			create_character = {
+			is_general = yes
+			first_name = Hendrik
+			last_name = Rahamagi
+			historical = yes
+			hq = region_ceraun
+			age = 36
+			traits = {
+				expert_offensive_planner
+				resupply_commander
+				reserved
+			}
+			save_scope_as = helmuth_gen
+		}
+
+		scope:helmuth_gen = {
+			transfer_to_formation = scope:main_Armee
+		}
+
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_ceraun
+			name = second_fist
+
+			
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_RHINELAND
+				count = 9
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_RHINELAND
+				count = 2
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_lancers
+				state_region = s:STATESAINT_MER
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATESAINT_MER
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATESAINT_MER
+				count = 1
+			}
+			save_scope_as = second_fist
+		}
+
+		create_character = {
+			is_general = yes
+			first_name = Pent
+			last_name = Jaakson
+			historical = yes
+			age = 66
+			hq = region_plaguewood
+			commander_rank = commander_rank_3
+			traits = {
+				plains_commander
+			}
+			save_scope_as = hans_ernst_gen
+		}
+		
+		scope:hans_ernst_gen = {
+			transfer_to_formation = scope:second_fist
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_ceraun
+			name = wavesplitter_fleet
+
+			combat_unit = { 
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_CAEL_VALEN
+				count = 1
+			}
+		}	
+
+		activate_production_method = {
+			building_type = building_naval_base
+			production_method = pm_power_of_the_purse
+		}	
+		activate_production_method = {
+			building_type = building_barracks
+			production_method = pm_general_training
+		}					
+	}
+}

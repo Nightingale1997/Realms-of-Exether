@@ -563,7 +563,7 @@ add_homeland = cu:umbradorn
 s:STATE_ELDORIA = {
 	create_state = {
 		country = c:HEL
-		owned_provinces = { "x4AF1F4" "x4DFBF3" "x9ED1D2" "xACB0BA" "xBA7EFC" "xBBE48E" "xD9AF8C" "xDEFA6F" "xF175CE" "xF1AD6B" "xFB9681" "xFBF3D6" }
+		owned_provinces = { "x4AF1F4" "x4DFBF3" "x9ED1D2" "xACB0BA" "xBA7EFC" "xBBE48E" "xD1B4AD" "xD9AF8C" "xDEFA6F" "xF175CE" "xF1AD6B" "xF3CDC3" "xFB9681" "xFBF3D6" }
 }
 add_homeland = cu:toftir_giant
 }
@@ -571,7 +571,7 @@ add_homeland = cu:toftir_giant
 s:STATE_AJA = {
 	create_state = {
 		country = c:VAR
-		owned_provinces = { "x53C6F6" "x7589FA" "x83EEBA" "x84B8DD" "xAFCDA7" "xC672E5" "xC689E3" "xCCFDA3" "xD5DF43" "xF18FB7" "xF8CDF8" }
+		owned_provinces = { "x53C6F6" "x7589FA" "x83EEBA" "x84B8DD" "xAFCDA7" "xC672E5" "xC689E3" "xCCFDA3" "xD5DF43" "xE1BFE1" "xE887C0" "xF18FB7" "xF22FD4" "xF8CDF8" }
 }
 add_homeland = cu:umbradorn
 }
@@ -627,7 +627,7 @@ add_homeland = cu:toftir_giant
 s:STATE_ELVERWISP = {
 	create_state = {
 		country = c:VAR
-		owned_provinces = { "x72E9DE" "x8EE3FE" "x8FEC96" "x94C0DC" "x95DBB7" "x98A5DE" "xA3A4D7" "xA468F0" "xAF9DDF" "xAF9E0B" "xB1D595" "xB677EB" "xC13CFE" "xC7C89B" "xCD6FC8" "xCFED81" "xD7C7F2" "xFB9B5F" "xFBE3B9" "xFDFA61" }
+		owned_provinces = { "x72E9DE" "x8EE3FE" "x8FEC96" "x94C0DC" "x95DBB7" "x98A5DE" "xA3A4D7" "xA468F0" "xAF9DDF" "xAF9E0B" "xB1D595" "xB677EB" "xC13CFE" "xC7C89B" "xCD6FC8" "xCFED81" "xD7C7F2" "xE3D4CC" "xFB9B5F" "xFBE3B9" "xFDFA61" }
 }
 add_homeland = cu:umbradorn
 }
@@ -651,7 +651,7 @@ add_homeland = cu:toftir_giant
 s:STATE_AKNU = {
 	create_state = {
 		country = c:ORO
-		owned_provinces = { "x4FCDED" "x5EEEDF" "x83F2A2" "x8AFCE9" "x997BFC" "xAFB0F2" "xB283D4" "xBAC5D0" "xBD8BED" "xC76DD8" "xE1BFE1" "xE279FA" "xE5BFDA" "xF22FD4" "xF5CB4A" }
+		owned_provinces = { "x4FCDED" "x5EEEDF" "x83F2A2" "x8AFCE9" "x997BFC" "xAFB0F2" "xB283D4" "xBAC5D0" "xBD8BED" "xC76DD8" "xE279FA" "xE5BFDA" "xF5CB4A" }
 }
 add_homeland = cu:garagoz
 }
@@ -676,7 +676,7 @@ add_homeland = cu:toftir_giant
 s:STATE_MARKAN = {
 	create_state = {
 		country = c:VAR
-		owned_provinces = { "x0FC191" "x2A3E2A" "x52DFCA" "x54048D" "x7CA1E0" "x85AB8B" "x88A4FB" "xA2D7F8" "xBA65E6" "xBBAEB6" "xBCF4A9" "xC798F8" "xCCDED4" "xCCFB4C" "xCDFD62" "xDEB77B" "xE79895" "xE7EE70" "xF4E06B" "xF5AD5B" "xF86AB8" "xFE9664" }
+		owned_provinces = { "x0FC191" "x2A3E2A" "x52DFCA" "x54048D" "x7CA1E0" "x85AB8B" "x88A4FB" "xA2D7F8" "xA3AA58" "xBA65E6" "xBCF4A9" "xC798F8" "xCCDED4" "xDEB77B" "xE7EE70" }
 }
 add_homeland = cu:umbradorn
 }
@@ -684,7 +684,7 @@ add_homeland = cu:umbradorn
 s:STATE_ELVENSHROUD = {
 	create_state = {
 		country = c:VAR
-		owned_provinces = { "x9DE8EC" "xA3B0BE" "xBDBBFB" "xD455F7" "xDC60D0" "xE3D4CC" "xE5D0D6" "xF23AFA" }
+		owned_provinces = { "x9DE8EC" "xA3B0BE" "xBDBBFB" "xD455F7" "xDC60D0" "xE5D0D6" "xF23AFA" }
 }
 add_homeland = cu:umbradorn
 }
@@ -773,8 +773,16 @@ add_homeland = cu:umbradorn
 s:STATE_NORTHERN_2 = {
 	create_state = {
 		country = c:HEL
-		owned_provinces = { "x59030C" "x65DCE1" "x81C284" "xA0C2A0" "xBEC775" "xBECBD3" "xC7CBFC" "xD1B4AD" "xEEF3F3" }
+		owned_provinces = { ""x59030C" "x65DCE1" "x81C284" "xA0C2A0" "xBEC775" "xBECBD3" "xC7CBFC" "xEEF3F3"" }
 }
 add_homeland = cu:toftir_giant
+}
+
+s:STATE_NORTHERN_3 = {
+	create_state = {
+		country = c:VAR
+		owned_provinces = { "x9423B6" "xBBAEB6" "xCCFB4C" "xCDFD62" "xE79895" "xF4E06B" "xF5AD5B" "xF86AB8" "xFE9664" }
+}
+add_homeland = cu:umbradorn
 }
 }

@@ -9,8 +9,18 @@
 			type = dominion
 		}
 		create_diplomatic_pact = {
+			country = c:COV
+			type = puppet
+		}
+		create_diplomatic_pact = {
 			country = c:AUM
 			type =  protectorate
+		}
+	}
+	c:EME = {
+		create_diplomatic_pact = {
+			country = c:LAC
+			type = dominion
 		}
 	}
 	c:AUM = {

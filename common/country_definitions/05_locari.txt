@@ -178,6 +178,31 @@ YAS = {
 	capital = STATE_TASHKAVSK
 }
 
+#Cove Colony
+COV = {
+	color = rgb{ 105 80 180 } 
+
+	country_type = colonial
+
+	tier = principality
+
+	religion = {cult_of_the_sun}
+	cultures = { dumonian } 
+	capital = STATE_LISAZISA
+}
+
+#Lacertian Company
+LAC = {
+	color = rgb{ 105 200 80 } 
+
+	country_type = colonial
+
+	tier = kingdom
+
+	cultures = { ocelian } 
+	capital = STATE_TERRABELA
+}
+
 #South Seas Company
 SSC = {
 	color = rgb{ 75 200 110 } 
@@ -472,7 +497,7 @@ TKI = {
 
 	tier = principality
 
-	cultures = { navrozdok } 
+	cultures = { taiamican } 
 	capital = STATE_SUKHIBHAVA
 }
 
