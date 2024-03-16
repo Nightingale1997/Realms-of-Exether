@@ -406,6 +406,23 @@ STATE_MALANJAPORT = {
     farm = xB8CAAD
     mine = xC8D06C
     port = xCF77CE
+    arable_land = 22
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_lead_mining = 30
+        bg_logging = 17
+        bg_fishing = 7
+    }
+    resource = {
+        type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
+        undiscovered_amount = 6
+        discovered_amount = 4
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 12
+    }
     naval_exit_id = 3012
 }
 
@@ -418,6 +435,21 @@ STATE_MAPACHECO = {
     farm = x6898FC
     mine = xC6F16C
     port = xCFB3FC
+    arable_land = 40
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_coal_mining = 28
+        bg_logging = 20
+        bg_fishing = 9
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 28
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 40
+    }
     naval_exit_id = 3012
 }
 

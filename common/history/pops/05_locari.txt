@@ -958,23 +958,117 @@
 	}
 
 	s:STATE_ARGYSTSIK = {
-	
+		region_state:CCO = {
+			create_pop = {
+				culture = south_sea_ravager
+				size = 166508
+			}
+			create_pop = {
+				culture = moluccan
+				religion = church_of_man
+				size = 79213
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = south_sea_ravager
+				religion = church_of_man
+				size = 35676
+			}
+			create_pop = {
+				culture = kailando_lacertian
+				size = 12078
+			}
+		}
 	}
 
 	s:STATE_GRAEA = {
-	
+		region_state:BTR = {
+			create_pop = {
+				culture = south_sea_ravager
+				size = 699600
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = kailando_lacertian
+				size = 11000
+			}
+			create_pop = {
+				culture = kailando_lacertian
+				size = 27404
+			}
+		}
 	}
 
 	s:STATE_JERMENION = {
-	
+		region_state:BTR = {
+			create_pop = {
+				culture = south_sea_ravager
+				size = 75000
+			}
+			create_pop = {
+				culture = south_sea_ravager
+				religion = church_of_man
+				size = 12000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = south_sea_ravager
+				size = 18000
+			}
+			create_pop = {
+				culture = east_lacertian
+				size = 7196
+			}
+			create_pop = {
+				culture = kailando_lacertian
+				size = 100196
+			}
+		}
 	}
 
 	s:STATE_ARTHERA = {
-	
+		region_state:CCO = {
+			create_pop = {
+				culture = south_sea_ravager
+				size = 506000
+			}
+			create_pop = {
+				culture = kailando_lacertian
+				size = 135800
+			}
+			create_pop = {
+				culture = south_sea_ravager
+				religion = church_of_man
+				size = 20311
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = kailando_lacertian
+				size = 10000
+			}
+			create_pop = {
+				culture = east_lacertian
+				size = 20004
+			}
+		}
 	}
 
 	s:STATE_COCOHAYAT = {
-	
+		region_state:CCO = {
+			create_pop = {
+				culture = south_sea_ravager
+				size = 96000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = navrozdok
+				size = 20000
+			}
+			create_pop = {
+				culture = kailando_lacertian
+				size = 44020
+			}
+		}
 	}
 
 	s:STATE_HELARM = {
