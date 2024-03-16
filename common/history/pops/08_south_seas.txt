@@ -304,11 +304,29 @@
 	}
 
 	s:STATE_ALMADOURO = {
-
+		region_state:EME={
+			create_pop = {
+				culture = ocelian
+				size = 35000
+			}
+			create_pop = {
+				culture = lacertian
+				size = 120000
+			}
+		}
 	}
 
 	s:STATE_CIDADOURO = {
-
+		region_state:DUM={
+			create_pop = {
+				culture = dumonian
+				size = 42000
+			}
+			create_pop = {
+				culture = lacertian
+				size = 100000
+			}
+		}
 	}
 
 	s:STATE_MOZAGAL = {
@@ -1065,11 +1083,21 @@
 	}
 
 	s:STATE_SAMARTHYA = {
-
+		region_state:SEN = {
+			create_pop = {
+				culture = castaway_dwarf
+				size = 58000
+			}
+		}
 	}
 
 	s:STATE_JIVANTA = {
-
+		region_state:SEN = {
+			create_pop = {
+				culture = castaway_dwarf
+				size = 31000
+			}
+		}
 	}
 
 }
