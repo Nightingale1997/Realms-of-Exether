@@ -1078,13 +1078,7 @@
   }
 
   s:STATE_BATOKYOAN = {
-    region_state:SUN = {
-	  create_building={
-        building="building_government_administration"
-        level=2
-        reserves=1
-        activate_production_methods={ "pm_simple_organization" }
-      }
+    region_state:GOL = {
       create_building={
         building="building_tea_plantation"
         level=1
