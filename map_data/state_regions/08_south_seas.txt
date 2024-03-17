@@ -308,6 +308,12 @@ STATE_ALMADOURO = {
     farm = x93F7FA
     mine = x9BF8FB
     port = xA3D9F0
+	arable_land = 10
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 3
+        bg_fishing = 3
+    }
     naval_exit_id = 3020
 }
 STATE_CIDADOURO = {
@@ -319,6 +325,12 @@ STATE_CIDADOURO = {
     farm = x90A7CE
     mine = xA8D3CF
     port = xC1EB80
+	arable_land = 11
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 2
+        bg_fishing = 5
+    }
     naval_exit_id = 3018
 }
 STATE_MOZAGAL = {
@@ -1361,6 +1373,16 @@ STATE_SAMARTHYA = {
     farm = x73FC89
     mine = x77BFFB
     port = x80CFDE
+	arable_land = 82
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 15
+        bg_fishing = 12
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 27
+    }
     naval_exit_id = 3067
 }
 STATE_JIVANTA = {
@@ -1372,5 +1394,15 @@ STATE_JIVANTA = {
     farm = x7BEAB6
     mine = x84B6E5
     port = x8592F3
-
+	arable_land = 76
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 14
+        bg_fishing = 16
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 20
+    }
+	naval_exit_id = 3067
 }
