@@ -392,7 +392,15 @@ s:STATE_VICEROYS_PEARL = {
 s:STATE_FAR_SHORE = {
     create_state = {
         country = c:THI
-        owned_provinces = { "x3FC9F7" "x5EE4D0" "x6CB9E9" "x7DF9FE" "x83B6E8" "x96F8A3" "x98E882" "x99C49F" "xA1B7A8" "xA7E07C" "xAFEF89" "xB4BA8F" "xB6F08A" "xB8F562" "xBBACA2" "xBED978" "xC3F554" "xC5D8B9" "xC6FEAA" "xC7DE75" "xCAC0AB" "xD0C669" "xD2A785" "xD5F23D" "xD9EE78" "xDBDE43" "xE082F5" "xEBEFAF" "xEE67B3" "xF0CE4A" "xF1F0A7" "xF2CF84" "xF3CB75" "xF3D47C" "xF4E6EB" "xF595E7" "xF6A4C6" "xF7FC32" "xFAFBEA" "xFBE2B6" "xFDAF62" }
+        owned_provinces = { "x7DF9FE" "x83B6E8" "x96F8A3" "x98E882" "x99C49F" "xA1B7A8" "xA7E07C" "xB4BA8F" "xB8F562" "xBBACA2" "xBED978" "xD0C669" "xD2A785" "xD9EE78" "xE082F5" "xF595E7" }
+}
+add_homeland = cu:bossardi
+}
+
+s:STATE_FAR_SHORE_2 = {
+    create_state = {
+        country = c:THI
+        owned_provinces = { "x3FC9F7" "x5EE4D0" "x6CB9E9" "xAFEF89" "xB6F08A" "xC5D8B9" "xC6FEAA" "xC7DE75" "xCAC0AB" "xD5F23D" "xDBDE43" "xEE67B3" "xF0CE4A" "xF3CB75" "xF3D47C" "xF4E6EB" "xF6A4C6" "xFAFBEA" "xFBE2B6" "xFDAF62" }
 }
 add_homeland = cu:bossardi
 }
