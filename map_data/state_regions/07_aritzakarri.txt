@@ -64,6 +64,11 @@ STATE_OLARRA = {
     farm = x8CEDB2
     mine = xA7BCBD
     port = xAF78DD
+    arable_land = 5
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_fishing = 2
+    }
     naval_exit_id = 3070
 }
 STATE_IHARKHAN = {
@@ -130,6 +135,15 @@ STATE_BATOHAIN = {
     farm = x67E5CA
     mine = x76C4E3
     port = x7BB8C4
+    arable_land = 10
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_fishing = 4
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 60
+    }
     naval_exit_id = 3070
 }
 STATE_KHANBA = {
@@ -141,6 +155,15 @@ STATE_KHANBA = {
     farm = x77BAE8
     mine = x77F6EB
     port = x90BBBD
+    arable_land = 5
+    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" }
+    capped_resources = {
+        bg_fishing = 4
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 80
+    }
     naval_exit_id = 3070
 }
 STATE_MENDARI = {
@@ -152,6 +175,12 @@ STATE_MENDARI = {
     farm = x7BE4FB
     mine = x8FAFED
     port = x90EA83
+    arable_land = 20
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_sulfur_mining = 28
+        bg_fishing = 5
+    }
     naval_exit_id = 3070
 }
 STATE_ARRIGORRI = {
