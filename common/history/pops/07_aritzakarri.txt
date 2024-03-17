@@ -4,11 +4,11 @@
     region_state:POA = {
       create_pop = {
         culture = sandcircler
-        size = 25000
+        size = 15000
       }
       create_pop = {
         culture = yakamimbo
-        size = 15000
+        size = 25000
       }
     }
   }
@@ -22,7 +22,31 @@
   }
 
   s:STATE_OLARRA = {
-
+		region_state:KCH = {
+			create_pop = {
+				culture = sandcircler
+				size = 34496
+			}
+      create_pop = {
+				culture = sandcircler
+        religion = mountain_worship
+				size = 4496
+			}
+			create_pop = {
+				culture = cliffpercher
+				size = 5000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = onikoku
+				size = 100
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = sandcircler
+				size = 2400
+			}
+		}
   }
 
   s:STATE_IHARKHAN = {
@@ -46,15 +70,74 @@
   }
 
   s:STATE_BATOHAIN = {
-
+		region_state:KCH = {
+			create_pop = {
+				culture = sandcircler
+				size = 93996
+			}
+			create_pop = {
+				culture = bedouin
+				religion = mountain_worship
+				size = 22000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = sudanese
+				religion = animist
+				size = 7000
+			}
+		}
   }
 
   s:STATE_KHANBA = {
-
+		region_state:KCH = {
+			create_pop = {
+				culture = sandcircler
+				size = 52900
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = saglithan
+				size = 3200
+			}
+			create_pop = {
+				culture = sandcircler
+				religion = mountain_worship
+				size = 2000
+			}
+			create_pop = {
+				culture = saglithan
+				size = 1900
+			}
+		}
   }
 
   s:STATE_MENDARI = {
-
+		region_state:KCH = {
+			create_pop = {
+				culture = cliffpercher
+				size = 142000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = sandcircler
+				size = 28000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = cliffpercher
+				size = 3000
+			}
+			create_pop = {
+				culture = sandcircler
+				size = 249200
+			}
+      create_pop = {
+				culture = sandcircler
+        religion = mountain_worship
+				size = 42200
+			}
+		}
   }
 
   s:STATE_ARRIGORRI = {
