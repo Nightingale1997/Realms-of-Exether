@@ -69,7 +69,7 @@ STATE_OLARRA = {
     capped_resources = {
         bg_fishing = 2
     }
-    naval_exit_id = 3070
+    naval_exit_id = 3027
 }
 STATE_IHARKHAN = {
     id = 4627
@@ -144,7 +144,7 @@ STATE_BATOHAIN = {
         type = "bg_oil_extraction"
         undiscovered_amount = 60
     }
-    naval_exit_id = 3070
+    naval_exit_id = 3027
 }
 STATE_KHANBA = {
     id = 4633
@@ -164,7 +164,7 @@ STATE_KHANBA = {
         type = "bg_oil_extraction"
         undiscovered_amount = 80
     }
-    naval_exit_id = 3070
+    naval_exit_id = 3027
 }
 STATE_MENDARI = {
     id = 4634
@@ -181,7 +181,7 @@ STATE_MENDARI = {
         bg_sulfur_mining = 28
         bg_fishing = 5
     }
-    naval_exit_id = 3070
+    naval_exit_id = 3093
 }
 STATE_ARRIGORRI = {
     id = 4635
@@ -192,7 +192,14 @@ STATE_ARRIGORRI = {
     farm = x8AD4D3
     mine = xB6ACAA
     port = xCAB5E3
-    naval_exit_id = 3070
+    arable_land = 15
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_coal_mining = 44
+        bg_logging = 4
+        bg_fishing = 12
+    }
+    naval_exit_id = 3093
 }
 STATE_KIYOMU = {
     id = 4636
@@ -203,6 +210,11 @@ STATE_KIYOMU = {
     farm = x9DC0BF
     mine = xA3B6B8
     port = xA4D5C9
+    arable_land = 30
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_tobacco_plantations" }
+    capped_resources = {
+        bg_logging = 2
+    }
     naval_exit_id = 3070
 }
 STATE_URRAZPI = {
@@ -214,7 +226,14 @@ STATE_URRAZPI = {
     farm = x88C0BB
     mine = xA0B8C3
     port = xAB92E3
-    naval_exit_id = 3070
+    arable_land = 30
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_banana_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_coal_mining = 44
+        bg_logging = 4
+        bg_fishing = 5
+    }
+    naval_exit_id = 3029
 }
 STATE_NISHIGARRA = {
     id = 4638
@@ -382,7 +401,13 @@ STATE_MIZPIRIKA = {
     farm = x8089FC
     mine = x87FD86
     port = xA66AF1
-    naval_exit_id = 3070
+    arable_land = 40
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_tobacco_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_logging = 6
+        bg_fishing = 5
+    }
+    naval_exit_id = 3029
 }
 STATE_OLABEGI = {
     id = 4652
