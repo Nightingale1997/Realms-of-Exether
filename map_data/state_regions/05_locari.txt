@@ -957,7 +957,17 @@ STATE_YERNAGRIA = {
     farm = x6FE2FB
     mine = x8495F6
     port = x86A0DB
-    naval_exit_id = 3066
+    arable_land = 70
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_iron_mining = 33
+        bg_fishing = 6
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 14
+    }
+    naval_exit_id = 3018
 }
 STATE_ARTAXIAHAN = {
     id = 4903
@@ -1024,6 +1034,16 @@ STATE_ARGYSTSIK = {
     farm = xDA27F5
     mine = xE0D343
     port = xE2F61D
+    arable_land = 20
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 4
+        bg_fishing = 6
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 4
+    }
     naval_exit_id = 3012
 }
 STATE_GRAEA = {
@@ -1035,6 +1055,18 @@ STATE_GRAEA = {
     farm = xC8F95C
     mine = xC9B7AA
     port = xCEB082
+    arable_land = 35
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_tea_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_coal_mining = 32
+        bg_lead_mining = 24
+        bg_logging = 17
+        bg_fishing = 10
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 40
+    }
     naval_exit_id = 3012
 }
 STATE_JERMENION = {
@@ -1046,6 +1078,23 @@ STATE_JERMENION = {
     farm = x5AB8EA
     mine = xB4A69D
     port = xBACED2
+    arable_land = 20
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_iron_mining = 24
+        bg_sulfur_mining = 36
+        bg_logging = 20
+        bg_fishing = 8
+    }
+    resource = {
+        type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
+        undiscovered_amount = 8
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 16
+    }
     naval_exit_id = 3012
 }
 STATE_ARTHERA = {
@@ -1057,6 +1106,17 @@ STATE_ARTHERA = {
     farm = xB4D8E0
     mine = xBDF0EF
     port = xC085C6
+    arable_land = 40
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_iron_mining = 36
+        bg_logging = 14
+        bg_fishing = 8
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 10
+    }
     naval_exit_id = 3012
 }
 STATE_COCOHAYAT = {
@@ -1068,6 +1128,16 @@ STATE_COCOHAYAT = {
     farm = x73ACFB
     mine = x78E0F1
     port = x85DDC3
+    arable_land = 20
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_dye_plantations" "bg_opium_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 17
+        bg_fishing = 12
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 16
+    }
     naval_exit_id = 3012
 }
 STATE_HELARM = {
@@ -1079,6 +1149,16 @@ STATE_HELARM = {
     farm = x58BBE2
     mine = x62F5EC
     port = x65FBDC
+    arable_land = 80
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 23
+        bg_fishing = 8
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 28
+    }
     naval_exit_id = 3012
 }
 STATE_MYTHOS = {

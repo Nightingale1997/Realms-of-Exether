@@ -2,7 +2,7 @@
 
 s:STATE_URRATEGI = {
 	create_state = {
-		country = c:POA
+		country = c:SUN
 		owned_provinces = { "x7FD0CE" "xA6F2CB" "xB487E7" "xB5D9FB" "xB5E37C" "xC9BDBD" "xD6FC43" "xDA5BE4" "xDFE653" "xE0D9C8" "xE1C8B3" "xE1DFC6" "xED9BD1" }
 }
 add_homeland = cu:yakamimbo
@@ -35,23 +35,7 @@ add_homeland = cu:sandcircler
 s:STATE_IHARKHAN = {
 	create_state = {
 		country = c:HIZ
-		owned_provinces = { "x36CBFD" "x78B0F7" "x7BCBBB" "x93DBB5" "xB752F7" "xC2C1CC" "xCC74C3" "xD64FE0" "xD9E26A" "xDD8DD7" "xE8A280" "xFCDEE9" }
-}
-add_homeland = cu:sandcircler
-}
-
-s:STATE_GORRIMU = {
-	create_state = {
-		country = c:HIZ
-		owned_provinces = { "x8BE3FD" "x9EEDDB" "xBDE8C9" "xC7E19A" "xEAAD65" "xEE2DE9" "xF12CDA" }
-}
-add_homeland = cu:sandcircler
-}
-
-s:STATE_GARAIHANA = {
-	create_state = {
-		country = c:HIZ
-		owned_provinces = { "x5CDCDB" "x9EC4AB" "xB1D0BB" "xC6B1F5" "xF1ABD4" }
+		owned_provinces = { "x36CBFD" "x5CDCDB" "x78B0F7" "x7BCBBB" "x8BE3FD" "x93DBB5" "x9EC4AB" "xB1D0BB" "xB752F7" "xBDE8C9" "xC2C1CC" "xC6B1F5" "xCC74C3" "xD64FE0" "xD9E26A" "xDD8DD7" "xE8A280" "xEAAD65" "xEE2DE9" "xF12CDA" "xF1ABD4" "xFCDEE9" }
 }
 add_homeland = cu:sandcircler
 }
@@ -59,17 +43,18 @@ add_homeland = cu:sandcircler
 s:STATE_ARATZIRI = {
 	create_state = {
 		country = c:HIZ
-		owned_provinces = { "x69E7A5" "x76E59E" "x9895E7" "x9972F3" "xB3D2EB" "xCEC8C4" "xD8C271" "xE277C5" "xE5DDE9" "xE5E144" "xF096F6" "xF6E7D8" "xF9BE41" "xFBA8D8" }
+		owned_provinces = { "x69E7A5" "x76E59E" "x9895E7" "x9972F3" "x9EEDDB" "xB3D2EB" "xC7E19A" "xCEC8C4" "xD8C271" "xE277C5" "xE5DDE9" "xE5E144" "xF096F6" "xF6E7D8" "xF9BE41" "xFBA8D8" }
 }
 add_homeland = cu:sandcircler
 }
 
 s:STATE_KASKOHARI = {
 	create_state = {
-		country = c:PIU
+		country = c:HIZ
 		owned_provinces = { "x5CECDC" "x66A1F9" "x6FD1DC" "x83F7C1" "xA1F58C" "xA5A6E0" "xBDD390" "xC182FD" "xD79ACF" "xE5CD5F" "xE7EB40" "xECA777" "xF4B0CD" "xF4EED3" "xFC28FB" "xFE3BFB" }
 }
 add_homeland = cu:saglithan
+add_homeland = cu:sandcircler
 }
 
 s:STATE_BATOHAIN = {
@@ -98,7 +83,7 @@ add_homeland = cu:sandcircler
 
 s:STATE_ARRIGORRI = {
 	create_state = {
-		country = c:LUR
+		country = c:GAI
 		owned_provinces = { "x14F4ED" "x7DE5EB" "x8AD4D3" "xB6ACAA" "xCAB5E3" "xCE8EC7" "xD0F473" "xF1C3C9" "xF78B7B" "xF8FBBA" "xFBABE6" }
 }
 add_homeland = cu:cliffpercher
@@ -550,7 +535,7 @@ add_homeland = cu:cliffpercher
 s:STATE_ARGI = {
 	create_state = {
 		country = c:HEG
-		owned_provinces = { "x20E4F4" "x3AD1FE" "x97E8AB" "xB9B1AF" "xBDBED1" "xC5B69F" "xDA53D4" "xE2988C" "xF1A3BC" "xF678A3" "xFAF8AB" "xFBB889" }
+		owned_provinces = { "x20E4F4" "x3AD1FE" "x97E8AB" "xA7E773" "xB9B1AF" "xBDBED1" "xC5B69F" "xDA53D4" "xE086CD" "xE08F97" "xE2988C" "xF1A3BC" "xF678A3" "xFAF8AB" "xFBB889" }
 }
 add_homeland = cu:cliffpercher
 }
