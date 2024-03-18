@@ -27,20 +27,27 @@
 
   }
 
-  s:STATE_GORRIMU = {
-
-  }
-
-  s:STATE_GARAIHANA = {
-
-  }
 
   s:STATE_ARATZIRI = {
-
+		region_state:HIZ={
+		}
   }
 
   s:STATE_KASKOHARI = {
-
+		region_state:HIZ={
+			create_building={
+				building="building_fishing_wharf"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+			}
+			create_building={
+				building="building_livestock_ranch"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_open_air_stockyards" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+			}
+		}
   }
 
   s:STATE_BATOHAIN = {

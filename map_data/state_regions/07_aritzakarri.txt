@@ -74,46 +74,36 @@ STATE_OLARRA = {
 STATE_IHARKHAN = {
     id = 4627
     subsistence_building = "building_subsistence_pastures"
-    provinces = { "x36CBFD" "x78B0F7" "x7BCBBB" "x93DBB5" "xB752F7" "xC2C1CC" "xCC74C3" "xD64FE0" "xD9E26A" "xDD8DD7" "xE8A280" "xFCDEE9" }
+    provinces = { "x36CBFD" "x5CDCDB" "x78B0F7" "x7BCBBB" "x8BE3FD" "x93DBB5" "x9EC4AB" "xB1D0BB" "xB752F7" "xBDE8C9" "xC2C1CC" "xC6B1F5" "xCC74C3" "xD64FE0" "xD9E26A" "xDD8DD7" "xE8A280" "xEAAD65" "xEE2DE9" "xF12CDA" "xF1ABD4" "xFCDEE9" }
     city = x36CBFD
     wood = x78B0F7
     farm = x7BCBBB
     mine = x93DBB5
     port = xB752F7
-    naval_exit_id = 3070
-}
-STATE_GORRIMU = {
-    id = 4628
-    subsistence_building = "building_subsistence_pastures"
-    provinces = { "x8BE3FD" "x9EEDDB" "xBDE8C9" "xC7E19A" "xEAAD65" "xEE2DE9" "xF12CDA" }
-    city = x8BE3FD
-    wood = x9EEDDB
-    farm = xBDE8C9
-    mine = xC7E19A
-    port = xEAAD65
-    naval_exit_id = 3070
-}
-STATE_GARAIHANA = {
-    id = 4629
-    subsistence_building = "building_subsistence_pastures"
-    provinces = { "x5CDCDB" "x9EC4AB" "xB1D0BB" "xC6B1F5" "xF1ABD4" }
-    city = x5CDCDB
-    wood = x9EC4AB
-    farm = xB1D0BB
-    mine = xC6B1F5
-    port = xF1ABD4
-    naval_exit_id = 3070
+    arable_land = 10
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_fishing = 3
+        bg_iron_mining = 24
+        bg_lead_mining = 24
+    }
+    naval_exit_id = 3059
 }
 STATE_ARATZIRI = {
     id = 4630
     subsistence_building = "building_subsistence_pastures"
-    provinces = { "x69E7A5" "x76E59E" "x9895E7" "x9972F3" "xB3D2EB" "xCEC8C4" "xD8C271" "xE277C5" "xE5DDE9" "xE5E144" "xF096F6" "xF6E7D8" "xF9BE41" "xFBA8D8" }
+    provinces = { "x69E7A5" "x76E59E" "x9895E7" "x9972F3" "x9EEDDB" "xB3D2EB" "xC7E19A" "xCEC8C4" "xD8C271" "xE277C5" "xE5DDE9" "xE5E144" "xF096F6" "xF6E7D8" "xF9BE41" "xFBA8D8" }
     city = x69E7A5
     wood = x76E59E
     farm = x9895E7
     mine = x9972F3
     port = xB3D2EB
-    naval_exit_id = 3070
+    arable_land = 3
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_fishing = 3
+    }
+    naval_exit_id = 3059
 }
 STATE_KASKOHARI = {
     id = 4631
@@ -124,7 +114,14 @@ STATE_KASKOHARI = {
     farm = x6FD1DC
     mine = x83F7C1
     port = xA1F58C
-    naval_exit_id = 3070
+    arable_land = 30
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_tobacco_plantations" "bg_banana_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_iron_mining = 24
+        bg_logging = 5
+        bg_fishing = 4
+    }
+    naval_exit_id = 3059
 }
 STATE_BATOHAIN = {
     id = 4632
