@@ -42,7 +42,15 @@ STATE_HIRUMENDI = {
     farm = x91E5C7
     mine = x97E38A
     port = x9CDD87
-    naval_exit_id = 3070
+    arable_land = 30
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 32
+        bg_logging = 4
+        bg_fishing = 7
+        bg_whaling = 2
+    }
+    naval_exit_id = 3027
 }
 STATE_KHANZULO = {
     id = 4625
@@ -53,7 +61,15 @@ STATE_KHANZULO = {
     farm = x9CF0D3
     mine = xA291E0
     port = xB1E997
-    naval_exit_id = 3070
+    arable_land = 40
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 40
+        bg_logging = 2
+        bg_fishing = 6
+        bg_whaling = 4
+    }
+    naval_exit_id = 3027
 }
 STATE_OLARRA = {
     id = 4626

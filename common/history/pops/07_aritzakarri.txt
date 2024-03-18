@@ -14,11 +14,40 @@
   }
 
   s:STATE_HIRUMENDI = {
-
+		region_state:POA = {
+			create_pop = {
+				culture = sandcircler
+				size = 56000
+			}
+			create_pop = {
+				culture = onikoku
+				size = 4000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = onikoku
+				size = 4000
+			}
+		}
   }
 
   s:STATE_KHANZULO = {
-
+		region_state:POA = {
+			create_pop = {
+				culture = sandcircler
+				size = 133996
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = onikoku
+				size = 2000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = onikoku
+				size = 20000
+			}
+		}
   }
 
   s:STATE_OLARRA = {
