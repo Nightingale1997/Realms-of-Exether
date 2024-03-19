@@ -17,3 +17,42 @@ pmg_automation_building_gizmo_workshop = {
 		pm_assembly_lines_building_gizmo_workshop
 	}
 }
+
+pmg_base_building_potion_distillery = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_simple_potion_production
+		pm_early_potion_vat_production
+		pm_wishtone_potion_process_production
+		pm_cool_name_potion_process_production
+	}
+}
+
+pmg_base_liquid_potion = {
+texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds" #could maybe use something more flavorful for these
+	production_methods = {
+		pm_water-based_potions
+		pm_alcohol-based_potion
+		pm_oil-based_potions
+	}
+}
+
+pmg_cosmetic_potion_production = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds" #could maybe use something more flavorful for these
+		production_methods = {
+			pm_no_cosmetic_potion_production
+			pm_base_cosmetic_potion_production
+			pm_advanced_cosmetic_potion_production
+		}
+	}
+
+pmg_automation_building_potion_distillery = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_automation_disabled
+		pm_watertube_boiler_building_potion_distillery
+		pm_rotary_valve_engine_building_potion_distillery
+		pm_assembly_line_bottling_blubber_building_potion_distillery
+		pm_assembly_line_bottling_godsblood_building_potion_distillery
+	}
+}
