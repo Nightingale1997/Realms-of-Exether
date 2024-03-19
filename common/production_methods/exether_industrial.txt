@@ -169,3 +169,301 @@ pm_assembly_lines_building_gizmo_workshop = {
 
 	required_input_goods = electricity
 }
+
+pm_simple_potion_production = {
+	texture = "gfx/interface/icons/production_method_icons/synthetic_dyes.dds"
+	
+
+
+	building_modifiers = {
+		workforce_scaled = {
+
+			goods_input_monster_essence_add = 20
+
+			# output goods
+			goods_output_potions_add = 30
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 4500
+		}
+	}
+}
+
+pm_early_potion_vat_production = {
+	texture = "gfx/interface/icons/production_method_icons/synthetic_dyes.dds"
+	
+
+
+	building_modifiers = {
+		workforce_scaled = {
+
+			goods_input_tools_add = 4
+			goods_input_monster_essence_add = 30
+
+			# output goods
+			goods_output_potions_add = 55
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 4000
+			building_employment_machinists_add = 500
+		}
+	}
+}
+
+pm_wishtone_potion_process_production = {
+	texture = "gfx/interface/icons/production_method_icons/synthetic_dyes.dds"
+	
+	unlocking_technologies = {
+		mechanical_tools
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+
+			goods_input_monster_essence_add = 35
+			goods_input_wishstone_add = 10
+			
+			goods_output_potions_add = 70
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 3650
+			building_employment_machinists_add = 500
+			building_employment_wizards_add = 350
+		}
+		unscaled = {
+			building_laborers_mortality_mult = 0.2
+			building_machinists_mortality_mult = 0.1
+			building_wizards_mortality_mult = 0.05
+		}
+	}
+}
+
+pm_cool_name_potion_process_production = {
+	texture = "gfx/interface/icons/production_method_icons/synthetic_dyes.dds"
+	
+	unlocking_technologies = {
+		mechanical_tools  #subject to change
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			
+			goods_input_tools_add = 4
+			goods_input_monster_essence_add = 35
+			goods_input_sulfur_add = 8
+			
+			goods_output_potions_add = 70
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 3850
+			building_employment_machinists_add = 500
+			building_employment_engineers_add = 150
+		}
+	}
+}
+
+#probably need a final tier with 90-110 potion output
+
+pm_water-based_potions = {
+	texture = "gfx/interface/icons/production_method_icons/crude_tools.dds"  #change
+	
+	building_modifiers = {
+		workforce_scaled = {
+			
+			goods_output_potions_add = -10
+		}
+
+	}
+}
+
+pm_alcohol-based_potions = {
+	texture = "gfx/interface/icons/production_method_icons/crude_tools.dds"  #change
+	
+	building_modifiers = {
+		workforce_scaled = {
+			
+			goods_input_liquor_add = 10
+			goods_output_potions_add = 10
+		}
+
+
+	}
+}
+
+pm_oil-based_potions = {
+	texture = "gfx/interface/icons/production_method_icons/crude_tools.dds"  #change  #a leviathan-whaling focussed country should unlock this at game start
+	#lock to T3 or T4 tech
+	building_modifiers = {
+		workforce_scaled = {
+			
+			goods_input_blubber_add = 10
+			goods_output_potions_add = 20
+		}
+
+		unscaled = {
+			building_laborers_mortality_mult = 0.1
+			building_machinists_mortality_mult = 0.05
+		}
+	}
+}
+
+#pm_super-based_potions  probably a magical base, but something other than godsblood.   Unless????
+
+pm_no_cosmetic_potion_production = {
+
+}
+
+pm_base_cosmetic_potion_production = {
+	building_modifiers = {
+		workforce_scaled = {
+			
+			goods_input_lead_add = 3
+			goods_output_potions_add = -15
+			goods_output_cosmetic_potions_add = 12
+		}
+
+		unscaled = {
+			building_laborers_mortality_mult = 0.05
+		}
+	}
+}
+
+pm_advanced_cosmetic_potion_production = {
+
+	unlocking_technologies = {
+		conveyors
+	}
+	#lock to late tech
+	building_modifiers = {
+		workforce_scaled = {
+			
+			goods_input_lead_add = 6
+			goods_output_potions_add = -30
+			goods_output_cosmetic_potions_add = 24
+		}
+
+		unscaled = {
+			building_laborers_mortality_mult = 0.05
+		}
+	}
+}
+
+pm_watertube_boiler_building_potion_distillery = {
+	texture = "gfx/interface/icons/production_method_icons/watertube_boiler.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 5
+		}
+	}
+	
+	unlocking_technologies = {
+		watertube_boiler
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 5
+			goods_input_coal_add = 5
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -500
+			building_employment_machinists_add = -500
+		}
+	}
+}
+
+pm_rotary_valve_engine_building_potion_distillery = {
+	texture = "gfx/interface/icons/production_method_icons/rotary_valve_engine.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	
+	unlocking_technologies = {
+		rotary_valve_engine
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 5
+			goods_input_coal_add = 10
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -1000
+			building_employment_machinists_add = -500
+		}
+	}
+}
+
+pm_assembly_line_bottling_godsblood_building_potion_distillery = {
+	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 15  #change to magic pollution
+		}
+	}
+	
+	unlocking_technologies = {
+		conveyors
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 5
+			goods_input_oil_add = 5
+			goods_input_electricity_add = 5
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -1500
+			building_employment_machinists_add = -500
+		}
+	}
+
+	required_input_goods = electricity
+}
+
+pm_assembly_line_bottling_blubber_building_potion_distillery = {
+	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 15  
+		}
+	}
+	
+	unlocking_technologies = {
+		conveyors
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 5
+			goods_input_blubber_add = 5
+			goods_input_electricity_add = 5
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -1500
+			building_employment_machinists_add = -500
+		}
+	}
+
+	required_input_goods = electricity
+}
