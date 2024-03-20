@@ -599,6 +599,16 @@ trinkets = {
 	traded_quantity = 2
 }
 
+cosmetic_potions = {
+	texture = "gfx/interface/icons/goods_icons/dye.dds"
+	cost = 85  #debatable
+	category = luxury
+	
+	obsession_chance = 1.8 #hmmm
+	prestige_factor = 15
+}
+
+
 cloudsilver = {
 	texture = "gfx/interface/icons/goods_icons/cloudsilver.dds"
 	cost = 45
@@ -633,4 +643,12 @@ monster_essence = {
 	category = industrial #WIP?
 	
 	prestige_factor = 5
+}
+
+potions = {
+	#texture = "gfx/interface/icons/goods_icons/monster_essence.dds"
+	cost = 55 #50?  60?
+	category = industrial #WIP?
+	
+	prestige_factor = 10
 }
