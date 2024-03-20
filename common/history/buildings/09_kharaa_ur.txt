@@ -1323,23 +1323,82 @@
   }
 
   s:STATE_PLACEHOLDER_EMPTY_1 = {
+    region_state:ONG={
+			create_building={
+				building="building_barracks"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+			}
+		}
   }
 
   s:STATE_PLACEHOLDER_EMPTY_2 = {
+    region_state:ONG={
+			create_building={
+				building="building_wheat_farm"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_citrus_orchards" "pm_tools_disabled" "pm_homesteading" }
+			}
+			create_building={
+				building="building_barracks"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+			}
+      create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_basic_port" }
+			}
+		}
   }
 
   s:STATE_PLACEHOLDER_EMPTY_4 = {
-  }
-
-  s:STATE_PLACEHOLDER_EMPTY_5 = {
+    region_state:ONG={
+      
+		}
   }
 
   s:STATE_PLACEHOLDER_EMPTY_8 = {
+    region_state:ONG={
+			create_building={
+				building="building_wheat_farm"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_citrus_orchards" "pm_tools_disabled" "pm_homesteading" }
+			}
+			create_building={
+				building="building_livestock_ranch"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_butchering_tools" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated" "pm_homesteading" }
+			}
+			create_building={
+				building="building_barracks"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+			}
+			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_basic_port" }
+			}
+		}
   }
 
   s:STATE_PLACEHOLDER_EMPTY_9 = {
-  }
-
-  s:STATE_PLACEHOLDER_EMPTY_10 = {
+    region_state:ONG={
+			create_building={
+				building="building_livestock_ranch"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_butchering_tools" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated" "pm_homesteading" }
+			}
+		}
   }
 }
