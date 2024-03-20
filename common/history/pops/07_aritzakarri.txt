@@ -1,7 +1,7 @@
 ﻿POPS = {
 
   s:STATE_URRATEGI = {
-    region_state:POA = {
+    region_state:SUN = {
       create_pop = {
         culture = sandcircler
         size = 15000
@@ -14,11 +14,40 @@
   }
 
   s:STATE_HIRUMENDI = {
-
+		region_state:POA = {
+			create_pop = {
+				culture = sandcircler
+				size = 56000
+			}
+			create_pop = {
+				culture = onikoku
+				size = 4000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = onikoku
+				size = 4000
+			}
+		}
   }
 
   s:STATE_KHANZULO = {
-
+		region_state:POA = {
+			create_pop = {
+				culture = sandcircler
+				size = 133996
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = onikoku
+				size = 2000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = onikoku
+				size = 20000
+			}
+		}
   }
 
   s:STATE_OLARRA = {
@@ -50,23 +79,53 @@
   }
 
   s:STATE_IHARKHAN = {
-
-  }
-
-  s:STATE_GORRIMU = {
-
-  }
-
-  s:STATE_GARAIHANA = {
-
+		region_state:HIZ = {
+			create_pop = {
+				culture = sandcircler
+				size = 18120
+			}
+			create_pop = {
+				culture = yakamimbo
+				size = 871
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = yakamimbo
+				size = 101
+			}
+		}
   }
 
   s:STATE_ARATZIRI = {
-
+		region_state:HIZ = {
+			create_pop = {
+				culture = sandcircler
+				size = 19801
+			}
+		}
   }
 
   s:STATE_KASKOHARI = {
-
+		region_state:HIZ = {
+			create_pop = {
+				culture = sandcircler
+				size = 298000
+			}
+			create_pop = {
+				culture = saglithan
+				size = 23000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = north_caucasian
+				size = 1200
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = lacustrine_bantu
+				size = 2300
+			}
+		}
   }
 
   s:STATE_BATOHAIN = {
@@ -141,15 +200,76 @@
   }
 
   s:STATE_ARRIGORRI = {
-
+		region_state:GAI = {
+			create_pop = {
+				culture = cliffpercher
+				size = 270062
+			}
+			create_pop = {
+				culture = sandcircler
+				size = 54002
+			}
+			create_pop = {
+				culture = whitefeather
+				size = 5023
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = onikoku
+				size = 400
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = sandcircler
+				size = 1000
+			}
+		}
   }
 
   s:STATE_KIYOMU = {
-
+		region_state:GAI = {
+			create_pop = {
+				culture = cliffpercher
+				size = 312000
+			}
+			create_pop = {
+				culture = sandcircler
+				size = 108200
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = onikoku
+				size = 3000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = sandcircler
+				size = 4000
+			}
+		}
   }
 
   s:STATE_URRAZPI = {
-
+		region_state:GAI = {
+			create_pop = {
+				culture = cliffpercher
+				size = 358000
+			}
+			create_pop = {
+				culture = sandcircler
+				size = 11000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = onikoku
+				size = 1000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = sandcircler
+				size = 4000
+			}
+		}
   }
 
   s:STATE_NISHIGARRA = {
@@ -215,7 +335,25 @@
   }
 
   s:STATE_MIZPIRIKA = {
-
+		region_state:GAI = {
+			create_pop = {
+				culture = cliffpercher
+				size = 362000
+			}
+			create_pop = {
+				culture = sandcircler
+				size = 96000
+			}
+			create_pop = {
+				culture = whitefeather
+				size = 72000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = sandcircler
+				size = 12000
+			}
+		}
   }
 
   s:STATE_OLABEGI = {

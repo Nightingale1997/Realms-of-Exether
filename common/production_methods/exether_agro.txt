@@ -1,0 +1,179 @@
+﻿pm_farms_no_enhancement = {
+
+}
+
+pm_farms_basic_earth_shaping = {
+	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
+	
+	unlocking_laws = {
+		#druid shit idk
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_wishstone_add = 3
+			goods_output_grain_add = 3
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_wizards_add = 500
+			building_employment_laborers_add = -1000
+		}
+		unscaled = {
+			#building modifiers
+			building_throughput_add = 0.15
+		}
+	}
+}
+
+pm_farms_mass_plant_growth = {  #could also be "hastened growth cycles"
+	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
+	
+	unlocking_laws = {
+		#druid shit idk
+	}
+
+	unlocking_technologies = {
+		improved_fertilizer
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_wishstone_add = 5
+			goods_output_grain_add = 6
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_wizards_add = 500
+			building_employment_laborers_add = -1000
+		}
+		unscaled = {
+			#building modifiers
+			building_throughput_add = 0.3
+		}
+	}
+}
+
+pm_rice_farms_no_enhancement = {
+
+}
+
+pm_rice_farms_basic_earth_shaping = {
+	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
+	
+	unlocking_laws = {
+		#druid shit idk
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_wishstone_add = 6
+			goods_output_grain_add = 6
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_wizards_add = 1000
+			building_employment_laborers_add = -2000
+		}
+		unscaled = {
+			#building modifiers
+			building_throughput_add = 0.15
+		}
+	}
+}
+
+pm_rice_farms_mass_plant_growth = {  #could also be "hastened growth cycles"
+	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
+	
+	unlocking_laws = {
+		#druid shit idk
+	}
+
+	unlocking_technologies = {
+		improved_fertilizer
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_wishstone_add = 10
+			goods_output_grain_add = 12
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_wizards_add = 1000
+			building_employment_laborers_add = -2000
+		}
+		unscaled = {
+			#building modifiers
+			building_throughput_add = 0.3
+		}
+	}
+}
+
+pm_livestock_no_enhancement = {
+
+}
+
+pm_livestock_fertility_rites = {
+	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
+	
+	unlocking_laws = {
+		#druid shit idk
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_wishstone_add = 3
+			goods_output_meat_add = 3
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_wizards_add = 500
+			building_employment_laborers_add = -1000
+		}
+		unscaled = {
+			#building modifiers
+			building_throughput_add = 0.15
+		}
+	}
+}
+
+pm_livestock_magical_selection = {  #magical selection is a METAL fucking name omg
+	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
+	
+	unlocking_laws = {
+		#druid shit idk
+	}
+
+	unlocking_technologies = {
+		improved_fertilizer
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_wishstone_add = 5
+			goods_output_meat_add = 5
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_wizards_add = 500
+			building_employment_laborers_add = -1000
+		}
+		unscaled = {
+			#building modifiers
+			building_throughput_add = 0.3
+		}
+	}
+}
