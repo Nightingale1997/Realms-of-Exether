@@ -1432,23 +1432,67 @@
   }
 
   s:STATE_PLACEHOLDER_EMPTY_1 = {
+    region_state:ONG = {
+			create_pop = {
+				culture = onghori
+				size = 68600 
+			}
+			create_pop = {
+				culture = cliffpercher
+				size = 3004
+			}
+		}
   }
 
   s:STATE_PLACEHOLDER_EMPTY_2 = {
+    region_state:ONG = {
+			create_pop = {
+				culture = kojiniu
+				size = 10500
+			}		
+			create_pop = {
+				culture = onghori
+				size = 22000
+			}
+		}
   }
 
   s:STATE_PLACEHOLDER_EMPTY_4 = {
-  }
-
-  s:STATE_PLACEHOLDER_EMPTY_5 = {
+    region_state:ONG = {
+			create_pop = {
+				culture = onghori
+				size = 31804
+			}
+		}
   }
 
   s:STATE_PLACEHOLDER_EMPTY_8 = {
+    region_state:ONG = {
+			create_pop = {
+				culture = sandcircler
+				size = 63200
+			}
+			create_pop = {
+				culture = onghori
+				size = 101384
+			}
+			create_pop = {
+				culture = kojiniu
+				size = 16080
+			}
+		}
   }
 
   s:STATE_PLACEHOLDER_EMPTY_9 = {
-  }
-
-  s:STATE_PLACEHOLDER_EMPTY_10 = {
+    region_state:ONG = {
+			create_pop = {
+				culture = onghori
+				size = 59200
+			}
+			create_pop = {
+				culture = kojiniu
+				size = 4000
+			}
+		}
   }
 }
