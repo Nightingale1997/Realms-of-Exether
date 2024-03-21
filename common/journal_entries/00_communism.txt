@@ -66,9 +66,14 @@
 	}
 
 	fail = {
-		custom_tooltip = {
-			text = communism_variable_at_full_tt
-			root.var:communism_je_1_var >= 100
+		trigger_if = {
+			limit = {
+				has_variable = communism_je_1_var
+			}
+			custom_tooltip = {
+				text = communism_variable_at_full_tt
+				root.var:communism_je_1_var >= 100
+			}
 		}
 	}
 
