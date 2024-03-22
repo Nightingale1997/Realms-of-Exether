@@ -1559,7 +1559,7 @@ enact_preferred_governance_principle = {
 	}
 	if = {
 		limit = {
-			scope:ruling_ig = {
+			scope:ruling_ig ?= {
 				law_stance = {
 					law = law_type:law_council_republic
 					value = strongly_approve
@@ -1570,7 +1570,7 @@ enact_preferred_governance_principle = {
 	}
 	else_if = {
 		limit = {
-			scope:ruling_ig = {
+			scope:ruling_ig ?= {
 				law_stance = {
 					law = law_type:law_monarchy
 					value = strongly_approve
@@ -1581,7 +1581,7 @@ enact_preferred_governance_principle = {
 	}
 	else_if = {
 		limit = {
-			scope:ruling_ig = {
+			scope:ruling_ig ?= {
 				law_stance = {
 					law = law_type:law_parliamentary_republic
 					value = strongly_approve
@@ -1592,7 +1592,7 @@ enact_preferred_governance_principle = {
 	}
 	else_if = {
 		limit = {
-			scope:ruling_ig = {
+			scope:ruling_ig ?= {
 				law_stance = {
 					law = law_type:law_presidential_republic
 					value = strongly_approve
@@ -1603,7 +1603,7 @@ enact_preferred_governance_principle = {
 	}
 	else_if = {
 		limit = {
-			scope:ruling_ig = {
+			scope:ruling_ig ?= {
 				law_stance = {
 					law = law_type:law_theocracy
 					value = strongly_approve
@@ -1614,7 +1614,7 @@ enact_preferred_governance_principle = {
 	}
 	else_if = {
 		limit = {
-			scope:ruling_ig = {
+			scope:ruling_ig ?= {
 				law_stance = {
 					law = law_type:law_council_republic
 					value = approve
@@ -1625,7 +1625,7 @@ enact_preferred_governance_principle = {
 	}
 	else_if = {
 		limit = {
-			scope:ruling_ig = {
+			scope:ruling_ig ?= {
 				law_stance = {
 					law = law_type:law_monarchy
 					value = approve
@@ -1636,7 +1636,7 @@ enact_preferred_governance_principle = {
 	}
 	else_if = {
 		limit = {
-			scope:ruling_ig = {
+			scope:ruling_ig ?= {
 				law_stance = {
 					law = law_type:law_parliamentary_republic
 					value = approve
@@ -1647,7 +1647,7 @@ enact_preferred_governance_principle = {
 	}
 	else_if = {
 		limit = {
-			scope:ruling_ig = {
+			scope:ruling_ig ?= {
 				law_stance = {
 					law = law_type:law_presidential_republic
 					value = approve
@@ -1658,7 +1658,7 @@ enact_preferred_governance_principle = {
 	}
 	else_if = {
 		limit = {
-			scope:ruling_ig = {
+			scope:ruling_ig ?= {
 				law_stance = {
 					law = law_type:law_theocracy
 					value = approve
@@ -1671,7 +1671,7 @@ enact_preferred_governance_principle = {
 		activate_law = law_type:law_presidential_republic
 		if = {
 			limit = {
-				civil_war_origin_country = {
+				civil_war_origin_country ?= {
 					has_law = law_type:law_monarchy
 				}
 			}
@@ -1679,7 +1679,7 @@ enact_preferred_governance_principle = {
 		}
 		else_if = {
 			limit = {
-				civil_war_origin_country = {
+				civil_war_origin_country ?= {
 					has_law = law_type:law_theocracy
 				}
 			}
@@ -1687,7 +1687,7 @@ enact_preferred_governance_principle = {
 		}
 		else_if = {
 			limit = {
-				civil_war_origin_country = {
+				civil_war_origin_country ?= {
 					has_law = law_type:law_council_republic
 				}
 			}
@@ -2256,10 +2256,20 @@ calculate_communism_progress = {
 		}
 		change_variable = { name = temp_ha_var_contribution multiply = -0.5 }
 	}
-	change_variable = { name = communism_progress_from_laws add = var:temp_policing_var_contribution }
-	change_variable = { name = communism_progress_from_laws add = var:temp_ha_var_contribution }
-	remove_variable = temp_policing_var_contribution
-	remove_variable = temp_ha_var_contribution
+	if = {
+		limit = {
+			has_variable = temp_policing_var_contribution
+		}
+		change_variable = { name = communism_progress_from_laws add = var:temp_policing_var_contribution }
+		remove_variable = temp_policing_var_contribution
+	}
+	if = {
+		limit = {
+			has_variable = temp_ha_var_contribution
+		}
+		change_variable = { name = communism_progress_from_laws add = var:temp_ha_var_contribution }
+		remove_variable = temp_ha_var_contribution
+	}
 
 	# Compilation
 	change_variable = { name = communism_progress_var_next add = var:communism_progress_from_radicals }
@@ -2482,7 +2492,7 @@ calculate_national_identity_progress = {
 
 add_national_identity_progress = {
 	change_variable = { name = national_identity_progress_var add = var:national_identity_progress_var_next }
-	clamp_variable = { name = orleanist_progress max = 100 min = 0 }
+	clamp_variable = { name = national_identity_progress_var max = 100 min = 0 }
 }
 
 set_national_identity_vars = {
