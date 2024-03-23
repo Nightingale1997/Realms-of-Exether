@@ -7,7 +7,19 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_ELVENSHROUD
-				count = 18
+				count = 6
+			}
+			
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_NORTHERN_1
+				count = 6
+			}
+			
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_MARKAN
+				count = 6
 			}
 
 			combat_unit = {
@@ -56,13 +68,13 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_RAHKIS
-				count = 12
+				count = 8
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_hussars
 				state_region = s:STATE_RAHKIS
-				count = 4
+				count = 2
 			}
 			save_scope_as = oro_army
 		}
