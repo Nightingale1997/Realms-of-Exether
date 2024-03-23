@@ -615,6 +615,12 @@ revolution_pulse_events.5 = {
 			is_insurrectionary = no
 		}
 		revolution_progress_high = yes
+		any_scope_state = {
+			is_incorporated = yes
+			NOT = {
+				is_capital = yes
+			} 
+		}
 	}
 
 	cancellation_trigger = {
