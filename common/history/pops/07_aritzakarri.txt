@@ -331,7 +331,24 @@
   }
 
   s:STATE_ARAKALDE = {
-
+	region_state:IHE = {
+		create_pop = {
+			culture = whitefeather
+			size = 819404
+		}
+		create_pop = {
+			culture = saglithan
+			size = 264000
+		}
+		create_pop = {
+			culture = cliffpercher
+			size = 100000
+		}
+		create_pop = {
+			culture = sandcircler
+			size = 56000
+		}
+	}
   }
 
   s:STATE_MIZPIRIKA = {
@@ -389,15 +406,56 @@
   }
 
   s:STATE_URRIKO = {
-
+	region_state:AIZ = {
+		create_pop = {
+			culture = whitefeather
+			size = 1820000
+		}
+		create_pop = {
+			culture = saglithan
+			size = 100000
+		}
+		create_pop = {
+			culture = kotskarvi
+			size = 54000
+		}
+	}
   }
 
   s:STATE_ZUBEROA = {
-
+	region_state:AIZ = {
+		create_pop = {
+			culture = saglithan
+			size = 40000
+		}
+		create_pop = {
+			culture = saglithan
+			religion = mountain_worship
+			size = 25000
+		}
+		create_pop = {
+			culture = whitefeather
+			size = 15000
+		}
+	}
   }
 
   s:STATE_IRAURBE = {
-
+	region_state:AIZ = {
+		create_pop = {
+			culture = whitefeather
+			size = 6428
+		}
+		create_pop = {
+			culture = saglithan
+			religion = mountain_worship
+			size = 12000
+		}
+		create_pop = {
+			culture = saglithan
+			size = 64000
+		}
+	}
   }
 
   s:STATE_UHINAK = {
@@ -409,7 +467,20 @@
   }
 
   s:STATE_LURRA = {
-
+	region_state:AIZ = {
+		create_pop = {
+			culture = whitefeather
+			size = 824000
+		}
+		create_pop = {
+			culture = saglithan
+			size = 42000
+		}
+		create_pop = {
+			culture = kotskarvi
+			size = 24000
+		}
+	}
   }
 
   s:STATE_ARGIA = {
