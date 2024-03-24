@@ -1,0 +1,16 @@
+﻿COUNTRIES = {
+	c:VAR = {
+		ig:ig_landowners = {
+			add_ruling_interest_group = yes
+		}
+		ig:ig_devout = {
+			add_ruling_interest_group = yes
+		}
+		
+		effect_starting_technology_tier_4_tech = yes
+		effect_starting_politics_reactionary = yes
+		
+		activate_law = law_type:law_theocracy
+		activate_law = law_type:law_legacy_slavery
+	}
+}
