@@ -928,13 +928,39 @@
 		}
 	}
 	s:STATE_AIRU = {
-		
+		region_state:ORO = {
+			create_building={
+				building="building_construction_sector"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_wooden_buildings" }
+			}
+		}
 	}
 	s:STATE_ELVERA = {
 		
 	}
 	s:STATE_RAVGA = {
-		
+		region_state:VAR = {
+			create_building={
+				building="building_logging_camp"
+				level=3
+				reserves=1
+				activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" "pm_privately_owned_building_logging_camp" }
+			}
+			create_building={
+				building="building_paper_mills"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_pulp_pressing" "pm_automation_disabled" "pm_merchant_guilds_building_paper_mills" }
+			}
+			create_building={
+				building="building_rye_farm"
+				level=3
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled" "pm_privately_owned" }
+			}
+		}
 	}
 	s:STATE_ELDORIA = {
 		
@@ -943,7 +969,38 @@
 		
 	}
 	s:STATE_SYLVARIN = {
-		
+		region_state:NRA={
+			create_building={
+				building="building_government_administration"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_organization" }
+			}
+			create_building={
+				building="building_textile_mills"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_traditional_looms" "pm_merchant_guilds_building_textile_mills" }
+			}
+			create_building={
+				building="building_fishing_wharf"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+			}
+			create_building={
+				building="building_livestock_ranch"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+			}
+			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_anchorage" }
+			}
+		}
 	}
 	s:STATE_NUORAID = {
 		
@@ -961,19 +1018,53 @@
 		
 	}
 	s:STATE_ELVERWISP = {
-		
+		region_state:VAR={
+			create_building={
+				building="building_rye_farm"
+				level=3
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_potatoes" "pm_tools_disabled" "pm_privately_owned" }
+			}
+		}
 	}
 	s:STATE_AURORIL = {
-		
+		region_state:VAR={
+			create_building={
+				building="building_livestock_ranch"
+				level=3
+				reserves=1
+				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+			}
+			create_building={
+				building="building_textile_mills"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_handsewn_clothes" "pm_merchant_guilds_building_textile_mills" "pm_traditional_looms" "pm_no_luxury_clothes" }
+			}
+		}
 	}
 	s:STATE_GIELAS = {
 		
 	}
 	s:STATE_AKNU = {
-		
+		region_state:ORO = {
+			create_building={
+				building="building_iron_mine"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" "pm_merchant_guilds_building_iron_mine" }
+			}
+		}
 	}
 	s:STATE_SYLVASKA = {
-		
+		region_state:VAR={
+			create_building={
+				building="building_rye_farm"
+				level=3
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled" "pm_privately_owned" }
+			}
+		}
 	}
 	s:STATE_GAVCCI = {
 		
@@ -982,34 +1073,168 @@
 		
 	}
 	s:STATE_ELVENSHROUD = {
-		
+		region_state:VAR = {
+			create_building={
+				building="building_government_administration"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+			}
+			create_building={
+				building="building_tobacco_plantation"
+				level=2
+				reserves=1
+				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+			}
+			create_building={
+				building="building_construction_sector"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_wooden_buildings" }
+			}
+		}
 	}
 	s:STATE_GAISI = {
 		
 	}
 	s:STATE_LUMINEVRA = {
-		
+		region_state:NRA={
+			create_building={
+				building="building_logging_camp"
+				level=3
+				reserves=1
+				activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" "pm_privately_owned_building_logging_camp" }
+			}
+			create_building={
+				building="building_fishing_wharf"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+			}
+			create_building={
+				building="building_construction_sector"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_wooden_buildings" }
+			}
+			create_building={
+				building="building_livestock_ranch"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+			}
+		}
 	}
 	s:STATE_ELVERLEAF = {
-		
+		region_state:VAR = {
+			create_building={
+				building="building_logging_camp"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_simple_forestry" "pm_hardwood" "pm_no_equipment" "pm_road_carts" "pm_privately_owned_building_logging_camp" }
+			}
+			create_building={
+				building="building_furniture_manufacturies"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_handcrafted_furniture" "pm_merchant_guilds_building_furniture_manufacturies" "pm_automation_disabled" "pm_luxury_furniture" }
+			}
+		}
 	}
 	s:STATE_AIGAI = {
-		
+		region_state:NRA={
+			create_building={
+				building="building_rye_farm"
+				level=3
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_potatoes" "pm_tools_disabled" "pm_privately_owned" }
+			}
+			create_building={
+				building="building_logging_camp"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_forestry" "pm_hardwood" "pm_no_equipment" "pm_road_carts" "pm_privately_owned_building_logging_camp" }
+			}
+			create_building={
+				building="building_fishing_wharf"
+				level=3
+				reserves=1
+				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+			}
+			create_building={
+				building="building_military_shipyards"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_merchant_guilds_building_military_shipyards" "pm_military_shipbuilding_wooden" }
+			}
+		}
 	}
 	s:STATE_SAMIEL = {
-		
+		region_state:ORO = {
+			create_building={
+				building="building_logging_camp"
+				level=3
+				reserves=1
+				activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" "pm_privately_owned_building_logging_camp" }
+			}
+			create_building={
+				building="building_tooling_workshops"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_pig_iron" "pm_automation_disabled" "pm_privately_owned_building_tooling_workshops" }
+			}
+		}
 	}
 	s:STATE_GUHKESLUOKTA = {
-		
+		region_state:ORO = {
+			create_building={
+				building="building_rye_farm"
+				level=3
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled" "pm_privately_owned" }
+			}
+		}
 	}
 	s:STATE_SILVERSONG = {
 		
 	}
 	s:STATE_SILENTWISP = {
-		
+		region_state:ORO = {
+			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_anchorage" }
+			}
+			create_building={
+				building="building_whaling_station"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_simple_whaling" "pm_unrefrigerated" "pm_merchant_guilds_building_whaling_station" }
+			}
+		}
 	}
 	s:STATE_RAHKIS = {
-		
+		region_state:ORO = {
+			create_building={
+				building="building_government_administration"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_organization" }
+			}
+			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_anchorage" }
+			}
+			create_building={
+				building="building_rye_farm"
+				level=3
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_potatoes" "pm_tools_disabled" "pm_privately_owned" }
+			}
+		}
 	}
 	s:STATE_WHIRINAKI = {
 		
