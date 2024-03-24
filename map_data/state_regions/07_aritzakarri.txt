@@ -403,6 +403,12 @@ STATE_ARAKALDE = {
     farm = x6DBEE9
     mine = x85E7F6
     port = xACD3BB
+    arable_land = 60
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 48
+        bg_logging = 6
+    }
     naval_exit_id = 3070
 }
 STATE_MIZPIRIKA = {
@@ -519,6 +525,11 @@ STATE_URRIKO = {
     farm = x72D2D9
     mine = x8D98E6
     port = x9896F9
+    arable_land = 100
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 20
+    }
     naval_exit_id = 3070
 }
 STATE_ZUBEROA = {
@@ -530,7 +541,21 @@ STATE_ZUBEROA = {
     farm = x6CCACA
     mine = x8A87E8
     port = x8DA0DA
-    naval_exit_id = 3070
+    arable_land = 30
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 28
+        bg_iron_mining = 27
+        bg_logging = 11
+        bg_whaling = 3
+        bg_fishing = 8
+    }
+    resource = {
+        type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
+        undiscovered_amount = 4
+    }
+    naval_exit_id = 3029
 }
 STATE_IRAURBE = {
     id = 4662
@@ -541,7 +566,19 @@ STATE_IRAURBE = {
     farm = x8A93F9
     mine = x8CD2BD
     port = x8ECAFD
-    naval_exit_id = 3070
+    arable_land = 30
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 7
+        bg_whaling = 4
+        bg_fishing = 10
+    }
+    resource = {
+        type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
+        undiscovered_amount = 6
+    }
+    naval_exit_id = 3029
 }
 STATE_UHINAK = {
     id = 4663
@@ -574,6 +611,11 @@ STATE_LURRA = {
     farm = xAAFEB0
     mine = xBDB3D6
     port = xBFEDE5
+    arable_land = 60
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 11
+    }
     naval_exit_id = 3070
 }
 STATE_ARGIA = {
