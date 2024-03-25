@@ -374,7 +374,24 @@
   }
 
   s:STATE_OLABEGI = {
-
+	region_state:PIU = {
+		create_pop = {
+			culture = saglithan
+			size = 183996
+		}
+		create_pop = {
+			culture = whitefeather
+			size = 1004
+		}
+		create_pop = {
+			culture = kotskarvi
+			size = 94996
+		}
+		create_pop = {
+			culture = sandcircler
+			size = 20400
+		}
+	}
   }
 
   s:STATE_UDABERRI = {
@@ -382,7 +399,34 @@
   }
 
   s:STATE_IZOZKI = {
-
+	region_state:PIU = {
+		create_pop = {
+			culture = saglithan
+			size = 272000
+		}
+		create_pop = {
+			culture = mashriqi
+			religion = mountain_worship
+			size = 13404
+		}
+		create_pop = {
+			culture = sandcircler
+			size = 51996
+		}
+		create_pop = {
+			culture = sandcircler
+			religion = mountain_worship
+			size = 12004
+		}
+		create_pop = {
+			culture = cliffpercher
+			size = 32004
+		}
+		create_pop = {
+			culture = whitefeather
+			size = 1200
+		}
+	}
   }
 
   s:STATE_GARRITXO = {

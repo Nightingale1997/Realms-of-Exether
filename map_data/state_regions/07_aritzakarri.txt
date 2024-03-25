@@ -437,7 +437,18 @@ STATE_OLABEGI = {
     farm = x689BFC
     mine = x6EC0E0
     port = x799CFB
-    naval_exit_id = 3070
+    arable_land = 60
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_dye_plantations" "bg_sugar_plantations" "bg_silk_plantations" }
+    capped_resources = {
+        bg_sulfur_mining = 22
+        bg_fishing = 5
+        bg_logging = 4
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 60
+    }
+    naval_exit_id = 3059
 }
 STATE_UDABERRI = {
     id = 4653
@@ -459,7 +470,18 @@ STATE_IZOZKI = {
     farm = x8DC8E5
     mine = x95A8D7
     port = x98A5BC
-    naval_exit_id = 3070
+    arable_land = 30
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_silk_plantations" "bg_tobacco_plantations" }
+    capped_resources = {
+        bg_sulfur_mining = 32
+        bg_fishing = 6
+        bg_logging = 12
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 60
+    }
+    naval_exit_id = 3029
 }
 STATE_GARRITXO = {
     id = 4655
@@ -892,7 +914,7 @@ STATE_IBAIA = {
     mine = x9BD9B9
     port = xA6C39E
     arable_land = 15
-    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tea_plantations" "bg_sugar_plantations" "bg_opium_plantations" }
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tea_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_iron_mining = 15
         bg_lead_mining = 15
