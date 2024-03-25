@@ -16,7 +16,7 @@ DEFAULT = {
 		
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 				has_law = law_type:law_council_republic
 				any_interest_group = {
@@ -42,7 +42,7 @@ DEFAULT = {
 		
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 				NOT = { has_law = law_type:law_council_republic }
 				any_interest_group = {
@@ -68,7 +68,7 @@ DEFAULT = {
 		
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 				NOT = { has_law = law_type:law_council_republic }
 				any_interest_group = {
@@ -90,7 +90,7 @@ DEFAULT = {
 		
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 				has_law = law_type:law_monarchy
 				any_interest_group = {
@@ -112,7 +112,7 @@ DEFAULT = {
 		
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 				has_law = law_type:law_monarchy
 				any_interest_group = {
@@ -134,7 +134,7 @@ DEFAULT = {
 		
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 				has_law = law_type:law_monarchy
 				any_interest_group = {
@@ -157,7 +157,7 @@ DEFAULT = {
 		
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 				ig:ig_rural_folk = {
 					is_in_government = yes
@@ -176,7 +176,7 @@ DEFAULT = {
 		trigger = {
 
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 				ig:ig_landowners = {
 					is_in_government = yes
@@ -194,7 +194,7 @@ DEFAULT = {
 		
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 				any_interest_group = {
 					is_in_government = yes
@@ -219,7 +219,7 @@ DEFAULT = {
 		
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 				ig:ig_industrialists = {
 					is_in_government = yes
@@ -237,7 +237,7 @@ DEFAULT = {
 		
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 				ig:ig_armed_forces = {
 					is_in_government = yes
@@ -255,7 +255,7 @@ DEFAULT = {
 		
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 				ig:ig_devout = {
 					is_in_government = yes
@@ -273,7 +273,7 @@ DEFAULT = {
 		
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 				ig:ig_petty_bourgeoisie = {
 					is_in_government = yes
@@ -291,7 +291,7 @@ DEFAULT = {
 		
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 				ig:ig_trade_unions = {
 					is_in_government = yes
@@ -310,7 +310,7 @@ DEFAULT = {
 		
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 			}
 		}
@@ -324,7 +324,7 @@ DEFAULT = {
 		
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 			}
 		}
@@ -338,7 +338,7 @@ DEFAULT = {
 		
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 			}
 		}

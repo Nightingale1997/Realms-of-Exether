@@ -68,11 +68,11 @@ DEFAULT = {
 		priority = 100
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				has_variable = southern_africa_subject_var
 			}
 			NOT = {
-				scope:actor = {
+				scope:actor ?= {
 					c:SAF ?= this
 					c:GBR ?= this.overlord
 				}
@@ -86,7 +86,7 @@ DEFAULT = {
 		priority = 100
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				has_variable = congo_subject_var
 			}
 		}
@@ -98,7 +98,7 @@ DEFAULT = {
 		priority = 100
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				has_variable = niger_subject_var
 			}
 		}
@@ -110,7 +110,7 @@ DEFAULT = {
 		priority = 100
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				has_variable = senegal_subject_var
 			}
 		}
@@ -122,7 +122,7 @@ DEFAULT = {
 		priority = 100
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				has_variable = zanj_subject_var
 			}
 		}
@@ -134,7 +134,7 @@ DEFAULT = {
 		priority = 100
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				has_variable = ethiopia_subject_var
 			}
 		}

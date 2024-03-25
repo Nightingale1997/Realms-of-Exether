@@ -1,0 +1,18 @@
+﻿DIPLOMACY = {
+	c:VAR ?= {
+		create_diplomatic_pact = {
+			country = c:ORO
+			type = trade_agreement
+		}
+		create_diplomatic_pact = {
+			country = c:NRA
+			type = trade_agreement
+		}
+	}
+	c:ORO ?= {
+		create_diplomatic_pact = {
+			country = c:NRA
+			type = trade_agreement
+		}
+	}
+}

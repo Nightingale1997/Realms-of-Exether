@@ -331,7 +331,24 @@
   }
 
   s:STATE_ARAKALDE = {
-
+	region_state:IHE = {
+		create_pop = {
+			culture = whitefeather
+			size = 819404
+		}
+		create_pop = {
+			culture = saglithan
+			size = 264000
+		}
+		create_pop = {
+			culture = cliffpercher
+			size = 100000
+		}
+		create_pop = {
+			culture = sandcircler
+			size = 56000
+		}
+	}
   }
 
   s:STATE_MIZPIRIKA = {
@@ -357,7 +374,24 @@
   }
 
   s:STATE_OLABEGI = {
-
+	region_state:PIU = {
+		create_pop = {
+			culture = saglithan
+			size = 183996
+		}
+		create_pop = {
+			culture = whitefeather
+			size = 1004
+		}
+		create_pop = {
+			culture = kotskarvi
+			size = 94996
+		}
+		create_pop = {
+			culture = sandcircler
+			size = 20400
+		}
+	}
   }
 
   s:STATE_UDABERRI = {
@@ -365,7 +399,34 @@
   }
 
   s:STATE_IZOZKI = {
-
+	region_state:PIU = {
+		create_pop = {
+			culture = saglithan
+			size = 272000
+		}
+		create_pop = {
+			culture = mashriqi
+			religion = mountain_worship
+			size = 13404
+		}
+		create_pop = {
+			culture = sandcircler
+			size = 51996
+		}
+		create_pop = {
+			culture = sandcircler
+			religion = mountain_worship
+			size = 12004
+		}
+		create_pop = {
+			culture = cliffpercher
+			size = 32004
+		}
+		create_pop = {
+			culture = whitefeather
+			size = 1200
+		}
+	}
   }
 
   s:STATE_GARRITXO = {
@@ -389,15 +450,56 @@
   }
 
   s:STATE_URRIKO = {
-
+	region_state:AIZ = {
+		create_pop = {
+			culture = whitefeather
+			size = 1820000
+		}
+		create_pop = {
+			culture = saglithan
+			size = 100000
+		}
+		create_pop = {
+			culture = kotskarvi
+			size = 54000
+		}
+	}
   }
 
   s:STATE_ZUBEROA = {
-
+	region_state:AIZ = {
+		create_pop = {
+			culture = saglithan
+			size = 40000
+		}
+		create_pop = {
+			culture = saglithan
+			religion = mountain_worship
+			size = 25000
+		}
+		create_pop = {
+			culture = whitefeather
+			size = 15000
+		}
+	}
   }
 
   s:STATE_IRAURBE = {
-
+	region_state:AIZ = {
+		create_pop = {
+			culture = whitefeather
+			size = 6428
+		}
+		create_pop = {
+			culture = saglithan
+			religion = mountain_worship
+			size = 12000
+		}
+		create_pop = {
+			culture = saglithan
+			size = 64000
+		}
+	}
   }
 
   s:STATE_UHINAK = {
@@ -409,7 +511,20 @@
   }
 
   s:STATE_LURRA = {
-
+	region_state:AIZ = {
+		create_pop = {
+			culture = whitefeather
+			size = 824000
+		}
+		create_pop = {
+			culture = saglithan
+			size = 42000
+		}
+		create_pop = {
+			culture = kotskarvi
+			size = 24000
+		}
+	}
   }
 
   s:STATE_ARGIA = {
@@ -509,10 +624,28 @@
   }
 
   s:STATE_IBAIA = {
-
+	region_state:HEG = {
+		create_pop = {
+			culture = cliffpercher
+			size = 12208
+		}
+		create_pop = {
+			culture = onghori
+			size = 11319
+		}
+	}
   }
 
   s:STATE_ARGI = {
-
+	region_state:HEG = {
+		create_pop = {
+			culture = cliffpercher
+			size = 31118
+		}
+		create_pop = {
+			culture = onghori
+			size = 24676
+		}
+	}
   }
 }

@@ -542,6 +542,7 @@ s:STATE_AIRU = {
 		owned_provinces = { "x35EFE0" "x46F3DA" "x69D5C3" "x6DCAD7" "x97E095" "xB2A1F9" "xD963D4" "xFA82C7" "xFCF53C" "xFEF304" }
 }
 add_homeland = cu:garagoz
+add_homeland = cu:toftir_giant
 }
 
 s:STATE_ELVERA = {
@@ -550,6 +551,7 @@ s:STATE_ELVERA = {
 		owned_provinces = { "x6BE6A9" "x6DFAB1" "x84DEE1" "xBBE5C5" "xBCE6EC" "xD788DB" "xE85ADD" "xEFF6BD" }
 }
 add_homeland = cu:garagoz
+add_homeland = cu:toftir_giant
 }
 
 s:STATE_RAVGA = {
@@ -590,6 +592,7 @@ s:STATE_NUORAID = {
 		owned_provinces = { "x51F7F9" "x82B6FD" "x9CCFE6" "xA8F08C" "xADF7A0" "xB1B1F9" "xB8A5BE" "xBE84C0" "xC9B9E9" "xCAEDA1" "xCC4EFE" "xCD98F4" "xDAC463" "xDB86B1" "xE0F18E" "xE878A5" "xEAEE81" "xEFBDAB" "xFD56F7" }
 }
 add_homeland = cu:umbradorn
+add_homeland = cu:toftir_giant
 }
 
 s:STATE_FROSTWYN = {
@@ -597,7 +600,7 @@ s:STATE_FROSTWYN = {
 		country = c:DOK
 		owned_provinces = { "x2BFBEF" "x6D80F2" "xA16DFC" "xA5F675" "xA8CB83" "xAACBF6" "xB08AE9" "xB6DD91" "xC991DA" "xCE93DE" "xD2EC43" "xE2AAFA" "xE3EA6F" "xE4B2B2" "xE6D999" "xE7A2EF" "xE7CD98" }
 }
-add_homeland = cu:illvasaari
+add_homeland = cu:toftir_giant
 }
 
 s:STATE_DUODJI = {
@@ -638,6 +641,7 @@ s:STATE_AURORIL = {
 		owned_provinces = { "x56E2CB" "x8AF1EF" "x9B98EC" "xAAE87B" "xCAC7CE" "xEEF3D3" "xF317F3" "xF39A80" "xF7F525" "xFAEFCB" }
 }
 add_homeland = cu:umbradorn
+add_homeland = cu:toftir_giant
 }
 
 s:STATE_GIELAS = {
@@ -663,6 +667,7 @@ s:STATE_SYLVASKA = {
 
 }
 add_homeland = cu:umbradorn
+add_homeland = cu:toftir_giant
 }
 
 s:STATE_GAVCCI = {
@@ -679,6 +684,7 @@ s:STATE_MARKAN = {
 		owned_provinces = { "x0FC191" "x2A3E2A" "x52DFCA" "x54048D" "x7CA1E0" "x85AB8B" "x88A4FB" "xA2D7F8" "xA3AA58" "xBA65E6" "xBCF4A9" "xC798F8" "xCCDED4" "xDEB77B" "xE7EE70" }
 }
 add_homeland = cu:umbradorn
+add_homeland = cu:toftir_giant
 }
 
 s:STATE_ELVENSHROUD = {
@@ -767,13 +773,14 @@ s:STATE_NORTHERN_1 = {
 		owned_provinces = { "x041F50" "x1973C9" "x4209F6" "x5BFD49" "x88E4F0" "xA3C59A" "xC2BBB3" "xC3EAD0" "xEF6DF3" }
 }
 add_homeland = cu:umbradorn
+add_homeland = cu:toftir_giant
 }
 
 
 s:STATE_NORTHERN_2 = {
 	create_state = {
 		country = c:HEL
-		owned_provinces = { ""x59030C" "x65DCE1" "x81C284" "xA0C2A0" "xBEC775" "xBECBD3" "xC7CBFC" "xEEF3F3"" }
+		owned_provinces = { "x59030C" "x65DCE1" "x81C284" "xA0C2A0" "xBEC775" "xBECBD3" "xC7CBFC" "xEEF3F3" }
 }
 add_homeland = cu:toftir_giant
 }
