@@ -403,6 +403,12 @@ STATE_ARAKALDE = {
     farm = x6DBEE9
     mine = x85E7F6
     port = xACD3BB
+    arable_land = 60
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 48
+        bg_logging = 6
+    }
     naval_exit_id = 3070
 }
 STATE_MIZPIRIKA = {
@@ -431,7 +437,18 @@ STATE_OLABEGI = {
     farm = x689BFC
     mine = x6EC0E0
     port = x799CFB
-    naval_exit_id = 3070
+    arable_land = 60
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_dye_plantations" "bg_sugar_plantations" "bg_silk_plantations" }
+    capped_resources = {
+        bg_sulfur_mining = 22
+        bg_fishing = 5
+        bg_logging = 4
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 60
+    }
+    naval_exit_id = 3059
 }
 STATE_UDABERRI = {
     id = 4653
@@ -453,7 +470,18 @@ STATE_IZOZKI = {
     farm = x8DC8E5
     mine = x95A8D7
     port = x98A5BC
-    naval_exit_id = 3070
+    arable_land = 30
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_silk_plantations" "bg_tobacco_plantations" }
+    capped_resources = {
+        bg_sulfur_mining = 32
+        bg_fishing = 6
+        bg_logging = 12
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 60
+    }
+    naval_exit_id = 3029
 }
 STATE_GARRITXO = {
     id = 4655
@@ -519,6 +547,11 @@ STATE_URRIKO = {
     farm = x72D2D9
     mine = x8D98E6
     port = x9896F9
+    arable_land = 100
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 20
+    }
     naval_exit_id = 3070
 }
 STATE_ZUBEROA = {
@@ -530,7 +563,21 @@ STATE_ZUBEROA = {
     farm = x6CCACA
     mine = x8A87E8
     port = x8DA0DA
-    naval_exit_id = 3070
+    arable_land = 30
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 28
+        bg_iron_mining = 27
+        bg_logging = 11
+        bg_whaling = 3
+        bg_fishing = 8
+    }
+    resource = {
+        type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
+        undiscovered_amount = 4
+    }
+    naval_exit_id = 3029
 }
 STATE_IRAURBE = {
     id = 4662
@@ -541,7 +588,19 @@ STATE_IRAURBE = {
     farm = x8A93F9
     mine = x8CD2BD
     port = x8ECAFD
-    naval_exit_id = 3070
+    arable_land = 30
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 7
+        bg_whaling = 4
+        bg_fishing = 10
+    }
+    resource = {
+        type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
+        undiscovered_amount = 6
+    }
+    naval_exit_id = 3029
 }
 STATE_UHINAK = {
     id = 4663
@@ -574,6 +633,11 @@ STATE_LURRA = {
     farm = xAAFEB0
     mine = xBDB3D6
     port = xBFEDE5
+    arable_land = 60
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 11
+    }
     naval_exit_id = 3070
 }
 STATE_ARGIA = {
@@ -849,7 +913,21 @@ STATE_IBAIA = {
     farm = x9AFEAD
     mine = x9BD9B9
     port = xA6C39E
-    naval_exit_id = 3070
+    arable_land = 15
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tea_plantations" "bg_sugar_plantations" }
+    capped_resources = {
+        bg_iron_mining = 15
+        bg_lead_mining = 15
+        bg_logging = 8
+        bg_whaling = 2
+        bg_fishing = 6
+    }
+    resource = {
+        type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
+        undiscovered_amount = 6
+    }
+    naval_exit_id = 3091
 }
 STATE_ARGI = {
     id = 4691
@@ -860,5 +938,18 @@ STATE_ARGI = {
     farm = x97E8AB
     mine = xB9B1AF
     port = xBDBED1
-
+    arable_land = 40
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tea_plantations" "bg_sugar_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_sulfur_mining = 24
+        bg_logging = 11
+        bg_whaling = 3
+        bg_fishing = 8
+    }
+    resource = {
+        type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
+        undiscovered_amount = 6
+    }
+    naval_exit_id = 3091
 }
