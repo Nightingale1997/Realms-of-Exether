@@ -20,9 +20,11 @@ STATE_KILIMASAWA = {
     mine = xBDFD75
     port = xC4C6D7
     arable_land = 37
-    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_millet_farms" "bg_cotton_plantations" "bg_fishing"}
+    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_millet_farms" "bg_cotton_plantations"}
     capped_resources = {
-        bg_logging = 4
+        bg_logging = 2
+        bg_fishing = 8
+        bg_whaling = 4
     }
     naval_exit_id = 3015
 }
@@ -138,6 +140,8 @@ STATE_UZURIPWA = {
     arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_millet_farms" "bg_cotton_plantations"}
     capped_resources = {
         bg_logging = 4
+        bg_coal_mining = 8
+        bg_fishing = 6
     }
     naval_exit_id = 3015
 }
@@ -166,6 +170,7 @@ STATE_MAJILIMA = {
     arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_millet_farms" "bg_cotton_plantations"}
     capped_resources = {
         bg_logging = 4
+        bg_sulfur_mining = 18
     }
     naval_exit_id = 3065
 }
@@ -198,9 +203,11 @@ STATE_KILIMADADA = {
     mine = x8DD5E7
     port = x90B5E8
     arable_land = 41
-    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_millet_farms" "bg_cotton_plantations" "bg_fishing"}
+    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_millet_farms" "bg_cotton_plantations"}
     capped_resources = {
-        bg_logging = 4
+        bg_coal_mining = 26
+        bg_logging = 3
+        bg_fishing = 5
     }
     naval_exit_id = 3015
 }
@@ -285,6 +292,7 @@ STATE_JITOMREMBO = {
     arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_millet_farms" "bg_cotton_plantations"}
     capped_resources = {
         bg_logging = 3
+        bg_fishing = 5
     }
     naval_exit_id = 3015
 }
@@ -301,6 +309,7 @@ STATE_PWAWAKATI = {
     arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_millet_farms" "bg_cotton_plantations"}
     capped_resources = {
         bg_logging = 6
+        bg_fishing = 2
     }
     naval_exit_id = 3015
 }
