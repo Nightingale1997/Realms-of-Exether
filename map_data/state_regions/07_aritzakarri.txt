@@ -693,7 +693,15 @@ STATE_MALKART = {
     farm = xA6DC73
     mine = xA8DAD7
     port = xD9E5F5
-    naval_exit_id = 3070
+    arable_land = 30
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_dye_plantations" "bg_tobacco_plantations" "bg_cotton_plantations" }
+    capped_resources = {
+        bg_fishing = 4
+        bg_iron_mining = 14
+        bg_coal_mining = 12
+        bg_logging = 3
+    }
+    naval_exit_id = 3040
 }
 STATE_IRUBIDE = {
     id = 4671
@@ -715,7 +723,20 @@ STATE_SUTAN = {
     farm = xBF56F3
     mine = xBFFAA8
     port = xC5ABDD
-    naval_exit_id = 3070
+    arable_land = 50
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_tobacco_plantations" "bg_dye_plantations" "bg_cotton_plantations" "bg_silk_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_coal_mining = 14
+        bg_iron_mining = 51
+        bg_sulfur_mining = 22
+        bg_fishing = 10
+        bg_logging = 3
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 40
+    }
+    naval_exit_id = 3040
 }
 STATE_BIZI = {
     id = 4673
@@ -770,7 +791,19 @@ STATE_KOILARRA = {
     farm = x77F199
     mine = x8782F2
     port = x94DCC5
-    naval_exit_id = 3070
+    arable_land = 70
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_vineyard_plantations" "bg_tobacco_plantations" "bg_dye_plantations" }
+    capped_resources = {
+        bg_sulfur_mining = 28
+        bg_iron_mining = 5
+        bg_fishing = 7
+        bg_logging = 6
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 60
+    }
+    naval_exit_id = 3040
 }
 STATE_TXINPART = {
     id = 4678
