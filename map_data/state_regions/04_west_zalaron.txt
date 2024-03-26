@@ -2818,7 +2818,7 @@ STATE_SAVAGE_LANDS_2 = {
 STATE_ROUGHSTONE_TERRITORY = {
     id = 2826
     subsistence_building = "building_subsistence_pastures"
-    provinces = { "x22E3FE" "x54E8E8" "x5CE3C0" "x60B2EA" "x6BEBFB" "x88BECA" "x96F483" "x98F3D5" "x9CC999" "x9DC0EB" "x9EF09F" "x9FEEF7" "xA180E2" "xA28EED" "xA6E59C" "xA8F196" "xAB8FBC" "xAEDFAE" "xB5D26E" "xBAA5C8" "xBCD497" "xBDF780" "xBEFD3F" "xBFFBEF" "xC6D07A" "xC9E188" "xCA42FD" "xCBD456" "xCCABB4" "xD3BCD8" "xDBCDE1" "xDDFB5D" "xE329FD" "xE8A594" "xE9A578" "xEDF5D9" "xEFCDCA" "xF037F4" "xF3C474" "xF4C671" "xF6E562" "xF89BA6" "xF9BDC5" "xFBBBCC" "xFCF8C2" "xFDC1BA" "xFE75B9" }
+    provinces = { "x22E3FE" "x60B2EA" "x6BEBFB" "x96F483" "x98F3D5" "x9CC999" "x9DC0EB" "x9FEEF7" "xA180E2" "xA28EED" "xA6E59C" "xAB8FBC" "xB5D26E" "xBAA5C8" "xBCD497" "xBDF780" "xBEFD3F" "xBFFBEF" "xC6D07A" "xCBD456" "xCCABB4" "xD3BCD8" "xE329FD" "xEDF5D9" "xEFCDCA" "xF037F4" "xF3C474" "xF4C671" "xF6E562" "xF9BDC5" "xFBBBCC" "xFCF8C2" "xFDC1BA" }
     impassable = { "x60b2ea" "xE329FD" }
     traits = { "state_trait_salt_wastes" }
     city = x22E3FE
@@ -2830,6 +2830,25 @@ STATE_ROUGHSTONE_TERRITORY = {
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
         bg_opium_plantations = 20
+    }
+    naval_exit_id = 3064
+}
+STATE_ROUGHSTONE_TERRITORY_2 = {
+    id = 3937
+    subsistence_building = "building_subsistence_pastures"
+    provinces = { "x54E8E8" "x5CE3C0" "x88BECA" "x9EF09F" "xA8F196" "xAEDFAE" "xC9E188" "xCA42FD" "xDBCDE1" "xDDFB5D" "xE8A594" "xE9A578" "xF89BA6" "xFE75B9" }
+    impassable = {}
+    traits = { "state_trait_salt_wastes" }
+    city = x22E3FE
+    wood = x54E8E8
+    farm = x5CE3C0
+    mine = x60B2EA
+    port = x6BEBFB
+    arable_land = 6
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_opium_plantations = 6
+        bg_lead_mining = 11
     }
     naval_exit_id = 3064
 }
