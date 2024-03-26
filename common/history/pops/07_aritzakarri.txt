@@ -384,7 +384,7 @@
 			size = 1004
 		}
 		create_pop = {
-			culture = kotskarvi
+			culture = lomarash
 			size = 94996
 		}
 		create_pop = {
@@ -460,7 +460,7 @@
 			size = 100000
 		}
 		create_pop = {
-			culture = kotskarvi
+			culture = lomarash
 			size = 54000
 		}
 	}
@@ -521,7 +521,7 @@
 			size = 42000
 		}
 		create_pop = {
-			culture = kotskarvi
+			culture = lomarash
 			size = 24000
 		}
 	}
@@ -544,7 +544,21 @@
   }
 
   s:STATE_MALKART = {
-
+	region_state:LAZ = {
+		create_pop = {
+			culture = lomarash
+			size = 113192
+		}
+		create_pop = {
+			culture = saglithan
+			size = 82300
+		}
+		create_pop = {
+			culture = saglithan
+			size = 9750
+			pop_type = slaves
+		}
+	}
   }
 
   s:STATE_IRUBIDE = {
@@ -552,8 +566,26 @@
   }
 
   s:STATE_SUTAN = {
-
-  }
+	region_state:LAZ = {
+		create_pop = {
+			culture = lomarash
+			size = 200092
+		}
+		create_pop = {
+			culture = saglithan
+			size = 30696
+		}
+		create_pop = {
+			culture = saglithan
+			size = 8920
+			pop_type = slaves
+		}
+		create_pop = {
+			culture = whitefeather
+			size = 8720
+			pop_type = slaves
+		}
+	}
 
   s:STATE_BIZI = {
 
@@ -572,7 +604,25 @@
   }
 
   s:STATE_KOILARRA = {
-
+	region_state:LAZ = {
+		create_pop = {
+			culture = lomarash
+			size = 476096
+		}
+		create_pop = {
+			culture = vandori
+			size = 1004
+		}
+		create_pop = {
+			culture = saglithan
+			size = 36000
+		}
+		create_pop = {
+			culture = saglithan
+			size = 25650
+			pop_type = slaves
+		}
+	}
   }
 
   s:STATE_TXINPART = {
