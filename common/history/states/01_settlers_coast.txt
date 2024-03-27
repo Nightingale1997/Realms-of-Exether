@@ -331,7 +331,7 @@ add_homeland = cu:mousefolk
 
 s:STATE_WAYFARE_MEADOWS = {
     create_state = {
-        country = c:ARR
+        country = c:PRI
         owned_provinces = { "x58F6B9" "x6BA6FA" "x6FBFD7" "x7E8FE8" "xB19EB5" "xBBDEF6" "xBBF747" "xC16DF0" "xCCF09F" "xCFC4E3" "xD6FA7A" "xDBA8F3" "xDFE577" "xE67D99" "xEBD66F" "xEEB8BF" "xEFA992" "xF2F3A4" "xF5E937" "xFB8C8A" "xFDFEBA" }
 }
 add_homeland = cu:wealder
@@ -340,7 +340,7 @@ add_homeland = cu:mousefolk
 
 s:STATE_THE_AMBER_RUN = {
     create_state = {
-        country = c:ARR
+        country = c:EMP
         owned_provinces = { "x19E9F8" "x4FB2FE" "x8EC1D6" "xBFA8B3" "xBFF582" "xD3EE73" "xE395CA" "xE5B3B2" "xE7EB49" "xEB86C6" }
 }
 add_homeland = cu:bossardi
@@ -348,7 +348,7 @@ add_homeland = cu:bossardi
 
 s:STATE_THE_AMBER_RUN_2 = {
     create_state = {
-        country = c:ARR
+        country = c:EMP
         owned_provinces = { "x2DE2F7" "x73C7E9" "x7AC5EA" "x899EDA" "x93EACC" "x97DBE4" "xB897AA" "xC0FD53" "xC5DB7A" "xCECB5C" "xD3F850" "xD8A0B6" "xDCB0BE" "xDFD8A0" "xE0F540" "xE459CC" "xF0CB51" "xFD9266" }
 }
 add_homeland = cu:bossardi
@@ -356,7 +356,7 @@ add_homeland = cu:bossardi
 
 s:STATE_THE_AMBER_RUN_3 = {
     create_state = {
-        country = c:ARR
+        country = c:EMP
         owned_provinces = { "x6CC8D3" "x74F7F6" "xA3C2FE" "xA3F8EA" "xA4B3D4" "xBCEB88" "xC39CED" "xD543EA" "xDEFC1D" "xE39E98" }
 }
 add_homeland = cu:bossardi
@@ -364,7 +364,7 @@ add_homeland = cu:bossardi
 
 s:STATE_MISTREACH = {
     create_state = {
-        country = c:ARR
+        country = c:KRC
         owned_provinces = { "x18ECF3" "x1DF3EB" "x71D5CA" "x8BD7BA" "xA079E7" "xA5BDE6" "xA6F4DA" "xC0E063" "xCE9CC2" "xD6A987" "xD8CDF7" "xDA5AD3" "xDDE4C0" "xDE7FAF" "xF361F7" "xFA6AD2" "xFAF4C7" "xFCAF58" "xFE6BC5" }
 }
 add_homeland = cu:bossardi
@@ -372,11 +372,11 @@ add_homeland = cu:bossardi
 
 s:STATE_MISTREACH_2 = {
     create_state = {
-        country = c:ARR
+        country = c:PRI
         owned_provinces = { "x2BFBFA" "x32E9DC" "x38F9E8" "x45F5E1" "x55FCAA" "x80B5E0" "x8CD8DA" "xAFFE4A" "xB690CD" "xC4D1C4" "xC69AF5" "xD3CF64" "xD471B8" "xD7CD80" "xE173E0" "xEC9FBE" "xEEDC87" "xF1DF58" "xF6FB7F" "xFD9FFB" }
 }
 add_homeland = cu:bossardi
-add_homeland = cu:dorite
+add_homeland = cu:wealder
 }
 
 # Viceroy's Pearl is Brinewick
@@ -440,10 +440,10 @@ add_homeland = cu:dorite
 
 s:STATE_GREENCOURT_2 = {
     create_state = {
-        country = c:ARR
+        country = c:PRI
         owned_provinces = { "x7B99E1" "x99D4E8" "xA1E3B4" "xA4A1EA" "xB8EF82" "xC1FE51" "xC9EF58" "xCF77C4" "xD2C86D" "xDDF5B3" "xE1CA72" "xE7CBC1" "xEDB3A4" "xF2F7E7" "xF5B592" "xFCB261" }
 }
-add_homeland = cu:dorite
+add_homeland = cu:wealder
 }
 
 s:STATE_GOLDENACRE = {
@@ -653,11 +653,10 @@ add_homeland = cu:clearbough
 
 s:STATE_MOUNT_YELFIS= {
     create_state = {
-        country = c:ARR
+        country = c:DAR
         owned_provinces = { "x4EBFEA" "x5CE0E3" "x82CEB9" "x85D1F9" "xA3F4A4" "xAFE8E9" "xBFF4E8" "xC2EAB2" "xC7F1FA" "xCD88C4" "xCD9FDF" "xD087CD" "xD3DBF4" "xDFA6F5" "xDFC5DA" "xE15EC2" "xE2BDAA" "xE4ABFA" "xE8BC9D" "xE9BFF8" "xEAE48E" "xEEB197" "xF2CA72" "xF567CB" "xFCA57A" }
 }
-add_homeland = cu:wealder
-add_homeland = cu:bossardi
+add_homeland = cu:yelfi
 }
 
 s:STATE_COGSREST = {
@@ -718,7 +717,7 @@ add_homeland = cu:dorite
 
 s:STATE_HAZELDEEP = {
     create_state = {
-        country = c:THI
+        country = c:EMP
         owned_provinces = {  "x70B4EE" "x75DDC0" "x789BFE" "x78C7E0" "x80FE85" "x948CED" "x9DD2AE" "xAAD088" "xB1BFE2" "xB7DEC4" "xBBDFB7" "xBFDAE1" "xDE72D3" "xE49BC9" "xE4E8BF" "xE8D78E" "xE9D3CE" "xEDF9CD" "xF726E3" "xFAF661" "xFCA25B" }
 }
 add_homeland = cu:astreval
@@ -782,7 +781,7 @@ s:STATE_DWARVENHAMMER = {
 
 s:STATE_TARBANK = {
     create_state = {
-        country = c:THI
+        country = c:EMP
         owned_provinces = { "x29E9EA" "x2FF3F2" "x38D0F1" "x5DF3D0" "x75C8E2" "x78C8B8" "x7AF3A6" "x7D9CE5" "x90CCBB" "x94F4F6" "xA198C8" "xA4B9B5" "xA5BAA3" "xB9F94C" "xBE48F6" "xC887EA" "xD876F6" "xE4F48F" "xEBF06E" "xF1E692" "xF2BC57" "xF5DE4D" "xF67FAE" "xFBCAF7" "xFEEFCF" }
 }
 add_homeland = cu:bossardi

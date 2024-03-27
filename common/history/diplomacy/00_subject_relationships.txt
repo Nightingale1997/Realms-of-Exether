@@ -37,10 +37,6 @@
 	}
 	c:ARR = {
 		create_diplomatic_pact = {
-			country = c:WHI
-			type = puppet
-		}
-		create_diplomatic_pact = {
 			country = c:CLR
 			type = protectorate
 		}
@@ -48,6 +44,12 @@
 	c:SMA= {
 		create_diplomatic_pact = {
 			country = c:MID
+			type = personal_union
+		}
+	}
+	c:EMP= {
+		create_diplomatic_pact = {
+			country = c:KRC
 			type = personal_union
 		}
 	}

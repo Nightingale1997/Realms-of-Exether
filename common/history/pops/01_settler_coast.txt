@@ -336,7 +336,7 @@
   }
 
   s:STATE_WAYFARE_MEADOWS = {
-	region_state:ARR = {
+	region_state:PRI = {
 		create_pop = {
 			culture = wealder
 			size = 3923992
@@ -357,7 +357,7 @@
   }
 
   s:STATE_THE_AMBER_RUN = {
-		region_state:ARR = {
+		region_state:EMP = {
 			create_pop = {
 				culture = bossardi
 				size = 1049056
@@ -378,7 +378,7 @@
   }
 
   s:STATE_THE_AMBER_RUN_2 = {
-	region_state:ARR = {
+	region_state:EMP = {
 		create_pop = {
 			culture = bossardi
 			size = 449056
@@ -399,7 +399,7 @@
 }
 
 s:STATE_THE_AMBER_RUN_3 = {
-	region_state:ARR = {
+	region_state:EMP = {
 		create_pop = {
 			culture = bossardi
 			size = 649056
@@ -420,7 +420,7 @@ s:STATE_THE_AMBER_RUN_3 = {
 }
 
   s:STATE_MISTREACH = {
-		region_state:ARR = {
+		region_state:KRC = {
 			create_pop = {
 				culture = bossardi
 				size = 1153438
@@ -577,18 +577,14 @@ s:STATE_FAR_SHORE_2 = {
   }
 
   s:STATE_GREENCOURT_2 = {
-	region_state:ARR = { # 
+	region_state:PRI = { # 
 		create_pop = {
-			culture = dorite # 'Walloon & French' in census data.
+			culture = wealder
 			size = 533476
 		}
 		create_pop = {
-			culture = bossardi
-			size = 51243
-		}
-		create_pop = {
-			culture = wealder # 'Flemish & Dutch' in census data.
-			size = 50405
+			culture = dorite 
+			size = 100405
 		}
 	}
   }
@@ -883,9 +879,9 @@ s:STATE_FAR_SHORE_2 = {
   }
 
   s:STATE_MOUNT_YELFIS= {
-	region_state:ARR = {
+	region_state:DAR = {
 		create_pop = {
-			culture = wealder
+			culture = yelfi
 			size = 2070892
 		}
 		create_pop = {
@@ -966,7 +962,7 @@ s:STATE_FAR_SHORE_2 = {
   }
 
   s:STATE_HAZELDEEP = {
-	region_state:THI = {
+	region_state:EMP = {
 		create_pop = {
 			culture = astreval
 			size = 732008
@@ -1037,7 +1033,7 @@ s:STATE_FAR_SHORE_2 = {
   }
 
   s:STATE_TARBANK = {
-    region_state:THI = {
+    region_state:EMP = {
 			create_pop = {
 				culture = bossardi
 				size = 1561366
