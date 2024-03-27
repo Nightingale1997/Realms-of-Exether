@@ -1146,7 +1146,25 @@
 
   }
   s:STATE_KEENAVAZH = {
-
+	region_state:HOZ = {
+		create_pop = {
+			culture = kaalkid
+			size = 643804
+		}
+		create_pop = {
+			culture = duneshar
+			size = 2996
+		}
+		create_pop = {
+			culture = west_thalorian
+			size = 13996
+		}
+		create_pop = {
+			culture = west_thalorian
+			size = 39648
+			pop_type = slaves
+		}
+	}
   }
   s:STATE_NAVOYAZH = {
 

@@ -2136,7 +2136,37 @@ STATE_KUMASKA = {
     farm = x5DDDC0
     mine = x6CBBF9
     port = x7DE3F4
+    arable_land = 90
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_dye_plantations" "bg_silk_plantations" "bg_vineyard_plantations" "bg_tobacco_plantations" }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 40
+    }
+    capped_resources = {
+        bg_logging = 7
+        bg_iron_mining = 5
+    }
     naval_exit_id = 3063
+}
+STATE_SC12 = {
+    id = 4218
+    subsistence_building = "building_subsistence_farms"
+    provinces = { "x56A9F9" "x5BF4BA" "x75E6F7" "x76E7A3" "x82B7DA" "x87E7A7" "xA0CC9D" "xBBA8F8" "xC1C1B1" "xC2ADF0" "xC2BDD5" "xC959D3" "xCCBF74" "xD1A38E" "xE0C5E9" "xE5EA58" "xE7A2F9" "xE865CA" "xEABCEA" "xEEF519" "xEEFC6C" "xF0FC0D" "xF4FDC7" "xF6C2D6" "xF9F1A5" "xFA7B81" "xFBCB9C" }
+    city = x56A9F9
+    wood = x5BF4BA
+    farm = x76E7A3
+    mine = x82B7DA
+    port = x87E7A7
+    arable_land = 150
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_tea_plantations" "bg_vineyard_plantations" "bg_tobacco_plantations" "bg_dye_plantations" }
+    capped_resources = {
+        bg_coal_mining = 20
+        bg_iron_mining = 30
+        bg_lead_mining = 25
+        bg_logging = 7
+        bg_fishing = 6
+    }
+    naval_exit_id = 3087
 }
 STATE_INTOKI = {
     id = 4407
