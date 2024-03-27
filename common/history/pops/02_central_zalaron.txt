@@ -29,7 +29,25 @@
   }
     
   s:STATE_SC12 = {
+	region_state:SAZ = {
+		create_pop = {
+			culture = beithaven
+			size = 1331300
 
+		}
+		create_pop = {
+			culture = tqalt
+			size = 112000
+		}
+		create_pop = {
+			culture = vandori
+			size = 149900
+		}
+		create_pop = {
+			culture = assyrian
+			size = 30400
+		}
+	}
   }
     
   s:STATE_PLAGUES_END = {
@@ -1180,7 +1198,28 @@
   }
     
   s:STATE_KUMASKA = {
-
+	region_state:SAZ = {
+		create_pop = {
+			culture = beithaven
+			size = 343204
+		}
+		create_pop = {
+			culture = glabrekthorn
+			size = 156008
+		}
+		create_pop = {
+			culture = lumvareth
+			size = 96008
+		}
+		create_pop = {
+			culture = vandori
+			size = 4996
+		}
+		create_pop = {
+			culture = tqalt
+			size = 23848
+		}
+	}
   }
     
   s:STATE_INTOKI = {

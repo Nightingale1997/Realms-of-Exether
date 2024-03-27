@@ -1146,7 +1146,25 @@
 
   }
   s:STATE_KEENAVAZH = {
-
+	region_state:HOZ = {
+		create_pop = {
+			culture = kaalkid
+			size = 643804
+		}
+		create_pop = {
+			culture = duneshar
+			size = 2996
+		}
+		create_pop = {
+			culture = west_thalorian
+			size = 13996
+		}
+		create_pop = {
+			culture = west_thalorian
+			size = 39648
+			pop_type = slaves
+		}
+	}
   }
   s:STATE_NAVOYAZH = {
 
@@ -1172,12 +1190,12 @@
 			size = 204800
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 5040 
 		}
 		create_pop = {
 			pop_type = slaves
-			culture = warforged
+			culture = soulwrought
 			size = 142960
 		}
 		create_pop = {
@@ -1197,12 +1215,12 @@
 			size = 316392
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 6117 
 		}
 		create_pop = {
 			pop_type = slaves
-			culture = warforged
+			culture = soulwrought
 			size = 161879
 		}
 		create_pop = {
@@ -1235,7 +1253,7 @@
 		}
 		create_pop = {
 			pop_type = slaves
-			culture = warforged
+			culture = soulwrought
 			size = 7818
 		}
 	}
@@ -1252,12 +1270,12 @@
 			size = 33857
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 303 
 		}
 		create_pop = {
 			pop_type = slaves
-			culture = warforged
+			culture = soulwrought
 			size = 15689
 		}
 		create_pop = {
@@ -1274,7 +1292,7 @@
 		}
 		create_pop = {
 			pop_type = slaves # there was even a slave revolt at Webbers Falls in 1842
-			culture = warforged
+			culture = soulwrought
 			size = 1200
 		}
 		create_pop = {
@@ -1298,12 +1316,12 @@
 			size = 6960
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 8099 
 		}
 		create_pop = {
 			pop_type = slaves
-			culture = warforged
+			culture = soulwrought
 			size = 318693
 		}
 	}
@@ -1316,11 +1334,11 @@
 		}
 		create_pop = {
 			pop_type = slaves
-			culture = warforged
+			culture = soulwrought
 			size = 18081 
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 1808 
 		}
 		create_pop = {
@@ -1338,13 +1356,13 @@
 		}
 
 		create_pop = {
-				culture = warforged
+				culture = soulwrought
 				size = 16919
 		}
 
 		create_pop = {
 				pop_type = slaves
-				culture = warforged
+				culture = soulwrought
 				size = 2605
 		}
 	}
@@ -1362,12 +1380,12 @@
 			size = 172804
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 943
 		}
 		create_pop = {
 			pop_type = slaves
-			culture = warforged
+			culture = soulwrought
 			size = 87057
 		}
 	}
@@ -1387,12 +1405,12 @@
 			size = 8946 
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 2620 
 		}
 		create_pop = {
 			pop_type = slaves
-			culture = warforged
+			culture = soulwrought
 			size = 256172
 		}
 	}
@@ -1413,12 +1431,12 @@
 			size = 200
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 21106
 		}
 		create_pop = {
 			pop_type = slaves
-			culture = warforged
+			culture = soulwrought
 			size = 112994
 		}
 
@@ -1440,7 +1458,7 @@
 			size = 39996
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 20004
 		}
 		create_pop = {
@@ -1456,7 +1474,7 @@
 			size = 452400
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 4000
 		}
 	}
@@ -1468,12 +1486,12 @@
 			size = 329008
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 1806
 		}
 		create_pop = {
 			pop_type = slaves
-			culture = warforged
+			culture = soulwrought
 			size = 229998
 		}
 		create_pop = {
@@ -1498,12 +1516,12 @@
 			size = 251997
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 48541
 		}
 		create_pop = {
 			pop_type = slaves
-			culture = warforged
+			culture = soulwrought
 			size = 58467
 		}
 	}
@@ -1528,12 +1546,12 @@
 			size = 3996
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 1072 
 		}
 		create_pop = {
 			pop_type = slaves
-			culture = warforged
+			culture = soulwrought
 			size = 38928
 		}
 		create_pop = {
@@ -1563,7 +1581,7 @@
 			size = 27996
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 15996
 		}
 	}
@@ -1592,7 +1610,7 @@
 			size = 20000
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 8000
 		}
 	}
@@ -1624,12 +1642,12 @@
 			size = 48000
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 35120
 		}
 		create_pop = {
 			pop_type = slaves
-			culture = warforged
+			culture = soulwrought
 			size = 312079
 		}
 	}
@@ -1644,12 +1662,12 @@
 			size = 47996
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 817 
 		}
 		create_pop = {
 			pop_type = slaves
-			culture = warforged
+			culture = soulwrought
 			size = 31183
 		}
 		create_pop = {
@@ -1686,7 +1704,7 @@
 			size = 59800
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 43996
 		}
 	}
@@ -1715,7 +1733,7 @@
 			size = 1092200
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 16008
 		}
 		create_pop = {
@@ -1738,7 +1756,7 @@
 			size = 754484
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 11996
 		}
 		create_pop = {
@@ -1782,12 +1800,12 @@
 			size = 492500
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 21138 
 		}
 		create_pop = {
 			pop_type = slaves
-			culture = warforged
+			culture = soulwrought
 			size = 222862
 		}
 		create_pop = {
