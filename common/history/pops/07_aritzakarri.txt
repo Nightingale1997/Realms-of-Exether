@@ -586,6 +586,7 @@
 			pop_type = slaves
 		}
 	}
+}
 
   s:STATE_BIZI = {
 
@@ -626,7 +627,25 @@
   }
 
   s:STATE_TXINPART = {
-
+	region_state:KHE = {
+		create_pop = {
+			culture = lomarash
+			size = 480104
+		}
+		create_pop = {
+			culture = vandori
+			size = 1004
+		}
+		create_pop = {
+			culture = saglithan
+			size = 79996
+		}
+		create_pop = {
+			culture = saglithan
+			size = 22444
+			pop_type = slaves
+		}
+	}
   }
 
   s:STATE_GIPUZK = {
@@ -634,7 +653,21 @@
   }
 
   s:STATE_TIHAR = {
-
+	region_state:KHE = {
+		create_pop = {
+			culture = lomarash
+			size = 416996
+		}
+		create_pop = {
+			culture = saglithan
+			size = 36000
+		}
+		create_pop = {
+			culture = saglithan
+			size = 33600
+			pop_type = slaves
+		}
+	}
   }
 
   s:STATE_ARROLA = {
@@ -642,7 +675,25 @@
   }
 
   s:STATE_OSTATU = {
-
+	region_state:KHE = {
+		create_pop = {
+			culture = persian
+			size = 639196
+		}
+		create_pop = {
+			culture = vandori
+			size = 2000
+		}
+		create_pop = {
+			culture = illvasaari
+			size = 5996
+		}
+		create_pop = {
+			culture = saglithan
+			size = 37887
+			pop_type = slaves
+		}
+	}
   }
 
   s:STATE_TXORI = {
