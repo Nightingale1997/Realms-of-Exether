@@ -156,11 +156,11 @@ STATE_CAEL_VALEN = {
     farm = x3DCFEF
     mine = x4EDAED
     port = x4FE6D1
-    arable_land = 55
+    arable_land = 48
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 11
-        bg_fishing = 10
+        bg_fishing = 6
     }
     naval_exit_id = 3062
 }
@@ -173,11 +173,10 @@ STATE_CAEL_VALEN_2 = {
     farm = x3DCFEF
     mine = x4EDAED
     port = x4FE6D1
-    arable_land = 55
+    arable_land = 23
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
-        bg_logging = 11
-        bg_fishing = 10
+        bg_fishing = 4
     }
     naval_exit_id = 3062
 }
@@ -190,11 +189,11 @@ STATE_LANDING_AT_SEA = {
     farm = x5CD5FE
     mine = x69F1F2
     port = x71B6E8
-    arable_land = 120
+    arable_land = 85
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
     capped_resources = {
         bg_logging = 11
-        bg_fishing = 15
+        bg_fishing = 12
     }
     naval_exit_id = 3030
 }
@@ -207,11 +206,11 @@ STATE_LANDING_AT_SEA_2 = {
     farm = x5CD5FE
     mine = x69F1F2
     port = x71B6E8
-    arable_land = 120
+    arable_land = 55
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
     capped_resources = {
-        bg_logging = 11
-        bg_fishing = 15
+        bg_logging = 6
+        bg_fishing = 7
     }
     naval_exit_id = 3030
 }
