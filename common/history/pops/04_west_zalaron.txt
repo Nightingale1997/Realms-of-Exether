@@ -1207,11 +1207,11 @@
   s:STATE_TINKELHOVEN = {
 	region_state:RAV = {
 		create_pop = {
-			culture = florishnom
+			culture = ravikian
 			size = 239988
 		}
 		create_pop = {
-			culture = ravikian
+			culture = florishnom
 			size = 316392
 		}
 		create_pop = {
@@ -1368,7 +1368,20 @@
 	}
   }
   s:STATE_BELLENBERG = {
-
+	region_state:TLE = {
+		create_pop = {
+			culture = lake_thalorian
+			size = 99087
+		}
+		create_pop = {
+			culture = central_thalorian
+			size = 13637
+		}
+		create_pop = {
+			culture = dunaq
+			size = 5637
+		}
+	}
   }
   s:STATE_KLINGELBERG = {
 
@@ -1587,13 +1600,40 @@
 	}
   }
   s:STATE_GLIMMERDAM = {
-
+	region_state:TLE = {
+		create_pop = {
+			culture = lake_thalorian
+			size = 113841
+		}
+		create_pop = {
+			culture = ravikian
+			size = 20000
+		}
+		create_pop = {
+			culture = yrian
+			size = 1100
+		}
+	}
   }
   s:STATE_KRULWILGEN = {
 
   }
   s:STATE_KLINGELWEIDE = {
+	region_state:TLE = {
+		create_pop = {
+			culture = central_thalorian
+			size = 594909
+		}
+		create_pop = {
+			culture = lake_thalorian
+			size = 266461
+		}
+		create_pop = {
+			culture = ravikian
+			size = 25162
+		}
 
+	}
   }
   s:STATE_SMIDSGROEN = {
 	region_state:RAV = {
@@ -1653,7 +1693,20 @@
 	}
   }
   s:STATE_VONKENDAM = {
-
+	region_state:TLE = {
+		create_pop = {
+			culture = lake_thalorian
+			size = 963486
+		}
+		create_pop = {
+			culture = central_thalorian
+			size = 789604
+		}
+		create_pop = {
+			culture = dunaq
+			size = 54000
+		}
+	}
   }
   s:STATE_GNURKENSTAD = {
 	region_state:RAV = {
@@ -1747,7 +1800,20 @@
 	}
   }
   s:STATE_TIMMERHAVEN = {
-
+	region_state:TLE = {
+		create_pop = {
+			culture = lake_thalorian
+			size = 201061
+		}	
+		create_pop = {
+			culture = yrian
+			size = 41061
+		}	
+		create_pop = {
+			culture = ravikian
+			size = 11061
+		}		
+	}
   }
   s:STATE_KRULHOVEN = {
 	region_state:RAV = {
@@ -1788,7 +1854,20 @@
 	}
   }
   s:STATE_SNAARBERG = {
-
+	region_state:TLE = {
+		create_pop = {
+			culture = central_thalorian
+			size = 136199
+		}
+		create_pop = {
+			culture = west_thalorian
+			size = 20000
+		}
+		create_pop = {
+			culture = kaalkid
+			size = 800
+		}
+	}
   }
   s:STATE_SPRONKERGROEN = {
 
@@ -1842,7 +1921,20 @@
 
   }
   s:STATE_STORMHOLM = {
-
+	region_state:TLE = {
+		create_pop = {
+			culture = dunaq
+			size = 67347
+		}
+		create_pop = {
+			culture = rahoru
+			size = 47347
+		}
+		create_pop = {
+			culture = lake_thalorian
+			size = 175961
+		}
+	}
   }
   s:STATE_RAVENHOLME = {
 
@@ -1866,16 +1958,60 @@
 
   }
   s:STATE_BRIGHTWATER = {
-
+	region_state:TLE = {
+		create_pop = {
+			culture = lake_thalorian
+			size = 121499
+		}
+		create_pop = {
+			culture = dunaq
+			size = 27000
+		}
+		create_pop = {
+			culture = dunaq
+			religion = old_faith
+			size = 70004
+		}
+		create_pop = {
+			culture = kusichaki
+			size = 6000
+		}
+	}
   }
   s:STATE_DAWNRIDGE = {
 
   }
   s:STATE_SUNDALE = {
-
+	region_state:TLE = {
+		create_pop = {
+			culture = lake_thalorian
+			size = 139895
+		}
+		create_pop = {
+			culture = kusichaki
+			size = 8000
+		}
+		create_pop = {
+			culture = dunaq
+			size = 16000
+		}
+	}
   }
   s:STATE_WHITESTONE = {
-
+	region_state:TLE = {
+		create_pop = {
+			culture = lake_thalorian
+			size = 14000
+		}
+		create_pop = {
+			culture = dunaq
+			size = 8004
+		}
+		create_pop = {
+			culture = kusichaki
+			size = 3000
+		}
+	}
   }
   s:STATE_RIVERTIDE = {
 
@@ -1899,7 +2035,20 @@
   }
   
   s:STATE_WINDSONG = {
-
+		region_state:TLE = {
+			create_pop = {
+				culture = lake_thalorian
+				size = 1011710
+			}
+			create_pop = {
+				culture = rahoru
+				size = 152078
+			}
+			create_pop = {
+				culture = dunaq
+				size = 26373
+			}
+		}
   }
   s:STATE_WINDSPEAR = {
 
