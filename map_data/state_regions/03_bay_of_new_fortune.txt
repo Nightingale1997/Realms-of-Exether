@@ -155,6 +155,12 @@ STATE_SAWAMREMBO = {
     farm = x5BE7E7
     mine = x6CFBD5
     port = x8EFBE5
+    arable_land = 40
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_coal_mining = 20
+        bg_logging = 6
+    }
     naval_exit_id = 3065
 }
 STATE_MAJILIMA = {
@@ -579,6 +585,17 @@ STATE_QOMERQOCHA = {
     farm = x9D8CD2
     mine = xA1C6F0
     port = xA6B6D2
+    arable_land = 40
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_iron_mining = 24
+        bg_logging = 4
+    }
+    resource = {
+        type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
+        undiscovered_amount = 15
+    }
     naval_exit_id = 3065
 }
 STATE_ANTAQAQA = {
