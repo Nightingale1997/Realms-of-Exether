@@ -1,7 +1,66 @@
-﻿ROM = {
-	use_culture_states = yes
-	
-	required_num_states = 3
+﻿THY = {
+	states = { 
+		STATE_BELLENBERG
+		STATE_SNAARBERG
+		STATE_VONKENDAM
+		STATE_GLIMMERDAM
+		STATE_KRULWILGEN
+		STATE_SNAARGRACHT
+		STATE_KLINGELBERG
+		STATE_KLINGELWEIDE
+		STATE_SPRONKELGROEN
+		STATE_VONKENDAM
+	}
+	required_num_states = 8
+
+	ai_will_do = { always = no }
+}
+
+VRC = {
+	states = { 
+		STATE_BRIGHTWATER
+		STATE_SUNDALE
+		STATE_WHITESTONE
+	}
+	required_num_states = 2
+
+	ai_will_do = { always = no }
+}
+
+OLT = {
+	states = { 
+		STATE_THORNFIELD
+		STATE_SILVERCREST
+	}
+	required_num_states = 2
+
+	ai_will_do = { always = no }
+}
+
+DNV = {
+	states = { 
+		STATE_STORMHOLM
+		STATE_WINDSONG
+		STATE_MISTVALE
+		STATE_MOONSHADE
+		STATE_IRONWOOD
+		STATE_TIMMERHAVEN
+	}
+	required_num_states = 4
+
+	ai_will_do = { always = no }
+}
+
+THA = {
+	states = { 
+		STATE_STORMWATCH
+		STATE_HIGHMOOR
+		STATE_FARREACH
+		STATE_EVERLUND
+		STATE_HAVENSHIRE
+		STATE_MOONSHADE
+	}
+	required_num_states = 4
 
 	ai_will_do = { always = no }
 }
