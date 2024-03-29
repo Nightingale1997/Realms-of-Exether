@@ -446,10 +446,15 @@ add_homeland = cu:tefereti
 
 s:STATE_FAOLNA_PASS = {
     create_state = {
+        country = c:CLL
+        owned_provinces = { "x79D5A9" "xA89DFB" "xD8FE6E" "xDAECDB" "xE0C5C3" "xE382DF" "xF8D3A1" }
+}
+    create_state = {
         country = c:TEF
-        owned_provinces = { "x68B5F1" "x79D5A9" "x7AFBF8" "x7DCCE8" "x92EAEB" "x97DD9B" "xA89DFB" "xBAE59B" "xBCFEF7" "xDAECDB" "xDB6EE2" "xE0C5C3" "xE2E185" "xE382DF" "xE4D8D6" "xEAEE9B" "xEDBAC7" "xF136E3" "xF5B1BD" "xF8D3A1" "xFCD7BD" }
+        owned_provinces = { "x68B5F1" "x7AFBF8" "x7DCCE8" "x92EAEB" "x97DD9B" "xBAE59B" "xBCFEF7" "xDB6EE2" "xE2E185" "xE4D8D6" "xEAEE9B" "xEDBAC7" "xF136E3" "xF5B1BD" "xFCD7BD" }
 }
 add_homeland = cu:nangarlith
+add_homeland = cu:tefereti
 }
 
 s:STATE_CAM_LIADRINE = {
