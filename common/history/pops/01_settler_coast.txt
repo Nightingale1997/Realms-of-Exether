@@ -271,7 +271,7 @@ s:STATE_CAEL_VALEN_2 = {
 	region_state:CER = {
 		create_pop = {
 			culture = ceraunian
-			size = 452400
+			size = 222400
 		}
 		create_pop = {
 			culture = vandori
@@ -280,19 +280,44 @@ s:STATE_CAEL_VALEN_2 = {
 		create_pop = {
 			culture = rivierling
 			religion = church_of_man
-			size = 144000
+			size = 94340
 		}
 		create_pop = {
 			culture = rivierling
-			size = 188400
+			size = 88400
 		}
 		create_pop = {
 			culture = coast_halfling
-			size = 88400
+			size = 48400
 		}
 	}
   }
 
+  s:STATE_PENDYM_GWYN_2 = {
+	region_state:CER = {
+		create_pop = {
+			culture = ceraunian
+			size =306400
+		}
+		create_pop = {
+			culture = vandori
+			size = 2200
+		}
+		create_pop = {
+			culture = rivierling
+			religion = church_of_man
+			size = 84000
+		}
+		create_pop = {
+			culture = rivierling
+			size = 128400
+		}
+		create_pop = {
+			culture = coast_halfling
+			size = 66400
+		}
+	}
+  }
   s:STATE_RIVER_MEDDEN = {
 	region_state:MID = {
 		create_pop = {
@@ -952,6 +977,24 @@ s:STATE_FAR_SHORE_2 = {
 			pop_type = slaves
 			culture = achonian
 			size = 50400
+		}
+	}
+  }
+
+  s:STATE_SHIFTING_SCAR_2 = {
+	region_state:MMD = {
+		create_pop = {
+			culture = changeling
+			size = 164896
+		}
+		create_pop = {
+			culture = nightwalker
+			size = 51004
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = achonian
+			size = 30536
 		}
 	}
   }
