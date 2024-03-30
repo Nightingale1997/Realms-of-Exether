@@ -83,10 +83,24 @@
 		region_state:DSB = {
 			create_pop = {
 				culture = astreval
-				size = 451000
+				size = 423004
+				
+			}
+			create_pop = {
+				culture = thiralian
+				size = 25556
 			}
 		}
   }
+
+  s:STATE_CENTRAL_EQUINE_PLAIN = {
+	region_state:DSB = {
+		create_pop = {
+			culture = astreval
+			size = 206000
+		}
+	}
+}
     
   s:STATE_DUSHAMBAY = {
 		region_state:DSB = {
