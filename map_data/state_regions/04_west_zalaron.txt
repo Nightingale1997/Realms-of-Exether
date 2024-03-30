@@ -7,6 +7,23 @@
     farm = x8DDFA5
     mine = x9197F9
     port = xA3FAAE
+    arable_land = 120
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_dye_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_coal_mining = 24
+        bg_lead_mining = 15
+        bg_logging = 7
+        bg_fishing = 4
+    }
+    resource = {
+        type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
+        undiscovered_amount = 2
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 6
+    }
     naval_exit_id = 3001
 }
 STATE_VALBARDA = {
@@ -18,6 +35,23 @@ STATE_VALBARDA = {
     farm = x73D3CA
     mine = x76D4D9
     port = xB2F85C
+    arable_land = 120
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_dye_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_coal_mining = 24
+        bg_lead_mining = 15
+        bg_logging = 8
+        bg_fishing = 4
+    }
+    resource = {
+        type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
+        undiscovered_amount = 3
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 8
+    }
     naval_exit_id = 3001
 }
 STATE_DURRESIA = {

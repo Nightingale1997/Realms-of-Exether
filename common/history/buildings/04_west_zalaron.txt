@@ -1,10 +1,72 @@
 ﻿BUILDINGS = {
   
   s:STATE_SHKODERIA = {
-
+	region_state:KGM={
+		create_building={
+			building="building_government_administration"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_simple_organization" "pm_professional_bureaucrats" "pm_religious_bureaucrats" }
+		}
+		create_building={
+			building="building_millet_farm"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled" "pm_privately_owned" }
+		}
+		create_building={
+			building="building_sugar_plantation"
+			level=3
+			reserves=1
+			activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+		}
+		create_building={
+			building="building_fishing_wharf"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+		}
+	}
   }
   s:STATE_VALBARDA = {
-
+	region_state:KGM={
+		create_building={
+			building="building_government_administration"
+			level=2
+			reserves=1
+			activate_production_methods={ "pm_simple_organization" "pm_professional_bureaucrats" "pm_religious_bureaucrats" }
+		}
+		create_building={
+			building="building_food_industry"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_pot_stills" "pm_disabled_canning" "pm_sweeteners" "pm_manual_dough_processing" "pm_privately_owned_building_food_industry" }
+		}
+		create_building={
+			building="building_millet_farm"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled" "pm_privately_owned" }
+		}
+		create_building={
+			building="building_sugar_plantation"
+			level=1
+			reserves=1
+			activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+		}
+		create_building={
+			building="building_fishing_wharf"
+			level=2
+			reserves=1
+			activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+		}
+		create_building={
+			building="building_logging_camp"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts" "pm_privately_owned_building_logging_camp" }
+		}
+	}
   }
   s:STATE_DURRESIA = {
 		region_state:ZIX={
