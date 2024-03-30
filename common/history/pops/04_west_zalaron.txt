@@ -819,7 +819,29 @@
 	}
   }
   s:STATE_VITHKUQJA = {
-
+	region_state:VLT = {
+		create_pop = {
+			culture = varbat
+			size = 526096
+		}
+		create_pop = {
+			culture = pabardian
+			size = 12004
+		}
+		create_pop = {
+			culture = jungle_gnoll
+			size = 267500
+		}
+		create_pop = {
+			culture = kaalkid
+			size = 88400
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = west_thalorian
+			size = 30200
+		}
+	}
   }
   s:STATE_MILOTI = {
 	region_state:ZIN = {
@@ -852,9 +874,6 @@
 			size = 57000
 		}
 	}
-  }
-  s:STATE_LATORIIVE = {
-
   }
   s:STATE_KILIMAMAI = {
 		region_state:SNB = {
@@ -1263,7 +1282,24 @@
 
   }
   s:STATE_KAINAVA = {
-
+		region_state:TSH = {
+			create_pop = {
+				culture = kaalkid
+				size = 226764
+			}
+			create_pop = {
+				culture = varbat
+				size = 188804
+			}
+			create_pop = {
+				culture = jungle_gnoll
+				size = 208804
+			}
+			create_pop = {
+				culture = pabardian
+				size = 1400
+			}
+		}
   }
   s:STATE_DIYINAKHAD = {
 
@@ -1275,10 +1311,36 @@
 
   }
   s:STATE_SHIMAKAI = {
-
+	region_state:KHD = {
+		create_pop = {
+			culture = duneshar
+			size = 8264
+		}
+		create_pop = {
+			culture = kaalkid
+			size = 13300
+		}
+		create_pop = {
+			culture = west_thalorian
+			size = 1300
+		}
+	}
   }
   s:STATE_YAZHIDZI = {
-
+	region_state:HOZ = {
+		create_pop = {
+			culture = west_thalorian
+			size = 8264
+		}
+		create_pop = {
+			culture = kaalkid
+			size = 103300
+		}
+		create_pop = {
+			culture = duneshar
+			size = 1300
+		}
+	}
   }
   s:STATE_SHINOGOZH = {
 
