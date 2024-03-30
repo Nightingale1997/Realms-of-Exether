@@ -562,13 +562,49 @@
 	}
   }
   s:STATE_SHKUMBINIA = {
-
+	region_state:MGR = {
+		create_pop = {
+			culture = mgzavri
+			size = 1252396
+		}
+		create_pop = {
+			culture = xhurlob
+			size = 180000
+		}
+		create_pop = {
+			culture = rethrashar
+			size = 26000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = xhurlob
+			size = 70000
+		}
+	}
   }
   s:STATE_KUKESPIA = {
 
   }
   s:STATE_NYZHNE_SENIA = {
-
+	region_state:MGR = {
+		create_pop = {
+			culture = mgzavri
+			size = 423996
+		}
+		create_pop = {
+			culture = west_thalorian
+			size = 100996
+		}
+		create_pop = {
+			culture = rethrashar
+			size = 17248
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = rethrashar
+			size = 16000
+		}
+	}
   }
   s:STATE_SHPYNTESI = {
 
@@ -580,16 +616,80 @@
 
   }
   s:STATE_BREZHKE = {
-
+	region_state:MGR = {
+		create_pop = {
+			culture = mgzavri
+			size = 1634004
+		}
+		create_pop = {
+			culture = xhurlob
+			size = 104400
+		}
+		create_pop = {
+			culture = rethrashar
+			size = 54400
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = xhurlob
+			size = 20000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = rethrashar
+			size = 10000
+		}
+	}
   }
   s:STATE_USTRIZHYVKA = {
 
   }
   s:STATE_TROPOJA = {
-
+	region_state:MGR  = {
+		create_pop = {
+			culture = mgzavri
+			size = 1028000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = rethrashar
+			size = 15000
+		}
+		create_pop = {
+			culture = west_thalorian
+			size = 39000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = rethrashar
+			size = 13000
+		}
+	}
   }
   s:STATE_HUTSULANE = {
-
+	region_state:MGR = {
+		create_pop = {
+			culture = mgzavri
+			size = 623202
+		}
+		create_pop = {
+			culture = west_thalorian
+			size = 23996
+		}
+		create_pop = {
+			culture = rethrashar
+			size = 12000
+		}
+		create_pop = {
+			culture = xhurlob
+			size = 13002
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = rethrashar
+			size = 40204
+		}
+	}
   }
   s:STATE_TEPELENA = {
 

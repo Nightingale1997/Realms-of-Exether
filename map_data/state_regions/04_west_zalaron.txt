@@ -526,7 +526,17 @@ STATE_SHKUMBINIA = {
     farm = xA5A3D4
     mine = xB0B1AA
     port = xB0D7C5
-    naval_exit_id = 3064
+    arable_land = 45
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_silk_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 20
+        bg_fishing = 16
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 8
+    }
+    naval_exit_id = 3009
 }
 STATE_KUKESPIA = {
     id = 2430
@@ -548,6 +558,13 @@ STATE_NYZHNE_SENIA = {
     farm = x68F3B0
     mine = x70F1A3
     port = x9DBFA3
+    arable_land = 40
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_silk_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_coal_mining = 32
+        bg_iron_mining = 36
+        bg_logging = 23
+    }
     naval_exit_id = 3064
 }
 STATE_SHPYNTESI = {
@@ -592,7 +609,17 @@ STATE_BREZHKE = {
     farm = xA7DFAA
     mine = xB7F1ED
     port = xB9C9BC
-    naval_exit_id = 3064
+    arable_land = 50
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 17
+        bg_fishing = 8
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 16
+    }
+    naval_exit_id = 3009
 }
 STATE_USTRIZHYVKA = {
     id = 2436
@@ -614,7 +641,16 @@ STATE_TROPOJA = {
     farm = xA6DAC9
     mine = xA78DCE
     port = xB7E37B
-    naval_exit_id = 3064
+    arable_land = 40
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 25
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 2
+    }
+    naval_exit_id = 3009
 }
 STATE_HUTSULANE = {
     id = 2438
@@ -625,7 +661,18 @@ STATE_HUTSULANE = {
     farm = xA2ED9A
     mine = xB176EE
     port = xB95DE3
-    naval_exit_id = 3064
+    arable_land = 35
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_iron_mining = 30
+        bg_logging = 20
+        bg_fishing = 5
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 12
+    }
+    naval_exit_id = 3009
 }
 STATE_TEPELENA = {
     id = 2439
