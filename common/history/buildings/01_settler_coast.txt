@@ -611,7 +611,7 @@
   }
 
   s:STATE_WAYFARE_MEADOWS = {
-	region_state:ARR={
+	region_state:PRI={
 		create_building={
 			building="building_government_administration"
 			level=10
@@ -646,7 +646,7 @@
   }
 
   s:STATE_THE_AMBER_RUN = {
-		region_state:ARR={
+		region_state:EMP={
 			create_building={
 				building="building_government_administration"
 				level=3
@@ -681,7 +681,7 @@
   }
 
   s:STATE_MISTREACH = {
-		region_state:ARR={
+		region_state:KRC={
 			create_building={
 				building="building_food_industry"
 				level=6
@@ -1724,7 +1724,7 @@
   }
 
   s:STATE_MOUNT_YELFIS= {
-	region_state:ARR={
+	region_state:DAR={
 		create_building={
 			building="building_government_administration"
 			level=3
@@ -2068,7 +2068,7 @@
   }
 
   s:STATE_TARBANK = {
-		region_state:THI={	
+		region_state:EMP={	
 			create_building={
 				building="building_tooling_workshops"
 				level=4

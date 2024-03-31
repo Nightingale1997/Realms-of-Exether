@@ -282,7 +282,7 @@
       region_state:YAN = {
         create_pop = {
           culture = yanger
-          size = 190000
+          size = 196000
         }
         create_pop = {
           culture = dumonian
@@ -295,6 +295,22 @@
       }
   }
 
+  s:STATE_SOUTH_YANGER_STEPPE = {
+    region_state:YAN = {
+      create_pop = {
+        culture = yanger
+        size = 165632
+      }
+      create_pop = {
+        culture = dumonian
+        size = 2700
+      }
+      create_pop = {
+        culture = jalian
+        size = 25700
+      }
+    }
+} 
 
     s:STATE_EAST_YANGER_STEPPE = {
       region_state:YAN = {

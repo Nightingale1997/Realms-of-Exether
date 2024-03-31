@@ -1,10 +1,54 @@
 ﻿POPS = {
 
   s:STATE_SHKODERIA = {
-
+	region_state:KGM = {
+		create_pop = {
+			culture = varbat
+			size = 143903
+		}
+		create_pop = {
+			culture = west_thalorian
+			pop_type = slaves
+			size = 40532
+		}
+		create_pop = {
+			culture = xhurlob
+			size = 187073
+		}
+		create_pop = {
+			culture = rethrashar
+			size = 84182
+		}
+		create_pop = {
+			culture = kaalkid
+			size = 23984
+		}
+	}
   }
   s:STATE_VALBARDA = {
-
+	region_state:KGM = {
+		create_pop = {
+			culture = varbat
+			size = 114874
+		}
+		create_pop = {
+			culture = rethrashar
+			size = 13183
+		}
+		create_pop = {
+			culture = xhurlob
+			size = 60846
+		}
+		create_pop = {
+			culture = kaalkid
+			size = 27381
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = west_thalorian
+			size = 15036
+		}
+	}
   }
   s:STATE_DURRESIA = {
 		region_state:ZIX = {
@@ -562,13 +606,49 @@
 	}
   }
   s:STATE_SHKUMBINIA = {
-
+	region_state:MGR = {
+		create_pop = {
+			culture = mgzavri
+			size = 1252396
+		}
+		create_pop = {
+			culture = xhurlob
+			size = 180000
+		}
+		create_pop = {
+			culture = rethrashar
+			size = 26000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = xhurlob
+			size = 70000
+		}
+	}
   }
   s:STATE_KUKESPIA = {
 
   }
   s:STATE_NYZHNE_SENIA = {
-
+	region_state:MGR = {
+		create_pop = {
+			culture = mgzavri
+			size = 423996
+		}
+		create_pop = {
+			culture = west_thalorian
+			size = 100996
+		}
+		create_pop = {
+			culture = rethrashar
+			size = 17248
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = rethrashar
+			size = 16000
+		}
+	}
   }
   s:STATE_SHPYNTESI = {
 
@@ -580,16 +660,80 @@
 
   }
   s:STATE_BREZHKE = {
-
+	region_state:MGR = {
+		create_pop = {
+			culture = mgzavri
+			size = 1634004
+		}
+		create_pop = {
+			culture = xhurlob
+			size = 104400
+		}
+		create_pop = {
+			culture = rethrashar
+			size = 54400
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = xhurlob
+			size = 20000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = rethrashar
+			size = 10000
+		}
+	}
   }
   s:STATE_USTRIZHYVKA = {
 
   }
   s:STATE_TROPOJA = {
-
+	region_state:MGR  = {
+		create_pop = {
+			culture = mgzavri
+			size = 1028000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = rethrashar
+			size = 15000
+		}
+		create_pop = {
+			culture = west_thalorian
+			size = 39000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = rethrashar
+			size = 13000
+		}
+	}
   }
   s:STATE_HUTSULANE = {
-
+	region_state:MGR = {
+		create_pop = {
+			culture = mgzavri
+			size = 623202
+		}
+		create_pop = {
+			culture = west_thalorian
+			size = 23996
+		}
+		create_pop = {
+			culture = rethrashar
+			size = 12000
+		}
+		create_pop = {
+			culture = xhurlob
+			size = 13002
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = rethrashar
+			size = 40204
+		}
+	}
   }
   s:STATE_TEPELENA = {
 
@@ -675,7 +819,29 @@
 	}
   }
   s:STATE_VITHKUQJA = {
-
+	region_state:VLT = {
+		create_pop = {
+			culture = varbat
+			size = 526096
+		}
+		create_pop = {
+			culture = pabardian
+			size = 12004
+		}
+		create_pop = {
+			culture = jungle_gnoll
+			size = 267500
+		}
+		create_pop = {
+			culture = kaalkid
+			size = 88400
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = west_thalorian
+			size = 30200
+		}
+	}
   }
   s:STATE_MILOTI = {
 	region_state:ZIN = {
@@ -709,9 +875,6 @@
 		}
 	}
   }
-  s:STATE_LATORIIVE = {
-
-  }
   s:STATE_KILIMAMAI = {
 		region_state:SNB = {
 			create_pop = {
@@ -720,11 +883,11 @@
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = gnoll
+				culture = jungle_gnoll
 				size = 265153
 			}
 			create_pop = {
-				culture = gnoll
+				culture = jungle_gnoll
 				size = 112263
 			}
 		}
@@ -737,11 +900,11 @@
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = gnoll
+				culture = jungle_gnoll
 				size = 13012
 			}
 			create_pop = {
-				culture = gnoll
+				culture = jungle_gnoll
 				size = 13159
 			}
 		}
@@ -754,11 +917,11 @@
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = gnoll
+				culture = jungle_gnoll
 				size = 42176
 			}
 			create_pop = {
-				culture = gnoll
+				culture = jungle_gnoll
 				size = 4086
 			}
 			create_pop = {
@@ -775,12 +938,12 @@
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = gnoll
+				culture = jungle_gnoll
 				size = 21140
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = gnoll
+				culture = jungle_gnoll
 				size = 4630
 			}
 			create_pop = {
@@ -797,11 +960,11 @@
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = gnoll
+				culture = jungle_gnoll
 				size = 6125
 			}
 			create_pop = {
-				culture = gnoll
+				culture = jungle_gnoll
 				size = 9997
 			}
 		}
@@ -814,7 +977,7 @@
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = gnoll
+				culture = jungle_gnoll
         size = 10122
 			}
 			create_pop = {
@@ -822,7 +985,7 @@
 				size = 15532
 			}
 			create_pop = {
-				culture = gnoll
+				culture = jungle_gnoll
 				size = 74000
 			}
 		}
@@ -839,11 +1002,11 @@
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = gnoll
+				culture = jungle_gnoll
 				size = 12108
 			}
 			create_pop = {
-				culture = gnoll
+				culture = jungle_gnoll
 				size = 38895
 			}
 		}
@@ -856,11 +1019,11 @@
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = gnoll
+				culture = jungle_gnoll
 				size = 147263
 			}
 			create_pop = {
-				culture = gnoll
+				culture = jungle_gnoll
 				size = 248737
 			}
 		}
@@ -873,11 +1036,11 @@
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = gnoll
+				culture = jungle_gnoll
 				size = 65737
 			}
 			create_pop = {
-				culture = gnoll
+				culture = jungle_gnoll
 				size = 77642
 			}
 			create_pop = {
@@ -893,7 +1056,7 @@
   s:STATE_CHANGAVUTA = {
 		region_state:SNB = {
 			create_pop = {
-				culture = gnoll
+				culture = jungle_gnoll
 				size = 162000
 			}
 			create_pop = {
@@ -914,11 +1077,11 @@
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = gnoll
+				culture = jungle_gnoll
 				size = 86933 
 			}
 			create_pop = {
-				culture = gnoll
+				culture = jungle_gnoll
 				size = 66265 
 			}
 			create_pop = {
@@ -935,7 +1098,7 @@
 		}
 		create_pop = {
 				pop_type = slaves
-				culture = gnoll
+				culture = jungle_gnoll
 				size = 2000
 			}
 	}
@@ -973,11 +1136,11 @@
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = gnoll
+				culture = jungle_gnoll
 				size = 25402
 			}
 			create_pop = {
-				culture = gnoll
+				culture = jungle_gnoll
 				size = 114270
 			}
 		}
@@ -994,11 +1157,11 @@
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = gnoll
+				culture = jungle_gnoll
 				size = 10242
 			}
 			create_pop = {
-				culture = gnoll
+				culture = jungle_gnoll
 				size = 42860
 			}
 		}
@@ -1036,11 +1199,11 @@
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = gnoll
+				culture = jungle_gnoll
 				size = 21960
 			}
 			create_pop = {
-				culture = gnoll
+				culture = jungle_gnoll
 				size = 61245
 			}
 		}
@@ -1082,11 +1245,11 @@
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = gnoll
+				culture = jungle_gnoll
 				size = 181300
 			}
 			create_pop = {
-				culture = gnoll
+				culture = jungle_gnoll
 				size = 181300
 			}
 		}
@@ -1103,11 +1266,11 @@
 			}
 			create_pop = {
 				pop_type = slaves
-				culture = gnoll
+				culture = jungle_gnoll
 				size = 164812
 			}
 			create_pop = {
-				culture = gnoll
+				culture = jungle_gnoll
 				size = 324105
 			}
 		}
@@ -1119,7 +1282,24 @@
 
   }
   s:STATE_KAINAVA = {
-
+		region_state:TSH = {
+			create_pop = {
+				culture = kaalkid
+				size = 226764
+			}
+			create_pop = {
+				culture = varbat
+				size = 188804
+			}
+			create_pop = {
+				culture = jungle_gnoll
+				size = 208804
+			}
+			create_pop = {
+				culture = pabardian
+				size = 1400
+			}
+		}
   }
   s:STATE_DIYINAKHAD = {
 
@@ -1131,10 +1311,36 @@
 
   }
   s:STATE_SHIMAKAI = {
-
+	region_state:KHD = {
+		create_pop = {
+			culture = duneshar
+			size = 8264
+		}
+		create_pop = {
+			culture = kaalkid
+			size = 13300
+		}
+		create_pop = {
+			culture = west_thalorian
+			size = 1300
+		}
+	}
   }
   s:STATE_YAZHIDZI = {
-
+	region_state:HOZ = {
+		create_pop = {
+			culture = west_thalorian
+			size = 8264
+		}
+		create_pop = {
+			culture = kaalkid
+			size = 103300
+		}
+		create_pop = {
+			culture = duneshar
+			size = 1300
+		}
+	}
   }
   s:STATE_SHINOGOZH = {
 
@@ -1146,7 +1352,25 @@
 
   }
   s:STATE_KEENAVAZH = {
-
+	region_state:HOZ = {
+		create_pop = {
+			culture = kaalkid
+			size = 643804
+		}
+		create_pop = {
+			culture = duneshar
+			size = 2996
+		}
+		create_pop = {
+			culture = west_thalorian
+			size = 13996
+		}
+		create_pop = {
+			culture = west_thalorian
+			size = 39648
+			pop_type = slaves
+		}
+	}
   }
   s:STATE_NAVOYAZH = {
 
@@ -1172,12 +1396,12 @@
 			size = 204800
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 5040 
 		}
 		create_pop = {
 			pop_type = slaves
-			culture = warforged
+			culture = soulwrought
 			size = 142960
 		}
 		create_pop = {
@@ -1189,20 +1413,20 @@
   s:STATE_TINKELHOVEN = {
 	region_state:RAV = {
 		create_pop = {
-			culture = florishnom
+			culture = ravikian
 			size = 239988
 		}
 		create_pop = {
-			culture = ravikian
+			culture = florishnom
 			size = 316392
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 6117 
 		}
 		create_pop = {
 			pop_type = slaves
-			culture = warforged
+			culture = soulwrought
 			size = 161879
 		}
 		create_pop = {
@@ -1235,7 +1459,7 @@
 		}
 		create_pop = {
 			pop_type = slaves
-			culture = warforged
+			culture = soulwrought
 			size = 7818
 		}
 	}
@@ -1252,12 +1476,12 @@
 			size = 33857
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 303 
 		}
 		create_pop = {
 			pop_type = slaves
-			culture = warforged
+			culture = soulwrought
 			size = 15689
 		}
 		create_pop = {
@@ -1274,7 +1498,7 @@
 		}
 		create_pop = {
 			pop_type = slaves # there was even a slave revolt at Webbers Falls in 1842
-			culture = warforged
+			culture = soulwrought
 			size = 1200
 		}
 		create_pop = {
@@ -1298,12 +1522,12 @@
 			size = 6960
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 8099 
 		}
 		create_pop = {
 			pop_type = slaves
-			culture = warforged
+			culture = soulwrought
 			size = 318693
 		}
 	}
@@ -1316,11 +1540,11 @@
 		}
 		create_pop = {
 			pop_type = slaves
-			culture = warforged
+			culture = soulwrought
 			size = 18081 
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 1808 
 		}
 		create_pop = {
@@ -1338,19 +1562,32 @@
 		}
 
 		create_pop = {
-				culture = warforged
+				culture = soulwrought
 				size = 16919
 		}
 
 		create_pop = {
 				pop_type = slaves
-				culture = warforged
+				culture = soulwrought
 				size = 2605
 		}
 	}
   }
   s:STATE_BELLENBERG = {
-
+	region_state:TLE = {
+		create_pop = {
+			culture = lake_thalorian
+			size = 99087
+		}
+		create_pop = {
+			culture = central_thalorian
+			size = 13637
+		}
+		create_pop = {
+			culture = dunaq
+			size = 5637
+		}
+	}
   }
   s:STATE_KLINGELBERG = {
 
@@ -1362,12 +1599,12 @@
 			size = 172804
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 943
 		}
 		create_pop = {
 			pop_type = slaves
-			culture = warforged
+			culture = soulwrought
 			size = 87057
 		}
 	}
@@ -1387,12 +1624,12 @@
 			size = 8946 
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 2620 
 		}
 		create_pop = {
 			pop_type = slaves
-			culture = warforged
+			culture = soulwrought
 			size = 256172
 		}
 	}
@@ -1413,12 +1650,12 @@
 			size = 200
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 21106
 		}
 		create_pop = {
 			pop_type = slaves
-			culture = warforged
+			culture = soulwrought
 			size = 112994
 		}
 
@@ -1440,7 +1677,7 @@
 			size = 39996
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 20004
 		}
 		create_pop = {
@@ -1456,7 +1693,7 @@
 			size = 452400
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 4000
 		}
 	}
@@ -1468,12 +1705,12 @@
 			size = 329008
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 1806
 		}
 		create_pop = {
 			pop_type = slaves
-			culture = warforged
+			culture = soulwrought
 			size = 229998
 		}
 		create_pop = {
@@ -1498,12 +1735,12 @@
 			size = 251997
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 48541
 		}
 		create_pop = {
 			pop_type = slaves
-			culture = warforged
+			culture = soulwrought
 			size = 58467
 		}
 	}
@@ -1528,12 +1765,12 @@
 			size = 3996
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 1072 
 		}
 		create_pop = {
 			pop_type = slaves
-			culture = warforged
+			culture = soulwrought
 			size = 38928
 		}
 		create_pop = {
@@ -1563,19 +1800,46 @@
 			size = 27996
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 15996
 		}
 	}
   }
   s:STATE_GLIMMERDAM = {
-
+	region_state:TLE = {
+		create_pop = {
+			culture = lake_thalorian
+			size = 113841
+		}
+		create_pop = {
+			culture = ravikian
+			size = 20000
+		}
+		create_pop = {
+			culture = yrian
+			size = 1100
+		}
+	}
   }
   s:STATE_KRULWILGEN = {
 
   }
   s:STATE_KLINGELWEIDE = {
+	region_state:TLE = {
+		create_pop = {
+			culture = central_thalorian
+			size = 594909
+		}
+		create_pop = {
+			culture = lake_thalorian
+			size = 266461
+		}
+		create_pop = {
+			culture = ravikian
+			size = 25162
+		}
 
+	}
   }
   s:STATE_SMIDSGROEN = {
 	region_state:RAV = {
@@ -1592,7 +1856,7 @@
 			size = 20000
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 8000
 		}
 	}
@@ -1624,18 +1888,31 @@
 			size = 48000
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 35120
 		}
 		create_pop = {
 			pop_type = slaves
-			culture = warforged
+			culture = soulwrought
 			size = 312079
 		}
 	}
   }
   s:STATE_VONKENDAM = {
-
+	region_state:TLE = {
+		create_pop = {
+			culture = lake_thalorian
+			size = 963486
+		}
+		create_pop = {
+			culture = central_thalorian
+			size = 789604
+		}
+		create_pop = {
+			culture = dunaq
+			size = 54000
+		}
+	}
   }
   s:STATE_GNURKENSTAD = {
 	region_state:RAV = {
@@ -1644,12 +1921,12 @@
 			size = 47996
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 817 
 		}
 		create_pop = {
 			pop_type = slaves
-			culture = warforged
+			culture = soulwrought
 			size = 31183
 		}
 		create_pop = {
@@ -1686,7 +1963,7 @@
 			size = 59800
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 43996
 		}
 	}
@@ -1715,7 +1992,7 @@
 			size = 1092200
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 16008
 		}
 		create_pop = {
@@ -1729,7 +2006,20 @@
 	}
   }
   s:STATE_TIMMERHAVEN = {
-
+	region_state:TLE = {
+		create_pop = {
+			culture = lake_thalorian
+			size = 201061
+		}	
+		create_pop = {
+			culture = yrian
+			size = 41061
+		}	
+		create_pop = {
+			culture = ravikian
+			size = 11061
+		}		
+	}
   }
   s:STATE_KRULHOVEN = {
 	region_state:RAV = {
@@ -1738,7 +2028,7 @@
 			size = 754484
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 11996
 		}
 		create_pop = {
@@ -1770,7 +2060,20 @@
 	}
   }
   s:STATE_SNAARBERG = {
-
+	region_state:TLE = {
+		create_pop = {
+			culture = central_thalorian
+			size = 136199
+		}
+		create_pop = {
+			culture = west_thalorian
+			size = 20000
+		}
+		create_pop = {
+			culture = kaalkid
+			size = 800
+		}
+	}
   }
   s:STATE_SPRONKERGROEN = {
 
@@ -1782,12 +2085,12 @@
 			size = 492500
 		}
 		create_pop = {
-			culture = warforged
+			culture = soulwrought
 			size = 21138 
 		}
 		create_pop = {
 			pop_type = slaves
-			culture = warforged
+			culture = soulwrought
 			size = 222862
 		}
 		create_pop = {
@@ -1824,7 +2127,20 @@
 
   }
   s:STATE_STORMHOLM = {
-
+	region_state:TLE = {
+		create_pop = {
+			culture = dunaq
+			size = 67347
+		}
+		create_pop = {
+			culture = rahoru
+			size = 47347
+		}
+		create_pop = {
+			culture = lake_thalorian
+			size = 175961
+		}
+	}
   }
   s:STATE_RAVENHOLME = {
 
@@ -1848,16 +2164,60 @@
 
   }
   s:STATE_BRIGHTWATER = {
-
+	region_state:TLE = {
+		create_pop = {
+			culture = lake_thalorian
+			size = 121499
+		}
+		create_pop = {
+			culture = dunaq
+			size = 27000
+		}
+		create_pop = {
+			culture = dunaq
+			religion = old_faith
+			size = 70004
+		}
+		create_pop = {
+			culture = kusichaki
+			size = 6000
+		}
+	}
   }
   s:STATE_DAWNRIDGE = {
 
   }
   s:STATE_SUNDALE = {
-
+	region_state:TLE = {
+		create_pop = {
+			culture = lake_thalorian
+			size = 139895
+		}
+		create_pop = {
+			culture = kusichaki
+			size = 8000
+		}
+		create_pop = {
+			culture = dunaq
+			size = 16000
+		}
+	}
   }
   s:STATE_WHITESTONE = {
-
+	region_state:TLE = {
+		create_pop = {
+			culture = lake_thalorian
+			size = 14000
+		}
+		create_pop = {
+			culture = dunaq
+			size = 8004
+		}
+		create_pop = {
+			culture = kusichaki
+			size = 3000
+		}
+	}
   }
   s:STATE_RIVERTIDE = {
 
@@ -1881,7 +2241,20 @@
   }
   
   s:STATE_WINDSONG = {
-
+		region_state:TLE = {
+			create_pop = {
+				culture = lake_thalorian
+				size = 1011710
+			}
+			create_pop = {
+				culture = rahoru
+				size = 152078
+			}
+			create_pop = {
+				culture = dunaq
+				size = 26373
+			}
+		}
   }
   s:STATE_WINDSPEAR = {
 
