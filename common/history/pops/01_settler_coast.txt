@@ -450,17 +450,17 @@ s:STATE_CAEL_VALEN_2 = {
   }
 
   s:STATE_WAYFARE_MEADOWS_2 = {
-	region_state:PRI = {
+	region_state:SLB = {
+		create_pop = {
+			culture = coast_halfling
+			size = 1297492
+		}
 		create_pop = {
 			culture = wealder
-			size = 1997492
+			size = 1001996
 		}
 		create_pop = {
 			culture = mousefolk
-			size = 301996
-		}
-		create_pop = {
-			culture = coast_halfling
 			size = 101504
 		}
 		create_pop = {

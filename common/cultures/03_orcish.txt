@@ -2,6 +2,9 @@
 	color= hsv{ 0.14 0.35 0.99 }
 	religion = orc_father
 	traits = { orc_heritage }
+	obsessions = {
+		meat
+	}
 	male_common_first_names={
 		Hehaka
 		Inkpaduta
@@ -54,6 +57,9 @@ kaalkid={
 	color= hsv{ 0.62 0.26 0.74 }
 	traits = { orc_heritage }
 	religion = orc_father
+	obsessions = {
+		meat
+	}
 	male_common_first_names={
 		Barboncito
 		Digul_Chee
@@ -100,10 +106,13 @@ kaalkid={
 }
 
 #Salish
-tqalt={ # Tlingit and Haida merged together, forgive me
+tqalt={ 
 	color= hsv{ 0.55 0.47 0.54 }
 	religion = orc_father
 	traits = { saltwaste_survivor_culture_group orc_heritage }
+	obsessions = {
+		meat
+	}
 	male_common_first_names={
 		Cumshewa
 		Cuneah
@@ -151,6 +160,9 @@ rahoru={
 	color= hsv{ 0.25 0.43 0.55 }
 	religion = orc_mother
 	traits = { saltwaste_survivor_culture_group orc_heritage }
+	obsessions = {
+		meat
+	}
 	male_common_first_names={
 		Amare
 		Amha
@@ -197,6 +209,9 @@ nuzaptan={
 	color= hsv{ 0.63 0.30 0.52 }
 	religion = orc_mother
 	traits = { swampwalker_culture_group orc_heritage }
+	obsessions = {
+		meat
+	}
 	male_common_first_names={
 		Hehaka
 		Inkpaduta
