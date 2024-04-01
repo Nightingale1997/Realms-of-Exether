@@ -125,6 +125,14 @@ STATE_PWANIQILIMA = {
     farm = xA7C6D8
     mine = xAF94F5
     port = xB2D670
+    arable_land = 35
+    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_millet_farms" "bg_cotton_plantations"}
+    capped_resources = {
+        bg_logging = 9
+        bg_iron_mining = 26
+        bg_coal_mining = 14
+        bg_cloud_collecting = 7
+    }
     naval_exit_id = 3065
 }
 STATE_UZURIPWA = {
@@ -221,6 +229,12 @@ STATE_MAWIMBIMAJI = {
     farm = xB2CA7C
     mine = xB2E768
     port = xB9A7C7
+    arable_land = 32
+    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_millet_farms" "bg_cotton_plantations"}
+    capped_resources = {
+        bg_logging = 13
+        bg_sulfur_mining = 12
+    }
     naval_exit_id = 3065
 }
 STATE_MLIMASHWARI = {
