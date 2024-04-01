@@ -39,7 +39,7 @@ bg_cloud_collecting = {
 	can_use_slaves = yes
 }
 
-bg_wishstone_extraction = {
+bg_wishstone_mining = { 
 	category = rural
 
 	capped_by_resources = yes
@@ -48,7 +48,7 @@ bg_wishstone_extraction = {
 	
 	discoverable_resource = yes
 	
-	default_building = building_wishstone_excavation
+	default_building = building_wishstone_mine
 	
 	lens = mine
 	
@@ -135,22 +135,50 @@ bg_ship_graveyard = {  #deplete into building_fishing_wharf or building_whaling_
 	default_building = building_ship_graveyard
 }
 
+bg_wishstone_mining_depletable = { 
+	parent_group = bg_special_depletables_taxable
+
+	category = rural
+
+	default_building = building_wishstone_mine_depletable
+
+	lens = mine
+
+	cash_reserves_max = 25000
+	
+	urbanization = 10
+	infrastructure_usage_per_level = 2
+	
+	should_auto_expand = { 
+		default_auto_expand_rule = yes
+	}
+
+	can_use_slaves = yes
+
+	economy_of_scale_ai_factor = 2.0
+}
 bg_nonmagical_comet = {  
 	parent_group = bg_special_depletables
 
 	default_building = building_nonmagical_comet
+
+	lens = mine
 }
 
 bg_wishstone_comet = {  
 	parent_group = bg_special_depletables
 
 	default_building = building_wishstone_comet
+
+	lens = mine
 }
 
 bg_feywild_reserve = {  #represents a feywild area small enough to be dismantled entirely by private enterprise.  Probably should be activated by decision?
 parent_group = bg_special_depletables
 
 	default_building = building_feywild_reserve
+
+	lens = forestry	
 }
 
 bg_special_depletables_taxable = {  #use with resource_depletion and resource_discovery settings
