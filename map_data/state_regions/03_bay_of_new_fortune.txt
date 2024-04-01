@@ -7,7 +7,13 @@
     farm = x9F60FD
     mine = xBDFD75
     port = xC4C6D7
-    naval_exit_id = 3015
+	arable_land = 52
+    arable_resources = { "bg_livestock_ranches" "bg_vineyard_plantations" "bg_sugar_plantations" "bg_wheat_farms" "bg_cotton_plantations" }
+    capped_resources = {
+        bg_opium_plantations = 20
+		bg_wishstone_mining = 20
+    }
+    naval_exit_id = 3065
 }
 
 STATE_KILIMASAWA = {

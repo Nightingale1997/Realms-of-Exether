@@ -234,6 +234,30 @@
 	}
 	s:STATE_NAWI_OASIS = {
 		region_state:WAQ={
+			create_building={
+				building="building_furniture_manufacturies"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_santa_clause_style" "pm_permanent_prestidigitation_furniture" "pm_automation_disabled" "pm_no_luxuries" }
+			}
+			create_building={
+				building="building_textile_mills"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_handsewn_clothes" "pm_permanent_prestidigitation" "pm_automation_disabled" "pm_no_luxury_clothes" }
+			}
+			create_building={
+				building="building_wishstone_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_wishstone_mine" "pm_mines_no_potions" }
+			}
+			create_building={
+				building="building_cotton_plantation"
+				level=1
+				reserves=1
+				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+			}
 		}
 	}
 	s:STATE_TIKAQULLU = {
