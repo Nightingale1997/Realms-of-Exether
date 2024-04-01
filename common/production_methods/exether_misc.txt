@@ -1,0 +1,173 @@
+﻿pm_no_special_fish = {
+	texture = "gfx/interface/icons/production_method_icons/no_hardwood_selection.dds"
+}
+
+pm_early_ironfish_harvesting = {
+	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods										
+			goods_output_fish_add = -12
+			goods_output_iron_add = 9
+		}
+	}
+	possible = {
+		error_check = {
+			severity = fail
+			has_state_trait = state_trait_ironfish_fields
+		}
+	}
+}
+
+pm_dedicated_ironfish_harvesting = {
+	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods										
+			goods_output_fish_add = -25
+			goods_output_iron_add = 19
+		}
+	}
+	possible = {
+		error_check = {
+			severity = fail
+			has_state_trait = state_trait_ironfish_fields
+		}
+	}
+}
+
+pm_early_blubberfish_harvesting = {
+	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods										
+			goods_output_fish_add = -12
+			goods_output_blubber_add = 9
+		}
+	}
+	possible = {
+		error_check = {
+			severity = fail
+			has_state_trait = state_trait_blubberfish_fields
+		}
+	}
+}
+
+pm_dedicated_blubberfish_harvesting = {
+	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods										
+			goods_output_fish_add = -25
+			goods_output_blubber_add = 19
+		}
+	}
+	possible = {
+		error_check = {
+			severity = fail
+			has_state_trait = state_trait_blubberfish_fields
+		}
+	}
+}
+
+pm_early_glowfish_harvesting = {
+	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods										
+			goods_output_fish_add = -12
+			goods_output_monster_essence_add = 9
+		}
+	}
+	possible = {
+		error_check = {
+			severity = fail
+			has_state_trait = state_trait_glowfish_fields
+		}
+	}
+}
+
+pm_dedicated_glowfish_harvesting = {
+	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods										
+			goods_output_fish_add = -25
+			goods_output_monster_essence_add = 19
+		}
+	}
+	possible = {
+		error_check = {
+			severity = fail
+			has_state_trait = state_trait_glowfish_fields
+		}
+	}
+}
+
+pm_early_rainbowfish_harvesting = {
+	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods										
+			goods_output_fish_add = -12
+			goods_output_dyes_add = 9
+		}
+	}
+	possible = {
+		error_check = {
+			severity = fail
+			has_state_trait = state_trait_rainbowfish_fields
+		}
+	}
+}
+
+pm_dedicated_rainbowfish_harvesting = {
+	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods										
+			goods_output_fish_add = -25
+			goods_output_dyes_add = 19
+		}
+	}
+	possible = {
+		error_check = {
+			severity = fail
+			has_state_trait = state_trait_rainbowfish_fields
+		}
+	}
+}
+
+pm_early_goldfish_harvesting = {
+	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods										
+			goods_output_fish_add = -12
+			goods_output_dyes_add = 9
+		}
+	}
+	possible = {
+		error_check = {
+			severity = fail
+			has_state_trait = state_trait_rainbowfish_fields
+		}
+	}
+}
+
+pm_dedicated_goldfish_harvesting = {
+	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods										
+			goods_output_fish_add = -25
+			goods_output_dyes_add = 19
+		}
+	}
+	possible = {
+		error_check = {
+			severity = fail
+			has_state_trait = state_trait_rainbowfish_fields
+		}
+	}
+}
