@@ -574,7 +574,7 @@ STATE_GULTHYR = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_tea_plantations" "bg_silk_plantations" "bg_tobacco_plantations" }
     capped_resources = {
         bg_whaling = 6
-        bg_fishing = 12
+        bg_fishing_glowfish = 12
     }
     naval_exit_id = 3059
 }
@@ -590,7 +590,7 @@ STATE_THARKYR = {
     arable_land = 18
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_tea_plantations" "bg_silk_plantations" "bg_tobacco_plantations" }
     capped_resources = {
-        bg_fishing = 7
+        bg_fishing_glowfish = 7
         bg_logging = 6
     }
     naval_exit_id = 3059
@@ -607,7 +607,7 @@ STATE_URTHOR = {
     arable_land = 30
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_tea_plantations" "bg_silk_plantations" "bg_tobacco_plantations" "bg_cotton_plantations" }
     capped_resources = {
-        bg_fishing = 10
+        bg_fishing_glowfish = 10
         bg_logging = 5
     }
     naval_exit_id = 3059
