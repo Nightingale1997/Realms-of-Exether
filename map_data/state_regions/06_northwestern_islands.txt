@@ -158,7 +158,7 @@ STATE_CARTHALIA = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_vineyard_plantations" }
     capped_resources = {
         bg_logging = 2
-        bg_fishing = 5
+        bg_fishing_glowfish = 5
     }
     naval_exit_id = 3009
 }
@@ -782,6 +782,7 @@ STATE_SYLVARIN = {
     capped_resources = {
         bg_logging = 5
         bg_fishing = 6
+        bg_squidding = 4
     }
     naval_exit_id = 3040
 }
@@ -879,6 +880,7 @@ STATE_ELVERWISP = {
     capped_resources = {
         bg_logging = 9
         bg_fishing = 6
+        bg_squidding = 5
     }
     naval_exit_id = 3029
 }
@@ -896,6 +898,7 @@ STATE_AURORIL = {
     capped_resources = {
         bg_logging = 2
         bg_fishing = 3
+        bg_squidding = 4
     }
     naval_exit_id = 3004
 }
@@ -1045,6 +1048,7 @@ STATE_ELVERLEAF = {
     capped_resources = {
         bg_logging = 2
         bg_fishing = 5
+        bg_squidding = 4
     }
     naval_exit_id = 3029
 }

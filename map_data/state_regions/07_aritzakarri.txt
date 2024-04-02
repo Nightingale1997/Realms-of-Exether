@@ -68,6 +68,7 @@ STATE_KHANZULO = {
         bg_logging = 2
         bg_fishing = 6
         bg_whaling = 4
+        bg_squidding = 2
     }
     naval_exit_id = 3027
 }
@@ -84,6 +85,7 @@ STATE_OLARRA = {
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
         bg_fishing = 2
+        bg_squidding = 3
     }
     naval_exit_id = 3027
 }
@@ -135,6 +137,7 @@ STATE_KASKOHARI = {
     capped_resources = {
         bg_iron_mining = 24
         bg_logging = 5
+        bg_seasnake_wharf = 3
         bg_fishing = 4
     }
     naval_exit_id = 3059
@@ -171,7 +174,7 @@ STATE_KHANBA = {
     arable_land = 5
     arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" }
     capped_resources = {
-        bg_fishing = 4
+        bg_seasnake_wharf = 6
     }
     resource = {
         type = "bg_oil_extraction"
@@ -193,6 +196,7 @@ STATE_MENDARI = {
     capped_resources = {
         bg_sulfur_mining = 28
         bg_fishing = 5
+        bg_squidding = 5
     }
     naval_exit_id = 3093
 }
@@ -211,6 +215,7 @@ STATE_ARRIGORRI = {
         bg_coal_mining = 44
         bg_logging = 4
         bg_fishing = 12
+        bg_squidding = 2
     }
     naval_exit_id = 3093
 }
@@ -262,7 +267,7 @@ STATE_NISHIGARRA = {
     capped_resources = {
         bg_logging = 3
         bg_whaling = 2
-        bg_fishing = 8
+        bg_fishing_glowfish = 8
     }
     naval_exit_id = 3059
 }
@@ -390,7 +395,7 @@ STATE_MUGARA = {
     capped_resources = {
         bg_logging = 4
         bg_whaling = 4
-        bg_fishing = 10
+        bg_fishing_glowfish =  = 10
     }
     naval_exit_id = 3059
 }
@@ -441,7 +446,7 @@ STATE_OLABEGI = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_dye_plantations" "bg_sugar_plantations" "bg_silk_plantations" }
     capped_resources = {
         bg_sulfur_mining = 22
-        bg_fishing = 5
+        bg_fishing_glowfish = 5
         bg_logging = 4
     }
     resource = {
@@ -977,6 +982,7 @@ STATE_IBAIA = {
         bg_logging = 8
         bg_whaling = 2
         bg_fishing = 6
+        bg_squidding = 2
     }
     resource = {
         type = "bg_gold_fields"

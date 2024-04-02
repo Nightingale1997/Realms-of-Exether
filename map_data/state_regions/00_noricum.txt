@@ -262,6 +262,7 @@ STATE_EAST_YANGER_STEPPE = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 4
+        bg_squidding = 4
     }
     naval_exit_id = 3025
 }
@@ -1106,6 +1107,7 @@ STATE_GLYNFFORDD = {
     capped_resources = {
         bg_logging = 6
         bg_fishing = 11
+        bg_squidding = 4
     }
 }
 STATE_ALLTGLAS = {
@@ -1148,6 +1150,7 @@ STATE_GWYNWEN = {
         bg_lead_mining = 27
         bg_logging = 6
         bg_fishing = 6
+        bg_squidding = 5
     }
     naval_exit_id = 3025
 }
@@ -1234,6 +1237,7 @@ STATE_INCHMARA = {
         bg_lead_mining = 24
         bg_logging = 4
         bg_fishing = 12
+        bg_squidding = 7
     }
     naval_exit_id = 3025
 }
@@ -1714,6 +1718,7 @@ STATE_VIGAKULL = {
         bg_logging = 17
         bg_whaling = 6
         bg_fishing = 9
+        bg_squidding = 3
     }
     resource = {
         type = "bg_gold_fields"
@@ -1737,6 +1742,7 @@ STATE_FORRTORP = {
     capped_resources = {
         bg_coal_mining = 36
         bg_logging = 23
+        bg_squidding = 5
     }
     resource = {
         type = "bg_gold_fields"
