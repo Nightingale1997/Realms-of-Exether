@@ -216,10 +216,58 @@ bg_wishstone_fields = {
 bg_seasnake_wharf = {  
 	parent_group = bg_fishing
 
-	default_building = building_leviathan_outpost
+	default_building = building_seasnake_wharf
 }
 
 bg_leviathan_outpost = {
 	parent_group = bg_fishing
 	default_building = building_leviathan_outpost
+}
+
+bg_squidding = {
+	category = rural
+
+	capped_by_resources = yes
+	
+	economy_of_scale = yes
+	
+	default_building = building_squid_squad
+	
+	lens = fishing
+	
+	cash_reserves_max = 25000
+	
+	urbanization = 5
+	infrastructure_usage_per_level = 1
+	
+	should_auto_expand = { 
+		default_auto_expand_rule = yes
+	}
+	
+	economy_of_scale_ai_factor = 2.0
+}
+
+bg_fishing_irontails = {
+	parent_group = bg_fishing
+	default_building = building_fishing_wharf_irontails
+}
+
+bg_fishing_blubberfish = {
+	parent_group = bg_fishing
+	default_building = building_fishing_wharf_blubberfish
+}
+
+bg_fishing_glowfish = {
+	parent_group = bg_fishing
+	default_building = building_fishing_wharf_glowfish
+}
+
+bg_fishing_goldfish = {
+	parent_group = bg_fishing
+	default_building = building_fishing_wharf_goldfish
+}
+
+bg_fishing_rainbowfish = {
+	parent_group = bg_fishing
+	default_building = building_fishing_wharf_rainbowfish
 }

@@ -421,6 +421,81 @@ default_building_wishstone_fields = {
 		}
 	}
 }
+
+pm_simple_squidding = {
+	texture = "gfx/interface/icons/production_method_icons/simple_fishing.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# output
+			goods_output_dye_add = 14
+			goods_output_meat_add = 4
+			goods_output_monster_essence_add = 4
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 4500
+		}
+	}
+}
+
+pm_squid_trawlers = {
+	texture = "gfx/interface/icons/production_method_icons/trawlers.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input
+			goods_input_clippers_add = 5
+			
+			# output
+			goods_output_dye_add = 28
+			goods_output_meat_add = 8
+			goods_output_monster_essence_add = 8
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 4000
+			building_employment_machinists_add = 500
+		}
+	}
+}
+
+pm_steam_squid_trawlers = {
+	texture = "gfx/interface/icons/production_method_icons/steam_trawlers.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	
+	unlocking_technologies = {
+		ironclad_tech
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input
+			goods_input_steamers_add = 5
+			goods_input_coal_add = 15
+			
+			# output
+			goods_output_dye_add = 56
+			goods_output_meat_add = 16
+			goods_output_monster_essence_add = 16
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 3000
+			building_employment_machinists_add = 1000
+			building_employment_engineers_add = 500
+		}
+	}
+}
+
+
 pm_shore_snaking = {
 	texture = "gfx/interface/icons/production_method_icons/simple_fishing.dds"
 	
@@ -499,6 +574,37 @@ pm_steam_seasnake_trawlers = {
 		}
 	}
 }
+
+pm_shore_leviathan_hunting = {
+	texture = "gfx/interface/icons/production_method_icons/wooden_whaling_ships.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input
+			goods_input_clippers_add = 9 
+			
+			# output
+			goods_output_meat_add = 4
+			goods_output_monster_essence_add = 10
+			goods_output_blubber_add =  15
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 3500
+			building_employment_machinists_add = 500
+			building_employment_adventurers_add = 500
+		}
+
+		unscaled = {
+			# mortality
+			building_laborers_mortality_mult = 0.8
+			building_machinists_mortality_mult = 0.5
+			building_adventurers_mortality_mult = 0.4
+		}
+	}
+}
+
 pm_wooden_leviathan_ships = {
 	texture = "gfx/interface/icons/production_method_icons/wooden_whaling_ships.dds"
 	
