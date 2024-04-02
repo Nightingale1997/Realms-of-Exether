@@ -474,7 +474,7 @@ STATE_EIREKS_WASH = {
         type = "bg_rubber"
         undiscovered_amount = 11
     }
-
+    naval_exit_id = 3011
 }
 STATE_CANDLEMIRE = {
     id = 4248
@@ -496,7 +496,7 @@ STATE_CANDLEMIRE = {
         type = "bg_rubber"
         undiscovered_amount = 7
     }
-
+    naval_exit_id = 3011
 }
 STATE_DROWNED_LANDS = {
     id = 4249
@@ -623,7 +623,7 @@ STATE_GLADEMIRE = {
         type = "bg_rubber"
         undiscovered_amount = 18
     }
-
+    naval_exit_id = 3087
 }
 STATE_THE_CRIMSON_MORASS = {
     id = 4255
@@ -645,7 +645,7 @@ STATE_THE_CRIMSON_MORASS = {
         type = "bg_rubber"
         undiscovered_amount = 9
     }
-
+    naval_exit_id = 3011
 }
 STATE_SOUTHERN_DRAIN = {
     id = 4256
@@ -667,7 +667,7 @@ STATE_SOUTHERN_DRAIN = {
         type = "bg_rubber"
         undiscovered_amount = 9
     }
-
+    naval_exit_id = 3087
 }
 STATE_AHORNAU = {
     id = 4258
@@ -689,7 +689,7 @@ STATE_AHORNAU = {
         type = "bg_rubber"
         undiscovered_amount = 19
     }
-
+    naval_exit_id = 3087
 }
 STATE_THE_WHITE = {
     id = 4259
@@ -732,7 +732,7 @@ STATE_NORTHERN_DRAIN = {
         type = "bg_rubber"
         undiscovered_amount = 14
     }
-
+    naval_exit_id = 3087
 }
 STATE_STEINZULO = {
     id = 4261
@@ -835,6 +835,7 @@ STATE_JOURNEYEND = {
     mine = xABFAC0
     port = xCCC278
 
+    naval_exit_id = 3087
 }
 STATE_CAM_RINNARA = {
     id = 4268
@@ -2241,6 +2242,7 @@ STATE_INTOKI = {
     mine = xA6DFBA
     port = xA78AE2
 
+    naval_exit_id = 3087
 }
 STATE_HANALLA = {
     id = 4408
@@ -2315,6 +2317,7 @@ STATE_SANGARI = {
     mine = x73F1C3
     port = x75C4BE
 
+    naval_exit_id = 3087
 }
 STATE_SUKONCO_2 = {
     id = 4413
@@ -2371,6 +2374,8 @@ STATE_HANALLA_3 = {
 STATE_SANGARI_3 = {
     id = 4421
     provinces = { "x75C4BE" "x7BCDE2" "x8AEFB4" "x92DCD6" "xABF2BB" "xC2EA53" "xC7C1D5" "xC9C8ED" "xDCF187" "xE3EA62" "xF2DD6F" }
+
+    naval_exit_id = 3087
 }
 STATE_HANALLA_4 = {
     id = 4422
@@ -2394,5 +2399,5 @@ STATE_PINCER_PENINSULA = {
         bg_logging = 8
         bg_fishing = 6
     }
-    naval_exit_id = 3051
+    naval_exit_id = 3087
 }
