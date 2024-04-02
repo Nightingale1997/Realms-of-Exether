@@ -364,7 +364,7 @@ STATE_SARANDOVA = {
     arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_tea_plantations" "bg_vineyard_plantations" }
     capped_resources = {
         bg_iron_mining = 24
-        bg_fishing = 15
+        bg_fishing_glowfish = 15
     }
     naval_exit_id = 3009
 }
@@ -381,7 +381,7 @@ STATE_TETOVAJA = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_tea_plantations" "bg_tobacco_plantations" }
     capped_resources = {
         bg_logging = 1
-        bg_fishing = 4
+        bg_fishing_glowfish = 4
     }
     naval_exit_id = 3009
 }
@@ -398,7 +398,7 @@ STATE_KAVAJANA = {
     capped_resources = {
         bg_iron_mining = 2
         bg_logging = 1
-        bg_fishing = 8
+        bg_fishing_glowfish = 8
     }
     naval_exit_id = 3083
 }
@@ -530,7 +530,7 @@ STATE_KRUSHEVA = {
     capped_resources = {
         bg_iron_mining = 7
         bg_logging = 8
-        bg_fishing = 7
+        bg_fishing_glowfish = 7
     }
     naval_exit_id = 3083
 }
@@ -547,7 +547,7 @@ STATE_DEBARIA = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_tea_plantations" "bg_tobacco_plantations" }
     capped_resources = {
         bg_logging = 1
-        bg_fishing = 4
+        bg_fishing_glowfish = 4
     }
     naval_exit_id = 3083
 }
@@ -788,7 +788,7 @@ STATE_XHAMADHANI = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_lead_mining = 4
-        bg_fishing = 9
+        bg_fishing_glowfish = 9
         bg_whaling = 5
     }
     naval_exit_id = 3064
@@ -806,7 +806,7 @@ STATE_KORCOVA = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_iron_mining = 6
-        bg_fishing = 9
+        bg_fishing_glowfish = 9
     }
     naval_exit_id = 3064
 }
@@ -845,7 +845,7 @@ STATE_MILOTI = {
     arable_land = 27
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_tea_plantations" "bg_tobacco_plantations" }
     capped_resources = {
-        bg_fishing = 8
+        bg_fishing_glowfish = 8
     }
     naval_exit_id = 3064
 }
