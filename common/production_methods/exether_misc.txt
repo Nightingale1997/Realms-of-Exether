@@ -7,33 +7,38 @@ pm_early_ironfish_harvesting = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -12
-			goods_output_iron_add = 9
+			goods_output_fish_add = -4
+			goods_output_iron_add = 3
 		}
 	}
-	possible = {
-		error_check = {
-			severity = fail
-			has_state_trait = state_trait_ironfish_fields
+}
+
+pm_organized_ironfish_harvesting = {
+	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods										
+			goods_output_fish_add = -8
+			goods_output_iron_add = 6
 		}
 	}
 }
 
 pm_dedicated_ironfish_harvesting = {
 	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
+
+	unlocking_technologies = {
+		electric_railway
+	}
+
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -25
-			goods_output_iron_add = 19
+			goods_output_fish_add = -13
+			goods_output_iron_add = 10
 		}
 	}
 	possible = {
-		error_check = {
-			severity = fail
-			has_state_trait = state_trait_ironfish_fields
-		}
-	}
 }
 
 pm_early_blubberfish_harvesting = {
@@ -41,31 +46,35 @@ pm_early_blubberfish_harvesting = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -12
-			goods_output_blubber_add = 9
+			goods_output_fish_add = -4
+			goods_output_blubber_add = 3
 		}
 	}
-	possible = {
-		error_check = {
-			severity = fail
-			has_state_trait = state_trait_blubberfish_fields
+}
+
+pm_organized_blubberfish_harvesting = {
+	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods										
+			goods_output_fish_add = -8
+			goods_output_blubber_add = 6
 		}
 	}
 }
 
 pm_dedicated_blubberfish_harvesting = {
 	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
+
+	unlocking_technologies = {
+		electric_railway
+	}
+
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -25
-			goods_output_blubber_add = 19
-		}
-	}
-	possible = {
-		error_check = {
-			severity = fail
-			has_state_trait = state_trait_blubberfish_fields
+			goods_output_fish_add = -13
+			goods_output_blubber_add = 10
 		}
 	}
 }
@@ -75,31 +84,35 @@ pm_early_glowfish_harvesting = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -12
-			goods_output_monster_essence_add = 9
+			goods_output_fish_add = -4
+			goods_output_monster_essence_add = 3
 		}
 	}
-	possible = {
-		error_check = {
-			severity = fail
-			has_state_trait = state_trait_glowfish_fields
+}
+
+pm_organized_glowfish_harvesting = {
+	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods										
+			goods_output_fish_add = -8
+			goods_output_monster_essence_add = 6
 		}
 	}
 }
 
 pm_dedicated_glowfish_harvesting = {
 	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
+
+	unlocking_technologies = {
+		electric_railway
+	}
+
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -25
-			goods_output_monster_essence_add = 19
-		}
-	}
-	possible = {
-		error_check = {
-			severity = fail
-			has_state_trait = state_trait_glowfish_fields
+			goods_output_fish_add = -13
+			goods_output_monster_essence_add = 10
 		}
 	}
 }
@@ -109,31 +122,35 @@ pm_early_rainbowfish_harvesting = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -12
-			goods_output_dyes_add = 9
+			goods_output_fish_add = -4
+			goods_output_dyes_add = 3
 		}
 	}
-	possible = {
-		error_check = {
-			severity = fail
-			has_state_trait = state_trait_rainbowfish_fields
+}
+
+pm_organized_rainbowfish_harvesting = {
+	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods										
+			goods_output_fish_add = -8
+			goods_output_dyes_add = 6
 		}
 	}
 }
 
 pm_dedicated_rainbowfish_harvesting = {
 	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
+
+	unlocking_technologies = {
+		electric_railway
+	}
+
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -25
-			goods_output_dyes_add = 19
-		}
-	}
-	possible = {
-		error_check = {
-			severity = fail
-			has_state_trait = state_trait_rainbowfish_fields
+			goods_output_fish_add = -13
+			goods_output_dyes_add = 10
 		}
 	}
 }
@@ -144,30 +161,29 @@ pm_early_goldfish_harvesting = {
 		workforce_scaled = {
 			# output goods										
 			goods_output_fish_add = -12
-			goods_output_dyes_add = 9
-		}
-	}
-	possible = {
-		error_check = {
-			severity = fail
-			has_state_trait = state_trait_rainbowfish_fields
+			goods_output_gold_add = 5
 		}
 	}
 }
 
-pm_dedicated_goldfish_harvesting = {
+pm_organized_goldfish_harvesting = {
 	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
+
+	unlocking_technologies = {
+		electric_railway
+	}
+
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
 			goods_output_fish_add = -25
-			goods_output_dyes_add = 19
+			goods_output_gold_add = 10
 		}
 	}
 	possible = {
 		error_check = {
 			severity = fail
-			has_state_trait = state_trait_rainbowfish_fields
+			has_state_trait = state_trait_goldfish_fields
 		}
 	}
 }
