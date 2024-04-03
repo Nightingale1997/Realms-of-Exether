@@ -302,14 +302,14 @@ is_arid_region = {
 	}
 }
 
-state_has_mountain = {  #you were cheating.  I think I fixed it.
-any_province = { 
-	has_terrain = mountain 
+state_has_mountain = {
+	OR = {
+		#has_state_trait = state_trait_rhine_river
+		always = yes
 	}
 }
 
-
-exether_is_coastal = {  #this is so based.  waow
+exether_is_coastal = {
 	any_neighbouring_state = {
 		OR = {
 			state_region = s:STATE_SHIPSHATTER_REEF
