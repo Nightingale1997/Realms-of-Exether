@@ -384,7 +384,7 @@
 			size = 1004
 		}
 		create_pop = {
-			culture = lomarash
+			culture = tskharvani
 			size = 94996
 		}
 		create_pop = {
@@ -597,7 +597,21 @@
   }
 
   s:STATE_NABARR = {
-
+	region_state:OKH = {
+		create_pop = {
+			culture = tskharvani
+			size = 891604
+		}
+		create_pop = {
+			culture = lomarash
+			size = 120000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = saglithan
+			size = 30000
+		}
+	}
   }
 
   s:STATE_SORGINAK = {
@@ -615,7 +629,7 @@
 			size = 1004
 		}
 		create_pop = {
-			culture = saglithan
+			culture = tskharvani
 			size = 36000
 		}
 		create_pop = {
@@ -637,7 +651,7 @@
 			size = 1004
 		}
 		create_pop = {
-			culture = saglithan
+			culture = tskharvani
 			size = 79996
 		}
 		create_pop = {
@@ -649,7 +663,21 @@
   }
 
   s:STATE_GIPUZK = {
-
+	region_state:OKH = {
+		create_pop = {
+			culture = tskharvani
+			size = 235800
+		}
+		create_pop = {
+			culture = lomarash
+			size = 88400
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = saglithan
+			size = 20208
+		}
+	}
   }
 
   s:STATE_TIHAR = {
@@ -659,7 +687,7 @@
 			size = 416996
 		}
 		create_pop = {
-			culture = saglithan
+			culture = tskharvani
 			size = 36000
 		}
 		create_pop = {
@@ -671,7 +699,21 @@
   }
 
   s:STATE_ARROLA = {
-
+	region_state:OKH = {
+		create_pop = {
+			culture = tskharvani
+			size = 1662796
+		}
+		create_pop = {
+			culture = lomarash
+			size = 378400
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = saglithan
+			size = 50000
+		}
+	}
   }
 
   s:STATE_OSTATU = {
@@ -688,9 +730,14 @@
 			culture = illvasaari
 			size = 5996
 		}
+
+		create_pop = {
+			culture = tskharvani
+			size = 22887
+		}
 		create_pop = {
 			culture = saglithan
-			size = 37887
+			size = 17887
 			pop_type = slaves
 		}
 	}
