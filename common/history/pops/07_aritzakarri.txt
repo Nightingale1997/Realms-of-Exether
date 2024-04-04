@@ -282,11 +282,29 @@
   }
 
   s:STATE_GORRIMENDIA = {
-
+	region_state:LUR = {
+		create_pop = {
+			culture = cliffpercher
+			size = 224000
+		}
+		create_pop = {
+			culture = sandcircler
+			size = 64000
+		}
+	}
   }
 
   s:STATE_ERDIGARA = {
-
+	region_state:LUR = {
+		create_pop = {
+			culture = cliffpercher
+			size = 385204
+		}
+		create_pop = {
+			culture = sandcircler
+			size = 3000
+		}
+	}
   }
 
   s:STATE_ARTEAGA = {
