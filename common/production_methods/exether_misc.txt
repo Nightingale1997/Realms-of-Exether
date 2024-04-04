@@ -186,3 +186,46 @@ pm_organized_goldfish_harvesting = {
 		}
 	}
 }
+#Construction
+
+pm_early_wishstone_constructed_buildings = {  #not sure if we want a magic construction option this early
+	texture = "gfx/interface/icons/production_method_icons/iron_frame_buildings.dds"
+	
+	unlocking_technologies = {
+		atmospheric_engine  #maybe change
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 5.6 
+		}
+
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_wood_add = 40
+			goods_input_fabric_add = 20
+			goods_input_iron_add = 50
+			goods_input_gizmos_add = 10
+			goods_input_wishstone_add = 2
+			goods_input_tools_add = 3
+		}
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 500
+			building_employment_clerks_add = 500
+			building_employment_machinists_add = 250
+			building_employment_wizards_add = 250
+			building_employment_laborers_add = 3500
+		}
+		unscaled = {
+			building_laborers_mortality_mult = 0.20
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.0056
+		}	
+	}
+}

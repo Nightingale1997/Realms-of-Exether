@@ -489,7 +489,7 @@ STATE_KOTHIAN = {
     id = 4027
     subsistence_building = "building_subsistence_farms"
     provinces = { "x27FEE2" "x6CEAB3" "x83E0C6" "x8FDB91" "xA0FCB9" "xCC76DD" "xD2DCF8" "xD4C2E0" "xDAFC8F" "xF9D938" }
-    impassable = {  "x6CEAB3" }
+    impassable = { "x6CEAB3" }
     traits = { "state_trait_ambalt_rise" }
     city = x27FEE2
     wood = x6CEAB3
@@ -519,7 +519,7 @@ STATE_DRAGONBANE_TUNDRA = {
 }
 STATE_WYRMBONE_CLIFFS = {
     id = 4029
-    traits = { "state_trait_everfrost_terrain" "state_trait_birstall_range"}
+    traits = { "state_trait_everfrost_terrain" "state_trait_birstall_range" }
     subsistence_building = "building_subsistence_pastures"
     provinces = { "x2CF1F4" "x4ACEE4" "x69CFEC" "x6FDFB4" "x70C9CD" "x76DDBF" "x85D0C8" "x90A2C8" "x9FD4C1" "xA4F0BF" "xADCDBD" "xB4DFA5" "xB883C7" "xB8A2E7" "xB8D575" "xBAD47E" "xBEB3B4" "xBEED82" "xC7B4E0" "xCC55E0" "xD47AD2" "xD4F0ED" "xD58ADF" "xD5C6F6" "xDAF449" "xDBDE44" "xE1D2DA" "xE2F4DE" "xE4C5A3" "xE7D0AD" "xE8B292" "xEAC084" "xEBA06A" "xED72E7" "xF071BD" "xF0A7BA" "xF17FF1" "xF4A989" "xF4C6A0" "xF5BFBE" "xF670FD" "xF7CDED" "xF7ED15" "xF839F7" "xF9FEB6" "xFCE255" "xFDFA88" }
     impassable = { "x2CF1F4" "x4ACEE4" "x69CFEC" "x6FDFB4" "x70C9CD" "x90A2C8" "x9FD4C1" "xA4F0BF" "xADCDBD" "xB4DFA5" "xBAD47E" "xBEED82" "xC7B4E0" "xD47AD2" "xD5C6F6" "xDBDE44" "xE1D2DA" "xE2F4DE" "xE4C5A3" "xE7D0AD" "xE8B292" "xEBA06A" "xF071BD" "xF0A7BA" "xF17FF1" "xF4A989" "xF5BFBE" "xF670FD" "xF7CDED" "xF7ED15" "xF839F7" "xF9FEB6" "xFCE255" "xFDFA88" }
@@ -1800,7 +1800,7 @@ STATE_SOLVIK = {
 }
 STATE_FRIGGASVEIT = {
     id = 4118
-    traits = { "state_trait_everfrost_terrain" "state_trait_birstall_range"}
+    traits = { "state_trait_everfrost_terrain" "state_trait_birstall_range" }
     subsistence_building = "building_subsistence_fishing_villages"
     provinces = { "x71A1EF" "x78ECC6" "x92C5B0" "x92D9D9" "x94BED9" "x96F094" "xA196F9" "xA6F267" "xB0A6A5" "xBAF0D6" "xBCF86B" "xC6FC7D" "xCBC58D" "xCCBCC8" "xD65FD3" "xDAED51" "xDCAE8A" "xDCBF62" "xDDF2E6" "xDE86BC" "xE08DC6" "xE9EF4E" "xF0F6EC" "xF0FC62" "xF35FFA" "xF5AEE2" "xF86DB9" "xFC29D9" "xFC8F97" "xFCC6CC" }
     impassable = { "xA196F9" "xFC29D9" "x92D9D9" "xF0F6EC" "x94BED9" "xDAED51" "xDE86BC" "xDCBF62" "x71A1EF" "xF86DB9" "xE08DC6" "xFCC6CC" }

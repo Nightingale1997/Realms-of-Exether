@@ -12,7 +12,7 @@ pm_farms_basic_earth_shaping = {
 	building_modifiers = {
 		workforce_scaled = {
 			#input goods
-			goods_input_wishstone_add = 3
+			goods_input_wishstone_add = 2
 			goods_output_grain_add = 3
 		}
 
@@ -42,7 +42,7 @@ pm_farms_mass_plant_growth = {  #could also be "hastened growth cycles"
 	building_modifiers = {
 		workforce_scaled = {
 			#input goods
-			goods_input_wishstone_add = 5
+			goods_input_wishstone_add = 4
 			goods_output_grain_add = 6
 		}
 
@@ -72,7 +72,7 @@ pm_rice_farms_basic_earth_shaping = {
 	building_modifiers = {
 		workforce_scaled = {
 			#input goods
-			goods_input_wishstone_add = 6
+			goods_input_wishstone_add = 4
 			goods_output_grain_add = 6
 		}
 
@@ -102,7 +102,7 @@ pm_rice_farms_mass_plant_growth = {  #could also be "hastened growth cycles"
 	building_modifiers = {
 		workforce_scaled = {
 			#input goods
-			goods_input_wishstone_add = 10
+			goods_input_wishstone_add = 7
 			goods_output_grain_add = 12
 		}
 
@@ -174,6 +174,68 @@ pm_livestock_magical_selection = {  #magical selection is a METAL fucking name o
 		unscaled = {
 			#building modifiers
 			building_throughput_add = 0.3
+		}
+	}
+}
+
+pm_seedshooters = {
+	texture = "gfx/interface/icons/production_method_icons/harvesting_tools.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 5 #magic
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_gizmos_add = 3
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -1000
+		}
+	}
+}
+
+pm_seedspinners = {
+	texture = "gfx/interface/icons/production_method_icons/tractors.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 15 #magic
+		}
+	}
+
+	unlocking_technologies = {
+		threshing_machine #maybe later
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods								
+			goods_input_wishstone_add = 4 
+			goods_input_gizmos_add = 3
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -2500
+			building_employment_engineers_add = 500
+		}
+	}
+}
+
+pm_ricerooters = {
+	texture = "gfx/interface/icons/production_method_icons/harvesting_tools.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_gizmos_add = 6
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -2000
 		}
 	}
 }
