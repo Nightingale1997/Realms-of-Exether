@@ -1314,6 +1314,13 @@ STATE_SHANAKONG = {
     farm = x77E6A1
     mine = x7DB3EA
     port = x8ECAB8
+	arable_land = 82
+    arable_resources = { "bg_livestock_ranches" "bg_millet_farms" }
+     capped_resources = {
+        bg_cloud_collecting = 10
+		bg_logging = 2
+        bg_coal_mining = 30
+    }
     naval_exit_id = 3064
 }
 STATE_YAZHINAVA = {

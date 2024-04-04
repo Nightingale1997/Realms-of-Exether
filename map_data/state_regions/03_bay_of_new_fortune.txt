@@ -248,7 +248,6 @@ STATE_MAWIMBIMAJI = {
         bg_sulfur_mining = 12
     }
     naval_exit_id = 3065
-
 }
 STATE_MLIMASHWARI = {
     id = 4464
@@ -260,7 +259,13 @@ STATE_MLIMASHWARI = {
     farm = x92D1F2
     mine = xA4EB84
     port = xC678D9
-
+	arable_land = 32
+    arable_resources = { "bg_livestock_ranches" "bg_millet_farms" }
+     capped_resources = {
+        bg_cloud_collecting = 15
+        bg_iron_mining = 25
+		bg_logging = 4
+    }
 }
 STATE_UZURIKILIMA = {
     id = 4465

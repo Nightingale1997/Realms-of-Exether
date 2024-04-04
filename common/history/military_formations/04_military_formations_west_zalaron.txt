@@ -1,0 +1,25 @@
+﻿MILITARY_FORMATIONS = {
+	c:THK = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_embervein_arroyo
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_SHANAKONG
+				count = 20
+			}
+
+			save_scope_as = thk_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_embervein_arroyo
+			save_scope_as = thk_general
+		}
+		scope:thk_general = {
+			transfer_to_formation = scope:thk_army
+		}
+	}
+}

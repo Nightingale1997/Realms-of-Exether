@@ -1,0 +1,25 @@
+﻿MILITARY_FORMATIONS = {
+	c:PRO = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_hyena_plains
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_MAWIMBIMAJI
+				count = 5
+			}
+
+			save_scope_as = pro_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_hyena_plains
+			save_scope_as = pro_general
+		}
+		scope:pro_general = {
+			transfer_to_formation = scope:pro_army
+		}
+	}
+}
