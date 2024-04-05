@@ -809,10 +809,12 @@ STATE_BALATHOUL = {
     port = xDC9A96
     arable_land = 21
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
-    bg_wishstone_mining = 8
-    bg_logging = 5
-    bg_squidding = 6
-    bg_fishing_squidlets = 9
+    capped_resources = {
+        bg_wishstone_mining = 8
+        bg_logging = 5
+        bg_squidding = 6
+        bg_fishing_squidlets = 9
+    }
     naval_exit_id = 3039
 }
 STATE_LIGHTSCOURGE = {
@@ -1152,12 +1154,14 @@ STATE_ALLTGLAS = {
     port = xE579CC
     arable_land = 15
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
-    bg_coal_mining = 19
-    bg_iron_mining = 8
-    bg_wishstone_mining_depletable = 3
-    bg_logging = 6
-    bg_squidding = 7
-    bg_fishing_squidlets = 7
+    capped_resources = {
+        bg_coal_mining = 19
+        bg_iron_mining = 8
+        bg_wishstone_mining_depletable = 3
+        bg_logging = 6
+        bg_squidding = 7
+        bg_fishing_squidlets = 7
+    }
     naval_exit_id = 3039
 }
 STATE_HAFODFAN = {
