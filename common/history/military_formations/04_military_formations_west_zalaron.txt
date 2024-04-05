@@ -22,4 +22,32 @@
 			transfer_to_formation = scope:thk_army
 		}
 	}
+	c:TSH = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_embervein_arroyo
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_DIYINAKHAD
+				count = 18
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_DIYINAKHAD
+				count = 6
+			}
+
+			save_scope_as = tsh_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_embervein_arroyo
+			save_scope_as = tsh_general
+		}
+		scope:tsh_general = {
+			transfer_to_formation = scope:tsh_army
+		}
+	}
 }
