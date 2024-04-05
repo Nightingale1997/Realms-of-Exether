@@ -821,7 +821,20 @@
 
 
     s:STATE_BALATHOUL = {
-
+      region_state:BFU = {
+        create_pop = {
+          culture = glethach
+          size = 364796
+        }
+        create_pop = {
+          culture = grendleth
+          size = 66738
+        }
+        create_pop = {
+          culture = yanger
+          size = 26630
+        }
+      }
   }
 
 
@@ -831,8 +844,21 @@
 
 
     s:STATE_KINGOUR = {
-
-  }
+      region_state:RIS = {
+      create_pop = {
+        culture = glethach
+        size = 484796
+      }
+      create_pop = {
+        culture = grendleth
+        size = 76738
+      }
+      create_pop = {
+        culture = dumonian
+        size = 16630
+      }
+   }
+ }
 
 
     s:STATE_MALINMORE = {
@@ -1100,6 +1126,17 @@
   }
 
     s:STATE_ALLTGLAS = {
+      region_state:WHM = {
+        create_pop = {
+          culture = grendleth
+          size = 275777
+        }
+        create_pop = {
+          culture = glethach
+          size = 58058
+        }
+
+      }
 
   }
 

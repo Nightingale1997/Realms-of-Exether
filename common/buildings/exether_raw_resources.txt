@@ -291,15 +291,15 @@ building_fishing_wharf_glowfish = {
 	}
 }
 
-building_fishing_wharf_rainbowfish = {
-	building_group = bg_fishing_rainbowfish
+building_fishing_wharf_squidlets = {
+	building_group = bg_fishing_squidlets
 	texture = "gfx/interface/icons/building_icons/fishing_wharf.dds"
 	city_type = port
 	required_construction = construction_cost_low
 
 	production_method_groups = {
 		pmg_base_building_fishing_wharf
-		pmg_rainbowfish
+		pmg_squidlets
 		pmg_refrigeration_building_fishing_wharf
 		pmg_ownership_capital_building_fishing_wharf
 	}
