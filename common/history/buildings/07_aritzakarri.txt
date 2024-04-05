@@ -238,11 +238,55 @@
   }
 
   s:STATE_GORRIMENDIA = {
-
+	region_state:LUR={
+		create_building={
+			building="building_tobacco_plantation"
+			level=1
+			reserves=1
+			activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+		}
+		create_building={
+			building="building_banana_plantation"
+			level=1
+			reserves=1
+			activate_production_methods={ "default_building_banana_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+		}
+		create_building={
+			building="building_barracks"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_no_organization" }
+		}
+	}
   }
 
   s:STATE_ERDIGARA = {
-
+	region_state:LUR={
+		create_building={
+			building="building_maize_farm"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled" "pm_privately_owned" }
+		}
+		create_building={
+			building="building_fishing_wharf"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+		}
+		create_building={
+			building="building_port"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_anchorage" }
+		}
+		create_building={
+			building="building_barracks"
+			level=2
+			reserves=1
+			activate_production_methods={ "pm_no_organization" }
+		}
+	}
   }
 
   s:STATE_ARTEAGA = {
@@ -401,19 +445,113 @@
   }
 
   s:STATE_ASTINDU = {
-
+	region_state:BRJ={
+		create_building={
+			building="building_government_administration"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_simple_organization" "pm_professional_bureaucrats" "pm_secular_bureaucrats" }
+		}
+		create_building={
+			building="building_textile_mills"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_traditional_looms" "pm_merchant_guilds_building_textile_mills" }
+		}
+		create_building={
+			building="building_maize_farm"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled" "pm_privately_owned" }
+		}
+		create_building={
+			building="building_livestock_ranch"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_open_air_stockyards" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+		}
+		create_building={
+			building="building_barracks"
+			level=2
+			reserves=1
+			activate_production_methods={ "pm_no_organization" }
+		}
+	}
   }
 
   s:STATE_ITXAROPEN = {
-
+	region_state:BRJ={
+		create_building={
+			building="building_government_administration"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_simple_organization" "pm_professional_bureaucrats" "pm_secular_bureaucrats" }
+		}
+		create_building={
+			building="building_maize_farm"
+			level=2
+			reserves=1
+			activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled" "pm_privately_owned" }
+		}
+		create_building={
+			building="building_livestock_ranch"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_open_air_stockyards" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+		}
+		create_building={
+			building="building_barracks"
+			level=2
+			reserves=1
+			activate_production_methods={ "pm_no_organization" }
+		}
+		create_building={
+			building="building_port"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_basic_port" }
+		}
+	}
   }
 
   s:STATE_EGUZKI = {
-
+	region_state:BRJ={
+		create_building={
+			building="building_banana_plantation"
+			level=1
+			reserves=1
+			activate_production_methods={ "default_building_banana_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+		}
+		create_building={
+			building="building_sugar_plantation"
+			level=1
+			reserves=1
+			activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+		}
+	}
   }
 
   s:STATE_MENDIBURU = {
-
+	region_state:BRJ={
+		create_building={
+			building="building_dye_plantation"
+			level=1
+			reserves=1
+			activate_production_methods={ "default_building_dye_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+		}
+		create_building={
+			building="building_banana_plantation"
+			level=1
+			reserves=1
+			activate_production_methods={ "default_building_banana_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+		}
+		create_building={
+			building="building_port"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_basic_port" }
+		}
+	}
   }
 
   s:STATE_URRIKO = {
@@ -561,7 +699,32 @@
   }
 
   s:STATE_NABARR = {
-
+	region_state:OKH={
+		create_building={
+			building="building_sugar_plantation"
+			level=3
+			reserves=1
+			activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+		}
+		create_building={
+			building="building_tobacco_plantation"
+			level=3
+			reserves=1
+			activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+		}
+		create_building={
+			building="building_fishing_wharf"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+		}
+		create_building={
+			building="building_barracks"
+			level=5
+			reserves=1
+			activate_production_methods={ "pm_no_organization" }
+		}
+	}
   }
 
   s:STATE_SORGINAK = {
@@ -627,7 +790,14 @@
   }
 
   s:STATE_GIPUZK = {
-
+	region_state:OKH={
+		create_building={
+			building="building_rice_farm"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_simple_farming_building_rice_farm" "pm_no_secondary" "pm_tools_disabled" "pm_privately_owned" }
+		}
+	}
   }
 
   s:STATE_TIHAR = {
@@ -666,7 +836,50 @@
   }
 
   s:STATE_ARROLA = {
-
+	region_state:OKH={
+		create_building={
+			building="building_government_administration"
+			level=4
+			reserves=1
+			activate_production_methods={ "pm_simple_organization" "pm_religious_bureaucrats" "pm_professional_bureaucrats" }
+		}
+		create_building={
+			building="building_rice_farm"
+			level=10
+			reserves=1
+			activate_production_methods={ "pm_simple_farming_building_rice_farm" "pm_no_secondary" "pm_tools_disabled" "pm_privately_owned" }
+		}
+		create_building={
+			building="building_sugar_plantation"
+			level=4
+			reserves=1
+			activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+		}
+		create_building={
+			building="building_tobacco_plantation"
+			level=5
+			reserves=1
+			activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+		}
+		create_building={
+			building="building_fishing_wharf"
+			level=2
+			reserves=1
+			activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+		}
+		create_building={
+			building="building_barracks"
+			level=10
+			reserves=1
+			activate_production_methods={ "pm_no_organization" }
+		}
+		create_building={
+			building="building_port"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_basic_port" }
+		}
+	}
   }
 
   s:STATE_OSTATU = {
@@ -725,7 +938,26 @@
   }
 
   s:STATE_LARRIN = {
-
+	region_state:BRJ={
+		create_building={
+			building="building_coffee_plantation"
+			level=1
+			reserves=1
+			activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+		}
+		create_building={
+			building="building_barracks"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_no_organization" }
+		}
+		create_building={
+			building="building_port"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_basic_port" }
+		}
+	}
   }
 
   s:STATE_IBAIA = {
