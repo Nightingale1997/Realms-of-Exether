@@ -581,7 +581,7 @@ STATE_ELDBERG = {
     subsistence_building = "building_subsistence_fishing_villages"
     provinces = { "x3EDCE3" "x9BB2C9" "xA6EE91" "xC3FEA6" "xC4F57D" "xE1FC52" "xEAF6A0" "xF1CBCE" "xFEF389" }
     impassable = { "xC4F57D" }
-    traits = { "state_trait_mount_gladraine" }
+    traits = { "state_trait_mount_gladraine" "state_trait_squid_breeding_grounds" }
     city = x3EDCE3
     wood = x9BB2C9
     farm = xA6EE91
@@ -592,7 +592,8 @@ STATE_ELDBERG = {
     capped_resources = {
         bg_sulfur_mining = 20
         bg_whaling = 5
-        bg_fishing = 3
+        bg_squidding = 4
+        bg_fishing_squidlets = 3
     }
     naval_exit_id = 3022
 }
@@ -798,7 +799,7 @@ STATE_GLASLIESH = {
 }
 STATE_BALATHOUL = {
     id = 4046
-    traits = { "state_trait_everfrost_terrain" }
+    traits = { "state_trait_everfrost_terrain" "state_trait_squid_breeding_grounds" }
     subsistence_building = "building_subsistence_fishing_villages"
     provinces = { "x4CB4F9" "x53BCFC" "x81BBCF" "x8CE5E1" "x8DDEEB" "x99E7BD" "x9A93D1" "xACF66B" "xDC9A96" "xDDE46F" "xEC41D3" "xF2DFD1" "xFDA0FC" }
     city = x53BCFC
@@ -806,6 +807,14 @@ STATE_BALATHOUL = {
     farm = x8DDEEB
     mine = x9A93D1
     port = xDC9A96
+    arable_land = 21
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_wishstone_mining = 8
+        bg_logging = 5
+        bg_squidding = 6
+        bg_fishing_squidlets = 9
+    }
     naval_exit_id = 3039
 }
 STATE_LIGHTSCOURGE = {
@@ -822,7 +831,7 @@ STATE_LIGHTSCOURGE = {
 }
 STATE_KINGOUR = {
     id = 4048
-    traits = { "state_trait_everfrost_terrain" }
+    traits = { "state_trait_everfrost_terrain" "state_trait_squid_breeding_grounds" }
     subsistence_building = "building_subsistence_fishing_villages"
     provinces = { "x5DC9E3" "x62AFE5" "x82F8FE" "x87B8FE" "x92BEF1" "xA9C5B6" "xBADA9D" "xD6F6F7" "xD9EE32" "xEFD285" "xF086ED" }
     city = x5DC9E3
@@ -830,6 +839,14 @@ STATE_KINGOUR = {
     farm = x82F8FE
     mine = x87B8FE
     port = x92BEF1
+    arable_land = 26
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 8
+        bg_wishstone_mining = 8
+        bg_squidding = 6
+        bg_fishing_squidlets = 7
+    }
     naval_exit_id = 3039
 }
 STATE_MALINMORE = {
@@ -947,7 +964,7 @@ STATE_DUNMAFAR = {
     subsistence_building = "building_subsistence_farms"
     provinces = { "x3CCAFA" "x61F9B2" "x74FBB6" "xAAA4E2" "xAFFAA9" "xCCDEC0" "xDAC2AB" "xEBA0BC" }
     impassable = { "xAAA4E2" "x61F9B2" "xCCDEC0" }
-    traits = { "state_trait_mammoth_cliffs" }
+    traits = { "state_trait_mammoth_cliffs" "state_trait_squid_breeding_grounds" }
     city = x3CCAFA
     wood = x42EFFB
     farm = x61F9B2
@@ -1129,12 +1146,22 @@ STATE_ALLTGLAS = {
     subsistence_building = "building_subsistence_fishing_villages"
     provinces = { "x42E0D4" "x8CEAB2" "xA5E891" "xBEA9EF" "xBF9DF7" "xBFC18E" "xD262ED" "xE579CC" "xE99CC7" "xF554F6" "xFDDCBB" }
     impassable = { "xBF9DF7" "xBFC18E" }
-    traits = { "state_trait_mammoth_cliffs" }
+    traits = { "state_trait_mammoth_cliffs" "state_trait_squid_breeding_grounds" }
     city = x42E0D4
     wood = xBEA9EF
     farm = xBF9DF7
     mine = xBFC18E
     port = xE579CC
+    arable_land = 15
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 19
+        bg_iron_mining = 8
+        bg_wishstone_mining_depletable = 3
+        bg_logging = 6
+        bg_squidding = 7
+        bg_fishing_squidlets = 7
+    }
     naval_exit_id = 3039
 }
 STATE_HAFODFAN = {
@@ -1321,6 +1348,7 @@ STATE_TYMANS_FOLLY = {
 }
 STATE_HJELTIAS_GLACIER = {
     id = 4084
+    traits = { "state_trait_everfrost_terrain" "state_trait_squid_breeding_grounds" }
     subsistence_building = "building_subsistence_fishing_villages"
     provinces = { "x5FB0F5" "x87B4FA" "x87E5DC" "x91F57B" "xA0BBCE" "xAE81F7" "xBEDBC1" "xC5A9AC" "xD2AD96" "xE998C3" "xEBBE92" "xEFEFE7" "xF447D2" }
     city = x5FB0F5
@@ -1328,6 +1356,13 @@ STATE_HJELTIAS_GLACIER = {
     farm = x87E5DC
     mine = x91F57B
     port = xA0BBCE
+    arable_land = 23
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    bg_coal_mining = 19
+    bg_logging = 5
+    bg_squidding = 6
+    bg_fishing_squidlets = 9
+
     naval_exit_id = 3039
 }
 STATE_NORDFJALL = {
@@ -1670,7 +1705,7 @@ STATE_ANGERTORP = {
 }
 STATE_RAGNARKULL = {
     id = 4108
-    traits = { "state_trait_everfrost_terrain" }
+    traits = { "state_trait_everfrost_terrain" "state_trait_squid_breeding_grounds" }
     subsistence_building = "building_subsistence_fishing_villages"
     provinces = { "x3CCCEF" "x4FD3EA" "x51E7CD" "x54D2E4" "x66FBC7" "x7CB8E2" "xA4A6CD" "xBEADE2" "xDBA4F6" "xE2ECF3" "xE4CC78" "xEBAA9F" "xFDEB48" "xFED353" }
     impassable = { "x66FBC7" "xE4CC78" "x4FD3EA" "x7CB8E2" "xFDEB48" }
@@ -1685,7 +1720,8 @@ STATE_RAGNARKULL = {
         bg_coal_mining = 36
         bg_logging = 13
         bg_whaling = 3
-        bg_fishing = 9
+        bg_squidding = 5
+        bg_fishing_squidlets = 9
     }
     resource = {
         type = "bg_gold_fields"
@@ -1813,7 +1849,7 @@ STATE_FRIGGASVEIT = {
 }
 STATE_HERVIK = {
     id = 4119
-    traits = { "state_trait_everfrost_terrain" }
+    traits = { "state_trait_everfrost_terrain" "state_trait_squid_breeding_grounds" }
     subsistence_building = "building_subsistence_fishing_villages"
     provinces = { "x5BD0CB" "x62AEE9" "x7BEFD7" "x97CFBF" "xAEF6B3" "xB0F950" "xB9F2FE" "xBFADA9" "xD0C7A7" "xD568D9" "xDC73B6" "xDC75F1" "xE16DD3" "xE1D87F" "xE3EFC7" "xE652D5" "xE8D870" "xECFCB2" "xEDEDA0" "xF2FB13" "xF51AFB" "xFBE8B0" }
     impassable = { "x5BD0CB" "xAEF6B3" "xB9F2FE" "xFBE8B0" "xE3EFC7" "xD568D9" "xECFCB2" "x7BEFD7" }
@@ -1826,6 +1862,8 @@ STATE_HERVIK = {
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 13
+        bg_squidding = 4
+        bg_fishing_squidlets = 3
     }
     naval_exit_id = 3039
 }
@@ -1910,11 +1948,18 @@ STATE_GRYTINGARIK = {
     subsistence_building = "building_subsistence_fishing_villages"
     provinces = { "x8695EB" "x87BBE9" "xA6C7DA" "xC4B5CE" "xD8D75D" "xE884A5" }
     impassable = { "x8695EB" "x87BBE9" "xD8D75D" }
-    traits = { "state_trait_whistling_summits" }
+    traits = { "state_trait_whistling_summits" "state_trait_squid_breeding_grounds" }
     city = xA6C7DA
     wood = x87BBE9
     farm = xD8D75D
     mine = xC4B5CE
     port = xE884A5
+    arable_land = 13
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 4
+        bg_coal_mining = 14
+        bg_fishing_squidlets = 5
+    }
     naval_exit_id = 3039
 }
