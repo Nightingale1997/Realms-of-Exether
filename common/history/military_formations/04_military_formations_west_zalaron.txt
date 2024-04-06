@@ -50,4 +50,32 @@
 			transfer_to_formation = scope:tsh_army
 		}
 	}
+	c:HOZ = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_rust_gorge
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_THAGHIZHI
+				count = 26
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_THAGHIZHI
+				count = 4
+			}
+
+			save_scope_as = hoz_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_rust_gorge
+			save_scope_as = hoz_general
+		}
+		scope:hoz_general = {
+			transfer_to_formation = scope:hoz_army
+		}
+	}
 }

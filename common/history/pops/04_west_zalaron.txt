@@ -1467,7 +1467,25 @@
 	}
   }
   s:STATE_NAKOKAIN = {
-
+	region_state:HOZ = {
+		create_pop = {
+			culture = kaalkid
+			size = 154982
+		}
+		create_pop = {
+			culture = duneshar
+			size = 1500
+		}
+		create_pop = {
+			culture = west_thalorian
+			size = 2512
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = west_thalorian
+			size = 1320
+		}
+	}
   }
   s:STATE_DINASHIN = {
 
@@ -1494,13 +1512,65 @@
 	}
   }
   s:STATE_NAVOYAZH = {
-
+	region_state:HOZ = {
+		create_pop = {
+			culture = kaalkid
+			size = 384820
+		}
+		create_pop = {
+			culture = west_thalorian
+			size = 3264
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = west_thalorian
+			size = 5000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = kaalkid
+			size = 13300
+		}
+	}
   }
   s:STATE_SHINAKHAD = {
-
+	region_state:HOZ = {
+		create_pop = {
+			culture = kaalkid
+			size = 125492
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = west_thalorian
+			size = 2000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = kaalkid
+			size = 2000
+		}
+	}
   }
   s:STATE_THAGHIZHI = {
-
+	region_state:HOZ = {
+		create_pop = {
+			culture = kaalkid
+			size = 354651
+		}
+		create_pop = {
+			culture = dunaq
+			size = 1205
+		}
+		create_pop = {
+			culture = lake_thalorian
+			size = 4512
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = lake_thalorian
+			size = 6500
+		}
+	}
   }
   s:STATE_KLINGELMEER = {
 	region_state:RAV = {

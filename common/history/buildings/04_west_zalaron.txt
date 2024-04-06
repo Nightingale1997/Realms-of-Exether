@@ -1573,6 +1573,18 @@
   }
   s:STATE_YAZHIDZI = {
 	region_state:HOZ={
+		create_building={
+			building="building_vineyard_plantation"
+			level=1
+			reserves=1
+			activate_production_methods={ "default_building_vineyard_plantation" "pm_privately_owned_plantation" }
+		}
+		create_building={
+			building="building_tobacco_plantation"
+			level=2
+			reserves=1
+			activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+		}
 	}
   }
   s:STATE_SHINOGOZH = {
@@ -1586,12 +1598,66 @@
 	}
   }
   s:STATE_NAKOKAIN = {
-
+	region_state:HOZ={
+		create_building={
+            building="building_livestock_ranch"
+            level=2
+            reserves=1
+            activate_production_methods={ "pm_sheep_farms" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+        }
+		create_building={
+			building="building_maize_farm"
+			level=2
+			reserves=1
+			activate_production_methods={ "pm_soil_enriching_farming" "pm_privately_owned" "pm_tools_disabled" "pm_citrus_orchards" }
+		}
+	}
   }
   s:STATE_DINASHIN = {
 
   }
   s:STATE_KEENAVAZH = {
+	region_state:HOZ={
+		create_building={
+			building="building_wheat_farm"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled" "pm_privately_owned" }
+		}
+		create_building={
+			building="building_silk_plantation"
+			level=1
+			reserves=1
+			activate_production_methods={ "default_building_silk_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+		}
+		create_building={
+			building="building_textile_mills"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_handsewn_clothes" "pm_craftsman_sewing" "pm_traditional_looms" "pm_privately_owned_building_textile_mills" }
+		}
+	}
+  }
+  s:STATE_NAVOYAZH = {
+	region_state:HOZ={
+		create_building={
+			building="building_logging_camp"
+			level=3
+			reserves=1
+			activate_production_methods={ "pm_simple_forestry" "pm_privately_owned_building_logging_camp" "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
+		}
+		create_building={
+			building="building_furniture_manufacturies"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_handcrafted_furniture" "pm_privately_owned_building_furniture_manufacturies" "pm_automation_disabled" "pm_luxury_furniture" }
+		}
+	}
+  }
+  s:STATE_SHINAKHAD = {
+
+  }
+  s:STATE_THAGHIZHI = {
 	region_state:HOZ={
 		create_building={
 			building="building_government_administration"
@@ -1600,27 +1666,18 @@
 			activate_production_methods={ "pm_simple_organization" "pm_professional_bureaucrats" "pm_religious_bureaucrats" }
 		}
 		create_building={
-			building="building_wheat_farm"
-			level=1
+			building="building_construction_sector"
+			level=2
 			reserves=1
-			activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled" "pm_privately_owned" }
+			activate_production_methods={ "pm_wooden_buildings" }
 		}
 		create_building={
-			building="building_barracks"
-			level=5
+			building="building_logging_camp"
+			level=2
 			reserves=1
-			activate_production_methods={ "pm_no_organization" }
+			activate_production_methods={ "pm_simple_forestry" "pm_privately_owned_building_logging_camp" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
 		}
 	}
-  }
-  s:STATE_NAVOYAZH = {
-
-  }
-  s:STATE_SHINAKHAD = {
-
-  }
-  s:STATE_THAGHIZHI = {
-
   }
   s:STATE_KLINGELMEER = {
 	region_state:RAV={

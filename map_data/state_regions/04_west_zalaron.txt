@@ -1503,8 +1503,8 @@ STATE_YAZHIDZI = {
     farm = x97A1D5
     mine = x9BCAF4
     port = x9DF09B
-    arable_land = 300
-    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_vineyard_plantations" }
+    arable_land = 112
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_vineyard_plantations" "bg_tobacco_plantations" }
     capped_resources = {
         bg_iron_mining = 33
         bg_sulfur_mining = 40
@@ -1535,6 +1535,7 @@ STATE_SHINOGOZH = {
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
 		bg_iron_mining = 20
+		bg_wishstone_mining = 30
     }
     naval_exit_id = 3064
 }
@@ -1548,6 +1549,13 @@ STATE_NAKOKAIN = {
     farm = x86EDA0
     mine = x91E49B
     port = xA2F2EC
+	arable_land = 38
+    arable_resources = { "bg_livestock_ranches" "bg_maize_farms" "bg_cotton_plantations" }
+    capped_resources = {
+		bg_iron_mining = 20
+		bg_wishstone_mining = 30
+		bg_cloud_collecting = 10
+    }
     naval_exit_id = 3064
 }
 STATE_DINASHIN = {
@@ -1589,6 +1597,11 @@ STATE_NAVOYAZH = {
     farm = x96F1D8
     mine = x9CD4E9
     port = xC4A6CF
+	arable_land = 57
+    arable_resources = { "bg_livestock_ranches" "bg_maize_farms" "bg_cotton_plantations" "bg_dye_plantations" }
+    capped_resources = {
+		bg_logging = 12
+    }
     naval_exit_id = 3064
 }
 STATE_SHINAKHAD = {
@@ -1601,6 +1614,12 @@ STATE_SHINAKHAD = {
     farm = x9CBCC8
     mine = xB4CF81
     port = xC763E4
+	arable_land = 29
+    arable_resources = { "bg_livestock_ranches" "bg_maize_farms" "bg_cotton_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+		bg_coal_mining = 20
+		bg_cloud_collecting = 15
+    }
     naval_exit_id = 3064
 }
 STATE_THAGHIZHI = {
@@ -1613,6 +1632,13 @@ STATE_THAGHIZHI = {
     farm = x8CC6BA
     mine = x8E8BDD
     port = xB083F9
+	arable_land = 41
+    arable_resources = { "bg_livestock_ranches" "bg_maize_farms" "bg_cotton_plantations" "bg_dye_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+		bg_sulfur_mining = 40
+		bg_cloud_collecting = 20
+		bg_logging = 8
+    }
     naval_exit_id = 3064
 }
 STATE_KLINGELMEER = {
