@@ -64,7 +64,16 @@
 		}
 	}
 	s:STATE_SAWAMREMBO = {
-
+		region_state:YUY = {
+			create_pop = {
+				culture = gnoll
+				size = 27796
+			}
+			create_pop = {
+				culture = dunaq
+				size = 18000
+			}
+		}
 	}
 	s:STATE_MAJILIMA = {
 		region_state:RIK = {
@@ -421,7 +430,12 @@
 		}
 	}
 	s:STATE_QOMERQOCHA = {
-	
+		region_state:WAR = {
+			create_pop = {
+				culture = dunaq
+				size = 28000
+			}
+		}
 	}
 	s:STATE_ANTAQAQA = {
 		region_state:YKU = {

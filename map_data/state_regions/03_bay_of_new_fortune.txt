@@ -20,7 +20,7 @@ STATE_KILIMASAWA = {
     mine = xBDFD75
     port = xC4C6D7
     arable_land = 37
-    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_millet_farms" "bg_cotton_plantations"}
+    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_millet_farms" "bg_cotton_plantations" }
     capped_resources = {
         bg_logging = 2
         bg_fishing = 8
@@ -38,11 +38,11 @@ STATE_MAJIMBA = {
     mine = xB690F3
     port = xB6E7C0
     arable_land = 35
-    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_millet_farms" "bg_cotton_plantations"}
+    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_millet_farms" "bg_cotton_plantations" }
     capped_resources = {
         bg_logging = 3
     }
-    naval_exit_id = 3065
+
 }
 STATE_PWANIQWA = {
     id = 4452
@@ -54,12 +54,12 @@ STATE_PWANIQWA = {
     mine = xA389E0
     port = xA4FEFB
     arable_land = 45
-    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_millet_farms" "bg_cotton_plantations"}
+    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_millet_farms" "bg_cotton_plantations" }
     capped_resources = {
         bg_logging = 9
         bg_iron_mining = 12
     }
-    naval_exit_id = 3065
+
 }
 STATE_SAWAMAJI = {
     id = 4453
@@ -72,14 +72,14 @@ STATE_SAWAMAJI = {
     mine = x90FDFD
     port = x9B75E5
     arable_land = 41
-    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_millet_farms" "bg_cotton_plantations"}
+    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_millet_farms" "bg_cotton_plantations" }
     capped_resources = {
         bg_logging = 5
         bg_cloud_collecting = 1
         bg_lead_mining = 6
         bg_coal_mining = 34
     }
-    naval_exit_id = 3065
+
 }
 STATE_JITOKANYA = {
     id = 4454
@@ -91,11 +91,11 @@ STATE_JITOKANYA = {
     mine = x7BB8CA
     port = xB886E4
     arable_land = 37
-    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_millet_farms" "bg_cotton_plantations"}
+    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_millet_farms" "bg_cotton_plantations" }
     capped_resources = {
         bg_logging = 5
     }
-    naval_exit_id = 3065
+
 }
 STATE_MAWINGUCHANYA = {
     id = 4455
@@ -107,13 +107,13 @@ STATE_MAWINGUCHANYA = {
     mine = xB5F9D2
     port = xD8D968
     arable_land = 43
-    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_millet_farms" "bg_cotton_plantations"}
+    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_millet_farms" "bg_cotton_plantations" }
     capped_resources = {
         bg_logging = 8
         bg_iron_mining = 26
         bg_lead_mining = 12
     }
-    naval_exit_id = 3065
+
 }
 STATE_PWANIQILIMA = {
     id = 4456
@@ -145,7 +145,7 @@ STATE_UZURIPWA = {
     mine = xADE075
     port = xBCECC0
     arable_land = 32
-    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_millet_farms" "bg_cotton_plantations"}
+    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_millet_farms" "bg_cotton_plantations" }
     capped_resources = {
         bg_logging = 4
         bg_coal_mining = 8
@@ -163,7 +163,13 @@ STATE_SAWAMREMBO = {
     farm = x5BE7E7
     mine = x6CFBD5
     port = x8EFBE5
-    naval_exit_id = 3065
+    arable_land = 40
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_coal_mining = 20
+        bg_logging = 6
+    }
+
 }
 STATE_MAJILIMA = {
     id = 4459
@@ -175,12 +181,12 @@ STATE_MAJILIMA = {
     mine = xC1E1DB
     port = xC8C8D1
     arable_land = 36
-    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_millet_farms" "bg_cotton_plantations"}
+    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_millet_farms" "bg_cotton_plantations" }
     capped_resources = {
         bg_logging = 4
         bg_sulfur_mining = 18
     }
-    naval_exit_id = 3065
+
 }
 STATE_KIJITOQWA = {
     id = 4460
@@ -192,14 +198,14 @@ STATE_KIJITOQWA = {
     mine = x97BDA8
     port = xA5F391
     arable_land = 49
-    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_maize_farms" "bg_cotton_plantations"}
+    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_maize_farms" "bg_cotton_plantations" }
     capped_resources = {
         bg_logging = 10
         bg_iron_mining = 4
         bg_coal_mining = 7
         bg_lead_mining = 12
     }
-    naval_exit_id = 3065
+
 }
 STATE_KILIMADADA = {
     id = 4461
@@ -211,7 +217,7 @@ STATE_KILIMADADA = {
     mine = x8DD5E7
     port = x90B5E8
     arable_land = 41
-    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_millet_farms" "bg_cotton_plantations"}
+    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_millet_farms" "bg_cotton_plantations" }
     capped_resources = {
         bg_coal_mining = 26
         bg_logging = 3
@@ -236,6 +242,7 @@ STATE_MAWIMBIMAJI = {
         bg_sulfur_mining = 12
     }
     naval_exit_id = 3065
+
 }
 STATE_MLIMASHWARI = {
     id = 4464
@@ -247,7 +254,7 @@ STATE_MLIMASHWARI = {
     farm = x92D1F2
     mine = xA4EB84
     port = xC678D9
-    naval_exit_id = 3065
+
 }
 STATE_UZURIKILIMA = {
     id = 4465
@@ -303,7 +310,7 @@ STATE_JITOMREMBO = {
     mine = xA7A7C1
     port = xA9DCA8
     arable_land = 29
-    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_millet_farms" "bg_cotton_plantations"}
+    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_millet_farms" "bg_cotton_plantations" }
     capped_resources = {
         bg_logging = 3
         bg_fishing = 5
@@ -320,7 +327,7 @@ STATE_PWAWAKATI = {
     mine = xC6F9D0
     port = xC976F1
     arable_land = 33
-    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_millet_farms" "bg_cotton_plantations"}
+    arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" "bg_millet_farms" "bg_cotton_plantations" }
     capped_resources = {
         bg_logging = 6
         bg_fishing = 2
@@ -365,7 +372,7 @@ STATE_INTIWINA = {
     capped_resources = {
         bg_opium_plantations = 42
     }
-    naval_exit_id = 3065
+
 }
 STATE_WAYLLAPAMPA = {
     id = 4471
@@ -428,7 +435,7 @@ STATE_QAQAMANTA = {
         type = "bg_oil_extraction"
         undiscovered_amount = 30
     }
-    naval_exit_id = 3065
+
 }
 STATE_SUYANAKU = {
     id = 4474
@@ -440,7 +447,7 @@ STATE_SUYANAKU = {
     farm = x43DED5
     mine = x43F4EE
     port = x5AF7BB
-    naval_exit_id = 3065
+
 }
 STATE_WAMANPATA = {
     id = 4475
@@ -460,7 +467,7 @@ STATE_WAMANPATA = {
         bg_gold_mining = 3
         bg_coal_mining = 6
     }
-    naval_exit_id = 3065
+
 }
 STATE_LLANKAYUQ = {
     id = 4476
@@ -483,7 +490,7 @@ STATE_LLANKAYUQ = {
     capped_resources = {
         bg_opium_plantations = 23
     }
-    naval_exit_id = 3065
+
 }
 STATE_TIKAQULLU = {
     id = 4477
@@ -523,7 +530,7 @@ STATE_PUKARAQOCHA = {
         type = "bg_oil_extraction"
         undiscovered_amount = 5
     }
-    naval_exit_id = 3065
+
 }
 STATE_KUCHUYPATA = {
     id = 4479
@@ -561,7 +568,7 @@ STATE_MIKHUYUQ = {
     capped_resources = {
         bg_opium_plantations = 10
     }
-    naval_exit_id = 3065
+
 }
 STATE_PISQUPATA = {
     id = 4482
@@ -581,7 +588,7 @@ STATE_PISQUPATA = {
         type = "bg_oil_extraction"
         undiscovered_amount = 5
     }
-    naval_exit_id = 3065
+
 }
 STATE_QOMERQOCHA = {
     id = 4484
@@ -593,7 +600,18 @@ STATE_QOMERQOCHA = {
     farm = x9D8CD2
     mine = xA1C6F0
     port = xA6B6D2
-    naval_exit_id = 3065
+    arable_land = 40
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_iron_mining = 24
+        bg_logging = 4
+    }
+    resource = {
+        type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
+        undiscovered_amount = 15
+    }
+
 }
 STATE_ANTAQAQA = {
     id = 4485
@@ -610,7 +628,7 @@ STATE_ANTAQAQA = {
         bg_iron_mining = 30
         bg_fishing = 8
     }
-    naval_exit_id = 3065
+    naval_exit_id = 3051
 }
 STATE_URQUNAYUQ = {
     id = 4486
@@ -645,7 +663,7 @@ STATE_TAYTAQOCHA = {
         bg_logging = 3
         bg_opium_plantations = 10
     }
-    naval_exit_id = 3065
+
 }
 STATE_KUNTURPAMPA = {
     id = 4488
@@ -663,7 +681,7 @@ STATE_KUNTURPAMPA = {
         bg_logging = 5
         bg_iron_mining = 12
     }
-    naval_exit_id = 3065
+
 }
 STATE_NAWIYANU = {
     id = 4489
@@ -680,7 +698,7 @@ STATE_NAWIYANU = {
         bg_logging = 2
         bg_opium_plantations = 15
     }
-    naval_exit_id = 3065
+
 }
 STATE_TINKUYUQ = {
     id = 4490
@@ -699,5 +717,5 @@ STATE_TINKUYUQ = {
         bg_coal_mining = 22
         bg_opium_plantations = 10
     }
-    naval_exit_id = 3065
+
 }
