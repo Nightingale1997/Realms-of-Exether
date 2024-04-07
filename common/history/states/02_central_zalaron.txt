@@ -435,6 +435,7 @@ s:STATE_ZEPHYRSTILL_2 = {
         owned_provinces = { "x5DD8FC" "x67E0CE" "x73D1D4" "x98D1CB" "xB695AA" "xBDD7CF" "xCAF835" "xCB59D7" "xD0CCAD" "xDAA3F5" "xE2B2B9" "xE447D6" "xE9DFEB" "xECCC76" "xF0E726" "xF0EC19" "xF6F677" "xFC80AB" "xFD50D1" }
 }
 add_homeland = cu:rannorian
+}
 
 s:STATE_EISENMORA = {
     create_state = {
@@ -694,10 +695,10 @@ add_homeland = cu:tefereti
 
 s:STATE_MONTEGO = {
     create_state = {
-        country = c:VAI
+        country = c:MLA
         owned_provinces = { "x81D0D8" "x8E95F1" "x9BA5FE" "xBCFAE9" "xC5C7E5" "xDECD74" "xFBC3A1" }
 }
-add_homeland = cu:tefereti
+add_homeland = cu:glabrekthorn
 }
 
 s:STATE_PLUVPINTO = {
@@ -968,18 +969,19 @@ add_homeland = cu:glabrekthorn
 
 s:STATE_POFIKAN = {
     create_state = {
-        country = c:MLA
+        country = c:BLL
         owned_provinces = { "x28FCFC" "x8ADABF" "x9B7EE9" "xA1FEAF" "xA5A4BE" "xA6A5AC" "xB3AED8" "xC2FAB0" "xCF59DC" "xD9E6DF" "xDBEB91" "xEECDB6" "xF1AEC6" "xFC67D3" }
 }
-add_homeland = cu:glabrekthorn
+add_homeland = cu:lumvareth
 }
 
 s:STATE_NOLIPIK = {
     create_state = {
-        country = c:MLA
+        country = c:BLL
         owned_provinces = { "x2CFCCF" "x4BBEF2" "x4CC4F5" "x7D9FDB" "x81CDD8" "x84D0D8" "x96E6FA" "xC742ED" "xE6E59D" "xE982A7" "xECA67B" "xEDB6C6" "xEDFA6E" "xF5C38A" "xF7CFC8" "xFBC3F7" "xFD23E0" }
 }
 add_homeland = cu:glabrekthorn
+add_homeland = cu:lumvareth
 }
 
 s:STATE_VAVULAN = {
@@ -987,7 +989,8 @@ s:STATE_VAVULAN = {
         country = c:ZIL
         owned_provinces = { "x4CD1DB" "x65EAB8" "x83D2EB" "x848DE7" "x8CE9B9" "xA5B8DB" "xC9EB90" "xCA54EB" "xCEE26B" "xE6E390" "xE992AB" "xEBC34A" "xF6CB6B" }
 }
-add_homeland = cu:lumvareth
+add_homeland = cu:lumvareth,
+add_homeland = cu:glabrekthorn
 }
 
 s:STATE_KANOBAN = {
