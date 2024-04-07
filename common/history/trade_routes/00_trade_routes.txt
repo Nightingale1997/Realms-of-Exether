@@ -23,4 +23,20 @@ TRADE_ROUTES = {
 			target = c:NRA.market
 		}
 	}
+	c:KHD ?= {
+		create_trade_route = {
+			goods = iron
+			level = 2
+			direction = import
+			target = c:RAV.market
+		}
+	}
+	c:KHD ?= {
+		create_trade_route = {
+			goods = clippers
+			level = 1
+			direction = import
+			target = c:RAV.market
+		}
+	}
 }

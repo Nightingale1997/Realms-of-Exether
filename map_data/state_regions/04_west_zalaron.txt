@@ -1302,6 +1302,11 @@ STATE_NAVAKAI = {
     farm = x62ECF0
     mine = x9FA3E4
     port = x9FCDF0
+	arable_land = 43
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+		bg_wishstone_mining = 40
+    }
     naval_exit_id = 3064
 }
 STATE_SHANAKONG = {
@@ -1475,6 +1480,11 @@ STATE_KEENAVOK = {
     farm = x9D8EE0
     mine = xABF07E
     port = xBBACB9
+	arable_land = 32
+    arable_resources = { "bg_maize_farms" "bg_livestock_ranches" "bg_tobacco_plantations" }
+    capped_resources = {
+        bg_cloud_collecting = 40
+    }
     naval_exit_id = 3064
 }
 STATE_SHIMAKAI = {
@@ -1489,7 +1499,7 @@ STATE_SHIMAKAI = {
     arable_land = 20
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_vineyard_plantations" }
     capped_resources = {
-        bg_logging = 2
+        bg_logging = 6
         bg_fishing = 6
     }
     naval_exit_id = 3001
@@ -1567,6 +1577,11 @@ STATE_DINASHIN = {
     farm = x7FF3BB
     mine = x84C0B7
     port = x86C1D2
+	arable_land = 50
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_tobacco_plantations" }
+    capped_resources = {
+        bg_logging = 2
+    }
     naval_exit_id = 3064
 }
 STATE_KEENAVAZH = {

@@ -282,7 +282,35 @@
 		}
 	}
 	s:STATE_SUYANAKU = {
-	
+		region_state:GPK={
+			create_pop = {
+				culture = mgzavri
+				size = 215000
+			}
+			create_pop = {
+				culture = dunaq
+				size = 5402
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = dunaq
+				size = 7800
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = kaalkid
+				size = 1000
+			}
+			create_pop = {
+				culture = kusichaki
+				size = 2000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = kusichaki
+				size = 6000
+			}
+		}
 	}
 	s:STATE_WAMANPATA = {
 		region_state:GPK={

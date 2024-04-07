@@ -458,7 +458,11 @@ STATE_SUYANAKU = {
     farm = x43DED5
     mine = x43F4EE
     port = x5AF7BB
-
+	arable_land = 38
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 26
+    }
 }
 STATE_WAMANPATA = {
     id = 4475

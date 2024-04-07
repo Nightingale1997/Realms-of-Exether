@@ -1228,7 +1228,29 @@
 
   }
   s:STATE_NAVAKAI = {
-
+	region_state:GPK={
+			create_pop = {
+				culture = mgzavri
+				size = 308000
+			}
+			create_pop = {
+				culture = kusichaki
+				size = 8000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = kusichaki
+				size = 1500
+			}
+			create_pop = {
+				culture = kaalkid
+				size = 6000
+			}
+			create_pop = {
+				culture = duneshar
+				size = 2000
+			}
+		}
   }
   s:STATE_SHANAKONG = {
 		region_state:THK = {
@@ -1414,21 +1436,49 @@
 	}
   }
   s:STATE_KEENAVOK = {
-
+	region_state:KHD = {
+		create_pop = {
+			culture = duneshar
+			size = 539264
+		}
+		create_pop = {
+			culture = mgzavri
+			size = 1000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = mgzavri
+			size = 3000
+		}
+		create_pop = {
+			culture = kaalkid
+			size = 500
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = kaalkid
+			size = 3010
+		}
+	}
   }
   s:STATE_SHIMAKAI = {
 	region_state:KHD = {
 		create_pop = {
 			culture = duneshar
-			size = 8264
+			size = 87264
 		}
 		create_pop = {
 			culture = kaalkid
-			size = 13300
+			size = 3300
 		}
 		create_pop = {
 			culture = west_thalorian
 			size = 1300
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = kaalkid
+			size = 10000
 		}
 	}
   }
@@ -1488,7 +1538,30 @@
 	}
   }
   s:STATE_DINASHIN = {
-
+	region_state:KHD = {
+		create_pop = {
+			culture = duneshar
+			size = 839264
+		}
+		create_pop = {
+			culture = kaalkid
+			size = 20000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = kaalkid
+			size = 6800
+		}
+		create_pop = {
+			culture = west_thalorian
+			size = 3000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = west_thalorian
+			size = 3000
+		}
+	}
   }
   s:STATE_KEENAVAZH = {
 	region_state:HOZ = {
