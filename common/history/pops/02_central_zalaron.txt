@@ -973,7 +973,20 @@
   }
     
   s:STATE_FOBAN = {
-
+	region_state:RLP = {
+		create_pop = {
+			culture = lumvareth
+			size = 306800
+		}
+		create_pop = {
+			culture = vandori
+			size = 54200
+		}
+		create_pop = {
+			culture = koshiri
+			size = 72900
+		}
+	}
   }
     
   s:STATE_LIPOLAN = {
@@ -981,7 +994,16 @@
   }
     
   s:STATE_ZIKAN = {
-
+	region_state:PVA = {
+		create_pop = {
+			culture = glabrekthorn
+			size = 120400
+		}
+		create_pop = {
+			culture = lumvareth
+			size = 200000
+		}
+	}
   }
     
   s:STATE_XODAN = {
@@ -989,7 +1011,16 @@
   }
     
   s:STATE_ZALULIK = {
-
+	region_state:IRA = {
+		create_pop = {
+			culture = lumvareth
+			size = 655500
+		}
+		create_pop = {
+			culture = glabrekthorn
+			size = 292188
+		}
+	}
   }
     
   s:STATE_DIFOBIK = {
@@ -1033,7 +1064,16 @@
   }
     
   s:STATE_KANOBAN = {
-
+	region_state:MNB = {
+		create_pop = {
+			culture = lumvareth
+			size = 733500
+		}
+		create_pop = {
+			culture = glabrekthorn
+			size = 133500
+		}
+	}
   }
     
   s:STATE_ZEDALAN = {

@@ -2153,7 +2153,14 @@
 	}
 		
 	s:STATE_FOBAN = {
-
+		region_state:RLP={
+			create_building={
+				building="building_barracks"
+				level=4
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+			}
+		}
 	}
 		
 	s:STATE_LIPOLAN = {
@@ -2161,7 +2168,14 @@
 	}
 		
 	s:STATE_ZIKAN = {
-
+		region_state:PVA={
+			create_building={
+				building="building_barracks"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+			}
+		}
 	}
 		
 	s:STATE_XODAN = {
@@ -2169,7 +2183,26 @@
 	}
 		
 	s:STATE_ZALULIK = {
-
+		region_state:IRA={
+			create_building={
+				building="building_millet_farm"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_privately_owned" "pm_tools_disabled" "pm_fig_orchards" }
+			}
+			create_building={
+				building="building_coffee_plantation"
+				level=1
+				reserves=1
+				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+			}
+			create_building={
+				building="building_barracks"
+				level=10
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+			}
+		}
 	}
 		
 	s:STATE_DIFOBIK = {
@@ -2213,7 +2246,20 @@
 	}
 		
 	s:STATE_KANOBAN = {
-
+		region_state:PVA={
+			create_building={
+				building="building_millet_farm"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_privately_owned" "pm_tools_disabled" "pm_fig_orchards" }
+			}
+			create_building={
+				building="building_barracks"
+				level=7
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+			}
+		}
 	}
 		
 	s:STATE_ZEDALAN = {
@@ -2221,7 +2267,16 @@
 	}
 		
 	s:STATE_MIPOLIK = {
-
+		region_state:RLP = {
+			create_pop = {
+				culture = shona
+				size = 320000
+			}
+			create_pop = {
+				culture = vandori
+				size = 22000
+			}
+		}
 	}
 		
 	s:STATE_ALAMARA = {
