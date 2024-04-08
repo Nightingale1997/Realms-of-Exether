@@ -1,0 +1,114 @@
+﻿MILITARY_FORMATIONS = {
+	c:THK = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_embervein_arroyo
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_SHANAKONG
+				count = 20
+			}
+
+			save_scope_as = thk_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_embervein_arroyo
+			save_scope_as = thk_general
+		}
+		scope:thk_general = {
+			transfer_to_formation = scope:thk_army
+		}
+	}
+	c:TSH = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_embervein_arroyo
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_DIYINAKHAD
+				count = 18
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_DIYINAKHAD
+				count = 6
+			}
+
+			save_scope_as = tsh_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_embervein_arroyo
+			save_scope_as = tsh_general
+		}
+		scope:tsh_general = {
+			transfer_to_formation = scope:tsh_army
+		}
+	}
+	c:HOZ = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_rust_gorge
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_THAGHIZHI
+				count = 26
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_THAGHIZHI
+				count = 4
+			}
+
+			save_scope_as = hoz_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_rust_gorge
+			save_scope_as = hoz_general
+		}
+		scope:hoz_general = {
+			transfer_to_formation = scope:hoz_army
+		}
+	}
+	c:KHD = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_rust_gorge
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_DINASHIN
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_DINASHIN
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_DINASHIN
+				count = 4
+			}
+
+			save_scope_as = khd_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_rust_gorge
+			save_scope_as = khd_general
+		}
+		scope:khd_general = {
+			transfer_to_formation = scope:khd_army
+		}
+	}
+}
