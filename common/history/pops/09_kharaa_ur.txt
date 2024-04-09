@@ -1470,15 +1470,45 @@
     region_state:ONG = {
 			create_pop = {
 				culture = sandcircler
-				size = 63200
+				size = 43200
 			}
 			create_pop = {
 				culture = onghori
-				size = 101384
+				size = 151384
 			}
 			create_pop = {
 				culture = kojiniu
 				size = 16080
+			}
+		}
+  }
+
+  s:STATE_PLACEHOLDER_EMPTY_7 = {
+    region_state:ONG = {
+			create_pop = {
+				culture = sandcircler
+				size = 53200
+			}
+			create_pop = {
+				culture = onghori
+				size = 201384
+			}
+			create_pop = {
+				culture = kojiniu
+				size = 20080
+			}
+		}
+  }
+
+  s:STATE_PLACEHOLDER_EMPTY_6 = {
+    region_state:ONG = {
+			create_pop = {
+				culture = onghori
+				size = 172200
+			}
+			create_pop = {
+				culture = kojiniu
+				size = 12000
 			}
 		}
   }

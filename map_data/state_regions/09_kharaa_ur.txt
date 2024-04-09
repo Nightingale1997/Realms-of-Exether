@@ -1692,23 +1692,49 @@ STATE_PLACEHOLDER_EMPTY_4 = {
     }
     naval_exit_id = 3091
 }
-STATE_PLACEHOLDER_EMPTY_8 = {
-    id = 4124
+
+STATE_PLACEHOLDER_EMPTY_7 = {
+    id = 4122
     subsistence_building = "building_subsistence_pastures"
-    provinces = { "x6BFDCD" "x6EF9B5" "x8697E4" "x8D71FC" "x9ECCAE" "x9FE688" "xA2B2CB" "xB5F0F8" "xB77EF5" "xB8B687" "xC75AD5" "xC77FDA" "xC9C969" "xCCB4D3" "xD15CDC" "xDCACF0" "xDDC669" "xE434F1" "xE475A6" "xE6E431" "xE9A19E" "xEB8FF6" "xF21BFA" "xF59BED" "xF8E4DE" "xFC30EC" "xFC83DF" }
+    provinces = { "x9ECCAE" "x9FE688" "xA2B2CB" "xB5F0F8" "xC75AD5" "xC77FDA" "xCCB4D3" "xD15CDC" "xF59BED" "xFC30EC" "xFC83DF" }
     city = x6EF9B5
     wood = x8697E4
     farm = x8D71FC
     mine = x9FE688
     port = xB77EF5
-    arable_land = 40
+    arable_land = 23
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tea_plantations" "bg_sugar_plantations" "bg_vineyard_plantations" }
     capped_resources = {
-        bg_coal_mining = 80
-        bg_iron_mining = 36
-        bg_logging = 7
+        bg_coal_mining = 38
+        bg_iron_mining = 19
+        bg_logging = 3
         bg_whaling = 4
         bg_fishing = 8
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 6
+    }
+    naval_exit_id = 3027
+}
+
+STATE_PLACEHOLDER_EMPTY_8 = {
+    id = 4124
+    subsistence_building = "building_subsistence_pastures"
+    provinces = { "x6BFDCD" "x6EF9B5" "x8697E4" "x8D71FC" "xB77EF5" "xB8B687" "xC9C969" "xDCACF0" "xDDC669" "xE434F1" "xE475A6" "xE6E431" "xE9A19E" "xEB8FF6" "xF21BFA" "xF8E4DE" }
+    city = x6EF9B5
+    wood = x8697E4
+    farm = x8D71FC
+    mine = x9FE688
+    port = xB77EF5
+    arable_land = 23
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tea_plantations" "bg_sugar_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_coal_mining = 44
+        bg_iron_mining = 20
+        bg_logging = 5
+        bg_whaling = 3
+        bg_fishing = 5
     }
     resource = {
         type = "bg_gold_fields"
@@ -1717,15 +1743,15 @@ STATE_PLACEHOLDER_EMPTY_8 = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 10
+        undiscovered_amount = 6
     }
     naval_exit_id = 3027
 }
 
-STATE_PLACEHOLDER_EMPTY_9 = {
-    id = 4126
+STATE_PLACEHOLDER_EMPTY_6 = {
+    id = 4125
     subsistence_building = "building_subsistence_pastures"
-    provinces = { "x44F5F7" "x7ED9F0" "x88A9DE" "x8BE9F9" "x92DAA3" "x93FA9F" "xA4D4AF" "xA7E4D0" "xBC7DD9" "xBCEA7C" "xC5C8A5" "xCDC8B0" "xD9DF4C" "xD9E7A5" "xDB79B8" "xDC5FCA" "xE0CCCA" "xE63CED" "xE6E2CB" "xE9B6DE" "xED7DAD" "xF7D5D4" "xFCAC74" }
+    provinces = { "x44F5F7" "x88A9DE" "x8BE9F9" "x92DAA3" "xA7E4D0" "xC5C8A5" "xCDC8B0" "xD9DF4C" "xE6E2CB" "xF7D5D4" }
     city = x7ED9F0
     wood = xA4D4AF
     farm = xBC7DD9
@@ -1734,11 +1760,31 @@ STATE_PLACEHOLDER_EMPTY_9 = {
     arable_land = 20
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tea_plantations" "bg_sugar_plantations" }
     capped_resources = {
-        bg_iron_mining = 45
-        bg_lead_mining = 45
+        bg_iron_mining = 27
         bg_logging = 5
         bg_whaling = 3
-        bg_fishing = 12
+        bg_fishing = 9
+    }
+    naval_exit_id = 3091
+}
+
+STATE_PLACEHOLDER_EMPTY_9 = {
+    id = 4126
+    subsistence_building = "building_subsistence_pastures"
+    provinces = { "x7ED9F0" "x93FA9F" "xA4D4AF" "xBC7DD9" "xBCEA7C" "xD9E7A5" "xDB79B8" "xDC5FCA" "xE0CCCA" "xE63CED" "xE9B6DE" "xED7DAD" "xFCAC74" }
+    city = x7ED9F0
+    wood = xA4D4AF
+    farm = xBC7DD9
+    mine = xD9E7A5
+    port = xDB79B8
+    arable_land = 20
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tea_plantations" "bg_sugar_plantations" }
+    capped_resources = {
+        bg_iron_mining = 22
+        bg_lead_mining = 45
+        bg_logging = 6
+        bg_whaling = 3
+        bg_fishing = 6
     }
     naval_exit_id = 3091
 }
