@@ -395,7 +395,7 @@
 	region_state:PIU = {
 		create_pop = {
 			culture = saglithan
-			size = 183996
+			size = 133996
 		}
 		create_pop = {
 			culture = whitefeather
@@ -403,11 +403,32 @@
 		}
 		create_pop = {
 			culture = tskharvani
-			size = 94996
+			size = 44996
 		}
 		create_pop = {
 			culture = sandcircler
 			size = 20400
+		}
+	}
+  }
+
+  s:STATE_OLABEGI_2 = {
+	region_state:PIU = {
+		create_pop = {
+			culture = saglithan
+			size = 103996
+		}
+		create_pop = {
+			culture = whitefeather
+			size = 1004
+		}
+		create_pop = {
+			culture = tskharvani
+			size = 34996
+		}
+		create_pop = {
+			culture = sandcircler
+			size = 15400
 		}
 	}
   }
