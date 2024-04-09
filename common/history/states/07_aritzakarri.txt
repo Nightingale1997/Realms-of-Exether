@@ -220,8 +220,13 @@ add_homeland = cu:cliffpercher
 s:STATE_OLABEGI = {
 	create_state = {
 		country = c:PIU
-		owned_provinces = { "x54B1F2" "x799CFB" "xAAFA77" "xB5BCC3" "xB8B193" "xCA4FE8" "xD4EBA5" "xD4F984" "xD9BF66" "xDBC2B3" "xDEDD4C" "xE0B06A" "xE2C3D7" "xF0DD2E" "xF4E082" "xFE95C1" }
+		owned_provinces = { "x799CFB" "xB5BCC3" "xCA4FE8" "xD4EBA5" "xD4F984" "xD9BF66" "xDEDD4C" "xE0B06A" "xE2C3D7" "xF4E082" "xFE95C1" }
 }
+	create_state = {
+	country = c:ULI
+	owned_provinces = { "x54B1F2" "xAAFA77" "xB8B193" "xDBC2B3" "xF0DD2E" }
+}
+
 add_homeland = cu:saglithan
 }
 
