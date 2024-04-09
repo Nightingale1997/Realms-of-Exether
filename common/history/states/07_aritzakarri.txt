@@ -274,7 +274,7 @@ add_homeland = cu:saglithan
 s:STATE_ITXAROPEN = {
 	create_state = {
 		country = c:BRJ
-		owned_provinces = { "x19ECFB" "x62E1E9" "x6AD5E7" "x829EEF" "xA49BDE" "xA6AFFE" "xA7C1E6" "xB4E08F" "xB7EDF5" "xB9AFF9" "xCCD88F" "xCFE2ED" "xE6BEF4" "xEBEBBC" "xEFF4A5" }
+		owned_provinces = { "x19ECFB" "x62E1E9" "x6AD5E7" "xA49BDE" "xA6AFFE" "xA7C1E6" "xB4E08F" "xB7EDF5" "xB9AFF9" "xCCD88F" "xCFE2ED" "xE6BEF4" "xEBEBBC" "xEFF4A5" }
 }
 add_homeland = cu:tskharvani
 add_homeland = cu:saglithan
@@ -300,15 +300,23 @@ add_homeland = cu:tskharvani
 s:STATE_URRIKO = {
 	create_state = {
 		country = c:AIZ
-		owned_provinces = { "x3FF0DE" "x71D0BA" "x72D2D9" "x8D98E6" "x9896F9" "xAAEA65" "xB4BBBE" "xB5DB76" "xB6F4C5" "xB7B9F7" "xB8C5EF" "xBEE094" "xC6E5B3" "xDC5AD3" "xE18DFE" "xE77DE1" "xEACBCD" "xEB8FD7" "xF0C34E" "xF4B07B" "xF5DC35" "xF7D095" "xF8E738" }
+		owned_provinces = { "x3FF0DE" "x8A87E8" "x8D98E6" "x8DA0DA" "xAAEA65" "xB4BBBE" "xB5DB76" "xB6F4C5" "xB7B9F7" "xB8C5EF" "xBEE094" "xD772B0" "xDC5AD3" "xE3F4ED" "xEACBCD" "xEB8FD7" "xF0C34E" "xF4B07B" "xF5DC35" "xF7D095" }
 }
 add_homeland = cu:whitefeather
+}
+
+s:STATE_CANT_BELIEVE_THIS_SHIT_NEEDED_ITS_OWN_STATE = {
+	create_state = {
+		country = c:OKH
+		owned_provinces = { "x71D0BA" "x72D2D9" "x74BAD4" "x9896F9" "xAB73EA" "xB1C7B7" "xC6E5B3" "xE0E255" "xE18DFE" "xE77DE1" "xF8E738" "xFB99D3" }
+}
+add_homeland = cu:tskharvani
 }
 
 s:STATE_ZUBEROA = {
 	create_state = {
 		country = c:AIZ
-		owned_provinces = { "x42EFF5" "x5FF5C4" "x6CCACA" "x8A87E8" "x8DA0DA" "x93D5C0" "x94A1CE" "xA181FB" "xA1D3A1" "xAAC0F3" "xADD4D0" "xAFBBD8" "xBFB8E6" "xC26FF9" "xC3E1DC" "xC9E66A" "xCC73E9" "xCEA2AE" "xD772B0" "xD7EF92" "xDBD18D" "xDCD9C9" "xE3F4ED" "xF1ED4E" "xF39FD9" "xFDAE6F" "xFE26EC" }
+		owned_provinces = { "x42EFF5" "x5FF5C4" "x6CCACA" "x93D5C0" "x94A1CE" "xA181FB" "xA1D3A1" "xAAC0F3" "xADD4D0" "xBFB8E6" "xC26FF9" "xC3E1DC" "xC9E66A" "xCC73E9" "xCEA2AE" "xD7EF92" "xDBD18D" "xDCD9C9" "xF1ED4E" "xF39FD9" "xFDAE6F" "xFE26EC" }
 }
 add_homeland = cu:whitefeather
 }
@@ -420,7 +428,7 @@ add_homeland = cu:saglithan
 s:STATE_NABARR = {
 	create_state = {
 		country = c:OKH
-		owned_provinces = { "xAED98B" "xC667E6" "xC9D678" "xC9FA92" "xD9D9E9" "xDE79DA" "xE557D4" "xE6949E" "xE786C5" "xEA4FBC" "xFAB858" "xFE72DA" }
+		owned_provinces = { "x829EEF" "xAED98B" "xC667E6" "xC9D678" "xC9FA92" "xD9D9E9" "xDE79DA" "xE557D4" "xE6949E" "xE786C5" "xEA4FBC" "xFAB858" "xFE72DA" }
 }
 add_homeland = cu:tskharvani
 }
@@ -428,7 +436,7 @@ add_homeland = cu:tskharvani
 s:STATE_SORGINAK = {
 	create_state = {
 		country = c:ULI
-		owned_provinces = { "x66F3D0" "x66FCD8" "x74BAD4" "x76A1F0" "xC0F8F1" "xCAC8CE" "xCC9BF0" "xD471C7" "xDAD757" "xE09591" "xE0E255" "xE2FED6" "xE79AAB" "xED7E8D" "xF6D926" "xFB99D3" "xFD04F7" "xFDE99C" }
+		owned_provinces = { "x66F3D0" "x66FCD8" "x76A1F0" "xAFBBD8" "xC0F8F1" "xCAC8CE" "xCC9BF0" "xD471C7" "xDAD757" "xE09591" "xE2FED6" "xE79AAB" "xED7E8D" "xF6D926" "xFD04F7" }
 }
 add_homeland = cu:saglithan
 }
@@ -452,7 +460,7 @@ add_homeland = cu:lomarash
 s:STATE_GIPUZK = {
 	create_state = {
 		country = c:OKH
-		owned_provinces = { "x53F6C1" "x68A1ED" "x8D99ED" "x94B2D8" "xAB73EA" "xACCF82" "xB1C7B7" "xB1E677" "xBDF5BD" "xBFBABD" "xC39FBD" "xC6C1F2" "xCBAC7F" "xE1F56D" "xE676D3" "xE7ED33" "xF58C79" "xF9EE1F" "xFEF742" }
+		owned_provinces = { "x53F6C1" "x68A1ED" "x8D99ED" "x94B2D8" "xACCF82" "xB1E677" "xBDF5BD" "xBFBABD" "xC39FBD" "xC6C1F2" "xCBAC7F" "xE1F56D" "xE676D3" "xE7ED33" "xF58C79" "xF9EE1F" "xFDE99C" "xFEF742" }
 }
 add_homeland = cu:tskharvani
 }
