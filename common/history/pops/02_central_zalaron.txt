@@ -1235,7 +1235,26 @@
   }
     
   s:STATE_VAVULAN = {
-
+	region_state:ZIL = {
+		create_pop = {
+			culture = glabrekthorn
+			size = 450800
+		}
+		create_pop = {
+			culture = glabrekthorn
+			religion = animist
+			size = 155996
+		}
+		create_pop = {
+			culture = lumvareth
+			size = 48000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = vairian
+			size = 50000
+		}
+	}
   }
     
   s:STATE_KANOBAN = {

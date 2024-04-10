@@ -1910,7 +1910,17 @@ STATE_VAVULAN = {
     farm = x83D2EB
     mine = x848DE7
     port = x8CE9B9
-
+    arable_land = 60
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_iron_mining = 24
+        bg_sulfur_mining = 40
+        bg_logging = 17
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 8
+    }
 }
 STATE_KANOBAN = {
     id = 4343
