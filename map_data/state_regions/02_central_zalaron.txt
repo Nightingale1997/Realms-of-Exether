@@ -1616,7 +1616,15 @@ STATE_KOTIK = {
     farm = x98F9CE
     mine = xA1C4AA
     port = xA665F0
-
+    arable_land = 80
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 20
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 16
+    }
 }
 STATE_BIFAN = {
     id = 4327
@@ -1861,7 +1869,16 @@ STATE_POFIKAN = {
     farm = x9B7EE9
     mine = xA1FEAF
     port = xA5A4BE
-
+    arable_land = 80
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_coal_mining = 80
+        bg_logging = 23
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 16
+    }
 }
 STATE_NOLIPIK = {
     id = 4341

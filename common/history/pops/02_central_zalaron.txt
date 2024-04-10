@@ -958,7 +958,22 @@
   }
     
   s:STATE_KOTIK = {
+	region_state:BLL = {
+		create_pop = {
+			culture = lumvareth
+			size = 745196
+		}
+		create_pop = {
+			culture = lumvareth
+			religion = elf_magic
+			size = 72604
+		}
+		create_pop = {
+			culture = kashtarnel
+			size = 65196
+		}
 
+	}
   }
     
   s:STATE_BIFAN = {
@@ -1175,7 +1190,21 @@
   }
     
   s:STATE_POFIKAN = {
-
+	region_state:BLL = {
+		create_pop = {
+			culture = lumvareth
+			size = 705196
+		}
+		create_pop = {
+			culture = kashtarnel
+			size = 106196
+		}
+		create_pop = {
+			culture = lumvareth
+			religion = elf_magic
+			size = 72604
+		}
+	}
   }
     
   s:STATE_NOLIPIK = {
