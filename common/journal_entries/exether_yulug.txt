@@ -1,0 +1,89 @@
+﻿je_light_the_lanterns = {
+
+	complete = {
+		scope:journal_entry = {
+		is_goal_complete = yes
+		}
+	}
+
+	on_complete = {
+		#remove_modifier = seasnake_encroachment
+		trigger_event = {
+			id = lamplight.2
+		}
+	}
+
+	timeout = 5475
+
+	on_timeout = {
+		#remove_modifier = seasnake_encroachment
+		trigger_event = {
+			id = lamplight.3
+		}
+	}
+
+	current_value = {
+		value = var:seasnake_destruction_var
+	}
+
+	goal_add_value = {
+		add = 100
+	}
+
+	progressbar = yes
+
+	weight = 500
+	should_be_pinned_by_default = yes
+
+	on_monthly_pulse = {
+		effect = {
+			every_scope_state = { 
+				limit = {
+					any_scope_building = {
+					is_building_type = building_seasnake_wharf 
+					}
+				}
+				set_local_variable = {
+					 name = snakeeater_var
+					value = 0.1
+				}
+				change_local_variable = {
+					name = snakeeater_var
+					multiply = this.b:building_lanternfish_breeding_grounds.level
+				}
+				change_variable = {
+					name = seasnake_destruction_var
+					add = local_var:snakeeater_var
+				}
+			}
+		}
+		effect = {
+			every_scope_state = { 
+				limit = {
+					any_scope_building = {
+					is_building_type = building_lanternfish_breeding_grounds 
+					}
+				}
+				set_local_variable = {
+					 name = lanternfish_breeding_var
+					value = 0.1
+				}
+				change_local_variable = {
+					name = lanternfish_breeding_var
+					multiply = this.b:building_lanternfish_breeding_grounds.level
+				}
+				change_variable = {
+					name = seasnake_destruction_var
+					add = local_var:lanternfish_breeding_var
+				}
+			}
+			
+			}
+		
+		random_events = {
+			10 = 0
+			#1 = autocracy.2
+			#1 = autocracy.3
+			}
+		}	
+}
