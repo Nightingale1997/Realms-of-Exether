@@ -19,6 +19,7 @@ STATE_ULDOR = {
     id = 4531
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x82DED1" "xB179D6" "xB6DA8B" "xC391F8" "xDECBAD" "xE0C0BC" "xE88E8B" "xF6AA9F" "xF82CF8" "xF8F310" "xF8FC13" "xFC5EAA" "xFCE121" }
+    impassable = { "x82DED1" }
     city = x82DED1
     wood = xB179D6
     farm = xB6DA8B
@@ -54,6 +55,7 @@ STATE_TUKHUR = {
     id = 4533
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x86AFEC" "x9DCFC2" "x9EEDBD" "xCAD2E0" "xDA7AF7" "xDC56EF" "xEBE049" "xF5CCEF" }
+    impassable = { "xDA7AF7" "xF5CCEF" }
     city = x86AFEC
     wood = x9DCFC2
     farm = x9EEDBD
@@ -196,6 +198,7 @@ STATE_CHANMA = {
     id = 4541
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x35F7CC" "x8DFAFA" "xBEC7A3" "xC287F0" "xD9C79E" "xE270B1" "xE3E583" "xF3C9D5" "xF556BD" "xF9B282" }
+    impassable = { "xBEC7A3" "xE270B1" }
     city = x35F7CC
     wood = x8DFAFA
     farm = xBEC7A3
@@ -1646,6 +1649,7 @@ STATE_PLACEHOLDER_EMPTY_1 = {
         bg_logging = 4
         bg_whaling = 3
         bg_fishing = 9
+        bg_squidding = 5
     }
     resource = {
         type = "bg_gold_fields"
@@ -1670,6 +1674,7 @@ STATE_PLACEHOLDER_EMPTY_2 = {
         bg_lead_mining = 36
         bg_sulfur_mining = 60
         bg_whaling = 2
+        bg_squidding = 7
         bg_fishing = 6
     }
     naval_exit_id = 3091
@@ -1687,8 +1692,9 @@ STATE_PLACEHOLDER_EMPTY_4 = {
     arable_resources = { "bg_livestock_ranches" "bg_cotton_plantations" }
     capped_resources = {
         bg_logging = 5
-        bg_whaling = 2
+        bg_whaling = 5
         bg_fishing = 6
+        bg_squidding = 11
     }
     naval_exit_id = 3091
 }
@@ -1735,6 +1741,7 @@ STATE_PLACEHOLDER_EMPTY_8 = {
         bg_logging = 5
         bg_whaling = 3
         bg_fishing = 5
+        bg_squidding = 6
     }
     resource = {
         type = "bg_gold_fields"
@@ -1757,13 +1764,14 @@ STATE_PLACEHOLDER_EMPTY_6 = {
     farm = xBC7DD9
     mine = xD9E7A5
     port = xDB79B8
-    arable_land = 20
+    arable_land = 24
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tea_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_iron_mining = 27
         bg_logging = 5
         bg_whaling = 3
         bg_fishing = 9
+        bg_squidding = 5
     }
     naval_exit_id = 3091
 }
@@ -1785,6 +1793,7 @@ STATE_PLACEHOLDER_EMPTY_9 = {
         bg_logging = 6
         bg_whaling = 3
         bg_fishing = 6
+        bg_squidding = 4
     }
     naval_exit_id = 3091
 }
