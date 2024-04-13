@@ -653,7 +653,21 @@
   }
 
   s:STATE_GARRITXO = {
-
+	region_state:AIZ = {
+		create_pop = {
+			culture = saglithan
+			size = 35582
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = saglithan
+			size = 13012
+		}
+		create_pop = {
+			culture = whitefeather
+			size = 13159
+		}
+	}
   }
 
   s:STATE_ASTINDU = {
