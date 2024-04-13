@@ -2641,6 +2641,23 @@
 		}
 	}
   }
+  s:STATE_SAVAGE_LANDS_2 = {
+	region_state:RSE = {
+		create_pop = {
+			culture = tqalt
+			size = 410000
+		}
+		create_pop = {
+			culture = rahoru
+			religion = orc_father
+			size = 12996
+		}
+		create_pop = {
+			culture = waste_walker
+			size = 13348
+		}
+	}
+  }
   s:STATE_ROUGHSTONE_TERRITORY = {
 	region_state:RSE = {
 		create_pop = {
@@ -2655,6 +2672,18 @@
 		create_pop = {
 			culture = waste_walker
 			size = 13759
+		}
+	}
+  }
+  s:STATE_ROUGHSTONE_TERRITORY_2 = {
+	region_state:RSE = {
+		create_pop = {
+			culture = tqalt
+			size = 90000
+		}
+		create_pop = {
+			culture = waste_walker
+			size = 11000
 		}
 	}
   }
@@ -2762,25 +2791,25 @@
 	region_state:BLD = {
 		create_pop = {
 			culture = tqalt
-			size = 154375
+			size = 94375
 		}
 		create_pop = {
 			culture = tqalt
 			religion = orc_mother
-			size = 6000
+			size = 5000
 		}
 		create_pop = {
 			culture = waste_walker
-			size = 9004
+			size = 4500
 		}
 		create_pop = {
 			culture = stranfolk
-			size = 1998
+			size = 500
 			pop_type = slaves
 		}
 		create_pop = {
 			culture = glabrekthorn
-			size = 1262
+			size = 500
 			pop_type = slaves
 		}
 	}
@@ -2793,8 +2822,8 @@
 			size = 315696
 		}
 		create_pop = {
-			culture = kusichaki
-			size = 537696
+			culture = tqalt
+			size = 577696
 		}
 		create_pop = {
 			culture = yachaymanchi
@@ -2807,7 +2836,7 @@
 		create_pop = {
 			pop_type = slaves
 			culture = tqalt
-			size = 62000
+			size = 22000
 		}
 	}
   }
@@ -2815,15 +2844,15 @@
 	region_state:YKU = {
 		create_pop = {
 			culture = waste_walker
-			size = 53356
+			size = 59356
 		}
 		create_pop = {
-			culture = kusichaki
+			culture = tqalt
 			size = 278496
 		}
 		create_pop = {
 			culture = yachaymanchi
-			size = 46407
+			size = 51407
 		}
 		create_pop = {
 			culture = vandori
@@ -2832,7 +2861,7 @@
 		create_pop = {
 			pop_type = slaves
 			culture = tqalt
-			size = 22000
+			size = 11000
 		}
 	}
   }
