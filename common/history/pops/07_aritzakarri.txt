@@ -605,7 +605,20 @@
   }
 
   s:STATE_UDABERRI = {
-
+	region_state:IHE = {
+		create_pop = {
+			culture = whitefeather
+			size = 18278
+		}
+		create_pop = {
+			culture = sandcircler
+			size = 8278
+		}
+		create_pop = {
+			culture = saglithan
+			size = 55532
+		}
+	}
   }
 
   s:STATE_IZOZKI = {
@@ -827,11 +840,29 @@
 }
 
   s:STATE_BIZI = {
-
+	region_state:ULI = {
+		create_pop = {
+			culture = whitefeather
+			size = 8278
+		}
+		create_pop = {
+			culture = saglithan
+			size = 95532
+		}
+	}
   }
 
   s:STATE_ARITZA = {
-
+	region_state:ULI = {
+		create_pop = {
+			culture = saglithan
+			size = 56800
+		}
+		create_pop = {
+			culture = tskharvani
+			size = 14325 # 1840 Amazonas Census
+		}
+	}
   }
 
   s:STATE_NABARR = {
@@ -853,7 +884,16 @@
   }
 
   s:STATE_SORGINAK = {
-
+	region_state:ULI = {
+		create_pop = {
+			culture = saglithan
+			size = 58118
+		}
+		create_pop = {
+			culture = tskharvani
+			size = 676
+		}
+	}
   }
 
   s:STATE_KOILARRA = {
@@ -1032,6 +1072,19 @@
 		create_pop = {
 			culture = onghori
 			size = 24676
+		}
+	}
+  }
+
+  s:STATE_ACTUALLY_THIS_STATE_LOOKS_NICE_I_WAS_BEING_MEAN = {
+	region_state:OKH = {
+		create_pop = {
+			culture = saglithan
+			size = 38118
+		}
+		create_pop = {
+			culture = tskharvani
+			size = 4676
 		}
 	}
   }
