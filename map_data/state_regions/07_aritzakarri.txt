@@ -322,6 +322,17 @@ STATE_ARTEAGA = {
     farm = xA2A0CB
     mine = xA6EACE
     port = xABFCB3
+    arable_land = 30
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_silk_plantations" "bg_tobacco_plantations" }
+    capped_resources = {
+        bg_sulfur_mining = 32
+        bg_fishing = 6
+        bg_logging = 4
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 60
+    }
     naval_exit_id = 3096
 }
 STATE_MENDIALDE = {
@@ -333,6 +344,13 @@ STATE_MENDIALDE = {
     farm = x74C6ED
     mine = xA9CDED
     port = xB2A7A1
+    arable_land = 40
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tea_plantations" "bg_tobacco_plantations" }
+    capped_resources = {
+        bg_iron_mining = 30
+        bg_lead_mining = 36
+        bg_logging = 9
+    }
 }
 STATE_KHANOR = {
     id = 4643
@@ -343,6 +361,12 @@ STATE_KHANOR = {
     farm = xCD9B92
     mine = xDCB9A4
     port = xEB808B
+    capped_resources = {
+        bg_logging = 6
+        bg_fishing = 5
+    }
+    arable_land = 20
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_tobacco_plantations" }
     naval_exit_id = 3096
 }
 STATE_KASKOGARA = {
@@ -354,6 +378,17 @@ STATE_KASKOGARA = {
     farm = x7DD7AA
     mine = x81FE82
     port = x92CDB8
+    arable_land = 30
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" }
+    capped_resources = {
+        bg_sulfur_mining = 36
+        bg_logging = 6
+        bg_fishing = 8
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 40
+    }
     naval_exit_id = 3096
 }
 STATE_URDIN = {
@@ -365,6 +400,15 @@ STATE_URDIN = {
     farm = x8EFDDE
     mine = x9BEDD1
     port = xA4BAB1
+    arable_land = 40
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_silk_plantations" "bg_tobacco_plantations" }
+    capped_resources = {
+        bg_logging = 4
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 40
+    }
     naval_exit_id = 3070
 }
 STATE_KHIARHI = {
@@ -376,6 +420,12 @@ STATE_KHIARHI = {
     farm = x66FA9A
     mine = x67E6C6
     port = x88FE7B
+    arable_land = 40
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_tea_plantations" }
+    capped_resources = {
+        bg_coal_mining = 32
+        bg_logging = 6
+    }
     naval_exit_id = 3096
 }
 STATE_ONDARA = {
@@ -387,6 +437,12 @@ STATE_ONDARA = {
     farm = x70AFF6
     mine = x84F68F
     port = xA1E29A
+    arable_land = 30
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_tea_plantations" }
+    capped_resources = {
+        bg_coal_mining = 36
+        bg_logging = 2
+    }
     naval_exit_id = 3096
 }
 STATE_GARRAMU = {
@@ -398,6 +454,12 @@ STATE_GARRAMU = {
     farm = x928EEA
     mine = x93F76D
     port = x98C0D4
+    arable_land = 10
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_whaling = 3
+        bg_fishing = 6
+    }
     naval_exit_id = 3096
 }
 STATE_MUGARA = {
