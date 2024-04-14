@@ -17,8 +17,8 @@
 	}
 }
 
-building_snowfruit_plantation = {
-	building_group = bg_snowfruit_plantations
+building_wyrmfruit_plantation = {
+	building_group = bg_wyrmfruit_plantations
 	texture = "gfx/interface/icons/building_icons/banana_plantation.dds"
 	required_construction = construction_cost_low
 
@@ -30,14 +30,14 @@ building_snowfruit_plantation = {
 	levels_per_mesh = 5
 	
 	production_method_groups = {
-		pmg_base_building_snowfruit_plantation
-		pmg_train_automation_building_snowfruit_plantation
-		pmg_ownership_land_building_snowfruit_plantation
+		pmg_base_building_wyrmfruit_plantation
+		pmg_train_automation_building_wyrmfruit_plantation
+		pmg_ownership_land_building_wyrmfruit_plantation
 	}
 }
 
 building_snowrubber_plantation = {
-	building_group = bg_snowfruit_plantations
+	building_group = bg_wyrmfruit_plantations
 	texture = "gfx/interface/icons/building_icons/rubber_plantation.dds"
 	required_construction = construction_cost_low
 
