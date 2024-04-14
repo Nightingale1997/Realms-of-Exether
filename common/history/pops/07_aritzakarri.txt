@@ -768,11 +768,33 @@
   }
 
   s:STATE_UHINAK = {
-
+	region_state:CIV = {
+		create_pop = {
+			culture = saglithan
+			size = 21780
+		}
+		create_pop = {
+			culture = cliffpercher
+			size = 852
+		}
+		create_pop = {
+			culture = whitefeather
+			size = 2568
+		}
+	}
   }
 
   s:STATE_KABI = {
-
+	region_state:CIV = {
+		create_pop = {
+			culture = blacktalon
+			size = 6000
+		}
+		create_pop = {
+			culture = saglithan
+			size = 351228
+		}
+	}
   }
 
   s:STATE_LURRA = {
@@ -793,19 +815,59 @@
   }
 
   s:STATE_ARGIA = {
-
+	region_state:CIV = {
+		create_pop = {
+			culture = blacktalon
+			size = 36000
+		}
+		create_pop = {
+			culture = saglithan
+			size = 361228
+		}
+	}
   }
 
   s:STATE_ZUHAITZ = {
-
+	region_state:CIV = {
+		create_pop = {
+			culture = saglithan
+			size = 1170008
+		}
+		create_pop = {
+			culture = whitefeather
+			size = 24000
+		}
+	}
   }
 
   s:STATE_HONDARRIBIA = {
-
+	region_state:CIV = {
+		create_pop = {
+			culture = saglithan
+			size = 262848
+		}
+		create_pop = {
+			culture = lomarash
+			size = 22848
+		}
+	}
   }
 
   s:STATE_XILABA = {
-
+	region_state:CIV = {
+		create_pop = {
+			culture = saglithan
+			size = 223300
+		}
+		create_pop = {
+			culture = lomarash
+			size = 24000
+		}
+		create_pop = {
+			culture = blacktalon
+			size = 32000
+		}
+	}
   }
 
   s:STATE_MALKART = {
@@ -827,7 +889,20 @@
   }
 
   s:STATE_IRUBIDE = {
-
+	region_state:LAZ = {
+		create_pop = {
+			culture = saglithan
+			size = 84162
+		}
+		create_pop = {
+			culture = whitefeather
+			size = 17000
+		}
+		create_pop = {
+			culture = lomarash
+			size = 24000
+		}
+	}
   }
 
   s:STATE_SUTAN = {

@@ -793,7 +793,14 @@ STATE_UHINAK = {
     farm = x8482FB
     mine = x908DFC
     port = x9EC9ED
-    naval_exit_id = 3070
+    arable_land = 40
+    arable_resources = { "bg_livestock_ranches" "bg_wheat_farms" "bg_cotton_plantations" }
+    capped_resources = {
+        bg_coal_mining = 20
+        bg_logging = 29
+        bg_fishing = 6
+    }
+    naval_exit_id = 3096
 }
 STATE_KABI = {
     id = 4664
@@ -804,7 +811,14 @@ STATE_KABI = {
     farm = xA4D497
     mine = xABEBEC
     port = xADF75A
-    naval_exit_id = 3070
+    arable_land = 18
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 8
+        bg_whaling = 4
+        bg_fishing = 10
+    }
+    naval_exit_id = 3029
 }
 STATE_LURRA = {
     id = 4665
@@ -832,7 +846,14 @@ STATE_ARGIA = {
     farm = xBAEE9F
     mine = xBDDFA1
     port = xC0E7F9
-    naval_exit_id = 3070
+    arable_land = 20
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 12
+        bg_whaling = 6
+        bg_fishing = 8
+    }
+    naval_exit_id = 3029
 }
 STATE_ZUHAITZ = {
     id = 4667
@@ -842,7 +863,15 @@ STATE_ZUHAITZ = {
     farm = x9980F7
     mine = xBFA5A4
     port = xDC33FB
-    naval_exit_id = 3070
+    arable_land = 80
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 44
+        bg_iron_mining = 27
+        bg_logging = 26
+        bg_fishing = 4
+    }
+    naval_exit_id = 3029
 }
 STATE_HONDARRIBIA = {
     id = 4668
@@ -853,6 +882,12 @@ STATE_HONDARRIBIA = {
     farm = xA0A0E3
     mine = xA886FD
     port = xD3CC9B
+    arable_land = 25
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_tobacco_plantations" }
+    capped_resources = {
+        bg_iron_mining = 18
+        bg_logging = 6
+    }
     naval_exit_id = 3070
 }
 STATE_XILABA = {
@@ -863,7 +898,14 @@ STATE_XILABA = {
     farm = xA8E587
     mine = xB5E890
     port = xBF82E2
-    naval_exit_id = 3070
+    arable_land = 15
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_tobacco_plantations" }
+    capped_resources = {
+        bg_logging = 9
+        bg_whaling = 2
+        bg_fishing = 2
+    }
+    naval_exit_id = 3040
 }
 STATE_MALKART = {
     id = 4670
@@ -892,6 +934,12 @@ STATE_IRUBIDE = {
     farm = x88ACF7
     mine = xBAECDF
     port = xDD7BFB
+    arable_land = 30
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 28
+        bg_logging = 4
+    }
     naval_exit_id = 3070
 }
 STATE_SUTAN = {
