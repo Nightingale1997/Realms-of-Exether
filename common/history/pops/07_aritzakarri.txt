@@ -1111,23 +1111,81 @@
   }
 
   s:STATE_TXORI = {
-
+	region_state:BRY = {
+		create_pop = {
+			culture = lithorin
+			size = 374604
+		}
+		create_pop = {
+			culture = vandori
+			size = 2000
+		}
+		create_pop = {
+			culture = cliffpercher
+			size = 130000
+		}
+	}
   }
 
   s:STATE_ERDI = {
-
+	region_state:BRY = {
+		create_pop = {
+			culture = lithorin
+			size = 607996
+		}
+		create_pop = {
+			culture = blacktalon
+			size = 34400
+		}
+		create_pop = {
+			culture = cliffpercher
+			size = 14400
+		}
+	}
   }
 
   s:STATE_AROA = {
-
+	region_state:BRY = {
+		create_pop = {
+			culture = blacktalon
+			size = 310820
+		}
+		create_pop = {
+			culture = lithorin
+			size = 202863
+		}
+	}
   }
 
   s:STATE_ZIENTZI = {
-
+	region_state:XRA = {
+		create_pop = {
+			culture = blacktalon
+			size = 428908
+		}
+		create_pop = {
+			culture = lithorin
+			size = 138908
+		}
+	}
   }
 
   s:STATE_BAZKA = {
-
+	region_state:BRY = {
+		create_pop = {
+			culture = lithorin
+			size = 771111
+		}
+		create_pop = {
+			culture = cliffpercher
+			size = 12004
+		}
+		create_pop = {
+			culture = lithorin
+			religion = mountain_worship
+			size = 506715
+		}
+	}
   }
 
   s:STATE_LARRIN = {
