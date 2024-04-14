@@ -821,7 +821,16 @@
 
 
     s:STATE_BALATHOUL = {
-
+      region_state:BFU = {
+        create_pop = {
+          culture = glethach
+          size = 364796
+        }
+        create_pop = {
+          culture = grendleth
+          size = 86738
+        }
+      }
   }
 
 
@@ -831,8 +840,17 @@
 
 
     s:STATE_KINGOUR = {
-
-  }
+      region_state:RIS = {
+      create_pop = {
+        culture = glethach
+        size = 484796
+      }
+      create_pop = {
+        culture = grendleth
+        size = 82738
+      }
+   }
+ }
 
 
     s:STATE_MALINMORE = {
@@ -1100,6 +1118,17 @@
   }
 
     s:STATE_ALLTGLAS = {
+      region_state:WHM = {
+        create_pop = {
+          culture = grendleth
+          size = 275777
+        }
+        create_pop = {
+          culture = glethach
+          size = 58058
+        }
+
+      }
 
   }
 

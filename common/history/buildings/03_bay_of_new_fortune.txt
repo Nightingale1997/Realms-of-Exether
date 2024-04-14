@@ -44,7 +44,20 @@
 
 	}
 	s:STATE_PWANIQILIMA = {
-
+		region_state:PRO = {
+			create_building={
+				building="building_tobacco_plantation"
+				level=1
+				reserves=1
+				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+			}
+			create_building = {
+				building="building_millet_farm"
+				level = 1
+				reserves = 1
+				activate_production_methods = {  }
+			}
+		}
 	}
 	s:STATE_UZURIPWA = {
 
@@ -65,7 +78,26 @@
 
 	}
 	s:STATE_MAWIMBIMAJI = {
-
+		region_state:PRO = {
+			create_building={
+				building="building_logging_camp"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_forestry" "pm_merchant_guilds_building_logging_camp" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
+			}
+			create_building = {
+				building="building_millet_farm"
+				level = 2
+				reserves = 1
+				activate_production_methods = {  }
+			}
+			create_building={
+				building="building_construction_sector"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_wooden_buildings" }
+			}
+		}
 	}
 	s:STATE_UZURIKILIMA = {
 		region_state:XOC={
@@ -210,21 +242,9 @@
 		region_state:GPK={
 			create_building={
 				building="building_livestock_ranch"
-				level=2
+				level=1
 				reserves=1
 				activate_production_methods={ "pm_open_air_stockyards" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
-			}
-			create_building={
-				building="building_iron_mine"
-				level=2
-				reserves=1
-				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" "pm_merchant_guilds_building_iron_mine" }
-			}
-			create_building={
-				building="building_barracks"
-				level=4
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
 			}
 		}
 	}
@@ -234,6 +254,30 @@
 	}
 	s:STATE_NAWI_OASIS = {
 		region_state:WAQ={
+			create_building={
+				building="building_furniture_manufacturies"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_santa_clause_style" "pm_permanent_prestidigitation_furniture" "pm_automation_disabled" "pm_no_luxuries" }
+			}
+			create_building={
+				building="building_textile_mills"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_handsewn_clothes" "pm_permanent_prestidigitation" "pm_automation_disabled" "pm_no_luxury_clothes" }
+			}
+			create_building={
+				building="building_wishstone_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_wishstone_mine" "pm_mines_no_potions" }
+			}
+			create_building={
+				building="building_cotton_plantation"
+				level=1
+				reserves=1
+				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+			}
 		}
 	}
 	s:STATE_TIKAQULLU = {

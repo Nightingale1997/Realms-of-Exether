@@ -1,0 +1,48 @@
+﻿MILITARY_FORMATIONS = {
+	c:PRO = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_hyena_plains
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_MAWIMBIMAJI
+				count = 5
+			}
+
+			save_scope_as = pro_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_hyena_plains
+			save_scope_as = pro_general
+		}
+		scope:pro_general = {
+			transfer_to_formation = scope:pro_army
+		}
+	}
+	c:GPK = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_south_chin_desert
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_SUYANAKU
+				count = 12
+			}
+
+			save_scope_as = gpk_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_south_chin_desert
+			save_scope_as = gpk_general
+		}
+		scope:gpk_general = {
+			transfer_to_formation = scope:gpk_army
+		}
+	}
+}

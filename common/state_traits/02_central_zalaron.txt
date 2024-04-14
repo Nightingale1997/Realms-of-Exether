@@ -26,3 +26,14 @@ state_trait_chin_desert = {
 		state_infrastructure_mult = -0.25
 	}
 }
+
+state_trait_inland_state = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	
+	modifier = {
+		state_building_port_max_level_add = -99
+		state_building_shipyards_max_level_add = -99
+		state_building_naval_base_max_level_add = -99
+		state_building_military_shipyards_max_level_add = -99
+	}	
+}
