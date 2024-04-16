@@ -335,14 +335,14 @@ pm_traditional_cooladjective_herb_gardens = {
 	}
 }
 
-pm_leechgardens = {
+pm_leechgardens = { #for rice
 	texture = "gfx/interface/icons/production_method_icons/orchards.dds"
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_grain_add = -15
-			goods_output_meat_add = 10
-			goods_output_monster_essence_add = 3
+			goods_output_grain_add = -30
+			goods_output_meat_add = 20
+			goods_output_monster_essence_add = 6
 		}
 	}
 }
