@@ -1,0 +1,89 @@
+﻿building_logging_camp_mimosa = {
+	building_group = bg_logging_mimosa
+	texture = "gfx/interface/icons/building_icons/logging_camp.dds"
+	city_type = wood
+	required_construction = construction_cost_low
+	terrain_manipulator = forestry
+	levels_per_mesh = 5
+
+	production_method_groups = {
+		pmg_base_building_logging_camp
+		pmg_hardwood
+		pmg_equipment
+		pmg_regional_mimosa
+		pmg_transportation_building_logging_camp
+		pmg_ownership_capital_building_logging_camp
+	}
+}
+
+building_logging_camp_cloudsilver_roots = {
+	building_group = bg_logging_cloudsilver_roots
+	texture = "gfx/interface/icons/building_icons/logging_camp.dds"
+	city_type = wood
+	required_construction = construction_cost_low
+	terrain_manipulator = forestry
+	levels_per_mesh = 5
+
+	production_method_groups = {
+		pmg_base_building_logging_camp
+		pmg_hardwood
+		pmg_equipment
+		pmg_cloudsilver_roots
+		pmg_transportation_building_logging_camp
+		pmg_ownership_capital_building_logging_camp
+	}
+}
+
+building_logging_camp_liquortrees = {
+	building_group = bg_logging_liquortrees
+	texture = "gfx/interface/icons/building_icons/logging_camp.dds"
+	city_type = wood
+	required_construction = construction_cost_low
+	terrain_manipulator = forestry
+	levels_per_mesh = 5
+
+	production_method_groups = {
+		pmg_base_building_logging_camp
+		pmg_hardwood
+		pmg_equipment
+		pmg_liquortrees
+		pmg_transportation_building_logging_camp
+		pmg_ownership_capital_building_logging_camp
+	}
+}
+
+building_logging_camp_potion_sap = {
+	building_group = bg_logging_potion_sap
+	texture = "gfx/interface/icons/building_icons/logging_camp.dds"
+	city_type = wood
+	required_construction = construction_cost_low
+	terrain_manipulator = forestry
+	levels_per_mesh = 5
+
+	production_method_groups = {
+		pmg_base_building_logging_camp
+		pmg_hardwood
+		pmg_equipment
+		pmg_potion_sap
+		pmg_transportation_building_logging_camp
+		pmg_ownership_capital_building_logging_camp
+	}
+}
+
+building_logging_camp_syrup_trees = {
+	building_group = bg_logging_syrup_trees
+	texture = "gfx/interface/icons/building_icons/logging_camp.dds"
+	city_type = wood
+	required_construction = construction_cost_low
+	terrain_manipulator = forestry
+	levels_per_mesh = 5
+
+	production_method_groups = {
+		pmg_base_building_logging_camp
+		pmg_hardwood
+		pmg_equipment
+		pmg_syrup_trees
+		pmg_transportation_building_logging_camp
+		pmg_ownership_capital_building_logging_camp
+	}
+}

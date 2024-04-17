@@ -186,6 +186,94 @@ pm_organized_goldfish_harvesting = {
 		}
 	}
 }
+
+#Regional Logging
+
+pm_no_regional_logging = {
+	texture = "gfx/interface/icons/production_method_icons/no_hardwood_selection.dds"
+}
+
+pm_mimosa_trees = {  #this is a reference to dmt extraction methods irl
+	texture = "gfx/interface/icons/production_method_icons/orchards.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_wood_add = -15
+			goods_output_tea_add = 9
+			goods_output_chimesilt_add = 3
+		}
+	}
+}
+
+pm_canada_reference_here = {  #maple syrup
+texture = "gfx/interface/icons/production_method_icons/orchards.dds"  #we need a syrup icon
+
+building_modifiers = {
+	workforce_scaled = {
+		goods_output_wood_add = -10
+		goods_output_sugar_add = 10
+	}
+}
+}
+
+pm_potion_sap = {  #it's what it says on the box
+texture = "gfx/interface/icons/production_method_icons/orchards.dds"  #we need a syrup icon
+
+building_modifiers = {
+	workforce_scaled = {
+		goods_output_wood_add = -15
+		goods_output_sugar_add = 5
+		goods_output_potions_add = 5
+	}
+}
+}
+
+pm_liquortrees = {  #let me cook ##rename though
+texture = "gfx/interface/icons/production_method_icons/orchards.dds" 
+
+building_modifiers = {
+	workforce_scaled = {
+		goods_output_wood_add = -15
+		goods_output_liquor_add = 8
+		goods_output_sugar_add = 5
+	}
+}
+}
+
+pm_cloudsilver_roots = {  #through the ROOTS, M A N
+texture = "gfx/interface/icons/production_method_icons/orchards.dds" 
+
+building_modifiers = {
+	workforce_scaled = {
+		goods_output_wood_add = -7
+		goods_output_cloudsilver_add = 8
+		
+	}
+}
+}
+
+pm_interplanar_ass_termites = {  #this could MAYBE be a PM you're forced to take and have a journal to clear, but if we did that we'd want it to be... shittier.  Could leave this as-is and do that with a locust swarm interplanar woodrot or something instead.
+texture = "gfx/interface/icons/production_method_icons/orchards.dds"  
+#unlocking_technologies = { } #veil level tech
+building_modifiers = {
+	workforce_scaled = {
+		goods_output_wood_add = -15
+		goods_output_monster_essence_add = 10
+	}
+}
+}
+
+pm_interplanar_ass_woodrot = {  #this is the evil pm yes yes yes.  arguably could just be a state modifier.  needs a related JE.  ##combine with a state modifier reducing throughput for maximum rage
+texture = "gfx/interface/icons/production_method_icons/orchards.dds"  
+#unlocking_technologies = { } #veil level tech
+building_modifiers = {
+	unscaled = {
+		building_goods_output_mult = -0.15 #I might raise this
+		
+	}
+}
+}
+
 #Construction
 
 pm_early_wishstone_constructed_buildings = {  #not sure if we want a magic construction option this early

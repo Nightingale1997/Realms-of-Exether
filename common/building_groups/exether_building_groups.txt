@@ -322,3 +322,43 @@ bg_rice_farms_leechgardens = {
 	
 	cash_reserves_max = 25000
 }
+
+bg_logging_mimosa = {
+	parent_group = bg_logging
+	
+	default_building = building_logging_camp_mimosa
+
+	can_use_slaves = yes
+}
+
+bg_logging_potion_sap = {
+	parent_group = bg_logging
+	
+	default_building = building_logging_camp_potion_sap
+
+	can_use_slaves = yes
+}
+
+bg_logging_syrup_trees = {
+	parent_group = bg_logging
+	
+	default_building = building_logging_camp_syrup_trees
+
+	can_use_slaves = yes
+}
+
+bg_logging_cloudsilver_roots = {
+	parent_group = bg_logging
+	
+	default_building = building_logging_camp_cloudsilver_roots
+
+	can_use_slaves = yes
+}
+
+bg_logging_liquortrees = {
+	parent_group = bg_logging
+	
+	default_building = building_logging_camp_liquortrees
+
+	can_use_slaves = yes
+}
