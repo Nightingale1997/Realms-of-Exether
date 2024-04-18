@@ -482,6 +482,7 @@ STATE_ASHWICK_3 = {
     subsistence_building = "building_subsistence_farms"
     provinces = { "x71A4FE" "x7EDFB6" "x8282F1" "x8BFD90" "xA4C9A3" "xA6F1A2" "xA79EC7" "xAA96E7" "xB0F580" "xBBE0B8" "xBEF7DD" "xD4F3A5" "xDB62DA" "xE6C063" "xF77CA7" "xFB67A1" "xFCDBAA" }
 
+    naval_exit_id = 3048
 }
 STATE_OUTER_MOORWEALD = {
     id = 4155
@@ -1326,6 +1327,7 @@ STATE_GRAVELROCK_ROAD = {
     id = 4195
     subsistence_building = "building_subsistence_pastures"
     provinces = { "x63DAD0" "x65C7FA" "x67EAEC" "x6A94FC" "x6ADBDC" "x8FA2F7" "x9FA3FC" "xA7D1FE" "xA9A4DE" "xA9F281" "xAEF0F3" "xB58BCD" "xC1EDA1" "xC9D4E6" "xCA98D7" "xDC76D7" "xDC90AB" "xE7CF8E" "xE8F925" "xEFD0DB" "xF8E0DB" "xF8F1C7" "xF94FF0" "xFAE19F" "xFCBDBD" "xFDE638" }
+    impassable = { "x6adbdc" "xc9d4e6" "xdc90ab" "xa9a4de" }
     traits = { "state_trait_ferstone_ridge" }
     city = x58BEF1
     wood = x63DAD0
@@ -1463,6 +1465,7 @@ STATE_SKYPIERCER_PEAK = {
     id = 4203
     subsistence_building = "building_subsistence_pastures"
     provinces = { "x45F8C3" "x9DEC7F" "xA0D3C7" "xAAC8BA" "xACBEA9" "xBEBA9D" "xC8F8FE" "xCDF356" "xD2AF86" "xD2BBE5" "xD464C4" "xE98BF3" "xF0F4C5" "xF374E2" "xF6C9B0" "xFC9BF4" }
+    impassable = { "x45F8C3" "xF374E2" "xD2BBE5" "xF0F4C5" }
     traits = { "state_trait_ferstone_ridge" }
     city = x45F8C3
     wood = x9DEC7F
@@ -1475,6 +1478,7 @@ STATE_CLOUDSILVER_SPINE = {
     id = 4204
     subsistence_building = "building_subsistence_pastures"
     provinces = { "xA36BF7" "xB3FCA7" "xB5D8D3" "xBACAF9" "xBCBCFA" "xC9B6B2" "xC9CA89" "xCEF874" "xD5BDF3" "xD5D4E4" "xDBC095" "xDFA7BA" "xE1DA53" "xE9FA22" "xEBA581" "xEF28E1" "xF3E83D" "xF6D5A6" "xF8A9D6" "xFB58C3" }
+    impassable = { "xF6D5A6" "xb3fca7" "xd5bdf3" }
     traits = { "state_trait_ferstone_ridge" }
     city = x68FDFD
     wood = xA36BF7
@@ -1493,6 +1497,7 @@ STATE_VOZMEAD_LOWLANDS = {
     mine = xA4E4B9
     port = xA7E7FD
 
+    naval_exit_id = 3048
 }
 STATE_SUNKEN_CLIFFS = {
     id = 4206
@@ -1504,6 +1509,7 @@ STATE_SUNKEN_CLIFFS = {
     mine = x94EFA3
     port = x9FDA93
 
+    naval_exit_id = 3023
 }
 STATE_DWARVENHAMMER = {
     id = 4207
