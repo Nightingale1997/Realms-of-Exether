@@ -196,6 +196,12 @@ pm_no_regional_logging = {
 pm_mimosa_trees = {  #this is a reference to dmt extraction methods irl
 	texture = "gfx/interface/icons/production_method_icons/orchards.dds"
 	
+	unlocking_production_methods = {
+		pm_no_hardwood
+		pm_saw_mills
+		pm_electric_saw_mills
+	}
+
 	building_modifiers = {
 		workforce_scaled = {
 			goods_output_wood_add = -15
@@ -219,17 +225,29 @@ building_modifiers = {
 pm_potion_sap = {  #it's what it says on the box
 texture = "gfx/interface/icons/production_method_icons/orchards.dds"  #we need a syrup icon
 
-building_modifiers = {
-	workforce_scaled = {
-		goods_output_wood_add = -15
-		goods_output_sugar_add = 5
-		goods_output_potions_add = 5
+	unlocking_production_methods = {
+		pm_no_hardwood
+		pm_saw_mills
+		pm_electric_saw_mills
 	}
-}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_wood_add = -15
+			goods_output_sugar_add = 5
+			goods_output_potions_add = 5
+		}
+	}
 }
 
 pm_liquortrees = {  #let me cook ##rename though
 texture = "gfx/interface/icons/production_method_icons/orchards.dds" 
+
+unlocking_production_methods = {
+	pm_no_hardwood
+	pm_saw_mills
+	pm_electric_saw_mills
+}
 
 building_modifiers = {
 	workforce_scaled = {
@@ -255,6 +273,8 @@ building_modifiers = {
 pm_interplanar_ass_termites = {  #this could MAYBE be a PM you're forced to take and have a journal to clear, but if we did that we'd want it to be... shittier.  Could leave this as-is and do that with a locust swarm interplanar woodrot or something instead.
 texture = "gfx/interface/icons/production_method_icons/orchards.dds"  
 #unlocking_technologies = { } #veil level tech
+
+
 building_modifiers = {
 	workforce_scaled = {
 		goods_output_wood_add = -15
