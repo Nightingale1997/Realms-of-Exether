@@ -476,7 +476,7 @@ STATE_EIREKS_WASH = {
         bg_seasnake_wharf = 7
     }
     resource = {
-        type = "bg_rubber"
+        type = "bg_rubber"<
         undiscovered_amount = 11
     }
     naval_exit_id = 3011
@@ -1864,7 +1864,8 @@ STATE_POFIKAN = {
     arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
     capped_resources = {
         bg_coal_mining = 80
-        bg_logging = 23
+        bg_logging = 13
+        bg_logging_stonewood = 10
     }
     resource = {
         type = "bg_rubber"

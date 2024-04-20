@@ -1322,7 +1322,16 @@ STATE_WHANAKOA = {
     farm = x82F285
     mine = x9EE6E3
     port = xA164F7
-
+    arable_land = 40
+    arable_resources = { "bg_livestock_farms" "bg_mint_tea_plantations" "bg_wyrmfruit_plantations" }
+    capped_resources = {
+        bg_iron_mining = 36
+        bg_logging = 14
+    }
+    resource = {
+        type = "bg_cold_rubber"
+        discovered_amount = 10
+    }
     naval_exit_id = 3089
 }
 STATE_NORTHERN_1 = {

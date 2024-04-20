@@ -288,11 +288,11 @@ pm_electric_saw_mills_stonewood = {
 }
 
 pm_no_potion_sap = {
-	texture = "gfx/interface/icons/production_method_icons/no_hardwood_selection.dds"
+	texture = "gfx/interface/icons/production_method_icons/no_potion_sap.dds"
 }
 
 pm_potion_sap = {
-	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
@@ -303,7 +303,7 @@ pm_potion_sap = {
 }
 
 pm_increased_potion_sap = {
-	texture = "gfx/interface/icons/production_method_icons/increased_hardwood.dds"
+	texture = "gfx/interface/icons/production_method_icons/increased_potion_sap.dds"
 
 	unlocking_production_methods = {
 		pm_saw_mills
