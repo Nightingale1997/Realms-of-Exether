@@ -61,3 +61,53 @@ pmg_monster_hunters_squids = { #HUNTING BIGGER SQUIDS
 		pm_squid_squads
 	}
 }
+
+pmg_regional_mimosa = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_regional_logging
+		pm_mimosa_trees
+	}
+}
+
+pmg_syrup_trees = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_regional_logging
+		pm_canada_reference_here
+	}
+}
+
+pmg_potion_sap = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_no_potion_sap
+		pm_potion_sap
+		pm_increased_potion_sap
+	}
+}
+
+pmg_base_building_logging_camp_stonewood = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_simple_forestry_stonewood
+		pm_saw_mills_stonewood
+		pm_electric_saw_mills_stonewood
+	}
+}
+
+pmg_liquortrees = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_regional_logging
+		pm_liquortrees
+	}
+}
+
+pmg_cloudsilver_roots = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_regional_logging
+		pm_cloudsilver_roots
+	}
+}
