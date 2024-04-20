@@ -215,4 +215,28 @@
 			transfer_to_formation = scope:rse_army
 		}
 	}
+	c:DRI = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_gnomehome
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_FLUSTERBEEK
+				count = 6
+			}
+
+			save_scope_as = dri_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_gnomehome
+			save_scope_as = dri_general
+		}
+		
+		scope:dri_general = {
+			transfer_to_formation = scope:dri_army
+		}
+	}
 }

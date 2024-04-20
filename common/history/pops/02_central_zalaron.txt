@@ -971,7 +971,20 @@
   }
     
   s:STATE_NOVAJEGO = {
-
+	region_state:HOU = {
+		create_pop = {
+			culture = stranfolk
+			size = 301284
+		}
+		create_pop = {
+			culture = glabrekthorn
+			size = 82912
+		}
+		create_pop = {
+			culture = tefereti
+			size = 10299
+		}
+	}
   }
     
   s:STATE_INSULECO = {
@@ -1081,7 +1094,20 @@
   }
     
   s:STATE_XODAN = {
-
+	region_state:HOU = {
+		create_pop = {
+			culture = stranfolk
+			size = 481728
+		}
+		create_pop = {
+			culture = glabrekthorn
+			size = 92182
+		}
+		create_pop = {
+			culture = vairian
+			size = 22182
+		}
+	}
   }
     
   s:STATE_ZALULIK = {
@@ -1095,10 +1121,6 @@
 			size = 292188
 		}
 	}
-  }
-    
-  s:STATE_DIFOBIK = {
-
   }
     
   s:STATE_NAN = {

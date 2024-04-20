@@ -1,0 +1,74 @@
+﻿MILITARY_FORMATIONS = {
+	c:FIS = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_gnomehome
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_WETTERWIIDTE
+				count = 8
+			}
+
+			save_scope_as = fis_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_gnomehome
+			save_scope_as = fis_general
+		}
+		
+		scope:fis_general = {
+			transfer_to_formation = scope:fis_army
+		}
+	}
+	c:SEE = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_steepcliff
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_STILTEBRUZJE
+				count = 10
+			}
+
+			save_scope_as = see_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_steepcliff
+			save_scope_as = see_general
+		}
+		
+		scope:see_general = {
+			transfer_to_formation = scope:see_army
+		}
+	}
+	c:HOU = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_steepcliff
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_STJERROPTOCHT
+				count = 12
+			}
+
+			save_scope_as = hou_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_steepcliff
+			save_scope_as = hou_general
+		}
+		
+		scope:hou_general = {
+			transfer_to_formation = scope:hou_army
+		}
+	}
+}
