@@ -1,0 +1,30 @@
+﻿CHARACTERS = {
+	c:DRI = {
+		create_character = {
+			first_name = "Victor"
+			last_name = "de_Theux_de_Meylandt"
+			historical = yes
+			ruler = yes
+			is_general = yes
+			age = 21
+			interest_group = ig_landowners
+			ideology = ideology_traditionalist
+			traits = {
+				romantic
+				inspirational_orator
+			}
+		}
+		create_character = {
+			first_name = "Manfred"
+			last_name = "de_Theux_de_Meylandt"
+			historical = yes
+			heir = yes
+			age = 1
+			interest_group = ig_landowners
+			ideology = ideology_traditionalist
+			traits = {
+				trait_child
+			}
+		}
+	}
+}

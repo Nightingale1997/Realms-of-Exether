@@ -677,6 +677,7 @@ STATE_TAYTAQOCHA = {
     capped_resources = {
         bg_logging = 3
         bg_opium_plantations = 10
+		bg_wishstone_mining_depletable = 50
     }
 
 }
@@ -690,7 +691,7 @@ STATE_KUNTURPAMPA = {
     farm = x45DEEA
     mine = x9AF2CC
     port = xB1F455
-    arable_land = 40
+    arable_land = 60
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
     capped_resources = {
         bg_logging = 5

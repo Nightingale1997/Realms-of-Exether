@@ -1593,7 +1593,12 @@ STATE_NOVAJEGO = {
     farm = x91A7BD
     mine = x9DF5DC
     port = x9EE18A
-
+	arable_land = 22
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_vineyard_plantations" "bg_cotton_plantations" "bg_tea_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 9
+		bg_fishing = 7
+    }
     naval_exit_id = 3005
 }
 STATE_INSULECO = {
@@ -1713,7 +1718,12 @@ STATE_XODAN = {
     farm = xBC65F7
     mine = xC0D46B
     port = xCEC1EC
-
+	arable_land = 35
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_vineyard_plantations" "bg_cotton_plantations" "bg_tea_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 12
+		bg_fishing = 5
+    }
     naval_exit_id = 3005
 }
 STATE_ZALULIK = {
@@ -1735,7 +1745,6 @@ STATE_ZALULIK = {
         undiscovered_amount = 28
     }
 }
-
 STATE_NAN = {
     id = 4334
     subsistence_building = "building_subsistence_orchards"

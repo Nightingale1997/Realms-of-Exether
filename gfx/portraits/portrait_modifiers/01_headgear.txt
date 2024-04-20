@@ -1415,31 +1415,6 @@
         }
     }
 
-    native_american_char_headgear_03 = {
-        dna_modifiers = {
-            accessory = {
-                mode = add
-                gene = headgear
-                template = native_american_high_headgear
-                range = { 0 1 } # For the randomness to work correctly
-            }
-        }
-        weight = {
-            base = 0
-            modifier = {
-                add = 1000
-                ruler_clothes_trigger = yes
-                scope:character = {
-                    is_ruler = yes
-                    OR = {
-                        culture = cu:waldgnomklaai
-                        culture = cu:stranfolk
-                    }
-                }
-            }
-        }
-    }
-
     native_american_bandanna = {
         dna_modifiers = {
             accessory = {
