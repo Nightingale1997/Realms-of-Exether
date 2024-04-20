@@ -1474,7 +1474,16 @@ STATE_FLORBORDO = {
     farm = xA6D7E7
     mine = xABFC79
     port = xB1C2D5
-
+    arable_land = 70
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 30
+        bg_fishing = 7
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 24
+    }
 }
 STATE_VESPERVIDO = {
     id = 4317
@@ -1607,7 +1616,15 @@ STATE_KOTIK = {
     farm = x98F9CE
     mine = xA1C4AA
     port = xA665F0
-
+    arable_land = 80
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 20
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 16
+    }
 }
 STATE_BIFAN = {
     id = 4327
@@ -1660,7 +1677,11 @@ STATE_LIPOLAN = {
     farm = xABEFD9
     mine = xAE75E1
     port = xB685FE
-
+    arable_land = 70
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 18
+    }
 }
 STATE_ZIKAN = {
     id = 4330
@@ -1724,7 +1745,11 @@ STATE_NAN = {
     farm = x97D5C1
     mine = xB195D1
     port = xBAD5DB
-
+    arable_land = 40
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_dye_plantations" "bg_tobacco_plantations" }
+    capped_resources = {
+        bg_logging = 8
+    }
 }
 STATE_FIKOLIK = {
     id = 4335
@@ -1737,7 +1762,20 @@ STATE_FIKOLIK = {
     farm = x64F49E
     mine = x75C8B9
     port = x88E9D2
-
+    arable_land = 50
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_coal_mining = 48
+        bg_logging = 25
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 60
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 5
+    }
 }
 STATE_VOTILAN = {
     id = 4336
@@ -1748,7 +1786,16 @@ STATE_VOTILAN = {
     farm = x8597DF
     mine = x85C3E1
     port = xC8E8DC
-
+    arable_land = 50
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_iron_mining = 36
+        bg_logging = 23
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 32
+    }
 }
 STATE_ZALANIX = {
     id = 4337
@@ -1759,7 +1806,16 @@ STATE_ZALANIX = {
     farm = xBD85D0
     mine = xD4D6A9
     port = xE4C870
-
+    arable_land = 70
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_iron_mining = 27
+        bg_logging = 18
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 22
+    }
 }
 STATE_BANOKIK = {
     id = 4338
@@ -1772,7 +1828,16 @@ STATE_BANOKIK = {
     farm = x9EEFF4
     mine = xA486D1
     port = xAED2EC
-
+    arable_land = 60
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_coal_mining = 48
+        bg_logging = 14
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 22
+    }
 }
 STATE_KULIKAN = {
     id = 4339
@@ -1795,7 +1860,16 @@ STATE_POFIKAN = {
     farm = x9B7EE9
     mine = xA1FEAF
     port = xA5A4BE
-
+    arable_land = 80
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_coal_mining = 80
+        bg_logging = 23
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 16
+    }
 }
 STATE_NOLIPIK = {
     id = 4341
@@ -1807,7 +1881,15 @@ STATE_NOLIPIK = {
     farm = x4CC4F5
     mine = x7D9FDB
     port = x81CDD8
-
+    arable_land = 100
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_dye_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" }
+    capped_resources = {
+        bg_logging = 4
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 24
+    }
 }
 STATE_VAVULAN = {
     id = 4342
@@ -1819,7 +1901,17 @@ STATE_VAVULAN = {
     farm = x83D2EB
     mine = x848DE7
     port = x8CE9B9
-
+    arable_land = 60
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_iron_mining = 24
+        bg_sulfur_mining = 40
+        bg_logging = 17
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 8
+    }
 }
 STATE_KANOBAN = {
     id = 4343

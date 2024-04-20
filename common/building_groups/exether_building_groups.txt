@@ -272,3 +272,45 @@ bg_fishing_squidlets = {
 	parent_group = bg_fishing
 	default_building = building_fishing_wharf_squidlets
 }
+bg_plantations_discoverable = {
+	category = rural
+
+	land_usage = rural
+	
+	economy_of_scale = yes
+	
+	lens = plantation
+	
+	can_use_slaves = yes
+
+	discoverable_resource = yes
+
+	cash_reserves_max = 25000
+	
+	urbanization = 5
+	infrastructure_usage_per_level = 1
+	
+	should_auto_expand = { 
+		default_auto_expand_rule = yes
+	}
+	
+	economy_of_scale_ai_factor = 1.5
+}
+
+bg_wyrmfruit_plantations = {
+	parent_group = bg_plantations_discoverable
+	
+	default_building = building_wyrmfruit_plantation
+}
+
+bg_snowrubber_plantations = {
+	parent_group = bg_plantations_discoverable
+	
+	default_building = building_snowrubber_plantation
+}
+
+bg_snowcoffee_plantations = {
+	parent_group = bg_plantations_discoverable
+	
+	default_building = building_snowcoffee_plantation
+}

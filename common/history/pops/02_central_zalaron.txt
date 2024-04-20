@@ -899,7 +899,17 @@
   }
     
   s:STATE_FLORBORDO = {
-
+	region_state:KRO = {
+		create_pop = {
+			culture = glabrekthorn
+			size = 862000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = vairian
+			size = 80000
+		}
+	}
   }
     
   s:STATE_VESPERVIDO = {
@@ -969,7 +979,22 @@
   }
     
   s:STATE_KOTIK = {
+	region_state:BLL = {
+		create_pop = {
+			culture = lumvareth
+			size = 745196
+		}
+		create_pop = {
+			culture = lumvareth
+			religion = elf_magic
+			size = 72604
+		}
+		create_pop = {
+			culture = kashtarnel
+			size = 65196
+		}
 
+	}
   }
     
   s:STATE_BIFAN = {
@@ -1016,7 +1041,30 @@
   }
     
   s:STATE_LIPOLAN = {
-
+	region_state:WRA = {
+		create_pop = {
+			culture = glabrekthorn
+			size = 568000
+		}
+		create_pop = {
+			culture = lumvareth
+			size = 99988
+		}
+		create_pop = {
+			culture = beithaven
+			size = 20000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = beithaven
+			size = 90180
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = glabrekthorn
+			size = 10000
+		}
+	}
   }
     
   s:STATE_ZIKAN = {
@@ -1054,23 +1102,108 @@
   }
     
   s:STATE_NAN = {
-
+	region_state:WRA = {
+		create_pop = {
+			culture = glabrekthorn
+			size = 148004
+		}
+		create_pop = {
+			culture = lumvareth
+			size = 49996
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = glabrekthorn
+			size = 12000
+		}
+	}
   }
     
   s:STATE_FIKOLIK = {
-
+	region_state:KRO = {
+		create_pop = {
+			culture = glabrekthorn
+			size = 76200
+		}
+		create_pop = {
+			culture = stranfolk
+			size = 29000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = glabrekthorn
+			size = 9000
+		}
+	}
   }
     
   s:STATE_VOTILAN = {
-
+	region_state:KRO = {
+		create_pop = {
+			culture = glabrekthorn
+			size = 392000
+		}
+		create_pop = {
+			culture = glabrekthorn
+			religion = druidic
+			size = 42000
+		}
+		create_pop = {
+			culture = stranfolk
+			size = 84000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = vairian
+			size = 20000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = glabrekthorn
+			size = 30000
+		}
+	}
   }
     
   s:STATE_ZALANIX = {
-
+	region_state:ZIL = {
+		create_pop = {
+			culture = glabrekthorn
+			size = 720000
+		}
+		create_pop = {
+			culture = lumvareth
+			size = 6000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = vairian
+			size = 72000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = glabrekthorn
+			size = 6000
+		}
+	}
   }
     
   s:STATE_BANOKIK = {
-
+	region_state:WRA = {
+		create_pop = {
+			culture = glabrekthorn
+			size = 230000
+		}
+		create_pop = {
+			culture = chewa
+			size = 86000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = beithaven
+			size = 6000
+		}
+	}
   }
     
   s:STATE_KULIKAN = {
@@ -1078,15 +1211,71 @@
   }
     
   s:STATE_POFIKAN = {
-
+	region_state:BLL = {
+		create_pop = {
+			culture = lumvareth
+			size = 705196
+		}
+		create_pop = {
+			culture = kashtarnel
+			size = 106196
+		}
+		create_pop = {
+			culture = lumvareth
+			religion = elf_magic
+			size = 72604
+		}
+	}
   }
     
   s:STATE_NOLIPIK = {
-
+	region_state:BLL = {
+		create_pop = {
+			culture = lumvareth
+			size = 928400
+		}
+		create_pop = {
+			culture = lumvareth
+			religion = animist
+			size = 170000
+		}
+		create_pop = {
+			culture = kashtarnel
+			size = 88000
+		}
+		create_pop = {
+			culture = glabrekthorn
+			size = 242396
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = vairian
+			size = 18000
+		}
+	}
   }
     
   s:STATE_VAVULAN = {
-
+	region_state:ZIL = {
+		create_pop = {
+			culture = glabrekthorn
+			size = 450800
+		}
+		create_pop = {
+			culture = glabrekthorn
+			religion = animist
+			size = 155996
+		}
+		create_pop = {
+			culture = lumvareth
+			size = 48000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = vairian
+			size = 50000
+		}
+	}
   }
     
   s:STATE_KANOBAN = {
