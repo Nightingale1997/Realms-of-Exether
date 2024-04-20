@@ -159,7 +159,7 @@ STATE_CARTHALIA = {
         bg_logging = 2
         bg_fishing_glowfish = 5
     }
-    naval_exit_id = 3009
+    naval_exit_id = 3071
 }
 STATE_SABRATHOS = {
     id = 3703
@@ -206,6 +206,7 @@ STATE_ZAMARA = {
     mine = xDB7AB2
     port = xDEBD5B
 
+    naval_exit_id = 3040
 }
 STATE_LEPTORIA = {
     id = 3706
@@ -217,6 +218,7 @@ STATE_LEPTORIA = {
     mine = xD6F886
     port = xD8D2A0
 
+    naval_exit_id = 3071
 }
 STATE_GADYRUS = {
     id = 3707
@@ -267,11 +269,12 @@ STATE_SIGARA = {
     mine = x73BAF4
     port = x949AF1
 
+    naval_exit_id = 3052
 }
 STATE_MOTHYA = {
     id = 3710
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x65FBBD" "xAACE90" "xBF89D3" "xDBB1FE" "xE19BB9" "xE9BFD5" "xEED85D" "xEFBC61" }
+    provinces = { "x65FBBD" "xBF89D3" "xDBB1FE" "xE19BB9" "xE9BFD5" "xEED85D" "xEFBC61" }
     city = x65FBBD
     wood = xAACE90
     farm = xBF89D3
@@ -288,7 +291,7 @@ STATE_MOTHYA = {
 STATE_LILYBAEUM = {
     id = 3711
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x8BB1C6" "xA4D3D2" "xA8C9CB" "xB3E193" "xC376FC" "xCEA1A5" }
+    provinces = { "x8BB1C6" "xA4D3D2" "xA8C9CB" "xAACE90" "xB3E193" "xC376FC" "xCEA1A5" }
     city = x8BB1C6
     wood = xA4D3D2
     farm = xA8C9CB

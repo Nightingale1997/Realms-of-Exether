@@ -266,7 +266,7 @@ STATE_RAQUARTES_SHIELD = {
 STATE_EASTERN_EMBERLAND = {
     id = 4236
     subsistence_building = "building_subsistence_orchards"
-    provinces = { "x2FF9D1" "x38EFDB" "x76C2CC" "x8FD7C4" "x9AE5F2" "x9B8AD9" "x9EDCAB" "xA5DEC8" "xB8C5E3" "xC6D2A0" "xC6D774" "xCB3DF0" "xDB839D" "xE7C15E" "xEFDCC9" "xF010F9" "xF3C55A" "xF5F0E4" "xF6A8E8" "xF6D4D2" "xF7EDB1" "xFBEAED" }
+    provinces = { "x2FF9D1" "x38EFDB" "x76C2CC" "x8FD7C4" "x9AE5F2" "x9B8AD9" "x9EDCAB" "xA5DEC8" "xB8C5E3" "xC6D2A0" "xC6D774" "xCB3DF0" "xDB839D" "xEFDCC9" "xF010F9" "xF3C55A" "xF5F0E4" "xF6A8E8" "xF6D4D2" "xF7EDB1" "xFBEAED" }
     traits = { "state_trait_terforte_slopes" }
     city = x2FF9D1
     wood = x76C2CC
@@ -289,7 +289,7 @@ STATE_EASTERN_EMBERLAND = {
 STATE_WESTERN_EMBERLAND = {
     id = 4237
     subsistence_building = "building_subsistence_orchards"
-    provinces = { "x1EE1FD" "x36F8E3" "x3FD5F2" "x8AD39D" "x9C8CCE" "xA0AEC3" "xA4A9C9" "xA4AEDE" "xA8ECC8" "xBCBACF" "xC1FBD2" "xC4F873" "xC5CCB6" "xC799E4" "xD3F3B8" "xDAA595" "xDE58D6" "xDEC973" "xE09481" "xE0EA9A" "xE2F278" "xEFF13E" "xF555E6" "xF59987" "xF5D0F7" "xFBF5E0" "xFC4DF0" }
+    provinces = { "x3FD5F2" "x8AD39D" "x9C8CCE" "xA0AEC3" "xA4A9C9" "xA4AEDE" "xA8ECC8" "xBCBACF" "xC4F873" "xC5CCB6" "xC799E4" "xD3F3B8" "xDAA595" "xDE58D6" "xDEC973" "xE09481" "xE0EA9A" "xE2F278" "xE7C15E" "xEFF13E" "xF555E6" "xF59987" "xF5D0F7" "xFBF5E0" "xFC4DF0" }
     city = x1EE1FD
     wood = x36F8E3
     farm = x3FD5F2
@@ -306,7 +306,7 @@ STATE_WESTERN_EMBERLAND = {
 STATE_CHANSONBOIS = {
     id = 4238
     subsistence_building = "building_subsistence_orchards"
-    provinces = { "x3BE5D9" "x5EF2BB" "x74A2F2" "x7D98F1" "x83ABE6" "x8988E7" "x8B9ECF" "x8FBBE8" "xBADAB9" "xBBDA71" "xBD86FA" "xC7D894" "xD2F064" "xD4ABE2" "xE4D6B5" "xE9A6C2" "xE9FB44" "xEAF577" "xEBD4E7" "xF0E0A2" "xF4D89E" "xF9FE2F" }
+    provinces = { "x1EE1FD" "x36F8E3" "x3BE5D9" "x5EF2BB" "x74A2F2" "x7D98F1" "x83ABE6" "x8988E7" "x8B9ECF" "x8FBBE8" "xBADAB9" "xBBDA71" "xBD86FA" "xC1FBD2" "xC7D894" "xD2F064" "xD4ABE2" "xE4D6B5" "xE9A6C2" "xE9FB44" "xEAF577" "xEBD4E7" "xF0E0A2" "xF4D89E" "xF9FE2F" }
     city = x3BE5D9
     wood = x5EF2BB
     farm = x7D98F1
@@ -1102,7 +1102,7 @@ STATE_BROKENPILLAR = {
     id = 4290
     subsistence_building = "building_subsistence_pastures"
     provinces = { "x19E1FD" "x37F6D9" "x75AEF5" "x7CB5FD" "x7EEFBB" "x95FDB3" "x969CEF" "x96E89B" "xADF2B1" "xB1FCFC" "xB3D9D9" "xB88CEB" "xBB69F1" "xBCD888" "xBEA0C8" "xC1A8B1" "xC1E268" "xCEB6A4" "xCFEB6E" "xCFEED3" "xD3ACB3" "xD4E2A2" "xD8F0C5" "xDBF46A" "xDECFA6" "xE3CFB5" "xE7EA6D" "xEA9692" "xEA9DD0" "xEBE76C" "xEE9AFD" "xF2A6D8" "xF2DECD" "xF713EB" "xFCB39D" "xFCD726" }
-    impassable = { "xE7EA6D" "x19E1FD" "xE3CFB5" "xf713eb" "xDBF46A" "x37F6D9" "x75aef5" "x7eefbb" "xD8F0C5" "xC1E268" "xEA9692" }
+    impassable = { "xEE9AFD" "xE7EA6D" "x19E1FD" "xE3CFB5" "xf713eb" "xDBF46A" "x37F6D9" "x75aef5" "x7eefbb" "xD8F0C5" "xC1E268" "xEA9692" }
     traits = { "state_trait_crescent_range" }
     city = x19E1FD
     wood = x2DEEFC
@@ -1735,18 +1735,7 @@ STATE_ZALULIK = {
         undiscovered_amount = 28
     }
 }
-STATE_DIFOBIK = {
-    id = 4333
-    subsistence_building = "building_subsistence_orchards"
-    provinces = { "x6AFBB1" "xA6FAC7" "xC5F262" "xCA58D5" "xE5E86C" "xF2FA67" }
-    traits = { "state_trait_misty_peaks" }
-    city = x6AFBB1
-    wood = xA6FAC7
-    farm = xC5F262
-    mine = xCA58D5
-    port = xE5E86C
 
-}
 STATE_NAN = {
     id = 4334
     subsistence_building = "building_subsistence_orchards"
@@ -1766,6 +1755,7 @@ STATE_FIKOLIK = {
     id = 4335
     subsistence_building = "building_subsistence_orchards"
     provinces = { "x4EC0F0" "x59DDBF" "x5AEBEA" "x64F49E" "x75C8B9" "x88E9D2" "xA0EBC4" "xC7DBF8" "xCF7FF6" "xDCF8AE" "xE4B8AA" "xED3EF4" "xFB63B6" "xFC74B7" }
+    impassable = { "xed3ef4" "x88e9d2" "x5aebea" "xdcf8ae" "xcf7ff6" }
     traits = { "state_trait_misty_peaks" }
     city = x4EC0F0
     wood = x5AEBEA
@@ -1831,6 +1821,7 @@ STATE_BANOKIK = {
     id = 4338
     subsistence_building = "building_subsistence_orchards"
     provinces = { "x789EF4" "x7CF4DD" "x9EEFF4" "xA486D1" "xAED2EC" "xB18CB9" "xB8C2D2" "xC973EF" "xCB7EB1" "xCD6BC7" "xCEAAA6" "xD248F4" "xE55EFD" "xEA4CDD" "xECDC92" "xFE86FC" }
+    impassable = { "xceaaa6" "x789ef4" "x9eeff4" "xecdc92" }
     traits = { "state_trait_misty_peaks" }
     city = x789EF4
     wood = x7CF4DD
@@ -2637,3 +2628,4 @@ STATE_PINCER_PENINSULA = {
     }
     naval_exit_id = 3087
 }
+#4333 is available
