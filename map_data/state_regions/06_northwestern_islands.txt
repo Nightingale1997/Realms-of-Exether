@@ -1294,6 +1294,17 @@ STATE_PUCOVATU = {
     farm = x8CF6EE
     mine = xADC3CE
     port = xC87BD3
+    arable_land = 18
+    arable_resources = { "bg_livestock_farms" "bg_mint_tea_plantations" "bg_wyrmfruit_plantations" }
+    capped_resources = {
+        bg_iron_mining = 12
+        bg_logging = 6
+        bg_fishing_squidlets = 8
+    }
+    resource = {
+        type = "bg_cold_rubber"
+        discovered_amount = 4
+    }
     naval_exit_id = 3089
 }
 STATE_TURAKINA = {
