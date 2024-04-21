@@ -47,9 +47,11 @@ building_airship_dock = {
 					has_building = building_skyscraper
 					state_has_mountain = yes
 				}
-				NOT = { is_coastal = yes }
+				
+					
+				is_coastal = yes  #god's light does not shine upon us
 			}
-
+		
 		}
 	}
 }
