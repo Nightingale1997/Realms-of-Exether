@@ -1055,87 +1055,10 @@ nihilism.10 = { #Intellectual leader becomes a nihilist
 		ig:ig_intelligentsia = {
 			save_scope_as = intelligentsia_ig
 		}
-		if = {
-			limit = {
-				THIS = c:RUS
-				AND = {
-					game_date >= 1858.1.1
-					game_date <= 1875.1.1
-				}
-			}
-			create_character = {
-				first_name = Dmitry
-				last_name = Pisarev
-				historical = yes
-    			culture = cu:russian
-				ig_leader = yes
-				birth_date = 1840.10.2
-				interest_group = ig_intelligentsia
-				female = no
-				ideology = ideology_atheist
-				traits = {
-					direct
-					psychological_affliction		
-				}
-			}
-		}
-		else_if = { 
-			limit = {
-				OR = {
-					country_has_primary_culture = cu:north_german
-					country_has_primary_culture = cu:south_german
-				}
-				AND = {
-					game_date >= 1840.1.1
-					game_date <= 1882.1.1
-				}
-			}
-			create_character = {
-				first_name = Bruno
-				last_name = Bauer
-				historical = yes
-    			culture = cu:north_german
-				ig_leader = yes
-				birth_date = 1809.6.9
-				interest_group = ig_intelligentsia
-				female = no
-				ideology = ideology_atheist
-				traits = {
-					direct
-					persistent		
-				}
-			}
-		}
-		else_if = { 
-			limit = {
-				THIS = c:GBR
-				AND = {
-					game_date >= 1853.1.1
-					game_date <= 1891.1.1
-				}
-			}
-			create_character = {
-				first_name = Charles
-				last_name = Bradlaugh
-				historical = yes
-    			culture = cu:british
-				ig_leader = yes
-				birth_date = 1833.9.26
-				interest_group = ig_intelligentsia
-				female = no
-				ideology = ideology_atheist
-				traits = {
-					persistent
-					ambitious		
-				}
-			}
-		}
-		else = {
-			create_character = {
-				ig_leader = yes
-				interest_group = ig_intelligentsia
-				ideology = ideology_atheist
-			}
+		create_character = {
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_atheist
 		}
 		ig:ig_intelligentsia = { 
 			leader = {
