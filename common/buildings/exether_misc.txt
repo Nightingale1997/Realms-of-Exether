@@ -69,6 +69,22 @@ building_logging_camp_stonewood = {
 	}
 }
 
+building_haunted_grounds = {
+	building_group = bg_haunted_grounds
+	texture = "gfx/interface/icons/building_icons/ectoplasm.dds"
+	city_type = wood
+	required_construction = construction_cost_low
+	terrain_manipulator = forestry
+	levels_per_mesh = 5
+
+	production_method_groups = {
+		pmg_base_building_haunted_grounds
+		pmg_equipment_haunted_grounds
+		pmg_transportation_building_haunted_grounds
+		pmg_ownership_capital_building_haunted_grounds
+	}
+}
+
 building_logging_camp_syrup_trees = {
 	building_group = bg_logging_syrup_trees
 	texture = "gfx/interface/icons/building_icons/logging_camp.dds"
