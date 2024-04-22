@@ -1,23 +1,21 @@
-﻿wizards = {
-	texture = "gfx/interface/icons/pops_icons/wizards.dds"
-	color = hsv{ 0.81 0.56 0.75 }
+﻿heroes = {
+	texture = "gfx/interface/icons/pops_icons/heroes.dds"
+	color = hsv{ 0.20 0.58 0.46 }
 	strata = rich
 	start_quality_of_life = 20
 	working_adult_ratio = 0.2
 	wage_weight = 6
-	literacy_target = 0.80
-	education_access = 0.5
+	literacy_target = 0.60
 	dependent_wage = 0.0	# per year
 	unemployment = yes
-
 	
 	# 70% - 100% politically engaged
 	political_engagement_base = 0.7
 	political_engagement_literacy_factor = 0.3
 	
 	political_engagement_mult = {
-		value = 1
-
+		value = 1		
+		
 		add = {
 			desc = "POP_STARVATION"	
 			
@@ -29,30 +27,29 @@
 			}		
 		}
 		
-	}
+	}	
 	
-	qualifications_growth_desc = "WIZARDS_QUALIFICATIONS_DESC"
+	qualifications_growth_desc = "HEROES_QUALIFICATIONS_DESC"
 	qualifications = {
 		if = {
 			limit = {
 				is_peasant_under_serfdom = no
-				literacy_rate > 0.2
+				wealth > 10
 			}
-			# baseline: ( literacy - 0.2 ) * 10 + ( wealth / 10 ), norm 5
-			add = {
-				value = literacy_rate
-				subtract = 0.2
-				multiply = 20
-				desc = "QUALIFICATIONS_LITERACY_FACTOR"
-			}
+			# baseline: ( wealth - 10 ) / 10 + literacy, norm 1.5 for Wealth 20 and Literacy 50%
 			add = {
 				value = wealth
-				divide = 10
+				subtract = 10
+				divide = 5
 				desc = "QUALIFICATIONS_WEALTH_FACTOR"
+			}
+			add = {
+				value = literacy_rate
+				desc = "QUALIFICATIONS_LITERACY_FACTOR"
 			}
 			if = {
 				limit = {
-					is_pop_type = hedge_wizards
+					is_pop_type = adventurers
 				}
 				multiply = {
 					value = 5
@@ -61,7 +58,7 @@
 			}
 			if = {
 				limit = {
-					is_pop_type = academics
+					is_pop_type = officers
 				}
 				multiply = {
 					value = 5
@@ -87,10 +84,10 @@
 				value = 0
 			}
 		}
-		else = {
+		else = {		
 			value = {
-				desc = "QUALIFICATIONS_INSUFFICIENT_LITERACY_DECAY"
-				value = -1
+				desc = "QUALIFICATIONS_INSUFFICIENT_WEALTH_DECAY"
+				value = -2
 			}
 		}
 	}
