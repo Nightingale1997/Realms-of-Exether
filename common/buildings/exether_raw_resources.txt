@@ -291,17 +291,3 @@ building_fishing_wharf_glowfish = {
 		pmg_ownership_capital_building_fishing_wharf
 	}
 }
-
-building_fishing_wharf_squidlets = {
-	building_group = bg_fishing_squidlets
-	texture = "gfx/interface/icons/building_icons/cephalopods.dds"
-	city_type = port
-	required_construction = construction_cost_low
-
-	production_method_groups = {
-		pmg_base_building_fishing_wharf
-		pmg_squidlets
-		pmg_refrigeration_building_fishing_wharf
-		pmg_ownership_capital_building_fishing_wharf
-	}
-}
