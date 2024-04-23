@@ -115,7 +115,7 @@ PixelShader = {
 
 	Code
 	[[
-		#define LAND_COLOR ToLinear( HSVtoRGB( float3( 0.1f, 0.23f, 0.77f ) ) )
+		#define LAND_COLOR ToLinear( HSVtoRGB( float3( 0.1f, 0.15f, 0.77f ) ) )
 		#define HIGHLIGHT_RANGE 0.5f
 
 		int SampleCountryIndex( float2 MapCoords )
@@ -162,10 +162,7 @@ PixelShader = {
 
 				Opacity *= ( _CoaConstants._MapCoaBlendOccupation * ( 1.0f - _FlatmapLerp ) ) + ( _CoaConstants._MapCoaBlendOccupationFlatmap * _FlatmapLerp );
 
-				float FadeStart = ( _CoaConstants._MapCoaBlendFadeStart - _CoaConstants._MapCoaBlendFadeEnd );
-				float CloseZoomBlend = FadeStart - CameraPosition.y + ( _CoaConstants._MapCoaBlendFadeEnd );
-				CloseZoomBlend = smoothstep( FadeStart, 0.0f, CloseZoomBlend );
-				Opacity *= CloseZoomBlend;
+				Opacity = FadeCloseAlpha( Opacity );
 
 				float StripeScale = lerp( _CoaConstants._MapCoaStripeScale, _CoaConstants._MapCoaStripeScaleFlatmap, _FlatmapLerp );
 				Opacity *= CalculateStripeMask( MapCoords, 0.0, StripeScale );
@@ -236,10 +233,7 @@ PixelShader = {
 
 				Opacity *= ( _CoaConstants._MapCoaBlend * ( 1.0f - _FlatmapLerp ) ) + ( _CoaConstants._MapCoaBlendFlatmap * _FlatmapLerp );
 
-				float FadeStart = ( _CoaConstants._MapCoaBlendFadeStart - _CoaConstants._MapCoaBlendFadeEnd );
-				float CloseZoomBlend = FadeStart - CameraPosition.y + ( _CoaConstants._MapCoaBlendFadeEnd );
-				CloseZoomBlend = smoothstep( FadeStart, 0.0f, CloseZoomBlend );
-				Opacity *= CloseZoomBlend;
+				Opacity = FadeCloseAlpha( Opacity );
 
 				PreLightingBlend = max( Opacity, PreLightingBlend );
 
@@ -311,10 +305,7 @@ PixelShader = {
 				float ImpassableMask = ImpassableDiffuse.a * _ImpassableTerrainColor.a * ( 1.0f - _FlatmapLerp );
 
 				// Fade impassable close
-				float FadeStart = ( _DistanceFadeStart - _DistanceFadeEnd );
-				float CloseZoomBlend = FadeStart - CameraPosition.y + _DistanceFadeEnd;
-				CloseZoomBlend = smoothstep( FadeStart, 0.0f, CloseZoomBlend );
-				ImpassableMask *= CloseZoomBlend;
+				ImpassableMask = FadeCloseAlpha( ImpassableMask );
 				ProvinceOverlayColorWithAlpha = lerp( ProvinceOverlayColorWithAlpha, ImpassableDiffuse, ImpassableMask );
 
 				// Get blendmode
@@ -369,7 +360,21 @@ PixelShader = {
 			}
 
 			// Apply stylised noise
+			#ifndef LOW_QUALITY_SHADERS
+				#if defined( TERRAIN_FLAT_MAP ) || defined( TERRAIN_FLAT_MAP_LERP )
+					float DetailScale1 = 10.0f;
+					float DetailScale2 = 3.0f;
+					float DetailTexture1 = PdxTex2D( FlatmapNoiseMap, float2( ( ColorMapCoords.x * DetailScale1 * 2.0f ), 1.0f - ( ColorMapCoords.y * DetailScale1 ) ) ).g;
+					float DetailTexture2 = PdxTex2D( FlatmapNoiseMap, float2( ( ColorMapCoords.x * DetailScale2 * 2.0f ), 1.0f - ( ColorMapCoords.y * DetailScale2 ) ) ).g;
+					float DetailTexture3 = GetOverlay( DetailTexture1,  DetailTexture2, 1.0f );
 
+					// Don't blend in mapmodes
+					if ( !_UseMapmodeTextures )
+					{
+						ColorOverlay = saturate( GetOverlay( ColorOverlay, vec3( 1.0f - DetailTexture3 ), _FlatmapLerp ) );
+					}
+				#endif
+			#endif
 
 			if ( _UseStripeOccupation == true )
 			{

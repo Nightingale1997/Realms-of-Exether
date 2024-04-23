@@ -45,7 +45,7 @@ PixelShader =
 				float Alpha = CalcAlphaDistanceField( FontAtlas, Input.TexCoord );
 
 				float DayNightModifier = smoothstep( 0.3, 0.35, _DayNightValue );
-				float3 Color = lerp( float3( 0.06f, 0.02f, 0.02f ), vec3( 0.75 ), DayNightModifier * ( 1.0 - _FlatmapLerp ) );
+				float3 Color = lerp( float3( 0.03f, 0.02f, 0.02f ), vec3( 0.75 ), DayNightModifier * ( 1.0 - _FlatmapLerp ) );
 				float3 FlatmapColor = Color; // Pre effects color
 
 				// Fog of war
