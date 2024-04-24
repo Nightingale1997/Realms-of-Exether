@@ -1,4 +1,6 @@
-﻿STATE_SHKODERIA = {
+﻿###FIRST COMMENT SIGNIFIES AIRSHIP STATE###
+
+STATE_SHKODERIA = {
     id = 2400
     subsistence_building = "building_subsistence_pastures"
     provinces = { "x1DE1FB" "x7CB8D7" "x8DDFA5" "x9197F9" "xA3FAAE" "xA4E587" "xBDDFE0" "xD1C7C7" "xD6ABEF" "xE89085" "xEAB8E8" "xEC5FF5" "xECF6BD" "xF275D1" "xFD3CEF" }
@@ -72,6 +74,7 @@ STATE_DURRESIA = {
     naval_exit_id = 3028
 }
 STATE_KORCAJA = {
+    #xD3D36C
     id = 2403
     subsistence_building = "building_subsistence_pastures"
     provinces = { "x5CD7E6" "x72E8BC" "x89C2ED" "x92CCA3" "x97DEBA" "x9AFAD2" "xA6ABE9" "xABF5A3" "xBC98A9" "xC4E258" "xC673CF" "xD3D36C" "xDB92CE" "xDF35EE" "xDFA88C" "xE1F143" "xEB84CB" }
@@ -93,6 +96,7 @@ STATE_KORCAJA = {
         undiscovered_amount = 10
     }
 
+    naval_exit_id = 3067
 }
 STATE_KULLAMAL = {
     id = 2404
@@ -115,6 +119,7 @@ STATE_KULLAMAL = {
     naval_exit_id = 3028
 }
 STATE_VLORIANA = {
+    #xD284DD
     id = 2405
     subsistence_building = "building_subsistence_farms"
     provinces = { "x2AF5D6" "x5EB8E7" "xACFDE2" "xB1C0B0" "xC3EC7D" "xD284DD" "xE29AD1" "xEAA7DC" "xF1F8AE" "xF69AEC" "xF8EC94" }
@@ -136,7 +141,7 @@ STATE_VLORIANA = {
         type = "bg_oil_extraction"
         undiscovered_amount = 10
     }
-
+    naval_exit_id = 3067
 }
 STATE_GJAKOVA = {
     id = 2406
@@ -185,6 +190,7 @@ STATE_LEZHANIA = {
     naval_exit_id = 3001
 }
 STATE_KRUJANA = {
+    #xB3F7BC
     id = 2408
     subsistence_building = "building_subsistence_farms"
     provinces = { "x6F98FD" "x8FF09E" "x93F899" "xA7D09D" "xB29AAE" "xB3F7BC" "xBF5FEB" "xC580B7" "xC8AF96" "xCAB9E3" "xE6F51F" }
@@ -197,8 +203,10 @@ STATE_KRUJANA = {
     capped_resources = {
         bg_logging = 14
     }
+    naval_exit_id = 3067
 }
 STATE_ELBASHTIA = {
+    #x6BF1D8
     id = 2409
     subsistence_building = "building_subsistence_pastures"
     provinces = { "x5ED6F5" "x6BF1D8" "x9590F2" "xA6E09B" "xACCAC0" "xC1E574" "xCBE5DB" "xD0A2BA" "xD882D0" "xE3DAF6" "xEA92F5" "xF6AEEC" "xF9F338" "xFC6AE9" }
@@ -215,8 +223,10 @@ STATE_ELBASHTIA = {
         type = "bg_rubber"
         undiscovered_amount = 16
     }
+    naval_exit_id = 3067
 }
 STATE_LUMADHIA = {
+    #xEFF9DF
     id = 2410
     subsistence_building = "building_subsistence_pastures"
     provinces = { "x63F4A1" "x6CDEC2" "x85A1EB" "xB2E596" "xB2E68E" "xB892E6" "xBEF466" "xE0F2CC" "xE3D446" "xE7D777" "xEAEA5D" "xEDB5A6" "xEFF9DF" "xF89CDA" }
@@ -225,6 +235,8 @@ STATE_LUMADHIA = {
     farm = x85A1EB
     mine = xB2E596
     port = xB2E68E
+
+    naval_exit_id = 3068
 
 }
 STATE_GJILANIJA = {
@@ -331,6 +343,7 @@ STATE_BERATIA = {
     naval_exit_id = 3028
 }
 STATE_VOSKOPOJANA = {
+    #xDFCCCF
     id = 2416
     subsistence_building = "building_subsistence_farms"
     provinces = { "x4DDEFD" "x7BD3ED" "xABADF6" "xAF68E4" "xCED2FC" "xCEE4F0" "xDFCCCF" "xE5DCDA" "xEF84E1" }
@@ -350,6 +363,7 @@ STATE_VOSKOPOJANA = {
         undiscovered_amount = 5
     }
 
+    naval_exit_id = 3067
 }
 STATE_SARANDOVA = {
     id = 2417
@@ -506,6 +520,7 @@ STATE_STRUGOVA = {
     naval_exit_id = 3083
 }
 STATE_PRESPIA = {
+    #xE9A3DFq
     id = 2426
     subsistence_building = "building_subsistence_farms"
     provinces = { "x59BBF9" "x66D8DB" "x77FBBC" "x8FDBF1" "x98D3F4" "xAFB8C2" "xC5C969" "xC9BEEE" "xCEBD77" "xD0AE7A" "xD679E9" "xE87BAD" "xE9A3DF" "xF149F1" "xF4699A" "xFB8379" }
@@ -515,6 +530,7 @@ STATE_PRESPIA = {
     mine = x8FDBF1
     port = x98D3F4
 
+    naval_exit_id = 3068
 }
 STATE_KRUSHEVA = {
     id = 2427
@@ -584,6 +600,7 @@ STATE_KUKESPIA = {
     naval_exit_id = 3071
 }
 STATE_NYZHNE_SENIA = {
+    #x1FF7F2
     id = 2431
     subsistence_building = "building_subsistence_farms"
     provinces = { "x1FF7F2" "x5DCEF1" "x68F3B0" "x70F1A3" "x9DBFA3" "xB7EEF6" "xC1C4EC" "xC6E056" "xCFAD91" "xE428F4" "xEDAC86" "xFBA3AF" }
@@ -599,9 +616,10 @@ STATE_NYZHNE_SENIA = {
         bg_iron_mining = 36
         bg_logging = 23
     }
-
+    naval_exit_id = 3068
 }
 STATE_SHPYNTESI = {
+    #xE3B4EE
     id = 2432
     subsistence_building = "building_subsistence_farms"
     provinces = { "x40F7D3" "x81F1E6" "x82FB88" "xAA91CF" "xB6C7AE" "xB7BE90" "xCED48E" "xDBEB54" "xDC98D8" "xE1E2BC" "xE3B4EE" "xF537EA" "xFEBDD8" }
@@ -611,8 +629,10 @@ STATE_SHPYNTESI = {
     mine = xAA91CF
     port = xB6C7AE
 
+    naval_exit_id = 3068
 }
 STATE_ERSEKERA = {
+    #x928FE5
     id = 2433
     subsistence_building = "building_subsistence_farms"
     provinces = { "x3FFEE4" "x76BACB" "x8CE1D2" "x928FE5" "xD1B29F" "xD6D4C6" "xE2B7FA" "xE679F4" "xF4A95F" "xFAEDA0" }
@@ -622,6 +642,7 @@ STATE_ERSEKERA = {
     mine = x928FE5
     port = xD1B29F
 
+    naval_exit_id = 3068
 }
 STATE_ZATYRE = {
     id = 2434
@@ -656,6 +677,7 @@ STATE_BREZHKE = {
     naval_exit_id = 3009
 }
 STATE_USTRIZHYVKA = {
+    #x7695F7
     id = 2436
     subsistence_building = "building_subsistence_farms"
     provinces = { "x33FBF0" "x38E1E5" "x4AB4F8" "x6EFEF1" "x71D3B7" "x7695F7" "x8698E1" "x89E2AC" "x95A4D0" "x9AE387" "xA4FAD2" "xBDC38F" "xC8EDA4" "xCCA1E0" "xCD88F8" "xD3B184" "xD3D784" "xD3F43B" "xD5F894" "xE4AE7E" "xF2C3D3" "xFBDA39" "xFDE0EA" "xFDEC4B" }
@@ -665,6 +687,7 @@ STATE_USTRIZHYVKA = {
     mine = x71D3B7
     port = x7695F7
 
+    naval_exit_id = 3068
 }
 STATE_TROPOJA = {
     id = 2437
@@ -3108,7 +3131,7 @@ STATE_SAVAGE_LANDS = {
         bg_logging = 1
         bg_opium_plantations = 18
     }
-
+    naval_exit_id = 3066
 }
 STATE_SAVAGE_LANDS_2 = {
     #xFAEC2Eq
@@ -3130,6 +3153,7 @@ STATE_SAVAGE_LANDS_2 = {
         bg_lead_mining = 30
     }
 
+    naval_exit_id = 3066
 }
 STATE_ROUGHSTONE_TERRITORY = {
     id = 2826
