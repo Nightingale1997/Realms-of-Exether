@@ -206,7 +206,7 @@ pm_mimosa_trees = {  #this is a reference to dmt extraction methods irl
 		workforce_scaled = {
 			goods_output_wood_add = -15
 			goods_output_tea_add = 9
-			goods_output_chimesilt_add = 3
+			goods_output_opium_add = 3
 		}
 	}
 }
@@ -220,6 +220,71 @@ building_modifiers = {
 		goods_output_sugar_add = 10
 	}
 }
+}
+
+pm_simple_forestry_crystalwood = {
+	texture = "gfx/interface/icons/production_method_icons/simple_forestry.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_wishstone_add = 20
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 4500
+		}
+	}
+}
+
+pm_saw_mills_crystalwood= {
+	texture = "gfx/interface/icons/production_method_icons/saw_mills.dds"
+	unlocking_technologies = {
+		steelworking
+	}				
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 5
+			
+			# output goods
+			goods_output_wishstone_add = 30
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 4000
+			building_employment_machinists_add = 500
+		}
+	}
+}	
+
+pm_electric_saw_mills_crystalwood = {
+	texture = "gfx/interface/icons/production_method_icons/electric_saw_mills.dds"
+	unlocking_technologies = {
+		electrical_generation
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 10
+			goods_input_electricity_add = 5
+			
+			# output goods
+			goods_output_wishstone_add = 50 
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 3000
+			building_employment_machinists_add = 1000
+			building_employment_engineers_add = 500
+		}
+	}
+
+	required_input_goods = electricity
 }
 
 pm_simple_forestry_stonewood = {
@@ -455,6 +520,38 @@ pm_increased_potion_sap = {
 			# output goods
 			goods_output_hardwood_add = -20
 			goods_output_potions_add = 20
+		}
+	}
+}
+
+pm_no_chimesilt_bark = {
+	texture = "gfx/interface/icons/production_method_icons/no_potion_sap.dds"
+}
+
+pm_chimesilt_bark = {
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods										
+			goods_output_wishstone_add = -12
+			goods_output_opium_add = 10
+		}
+	}
+}
+
+pm_increased_chimesilt_bark = {
+	texture = "gfx/interface/icons/production_method_icons/increased_potion_sap.dds"
+
+	unlocking_production_methods = {
+		pm_saw_mills
+		pm_electric_saw_mills
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_wishstone_add = -20
+			goods_output_opium_add = 20
 		}
 	}
 }

@@ -381,6 +381,33 @@ bg_logging_stonewood = {
 	economy_of_scale_ai_factor = 1.5
 }
 
+bg_logging_crystalwood = {
+	category = rural
+
+	category = rural
+
+	land_usage = rural
+	
+	economy_of_scale = yes
+	
+	can_use_slaves = yes
+	
+	default_building = building_logging_camp_crystalwood
+	
+	lens = forestry	
+	
+	cash_reserves_max = 25000
+	
+	urbanization = 5
+	infrastructure_usage_per_level = 1
+	
+	should_auto_expand = { 
+		default_auto_expand_rule = yes
+	}
+	
+	economy_of_scale_ai_factor = 1.5
+}
+
 bg_haunted_grounds = {
 	category = rural
 
