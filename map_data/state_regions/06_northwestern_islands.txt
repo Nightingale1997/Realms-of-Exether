@@ -1179,6 +1179,17 @@ STATE_RUMATARI = {
     farm = x76E7C4
     mine = x83EDE2
     port = xA4EEAD
+    arable_land = 60
+    arable_resources = { "bg_livestock_farms" "bg_mint_tea_plantations" "bg_wyrmfruit_plantations" }
+    capped_resources = {
+        bg_iron_mining = 18
+        bg_logging = 16
+        bg_squidding = 4
+    }
+    resource = {
+        type = "bg_cold_rubber"
+        discovered_amount = 12
+    }
     naval_exit_id = 3031
 }
 STATE_TARAMOA = {
@@ -1190,6 +1201,13 @@ STATE_TARAMOA = {
     farm = x75C5F0
     mine = x7CA4DF
     port = x8FA9CA
+    arable_land = 20
+    arable_resources = { "bg_livestock_farms" "bg_mint_tea_plantations" "bg_wyrmfruit_plantations" }
+    capped_resources = {
+        bg_logging = 12
+        bg_squidding = 14
+        bg_whaling = 8
+    }
     naval_exit_id = 3031
 }
 STATE_POUNAMOA = {
@@ -1201,7 +1219,17 @@ STATE_POUNAMOA = {
     farm = xB6C1B7
     mine = xDA8BBC
     port = xDBD753
-
+    arable_land = 28
+    arable_resources = { "bg_livestock_farms" "bg_mint_tea_plantations" "bg_wyrmfruit_plantations" }
+    capped_resources = {
+        bg_lead_mining = 16
+        bg_iron_mining = 18
+        bg_logging = 8
+    }
+    resource = {
+        type = "bg_cold_rubber"
+        discovered_amount = 10
+    }
 }
 STATE_RONGOMARA = {
     id = 3385
@@ -1212,7 +1240,17 @@ STATE_RONGOMARA = {
     farm = x8F95E6
     mine = xA2F87F
     port = xA5A1DE
-
+    arable_land = 25
+    arable_resources = { "bg_livestock_farms" "bg_mint_tea_plantations" "bg_wyrmfruit_plantations" }
+    capped_resources = {
+        bg_logging = 14
+        bg_squidding = 12
+        bg_whaling = 7
+    }
+    resource = {
+        type = "bg_cold_rubber"
+        discovered_amount = 6
+    }
 }
 STATE_GARPATIA = {
     id = 3386
@@ -1256,6 +1294,17 @@ STATE_PUCOVATU = {
     farm = x8CF6EE
     mine = xADC3CE
     port = xC87BD3
+    arable_land = 18
+    arable_resources = { "bg_livestock_farms" "bg_mint_tea_plantations" "bg_wyrmfruit_plantations" }
+    capped_resources = {
+        bg_iron_mining = 12
+        bg_logging = 6
+        bg_squidding = 8
+    }
+    resource = {
+        type = "bg_cold_rubber"
+        discovered_amount = 4
+    }
     naval_exit_id = 3089
 }
 STATE_TURAKINA = {
@@ -1289,6 +1338,17 @@ STATE_LUNARATA = {
     farm = xBCE9B4
     mine = xD4BB91
     port = xD674B4
+    arable_land = 34
+    arable_resources = { "bg_livestock_farms" "bg_mint_tea_plantations" "bg_wyrmfruit_plantations" }
+    capped_resources = {
+        bg_logging = 6
+        bg_squidding = 8
+        bg_whaling = 4
+    }
+    resource = {
+        type = "bg_cold_rubber"
+        discovered_amount = 4
+    }
     naval_exit_id = 3031
 }
 STATE_TAUMAROI = {
@@ -1300,7 +1360,16 @@ STATE_TAUMAROI = {
     farm = x60D9F1
     mine = x63FDE9
     port = x83E29C
-
+    arable_land = 32
+    arable_resources = { "bg_livestock_farms" "bg_mint_tea_plantations" "bg_wyrmfruit_plantations" }
+    capped_resources = {
+        bg_lead_mining = 36
+        bg_logging = 14
+    }
+    resource = {
+        type = "bg_cold_rubber"
+        discovered_amount = 8
+    }
 }
 STATE_PATARENI = {
     id = 3394
@@ -1322,7 +1391,17 @@ STATE_WHANAKOA = {
     farm = x82F285
     mine = x9EE6E3
     port = xA164F7
-
+    arable_land = 40
+    arable_resources = { "bg_livestock_farms" "bg_mint_tea_plantations" "bg_wyrmfruit_plantations" }
+    capped_resources = {
+        bg_iron_mining = 36
+        bg_logging = 14
+        bg_squidding = 5
+    }
+    resource = {
+        type = "bg_cold_rubber"
+        discovered_amount = 10
+    }
     naval_exit_id = 3089
 }
 STATE_NORTHERN_1 = {

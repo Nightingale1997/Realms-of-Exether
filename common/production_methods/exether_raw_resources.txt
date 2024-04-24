@@ -428,8 +428,8 @@ pm_simple_squidding = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output
-			goods_output_dye_add = 12
-			goods_output_meat_add = 5
+			goods_output_dye_add = 5
+			goods_output_fish_add = 20
 		}
 
 		level_scaled = {
@@ -448,8 +448,8 @@ pm_squid_trawlers = {
 			goods_input_clippers_add = 5
 			
 			# output
-			goods_output_dye_add = 24
-			goods_output_meat_add = 10
+			goods_output_dye_add = 10
+			goods_output_fish_add = 40
 		
 		}
 
@@ -480,8 +480,8 @@ pm_steam_squid_trawlers = {
 			goods_input_coal_add = 15
 			
 			# output
-			goods_output_dye_add = 48
-			goods_output_meat_add = 20
+			goods_output_dye_add = 20
+			goods_output_fish_add = 80
 		}
 
 		level_scaled = {
@@ -892,7 +892,7 @@ pm_godsblood_pump_building_wishstone_mine = {
 			building_employment_laborers_add = 2000
 			building_employment_machinists_add = 1350
 			building_employment_engineers_add = 400
-			building_employment_wizards_add = 250
+			building_employment_hedge_wizards_add = 250
 		}
 		
 		unscaled = {
@@ -996,7 +996,7 @@ pm_wishstone_building_wishstone_mine = {
 		}
 
 		level_scaled = {
-			building_employment_wizards_add = 250
+			building_employment_hedge_wizards_add = 250
 		}
 
 		unscaled = {

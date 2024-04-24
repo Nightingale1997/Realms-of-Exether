@@ -818,14 +818,7 @@ ideology_slaver = {
 				}
 			}
 			add = -1000
-		}
-		if = {
-			limit = {
-				exists = c:HAI
-				owner = { c:HAI = THIS }
-			}
-			add = -1000
-		}		
+		}	
 		if = {
 			limit = { scope:interest_group = { is_interest_group_type = ig_landowners } }
 			add = 500		

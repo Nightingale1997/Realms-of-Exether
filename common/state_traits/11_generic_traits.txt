@@ -13,7 +13,7 @@ state_trait_psionic_storms = {
     icon = "gfx/interface/icons/state_trait_icons/severe_malaria.dds"
 	
 	required_techs_for_colonization = { "psionic_theory" }
-	disabling_technologies = { "thought_shielding" }
+	disabling_technologies = { "thought_shielding" "psionic_tech" }
 	
 	modifier = {
 		state_non_homeland_colony_growth_speed_mult = -0.95

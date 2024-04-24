@@ -1,6 +1,6 @@
-﻿building_snowcoffee_plantation = {
-	building_group = bg_snowcoffee_plantations
-	texture = "gfx/interface/icons/building_icons/coffee_plantation.dds"
+﻿building_mint_tea_plantation = {
+	building_group = bg_mint_tea_plantations
+	texture = "gfx/interface/icons/building_icons/mint_tea.dds"
 	required_construction = construction_cost_low
 
 	unlocking_technologies = {
@@ -19,7 +19,7 @@
 
 building_wyrmfruit_plantation = {
 	building_group = bg_wyrmfruit_plantations
-	texture = "gfx/interface/icons/building_icons/banana_plantation.dds"
+	texture = "gfx/interface/icons/building_icons/wyrmfruit.dds"
 	required_construction = construction_cost_low
 
 	unlocking_technologies = {
@@ -36,9 +36,24 @@ building_wyrmfruit_plantation = {
 	}
 }
 
+building_songberry_plantation = {
+	building_group = bg_songberry_plantations
+	texture = "gfx/interface/icons/building_icons/songberry.dds"
+	required_construction = construction_cost_low
+
+	city_type = farm
+	levels_per_mesh = 5
+	
+	production_method_groups = {
+		pmg_base_building_songberry_plantation
+		pmg_train_automation_building_songberry_plantation
+		pmg_ownership_land_building_songberry_plantation
+	}
+}
+
 building_snowrubber_plantation = {
-	building_group = bg_wyrmfruit_plantations
-	texture = "gfx/interface/icons/building_icons/rubber_plantation.dds"
+	building_group = bg_cold_rubber
+	texture = "gfx/interface/icons/building_icons/cold_rubber.dds"
 	required_construction = construction_cost_low
 
 	unlocking_technologies = {

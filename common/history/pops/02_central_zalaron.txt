@@ -657,7 +657,20 @@
   }
     
   s:STATE_LAERANELS_DESOLATION = {
-
+    region_state:LIA = {
+        create_pop = {
+            culture = nightwalker
+            size = 20642
+        }
+        create_pop = {
+            culture = changeling
+            size = 13000
+        }
+        create_pop = {
+            culture = tefereti
+            size = 10000
+        }
+    }
   }
     
   s:STATE_POMMELFALL = {
@@ -971,7 +984,20 @@
   }
     
   s:STATE_NOVAJEGO = {
-
+	region_state:HOU = {
+		create_pop = {
+			culture = stranfolk
+			size = 301284
+		}
+		create_pop = {
+			culture = glabrekthorn
+			size = 82912
+		}
+		create_pop = {
+			culture = vairian
+			size = 10299
+		}
+	}
   }
     
   s:STATE_INSULECO = {
@@ -1081,7 +1107,20 @@
   }
     
   s:STATE_XODAN = {
-
+	region_state:HOU = {
+		create_pop = {
+			culture = stranfolk
+			size = 481728
+		}
+		create_pop = {
+			culture = glabrekthorn
+			size = 92182
+		}
+		create_pop = {
+			culture = vairian
+			size = 22182
+		}
+	}
   }
     
   s:STATE_ZALULIK = {
@@ -1095,10 +1134,6 @@
 			size = 292188
 		}
 	}
-  }
-    
-  s:STATE_DIFOBIK = {
-
   }
     
   s:STATE_NAN = {
@@ -1335,7 +1370,16 @@
   }
     
   s:STATE_ZAFIRAN = {
-
+	region_state:JRD = {
+		create_pop = {
+			culture = wastecrawler
+			size = 30000
+		}
+		create_pop = {
+			culture = nightwalker
+			size = 2000
+		}
+	}
   }
     
   s:STATE_KALIBRANTO = {
@@ -1343,7 +1387,16 @@
   }
     
   s:STATE_SAHARANDO = {
-
+	region_state:GOO = {
+		create_pop = {
+			culture = wastecrawler
+			size = 270000
+		}
+		create_pop = {
+			culture = nightwalker
+			size = 13000
+		}
+	}
   }
     
   s:STATE_ZAHARIDO = {
@@ -1395,11 +1448,37 @@
   }
     
   s:STATE_SARABENDO = {
-
+	region_state:JRD = {
+		create_pop = {
+			culture = nightwalker
+			size = 24000
+		}
+		create_pop = {
+			culture = wastecrawler
+			size = 121996
+		}
+		create_pop = {
+			culture = qinnaat
+			size = 14000
+		}
+	}
   }
     
   s:STATE_ESPARASHIM = {
-
+	region_state:NSR = {
+		create_pop = {
+			culture = wastecrawler
+			size = 45600
+		}
+		create_pop = {
+			culture = qinnaat
+			size = 2400
+		}
+		create_pop = {
+			culture =  azmaraan
+			size = 8004
+		}
+	}
   }
     
   s:STATE_ALMAKSURO = {
@@ -1407,7 +1486,21 @@
   }
     
   s:STATE_AZAROON = {
+	region_state:GOO = {
+		create_pop = {
+			culture = azmaraan
+			size = 4000
+		}
+		create_pop = {
+			culture = wastecrawler
+			size = 40000
+		}
+		create_pop = {
+			culture = qinnaat
+			size = 6000
+		}
 
+	}
   }
     
   s:STATE_KASHANIR = {
@@ -1415,23 +1508,89 @@
   }
     
   s:STATE_ALZAHRUD = {
-
+	region_state:NSR = {
+		create_pop = {
+			culture = wastecrawler 
+			size = 120000
+		}
+		create_pop = {
+			culture = wastecrawler 
+			religion = marktarian_antimagic
+			size = 60000
+		}
+		create_pop = {
+			culture = nightwalker
+			size = 26000
+		}
+		create_pop = {
+			culture = azmaraan
+			size = 15000
+		}
+		create_pop = {
+			culture = kashtarnel
+			size = 200
+		}
+	}
   }
     
   s:STATE_SHIRAFIQ = {
-
+	region_state:KHK = {
+		create_pop = {
+			culture = wastecrawler
+			size = 205608
+		}
+		create_pop = {
+			culture = nightwalker
+			size = 355608
+		}
+	}
   }
     
   s:STATE_NADHARIM = {
-
+	region_state:KHK = {
+		create_pop = {
+			culture = wastecrawler
+			size = 300000
+		}
+		create_pop = {
+			culture = nightwalker
+			size = 40996
+		}
+	}
   }
     
   s:STATE_QAMARUD = {
-
+	region_state:HKL = {
+		create_pop = {
+			culture =  nightwalker
+			size = 43996
+		}
+		create_pop = {
+			culture = starwoken
+			size = 64200
+		}
+	}
   }
     
   s:STATE_ZAHRAFI = {
-
+	region_state:KHU = {
+		create_pop = {
+			culture = nightwalker
+			size = 322000
+		}
+		create_pop = {
+			culture = azmaraan
+			size = 27008
+		}
+		create_pop = {
+			culture = wastecrawler
+			size = 222396
+		}
+		create_pop = {
+			culture = qinnaat
+			size = 24000
+		}
+	}
   }
     
   s:STATE_PARSIMAH = {
@@ -1439,7 +1598,21 @@
   }
     
   s:STATE_KASHAMAD = {
-
+	region_state:KHU = {
+		create_pop = {
+			culture = nightwalker
+			size = 1123002
+		}
+		create_pop = {
+			culture = wastecrawler
+			size = 997003
+		}
+		create_pop = {
+			culture = wastecrawler
+			size = 18000
+			religion = marktarian_antimagic
+		}
+	}
   }
     
   s:STATE_ALQADIM = {
@@ -1447,7 +1620,16 @@
   }
     
   s:STATE_ZAHRIFAR = {
-
+	region_state:KHK = {
+		create_pop = {
+			culture = nightwalker
+			size = 42992
+		}
+		create_pop = {
+			culture = wastecrawler
+			size = 2100
+		}
+	}
   }
     
   s:STATE_FARASHIL = {
@@ -1469,7 +1651,16 @@
   }
     
   s:STATE_ALNAHFID = {
-
+	region_state:KHU = {
+		create_pop = {
+			culture = nightwalker
+			size = 1170008
+		}
+		create_pop = {
+			culture = wastecrawler
+			size = 64000
+		}
+	}
   }
     
   s:STATE_SHIRAZAN = {

@@ -295,37 +295,15 @@ decree_events.3 = {
 	option = { #support him to IG leader
 		name = decree_events.3.a
 		default_option = yes
-		if = {
-			limit = {
-				exists = c:GBR
-				c:GBR = ROOT
-			}
-			create_character = {
-				first_name = David
-				last_name = Copperfield
-				female = no
-				#role = politician # Remove this line
-				interest_group = ig_intelligentsia
-				ig_leader = yes
-				on_created = {
-					add_modifier = {
-						name = david_copperfield_modifier
-						months = normal_modifier_time
-					}
-				}
-			}
-		}
-		else = {
-			create_character = {
-				#role = politician # Remove this line
-				female = no
-				interest_group = ig_intelligentsia
-				ig_leader = yes
-				on_created = {
-					add_modifier = {
-						name = david_copperfield_modifier
-						months = normal_modifier_time
-					}
+		create_character = {
+			#role = politician # Remove this line
+			female = no
+			interest_group = ig_intelligentsia
+			ig_leader = yes
+			on_created = {
+				add_modifier = {
+					name = david_copperfield_modifier
+					months = normal_modifier_time
 				}
 			}
 		}
@@ -339,35 +317,14 @@ decree_events.3 = {
 				months = normal_modifier_time
 			}
 		}
-		if = {
-			limit = {
-				exists = c:GBR
-				c:GBR = ROOT
-			}
-			create_character = {
-				first_name = David
-				last_name = Copperfield
-				female = no
-				interest_group = ig_intelligentsia
-				is_agitator = yes
-				on_created = {
-					add_modifier = {
-						name = david_copperfield_modifier
-						months = normal_modifier_time
-					}
-				}
-			}
-		}
-		else = {
-			create_character = {
-				female = no
-				interest_group = ig_intelligentsia
-				is_agitator = yes
-				on_created = {
-					add_modifier = {
-						name = david_copperfield_modifier
-						months = normal_modifier_time
-					}
+		create_character = {
+			female = no
+			interest_group = ig_intelligentsia
+			is_agitator = yes
+			on_created = {
+				add_modifier = {
+					name = david_copperfield_modifier
+					months = normal_modifier_time
 				}
 			}
 		}

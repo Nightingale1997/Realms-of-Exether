@@ -60,6 +60,7 @@
 		blockoverride "goto_properties" {
 			onclick = "[EventWindow.AccessEvent.AccessState.ZoomToCapital]"
 			tooltip = "ZOOM_TO_EVENT_WINDOW_STATE"
+			enabled = "[Not( EventWindow.AccessEvent.AccessState.IsZoomingToCapital )]"
 		}
 
 		state = {
@@ -144,7 +145,7 @@
 							using = texture_velvet
 						}
 					}
-
+					
 					### CONTENT DESIGNATION ICON
 					flowcontainer = {
 						visible = "[Event.IsDLCContent]"
@@ -336,7 +337,7 @@
 			}
 		}
 	}
-
+	
 	type newspaper_superevent_window = default_popup {
 		datacontext = "[EventWindow.GetEvent]"
 
@@ -370,7 +371,7 @@
 					parentanchor = hcenter
 					align = center|nobaseline
 					using = header_font
-					using = (fontsize = 32)
+					using = fontsize_large
 					default_format = "#header"
 				}
 			}

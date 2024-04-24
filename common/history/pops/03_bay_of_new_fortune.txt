@@ -521,8 +521,8 @@
 				size = 386700
 			}
 			create_pop = {
-				culture = waste_walker
-				size = 306700
+				culture = rahoru
+				size = 206700
 			}
 			create_pop = {
 				culture = vandori
@@ -530,7 +530,12 @@
 			}
 			create_pop = {
 				culture = yachaymanchi
-				size = 243996
+				size = 293996
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = rahoru
+				size = 50000
 			}
 			create_pop = {
 				pop_type = slaves
@@ -543,12 +548,12 @@
 		region_state:HOR = {
 			create_pop = {
 				culture = rahoru
-				size = 302907
+				size = 292907
 			}
 			create_pop = {
 				culture = rahoru
 				religion = orc_father
-				size = 100000
+				size = 50000
 			}
 			create_pop = {
 				culture = tqalt
@@ -557,6 +562,14 @@
 			create_pop = {
 				culture = tqalt
 				religion = orc_mother
+				size = 10000
+			}
+			create_pop = {
+				culture = kusichaki
+				size = 50000
+			}
+			create_pop = {
+				culture = yachaymanchi
 				size = 10000
 			}
 		}
