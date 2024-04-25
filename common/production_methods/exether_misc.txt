@@ -206,7 +206,7 @@ pm_mimosa_trees = {  #this is a reference to dmt extraction methods irl
 		workforce_scaled = {
 			goods_output_wood_add = -15
 			goods_output_tea_add = 9
-			goods_output_opium_add = 3
+			goods_output_glass_add = 3
 		}
 	}
 }
@@ -524,22 +524,22 @@ pm_increased_potion_sap = {
 	}
 }
 
-pm_no_chimesilt_bark = {
+pm_no_glass_bark = {
 	texture = "gfx/interface/icons/production_method_icons/no_potion_sap.dds"
 }
 
-pm_chimesilt_bark = {
+pm_glass_bark = {
 	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
 			goods_output_wishstone_add = -12
-			goods_output_opium_add = 10
+			goods_output_glass_add = 10
 		}
 	}
 }
 
-pm_increased_chimesilt_bark = {
+pm_increased_glass_bark = {
 	texture = "gfx/interface/icons/production_method_icons/increased_potion_sap.dds"
 
 	unlocking_production_methods = {
@@ -551,7 +551,18 @@ pm_increased_chimesilt_bark = {
 		workforce_scaled = {
 			# output goods
 			goods_output_wishstone_add = -20
-			goods_output_opium_add = 20
+			goods_output_glass_add = 20
+		}
+	}
+}
+
+pm_chimesilt_extraction = {
+	texture = "gfx/interface/icons/production_method_icons/orchards.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_grain_add = -15
+			goods_output_opium_add = 15
 		}
 	}
 }
