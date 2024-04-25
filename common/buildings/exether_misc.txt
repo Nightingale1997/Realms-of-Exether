@@ -69,6 +69,23 @@ building_logging_camp_stonewood = {
 	}
 }
 
+building_logging_camp_crystalwood = {
+	building_group = bg_logging_crystalwood
+	texture = "gfx/interface/icons/building_icons/crystalbloom.dds"
+	city_type = wood
+	required_construction = construction_cost_low
+	terrain_manipulator = forestry
+	levels_per_mesh = 5
+
+	production_method_groups = {
+		pmg_base_building_logging_camp_crystalwood
+		pmg_glass_bark
+		pmg_equipment
+		pmg_transportation_building_logging_camp
+		pmg_ownership_capital_building_logging_camp
+	}
+}
+
 building_haunted_grounds = {
 	building_group = bg_haunted_grounds
 	texture = "gfx/interface/icons/building_icons/ectoplasm.dds"

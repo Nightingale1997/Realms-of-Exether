@@ -87,12 +87,30 @@ pmg_potion_sap = {
 	}
 }
 
+pmg_glass_bark = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_no_glass_bark
+		pm_glass_bark
+		pm_increased_glass_bark
+	}
+}
+
 pmg_base_building_logging_camp_stonewood = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_simple_forestry_stonewood
 		pm_saw_mills_stonewood
 		pm_electric_saw_mills_stonewood
+	}
+}
+
+pmg_base_building_logging_camp_crystalwood = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_simple_forestry_crystalwood
+		pm_saw_mills_crystalwood
+		pm_electric_saw_mills_crystalwood
 	}
 }
 
