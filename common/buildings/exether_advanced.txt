@@ -44,7 +44,6 @@ building_airship_dock = {
 			severity = fail
 			AND = {
 				OR = {
-					has_building = building_skyscraper
 					state_has_mountain = yes
 				}
 				

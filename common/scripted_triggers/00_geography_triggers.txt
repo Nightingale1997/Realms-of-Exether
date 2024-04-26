@@ -303,10 +303,45 @@ is_arid_region = {
 }
 
 state_has_mountain = {
-	OR = {
-		#has_state_trait = state_trait_rhine_river
-		always = yes
-	}
+		OR = {
+			has_state_trait = state_trait_crescent_range
+			has_state_trait = state_trait_sandwall_mountains
+			has_state_trait = state_trait_stormguard_mountains
+			has_state_trait = state_trait_mount_grim
+			has_state_trait = state_trait_mount_yelfis
+			has_state_trait = state_trait_whistling_summits
+			has_state_trait = state_trait_mukhalis_fangs
+			has_state_trait = state_trait_colicier_mountains
+			has_state_trait = state_trait_mount_surriden
+			has_state_trait = state_trait_vitics_roosts
+			has_state_trait = state_trait_misty_peaks
+			has_state_trait = state_trait_mammoth_cliffs
+			has_state_trait = state_trait_birstall_range
+			has_state_trait = state_trait_wardon_peaks
+			has_state_trait = state_trait_westerly_mountains
+			has_state_trait = state_trait_sulrans_spine
+			has_state_trait = state_trait_scarlet_ridge
+			has_state_trait = state_trait_ambalt_rise
+			has_state_trait = state_trait_mount_gladraine
+			has_state_trait = state_trait_caraly_peak
+			has_state_trait = state_trait_stokeford_heights
+			has_state_trait = state_trait_wynsard_range
+			has_state_trait = state_trait_wakaman_hill
+			has_state_trait = state_trait_ferstone_ridge
+			has_state_trait = state_trait_terforte_slopes
+			has_state_trait = state_trait_baxfil_ridge
+			has_state_trait = state_trait_asrar_peaks
+			has_state_trait = state_trait_asrar_peaks
+			has_state_trait = state_trait_twilan_summit
+			has_state_trait = state_trait_dehistun_mountains
+			has_state_trait = state_trait_mirazara_mountains
+			has_state_trait = state_trait_crescent_range
+			has_state_trait = state_trait_caslinet_highlands
+			has_state_trait = state_trait_valmis_pinnacle
+			has_state_trait = state_trait_faljour_hill
+		}
+	
+
 }
 
 the_cooler_exether_is_coastal = {
@@ -530,80 +565,29 @@ the_cooler_exether_is_coastal = {
     }
 }
 
+is_sky_coastal = {
+	exether_is_coastal = no
+	is_coastal = yes
+}
+
+
+
 exether_is_coastal = {
-	any_neighbouring_state = {
+	custom_tooltip = {
+		text = exether_is_coastal_tt
+		is_coastal = yes
 		OR = {
-			state_region = s:STATE_SHIPSHATTER_REEF
-			state_region = s:STATE_REMNANT_WAVES
-			state_region = s:STATE_SEIFU_SEA
-			state_region = s:STATE_LONELY_WAVES
-			state_region = s:STATE_STEEPCLIFF_COAST
-			state_region = s:STATE_ICY_EXPANSE
-			state_region = s:STATE_GULF_OF_DUMONIA
-			state_region = s:STATE_BLACK_CHANNEL
-			state_region = s:STATE_THE_SCALETIDES
-			state_region = s:STATE_SANGUINE_OCEAN_01
-			state_region = s:STATE_ERBENS_SEA
-			state_region = s:STATE_TREACHEROUS_ABYSS
-			state_region = s:STATE_AMETHYST_SEA
-			state_region = s:STATE_EMPERORS_MARBLES
-			state_region = s:STATE_PETAL_SEA
-			state_region = s:STATE_LEVIATHAN_DEEP
-			state_region = s:STATE_FRIGID_SEA_02
-			state_region = s:STATE_NORTH_PERILOUS_OCEAN_02
-			state_region = s:STATE_NORTH_PERILOUS_OCEAN_01
-			state_region = s:STATE_BUCCANEER_SEA
-			state_region = s:STATE_THE_FARTHEST_TIDES
-			state_region = s:STATE_FROSTBITE_DEPTHS
-			state_region = s:STATE_TIDESHIELD
-			state_region = s:STATE_HUNDIRS_BANE
-			state_region = s:STATE_BLACKFEATHER_COAST
-			state_region = s:STATE_AZURETHORN_SEA
-			state_region = s:STATE_SEA_OF_EYES
-			state_region = s:STATE_CITRUS_CURRENTS
-			state_region = s:STATE_RESTLESS_SEA
-			state_region = s:STATE_URIKS_PASSAGE
-			state_region = s:STATE_VALKURIAN_OCEAN_02
-			state_region = s:STATE_VALKURIAN_OCEAN_01
-			state_region = s:STATE_UNNAMED_SEA_8
-			state_region = s:STATE_OISIALKS_HORIZON
-			state_region = s:STATE_EVERFROST_COAST
-			state_region = s:STATE_SIRENS_LAGOON
-			state_region = s:STATE_ARVAN_SEA
-			state_region = s:STATE_SOUTH_SANGUINE_OCEAN_01
-			state_region = s:STATE_SETTLER_COAST
-			state_region = s:STATE_GIANTS_POND
-			state_region = s:STATE_HAZEAR_SEA
-			state_region = s:STATE_BLESSED_SHALLOWS
-			state_region = s:STATE_SOUTH_SANGUINE_OCEAN_04
-			state_region = s:STATE_FRIGID_SEA
-			state_region = s:STATE_SANGUINE_OCEAN_02
-			state_region = s:STATE_SERPENTS_EYE
-			state_region = s:STATE_TAR_COAST
-			state_region = s:STATE_SOUTH_LEVIATHAN_DEEP
-			state_region = s:STATE_EQUINE_SEA
-			state_region = s:STATE_SOUTH_SANGUINE_OCEAN_02
-			state_region = s:STATE_SANGUINE_OCEAN_03
-			state_region = s:STATE_BAY_OF_NEW_FORTUNE
-			state_region = s:STATE_WYRMMAW_SEA
-			state_region = s:STATE_SOUTH_SANGUINE_OCEAN_03
-			state_region = s:STATE_SANGUINE_OCEAN_05
-			state_region = s:STATE_PLEASANT_WAVES
-			state_region = s:STATE_SANGUINE_OCEAN_04
-			state_region = s:STATE_ICY_EXPANSE_02
-			state_region = s:STATE_OPHIDIAN_SHORE
-			state_region = s:STATE_WESTERN_SCALETIDES
-			state_region = s:STATE_UNNAMED_BAY_1
-			state_region = s:STATE_UNNAMED_BAY_2
-			state_region = s:STATE_UNNAMED_SHEIFU_SEA_1
-			state_region = s:STATE_UNNAMED_SEA_2
-			state_region = s:STATE_UNNAMED_SEA_3
-			state_region = s:STATE_UNNAMED_SEA_7
-			state_region = s:STATE_UNNAMED_SEA_6
-			state_region = s:STATE_UNNAMED_SEA_4
-			state_region = s:STATE_UNNAMED_SEA_5
-			state_region = s:STATE_UNNAMED_BAY_3
-			state_region = s:STATE_BIRDIE_BAY
+			state_has_mountain = no
+			state_region = s:STATE_GLASINBLAIR
+			state_region = s:STATE_ELDBERG
+			state_region = s:STATE_ESPRASHAD
+			state_region = s:STATE_STJERROPTOCHT
+			state_region = s:STATE_BLOODTHORN_WASTES
+			state_region = s:STATE_SALTSHORE
+			state_region = s:STATE_SALTSHORE_2
+			state_region = s:STATE_ANTAQAQA
+			state_region = s:STATE_GARRITXO
+			state_region = s:STATE_UDABERRI
 		}
 	}
 }
