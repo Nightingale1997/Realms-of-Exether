@@ -396,13 +396,10 @@
 			production_method = pm_general_training
 		}					
 	}
-}
-
-MILITARY_FORMATIONS = {
-	c:VOZ = {
+	c:VOZ ?= {
 		create_military_formation = {
 			type = army
-			hq_region = sr:nogi_desert
+			hq_region = sr:region_nogi_desert
 			name = heros_of_hanseath
 
 			
@@ -458,7 +455,28 @@ MILITARY_FORMATIONS = {
 				state_region = s:STATE_GRAVELROCK_ROAD
 				count = 1
 			}
+
+			save_scope_as = heroes_of_hanseath
 		}
+
+		create_character = {
+			is_general = yes
+			first_name = Kiras
+			last_name = Panglima
+			historical = yes
+			hq = region_nogi_desert
+			commander_rank = commander_rank_2
+			age = 46
+			traits = {
+				reserved
+			}
+			save_scope_as = kiras_gen
+		}
+		
+		scope:kiras_gen = {
+			transfer_to_formation = scope:heroes_of_hanseath
+		}
+
 		activate_production_method = {
 			building_type = building_naval_base
 			production_method = pm_no_naval_theory
