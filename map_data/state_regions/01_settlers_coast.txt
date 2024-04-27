@@ -1327,7 +1327,7 @@ STATE_NOGI_SANDS = {
 }
 STATE_GRAVELROCK_ROAD = {
     id = 4195
-    subsistence_building = "building_subsistence_pastures"
+    subsistence_building = "building_subsistence_terrace_farms"
     provinces = { "x63DAD0" "x65C7FA" "x67EAEC" "x6A94FC"  "x8FA2F7" "x9FA3FC" "xA7D1FE" "xA9F281" "xAEF0F3" "xB58BCD" "xC1EDA1" "xCA98D7" "xDC76D7"  "xE7CF8E" "xE8F925" "xEFD0DB" "xF8E0DB" "xF8F1C7" "xF94FF0" "xFAE19F" "xFCBDBD" "xFDE638" }
     traits = { "state_trait_ferstone_ridge" }
     city = x58BEF1
@@ -1335,7 +1335,14 @@ STATE_GRAVELROCK_ROAD = {
     farm = x65C7FA
     mine = x69F6FB
     port = x6A94FC
-
+    arable_land = 60
+    arable_resources = { "bg_mountain_maize_farms" "bg_livestock_ranches" "bg_vineyard_plantations" "bg_dye_plantations" "bg_cotton_plantations" }
+    capped_resources = {
+        bg_cloud_collecting = 25
+        bg_logging = 8
+        bg_iron_mining = 35
+        bg_sulfur_mining = 20
+    }
 }
 STATE_ELF1 = {
     id = 4196
@@ -1455,7 +1462,7 @@ STATE_FERNSEA = {
     mine = x89D8C4
     port = x8FCF9B
     arable_land = 50
-    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
     capped_resources = {
         bg_coal_mining = 44
         bg_logging = 6
@@ -1464,7 +1471,7 @@ STATE_FERNSEA = {
 }
 STATE_SKYPIERCER_PEAK = {
     id = 4203
-    subsistence_building = "building_subsistence_pastures"
+    subsistence_building = "building_subsistence_terrace_farms"
     provinces = { "x9DEC7F" "xA0D3C7" "xAAC8BA" "xACBEA9" "xBEBA9D" "xC8F8FE" "xCDF356" "xD2AF86" "xD464C4" "xE98BF3" "xF0F4C5" "xF6C9B0" "xFC9BF4" }
     impassable = { "xF0F4C5" }
     traits = { "state_trait_ferstone_ridge" }
@@ -1473,11 +1480,18 @@ STATE_SKYPIERCER_PEAK = {
     farm = xA0D3C7
     mine = xAAC8BA
     port = xACBEA9
-
+    arable_land = 45
+    arable_resources = { "bg_mountain_maize_farms" "bg_livestock_ranches" "bg_vineyard_plantations" "bg_dye_plantations" "bg_cotton_plantations" }
+    capped_resources = {
+        bg_cloud_collecting = 45
+        bg_logging = 6
+        bg_coal_mining = 45
+        bg_iron_mining = 75
+    }
 }
 STATE_CLOUDSILVER_SPINE = {
     id = 4204
-    subsistence_building = "building_subsistence_pastures"
+    subsistence_building = "building_subsistence_terrace_farms"
     provinces = { "xA36BF7" "xB3FCA7" "xB5D8D3" "xBACAF9" "xBCBCFA" "xC9B6B2" "xC9CA89" "xCEF874" "xD5BDF3" "xD5D4E4" "xDBC095" "xDFA7BA" "xE1DA53" "xE9FA22" "xEBA581" "xEF28E1" "xF3E83D" "xF6D5A6" "xF8A9D6" "xFB58C3" }
     impassable = { "xF6D5A6" "xb3fca7" "xd5bdf3" }
     traits = { "state_trait_ferstone_ridge" }
@@ -1486,7 +1500,14 @@ STATE_CLOUDSILVER_SPINE = {
     farm = xB3FCA7
     mine = xB5D8D3
     port = xBACAF9
-
+    arable_land = 50
+    arable_resources = { "bg_mountain_maize_farms" "bg_livestock_ranches" "bg_vineyard_plantations" "bg_dye_plantations" "bg_cotton_plantations" }
+    capped_resources = {
+        bg_cloud_collecting = 45
+        bg_logging = 11
+        bg_coal_mining = 30
+        bg_iron_mining = 55
+    }
 }
 STATE_VOZMEAD_LOWLANDS = {
     id = 4205
@@ -1497,8 +1518,13 @@ STATE_VOZMEAD_LOWLANDS = {
     farm = x8BDBC2
     mine = xA4E4B9
     port = xA7E7FD
-
+    arable_resources = { "bg_livestock_ranches" "bg_wheat_farms" }
+    arable_land = 14
     naval_exit_id = 3048
+    capped_resources = {
+        bg_logging = 4
+        bg_fishing = 4
+    }
 }
 STATE_SUNKEN_CLIFFS = {
     id = 4206
@@ -1509,8 +1535,13 @@ STATE_SUNKEN_CLIFFS = {
     farm = x8DDDE1
     mine = x94EFA3
     port = x9FDA93
-
+    arable_resources = { "bg_livestock_ranches" "bg_wheat_farms" }
+    arable_land = 20
     naval_exit_id = 3023
+    capped_resources = {
+        bg_logging = 3
+        bg_fishing = 7
+    }
 }
 STATE_DWARVENHAMMER = {
     id = 4207
@@ -1521,7 +1552,12 @@ STATE_DWARVENHAMMER = {
     farm = x94D5CD
     mine = xA3B6E7
     port = xA5EFA2
-
+    arable_resources = { "bg_livestock_ranches" }
+    arable_land = 10
+    capped_resources = {
+        bg_iron_mining = 12
+        bg_gold_mining = 4
+    }
 }
 STATE_TARBANK = {
     id = 4208

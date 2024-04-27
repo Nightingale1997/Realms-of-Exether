@@ -397,3 +397,75 @@
 		}					
 	}
 }
+
+MILITARY_FORMATIONS = {
+	c:VOZ = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:nogi_desert
+			name = heros_of_hanseath
+
+			
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_SKYPIERCER_PEAK
+				count = 6
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cuirassiers
+				state_region = s:STATE_SKYPIERCER_PEAK
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_SKYPIERCER_PEAK
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_CLOUDSILVER_SPINE
+				count = 4
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cuirassiers
+				state_region = s:STATE_CLOUDSILVER_SPINE
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_CLOUDSILVER_SPINE
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_GRAVELROCK_ROAD
+				count = 6
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cuirassiers
+				state_region = s:STATE_GRAVELROCK_ROAD
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_GRAVELROCK_ROAD
+				count = 1
+			}
+		}
+		activate_production_method = {
+			building_type = building_naval_base
+			production_method = pm_no_naval_theory
+		}	
+		activate_production_method = {
+			building_type = building_barracks
+			production_method = pm_no_organization
+		}
+	}
+}
