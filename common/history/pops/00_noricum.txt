@@ -682,7 +682,12 @@
 
 
     s:STATE_DRUMAGAR = {
-
+      region_state:CAO = {
+        create_pop = {
+          culture = frost_giant
+          size = 278091
+        }
+      }
   }
 
 
@@ -1278,7 +1283,12 @@
 
 
     s:STATE_HRAUNLUND = {
-
+      region_state:WRC = {
+        create_pop = {
+          culture = frost_giant
+          size = 41823
+        }
+      }
   }
 
 
@@ -1433,7 +1443,12 @@
 
 
     s:STATE_HALDORHEIMR = {
-
+      region_state:CTI = {
+        create_pop = {
+          culture = frost_giant
+          size = 38742
+        }
+      }
   }
 
 
@@ -1474,7 +1489,12 @@
 
 
     s:STATE_HLIDSKJALF = {
-
+      region_state:HRA = {
+        create_pop = {
+          culture = frost_giant
+          size = 41089
+        }
+      }
   }
 
     s:STATE_LUMO = {
@@ -1516,7 +1536,12 @@
 
 
     s:STATE_ANGERTORP = {
-
+      region_state:SRO = {
+        create_pop = {
+          culture = frost_giant
+          size = 72814
+        }
+      }
   }
 
     s:STATE_RAGNARKULL = {
@@ -1566,7 +1591,16 @@
 
 
     s:STATE_FRIGGASVEIT = {
-
+      region_state:ASI = {
+        create_pop = {
+          culture = frost_giant
+          size = 28791
+        }
+        create_pop = {
+          culture = cloud_giant
+          size = 15897
+        }
+      }
   }
 
 
@@ -1584,7 +1618,12 @@
   }
 
     s:STATE_EIRIKSHOF = {
-
+      region_state:ERT = {
+        create_pop = {
+          culture = frost_giant
+          size = 34132
+        }
+      }
   }
 
     s:STATE_HALSTEAD = {
