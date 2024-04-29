@@ -346,15 +346,14 @@ state_has_mountain = {
 
 the_cooler_exether_is_coastal = {
     OR = { 
-		any_state = {
-      		OR = {
-        	state_region = s:STATE_BAIDAL
-        	state_region = s:STATE_BATSI
-        	state_region = s:STATE_TOSON
-			state_region = s:STATE_SERGER
-        	state_region = s:STATE_KHONGO
-        	state_region = s:STATE_GURVA
-			state_region = s:STATE_BOLDOO
+
+        state_region = s:STATE_BAIDAL
+        state_region = s:STATE_BATSI
+        state_region = s:STATE_TOSON
+		state_region = s:STATE_SERGER
+        state_region = s:STATE_KHONGO
+        state_region = s:STATE_GURVA
+		state_region = s:STATE_BOLDOO
         state_region = s:STATE_OROGOO
         state_region = s:STATE_DALAI
 		state_region = s:STATE_GARBOL
@@ -713,8 +712,8 @@ the_cooler_exether_is_coastal = {
 		state_region = s:STATE_SAINT_MER_2
         state_region = s:STATE_SHARINDLARS_NEEDLE
 		state_region = s:STATE_CHANTSIRENE #something might be up here; cwtools behaving strangely
-		state_region = s:STATE_ABAISSE_DE_MARBRUN
-        state_region = s:STATE_AZURSOL
+		state_region = s:STATE_ABAISSE_DE_MARBRUN #okay it's not picking up this entire region
+        state_region = s:STATE_AZURSOL  #I think it's working though so idgaf
         state_region = s:STATE_MERACIEL_AUBELAC
 		state_region = s:STATE_SUNKEN_CLIFFS
 		state_region = s:STATE_VOZMEAD_LOWLANDS
@@ -755,76 +754,120 @@ the_cooler_exether_is_coastal = {
         state_region = s:STATE_WAYLLAPAMPA
 		state_region = s:STATE_MALLKIYAKU
 		state_region = s:STATE_PACHAQULLU
-        state_region = s:STATE_WALDLJOCHT
-        state_region = s:STATE_WOLKENEVEL
-		state_region = s:STATE_MAANSTIEN
-		state_region = s:STATE_WETTERWIIDTE
-        state_region = s:STATE_BLOEIJENDREAM
-        state_region = s:STATE_KLAVERBOSK
-		state_region = s:STATE_NACHTSIMMER
-		state_region = s:STATE_STILTEBRUZJE
-        state_region = s:STATE_SKIMERWALD
-        state_region = s:STATE_STREAMFLAMME
-		state_region = s:STATE_MISTGLANS
-		state_region = s:STATE_STJERROPTOCHT
-        state_region = s:STATE_XODAN
-        state_region = s:STATE_NOVAJEGO
-		state_region = s:STATE_RADIANTAJO
-		state_region = s:STATE_TEROCARO
-        state_region = s:STATE_STELALTAJO
-        state_region = s:STATE_FELICGRUNDO
-		state_region = s:STATE_PLUVPINTO
-		state_region = s:STATE_VENTAFALCO
-        state_region = s:STATE_NOVAJLANDIO
-        state_region = s:STATE_SONGBIENO
-		state_region = s:STATE_SUNFLORO
-		state_region = s:STATE_VESPERVIDO
-        state_region = s:STATE_SHKUMBINIA
-        state_region = s:STATE_LAGOEKRANO
-		state_region = s:STATE_KASKADVIVO
-		state_region = s:STATE_SENCERBO
-        state_region = s:STATE_RUGAKAMPO
-        state_region = s:STATE_ALMARAQI
-		state_region = s:STATE_STELINSULO
-		state_region = s:STATE_ESPRASHAD
-		state_region = s:STATE_ZAHARIDO
-		state_region = s:STATE_NURADINO
-		state_region = s:STATE_ALAMARA
-        state_region = s:STATE_KALIBRANTO
-        state_region = s:STATE_RAHMANTO
-		state_region = s:STATE_ALJUMARO
-		state_region = s:STATE_ZAHIDUMO
-		state_region = s:STATE_SARABENDO
-        state_region = s:STATE_ZAFIRAN
-        state_region = s:STATE_ESPRANOOR
-		state_region = s:STATE_SOLEMN_STONES
-		state_region = s:STATE_THUNDERSPELL_COAST
-		state_region = s:STATE_LEYLINE_COAST
-        state_region = s:STATE_GLIMMERING_COAST
-        state_region = s:STATE_TWOTORS
-		state_region = s:STATE_RUNEPORT_GALESTRUM
-		state_region = s:STATE_TWO_BARREL_COAST
-        state_region = s:STATE_VICEROYS_PEARL
-        state_region = s:STATE_BYRIVER
-		state_region = s:STATE_FIRST_BOROUGH
-		state_region = s:STATE_OUTER_MOORWEALD_3
-        state_region = s:STATE_OUTER_MOORWEALD_2
-        state_region = s:STATE_OUTER_MOORWEALD
-		state_region = s:STATE_RIVER_MEDDEN
-		state_region = s:STATE_PENDYM_GWYN	
-        state_region = s:STATE_PENDYM_GWYN_2
-        state_region = s:STATE_CAEL_VALEN
-		state_region = s:STATE_CAEL_VALEN_2
-		state_region = s:STATE_LANDING_AT_SEA
+
+        state_region = s:STATE_FIANARIVO
+        state_region = s:STATE_VAROTSA
+		state_region = s:STATE_IVONDRO
+		state_region = s:STATE_IVOLOINA
+        state_region = s:STATE_TOMBONT
+        state_region = s:STATE_ANKAZOBE
+
+		state_region = s:STATE_UMAGAMA
+		state_region = s:STATE_XABELO
+        state_region = s:STATE_MALANDA
+        state_region = s:STATE_GONJOLA
+		state_region = s:STATE_BEXAMBA
+		state_region = s:STATE_AMALUMA
+        state_region = s:STATE_ALENMAR
+        state_region = s:STATE_TERRABELA
+		state_region = s:STATE_APAFONTE
+		state_region = s:STATE_LISAZISA
+        state_region = s:STATE_BELENDLE
+
+        state_region = s:STATE_MALANJAPORT
+		state_region = s:STATE_MAPACHECO
+		state_region = s:STATE_JERMENION
+        state_region = s:STATE_GRAEA
+        state_region = s:STATE_ARGYSTSIK
+		state_region = s:STATE_ARTHERA
+		state_region = s:STATE_COCOHAYAT
+        state_region = s:STATE_CIDADOURO
+        state_region = s:STATE_ALMADOURO
+
+		state_region = s:STATE_HERMENIA
+		state_region = s:STATE_ARIMOS
+        state_region = s:STATE_DILMELIA
+        state_region = s:STATE_KOTAYNOS
+		state_region = s:STATE_MYTHOS
+		state_region = s:STATE_ZANPIQ
+		state_region = s:STATE_GANDNI
+		state_region = s:STATE_KHANGYO
+		state_region = s:STATE_SHIGATSENIPIY
+        state_region = s:STATE_NYINGMAWASKAHIKAN
+        state_region = s:STATE_BODHISATTVA
+		state_region = s:STATE_SUKHODAYA
+		state_region = s:STATE_DHARMARAJYA
+		state_region = s:STATE_PANNYA
+        state_region = s:STATE_SHANTINAGAR
+        state_region = s:STATE_VISHUDDHIKARA
+		state_region = s:STATE_BUDAMURAYIRI
+		state_region = s:STATE_SAMYAKVARTA
+		state_region = s:STATE_ANUTTARAPUR
+        state_region = s:STATE_KULUWANDU
+        state_region = s:STATE_KURUBBA
+		state_region = s:STATE_BOODJARRA
+		state_region = s:STATE_MOGORRTI
+        state_region = s:STATE_GASHAWARRA
+        state_region = s:STATE_YARRAGANBALA
+		state_region = s:STATE_DUSHANBARYA
+		state_region = s:STATE_MAZAROV
+        state_region = s:STATE_LUMO
+        state_region = s:STATE_AZURETHORN
+		state_region = s:STATE_NGURULAN
+		state_region = s:STATE_ZEPHROPULU	#lazy lazy
+        state_region = s:STATE_BARICORA
+        state_region = s:STATE_POLYNKALA
+		state_region = s:STATE_ZAWADKA
+		state_region = s:STATE_JAWOREK
+		state_region = s:STATE_ZARKI
+		state_region = s:STATE_NIWKA
+        state_region = s:STATE_CZERWIONKA
+        state_region = s:STATE_ANGERTORP
+		state_region = s:STATE_SOLVIK
+		state_region = s:STATE_FRIGGASVEIT
+        state_region = s:STATE_DRUMAGAR
+        state_region = s:STATE_KINGOUR
+		state_region = s:STATE_FALMAKELD
+		state_region = s:STATE_ICEWIND
+        state_region = s:STATE_SNOWBREACH
+        state_region = s:STATE_COLDSHEAR
+		state_region = s:STATE_HJELTIAS_GLACIER
+		state_region = s:STATE_BALATHOUL
+		state_region = s:STATE_ELDBERG
+		state_region = s:STATE_TANISTS_RETREAT
+        state_region = s:STATE_ANGERTORP
+		state_region = s:STATE_EOGHANS_SPEAR
+		state_region = s:STATE_GLENKELD
+        state_region = s:STATE_DUNMAFAR
+        state_region = s:STATE_KENLYNE
+		state_region = s:STATE_COLESSIE
+		state_region = s:STATE_URIKS_GIFT
+        state_region = s:STATE_TYMANS_FOLLY
+        state_region = s:STATE_GRYTINGARIK
+		state_region = s:STATE_EAST_YANGER_STEPPE
+		state_region = s:STATE_CASTELL_DRYSGOLMARK
+		state_region = s:STATE_BHAVANASARA #lazy lazy
+		state_region = s:STATE_ELDBERG
+		state_region = s:STATE_TANISTS_RETREAT
+        state_region = s:STATE_ANGERTORP
+		state_region = s:STATE_EOGHANS_SPEAR
+		state_region = s:STATE_GLENKELD
+        state_region = s:STATE_DUNMAFAR
+        state_region = s:STATE_KENLYNE
+		state_region = s:STATE_COLESSIE
+		state_region = s:STATE_URIKS_GIFT
+        state_region = s:STATE_TYMANS_FOLLY
+        state_region = s:STATE_GRYTINGARIK
+		state_region = s:STATE_EAST_YANGER_STEPPE
+		state_region = s:STATE_CASTELL_DRYSGOLMARK
 		state_region = s:STATE_IM_SO_SORRY
-       }
-	   any_state = { 
-		any_scope_state = {
+		province = p:XC677CF      #jesus fucking christ did I need to do this with all of them
+       } 
 			any_province = { 
 			OR = { 
 				
 				#alchemist's refuge 1/2/3
-				province = XC677CF
+				province = p:XC677CF
 				province = x9EBFFD
 				province = x3bebd2
 				province = xCFF8b9
@@ -932,14 +975,138 @@ the_cooler_exether_is_coastal = {
 
 				province = xd9a5df
 
+				#Tsimihavana
+
+				province = xddc754
+				province = x89a0f8
+				province = xdb45e8
+				province = xd45ccc
+				province = x8bfaf2
+				province = xf1d9aa
+				province = xd5d7ad
+				province = xe7b5da
+				province = xed42d2
+				province = xcfefa2
+				province = xdb56f9
+				province = xccf491
+				province = xe3c088
+				province = xd183e2
+
+				#Lumbelo
+
+				province = x94eecd
+				province = x9ab9dc
+				province = xa6adca
+				province = xd8aaa9b
+				
+				#Yernagria
+
+				province = xe1c776
+				province = x88c1f7
+				province = xe5f31e
+				province = xe81cf5
+				province = x52f7fc
+				province = x8495f6
+				province = x5cf8d1
+				province = xa4f7d2
+
+				#Helarm
+
+				province = xbcb0ce
+				province = xd754ca
+				province = xfdedfa
+				province = x28daf7
+				province = x2ee8ee
+				province = x58bbe2
+				province = x62f5ec
+				province = x65fbdc
+
+				#Maxanga
+
+				province = xcfd68e
+				province = xc1f979
+				province = xc4e594
+				province = x65fbdc
+
+				#Beloza  ##needs border redraws, check back later
+
+				province = x9ff2fd
+				province = xd2ecea
+				province = xed98e2
+				province = xe6b0c7
+
+				#Mahalatsaka
+
+				province = xde6adc
+				province = x7b99fc
+				province = xcecea5
+				province = xcecb7a
+				province = xa4f974
+				province = xbbcaa8
+				province = xe737f3
+				province = xdabacb
+				province = xf2b89b
+
+				#Maromita
+
+				province = xed68ae
+				province = xf47b97
+				province = x94dadb
+				province = xe1f7b2
+
+				#Suryanagari
+
+				province = xd5fccd
+				province = xc1b399
+				province = xe2b37b
+				province = xe5abf3
+				province = xe8deb8
+				province = x9db6ea
+				province = xfdfc2d
+
+				#Moskhan
+
+				province = xafdfda
+				province = x5cb0ef
+				province = xf3c160
+				province = xc7a3c0
+				province = x4ef5c3
+				province = xfbe55d
+				province = x9fd2ef
+
+				#Andizhansk
+
+				province = xfb7ad7
+				province = xea97db
+				province = xbd96ce
+				province = xe21cfc
+
+				#Termezsk
+
+				province = xceee9a
+				province = x40fec7
+				province = x9dddec
+				province = xedadde
+				province = xce96a6
+				province = x8bfc73
+
+
+				#Ghazninskiy
+
+				province = xed59c0
+				province = xc8ed7e
+				province = x8ddc8c
+				province = xa9a1ab
 
 
 	   		}
    	 	}
 	   }
-	}
-}
-}
+	
+
+
+
+
 
 is_sky_coastal = {
 	exether_is_coastal = no
