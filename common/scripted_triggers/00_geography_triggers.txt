@@ -344,6 +344,12 @@ state_has_mountain = {
 
 }
 
+no_beaches = {  #TODO: insert ASCII art of megamind here
+is_coastal = yes
+
+the_cooler_exether_is_coastal = no
+}
+
 the_cooler_exether_is_coastal = {
    
 	is_coastal = yes
@@ -950,7 +956,7 @@ is_sky_coastal = {
 
 exether_is_coastal = {
 	custom_tooltip = {
-		text = exether_is_coastal_tt
+		text = 	exether_is_coastal_tt
 		is_coastal = yes
 		OR = {
 			state_has_mountain = no
