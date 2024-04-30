@@ -345,8 +345,9 @@ state_has_mountain = {
 }
 
 the_cooler_exether_is_coastal = {
-    OR = { 
-
+   
+	is_coastal = yes
+	OR = { 
         state_region = s:STATE_BAIDAL
         state_region = s:STATE_BATSI
         state_region = s:STATE_TOSON
@@ -578,7 +579,7 @@ the_cooler_exether_is_coastal = {
 		state_region = s:STATE_CHANGAVUTA
 		state_region = s:STATE_KLONGLALA
 		state_region = s:STATE_KILIMASHWARI
-        state_region = s:STATE_UZURKILIMA
+        state_region = s:STATE_UZURIKILIMA
         state_region = s:STATE_SAWABARA
 		state_region = s:STATE_KISITONG
 		state_region = s:STATE_VEDAMALA
@@ -746,7 +747,7 @@ the_cooler_exether_is_coastal = {
 		state_region = s:STATE_SC12
 		state_region = s:STATE_BLOODTHORN_WASTES
 		state_region = s:STATE_SALTSHORE
-        state_region = s:STATE_SHALAATI
+        state_region = s:STATE_SALTSHORE_2
         state_region = s:STATE_ANTAQAQA
 		state_region = s:STATE_URQUNAYUQ
 		state_region = s:STATE_KUCHUYPATA
@@ -756,7 +757,7 @@ the_cooler_exether_is_coastal = {
 		state_region = s:STATE_PACHAQULLU
 
         state_region = s:STATE_FIANARIVO
-        state_region = s:STATE_VAROTSA
+        state_region = s:STATE_VAROTSOA
 		state_region = s:STATE_IVONDRO
 		state_region = s:STATE_IVOLOINA
         state_region = s:STATE_TOMBONT
@@ -860,247 +861,79 @@ the_cooler_exether_is_coastal = {
         state_region = s:STATE_GRYTINGARIK
 		state_region = s:STATE_EAST_YANGER_STEPPE
 		state_region = s:STATE_CASTELL_DRYSGOLMARK
-		state_region = s:STATE_IM_SO_SORRY
-		province = p:XC677CF      #jesus fucking christ did I need to do this with all of them
+		state_region = s:STATE_NORTHERN_DRAIN
+		state_region = s:STATE_KILIMADADA
+		state_region = s:STATE_KILIMASAWA
+		state_region = s:STATE_UZURIPWA
+		state_region = s:STATE_JITOMREMBO
+        state_region = s:STATE_PWAWAKATI
+        state_region = s:STATE_TSIMIHAVANA
+		state_region = s:STATE_LUMBELO
+		state_region = s:STATE_YERNAGRIA
+		state_region = s:STATE_HELARM
+		state_region = s:STATE_MAXANGA
+		state_region = s:STATE_BELOZA
+		state_region = s:STATE_MAROMITA
+		state_region = s:STATE_SURYANAGARI
+		state_region = s:STATE_ALCHEMISTS_REFUGE
+		state_region = s:STATE_ALCHEMISTS_REFUGE_2
+		state_region = s:STATE_ALCHEMISTS_REFUGE_3
+		state_region = s:STATE_GIANTS_STRIDE
+        state_region = s:STATE_AHORNAU
+        state_region = s:STATE_SANGARI
+		state_region = s:STATE_SANGARI_2
+		state_region = s:STATE_SANGARI_3
+		state_region = s:STATE_MOSKHAN
+		state_region = s:STATE_ANDIZHANSK
+        state_region = s:STATE_TERMEZSK
+        state_region = s:STATE_GHAZNINSKIY
+		state_region = s:STATE_FROSTGATE
+        state_region = s:STATE_MIDCLACK
+		state_region = s:STATE_NORLEA
+		state_region = s:STATE_CALDAMUS
+		state_region = s:STATE_SLUDGE_COAST
+		state_region = s:STATE_ALYEA
+        state_region = s:STATE_BANEKERT
+        state_region = s:STATE_ZENDEN
+		state_region = s:STATE_LAST_HEARTH
+        state_region = s:STATE_ARDSHIEL
+		state_region = s:STATE_OSTREN
+		state_region = s:STATE_GULFWATCH
+		state_region = s:STATE_MERCHANT_BAY
+		state_region = s:STATE_LOCHTYRE
+        state_region = s:STATE_MALINMORE
+        state_region = s:STATE_MELENLECK
+		state_region = s:STATE_COLNAIG
+        state_region = s:STATE_TEMPLE_HILL
+		state_region = s:STATE_FALNALECK
+		state_region = s:STATE_THORNWALL
+		state_region = s:STATE_PONTBRAN
+		state_region = s:STATE_BANCFAN
+        state_region = s:STATE_CAECARW
+        state_region = s:STATE_MAESBELAN
+		state_region = s:STATE_HAG_MARSHES
+		state_region = s:STATE_ALLTBRAN
+		state_region = s:STATE_MALDARBLANE
+		state_region = s:STATE_TOLFAR
+		state_region = s:STATE_GLYNFFORDD
+        state_region = s:STATE_INCHMARA
+        state_region = s:STATE_GWYNWEN
+		state_region = s:STATE_GLASINBLAIR
+		state_region = s:STATE_SKALKA
+        state_region = s:STATE_YGGHAMN
+        state_region = s:STATE_WYRMBONE_CLIFFS
+		state_region = s:STATE_FREYRSFJORDR
+		state_region = s:STATE_SIFSKER
+        state_region = s:STATE_HLIDSKJALF
+		state_region = s:STATE_HALSTEAD
+		state_region = s:STATE_FORRTORP
+		state_region = s:STATE_VIGAKULL
+		state_region = s:STATE_DRAGONBANE_TUNDRA
+		state_region = s:STATE_EIRIKSHOF
+		state_region = s:STATE_SAMARTHYA
+		state_region = s:STATE_JIVANTA
        } 
-			any_province = { 
-			OR = { 
-				
-				#alchemist's refuge 1/2/3
-				province = p:XC677CF
-				province = x9EBFFD
-				province = x3bebd2
-				province = xCFF8b9
-				province = xa5a5b3
-				province = xA1d2bc
-				province = x8dbad5
-				province = xc3bfea
-				province = xC9df4f
-				province = xe483e0
-				province = xdb96a3
-				province = xe8eb24
-				province = x8cd0f5
-				
-				#Giant's stride
-				province = xdbc1a2
-				province = xb1d58f
-				province = xb3c7fc
-				province = x87a1e1
-				province = x16f0fb
-				province = xe3b266
-				province = xb083e7
-				province = x86a4f6
-				province = x41e9f1
-				province = x9db6bc
-				province = x56cbf3
-				province = xe58ddd
-				province = x74e8f7
-				province = xeb80ae
-				province = xfd56fd
-				province = x83a7de
-				province = xc774f1
-				province = xad8cf1
-				province = xb083e7
-
-				#Ahornau
-
-				province = xcaeedb
-				province = xcd5bee
-				province = x7ce79e
-				province = xaeaccd
-
-				#Northern Drain
-
-				province = xfb74d4
-				province = xb6a5f7
-				province = xf796c2
-				province = xf2b5ce
-				province = x6efdcf
-				province = x6ff6da
-
-				#Sangari 1
-				
-				province = xb670e3
-				province = x76edb5
-				province = x6eadec
-				province = x8ad1dd
-				province = x68ade9
-				province = x73f1c3
-
-				#Sangari 2
-
-				province = xfea76c
-				province = xedca3f
-
-				#Sangari 3
-
-				province = xc2ea53
-
-				#Kilimadada
-
-				province = x7fbfca
-				province = xb2e8e6
-				province = xde99df
-				province = xe5c2a0
-				province = xe8af7c
-				province = x9f60fd
-
-				#Kilimasawa
-
-				province = xe9fda2
-				province = xe3ef2f
-				province = xe9c677
-				province = xbdfd75
-				province = x9cd4da
-				province = x28fcf7
-				province = xebe47f
-				province = xcda7e3
-
-				#Uzuripwa
-
-				province = xc1b8c8
-				province = xbcecc0
-				province = xade075
-				province = xe76aca
-
-				#Jitomrembo
-
-				province = xf3c1af
-				province = xc473d5
-				province = x8bc1ac
-				province = xe26fc0
-				province = xa7a7c1
-
-				#Pwawakati
-
-				province = xd9a5df
-
-				#Tsimihavana
-
-				province = xddc754
-				province = x89a0f8
-				province = xdb45e8
-				province = xd45ccc
-				province = x8bfaf2
-				province = xf1d9aa
-				province = xd5d7ad
-				province = xe7b5da
-				province = xed42d2
-				province = xcfefa2
-				province = xdb56f9
-				province = xccf491
-				province = xe3c088
-				province = xd183e2
-
-				#Lumbelo
-
-				province = x94eecd
-				province = x9ab9dc
-				province = xa6adca
-				province = xd8aaa9b
-				
-				#Yernagria
-
-				province = xe1c776
-				province = x88c1f7
-				province = xe5f31e
-				province = xe81cf5
-				province = x52f7fc
-				province = x8495f6
-				province = x5cf8d1
-				province = xa4f7d2
-
-				#Helarm
-
-				province = xbcb0ce
-				province = xd754ca
-				province = xfdedfa
-				province = x28daf7
-				province = x2ee8ee
-				province = x58bbe2
-				province = x62f5ec
-				province = x65fbdc
-
-				#Maxanga
-
-				province = xcfd68e
-				province = xc1f979
-				province = xc4e594
-				province = x65fbdc
-
-				#Beloza  ##needs border redraws, check back later
-
-				province = x9ff2fd
-				province = xd2ecea
-				province = xed98e2
-				province = xe6b0c7
-
-				#Mahalatsaka
-
-				province = xde6adc
-				province = x7b99fc
-				province = xcecea5
-				province = xcecb7a
-				province = xa4f974
-				province = xbbcaa8
-				province = xe737f3
-				province = xdabacb
-				province = xf2b89b
-
-				#Maromita
-
-				province = xed68ae
-				province = xf47b97
-				province = x94dadb
-				province = xe1f7b2
-
-				#Suryanagari
-
-				province = xd5fccd
-				province = xc1b399
-				province = xe2b37b
-				province = xe5abf3
-				province = xe8deb8
-				province = x9db6ea
-				province = xfdfc2d
-
-				#Moskhan
-
-				province = xafdfda
-				province = x5cb0ef
-				province = xf3c160
-				province = xc7a3c0
-				province = x4ef5c3
-				province = xfbe55d
-				province = x9fd2ef
-
-				#Andizhansk
-
-				province = xfb7ad7
-				province = xea97db
-				province = xbd96ce
-				province = xe21cfc
-
-				#Termezsk
-
-				province = xceee9a
-				province = x40fec7
-				province = x9dddec
-				province = xedadde
-				province = xce96a6
-				province = x8bfc73
-
-
-				#Ghazninskiy
-
-				province = xed59c0
-				province = xc8ed7e
-				province = x8ddc8c
-				province = xa9a1ab
-
-
-	   		}
-   	 	}
+			
 	   }
 	
 
