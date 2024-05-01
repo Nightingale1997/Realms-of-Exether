@@ -440,21 +440,4 @@ pdxmesh = {
         pdxmesh = "male_kobolds_red_247_mesh"
     }
 
-    pdxmesh = {
-        name = "male_kobolds_red_248_mesh"
-        file = "hm_prophet.mesh"
-        scale = 1.6
-        meshsettings = {
-            name = "prophet_shieldShape"
-            index = 0
-            texture_diffuse = "skins_textures/body/Kobolds_Red/Male/male_kobolds_red_248.dds"
-            shader = "portrait_attachment_alpha_to_coverage"
-            shader_file = "gfx/models/skins/body.shader"
-        }
-    }
-    entity = {
-        name = "male_kobolds_red_248_entity"
-        pdxmesh = "male_kobolds_red_248_mesh"
-    }
-
     
