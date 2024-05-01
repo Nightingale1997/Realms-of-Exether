@@ -1,4 +1,21 @@
 pdxmesh = {
+        name = "female_lizards_komodo_314_mesh"
+        file = "hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "skins_textures/body/Lizards_Komodo/Female/female_lizards_komodo_314.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "female_lizards_komodo_314_entity"
+        pdxmesh = "female_lizards_komodo_314_mesh"
+    }
+
+    pdxmesh = {
         name = "female_lizards_komodo_315_mesh"
         file = "hm_prophet.mesh"
         scale = 1.6
@@ -81,6 +98,23 @@ pdxmesh = {
     entity = {
         name = "female_lizards_komodo_319_entity"
         pdxmesh = "female_lizards_komodo_319_mesh"
+    }
+
+    pdxmesh = {
+        name = "male_lizards_komodo_319_mesh"
+        file = "hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "skins_textures/body/Lizards_Komodo/Male/male_lizards_komodo_319.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "male_lizards_komodo_319_entity"
+        pdxmesh = "male_lizards_komodo_319_mesh"
     }
 
     pdxmesh = {

@@ -1,4 +1,21 @@
 pdxmesh = {
+        name = "female_kobolds_green_201_mesh"
+        file = "hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "skins_textures/body/Kobolds_Green/Female/female_kobolds_green_201.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "female_kobolds_green_201_entity"
+        pdxmesh = "female_kobolds_green_201_mesh"
+    }
+
+    pdxmesh = {
         name = "female_kobolds_green_202_mesh"
         file = "hm_prophet.mesh"
         scale = 1.6
@@ -149,6 +166,23 @@ pdxmesh = {
     entity = {
         name = "female_kobolds_green_210_entity"
         pdxmesh = "female_kobolds_green_210_mesh"
+    }
+
+    pdxmesh = {
+        name = "male_kobolds_green_210_mesh"
+        file = "hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "skins_textures/body/Kobolds_Green/Male/male_kobolds_green_210.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "male_kobolds_green_210_entity"
+        pdxmesh = "male_kobolds_green_210_mesh"
     }
 
     pdxmesh = {

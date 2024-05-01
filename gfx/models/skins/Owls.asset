@@ -1,4 +1,21 @@
 pdxmesh = {
+        name = "female_owls_349_mesh"
+        file = "hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "skins_textures/body/Owls/Female/female_owls_349.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "female_owls_349_entity"
+        pdxmesh = "female_owls_349_mesh"
+    }
+
+    pdxmesh = {
         name = "female_owls_350_mesh"
         file = "hm_prophet.mesh"
         scale = 1.6
@@ -149,6 +166,23 @@ pdxmesh = {
     entity = {
         name = "female_owls_358_entity"
         pdxmesh = "female_owls_358_mesh"
+    }
+
+    pdxmesh = {
+        name = "male_owls_358_mesh"
+        file = "hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "skins_textures/body/Owls/Male/male_owls_358.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "male_owls_358_entity"
+        pdxmesh = "male_owls_358_mesh"
     }
 
     pdxmesh = {

@@ -1,4 +1,21 @@
 pdxmesh = {
+        name = "female_naga_333_mesh"
+        file = "hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "skins_textures/body/Naga/Female/female_naga_333.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "female_naga_333_entity"
+        pdxmesh = "female_naga_333_mesh"
+    }
+
+    pdxmesh = {
         name = "female_naga_334_mesh"
         file = "hm_prophet.mesh"
         scale = 1.6
@@ -81,6 +98,23 @@ pdxmesh = {
     entity = {
         name = "female_naga_338_entity"
         pdxmesh = "female_naga_338_mesh"
+    }
+
+    pdxmesh = {
+        name = "male_naga_338_mesh"
+        file = "hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "skins_textures/body/Naga/Male/male_naga_338.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "male_naga_338_entity"
+        pdxmesh = "male_naga_338_mesh"
     }
 
     pdxmesh = {

@@ -1,4 +1,21 @@
 pdxmesh = {
+        name = "female_lizards_iguana_294_mesh"
+        file = "hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "skins_textures/body/Lizards_Iguana/Female/female_lizards_iguana_294.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "female_lizards_iguana_294_entity"
+        pdxmesh = "female_lizards_iguana_294_mesh"
+    }
+
+    pdxmesh = {
         name = "female_lizards_iguana_295_mesh"
         file = "hm_prophet.mesh"
         scale = 1.6
@@ -81,6 +98,23 @@ pdxmesh = {
     entity = {
         name = "female_lizards_iguana_299_entity"
         pdxmesh = "female_lizards_iguana_299_mesh"
+    }
+
+    pdxmesh = {
+        name = "male_lizards_iguana_299_mesh"
+        file = "hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "skins_textures/body/Lizards_Iguana/Male/male_lizards_iguana_299.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "male_lizards_iguana_299_entity"
+        pdxmesh = "male_lizards_iguana_299_mesh"
     }
 
     pdxmesh = {

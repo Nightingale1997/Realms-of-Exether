@@ -1,4 +1,21 @@
 pdxmesh = {
+        name = "female_parrots_379_mesh"
+        file = "hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "skins_textures/body/Parrots/Female/female_parrots_379.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "female_parrots_379_entity"
+        pdxmesh = "female_parrots_379_mesh"
+    }
+
+    pdxmesh = {
         name = "female_parrots_380_mesh"
         file = "hm_prophet.mesh"
         scale = 1.6
@@ -166,6 +183,23 @@ pdxmesh = {
     entity = {
         name = "female_parrots_389_entity"
         pdxmesh = "female_parrots_389_mesh"
+    }
+
+    pdxmesh = {
+        name = "male_parrots_389_mesh"
+        file = "hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "skins_textures/body/Parrots/Male/male_parrots_389.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "male_parrots_389_entity"
+        pdxmesh = "male_parrots_389_mesh"
     }
 
     pdxmesh = {

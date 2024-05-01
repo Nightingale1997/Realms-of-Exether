@@ -1,4 +1,21 @@
 pdxmesh = {
+        name = "female_vultures_430_mesh"
+        file = "hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "skins_textures/body/Vultures/Female/female_vultures_430.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "female_vultures_430_entity"
+        pdxmesh = "female_vultures_430_mesh"
+    }
+
+    pdxmesh = {
         name = "female_vultures_431_mesh"
         file = "hm_prophet.mesh"
         scale = 1.6
@@ -98,6 +115,23 @@ pdxmesh = {
     entity = {
         name = "female_vultures_436_entity"
         pdxmesh = "female_vultures_436_mesh"
+    }
+
+    pdxmesh = {
+        name = "male_vultures_436_mesh"
+        file = "hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "skins_textures/body/Vultures/Male/male_vultures_436.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "male_vultures_436_entity"
+        pdxmesh = "male_vultures_436_mesh"
     }
 
     pdxmesh = {

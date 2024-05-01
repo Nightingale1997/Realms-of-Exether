@@ -1,4 +1,21 @@
 pdxmesh = {
+        name = "female_gnoll_169_mesh"
+        file = "hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "skins_textures/body/Gnoll/Female/female_gnoll_169.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "female_gnoll_169_entity"
+        pdxmesh = "female_gnoll_169_mesh"
+    }
+
+    pdxmesh = {
         name = "female_gnoll_170_mesh"
         file = "hm_prophet.mesh"
         scale = 1.6
@@ -183,6 +200,23 @@ pdxmesh = {
     entity = {
         name = "female_gnoll_180_entity"
         pdxmesh = "female_gnoll_180_mesh"
+    }
+
+    pdxmesh = {
+        name = "male_gnoll_180_mesh"
+        file = "hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "skins_textures/body/Gnoll/Male/male_gnoll_180.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "male_gnoll_180_entity"
+        pdxmesh = "male_gnoll_180_mesh"
     }
 
     pdxmesh = {

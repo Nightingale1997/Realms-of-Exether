@@ -1,4 +1,21 @@
 pdxmesh = {
+        name = "female_warforged_446_mesh"
+        file = "hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "skins_textures/body/Warforged/Female/female_warforged_446.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "female_warforged_446_entity"
+        pdxmesh = "female_warforged_446_mesh"
+    }
+
+    pdxmesh = {
         name = "female_warforged_447_mesh"
         file = "hm_prophet.mesh"
         scale = 1.6
@@ -217,6 +234,23 @@ pdxmesh = {
     entity = {
         name = "female_warforged_459_entity"
         pdxmesh = "female_warforged_459_mesh"
+    }
+
+    pdxmesh = {
+        name = "male_warforged_459_mesh"
+        file = "hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "skins_textures/body/Warforged/Male/male_warforged_459.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "male_warforged_459_entity"
+        pdxmesh = "male_warforged_459_mesh"
     }
 
     pdxmesh = {

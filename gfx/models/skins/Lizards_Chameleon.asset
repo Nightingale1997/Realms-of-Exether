@@ -1,4 +1,21 @@
 pdxmesh = {
+        name = "female_lizards_chameleon_271_mesh"
+        file = "hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "skins_textures/body/Lizards_Chameleon/Female/female_lizards_chameleon_271.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "female_lizards_chameleon_271_entity"
+        pdxmesh = "female_lizards_chameleon_271_mesh"
+    }
+
+    pdxmesh = {
         name = "female_lizards_chameleon_272_mesh"
         file = "hm_prophet.mesh"
         scale = 1.6
@@ -81,6 +98,23 @@ pdxmesh = {
     entity = {
         name = "female_lizards_chameleon_276_entity"
         pdxmesh = "female_lizards_chameleon_276_mesh"
+    }
+
+    pdxmesh = {
+        name = "male_lizards_chameleon_276_mesh"
+        file = "hm_prophet.mesh"
+        scale = 1.6
+        meshsettings = {
+            name = "prophet_shieldShape"
+            index = 0
+            texture_diffuse = "skins_textures/body/Lizards_Chameleon/Male/male_lizards_chameleon_276.dds"
+            shader = "portrait_attachment_alpha_to_coverage"
+            shader_file = "gfx/models/skins/body.shader"
+        }
+    }
+    entity = {
+        name = "male_lizards_chameleon_276_entity"
+        pdxmesh = "male_lizards_chameleon_276_mesh"
     }
 
     pdxmesh = {
