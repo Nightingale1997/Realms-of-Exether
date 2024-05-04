@@ -39,7 +39,7 @@ pavedroad = {
 	default_style = 4
 	color = { 0.75 0 1.5 }
 	merge_with_types = { 2 3 4 }	# Specifed with id numbers
-	anchor_sparsity = 6 # Number of NavMesh vertices to skip between each anchor
+	anchor_sparsity = 8 # Number of NavMesh vertices to skip between each anchor
 	anchor_type = 1
 }
 
@@ -64,7 +64,7 @@ undeveloped = {
 air_route = {
 	id = 7
 	default_style = 7
-	color = { 0.75 0 1.5 }
+	color = { 0.85 0 1.5 }
 	merge_with_types = { 2 3 }	
 	anchor_sparsity = 8 # Number of NavMesh vertices to skip between each anchor
 	anchor_type = 1
