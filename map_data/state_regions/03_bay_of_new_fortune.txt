@@ -37,7 +37,7 @@ STATE_KILIMASAWA = {
 STATE_MAJIMBA = {
     id = 4451
     subsistence_building = "building_subsistence_pastures"
-    provinces = { "x30FADE" "x76D9F7" "xA9C3A8" "xB690F3" "xB6E7C0" "xBBF478" "xBD7DD7" "xBDC5B2" "xBDD6E0" "xCC39FB" "xD0F178" "xE588BE" "xE7A18B" "xE7EABF" "xE9E2F1" "xEBBD51" "xF08EF7" "xF1A7EB" "xF6DC97" "xFDAAAE" }
+    provinces = { "x00F160" "x30FADE" "x76D9F7" "xA9C3A8" "xB690F3" "xB6E7C0" "xBBF478" "xBD7DD7" "xBDC5B2" "xBDD6E0" "xCC39FB" "xD0F178" "xE588BE" "xE7A18B" "xE7EABF" "xEBBD51" "xF08EF7" "xF1A7EB" "xF6DC97" "xFDAAAE" }
     city = x30FADE
     wood = x76D9F7
     farm = xA9C3A8
@@ -53,7 +53,7 @@ STATE_MAJIMBA = {
 STATE_PWANIQWA = {
     id = 4452
     subsistence_building = "building_subsistence_pastures"
-    provinces = { "x77C3E6" "x84D1C7" "x95C8DE" "xA389E0" "xA4FEFB" "xABA8B7" "xACEEDE" "xB4ECEA" "xB7C1A2" "xCD8EE0" "xCDE396" "xD080F9" "xDEA4CF" "xE231EC" "xE5E476" "xE6E276" "xE751BE" "xEC90A5" "xEFF0D5" }
+    provinces = { "x77C3E6" "x84D1C7" "x95C8DE" "xA389E0" "xA4FEFB" "xABA8B7" "xACEEDE" "xB4ECEA" "xB7C1A2" "xCD8EE0" "xCDE396" "xD080F9" "xDEA4CF" "xE231EC" "xE5E476" "xE6E276" "xE751BE" "xE9E2F1" "xEC90A5" "xEFF0D5" }
     city = x77C3E6
     wood = x84D1C7
     farm = x95C8DE
@@ -677,7 +677,7 @@ STATE_TAYTAQOCHA = {
     capped_resources = {
         bg_logging = 3
         bg_opium_plantations = 10
-		bg_wishstone_mining_depletable = 50
+        bg_wishstone_mining_depletable = 50
     }
 
 }
