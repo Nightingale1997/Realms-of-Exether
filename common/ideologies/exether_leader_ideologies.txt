@@ -176,7 +176,8 @@ ideology_artificer_baron = { #magical liberal
 		law_tenant_farmers = neutral
 		law_homesteading = neutral
 		law_commercialized_agriculture = approve
-	}	possible = {
+	}	
+	possible = {
 		owner = {
 			has_technology_researched = stock_exchange
 			# capitalism must be relevant
@@ -199,8 +200,8 @@ ideology_artificer_baron = { #magical liberal
 			OR = {
 				is_interest_group_type = ig_petty_bourgeoisie
 				is_interest_group_type = ig_landowners
-				is_interest_group_type = ig_intelligentsia
 				is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_mages
 			}
 		}
 		scope:interest_group = {
@@ -225,13 +226,13 @@ ideology_artificer_baron = { #magical liberal
 			}
 			add = 50
 		}
-		# more likely for intelligentsia, industrialists, and PB with traditional economic laws
+		# more likely for mages, industrialists, and PB with traditional economic laws
 		if = {
 			limit = {
 				scope:interest_group = {
 					OR = {
 						is_interest_group_type = ig_petty_bourgeoisie
-						is_interest_group_type = ig_intelligentsia
+						is_interest_group_type = ig_mages
 						is_interest_group_type = ig_industrialists
 					}
 				}
