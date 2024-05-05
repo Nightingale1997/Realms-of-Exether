@@ -1025,7 +1025,7 @@ STATE_SWAHAILUK = {
         type = "bg_oil_extraction"
         undiscovered_amount = 5
     }
-
+    naval_exit_id = 3077
 }
 STATE_BONGSAF = {
     id = 2497
@@ -1045,7 +1045,7 @@ STATE_BONGSAF = {
         type = "bg_rubber"
         discovered_amount = 16
     }
-
+    naval_exit_id = 3075
 }
 STATE_KISIKLONG = {
     id = 2498
@@ -1335,7 +1335,7 @@ STATE_NAVAKAI = {
     capped_resources = {
         bg_wishstone_mining = 40
     }
-
+    naval_exit_id = 3101
 }
 STATE_SHANAKONG = {
     id = 2512
@@ -1346,7 +1346,7 @@ STATE_SHANAKONG = {
     wood = x71D9ED
     farm = x77E6A1
     mine = x7DB3EA
-    port = x8ECAB8
+
     arable_land = 82
     arable_resources = { "bg_livestock_ranches" "bg_millet_farms" }
     capped_resources = {
@@ -1354,7 +1354,7 @@ STATE_SHANAKONG = {
         bg_logging = 2
         bg_coal_mining = 30
     }
-
+    naval_exit_id = 3075
 }
 STATE_YAZHINAVA = {
     id = 2513
@@ -1386,7 +1386,7 @@ STATE_YAZHINAVA = {
         type = "bg_oil_extraction"
         undiscovered_amount = 5
     }
-
+    naval_exit_id = 3075
 }
 STATE_KEEDZAI = {
     id = 2514
@@ -1427,7 +1427,7 @@ STATE_NAKOTHAI = {
         type = "bg_rubber"
         undiscovered_amount = 32
     }
-
+    naval_exit_id = 3074
 }
 STATE_SHIBADUAI = {
     id = 2516
@@ -1443,7 +1443,7 @@ STATE_SHIBADUAI = {
     capped_resources = {
         bg_logging = 5
     }
-
+    naval_exit_id = 3074
 }
 STATE_KAINAVA = {
     id = 2517
@@ -1513,7 +1513,7 @@ STATE_KEENAVOK = {
     capped_resources = {
         bg_cloud_collecting = 40
     }
-
+    naval_exit_id = 3073
 }
 STATE_SHIMAKAI = {
     id = 2521
@@ -1575,7 +1575,7 @@ STATE_SHINOGOZH = {
         bg_iron_mining = 20
         bg_wishstone_mining = 30
     }
-
+    naval_exit_id = 3074
 }
 STATE_NAKOKAIN = {
     id = 2524
@@ -1594,7 +1594,7 @@ STATE_NAKOKAIN = {
         bg_wishstone_mining = 30
         bg_cloud_collecting = 10
     }
-
+    naval_exit_id = 3073
 }
 STATE_DINASHIN = {
     id = 2525
@@ -1610,7 +1610,7 @@ STATE_DINASHIN = {
     capped_resources = {
         bg_logging = 2
     }
-
+    naval_exit_id = 3073
 }
 STATE_KEENAVAZH = {
     id = 2526
@@ -1629,7 +1629,7 @@ STATE_KEENAVAZH = {
         bg_lead_mining = 28
         bg_logging = 4
     }
-
+    naval_exit_id = 3073
 }
 STATE_NAVOYAZH = {
     id = 2527
@@ -1663,7 +1663,7 @@ STATE_SHINAKHAD = {
         bg_coal_mining = 20
         bg_cloud_collecting = 15
     }
-
+    naval_exit_id = 3072
 }
 STATE_THAGHIZHI = {
     id = 2529
@@ -1682,7 +1682,7 @@ STATE_THAGHIZHI = {
         bg_cloud_collecting = 20
         bg_logging = 8
     }
-
+    naval_exit_id = 3072
 }
 STATE_KLINGELMEER = {
     id = 2738
@@ -1699,7 +1699,7 @@ STATE_KLINGELMEER = {
         bg_iron_mining = 30
         bg_logging = 17
     }
-
+    naval_exit_id = 3102
 }
 STATE_TINKELHOVEN = {
     id = 2739
@@ -1877,7 +1877,7 @@ STATE_BELLENBERG = {
         depleted_type = "bg_gold_mining"
         undiscovered_amount = 6
     }
-
+    naval_exit_id = 3107
 }
 STATE_KLINGELBERG = {
     id = 2748
@@ -1888,7 +1888,7 @@ STATE_KLINGELBERG = {
     farm = x79DBA5
     mine = x94BCB7
     port = xA07AE8
-
+    naval_exit_id = 3102
 }
 STATE_VONKPLEIN = {
     id = 2749
@@ -1986,7 +1986,7 @@ STATE_SMEERGOED = {
         bg_lead_mining = 90
         bg_logging = 11
     }
-
+    naval_exit_id = 3102
 }
 STATE_KWETTERDIJK = {
     id = 2754
@@ -2047,7 +2047,7 @@ STATE_TIMMERSTEEN = {
         type = "bg_oil_extraction"
         undiscovered_amount = 5
     }
-
+    naval_exit_id = 3103
 }
 STATE_VUURHOEK = {
     id = 2757
@@ -2102,7 +2102,7 @@ STATE_GLIMMERDAM = {
         bg_logging = 7
         bg_fishing = 5
     }
-
+    naval_exit_id = 3104
 }
 STATE_KRULWILGEN = {
     id = 2760
@@ -2113,7 +2113,7 @@ STATE_KRULWILGEN = {
     farm = xA7F4C2
     mine = xCAC58F
     port = xD5A97B
-
+    naval_exit_id = 3102
 }
 STATE_KLINGELWEIDE = {
     id = 2761
@@ -2148,7 +2148,7 @@ STATE_SMIDSGROEN = {
         bg_coal_mining = 48
         bg_logging = 18
     }
-
+    naval_exit_id = 3102
 }
 STATE_SNAARGRACHT = {
     id = 2763
@@ -2159,7 +2159,7 @@ STATE_SNAARGRACHT = {
     farm = x60DCFB
     mine = x72E6B0
     port = x7FB0F7
-
+    naval_exit_id = 3102
 }
 STATE_BELLENBOS = {
     id = 2764
@@ -2177,7 +2177,7 @@ STATE_BELLENBOS = {
         bg_sulfur_mining = 32
         bg_logging = 23
     }
-
+    naval_exit_id = 3104
 }
 STATE_RATELKUST = {
     id = 3766
@@ -2258,7 +2258,7 @@ STATE_PIEPERHAVEN = {
         bg_iron_mining = 18
         bg_logging = 6
     }
-
+    naval_exit_id = 3103
 }
 STATE_SPRANKELMEER = {
     id = 2770
@@ -2298,7 +2298,7 @@ STATE_VUURVALLEI = {
         bg_sulfur_mining = 32
         bg_logging = 20
     }
-
+    naval_exit_id = 3105
 }
 STATE_FLUITVELD = {
     id = 3772
@@ -2320,7 +2320,7 @@ STATE_FLUITVELD = {
         type = "bg_oil_extraction"
         undiscovered_amount = 10
     }
-
+    naval_exit_id = 3104
 }
 STATE_TIMMERHAVEN = {
     id = 3773
@@ -2347,7 +2347,7 @@ STATE_TIMMERHAVEN = {
         type = "bg_oil_extraction"
         undiscovered_amount = 20
     }
-
+    naval_exit_id = 3104
 }
 STATE_KRULHOVEN = {
     id = 2774
@@ -2452,7 +2452,7 @@ STATE_GLIMMERWOUD = {
         bg_sulfur_mining = 40
         bg_logging = 11
     }
-
+    naval_exit_id = 3105
 }
 STATE_VALORN = {
     id = 2766
@@ -2487,6 +2487,7 @@ STATE_HAVENSHIRE = {
     mine = xB5B3C3
     port = xD26AE2
 
+    naval_exit_id = 3105
 }
 STATE_HIGHMOOR = {
     id = 3770
@@ -2508,7 +2509,7 @@ STATE_IRONWOOD = {
     farm = x9DE6F0
     mine = xA1D599
     port = xD1C992
-
+    naval_exit_id = 3105
 }
 STATE_STORMHOLM = {
     id = 2772
@@ -2529,7 +2530,7 @@ STATE_STORMHOLM = {
         depleted_type = "bg_gold_mining"
         undiscovered_amount = 4
     }
-
+    naval_exit_id = 3107
 }
 STATE_RAVENHOLME = {
     id = 2773
@@ -2552,6 +2553,7 @@ STATE_THORNFIELD = {
     mine = xCCF4DF
     port = xD0F869
 
+    naval_exit_id = 3108
 }
 STATE_FARREACH = {
     id = 2775
@@ -2573,7 +2575,7 @@ STATE_MOONSHADE = {
     farm = xAD94C4
     mine = xD350E1
     port = xD6BBDF
-
+    naval_exit_id = 3105
 }
 STATE_STORMWATCH = {
     id = 3777
@@ -2585,6 +2587,7 @@ STATE_STORMWATCH = {
     mine = x9A85FD
     port = xA8E96A
 
+    naval_exit_id = 3108
 }
 STATE_EMBERFALL = {
     id = 2778
@@ -2629,7 +2632,7 @@ STATE_BRIGHTWATER = {
         type = "bg_oil_extraction"
         undiscovered_amount = 50
     }
-
+    naval_exit_id = 3107
 }
 STATE_DAWNRIDGE = {
     id = 2782
@@ -2659,6 +2662,7 @@ STATE_SUNDALE = {
         bg_logging = 6
     }
 
+    naval_exit_id = 3107
 }
 STATE_WHITESTONE = {
     id = 2784
@@ -2680,6 +2684,7 @@ STATE_WHITESTONE = {
         undiscovered_amount = 5
     }
 
+    naval_exit_id = 3107
 }
 STATE_RIVERTIDE = {
     id = 2785
@@ -2783,6 +2788,7 @@ STATE_WINDSONG = {
         undiscovered_amount = 12
     }
 
+    naval_exit_id = 3108
 }
 STATE_WINDSPEAR = {
     id = 2795
@@ -2805,6 +2811,8 @@ STATE_MISTVALE = {
     mine = x93E8AB
     port = xA6C4A9
 
+    naval_exit_id = 3108
+
 }
 STATE_SILVERCREST = {
     id = 2797
@@ -2815,6 +2823,7 @@ STATE_SILVERCREST = {
     mine = x8DFBF7
     port = x9A7AF9
 
+    naval_exit_id = 3108
 }
 STATE_GRINWALD = {
     id = 2798
@@ -2830,6 +2839,7 @@ STATE_GRINWALD = {
     capped_resources = {
         bg_logging = 7
     }
+    naval_exit_id = 3105
 }
 STATE_MAANSTIEN = {
     id = 2799
