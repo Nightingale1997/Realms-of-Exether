@@ -97,7 +97,7 @@ ideology_pious_magoclast = {
 	}
 }
 
-ideology_luddite_devout = {
+ideology_luddite_ig = {
 	icon = "gfx/interface/icons/ideology_icons/luddite.dds"
 
 	lawgroup_economic_system = {
@@ -123,7 +123,7 @@ ideology_luddite_devout = {
 
 }
 
-ideology_ig_druid = {
+ideology_druidic = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/luddite.dds"
 	
 	character_ideology = yes
@@ -146,13 +146,5 @@ ideology_ig_druid = {
 		law_laissez_faire = strongly_disapprove
 		law_interventionism = strongly_disapprove
 		law_command_economy = strongly_disapprove
-	}
-
-	lawgroup_land_reform = {
-		law_collectivized_agriculture = strongly_approve
-		law_serfdom = neutral
-		law_tenant_farmers = neutral
-		law_homesteading = neutral
-		law_commercialized_agriculture = strongly_disapprove
 	}
 }
