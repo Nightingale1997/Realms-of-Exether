@@ -118,8 +118,41 @@ ideology_luddite_devout = {
 	}
 
 	lawgroup_magic = {
-		law_divine_miracles = approve
-		law_druidic_circles = strongly_approve
+		law_artificer_guilds = strongly_disapprove
 	}
 
+}
+
+ideology_ig_druid = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/luddite.dds"
+	
+	character_ideology = yes
+
+	lawgroup_magic = {
+		law_no_magic = disapprove
+		law_divine_miracles = neutral
+		law_druidic_circles = strongly_approve
+		law_artificer_guilds = strongly_disapprove
+		law_astrological_studies = neutral
+		law_dark_arts = neutral
+		law_mage_hunters = disapprove
+	}
+
+	lawgroup_economic_system = {
+		law_industry_banned = strongly_approve
+		law_agrarianism = approve
+		law_cooperative_ownership = approve
+		law_traditionalism = neutral
+		law_laissez_faire = strongly_disapprove
+		law_interventionism = strongly_disapprove
+		law_command_economy = strongly_disapprove
+	}
+
+	lawgroup_land_reform = {
+		law_collectivized_agriculture = strongly_approve
+		law_serfdom = neutral
+		law_tenant_farmers = neutral
+		law_homesteading = neutral
+		law_commercialized_agriculture = strongly_disapprove
+	}
 }

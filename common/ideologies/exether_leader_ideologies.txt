@@ -337,10 +337,10 @@ ideology_druid = {
 		law_no_magic = disapprove
 		law_divine_miracles = neutral
 		law_druidic_circles = strongly_approve
-		law_artificer_guilds = disapprove
+		law_artificer_guilds = strongly_disapprove
 		law_astrological_studies = neutral
 		law_dark_arts = neutral
-		law_mage_hunters = strongly_disapprove
+		law_mage_hunters = disapprove
 	}
 
 	lawgroup_economic_system = {
@@ -351,21 +351,6 @@ ideology_druid = {
 		law_laissez_faire = strongly_disapprove
 		law_interventionism = strongly_disapprove
 		law_command_economy = strongly_disapprove
-	}
-	
-	lawgroup_trade_policy = {
-		law_free_trade = strongly_disapprove
-		law_mercantilism = neutral
-		law_protectionism = approve		
-		law_isolationism = neutral
-	}
-
-	lawgroup_land_reform = {
-		law_collectivized_agriculture = strongly_approve
-		law_serfdom = disapprove
-		law_tenant_farmers = approve
-		law_homesteading = neutral
-		law_commercialized_agriculture = strongly_disapprove
 	}
 
 #	possible = {  ##might want to add a trigger here
@@ -395,7 +380,6 @@ ideology_druid = {
 				has_variable = chose_ethno_nationalism
 			}
 		}
-	}
 
 	leader_weight = {
 		value = 50 
