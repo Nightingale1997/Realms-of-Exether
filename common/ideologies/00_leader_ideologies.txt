@@ -2439,24 +2439,6 @@ ideology_luddite = {
 		law_isolationism = strongly_approve
 	}
 
-	lawgroup_magic = {
-		law_no_magic = neutral
-		law_divine_miracles = neutral
-		law_druidic_circles = strongly_approve
-		law_artificer_guilds = strongly_disapprove
-		law_astrological_studies = neutral
-		law_dark_arts = neutral
-		law_mage_hunters = disapprove
-	}
-	
-	lawgroup_land_reform = {
-		law_collectivized_agriculture = strongly_approve
-		law_serfdom = neutral
-		law_tenant_farmers = neutral
-		law_homesteading = neutral
-		law_commercialized_agriculture = strongly_disapprove
-	}
-
 	possible = {
 		owner = {
 			has_technology_researched = romanticism
@@ -2472,7 +2454,6 @@ ideology_luddite = {
 			owner = {
 				has_law = law_type:law_isolationism
 				has_law = law_type:law_industry_banned
-				has_law = law_type:law_druidic_circles
 			}
 		}
 		scope:interest_group = {
@@ -2522,53 +2503,6 @@ ideology_luddite = {
 			}
 			add = 50
 		}
-
-		# druids become politically active as encroachment occurs
-		if = {
-			limit = {
-				owner = {
-					any_scope_building = {
-						is_building_group = bg_subsistence_agriculture
-						level <= 12
-					}
-				}
-			}
-			add = 50
-		}
-		# More druids exist around farms
-		if = {
-			limit = {
-				owner = {
-					any_scope_state = {
-					OR = {
-						any_scope_building = {
-							is_building_group = bg_maize_farms
-							level >= 12
-						}
-						any_scope_building = {
-							is_building_group = bg_wheat_farms
-							level >= 12
-						}
-						any_scope_building = {
-							is_building_group = bg_millet_farms
-							level >= 12
-						}
-						any_scope_building = {
-							is_building_group = bg_rice_farms
-							level >= 8
-						}
-						any_scope_building = {
-							is_building_group = bg_plantations
-							level >= 10
-						}
-					}
-						
-					}
-				}
-			}
-			add = 50
-		}
-
 	}
 }
 
