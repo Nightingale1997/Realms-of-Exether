@@ -1,0 +1,73 @@
+﻿##agitators
+
+SUN_qazim_taushani = { 
+	first_name = Qazim
+	last_name = Taushani
+	historical = yes
+	female = no
+	is_agitator = yes 
+	culture = primary_culture
+	religion = rel:nilbogism
+	interest_group = ig_landowners
+	ideology = ideology_moderate
+	birth_date = 1147.1.12
+	traits = {
+	
+		imposing
+		literary
+	}
+
+	on_created = {
+		exile_character = yes #this one.  we will ruin his life.
+	}
+
+    agitator_usage = {
+        country_trigger = {
+			
+				c:SUN ?= THIS
+			
+			
+			has_dlc_feature = voice_of_the_people_content
+		}
+        interest_group_trigger = {
+			is_interest_group_type = ig_landowners
+        }   
+        earliest_usage_date = 1180.1.1
+        latest_usage_date = 1202.1.1
+        chance = 50
+    }   
+}
+
+SUN_adile_ahmeti = { 
+	first_name = Adile
+	last_name = Ahmeti
+	historical = yes
+	female = yes
+	is_agitator = yes 
+	culture = primary_culture
+	religion = rel:nilbogism
+	interest_group = ig_rural_folk
+	ideology = ideology_druid
+	birth_date = 1181.11.11
+	traits = {
+		firebrand
+		charismatic
+		brave
+	}
+    agitator_usage = {
+        country_trigger = {
+		
+				c:SUN?= THIS
+				
+			
+			has_dlc_feature = voice_of_the_people_content
+        }
+        interest_group_trigger = {
+			is_interest_group_type = ig_rural_folk
+			is_interest_group_type = devout
+        }   
+        earliest_usage_date = 1208.1.1
+        latest_usage_date = 1229.1.1
+        chance = 50 
+    }   
+}
