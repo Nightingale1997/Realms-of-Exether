@@ -1,4 +1,4 @@
-﻿STATE_KHAULAN = {
+﻿STATE_KHAULAN = { #xAAE2C2
     id = 4530
     subsistence_building = "building_subsistence_pastures"
     provinces = { "x6DEA9E" "x9AEE7B" "xA5E276" "xAAE2C2" "xB2EF76" "xD5D36C" "xD6E84A" "xDC83F4" "xE399C5" "xE4E9FB" "xF0E160" "xF2DEB6" }
@@ -13,9 +13,9 @@
         bg_coal_mining = 10
         bg_iron_mining = 20
     }
-
+    naval_exit_id = 3120
 }
-STATE_ULDOR = {
+STATE_ULDOR = { #xF6AA9F
     id = 4531
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x82DED1" "xB179D6" "xB6DA8B" "xC391F8" "xDECBAD" "xE0C0BC" "xE88E8B" "xF6AA9F" "xF82CF8" "xF8F310" "xF8FC13" "xFC5EAA" "xFCE121" }
@@ -31,7 +31,7 @@ STATE_ULDOR = {
         bg_coal_mining = 60
         bg_logging = 8
     }
-
+    naval_exit_id = 3118
 }
 STATE_CHADBA = {
     id = 4532
@@ -51,7 +51,7 @@ STATE_CHADBA = {
     }
     naval_exit_id = 3036
 }
-STATE_TUKHUR = {
+STATE_TUKHUR = { #xDC56EF
     id = 4533
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x86AFEC" "x9DCFC2" "x9EEDBD" "xCAD2E0" "xDA7AF7" "xDC56EF" "xEBE049" "xF5CCEF" }
@@ -69,9 +69,9 @@ STATE_TUKHUR = {
         bg_lead_mining = 15
         bg_logging = 4
     }
-
+    naval_exit_id = 3118
 }
-STATE_KHURIN = {
+STATE_KHURIN = { #xE574D0
     id = 4534
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x88FA77" "xB6ACBA" "xBDCE9A" "xBF7DD8" "xC1DCBC" "xCCD09F" "xD5FBAD" "xDD3CF3" "xE2869A" "xE574D0" }
@@ -85,7 +85,7 @@ STATE_KHURIN = {
     capped_resources = {
         bg_logging = 10
     }
-
+    naval_exit_id = 3119
 }
 STATE_BOLDOO = {
     id = 4535
@@ -105,7 +105,7 @@ STATE_BOLDOO = {
     }
     naval_exit_id = 3036
 }
-STATE_KHORTA = {
+STATE_KHORTA = { #xF9BBA1
     id = 4536
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x919BF7" "xB7BFD6" "xB7E09F" "xC0B397" "xD6E052" "xDF9AF9" "xE586A8" "xF9BBA1" }
@@ -119,7 +119,7 @@ STATE_KHORTA = {
     capped_resources = {
         bg_logging = 7
     }
-
+    naval_exit_id = 3118
 }
 STATE_GARBOL = {
     id = 4537
@@ -139,7 +139,7 @@ STATE_GARBOL = {
     }
     naval_exit_id = 3036
 }
-STATE_ORONK = {
+STATE_ORONK = { #x96CCDA
     id = 4538
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x4DDFEF" "x928CFB" "x96CCDA" "x9BDFAE" "x9F91E6" "xAC9DF3" "xC4BBBD" "xD49F82" "xE89F94" "xE9D6EA" "xF243C7" "xFA6DA4" "xFAC3F5" }
@@ -153,7 +153,7 @@ STATE_ORONK = {
     capped_resources = {
         bg_logging = 11
     }
-
+    naval_exit_id = 3119
 }
 STATE_KHAIRI = {
     id = 4539
@@ -174,7 +174,7 @@ STATE_KHAIRI = {
     }
     naval_exit_id = 3036
 }
-STATE_GURBA = {
+STATE_GURBA = { #x888DE7
     id = 4540
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x40FBE7" "x888DE7" "xBDEBA9" "xCB8AA9" "xD0AEF2" "xD760C7" "xD7C6D0" "xDFF7BA" }
@@ -192,9 +192,9 @@ STATE_GURBA = {
         bg_sulfur_mining = 32
         bg_logging = 2
     }
-
+    naval_exit_id = 3118
 }
-STATE_CHANMA = {
+STATE_CHANMA = { #x8DFAFA
     id = 4541
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x35F7CC" "x8DFAFA" "xBEC7A3" "xC287F0" "xD9C79E" "xE270B1" "xE3E583" "xF3C9D5" "xF556BD" "xF9B282" }
@@ -211,10 +211,10 @@ STATE_CHANMA = {
         bg_lead_mining = 24
         bg_logging = 4
     }
-
+    naval_exit_id = 3117
 }
 STATE_DALKH = {
- #x92FD94
+    #x92FD94
     id = 4542
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x71EEFE" "x7AD1AC" "x82ACF8" "x92FD94" "x95B7E8" "xAEC0E9" "xB8ACA1" "xB9D1B7" "xC8B281" "xCCEA6C" "xCF9BAC" "xEDE779" "xFA9387" }
@@ -234,7 +234,7 @@ STATE_DALKH = {
     naval_exit_id = 3112
 }
 STATE_SUKHIA = {
- #xF0B6AA
+    #xF0B6AA
     id = 4543
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x8A8DE4" "xA8D9AA" "xA8EAE3" "xA9B6C8" "xBCB4D9" "xBDF099" "xF0B6AA" "xF3A37A" "xFDFAF7" }
@@ -252,7 +252,7 @@ STATE_SUKHIA = {
     naval_exit_id = 3112
 }
 STATE_ALTANU = {
- #xC2E3F2
+    #xC2E3F2
     id = 4544
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x8CE1FE" "xC2E3F2" "xC4D98F" "xD57FF2" "xED98F2" "xFBFB61" }
@@ -270,7 +270,7 @@ STATE_ALTANU = {
     naval_exit_id = 3112
 }
 STATE_SAINO = {
- #xCAFE82
+    #xCAFE82
     id = 4545
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x25F5ED" "x7EF7FB" "x82F28D" "xB5F29A" "xBFAA97" "xC0E7D0" "xC7E9EE" "xC7ECD8" "xCAFE82" "xDB51E6" "xE4C293" "xE664EF" "xEF8AD3" "xF7F179" "xFB1FEC" "xFEABB6" }
@@ -290,7 +290,7 @@ STATE_SAINO = {
     naval_exit_id = 3112
 }
 STATE_ERKHE = {
- #
+    #
     id = 4546
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x82EAE1" "x8FCDE9" "x90DFDF" "xB1BB9C" "xC4D17F" "xCEB191" "xE267B7" "xE997E2" "xF2D3B0" "xFDFAD9" }
@@ -417,7 +417,7 @@ STATE_BUYANT = {
     naval_exit_id = 3003
 }
 STATE_GALSHA = {
- #xD6B4C6
+    #xD6B4C6
     id = 4553
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x1DEEF6" "x5EF7E4" "x84DC9F" "x9CA7FA" "x9FA4B6" "xAFCDF9" "xCFC0ED" "xD06CDA" "xD6B4C6" "xEB6CE6" "xEBAF7F" "xEF61CD" }
@@ -458,7 +458,7 @@ STATE_BAIDAL = {
     naval_exit_id = 3003
 }
 STATE_ONON = {
- #x8DE18A
+    #x8DE18A
     id = 4555
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x50FDEE" "x8DE18A" "x8FE9B7" "x968CE0" "x9BD8F0" "xA8E6E1" "xE944F8" "xF2B65E" "xF6BA63" }
@@ -480,7 +480,7 @@ STATE_ONON = {
     naval_exit_id = 3110
 }
 STATE_DORNO = {
- #xDE5DBF
+    #xDE5DBF
     id = 4556
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x4EE3CA" "x60F1E6" "xB3BEFE" "xB9E8C2" "xC2BACE" "xC5EFA0" "xDE5DBF" "xE5B786" "xEC8FC9" }
@@ -515,7 +515,7 @@ STATE_TOSON = {
     naval_exit_id = 3036
 }
 STATE_TSENK = {
- #x65CAD1
+    #x65CAD1
     id = 4558
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x58F1B0" "x65CAD1" "x7FB0F5" "x80EABB" "xB0DBE9" "xB3A79D" "xBC8DB9" "xC5EBD5" "xE0B7EB" "xE9EAAF" "xF8DB40" }
@@ -821,7 +821,7 @@ STATE_KRAGKYL = {
     naval_exit_id = 3036
 }
 STATE_DRUKYN = {
- #xF3A9A2
+    #xF3A9A2
     id = 4576
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x90D494" "xA1D8E1" "xAB7ED2" "xBD4DED" "xC7FEBF" "xCCEC91" "xCF7AD3" "xD65ED8" "xEDBFEC" "xEDEE74" "xEED878" "xEFDF27" "xF1A8D9" "xF3A9A2" "xFC73FD" }
@@ -1002,7 +1002,7 @@ STATE_KRAKYR = {
     naval_exit_id = 3014
 }
 STATE_KYRZUR = {
- #x62BEE0
+    #x62BEE0
     id = 4586
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x48DAFA" "x5EB6F0" "x62BEE0" "x7AFCF2" "x89D7F0" "x8AF2A8" "x8D8DF5" "x9693DB" "xA2EE9D" "xA65AF6" "xAC92F2" "xB8F2B7" "xD2AEE8" "xDF60BD" "xE674EF" }
@@ -1198,7 +1198,7 @@ STATE_TAKAYAMAAN = {
     naval_exit_id = 3014
 }
 STATE_JARGALTSAI = {
- #xFE17F1
+    #xFE17F1
     id = 4597
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x6EE2BB" "x74FDB3" "x93ACFB" "xA386DC" "xABB8F7" "xAFD1F1" "xBBDF81" "xDF99A4" "xDFB1D7" "xEE34D8" "xF27F99" "xFE17F1" }
@@ -1268,7 +1268,7 @@ STATE_KIYOMORIN = {
     }
 
 }
-STATE_BATOKYOAN = {
+STATE_BATOKYOAN = { #xC2C5B8
     id = 4601
     subsistence_building = "building_subsistence_farms"
     provinces = { "x5BE5D3" "x6AF6CF" "x7CD0E2" "x8B92FA" "x9FF084" "xB7D2A6" "xBF8DEF" "xC2C5B8" "xC3ECBE" "xD8F3C8" "xE3FE5D" "xECE824" "xF585AF" "xFAAFF3" }
@@ -1283,7 +1283,7 @@ STATE_BATOKYOAN = {
         bg_lead_mining = 36
         bg_logging = 6
     }
-
+    naval_exit_id = 3120
 }
 STATE_KHULEKKA = {
     id = 4602
@@ -1356,7 +1356,7 @@ STATE_ARASHIHARA = {
     }
     naval_exit_id = 3116
 }
-STATE_KITAYAMAO = {
+STATE_KITAYAMAO = { #xEB3BF6
     id = 4606
     subsistence_building = "building_subsistence_pastures"
     provinces = { "x0DF9F9" "x8DF8B3" "xA095F0" "xA7CF89" "xAB89CC" "xC8F5EB" "xDCF72C" "xEB3BF6" "xEFCEBA" "xF3B157" }
@@ -1372,7 +1372,7 @@ STATE_KITAYAMAO = {
         depleted_type = "bg_gold_mining"
         undiscovered_amount = 8
     }
-
+    naval_exit_id = 3120
 }
 STATE_FUJIMORIYAMA = {
     id = 4607
