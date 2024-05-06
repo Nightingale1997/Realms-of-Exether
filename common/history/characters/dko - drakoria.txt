@@ -1,0 +1,30 @@
+﻿CHARACTERS = {
+	c:DKO ?= {
+		create_character = {
+			first_name = "Mihai"
+			last_name = "Cantemir"
+			historical = yes
+			ruler = yes
+			age = 32
+			interest_group = ig_landowners
+			ideology = ideology_traditionalist
+			traits = {
+				pious
+				basic_diplomat
+				cocaine_addiction
+			}
+		}
+		create_character = {
+			first_name = "Petru"
+			last_name = "Cantemir"
+			historical = yes
+			heir = yes
+			age = 6
+			interest_group = ig_landowners
+			ideology = ideology_jingoist_leader
+			traits = {
+				trait_child
+			}
+		}
+	}
+}

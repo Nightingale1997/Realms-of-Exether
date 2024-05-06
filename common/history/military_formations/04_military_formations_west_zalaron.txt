@@ -239,4 +239,316 @@
 			transfer_to_formation = scope:dri_army
 		}
 	}
+	c:RAV = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_ravik
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_TROMMELKUST
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_TROMMELKUST
+				count = 2
+			}
+
+			save_scope_as = rav_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_ravik
+			save_scope_as = rav_general
+		}
+		
+		scope:rav_general = {
+			transfer_to_formation = scope:rav_army
+		}
+		
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_ravik
+		
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_TROMMELKUST
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_TROMMELKUST
+				count = 3
+			}
+			save_scope_as = rav_fleet
+		}
+
+		create_character = {
+			is_admiral = yes
+			hq = region_ravik
+			save_scope_as = rav_admiral
+		}
+		
+		scope:rav_admiral = {
+			transfer_to_formation = scope:rav_fleet
+		}
+	}
+	c:TLE = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_hasals_mirror
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_VONKENDAM
+				count = 8
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_VONKENDAM
+				count = 2
+			}
+
+			save_scope_as = tle_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_hasals_mirror
+			save_scope_as = tle_general
+		}
+		
+		scope:tle_general = {
+			transfer_to_formation = scope:tle_army
+		}
+	}
+	c:ARD = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_verdant_shore
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_AMBERWICK
+				count = 4
+			}
+
+			save_scope_as = ard_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_verdant_shore
+			save_scope_as = ard_general
+		}
+		
+		scope:ard_general = {
+			transfer_to_formation = scope:ard_army
+		}
+	}
+	c:GRA = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_old_thaloria
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_WINDSPEAR
+				count = 2
+			}
+
+			save_scope_as = gra_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_old_thaloria
+			save_scope_as = gra_general
+		}
+		
+		scope:gra_general = {
+			transfer_to_formation = scope:gra_army
+		}
+	}
+	c:DKO = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_old_thaloria
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_EMBERFALL
+				count = 4
+			}
+
+			save_scope_as = dko_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_old_thaloria
+			save_scope_as = dko_general
+		}
+		
+		scope:dko_general = {
+			transfer_to_formation = scope:dko_army
+		}
+	}
+	c:BDT = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_verdant_shore
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_HOLLOWBROOK
+				service_type = conscript
+				count = 3
+			}
+
+			save_scope_as = bdt_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_verdant_shore
+			save_scope_as = bdt_general
+		}
+		
+		scope:bdt_general = {
+			transfer_to_formation = scope:bdt_army
+		}
+	}
+	c:DHR = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_verdant_shore
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_WINDMERE
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_WINDMERE
+				service_type = conscript
+				count = 2
+			}
+
+			save_scope_as = dhr_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_verdant_shore
+			save_scope_as = dhr_general
+		}
+		
+		scope:dhr_general = {
+			transfer_to_formation = scope:dhr_army
+		}
+	}
+	c:SBH = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_old_thaloria
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_VALORN
+				service_type = conscript
+				count = 2
+			}
+
+			save_scope_as = sbh_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_old_thaloria
+			save_scope_as = sbh_general
+		}
+		
+		scope:sbh_general = {
+			transfer_to_formation = scope:sbh_army
+		}
+	}
+	c:VOR = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_verdant_shore
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_DAWNRIDGE
+				service_type = conscript
+				count = 6
+			}
+
+			save_scope_as = vor_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_verdant_shore
+			save_scope_as = vor_general
+		}
+		
+		scope:vor_general = {
+			transfer_to_formation = scope:vor_army
+		}
+	}
+	c:KVG = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_verdant_shore
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KERCOVA
+				count = 8
+			}
+
+			save_scope_as = kvg_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_verdant_shore
+			save_scope_as = kvg_general
+		}
+		
+		scope:kvg_general = {
+			transfer_to_formation = scope:kvg_army
+		}
+	}
+	c:MJE = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_gavkhan
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_LUMADHIA
+				service_type = conscript
+				count = 4
+			}
+
+			save_scope_as = mje_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_gavkhan
+			save_scope_as = mje_general
+		}
+		
+		scope:mje_general = {
+			transfer_to_formation = scope:mje_army
+		}
+	}
 }
