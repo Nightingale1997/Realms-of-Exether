@@ -10,7 +10,7 @@
 			}
 			has_global_variable = consortium_intervention_vote
 			NOT = {
-				has_global_variable = vetoed
+				has_global_variable = vetoed_consortium
 			}
 		}
 	}
@@ -29,7 +29,7 @@
 		}
 	}
 	current_value = {
-		value = pending_resolution_progress_value
+		value = pending_resolution_progress_value_consortium
 	}
 	goal_add_value = {
 		add = 100		# was 100, temp testing value
@@ -41,7 +41,7 @@
 					has_variable = consortium_major_member
 				}
 				change_global_variable = {
-					name = pending_resolution_progress
+					name = pending_resolution_progress_consortium
 					add = 1
 				}
 			}
@@ -59,7 +59,7 @@
 				}
 				custom_tooltip = {
 					text = "WILL_COMPLETE_CONSORTIUM"
-					supporting_value_total > opposing_value_total
+					supporting_value_total_consortium > opposing_value_total_consortium
 				}
 			}
 		}
@@ -72,12 +72,12 @@
 				}
 				custom_tooltip = {
 					text = "WILL_FAIL_CONSORTIUM"
-					opposing_value_total > supporting_value_total
+					opposing_value_total_consortium > supporting_value_total_consortium
 				}
 			}
 			custom_tooltip = {
 				text = "IS_VETOED"
-				has_global_variable = vetoed
+				has_global_variable = vetoed_consortium
 			}
 		}
 	}
@@ -132,7 +132,7 @@
 #		}
 #		has_global_variable = consortium_embargo_vote
 #		NOT = {
-#			has_global_variable = vetoed
+#			has_global_variable = vetoed_consortium
 #		}
 #	}
 #	immediate = {
@@ -180,7 +180,7 @@
 #				}
 #				custom_tooltip = {
 #					text = "WILL_COMPLETE_CONSORTIUM"
-#					supporting_value_total > opposing_value_total
+#					supporting_value_total_consortium > opposing_value_total_consortium
 #				}
 #			}
 #		}
@@ -193,12 +193,12 @@
 #				}
 #				custom_tooltip = {
 #					text = "WILL_FAIL_CONSORTIUM"
-#					opposing_value_total > supporting_value_total
+#					opposing_value_total_consortium > supporting_value_total_consortium
 #				}
 #			}
 #			custom_tooltip = {
 #				text = "IS_VETOED"
-#				has_global_variable = vetoed
+#				has_global_variable = vetoed_consortium
 #			}
 #		}
 #	}

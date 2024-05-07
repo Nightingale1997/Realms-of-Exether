@@ -1,4 +1,4 @@
-﻿current_resolution = {
+﻿current_resolution_consortium = {
 	type = country
 	text = {
 		trigger = {
@@ -35,13 +35,13 @@
 	}
 }
 
-pending_resolution_loc = {
+pending_resolution_loc_consortium = {
 	type = country
 	text = {
 		trigger = {
-			has_global_variable = pending_resolution
+			has_global_variable = pending_resolution_consortium
 		}
-		localization_key = "yes"
+		localization_key = "RESOLUTION_YES"
 	}
 	text = {
 		localization_key = "no"
@@ -52,13 +52,13 @@ consortium_voting_balance = {
 	type = country
 	text = {
 		trigger = {
-			supporting_value_total >= opposing_value_total
+			supporting_value_total_consortium >= opposing_value_total_consortium
 		}
 		localization_key = "CONSORTIUM_WINNING_BALANCE"
 	}
 	text = {
 		trigger = {
-			opposing_value_total >= supporting_value_total
+			opposing_value_total_consortium >= supporting_value_total_consortium
 		}
 		localization_key = "CONSORTIUM_LOSING_BALANCE"
 	}

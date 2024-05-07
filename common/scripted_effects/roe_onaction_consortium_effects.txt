@@ -55,7 +55,7 @@ onaction_consortium_application = {
         limit = {
             has_variable = application_progress_concord
             application_progress_concord <= 100
-            supporting_countries > required_support_concord
+            supporting_countries_consortium > required_support_concord
         }
         change_variable = {
             name = application_progress_concord
@@ -77,7 +77,7 @@ onaction_consortium_application = {
         limit = {
             has_variable = application_progress_concord
             var:application_progress_concord >= 100
-            supporting_countries >= required_support_concord
+            supporting_countries_consortium >= required_support_concord
         }
         effect_consortium_application_approved = yes
         rebuild_consortium_memberlist = yes
@@ -88,7 +88,7 @@ onaction_consortium_application = {
             has_variable = application_progress_concord
             var:application_progress_concord >= 150
             not = {
-                supporting_countries >= required_support_concord
+                supporting_countries_consortium >= required_support_concord
             }
         }
         effect_consortium_application_rejected = yes

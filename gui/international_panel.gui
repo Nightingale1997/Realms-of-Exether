@@ -215,8 +215,8 @@ types international
 								enabled = "[Not(GetPlayer.MakeScope.Var('concord_application_rejected').IsSet)]"
 								size = { 100 45 }
 								using = default_button_primary_action
-								tooltip = "STARTMEMBERSHIPconcord_TOOLTIP"
-								text = "STARTMEMBERSHIPUN"
+								tooltip = "STARTMEMBERSHIPCONCORD_TOOLTIP"
+								text = "STARTMEMBERSHIPCONCORD"
 								onclick = "[GetScriptedGui('join_concord_member_sgui').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = fontsize_medium
 							}
@@ -357,8 +357,8 @@ types international
 								enabled = "[Not(GetPlayer.MakeScope.Var('concord_application_rejected').IsSet)]"
 								size = { 100 45 }
 								using = default_button_primary_action
-								tooltip = "STARTMEMBERSHIPconcord_TOOLTIP"
-								text = "STARTMEMBERSHIPUN"
+								tooltip = "STARTMEMBERSHIPCONSORTIUM_TOOLTIP"
+								text = "STARTMEMBERSHIPCONSORTIUM"
 								onclick = "[GetScriptedGui('join_consortium_member_sgui').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = fontsize_medium
 							}

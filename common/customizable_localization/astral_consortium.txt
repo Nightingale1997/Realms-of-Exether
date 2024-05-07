@@ -4,7 +4,7 @@
 		trigger = {
 			has_variable = consortium_member
 		}
-		localization_key = "yes"
+		localization_key = "RESOLUTION_YES"
 	}
 	text = {
 		localization_key = "no"
@@ -17,7 +17,7 @@ is_consortium_major_member_loc = {
 		trigger = {
 			has_variable = consortium_major_member
 		}
-		localization_key = "yes"
+		localization_key = "RESOLUTION_YES"
 	}
 	text = {
 		localization_key = "no"
@@ -30,7 +30,7 @@ is_consortium_observer_loc = {
 		trigger = {
 			has_variable = consortium_observer
 		}
-		localization_key = "yes"
+		localization_key = "RESOLUTION_YES"
 	}
 	text = {
 		localization_key = "no"
@@ -47,7 +47,7 @@ is_not_consortium_member_loc = {
 				has_variable = consortium_member
 			}
 		}
-		localization_key = "yes"
+		localization_key = "RESOLUTION_YES"
 	}
 	text = {
 		localization_key = "no"

@@ -73,7 +73,7 @@ consortium_dynamic_resolution_events.1 = {
 			limit = {
 				scope:asking_consortium_intervention_country = this
 			}
-			effect_remove_wargoals = yes
+			effect_remove_wargoals_consortium = yes
 			scope:consortium_intervention_enemy_country = {
 				trigger_event = consortium_dynamic_resolution_events.2
 			}

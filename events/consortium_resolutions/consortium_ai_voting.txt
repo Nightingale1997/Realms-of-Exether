@@ -5,14 +5,14 @@ consortium_ai_voting.1 = {
 	placement = ROOT
 	trigger = {
 		is_ai = yes
-		has_global_variable = pending_resolution
+		has_global_variable = pending_resolution_consortium
 		OR = {
 			has_variable = consortium_member
 			has_variable = unsc_member
 		}
 		nor = {
 			has_variable = consortium_alreadyvoted
-			has_global_variable = vetoed
+			has_global_variable = vetoed_consortium
 		}
 	}
 	immediate = {
@@ -33,7 +33,7 @@ consortium_ai_voting.1 = {
 	option = {
 		default_option = yes
 		name = consortium_ai_voting.1.a
-		effect_ai_vote_yes = yes
+		effect_ai_vote_yes_consortium = yes
 		ai_chance = {
 			base = 0			# Declaration of human rights
 			modifier = {
@@ -55,21 +55,11 @@ consortium_ai_voting.1 = {
 				}
 				add = 50
 			}
-			# Resolution on Decolonization
 			modifier = {
 				trigger = {
 					and = {
 						has_journal_entry = je_decolonization_resolution
-						has_anti_imperialist_policy = yes
-					}
-				}
-				add = 50
-			}
-			modifier = {
-				trigger = {
-					and = {
-						has_journal_entry = je_decolonization_resolution
-						country_rank >= rank_value:superpower
+						country_rank >= rank_value:great_power
 					}
 				}
 				add = 100
@@ -113,7 +103,7 @@ consortium_ai_voting.1 = {
 	}
 	option = {
 		name = consortium_ai_voting.1.b
-		effect_ai_vote_no = yes
+		effect_ai_vote_no_consortium = yes
 		ai_chance = {
 			base = 0
 			modifier = {
@@ -133,16 +123,6 @@ consortium_ai_voting.1 = {
 					}
 				}
 				add = 55
-			}
-			# Resolution on Decolonization
-			modifier = {
-				trigger = {
-					and = {
-						has_journal_entry = je_decolonization_resolution
-						has_imperialist_policy = yes
-					}
-				}
-				add = 50
 			}
 			# UN Intervention
 			modifier = {
@@ -193,7 +173,7 @@ consortium_ai_voting.1 = {
 	}
 	option = {
 		name = consortium_ai_voting.1.c
-		effect_ai_vote_neutral = yes
+		effect_ai_vote_neutral_consortium = yes
 		ai_chance = {
 			base = 5
 			modifier = {
@@ -288,7 +268,7 @@ consortium_ai_voting.2 = {
 		if = {
 			limit = {
 				or = {
-					supporting_countries <= consortium_memberstates
+					supporting_countries_consortium <= consortium_memberstates
 					not = {
 						exists = var:consortium_supporting_list_size
 					}
@@ -356,7 +336,7 @@ consortium_ai_voting.2 = {
 		if = {
 			limit = {
 				or = {
-					supporting_countries <= consortium_memberstates
+					supporting_countries_consortium <= consortium_memberstates
 					not = {
 						exists = var:consortium_supporting_list_size
 					}
@@ -422,7 +402,7 @@ consortium_ai_voting.2 = {
 		if = {
 			limit = {
 				or = {
-					supporting_countries <= consortium_memberstates
+					supporting_countries_consortium <= consortium_memberstates
 					not = {
 						exists = var:consortium_supporting_list_size
 					}

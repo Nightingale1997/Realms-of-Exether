@@ -5,14 +5,14 @@ concord_ai_voting.1 = {
 	placement = ROOT
 	trigger = {
 		is_ai = yes
-		has_global_variable = pending_resolution
+		has_global_variable = pending_resolution_concord
 		OR = {
 			has_variable = concord_member
-			has_variable = unsc_member
+			has_variable = concord_major_member
 		}
 		nor = {
 			has_variable = concord_alreadyvoted
-			has_global_variable = vetoed
+			has_global_variable = vetoed_concord
 		}
 	}
 	immediate = {
@@ -33,7 +33,7 @@ concord_ai_voting.1 = {
 	option = {
 		default_option = yes
 		name = concord_ai_voting.1.a
-		effect_ai_vote_yes = yes
+		effect_ai_vote_yes_concord = yes
 		ai_chance = {
 			base = 0			# Declaration of human rights
 			modifier = {
@@ -55,21 +55,11 @@ concord_ai_voting.1 = {
 				}
 				add = 50
 			}
-			# Resolution on Decolonization
 			modifier = {
 				trigger = {
 					and = {
 						has_journal_entry = je_decolonization_resolution
-						has_anti_imperialist_policy = yes
-					}
-				}
-				add = 50
-			}
-			modifier = {
-				trigger = {
-					and = {
-						has_journal_entry = je_decolonization_resolution
-						country_rank >= rank_value:superpower
+						country_rank >= rank_value:great_power
 					}
 				}
 				add = 100
@@ -78,7 +68,7 @@ concord_ai_voting.1 = {
 			modifier = {
 				trigger = {
 					and = {
-						has_journal_entry = je_concordclos1
+						has_journal_entry = je_clos1
 						any_scope_state = {
 							is_coastal = yes
 						}
@@ -90,7 +80,7 @@ concord_ai_voting.1 = {
 			modifier = {
 				trigger = {
 					and = {
-						has_journal_entry = je_concord_intervention
+						has_journal_entry = je_intervention
 						scope:asking_concord_intervention_country = {
 							relations:root > relations_threshold:cordial
 						}
@@ -101,7 +91,7 @@ concord_ai_voting.1 = {
 			modifier = {
 				trigger = {
 					and = {
-						has_journal_entry = je_concord_intervention
+						has_journal_entry = je_intervention
 						scope:concord_intervention_enemy_country = {
 							relations:root < relations_threshold:hostile
 						}
@@ -113,7 +103,7 @@ concord_ai_voting.1 = {
 	}
 	option = {
 		name = concord_ai_voting.1.b
-		effect_ai_vote_no = yes
+		effect_ai_vote_no_concord = yes
 		ai_chance = {
 			base = 0
 			modifier = {
@@ -129,26 +119,16 @@ concord_ai_voting.1 = {
 			modifier = {
 				trigger = {
 					and = {
-						has_journal_entry = je_concordclos1
+						has_journal_entry = je_clos1
 					}
 				}
 				add = 55
-			}
-			# Resolution on Decolonization
-			modifier = {
-				trigger = {
-					and = {
-						has_journal_entry = je_decolonization_resolution
-						has_imperialist_policy = yes
-					}
-				}
-				add = 50
 			}
 			# UN Intervention
 			modifier = {
 				trigger = {
 					and = {
-						has_journal_entry = je_concord_intervention
+						has_journal_entry = je_intervention
 						scope:asking_concord_intervention_country = {
 							relations:root < relations_threshold:neutral
 						}
@@ -159,7 +139,7 @@ concord_ai_voting.1 = {
 			modifier = {
 				trigger = {
 					and = {
-						has_journal_entry = je_concord_intervention
+						has_journal_entry = je_intervention
 						scope:asking_concord_intervention_country = {
 							relations:root < relations_threshold:cold
 						}
@@ -170,7 +150,7 @@ concord_ai_voting.1 = {
 			modifier = {
 				trigger = {
 					and = {
-						has_journal_entry = je_concord_intervention
+						has_journal_entry = je_intervention
 						scope:asking_concord_intervention_country = {
 							relations:root < relations_threshold:hostile
 						}
@@ -181,7 +161,7 @@ concord_ai_voting.1 = {
 			modifier = {
 				trigger = {
 					and = {
-						has_journal_entry = je_concord_intervention
+						has_journal_entry = je_intervention
 						scope:concord_intervention_enemy_country = {
 							relations:root > relations_threshold:neutral
 						}
@@ -193,7 +173,7 @@ concord_ai_voting.1 = {
 	}
 	option = {
 		name = concord_ai_voting.1.c
-		effect_ai_vote_neutral = yes
+		effect_ai_vote_neutral_concord = yes
 		ai_chance = {
 			base = 5
 			modifier = {
@@ -216,7 +196,7 @@ concord_ai_voting.1 = {
 			modifier = {
 				trigger = {
 					and = {
-						has_journal_entry = je_concord_intervention
+						has_journal_entry = je_intervention
 						not = {
 							ruler = {
 								has_trait = paranoid
@@ -229,7 +209,7 @@ concord_ai_voting.1 = {
 			modifier = {
 				trigger = {
 					and = {
-						has_journal_entry = je_concord_intervention
+						has_journal_entry = je_intervention
 						scope:asking_concord_intervention_country = {
 							relations:root = relations_threshold:neutral
 						}
@@ -240,7 +220,7 @@ concord_ai_voting.1 = {
 			modifier = {
 				trigger = {
 					and = {
-						has_journal_entry = je_concord_intervention
+						has_journal_entry = je_intervention
 						scope:concord_intervention_enemy_country = {
 							relations:root > relations_threshold:neutral
 						}
@@ -260,7 +240,7 @@ concord_ai_voting.2 = {
 		is_ai = yes
 		OR = {
 			has_variable = concord_member
-			has_variable = unsc_member
+			has_variable = concord_major_member
 		}
 		not = {
 			has_variable = has_voted_on_application
@@ -288,7 +268,7 @@ concord_ai_voting.2 = {
 		if = {
 			limit = {
 				or = {
-					supporting_countries <= concord_memberstates
+					supporting_countries_concord <= concord_memberstates
 					not = {
 						exists = var:concord_supporting_list_size
 					}
@@ -356,7 +336,7 @@ concord_ai_voting.2 = {
 		if = {
 			limit = {
 				or = {
-					supporting_countries <= concord_memberstates
+					supporting_countries_concord <= concord_memberstates
 					not = {
 						exists = var:concord_supporting_list_size
 					}
@@ -422,7 +402,7 @@ concord_ai_voting.2 = {
 		if = {
 			limit = {
 				or = {
-					supporting_countries <= concord_memberstates
+					supporting_countries_concord <= concord_memberstates
 					not = {
 						exists = var:concord_supporting_list_size
 					}

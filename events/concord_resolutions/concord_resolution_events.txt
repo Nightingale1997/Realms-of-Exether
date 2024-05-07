@@ -193,14 +193,14 @@ concord_resolution_events.100 = {
 	hidden = yes
 	trigger = {
 		or = {
-			has_variable = unsc_member
+			has_variable = concord_major_member
 			has_variable = concord_member
 		}
 		is_player = no
-		country_rank = rank_value:superpower
+		country_rank = rank_value:great_power
 		game_date >= 1956.1.1
 		NOR = {
-			has_global_variable = pending_resolution
+			has_global_variable = pending_resolution_concord
 			has_global_variable = decolonization_resolutioncomplete
 			has_global_variable = decolonization_resolutionfail
 		}
@@ -216,12 +216,12 @@ concord_resolution_events.101 = {
 	hidden = yes
 	trigger = {
 		or = {
-			has_variable = unsc_member
+			has_variable = concord_major_member
 			has_variable = concord_member
 		}
 		is_player = no
 		NOR = {
-			has_global_variable = pending_resolution
+			has_global_variable = pending_resolution_concord
 			has_global_variable = korean_resolution_complete
 			has_global_variable = korean_resolution_fail
 			exists = c:KOR
@@ -239,14 +239,14 @@ concord_resolution_events.102 = {
 	hidden = yes
 	trigger = {
 		or = {
-			has_variable = unsc_member
+			has_variable = concord_major_member
 			has_variable = concord_member
 		}
 		is_player = no
 		country_rank >= rank_value:great_power
 		game_date >= 1948.1.1
 		NOR = {
-			has_global_variable = pending_resolution
+			has_global_variable = pending_resolution_concord
 			has_global_variable = declaration_of_human_rightscomplete
 			has_global_variable = declaration_of_human_rightsfail
 		}
@@ -262,14 +262,14 @@ concord_resolution_events.103 = {
 	hidden = yes
 	trigger = {
 		or = {
-			has_variable = unsc_member
+			has_variable = concord_major_member
 			has_variable = concord_member
 		}
 		is_player = no
 		country_rank >= rank_value:great_power
 		game_date >= 1958.1.1
 		NOR = {
-			has_global_variable = pending_resolution
+			has_global_variable = pending_resolution_concord
 			has_global_variable = unclos1complete
 			has_global_variable = unclos1fail
 		}

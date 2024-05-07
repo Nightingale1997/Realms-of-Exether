@@ -73,7 +73,7 @@ concord_dynamic_resolution_events.1 = {
 			limit = {
 				scope:asking_concord_intervention_country = this
 			}
-			effect_remove_wargoals = yes
+			effect_remove_wargoals_concord = yes
 			scope:concord_intervention_enemy_country = {
 				trigger_event = concord_dynamic_resolution_events.2
 			}

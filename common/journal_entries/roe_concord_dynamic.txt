@@ -10,7 +10,7 @@
 			}
 			has_global_variable = concord_intervention_vote
 			NOT = {
-				has_global_variable = vetoed
+				has_global_variable = vetoed_concord
 			}
 		}
 	}
@@ -29,7 +29,7 @@
 		}
 	}
 	current_value = {
-		value = pending_resolution_progress_value
+		value = pending_resolution_progress_value_concord
 	}
 	goal_add_value = {
 		add = 100		# was 100, temp testing value
@@ -41,7 +41,7 @@
 					has_variable = concord_major_member
 				}
 				change_global_variable = {
-					name = pending_resolution_progress
+					name = pending_resolution_progress_concord
 					add = 1
 				}
 			}
@@ -59,7 +59,7 @@
 				}
 				custom_tooltip = {
 					text = "WILL_COMPLETE_CONCORD"
-					supporting_value_total > opposing_value_total
+					supporting_value_total_concord > opposing_value_total_concord
 				}
 			}
 		}
@@ -72,12 +72,12 @@
 				}
 				custom_tooltip = {
 					text = "WILL_FAIL_CONCORD"
-					opposing_value_total > supporting_value_total
+					opposing_value_total_concord > supporting_value_total_concord
 				}
 			}
 			custom_tooltip = {
 				text = "IS_VETOED"
-				has_global_variable = vetoed
+				has_global_variable = vetoed_concord
 			}
 		}
 	}
@@ -132,7 +132,7 @@
 #		}
 #		has_global_variable = concord_embargo_vote
 #		NOT = {
-#			has_global_variable = vetoed
+#			has_global_variable = vetoed_concord
 #		}
 #	}
 #	immediate = {
@@ -180,7 +180,7 @@
 #				}
 #				custom_tooltip = {
 #					text = "WILL_COMPLETE_CONCORD"
-#					supporting_value_total > opposing_value_total
+#					supporting_value_total_concord > opposing_value_total_concord
 #				}
 #			}
 #		}
@@ -193,12 +193,12 @@
 #				}
 #				custom_tooltip = {
 #					text = "WILL_FAIL_CONCORD"
-#					opposing_value_total > supporting_value_total
+#					opposing_value_total_concord > supporting_value_total_concord
 #				}
 #			}
 #			custom_tooltip = {
 #				text = "IS_VETOED"
-#				has_global_variable = vetoed
+#				has_global_variable = vetoed_concord
 #			}
 #		}
 #	}

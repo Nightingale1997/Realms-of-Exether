@@ -1,14 +1,14 @@
 ﻿#############################################################################
 ################################ UN APPLICATIONS ############################
 #############################################################################
-#### Varcheck
+#### varcheck_consortium
 consortium_resolution_visible_sidepanel = {
 	is_shown = {
 		has_variable = consortium_member
-		has_global_variable = pending_resolution
+		has_global_variable = pending_resolution_consortium
 	}
 }
-consortium_approve_membership_varcheck = {
+consortium_approve_membership_varcheck_consortium = {
 	is_shown = {
 		has_variable = consortium_member
 		scope:applicant_country_scope = {
@@ -21,7 +21,7 @@ consortium_approve_membership_varcheck = {
 		}
 	}
 }
-consortium_abstain_membership_varcheck = {
+consortium_abstain_membership_varcheck_consortium = {
 	is_shown = {
 		has_variable = consortium_member
 		scope:applicant_country_scope = {
@@ -34,7 +34,7 @@ consortium_abstain_membership_varcheck = {
 		}
 	}
 }
-consortium_reject_membership_varcheck = {
+consortium_reject_membership_varcheck_consortium = {
 	is_shown = {
 		has_variable = consortium_member
 		scope:applicant_country_scope = {
@@ -167,31 +167,31 @@ showmodifier_declaration_human_rights = {
 	}
 }
 
-add_opposing = {
+add_opposing_consortium = {
 	effect = {
-		set_variable = is_opposing
-		remove_variable = is_supporting
+		set_variable = is_opposing_consortium
+		remove_variable = is_supporting_consortium
 	}
 }
 
-add_supporting = {
+add_supporting_consortium = {
 	effect = {
-		set_variable = is_supporting
-		remove_variable = is_opposing
+		set_variable = is_supporting_consortium
+		remove_variable = is_opposing_consortium
 	}
 }
 
-add_abstaining = {
+add_abstaining_consortium = {
 	effect = {
-		remove_variable = is_supporting
-		remove_variable = is_opposing
+		remove_variable = is_supporting_consortium
+		remove_variable = is_opposing_consortium
 	}
 }
 
-add_veto = {
+add_veto_consortium = {
 	effect = {
 		set_global_variable = {
-			name = vetoed
+			name = vetoed_consortium
 			value = 0
 		}
 	}
@@ -201,18 +201,18 @@ add_veto = {
 ################################ GENERIC GUI ################################
 #############################################################################
 ############# Declaration of Human Rights
-# Varcheck
-declaration_of_human_rights_varcheck = {
+# varcheck_consortium
+declaration_of_human_rights_varcheck_consortium = {
 	is_shown = {
 		NOR = {
-			has_global_variable = pending_resolution
+			has_global_variable = pending_resolution_consortium
 			has_global_variable = declaration_of_human_rightscomplete
 			has_global_variable = declaration_of_human_rightsfail
 		}
 	}
 }
 # Execute
-activate_declaration_of_human_rights_je = {
+consortium_activate_declaration_of_human_rights_je = {
 	effect = {
 		every_country = {
 			if = {
@@ -227,26 +227,26 @@ activate_declaration_of_human_rights_je = {
 				}
 			}
 		}
-		set_global_variable = pending_resolution
+		set_global_variable = pending_resolution_consortium
 		set_global_variable = {
-			name = pending_resolution_progress
+			name = pending_resolution_progress_consortium
 			value = 0
 		}
 	}
 }
 ############# Decolonization Resolution
-# Varcheck
-decolonization_resolution_varcheck = {
+# varcheck_consortium
+decolonization_resolution_varcheck_consortium = {
 	is_shown = {
 		NOR = {
-			has_global_variable = pending_resolution
+			has_global_variable = pending_resolution_consortium
 			has_global_variable = decolonization_resolutioncomplete
 			has_global_variable = decolonization_resolutionfail
 		}
 	}
 }
 # Execute
-activate_consortium_decolonization_je = {
+consortium_activate_consortium_decolonization_je = {
 	effect = {
 		every_country = {
 			if = {
@@ -261,26 +261,26 @@ activate_consortium_decolonization_je = {
 				}
 			}
 		}
-		set_global_variable = pending_resolution
+		set_global_variable = pending_resolution_consortium
 		set_global_variable = {
-			name = pending_resolution_progress
+			name = pending_resolution_progress_consortium
 			value = 0
 		}
 	}
 }
 ############# UNCLOS I
-# Varcheck
-consortiumclos1_varcheck = {
+# varcheck_consortium
+consortiumclos1_varcheck_consortium = {
 	is_shown = {
 		NOR = {
-			has_global_variable = pending_resolution
+			has_global_variable = pending_resolution_consortium
 			has_global_variable = consortiumclos1complete
 			has_global_variable = consortiumclos1fail
 		}
 	}
 }
 # Execute
-activate_consortiumclos1_je = {
+consortium_activate_consortiumclos1_je = {
 	effect = {
 		every_country = {
 			if = {
@@ -295,23 +295,23 @@ activate_consortiumclos1_je = {
 				}
 			}
 		}
-		set_global_variable = pending_resolution
+		set_global_variable = pending_resolution_consortium
 		set_global_variable = {
-			name = pending_resolution_progress
+			name = pending_resolution_progress_consortium
 			value = 0
 		}
 	}
 }
 ############# Resolution on Korea
-# Varcheck
-korean_resolution_varcheck = {
+# varcheck_consortium
+korean_resolution_varcheck_consortium = {
 	is_shown = {
 		and = {
 			exists = c:STK
 			exists = c:NRK
 		}
 		NOR = {
-			has_global_variable = pending_resolution
+			has_global_variable = pending_resolution_consortium
 			has_global_variable = korean_resolution_complete
 			has_global_variable = korean_resolution_fail
 			exists = c:KOR
@@ -319,7 +319,7 @@ korean_resolution_varcheck = {
 	}
 }
 # Execute
-activate_korean_resolution_je = {
+consortium_activate_korean_resolution_je = {
 	effect = {
 		every_country = {
 			if = {
@@ -334,9 +334,9 @@ activate_korean_resolution_je = {
 				}
 			}
 		}
-		set_global_variable = pending_resolution
+		set_global_variable = pending_resolution_consortium
 		set_global_variable = {
-			name = pending_resolution_progress
+			name = pending_resolution_progress_consortium
 			value = 0
 		}
 	}

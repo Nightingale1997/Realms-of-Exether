@@ -29,7 +29,7 @@
 		nor = {
 			custom_tooltip = {
 				text = doesnothavependingresolution
-				has_global_variable = pending_resolution
+				has_global_variable = pending_resolution_consortium
 			}
 			custom_tooltip = {
 				text = consortium_interventionvoteunderway
@@ -70,11 +70,11 @@
 			}
 		}
 		set_global_variable = {
-			name = pending_resolution_progress
+			name = pending_resolution_consortium_progress_consortium
 			value = 0
 		}
 		set_global_variable = consortium_intervention_vote
-		set_global_variable = pending_resolution
+		set_global_variable = pending_resolution_consortium
 	}
 
 	ai_chance = { # TODO, does not work
