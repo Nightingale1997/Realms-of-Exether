@@ -78,7 +78,7 @@ concord_ai_voting.1 = {
 			modifier = {
 				trigger = {
 					and = {
-						has_journal_entry = je_unclos1
+						has_journal_entry = je_concordclos1
 						any_scope_state = {
 							is_coastal = yes
 						}
@@ -129,7 +129,7 @@ concord_ai_voting.1 = {
 			modifier = {
 				trigger = {
 					and = {
-						has_journal_entry = je_unclos1
+						has_journal_entry = je_concordclos1
 					}
 				}
 				add = 55
@@ -266,13 +266,13 @@ concord_ai_voting.2 = {
 			has_variable = has_voted_on_application
 		}
 		any_country = {
-			has_variable = application_progress_un
+			has_variable = application_progress_concord
 		}
 	}
 	immediate = {
 		random_country = {
 			limit = {
-				has_variable = application_progress_un
+				has_variable = application_progress_concord
 			}
 			save_scope_as = applicant_country_scope
 		}
