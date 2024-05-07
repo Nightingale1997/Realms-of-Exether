@@ -1026,7 +1026,7 @@ types consortium_panel
 															enabled = "[GetScriptedGui('consortium_approve_membership_varcheck_consortium').IsShown( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('applicant_country_scope',Country.MakeScope).End)]"
 															onclick = "[GetScriptedGui('consortium_approve_membership').Execute( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('applicant_country_scope',Country.MakeScope).End)]"
 															size = { 70 30 }
-															tooltip = "APPROVE_consortium_MEMBERSHIP"
+															tooltip = "APPROVE_CONSORTIUM_MEMBERSHIP"
 														}
 														button = {
 															using = default_button
@@ -1034,7 +1034,7 @@ types consortium_panel
 															enabled = "[GetScriptedGui('consortium_abstain_membership_varcheck_consortium').IsShown( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('applicant_country_scope',Country.MakeScope).End)]"
 															onclick = "[GetScriptedGui('consortium_abstain_membership').Execute( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('applicant_country_scope',Country.MakeScope).End)]"
 															size = { 70 30 }
-															tooltip = "ABSTAIN_consortium_MEMBERSHIP"
+															tooltip = "ABSTAIN_CONSORTIUM_MEMBERSHIP"
 														}
 														button = {
 															using = default_button
@@ -1042,7 +1042,7 @@ types consortium_panel
 															enabled = "[GetScriptedGui('consortium_reject_membership_varcheck_consortium').IsShown( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('applicant_country_scope',Country.MakeScope).End)]"
 															onclick = "[GetScriptedGui('consortium_reject_membership').Execute( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('applicant_country_scope',Country.MakeScope).End)]"
 															size = { 70 30 }
-															tooltip = "REJECT_consortium_MEMBERSHIP"
+															tooltip = "REJECT_CONSORTIUM_MEMBERSHIP"
 														}
 													}
 												}
@@ -1061,7 +1061,7 @@ types consortium_panel
 														align = center
 														raw_text = " Requires -#p  [Country.MakeScope.ScriptValue('required_support_consortium')] #v Support"
 													}
-													tooltip = "consortium_APPLICATION_BAR_TOOLTIP"
+													tooltip = "CONSORTIUM_APPLICATION_BAR_TOOLTIP"
 												}
 												flowcontainer = {
 													margin_top = 5
@@ -1139,7 +1139,7 @@ types consortium_panel
 														min = 0
 														max = 100
 													}
-													tooltip = "consortium_APPLICATION_BAR_TOOLTIP"
+													tooltip = "CONSORTIUM_APPLICATION_BAR_TOOLTIP"
 												}
 											}
 										}

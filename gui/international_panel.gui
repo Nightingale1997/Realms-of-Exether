@@ -127,6 +127,7 @@ types international
 							}
 							blockoverride "onclick" {
 								onclick = "[GetVariableSystem.Toggle('concord_panel')]"
+								onclick = "[GetVariableSystem.Clear('consortium_panel')]"
 							}
 							blockoverride "onclick_showless" {
 								visible = "[Not(GetVariableSystem.Exists('concord_panel'))]"
@@ -269,6 +270,7 @@ types international
 							}
 							blockoverride "onclick" {
 								onclick = "[GetVariableSystem.Toggle('consortium_panel')]"
+								onclick = "[GetVariableSystem.Clear('concord_panel')]"
 							}
 							blockoverride "onclick_showless" {
 								visible = "[Not(GetVariableSystem.Exists('consortium_panel'))]"
