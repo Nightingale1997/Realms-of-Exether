@@ -22,7 +22,7 @@ effect_concord_observer = {
 effect_concord_application_approved = {
 	remove_variable = concord_observer
 	remove_variable = concord_supporting_list_size
-	remove_variable = application_progress_un
+	remove_variable = application_progress_concord
 	clear_variable_list = concord_supporting
 	clear_variable_list = concord_abstaining
 	clear_variable_list = concord_rejecting
@@ -35,7 +35,7 @@ effect_concord_application_approved = {
 }
 effect_concord_application_rejected = {
 	remove_variable = concord_supporting_list_size
-	remove_variable = application_progress_un
+	remove_variable = application_progress_concord
 	clear_variable_list = concord_supporting
 	clear_variable_list = concord_abstaining
 	clear_variable_list = concord_rejecting

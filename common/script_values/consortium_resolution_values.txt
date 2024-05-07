@@ -1,5 +1,5 @@
 ﻿#UN values
-global_population_un = {
+global_population_consortium = {
 	value = global_population
 }
 supporting_value_total = {
@@ -57,30 +57,30 @@ pending_resolution_progress_value_round = {
 	divide = 100
 }
 
-concord_applying_states = {
+consortium_applying_states = {
 	every_country = {
 		limit = {
-			has_variable = application_progress_un
+			has_variable = application_progress_consortium
 		}	
 		add = 1
 	}
 	round = yes
 }
 
-concord_memberstates = {
+consortium_memberstates = {
 	every_country = {
 		limit = {
-			has_variable = concord_member
+			has_variable = consortium_member
 		}	
 		add = 1
 	}
 	round = yes
 }
 
-required_support_un = {
+required_support_consortium = {
 	every_country = {
 		limit = {
-			has_variable = concord_member
+			has_variable = consortium_member
 		}	
 		add = 1
 	}
@@ -92,12 +92,12 @@ supporting_countries = {
 	value = 0
 	if = {
 		limit = {
-			exists = var:concord_supporting_list_size
+			exists = var:consortium_supporting_list_size
 		}
-		add = var:concord_supporting_list_size
+		add = var:consortium_supporting_list_size
 	}
 }
 
-application_progress_un = {
-	value = var:application_progress_un
+application_progress_consortium = {
+	value = var:application_progress_consortium
 }

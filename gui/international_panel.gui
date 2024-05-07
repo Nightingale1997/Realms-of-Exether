@@ -205,13 +205,13 @@ types international
 								visible = "[Not(Or(Or(GetPlayer.MakeScope.Var('concord_member').IsSet, GetPlayer.MakeScope.Var('concord_observer').IsSet), GetPlayer.MakeScope.Var('asked_concord_observer').IsSet))]"
 								size = { 100 45 }
 								using = default_button_primary_action
-								tooltip = "JOINASOBSERVERconcord_TOOLTIP"
-								text = "JOINASOBSERVERUN"
+								tooltip = "JOINASOBSERVER_CONCORD_TOOLTIP"
+								text = "JOINASOBSERVER_CONCORD"
 								onclick = "[GetScriptedGui('join_concord_observer_sgui').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = fontsize_medium
 							}
 							button = {
-								visible = "[And(GetPlayer.MakeScope.Var('concord_observer').IsSet, Not(GetPlayer.MakeScope.Var('application_progress_un').IsSet))]"
+								visible = "[And(GetPlayer.MakeScope.Var('concord_observer').IsSet, Not(GetPlayer.MakeScope.Var('application_progress_concord').IsSet))]"
 								enabled = "[Not(GetPlayer.MakeScope.Var('concord_application_rejected').IsSet)]"
 								size = { 100 45 }
 								using = default_button_primary_action
@@ -347,13 +347,13 @@ types international
 								visible = "[Not(Or(Or(GetPlayer.MakeScope.Var('consortium_member').IsSet, GetPlayer.MakeScope.Var('consortium_observer').IsSet), GetPlayer.MakeScope.Var('asked_consortium_observer').IsSet))]"
 								size = { 100 45 }
 								using = default_button_primary_action
-								tooltip = "JOINASOBSERVERUN_TOOLTIP"
-								text = "JOINASOBSERVERUN"
+								tooltip = "JOINASOBSERVER_CONSORTIUM_TOOLTIP"
+								text = "JOINASOBSERVER_CONSORTIUM"
 								onclick = "[GetScriptedGui('join_consortium_observer_sgui').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 								using = fontsize_medium
 							}
 							button = {
-								visible = "[And(GetPlayer.MakeScope.Var('concord_observer').IsSet, Not(GetPlayer.MakeScope.Var('application_progress_un').IsSet))]"
+								visible = "[And(GetPlayer.MakeScope.Var('concord_observer').IsSet, Not(GetPlayer.MakeScope.Var('application_progress_consortium').IsSet))]"
 								enabled = "[Not(GetPlayer.MakeScope.Var('concord_application_rejected').IsSet)]"
 								size = { 100 45 }
 								using = default_button_primary_action

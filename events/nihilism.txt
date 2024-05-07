@@ -477,39 +477,6 @@ nihilism.4 = {  #Fathers and Sons
 				}
 			}
 		}
-		else_if = {
-			limit = {
-				ROOT = c:FRA
-				has_variable = orleanist_restoration_var
-			}
-			ig:ig_intelligentsia = {
-				leader = {
-					set_ideology = ideology:ideology_orleanist
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				ROOT = c:FRA
-				has_variable = legitimist_restoration_var
-			}
-			ig:ig_intelligentsia = {
-				leader = {
-					set_ideology = ideology:ideology_moderate
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				ROOT = c:FRA
-				has_variable = bonapartist_restoration_var
-			}
-			ig:ig_intelligentsia = {
-				leader = {
-					set_ideology = ideology:ideology_moderate
-				}
-			}
-		}
 		else = {
 			ig:ig_intelligentsia = {
 				leader = {

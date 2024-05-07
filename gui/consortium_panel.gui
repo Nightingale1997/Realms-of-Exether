@@ -1059,7 +1059,7 @@ types consortium_panel
 													textbox = {
 														parentanchor = hcenter
 														align = center
-														raw_text = " Requires -#p  [Country.MakeScope.ScriptValue('required_support_un')] #v Support"
+														raw_text = " Requires -#p  [Country.MakeScope.ScriptValue('required_support_consortium')] #v Support"
 													}
 													tooltip = "consortium_APPLICATION_BAR_TOOLTIP"
 												}
@@ -1132,10 +1132,10 @@ types consortium_panel
 												datacontext = "[Scope.AccessCountry]"		
 												margin_left = 5
 												green_progressbar_horizontal = {
-													name = "consortium_application_progress_unbar"
+													name = "consortium_application_progress_consortium_bar"
 													size = { 270 10 }
 													blockoverride "values" {
-														value = "[Country.MakeScope.ScriptValue('application_progress_un')]"
+														value = "[Country.MakeScope.ScriptValue('application_progress_consortium')]"
 														min = 0
 														max = 100
 													}

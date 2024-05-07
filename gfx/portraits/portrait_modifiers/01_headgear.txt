@@ -742,10 +742,7 @@
                     AND = {
                         scope:character ?= {
                             culture = {
-                                has_discrimination_trait = ogre_heritage
-                            }
-                            owner = {
-                                has_variable = KOR_korean_empire_declared
+                                has_discrimination_trait = hasalian
                             }
                         }
                         OR = {
@@ -764,11 +761,8 @@
                     }
                     AND = {
                         scope:pop ?= {
-                                                        culture = {
-                                has_discrimination_trait = ogre_heritage
-                            }
-                            owner = {
-                                has_variable = KOR_korean_empire_declared
+                            culture = {
+                                has_discrimination_trait = hasalian
                             }
                         }
                         OR = {

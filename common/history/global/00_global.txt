@@ -356,5 +356,22 @@ GLOBAL = {
 
 	every_country = {
 		calculate_rituals = yes
-	}
+
+					### Variable Errors Fixing - HACK!  Fix these eventually
+			fix_variable_error = {
+				X = asked_consortium_observer
+			}
+		
+			fix_variable_error = {
+				X = asked_concord_observer
+			}
+
+			fix_variable_error = {
+				X = napoleon_iii_var
+			}
+		}
+
+
+
+
 }

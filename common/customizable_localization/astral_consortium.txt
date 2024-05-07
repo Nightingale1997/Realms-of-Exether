@@ -1,0 +1,55 @@
+﻿is_consortium_member_loc = {
+	type = country
+	text = {
+		trigger = {
+			has_variable = consortium_member
+		}
+		localization_key = "yes"
+	}
+	text = {
+		localization_key = "no"
+	}
+}
+
+is_consortium_major_member_loc = {
+	type = country
+	text = {
+		trigger = {
+			has_variable = consortium_major_member
+		}
+		localization_key = "yes"
+	}
+	text = {
+		localization_key = "no"
+	}
+}
+
+is_consortium_observer_loc = {
+	type = country
+	text = {
+		trigger = {
+			has_variable = consortium_observer
+		}
+		localization_key = "yes"
+	}
+	text = {
+		localization_key = "no"
+	}
+}
+
+is_not_consortium_member_loc = {
+	type = country
+	text = {
+		trigger = {
+			NOR = {
+				has_variable = consortium_observer
+				has_variable = consortium_major_member
+				has_variable = consortium_member
+			}
+		}
+		localization_key = "yes"
+	}
+	text = {
+		localization_key = "no"
+	}
+}

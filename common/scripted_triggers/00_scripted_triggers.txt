@@ -810,9 +810,6 @@ reactionary_revolution_ongoing = {
 								has_ideology = ideology:ideology_fascist
 								has_ideology = ideology:ideology_integralist
 								has_ideology = ideology:ideology_royalist
-								has_ideology = ideology:ideology_orleanist
-								has_ideology = ideology:ideology_bonapartist
-								has_ideology = ideology:ideology_legitimist
 								has_ideology = ideology:ideology_theocrat
 								has_ideology = ideology:ideology_ethno_nationalist
 								has_ideology = ideology:ideology_traditionalist
@@ -838,9 +835,6 @@ reactionary_revolution_ongoing = {
 						has_ideology = ideology:ideology_fascist
 						has_ideology = ideology:ideology_integralist
 						has_ideology = ideology:ideology_royalist
-						has_ideology = ideology:ideology_orleanist
-						has_ideology = ideology:ideology_bonapartist
-						has_ideology = ideology:ideology_legitimist
 						has_ideology = ideology:ideology_theocrat
 						has_ideology = ideology:ideology_ethno_nationalist
 						has_ideology = ideology:ideology_traditionalist
@@ -930,9 +924,6 @@ ig_is_reactionary = {
 				has_ideology = ideology:ideology_fascist
 				has_ideology = ideology:ideology_integralist
 				has_ideology = ideology:ideology_royalist
-				has_ideology = ideology:ideology_orleanist
-				has_ideology = ideology:ideology_bonapartist
-				has_ideology = ideology:ideology_legitimist
 				has_ideology = ideology:ideology_theocrat
 			}
 		}
@@ -1139,15 +1130,6 @@ ig_is_anti_dreyfusard = {
 			has_ideology = ideology:ideology_authoritarian
 		}
 		leader = {
-			has_ideology = ideology:ideology_legitimist
-		}
-		leader = {
-			has_ideology = ideology:ideology_bonapartist
-		}
-		leader = {
-			has_ideology = ideology:ideology_orleanist
-		}
-		leader = {
 			has_ideology = ideology:ideology_royalist
 		}
 	}
@@ -1247,7 +1229,6 @@ has_reactionary_ideology = {
 		has_ideology = ideology:ideology_integralist
 		has_ideology = ideology:ideology_ethno_nationalist
 		has_ideology = ideology:ideology_theocrat
-		has_ideology = ideology:ideology_legitimist
 		has_ideology = ideology:ideology_luddite
 		has_ideology = ideology:ideology_corporatist_leader
 	}
@@ -1257,9 +1238,6 @@ has_conservative_ideology = {
 	OR = {
 		has_ideology = ideology:ideology_traditionalist
 		has_ideology = ideology:ideology_slaver
-		has_ideology = ideology:ideology_royalist
-		has_ideology = ideology:ideology_orleanist
-		has_ideology = ideology:ideology_bonapartist
 		has_ideology = ideology:ideology_theocrat
 		has_ideology = ideology:ideology_magocrat
 		has_ideology = ideology:ideology_corporatist_leader
@@ -1269,9 +1247,6 @@ has_conservative_ideology = {
 has_monarchist_ideology = {
 	OR = {
 		has_ideology = ideology:ideology_royalist
-		has_ideology = ideology:ideology_orleanist
-		has_ideology = ideology:ideology_bonapartist
-		has_ideology = ideology:ideology_legitimist	
 	}
 }
 
