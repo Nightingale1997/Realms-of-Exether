@@ -24,3 +24,18 @@ QON = {
 		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
 	}
 }
+
+
+#Temarash
+TEM = {
+	pattern = "pattern_solid.tga" #Choose a base from gfx\coat_of_arms\patterns
+	color1 = "blue" #Use a predefined colour or you can do 'color1 = rgb{ x x x }'.
+
+	colored_emblem = {
+		texture = "ce_roe_thistle_banner.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+
+}

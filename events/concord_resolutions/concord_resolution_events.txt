@@ -1,0 +1,280 @@
+﻿namespace = concord_resolution_events
+concord_resolution_events.1 = {
+	# Declaration of Human Rights passed
+	type = country_event
+	placement = ROOT
+	title = concord_resolution_events.1.t
+	desc = concord_resolution_events.1.d
+	flavor = concord_resolution_events.1.f
+	duration = 3
+	icon = "gfx/interface/icons/cwp_icons/united_nations.dds"
+	event_image = {
+		texture = "gfx/interface/event_pictures/united_nations_assembly.dds"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/springtime_of_nation"
+	# TODO - AI SCRIPTING
+	option = {
+		name = concord_resolution_events.1.a
+		highlighted_option = yes
+		default_option = yes
+	}
+	option = {
+		name = concord_resolution_events.1.b
+	}
+}
+
+concord_resolution_events.2 = {
+	# Declaration of Human Rights Failed
+	type = country_event
+	placement = ROOT
+	title = concord_resolution_events.2.t
+	desc = concord_resolution_events.2.d
+	flavor = concord_resolution_events.2.f
+	duration = 3
+	icon = "gfx/interface/icons/cwp_icons/united_nations.dds"
+	event_image = {
+		texture = "gfx/interface/event_pictures/united_nations_assembly.dds"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/springtime_of_nation"
+	# TODO - AI SCRIPTING
+	option = {
+		name = concord_resolution_events.2.a
+		highlighted_option = yes
+		default_option = yes
+	}
+	option = {
+		name = concord_resolution_events.2.b
+	}
+}
+
+concord_resolution_events.3 = {
+	# UNCLOS1 passed
+	type = country_event
+	placement = ROOT
+	title = concord_resolution_events.3.t
+	desc = concord_resolution_events.3.d
+	flavor = concord_resolution_events.3.f
+	duration = 3
+	icon = "gfx/interface/icons/cwp_icons/united_nations.dds"
+	event_image = {
+		texture = "gfx/interface/event_pictures/united_nations_assembly.dds"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/springtime_of_nation"
+	# TODO - AI SCRIPTING
+	option = {
+		name = concord_resolution_events.3.a
+		highlighted_option = yes
+		default_option = yes
+	}
+	option = {
+		name = concord_resolution_events.3.b
+	}
+}
+
+concord_resolution_events.4 = {
+	# UNCLOS1 Failed
+	type = country_event
+	placement = ROOT
+	title = concord_resolution_events.4.t
+	desc = concord_resolution_events.4.d
+	flavor = concord_resolution_events.4.f
+	duration = 3
+	icon = "gfx/interface/icons/cwp_icons/united_nations.dds"
+	event_image = {
+		texture = "gfx/interface/event_pictures/united_nations_assembly.dds"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/springtime_of_nation"
+	# TODO - AI SCRIPTING
+	option = {
+		name = concord_resolution_events.4.a
+		highlighted_option = yes
+		default_option = yes
+	}
+	option = {
+		name = concord_resolution_events.4.b
+	}
+}
+
+concord_resolution_events.5 = {
+	# Korea Unification Resolution Success 
+	type = country_event
+	placement = ROOT
+	title = concord_resolution_events.5.t
+	desc = concord_resolution_events.5.d
+	flavor = concord_resolution_events.5.f
+	duration = 3
+	icon = "gfx/interface/icons/cwp_icons/united_nations.dds"
+	event_image = {
+		texture = "gfx/interface/event_pictures/united_nations_assembly.dds"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/springtime_of_nation"
+	# TODO - AI SCRIPTING
+	option = {
+		name = concord_resolution_events.5.a
+		highlighted_option = yes
+	}
+}
+
+concord_resolution_events.6 = {
+	# Korea Unification Resolution fails 
+	type = country_event
+	placement = ROOT
+	title = concord_resolution_events.6.t
+	desc = concord_resolution_events.6.d
+	flavor = concord_resolution_events.6.f
+	duration = 3
+	icon = "gfx/interface/icons/cwp_icons/united_nations.dds"
+	event_image = {
+		texture = "gfx/interface/event_pictures/united_nations_assembly.dds"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/springtime_of_nation"
+	# TODO - AI SCRIPTING
+	option = {
+		name = concord_resolution_events.6.a
+		highlighted_option = yes
+	}
+}
+
+concord_resolution_events.7 = {
+	# Resolution on Decolonization passed 
+	type = country_event
+	placement = ROOT
+	title = concord_resolution_events.7.t
+	desc = concord_resolution_events.7.d
+	flavor = concord_resolution_events.7.f
+	duration = 3
+	icon = "gfx/interface/icons/cwp_icons/united_nations.dds"
+	event_image = {
+		texture = "gfx/interface/event_pictures/united_nations_assembly.dds"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/springtime_of_nation"
+	option = {
+		name = concord_resolution_events.7.a
+		default_option = yes
+	}
+	option = {
+		name = concord_resolution_events.7.b
+	}
+}
+
+concord_resolution_events.8 = {
+	# Resolution on Decolonization fails 
+	type = country_event
+	placement = ROOT
+	title = concord_resolution_events.8.t
+	desc = concord_resolution_events.8.d
+	flavor = concord_resolution_events.8.f
+	duration = 3
+	icon = "gfx/interface/icons/cwp_icons/united_nations.dds"
+	event_image = {
+		texture = "gfx/interface/event_pictures/united_nations_assembly.dds"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/springtime_of_nation"
+	option = {
+		name = concord_resolution_events.8.a
+		default_option = yes
+	}
+	option = {
+		name = concord_resolution_events.8.b
+	}
+}
+
+concord_resolution_events.100 = {
+	# AI initializes vote on Decolonization
+	type = country_event
+	hidden = yes
+	trigger = {
+		or = {
+			has_variable = concord_major_member
+			has_variable = concord_member
+		}
+		is_player = no
+		country_rank = rank_value:great_power
+		game_date >= 1956.1.1
+		NOR = {
+			has_global_variable = pending_resolution_concord
+			has_global_variable = decolonization_resolutioncomplete
+			has_global_variable = decolonization_resolutionfail
+		}
+	}
+	immediate = {
+		activate_concord_decolonization_je = yes
+	}
+}
+
+concord_resolution_events.101 = {
+	# AI initializes vote on Korea
+	type = country_event
+	hidden = yes
+	trigger = {
+		or = {
+			has_variable = concord_major_member
+			has_variable = concord_member
+		}
+		is_player = no
+		NOR = {
+			has_global_variable = pending_resolution_concord
+			has_global_variable = korean_resolution_complete
+			has_global_variable = korean_resolution_fail
+			exists = c:KOR
+		}
+		game_date >= 1947.6.1
+	}
+	immediate = {
+		activate_korean_resolution_je = yes
+	}
+}
+
+concord_resolution_events.102 = {
+	# AI initializes vote on Human Rights
+	type = country_event
+	hidden = yes
+	trigger = {
+		or = {
+			has_variable = concord_major_member
+			has_variable = concord_member
+		}
+		is_player = no
+		country_rank >= rank_value:great_power
+		game_date >= 1948.1.1
+		NOR = {
+			has_global_variable = pending_resolution_concord
+			has_global_variable = declaration_of_human_rightscomplete
+			has_global_variable = declaration_of_human_rightsfail
+		}
+	}
+	immediate = {
+		activate_declaration_of_human_rights_je = yes
+	}
+}
+
+concord_resolution_events.103 = {
+	# AI initializes vote on UNCLOS1
+	type = country_event
+	hidden = yes
+	trigger = {
+		or = {
+			has_variable = concord_major_member
+			has_variable = concord_member
+		}
+		is_player = no
+		country_rank >= rank_value:great_power
+		game_date >= 1958.1.1
+		NOR = {
+			has_global_variable = pending_resolution_concord
+			has_global_variable = unclos1complete
+			has_global_variable = unclos1fail
+		}
+	}
+	immediate = {
+		activate_unclos1_je = yes
+	}
+}

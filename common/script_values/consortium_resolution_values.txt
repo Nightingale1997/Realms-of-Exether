@@ -1,0 +1,136 @@
+﻿#UN values
+global_population_consortium = {
+	value = global_population
+}
+supporting_value_total_consortium = {
+	value = 0
+	every_country = {
+	  	limit = { 
+			has_variable =  is_supporting_consortium
+		}
+	  add = diplomatic_weight_consortium
+	}
+}
+
+opposing_value_total_consortium = {
+	value = 0
+	every_country = {
+	  	limit = { 
+			has_variable =  is_opposing_consortium
+		}
+	  add = diplomatic_weight_consortium
+	}
+}
+
+voting_balance_consortium = {
+	value = supporting_value_total_consortium
+	subtract = opposing_value_total_consortium
+	round = yes
+}
+
+diplomatic_weight_consortium = {
+	value = 0
+	add = gdp
+	add = prestige
+	divide = 10000
+	round = yes
+}
+
+doubleprogressbar_max = {
+	value = 1
+	add = supporting_value_total_consortium
+	add = opposing_value_total_consortium
+}
+
+
+pending_resolution_progress_value_consortium = {
+	if = {
+		limit = {
+			has_global_variable = pending_resolution_progress
+		}
+		value = global_var:pending_resolution_progress
+	}
+}
+
+pending_resolution_progress_value_round_consortium = {
+	value = pending_resolution_progress_value_consortium
+	divide = 100
+}
+
+consortium_applying_states = {
+	every_country = {
+		limit = {
+			has_variable = application_progress_consortium
+		}	
+		add = 1
+	}
+	round = yes
+}
+
+consortium_memberstates = {
+	every_country = {
+		limit = {
+			has_variable = consortium_member
+		}	
+		add = 1
+	}
+	round = yes
+}
+
+required_support_consortium = {
+	every_country = {
+		limit = {
+			has_variable = consortium_member
+		}	
+		add = 1
+	}
+	multiply = 0.6
+	round = yes
+}
+
+supporting_countries_consortium = {
+	value = 0
+	if = {
+		limit = {
+			exists = var:consortium_supporting_list_size
+		}
+		add = var:consortium_supporting_list_size
+	}
+}
+
+application_progress_consortium = {
+	value = var:application_progress_consortium
+}
+
+#UN values
+global_population_consortium = {
+	value = global_population
+}
+supporting_value_total_consortium = {
+	value = 0
+	every_country = {
+	  	limit = { 
+			has_variable =  is_supporting_consortium
+		}
+	  add = diplomatic_weight_consortium
+	}
+}
+
+opposing_value_total_consortium = {
+	value = 0
+	every_country = {
+	  	limit = { 
+			has_variable =  is_opposing_consortium
+		}
+	  add = diplomatic_weight_consortium
+	}
+}
+
+pending_resolution_progress_value_consortium = {
+	if = {
+		limit = {
+			has_global_variable = pending_resolution_progress_consortium
+		}
+		value = global_var:pending_resolution_progress_consortium
+	}
+}
