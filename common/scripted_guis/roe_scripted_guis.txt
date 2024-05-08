@@ -49,3 +49,58 @@ recalculate_ritual_lists = {
 		calculate_rituals = yes
 	}
 }
+
+is_sky_state = {
+	saved_scopes = { node_state }
+
+	is_valid = {
+		OR = {
+			scope:node_state = s:STATE_EAST_BIRD_SKIES
+			scope:node_state = s:STATE_BIRDIE_BAY_SKIES
+			scope:node_state = s:STATE_FORTUNE_SKIES_1
+			scope:node_state = s:STATE_CENTRAL_ZALARON_SKIES_1
+			scope:node_state = s:STATE_SOUTHWEST_ZALARON_SKIES
+			scope:node_state = s:STATE_MIDDLE_WEST_ZALARON_SKIES
+			scope:node_state = s:STATE_WEST_RAVIK_SKIES
+			scope:node_state = s:STATE_SHOULDERSKIES
+			scope:node_state = s:STATE_RAVENWATCH_SKIES
+			scope:node_state = s:STATE_KHADURAN_SKIES
+			scope:node_state = s:STATE_DIYINAKHAD_BASIN_SKIES
+			scope:node_state = s:STATE_SKRAVEND_SKIES
+			scope:node_state = s:STATE_CLOUDLESS_SKIES
+			scope:node_state = s:STATE_BARREN_SKIES
+			scope:node_state = s:STATE_GOLDENPASS_SKIES
+			scope:node_state = s:STATE_SPRANKEL_SKIES
+			scope:node_state = s:STATE_NORTH_LAKE_SKIES
+			scope:node_state = s:STATE_MOONVIEW_SKIES
+			scope:node_state = s:STATE_QOMERQOCHA_SKIES
+			scope:node_state = s:STATE_SOUTH_LAKE_SKIES
+			scope:node_state = s:STATE_DRUKYN_SKIES
+			scope:node_state = s:STATE_KYRZUR_SKIES
+			scope:node_state = s:STATE_KHULANJO_SKIES
+			scope:node_state = s:STATE_KIYOMORIN_SKIES
+			scope:node_state = s:STATE_MOUNTAINNAME_DESMESNE_SKIES
+			scope:node_state = s:STATE_NILBOGYURT_SKIES
+			scope:node_state = s:STATE_NORTH_LANTERNSHORE_SKIES
+			scope:node_state = s:STATE_SHIRHUAJIAN_SKIES
+			scope:node_state = s:STATE_OASIS_SKIES
+			scope:node_state = s:STATE_PISQUPATA_SKIES
+			scope:node_state = s:STATE_TAYTAQOCHA_SKIES
+			scope:node_state = s:STATE_THAGHIZHI_HEIGHTS
+			scope:node_state = s:STATE_TSIDIIYAH_HEIGHTS
+			scope:node_state = s:STATE_PETAL_HEIGHTS
+			scope:node_state = s:STATE_KLINGEL_HEIGHTS
+			scope:node_state = s:STATE_MISTY_HEIGHTS
+			scope:node_state = s:STATE_CITRUS_WINDS
+			scope:node_state = s:STATE_HOOKED_WINDS
+			scope:node_state = s:STATE_PUKARAQOCHA_WINDS
+			scope:node_state = s:STATE_SKIES_1
+			scope:node_state = s:STATE_SKIES_3
+			scope:node_state = s:STATE_SKIES_4
+			scope:node_state = s:STATE_SKIES_7
+		}
+		
+
+		
+    }
+}

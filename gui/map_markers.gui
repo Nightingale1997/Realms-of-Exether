@@ -13,7 +13,7 @@ widget = {
 		button = {
 			alwaystransparent = yes
 				size = { 250% 250%% }
-			alpha = 0.8
+			alpha = 0.2
 			texture ="gfx/interface/map_markers/round_highlight_orange.dds"
 			visible = "[And(SeaNodeMarker.IsValidInteractionNode ,SeaNodeMarker.IsActiveInteractionNode)]"
 			onclick = "[SeaNodeMarker.SelectInteractionClick]"
@@ -43,10 +43,11 @@ widget = {
 		#highlight
 		icon = {
 			visible = "[SeaNodeMarker.IsSeaNodeHighlighted]"
-			size = { 120% 120% }
+			size = { 100% 100% }
 			texture = "gfx/interface/map_markers/round_highlight.dds"
 			alwaystransparent = yes
 			parentanchor = center
+			position = { 0 0 }
 		}
 
 		### ZOOM FAR
