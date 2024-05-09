@@ -165,6 +165,12 @@ state_adventurer_coverage_add = {
 	percent = no
 }
 
+state_veil_integrity_contribution = {
+	good = no
+	percent = no
+	num_decimals = 1
+}
+
 state_adventurer_coverage_mult = {
 	good = yes
 	percent = yes
@@ -179,8 +185,4 @@ building_adventurers_mortality_mult = {
 
 
 
-country_veil_integrity_contribution = {
-	neutral = yes
-	percent = no
-	num_decimals = 0
-}
+

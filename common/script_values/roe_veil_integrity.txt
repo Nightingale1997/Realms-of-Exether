@@ -1,8 +1,16 @@
 ﻿
 
 veil_integrity_total = {
+	value = 100
+	add = veil_damage_normalized
+	min = 0
+}
+
+veil_damage_normalized = {
 	value = global_var:veil_integrity_var
-  }
+	divide = 10
+	max = 0
+}
 
 normalized_veil_integrity_surplus = {
 	value = veil_integrity_total
@@ -22,3 +30,18 @@ normalized_veil_integrity_deficit = {
 	max = 0
   }
 
+  
+state_veil_damage = {
+	value = 0
+	add = modifier:state_veil_integrity_contribution
+	min = 0
+}
+
+country_veil_damage = {
+	value = 0
+	
+	every_scope_state = {
+		add = modifier:state_veil_integrity_contribution
+	}
+	min = 0
+}
