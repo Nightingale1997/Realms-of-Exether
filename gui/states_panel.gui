@@ -1331,6 +1331,19 @@ types state_panel_types
 				}
 
 				state_panel_status_item_small = {
+					tooltip = "STATE_VEIL_DAMAGE_DESC"
+					alwaystransparent = no
+
+					blockoverride "texture" {
+						texture = "gfx/interface/icons/state_status_icons/state_adventuring_coverage.dds"
+					}
+
+					blockoverride "name" {
+						text = "STATE_VEIL_DAMAGE"
+					}
+				}
+
+				state_panel_status_item_small = {
 					visible = "[State.HasDiscoverableResources]"
 					tooltip = "TOOLTIP_UNDISCOVERED_RESOURCES"
 

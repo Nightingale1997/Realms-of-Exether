@@ -13,6 +13,11 @@ on_monthly_pulse_country = {
 
 		# Comte
 		positivism.1
+
+		#Veil Superevents
+		veil_events.1
+		veil_events.2
+		veil_events.3
 	}
 	effect = {
 		every_character_in_exile_pool = {
@@ -21,10 +26,92 @@ on_monthly_pulse_country = {
 			}
 			kill_character = yes
 		}
+		
 		change_global_variable = {
 			name = veil_integrity_var
-			add = modifier:country_veil_integrity_contribution
+			add = var:veil_damage
 		}
+		change_variable = {
+			name = veil_damage
+			value = country_veil_damage
+		}
+		change_global_variable = {
+			name = veil_integrity_var
+			subtract = country_veil_damage
+		}
+		
+
+		if = {
+			limit = { NOT = { has_global_variable = recalculated_veil_impacts } }
+			set_global_variable = {
+				name = recalculated_veil_impacts
+				days = 29
+			}
+	
+	
+			set_global_variable = {
+				name = veil_damage_top_1_value
+				value = 0
+			}
+	
+	
+			set_global_variable = {
+				name = veil_damage_top_2_value
+				value = 0
+			}
+	
+	
+			set_global_variable = {
+				name = veil_damage_top_3_value
+				value = 0
+			}
+
+			every_country = {
+				if = {
+					limit = {
+						country_veil_damage > global_var:veil_damage_top_1_value
+					}
+					set_global_variable = {
+						name = veil_damage_top_1
+						value = this
+					}
+					set_global_variable = {
+						name = veil_damage_top_1_value
+						value = country_veil_damage
+					}
+				}
+				else_if = {
+					limit = {
+						country_veil_damage > global_var:veil_damage_top_2_value
+					}
+					set_global_variable = {
+						name = veil_damage_top_2
+						value = this
+					}
+					set_global_variable = {
+						name = veil_damage_top_2_value
+						value = country_veil_damage
+					}
+				}
+				else_if = {
+					limit = {
+						country_veil_damage > global_var:veil_damage_top_3_value
+					}
+					set_global_variable = {
+						name = veil_damage_top_3
+						value = this
+					}
+					set_global_variable = {
+						name = veil_damage_top_3_value
+						value = country_veil_damage
+					}
+				}
+			}
+		}
+	
+
+
+
 	}
 	# Election Events
 	random_events = {
