@@ -437,7 +437,7 @@
 								visible = "[Event.HasTexture]"
 								texture = "[Event.GetTexture]"
 								alwaystransparent = yes
-								size = { 100% 100% }
+								size = { 100% 75% }
 							}
 
 							# animated video ( most images should have this )
@@ -514,7 +514,7 @@
 						direction = horizontal
 						spacing = 20
 						parentanchor = hcenter|bottom
-						margin = { 25 40 }
+						margin = { 25 60 }
 
 						background = {
 							texture = "gfx/interface/backgrounds/tutorial_bg.dds"
@@ -529,7 +529,7 @@
 								blend_mode = overlay
 								alpha = 0.7
 							}
-							margin = { -15 -20 }
+							margin = { -15 -40 }
 						}
 
 						textbox = {
@@ -549,7 +549,7 @@
 							using = default_list_position
 							datamodel = "[EventWindow.GetOptions]"
 							spacing = 5
-							margin = {20 30}
+							margin = {20 20}
 
 							item = {
 								container = {
