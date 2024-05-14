@@ -90,23 +90,7 @@ monster_hunters = {
 	}
 }
 
-potions = {
-	era = era_2
-	texture = "gfx/interface/icons/invention_icons/sericulture.dds"
-	category = society
-	
-	modifier = {
-	}
 
-	unlocking_technologies = {
-		pharmaceuticals
-		supernatural_studies
-	}
-	
-	ai_weight = {
-		value = 2
-	}
-}
 
 thought_shielding = {
 	era = era_3
@@ -118,7 +102,6 @@ thought_shielding = {
 
 	unlocking_technologies = {
 		psionic_theory
-		potions
 	}
 	
 	ai_weight = {
