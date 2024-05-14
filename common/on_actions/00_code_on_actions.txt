@@ -31,10 +31,11 @@ on_monthly_pulse_country = {
 			name = veil_integrity_var
 			add = var:veil_damage
 		}
-		change_variable = {
+		set_variable = {
 			name = veil_damage
 			value = country_veil_damage
 		}
+
 		change_global_variable = {
 			name = veil_integrity_var
 			subtract = country_veil_damage
