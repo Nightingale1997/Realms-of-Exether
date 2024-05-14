@@ -1,4 +1,20 @@
-﻿
+﻿alchemy = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/sericulture.dds"
+	category = production
+	
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		distillation
+	}		
+	
+	ai_weight = {
+		value = 2
+	}
+}
+
 cloudsilver_refining = {
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/sericulture.dds"
@@ -18,7 +34,7 @@ cloudsilver_refining = {
 }
 
 alchemical_transmutation = {
-	era = era_3
+	era = era_2
 	texture = "gfx/interface/icons/invention_icons/sericulture.dds"
 	category = production
 	
@@ -27,6 +43,7 @@ alchemical_transmutation = {
 	}
 
 	unlocking_technologies = {
+		alchemy
 		fractional_distillation
 	}
 	
