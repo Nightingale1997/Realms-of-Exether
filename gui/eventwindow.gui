@@ -46,6 +46,8 @@
 
 		blockoverride "window_header_name" {
 			raw_text = "#BOLD [EventWindow.GetTitle]#!"
+			font = "Fancy"
+			fontsize = 30
 		}
 		blockoverride "content" {}
 
@@ -378,6 +380,8 @@
 		}
 		blockoverride "window_header_name" {
 			raw_text = "#BOLD [EventWindow.GetTitle]#!"
+			font = "Fancy"
+			fontsize = 30
 		}
 		blockoverride "content" {}
 
