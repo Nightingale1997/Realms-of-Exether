@@ -13,7 +13,7 @@
         bg_opium_plantations = 20
         bg_wishstone_mining = 20
     }
-
+    naval_exit_id = 3123
 }
 
 STATE_KILIMASAWA = {
@@ -549,7 +549,7 @@ STATE_PUKARAQOCHA = {
         type = "bg_oil_extraction"
         undiscovered_amount = 5
     }
-
+    naval_exit_id = 3122
 }
 STATE_KUCHUYPATA = {
     id = 4479
@@ -587,7 +587,7 @@ STATE_MIKHUYUQ = {
     capped_resources = {
         bg_opium_plantations = 10
     }
-
+    naval_exit_id = 3125
 }
 STATE_PISQUPATA = {
     id = 4482
@@ -607,7 +607,7 @@ STATE_PISQUPATA = {
         type = "bg_oil_extraction"
         undiscovered_amount = 5
     }
-
+    naval_exit_id = 3124
 }
 STATE_QOMERQOCHA = {
     id = 4484
@@ -684,12 +684,12 @@ STATE_TAYTAQOCHA = {
         bg_opium_plantations = 10
         bg_wishstone_mining_depletable = 50
     }
-
+    naval_exit_id = 3126
 }
 STATE_KUNTURPAMPA = {
     id = 4488
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x32E6F0" "x37D3FB" "x43BAF9" "x45DEEA" "x87B6D0" "x93ACC7" "x9AF2CC" "x9D9CE8" "xACBBA5" "xB1F455" "xB4F6F0" "xB69ECA" "xBCEBE7" "xBFF75C" "xC2C8B4" "xC3C193" "xC6D08D" "xCB81B6" "xD2DCBD" "xD7DF5C" "xD8CFB6" "xDCC17D" "xDDD870" "xDFAC9E" "xE346E4" "xE35BF4" "xE8F8B1" "xEBEC31" "xEF5EBB" "xF6F711" "xF9F0A5" }
+    provinces = { "x32E6F0" "x37D3FB" "x43BAF9" "x45DEEA" "x87B6D0" "x93ACC7" "x9AF2CC" "x9D9CE8" "xACBBA5" "xB1F455" "xB4F6F0" "xB69ECA" "xBCEBE7" "xBFF75C" "xC2C8B4" "xC3C193" "xC6D08D" "xCB81B6" "xD0D76F" "xD2DCBD" "xD7DF5C" "xD8CFB6" "xDCC17D" "xDDD870" "xDFAC9E" "xE346E4" "xE35BF4" "xE8F8B1" "xEBEC31" "xEF5EBB" "xF6F711" "xF9F0A5" }
     impassable = { "xE8F8B1" "x87B6D0" "x93ACC7" "xB4F6F0" "xCB81B6" "xC2C8B4" "xb69eca" "xdfac9e" "xacbba5" }
     city = x37D3FB
     wood = x43BAF9
