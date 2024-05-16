@@ -416,6 +416,26 @@ exhibition_events.8 = { #you want to exhibit the things you got in your expediti
 	trigger = { #i'm sorry
 		OR = {
 			AND = {
+				has_variable = central_africa_expedition_success_var
+				has_variable = rhino_success_var
+			}
+			AND = {
+				has_variable = west_america_expedition_success_var #covers the 3 NA expeditions
+				OR = {
+					has_variable = expedition_photography_var
+					has_variable = expedition_plants_var
+					has_variable = expedition_geographic_var
+				}
+			}
+			AND = {
+				has_variable = congo_river_expedition_success_var
+				has_variable = expedition_trading_gifts_accepted_var
+			}
+			AND = {
+				has_variable = niger_river_expedition_success_var
+				has_variable = recorded_expedition_film_var
+			}
+			AND = {
 				has_variable = antarctica_expedition_success_var
 				has_variable = took_strange_rock_var
 			}
@@ -430,6 +450,90 @@ exhibition_events.8 = { #you want to exhibit the things you got in your expediti
 		set_variable = exhibition_expedition_var
 	}
 	
+	option = { #exhibit the rhino's horn
+		name = exhibition_events.8.a
+		default_option = yes
+		trigger = {
+			has_variable = central_africa_expedition_success_var
+			has_variable = rhino_success_var
+		}
+		capital = {
+			add_loyalists_in_state = {
+				pop_type = officers
+				value = medium_radicals
+			}
+		}
+	}
+	
+	option = { #exhibit the North American pics
+		name = exhibition_events.8.b
+		trigger = {
+			has_variable = west_america_expedition_success_var
+			has_variable = expedition_photography_var
+		}
+		capital = {
+			add_loyalists_in_state = {
+				pop_type = farmers
+				value = medium_radicals
+			}
+		}
+	}
+	
+	option = { #exhibit the North American flowers
+		name = exhibition_events.8.c
+		trigger = {
+			has_variable = west_america_expedition_success_var
+			has_variable = expedition_plants_var
+		}
+		capital = {
+			add_loyalists_in_state = {
+				pop_type = clergymen
+				value = medium_radicals
+			}
+		}
+	}
+	
+	option = { #exhibit African chief gift
+		name = exhibition_events.8.e
+		trigger = {
+			has_variable = congo_river_expedition_success_var
+			has_variable = expedition_trading_gifts_accepted_var
+		}
+		capital = {
+			add_loyalists_in_state = {
+				pop_type = aristocrats
+				value = medium_radicals
+			}
+		}
+	}
+	
+	option = { #exhibit African expedition film
+		name = exhibition_events.8.g
+		trigger = {
+			has_variable = niger_river_expedition_success_var
+			has_variable = recorded_expedition_film_var
+		}
+		capital = {
+			add_loyalists_in_state = {
+				pop_type = laborers
+				value = medium_radicals
+			}
+		}
+	}
+	
+	option = { #exhibit some cool maps
+		name = exhibition_events.8.h
+		trigger = {
+			has_variable = west_america_expedition_success_var
+			has_variable = expedition_geographic_var
+		}
+		capital = {
+			add_loyalists_in_state = {
+				pop_type = bureaucrats
+				value = medium_radicals
+			}
+		}
+	}
 	
 	option = { #exhibit the COOL ROCK
 		name = exhibition_events.8.i

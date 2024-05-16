@@ -947,8 +947,6 @@ ideology_pacifist = {
 			}
 			add = 50
 		}
-		# liberal and/or radical leaders have a higher spawn chance if the Dreyfusards won.
-
 	}
 }
 
@@ -1271,7 +1269,6 @@ ideology_social_democrat = {
 			}
 			multiply = 0.01
 		}
-		# liberal and/or radical leaders have a higher spawn chance if the Dreyfusards won.
 	}
 }
 
@@ -1412,16 +1409,6 @@ ideology_communist = {
 				}
 				multiply = 2
 			}
-		}
-		# National Liberation Alliance
-		if = {
-			limit = {
-				owner = {
-					has_variable = national_liberation_alliance_variable
-					has_journal_entry = je_new_republic
-				}
-			}
-			multiply = 1.25
 		}
 	}
 }
@@ -1621,16 +1608,6 @@ ideology_vanguardist = {
 				owner = { has_variable = election_vanguardist_support }
 			}
 			multiply = 2
-		}
-		# National Liberation Alliance
-		if = {
-			limit = {
-				owner = {
-					has_variable = national_liberation_alliance_variable
-					has_journal_entry = je_new_republic
-				}
-			}
-			multiply = 1.25
 		}
 	}
 }
@@ -1975,16 +1952,6 @@ ideology_anarchist = {
 				owner = { has_variable = election_anarchist_support }
 			}
 			multiply = 2
-		}
-		# National Liberation Alliance
-		if = {
-			limit = {
-				owner = {
-					has_variable = national_liberation_alliance_variable
-					has_journal_entry = je_new_republic
-				}
-			}
-			multiply = 1.10
 		}
 	}
 }
@@ -3544,15 +3511,6 @@ ideology_liberal_leader = {
 		else = {
 			add = -50
 		}
-		# liberal and/or radical leaders have a higher spawn chance if the Dreyfusards won.
-		if = {
-			limit = {
-				scope:interest_group = {
-					has_variable = dreyfusard_victory
-				}
-			}
-			add = 25
-		}
 	}
 }
 
@@ -3669,15 +3627,6 @@ ideology_corporatist_leader = {
 				owner = {
 					NOT = { has_law = law_type:law_council_republic }
 					NOT = { has_law = law_type:law_state_atheism }
-				}
-			}
-			add = 25
-		}
-		# conservative and/or reactionary leaders have a higher spawn chance if the Anti-Dreyfusards won
-		if = {
-			limit = {
-				scope:interest_group = {
-					has_variable = anti_dreyfusard_victory
 				}
 			}
 			add = 25
@@ -3882,15 +3831,6 @@ ideology_humanitarian_royalist = {
 				}
 			}
 			add = -50
-		}
-		# liberal and/or radical leaders have a higher spawn chance if the Dreyfusards won.
-		if = {
-			limit = {
-				scope:interest_group = {
-					has_variable = dreyfusard_victory
-				}
-			}
-			add = 50
 		}
 	}
 }

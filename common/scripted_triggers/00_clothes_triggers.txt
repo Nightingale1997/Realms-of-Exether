@@ -6,8 +6,12 @@
 				culture = {
 					OR = {
 						has_discrimination_trait = bird_heritage
+						has_discrimination_trait = lizardfolk_heritage
+						has_discrimination_trait = mechanical_heritage
+						has_discrimination_trait = dragon_heritage
 						has_discrimination_trait = beast
 						has_discrimination_trait = gnoll
+						has_discrimination_trait = naga
 					}
 				}
 			}
@@ -17,9 +21,13 @@
 			scope:pop = {
 				culture = {
 					OR = {
+						has_discrimination_trait = dragon_heritage
+						has_discrimination_trait = lizardfolk_heritage
+						has_discrimination_trait = mechanical_heritage
 						has_discrimination_trait = bird_heritage
 						has_discrimination_trait = beast
 						has_discrimination_trait = gnoll
+						has_discrimination_trait = naga
 					}
 					
 				}

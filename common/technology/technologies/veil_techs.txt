@@ -1,0 +1,56 @@
+﻿
+veil_1 = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/paved_roads.dds"
+	category = society
+	can_research = no
+
+	modifier = {
+
+	}
+	
+	ai_weight = {
+
+	}
+}
+
+
+veil_2 = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/paved_roads.dds"
+	category = society
+	can_research = no
+
+	modifier = {
+
+	}
+	
+	ai_weight = {
+
+	}
+
+	unlocking_technologies = {
+		veil_1
+	}
+}
+
+
+veil_3 = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/paved_roads.dds"
+	category = society
+	can_research = no
+
+	modifier = {
+
+	}
+	
+	ai_weight = {
+
+	}
+
+	unlocking_technologies = {
+		veil_2
+	}
+}
+

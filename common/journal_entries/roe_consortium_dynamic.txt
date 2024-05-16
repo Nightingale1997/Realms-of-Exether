@@ -1,0 +1,242 @@
+﻿je_consortium_intervention = {
+	icon = "gfx/interface/icons/cwp_icons/consortiumited_nations.dds"
+	should_be_pinned_by_default = yes
+	group = je_group_foreign_affairs
+	possible = {
+		and = {
+			OR = {
+				has_variable = consortium_member
+				has_variable = consortium_major_member
+			}
+			has_global_variable = consortium_intervention_vote
+			NOT = {
+				has_global_variable = vetoed_consortium
+			}
+		}
+	}
+	immediate = {
+		every_country = {
+			limit = {
+				has_variable = asking_consortium_intervention
+			}
+			save_scope_as = asking_consortium_intervention_country
+		}
+		every_country = {
+			limit = {
+				has_war_with = scope:asking_consortium_intervention_country
+			}
+			save_scope_as = consortium_intervention_enemy_country
+		}
+	}
+	current_value = {
+		value = pending_resolution_progress_value_consortium
+	}
+	goal_add_value = {
+		add = 100		# was 100, temp testing value
+	}
+	on_weekly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					has_variable = consortium_major_member
+				}
+				change_global_variable = {
+					name = pending_resolution_progress_consortium
+					add = 1
+				}
+			}
+		}
+	}
+	##### TODO, #32 Journal completion does NOT trigger event
+	complete = {
+		or = {
+			scope:asking_consortium_intervention_country = {
+				is_at_war = no
+			}
+			and = {
+				scope:journal_entry = {
+					is_goal_complete = yes
+				}
+				custom_tooltip = {
+					text = "WILL_COMPLETE_CONSORTIUM"
+					supporting_value_total_consortium > opposing_value_total_consortium
+				}
+			}
+		}
+	}
+	fail = {
+		or = {
+			AND = {
+				scope:journal_entry = {
+					is_goal_complete = yes
+				}
+				custom_tooltip = {
+					text = "WILL_FAIL_CONSORTIUM"
+					opposing_value_total_consortium > supporting_value_total_consortium
+				}
+			}
+			custom_tooltip = {
+				text = "IS_VETOED"
+				has_global_variable = vetoed_consortium
+			}
+		}
+	}
+	on_complete = {
+		hidden_effect = {
+			if = {
+				limit = {
+					scope:asking_consortium_intervention_country = {
+						is_at_war = yes
+					}
+				}
+				every_country = {
+					limit = {
+						has_variable = consortium_member
+					}
+					trigger_event = {
+						# Generic SUCCESS Event for all CONSORTIUM Members
+						id = consortium_dynamic_resolution_events.1
+					}
+				}
+			}
+			remove_variable = asking_consortium_intervention
+			remove_global_variable = consortium_intervention_vote
+		}
+		effect_reset_consortium_lists = yes
+	}
+	on_fail = {
+		hidden_effect = {
+			every_country = {
+				trigger_event = {
+					# Generic FAIL Event for all coconsortiumtries
+					id = consortium_dynamic_resolution_events.3
+				}
+			}
+		}
+		effect_reset_consortium_lists = yes
+		remove_variable = asking_consortium_intervention
+		remove_global_variable = consortium_intervention_vote
+	}
+	progressbar = yes
+	can_deactivate = yes
+	weight = 100
+}
+
+#je_consortium_embargo = {
+#	icon = "gfx/interface/icons/cwp_icons/consortiumited_nations.dds"
+#	should_be_pinned_by_default = yes
+#	possible = {
+#		OR = {
+#			has_variable = consortium_member
+#			has_variable = consortium_major_member
+#		}
+#		has_global_variable = consortium_embargo_vote
+#		NOT = {
+#			has_global_variable = vetoed_consortium
+#		}
+#	}
+#	immediate = {
+#		every_country = {
+#			limit = {
+#				has_variable = asking_consortium_intervention
+#			}
+#			save_scope_as = asking_consortium_intervention_country
+#		}
+#		every_country = {
+#			limit = {
+#				has_war_with = scope:asking_consortium_intervention_country
+#			}
+#			save_scope_as = consortium_intervention_enemy_country
+#		}
+#	}
+#	current_value = {
+#		value = pending_resolution_progress_value
+#	}
+#	goal_add_value = {
+#		add = 100		# was 100, temp testing value
+#	}
+#	on_weekly_pulse = {
+#		effect = {
+#			if = {
+#				limit = {
+#					has_variable = consortium_major_member
+#				}
+#				change_global_variable = {
+#					name = pending_resolution_progress
+#					add = 0.5
+#				}
+#			}
+#		}
+#	}
+#	##### TODO, #32 Journal completion does NOT trigger event
+#	complete = {
+#		or = {
+#			scope:asking_consortium_intervention_country = {
+#				is_at_war = no
+#			}
+#			and = {
+#				scope:journal_entry = {
+#					is_goal_complete = yes
+#				}
+#				custom_tooltip = {
+#					text = "WILL_COMPLETE_CONSORTIUM"
+#					supporting_value_total_consortium > opposing_value_total_consortium
+#				}
+#			}
+#		}
+#	}
+#	fail = {
+#		or = {
+#			AND = {
+#				scope:journal_entry = {
+#					is_goal_complete = yes
+#				}
+#				custom_tooltip = {
+#					text = "WILL_FAIL_CONSORTIUM"
+#					opposing_value_total_consortium > supporting_value_total_consortium
+#				}
+#			}
+#			custom_tooltip = {
+#				text = "IS_VETOED"
+#				has_global_variable = vetoed_consortium
+#			}
+#		}
+#	}
+#	on_complete = {
+#		hidden_effect = {
+#			if = {
+#				limit = {
+#					scope:asking_consortium_intervention_country = {
+#						is_at_war = yes
+#					}
+#				}
+#				every_country = {
+#					limit = {
+#						has_variable = consortium_member
+#					}
+#					trigger_event = {# Generic SUCCESS Event for all CONSORTIUM Members
+#						id = consortium_dynamic_resolution_events.1
+#					}
+#				}
+#			}
+#			remove_variable = asking_consortium_intervention
+#			remove_global_variable = consortium_intervention_vote
+#		}
+#		effect_reset_consortium_lists = yes
+#	}
+#	on_fail = {
+#		hidden_effect = {
+#			every_country = {
+#				trigger_event = {# Generic FAIL Event for all coconsortiumtries
+#					id = consortium_dynamic_resolution_events.3
+#				}
+#			}
+#		}
+#		effect_reset_consortium_lists = yes
+#		remove_variable = asking_consortium_intervention
+#		remove_global_variable = consortium_intervention_vote
+#
+#	}
+#	progressbar = yes
+#	weight = 100
+#}

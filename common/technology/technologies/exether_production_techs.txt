@@ -1,4 +1,54 @@
-﻿
+﻿hunting_lodges = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/sericulture.dds"
+	category = production
+	
+	modifier = {
+	}
+
+	unlocking_technologies = {
+	}		
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+ghost_busters = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/sericulture.dds"
+	category = production
+	
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		hunting_lodges
+	}		
+	
+	ai_weight = {
+		value = 2
+	}
+}
+
+alchemy = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/alchemy.dds"
+	category = production
+	
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		distillation
+		hunting_lodges
+	}		
+	
+	ai_weight = {
+		value = 2
+	}
+}
+
 cloudsilver_refining = {
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/sericulture.dds"
@@ -17,8 +67,8 @@ cloudsilver_refining = {
 	}
 }
 
-alchemical_transmutation = {
-	era = era_3
+celestial_mapping = {
+	era = era_1
 	texture = "gfx/interface/icons/invention_icons/sericulture.dds"
 	category = production
 	
@@ -27,10 +77,118 @@ alchemical_transmutation = {
 	}
 
 	unlocking_technologies = {
-		fractional_distillation
 	}
 	
 	ai_weight = {
 		value = 1
+	}
+}
+
+wishstone_machines = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/sericulture.dds"
+	category = production
+	
+	modifier = {
+		
+	}
+
+	unlocking_technologies = {
+		celestial_mapping
+	}
+	
+	ai_weight = {
+		value = 2
+	}
+}
+
+advanced_contraptions = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/sericulture.dds"
+	category = production
+	
+	modifier = {
+		
+	}
+
+	unlocking_technologies = {
+		wishstone_machines
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+thaumacore_factories = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/sericulture.dds"
+	category = production
+	
+	modifier = {
+		
+	}
+
+	unlocking_technologies = {
+		advanced_contraptions
+		ghost_busters
+	}
+	
+	ai_weight = {
+		value = 2
+	}
+}
+
+alchemical_transmutation = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/sericulture.dds"
+	category = production
+	
+	modifier = {
+		
+	}
+
+	unlocking_technologies = {
+		alchemy
+		fractional_distillation
+	}
+	
+	ai_weight = {
+		value = 3
+	}
+}
+
+floating_buildings = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/sericulture.dds"
+	category = production
+	
+	modifier = {
+		building_construction_sector_throughput_add = 0.15
+	}
+
+	unlocking_technologies = {
+		cloudsilver_refining
+	}
+	
+	ai_weight = {
+		value = 2
+	}
+}
+
+soulforges = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/sericulture.dds"
+	category = production
+	
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		thaumacore_factories
+	}
+	
+	ai_weight = {
+		value = 3
 	}
 }

@@ -79,7 +79,7 @@ pm_wishstone_trains = {
 	state_modifiers = {
 		workforce_scaled = {
 			state_infrastructure_add = 25
-			state_pollution_generation_add = 20 #magic
+			state_veil_integrity_contribution = 20 #magic
 		}
 	}
 }
@@ -169,7 +169,7 @@ pm_godsblood_trains = {
 	state_modifiers = {
 		workforce_scaled = {
 			state_infrastructure_add = 40
-			state_pollution_generation_add = 15 #magic owooowoowoo
+			state_veil_integrity_contribution = 15 #magic owooowoowoo
 		}
 		unscaled = {
 			state_mortality_mult = 0.025 #could raise this, or lower it and make it scale
