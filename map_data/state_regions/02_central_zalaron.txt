@@ -960,14 +960,14 @@ STATE_ZYRELIANAR = {
     wood = x74DDAA
     farm = x79C8E7
     mine = x9EEDCC
-    port = xAC7DFD
+    port = xee93d8
     arable_land = 40
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
     capped_resources = {
         bg_iron_mining = 14
         bg_logging = 5
     }
-
+    naval_exit_id = 3174
 }
 STATE_SHIRBIN_LOWLANDS = {
     id = 4279
@@ -983,7 +983,7 @@ STATE_SHIRBIN_LOWLANDS = {
     capped_resources = {
         bg_logging = 13
     }
-
+    naval_exit_id = 3174
 }
 STATE_MARBLEGATE = {
     id = 4281
@@ -1002,7 +1002,7 @@ STATE_MARBLEGATE = {
         bg_iron_mining = 27
         bg_logging = 6
     }
-
+    naval_exit_id = 3174
 }
 STATE_MARZEHZARIN = {
     id = 4283
@@ -1019,7 +1019,7 @@ STATE_MARZEHZARIN = {
     capped_resources = {
         bg_logging = 6
     }
-
+    
 }
 STATE_HIGH_HARAVA = {
     id = 4284
