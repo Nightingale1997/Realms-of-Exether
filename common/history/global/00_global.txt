@@ -248,8 +248,35 @@ GLOBAL = {
 			target = THIS
 		}
 	}
-	## UN Variables
+	## Concord Variables
 	random_country = {
+		set_global_variable = {
+			name = veil_damage_top_1
+			value = 0
+		}
+		set_global_variable = {
+			name = veil_damage_top_1_value
+			value = 0
+		}
+
+		set_global_variable = {
+			name = veil_damage_top_2
+			value = 0
+		}
+		set_global_variable = {
+			name = veil_damage_top_2_value
+			value = 0
+		}
+
+		set_global_variable = {
+			name = veil_damage_top_3
+			value = 0
+		}
+		set_global_variable = {
+			name = veil_damage_top_3_value
+			value = 0
+		}
+
 		set_global_variable = {
 			name = var_concord_memberlist
 			value = 0
@@ -349,12 +376,36 @@ GLOBAL = {
 
 	set_global_variable = {
 		name = veil_integrity_var
-		value = 50
+		value = 0
 	}
 
 	setup_rituals = yes
 
 	every_country = {
+
+		set_variable = {
+			name = veil_damage
+			value = 0
+		}
+
+
 		calculate_rituals = yes
-	}
+
+					### Variable Errors Fixing - HACK!  Fix these eventually
+			fix_variable_error = {
+				X = asked_consortium_observer
+			}
+		
+			fix_variable_error = {
+				X = asked_concord_observer
+			}
+
+			fix_variable_error = {
+				X = napoleon_iii_var
+			}
+		}
+
+
+
+
 }

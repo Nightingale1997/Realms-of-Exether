@@ -1,0 +1,136 @@
+﻿#UN values
+global_population_concord = {
+	value = global_population
+}
+supporting_value_total_concord = {
+	value = 0
+	every_country = {
+	  	limit = { 
+			has_variable =  is_supporting
+		}
+	  add = diplomatic_weight_concord
+	}
+}
+
+opposing_value_total_concord = {
+	value = 0
+	every_country = {
+	  	limit = { 
+			has_variable =  is_opposing_concord
+		}
+	  add = diplomatic_weight_concord
+	}
+}
+
+
+pending_resolution_progress_value_concord = {
+	if = {
+		limit = {
+			has_global_variable = pending_resolution_progress_concord
+		}
+		value = global_var:pending_resolution_progress_concord
+	}
+}
+
+pending_resolution_progress_value_round_concord = {
+	value = pending_resolution_progress_value_concord
+	divide = 100
+}
+
+concord_applying_states = {
+	every_country = {
+		limit = {
+			has_variable = application_progress_concord
+		}	
+		add = 1
+	}
+	round = yes
+}
+
+concord_memberstates = {
+	every_country = {
+		limit = {
+			has_variable = concord_member
+		}	
+		add = 1
+	}
+	round = yes
+}
+
+required_support_concord = {
+	every_country = {
+		limit = {
+			has_variable = concord_member
+		}	
+		add = 1
+	}
+	multiply = 0.6
+	round = yes
+}
+
+supporting_countries_concord = {
+	value = 0
+	if = {
+		limit = {
+			exists = var:concord_supporting_list_size
+		}
+		add = var:concord_supporting_list_size
+	}
+}
+
+application_progress_concord = {
+	value = var:application_progress_concord
+}
+
+global_population_concord = {
+	value = global_population
+}
+supporting_value_total_concord  = {
+	value = 0
+	every_country = {
+	  	limit = { 
+			has_variable =  is_supporting_concord 
+		}
+	  add = diplomatic_weight_concord 
+	}
+}
+
+opposing_value_total_concord = {
+	value = 0
+	every_country = {
+	  	limit = { 
+			has_variable =  is_opposing_concord 
+		}
+	  add = diplomatic_weight_concord 
+	}
+}
+
+voting_balance_concord = {
+	value = supporting_value_total_concord 
+	subtract = opposing_value_total_concord 
+	round = yes
+}
+
+diplomatic_weight_concord  = {
+	value = 0
+	add = gdp
+	add = prestige
+	divide = 10000
+	round = yes
+}
+
+doubleprogressbar_max_concord  = {
+	value = 1
+	add = supporting_value_total_concord 
+	add = opposing_value_total_concord 
+}
+
+
+pending_resolution_progress_value_concord  = {
+	if = {
+		limit = {
+			has_global_variable = pending_resolution_progress_concord 
+		}
+		value = global_var:pending_resolution_progress_concord 
+	}
+}

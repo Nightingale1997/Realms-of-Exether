@@ -22,7 +22,7 @@ effect_concord_observer = {
 effect_concord_application_approved = {
 	remove_variable = concord_observer
 	remove_variable = concord_supporting_list_size
-	remove_variable = application_progress_un
+	remove_variable = application_progress_concord
 	clear_variable_list = concord_supporting
 	clear_variable_list = concord_abstaining
 	clear_variable_list = concord_rejecting
@@ -35,7 +35,7 @@ effect_concord_application_approved = {
 }
 effect_concord_application_rejected = {
 	remove_variable = concord_supporting_list_size
-	remove_variable = application_progress_un
+	remove_variable = application_progress_concord
 	clear_variable_list = concord_supporting
 	clear_variable_list = concord_abstaining
 	clear_variable_list = concord_rejecting
@@ -51,7 +51,7 @@ effect_concord_application_rejected = {
 
 effect_reset_concord_lists = {
 	set_global_variable = {
-		name = pending_resolution_progress
+		name = pending_resolution_progress_concord
 		value = 0
 	}
 	every_country = {
@@ -63,17 +63,17 @@ effect_reset_concord_lists = {
 		}
 		if = {
 			limit = {
-				has_variable = is_opposing
+				has_variable = is_supporting_concord
 			}
-			remove_variable = is_opposing
+			remove_variable = is_supporting_concord
 		}
 	}
 	remove_global_variable = asking_concord_intervention_country
-	remove_global_variable = vetoed
-	remove_global_variable = pending_resolution
+	remove_global_variable = vetoed_concord
+	remove_global_variable = pending_resolution_concord
 }
 
-effect_remove_wargoals = {
+effect_remove_wargoals_concord = {
 	every_diplomatic_play = { 
 		limit = {
 			has_play_goal = conquer_state
@@ -276,27 +276,27 @@ effect_remove_wargoals = {
 	}
 }
 
-effect_ai_vote_yes = {
-	set_variable = is_supporting
-	remove_variable = is_opposing
+effect_ai_vote_yes_concord = {
+	set_variable = is_supporting_concord
+	remove_variable = is_opposing_concord
 	set_variable = {
 		name = concord_alreadyvoted
 		days = 50
 	}
 }
 
-effect_ai_vote_no = {
-	set_variable = is_opposing
-	remove_variable = is_supporting
+effect_ai_vote_no_concord = {
+	set_variable = is_opposing_concord
+	remove_variable = is_supporting_concord
 	set_variable = {
 		name = concord_alreadyvoted
 		days = 50
 	}
 }
 
-effect_ai_vote_neutral = {
-	remove_variable = is_supporting
-	remove_variable = is_opposing
+effect_ai_vote_neutral_concord = {
+	remove_variable = is_supporting_concord
+	remove_variable = is_opposing_concord
 	set_variable = {
 		name = concord_alreadyvoted
 		days = 50

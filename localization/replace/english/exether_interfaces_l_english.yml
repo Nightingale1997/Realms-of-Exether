@@ -149,13 +149,18 @@ VEIL_INTEGRITY_STATUS_STRENGTHENED: "#bold #o Strengthened#!#!"
 
 
   VEIL_INTEGRITY_TOOLTIP: "$VEIL_INTEGRITY_BALANCE$[GetPlayer.GetCustom('magic_reserves_loc')][SelectLocalization(GetMetaPlayer.GetPlayedOrObservedCountry.IsValid, 'VEIL_INTEGRITY_TOOLTIP_DELAYED', 'OBSERVER_NO_COUNTRY_SELECTED') ]"
-  VEIL_INTEGRITY_TOOLTIP_DELAYED: "\n$TOOLTIP_DELIMITER$\nThe current [concept_veil_integrity] is $VEIL_INTEGRITY_VALUE_TEXT$ @magic![Nbsp]due to:\n WIP"
+  VEIL_INTEGRITY_TOOLTIP_DELAYED: "\n$TOOLTIP_DELIMITER$\nOur Veil Impact:  [AccessPlayer.MakeScope.ScriptValue('country_veil_damage')|1-]\n$TOOLTIP_DELIMITER$\nTop Veil Damage (Past Month):\n1. [GetGlobalVariable('veil_damage_top_1').GetCountry.GetName] - [GetGlobalVariable('veil_damage_top_1_value').GetValue|-1]\n2. [GetGlobalVariable('veil_damage_top_2').GetCountry.GetName] - [GetGlobalVariable('veil_damage_top_2_value').GetValue|-1]\n3. [GetGlobalVariable('veil_damage_top_3').GetCountry.GetName] - [GetGlobalVariable('veil_damage_top_3_value').GetValue|-1]"
   VEIL_INTEGRITY_BALANCE: "@magic! #bold [concept_veil_integrity]#!\nCurrent integrity: $VEIL_INTEGRITY_STATUS$"
 
 VEIL_INTEGRITY_VALUE_TEXT: "[AddLocalizationIf(GreaterThan_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_VALUE_GOLD')][AddLocalizationIf(EqualTo_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_VALUE')][AddLocalizationIf(LessThan_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_VALUE_BLUE')]"
-VEIL_INTEGRITY_VALUE: "#v [AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')]%#!"
-VEIL_INTEGRITY_VALUE_GOLD: "#bold #o [AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')]%#!#!"
-VEIL_INTEGRITY_VALUE_BLUE: "#bold #u [AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')]%#!#!"
+VEIL_INTEGRITY_VALUE: "#v [AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')|1]%#!"
+VEIL_INTEGRITY_VALUE_GOLD: "#bold #o [AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')|1]%#!#!"
+VEIL_INTEGRITY_VALUE_BLUE: "#bold #u [AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')|1]%#!#!"
+
+VEIL_DAMAGE_COUNTRY: "[AccessPlayer.MakeScope.ScriptValue('country_veil_damage')]"
+
+STATE_VEIL_DAMAGE: "[Concept('concept_veil_integrity', 'Veil Impact')]\n  [State.MakeScope.ScriptValue('state_veil_damage')|1-] "
+
 
 ASTRAL_CALENDAR_YEAR: "Year of the $ASTRAL_CALENDAR_YEAR_SIGN$"
 

@@ -241,7 +241,7 @@ STATE_WOODS_OF_THE_VOW = {
     capped_resources = {
         bg_logging = 20
     }
-
+    naval_exit_id = 3161
 }
 STATE_RAQUARTES_SHIELD = {
     id = 4235
@@ -317,7 +317,7 @@ STATE_CHANSONBOIS = {
     capped_resources = {
         bg_logging = 18
     }
-
+    naval_exit_id = 3162
 }
 STATE_DRUIDS_CHANT = {
     id = 4239
@@ -327,7 +327,7 @@ STATE_DRUIDS_CHANT = {
     wood = x54EFB6
     farm = x7DA1FA
     mine = x7DF59B
-    port = x8BE8F2
+    port = xCA929F
     arable_land = 60
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
     capped_resources = {
@@ -340,7 +340,7 @@ STATE_DRUIDS_CHANT = {
         type = "bg_oil_extraction"
         undiscovered_amount = 10
     }
-
+    naval_exit_id = 3162
 }
 STATE_CASTLECOURT = {
     id = 4240
@@ -356,7 +356,7 @@ STATE_CASTLECOURT = {
     capped_resources = {
         bg_logging = 25
     }
-
+    naval_exit_id = 3162
 }
 STATE_HAAR_FEN = {
     id = 4241
@@ -476,7 +476,7 @@ STATE_EIREKS_WASH = {
         bg_seasnake_wharf = 7
     }
     resource = {
-        type = "bg_rubber"<
+        type = "bg_rubber"
         undiscovered_amount = 11
     }
     naval_exit_id = 3011
@@ -522,7 +522,7 @@ STATE_DROWNED_LANDS = {
         type = "bg_rubber"
         undiscovered_amount = 12
     }
-
+    naval_exit_id = 3155
 }
 STATE_CARGOMIRE = {
     id = 4250
@@ -543,7 +543,7 @@ STATE_CARGOMIRE = {
         type = "bg_rubber"
         undiscovered_amount = 16
     }
-
+    naval_exit_id = 3155
 }
 STATE_ZALDUA = {
     id = 4251
@@ -564,7 +564,7 @@ STATE_ZALDUA = {
         type = "bg_rubber"
         undiscovered_amount = 5
     }
-
+    naval_exit_id = 3156
 }
 STATE_EARTHCHURN = {
     id = 4252
@@ -585,7 +585,7 @@ STATE_EARTHCHURN = {
         type = "bg_rubber"
         undiscovered_amount = 24
     }
-
+    naval_exit_id = 3154
 }
 STATE_BEARTZUNGUL = {
     id = 4253
@@ -606,7 +606,7 @@ STATE_BEARTZUNGUL = {
         type = "bg_rubber"
         undiscovered_amount = 12
     }
-
+    naval_exit_id = 3154
 }
 STATE_GLADEMIRE = {
     id = 4254
@@ -715,7 +715,7 @@ STATE_THE_WHITE = {
         type = "bg_rubber"
         undiscovered_amount = 23
     }
-
+    naval_exit_id = 3152
 }
 STATE_NORTHERN_DRAIN = {
     id = 4260
@@ -758,7 +758,7 @@ STATE_STEINZULO = {
         type = "bg_rubber"
         undiscovered_amount = 8
     }
-
+    naval_exit_id = 3156
 }
 STATE_RIVER_SOLILOQUE = {
     id = 4263
@@ -769,7 +769,7 @@ STATE_RIVER_SOLILOQUE = {
     farm = x81EDDE
     mine = x95D0E1
     port = xA4EE72
-
+    naval_exit_id = 3152
 }
 STATE_RIVER_SOLILOQUE_2 = {
     id = 3791
@@ -780,7 +780,7 @@ STATE_RIVER_SOLILOQUE_2 = {
     farm = x81EDDE
     mine = x95D0E1
     port = xA4EE72
-
+    naval_exit_id = 3153
 }
 STATE_CAM_CLOCHRAN = {
     id = 4264
@@ -791,7 +791,7 @@ STATE_CAM_CLOCHRAN = {
     farm = x97EDE6
     mine = x98C6B2
     port = xB695AA
-
+    naval_exit_id = 3151
 }
 STATE_ZEPHYRSTILL = {
     id = 4265
@@ -805,7 +805,7 @@ STATE_ZEPHYRSTILL = {
     mine = x98F6F9
     port = xB453FE
 
-
+    naval_exit_id = 3151
 }
 STATE_ZEPHYRSTILL_2 = {
     id = 3790
@@ -819,7 +819,7 @@ STATE_ZEPHYRSTILL_2 = {
     mine = x98F6F9
     port = xB453FE
 
-
+    naval_exit_id = 3151
 }
 STATE_EISENMORA = {
     id = 4266
@@ -830,7 +830,7 @@ STATE_EISENMORA = {
     farm = x6E9BEF
     mine = x8BF48D
     port = x8DB2F1
-
+    naval_exit_id = 3150
 }
 STATE_JOURNEYEND = {
     id = 4267
@@ -854,7 +854,7 @@ STATE_CAM_RINNARA = {
     farm = x95DAD2
     mine = x98DBF5
     port = x99FBE2
-
+    naval_exit_id = 3153
 }
 STATE_CAM_NUALA = {
     id = 4269
@@ -866,7 +866,7 @@ STATE_CAM_NUALA = {
     farm = x5EDDFD
     mine = x61CCD9
     port = x81D5E1
-
+    naval_exit_id = 3153
 }
 STATE_FAOLNA_PASS = {
     id = 4270
@@ -896,7 +896,7 @@ STATE_CAM_LIADRINE = {
     farm = x6CC3D9
     mine = x6EF4BB
     port = x8DA0C9
-
+    naval_exit_id = 3159
 }
 STATE_CAM_CALLAIRD = {
     id = 4272
@@ -908,7 +908,7 @@ STATE_CAM_CALLAIRD = {
     farm = x84F4D3
     mine = x8CD3FE
     port = xA1E4D3
-
+    naval_exit_id = 3160
 }
 STATE_SOUTHERN_FEYSTALK = {
     id = 4273
@@ -919,7 +919,7 @@ STATE_SOUTHERN_FEYSTALK = {
     farm = x94D6DC
     mine = xAAD7DF
     port = xAE82D4
-
+    naval_exit_id = 3159
 }
 STATE_NORTHERN_FEYSTALK = {
     id = 4274
@@ -931,7 +931,7 @@ STATE_NORTHERN_FEYSTALK = {
     farm = x4EEEC0
     mine = x86E5CE
     port = x88F9FE
-
+    naval_exit_id = 3160
 }
 STATE_AUTUMN_HILLS = {
     id = 4275
@@ -1079,6 +1079,7 @@ STATE_LAERANELS_DESOLATION = {
     arable_land = 50
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
+        bg_wishstone_mining = 6
         bg_coal_mining = 12
         bg_haunted_grounds = 4
     }
@@ -1086,7 +1087,7 @@ STATE_LAERANELS_DESOLATION = {
 STATE_POMMELFALL = {
     id = 4289
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x66ADF3" "x78E8AE" "x6DA9E0" "x7BF1AB" "x99B6AB" "x9F8EFE" "xA6D78B" "xBCFCEC" "xD5A582" "xDBB884" "xDD7DEE" "xE9DE85" "xECF794" "xF1E254" "xFC86C4" "xFEE6C6" }
+    provinces = { "x66ADF3" "x6DA9E0" "x78E8AE" "x7BF1AB" "x99B6AB" "x9F8EFE" "xA6D78B" "xBCFCEC" "xD5A582" "xDBB884" "xDD7DEE" "xE9DE85" "xECF794" "xF1E254" "xFC86C4" "xFEE6C6" }
     traits = { "state_trait_crescent_range" }
     city = x59FDEF
     wood = x60EEE5
@@ -1123,6 +1124,7 @@ STATE_BROKENPILLAR = {
         bg_opium_plantations = 24
     }
 
+    naval_exit_id = 3065
 }
 STATE_POMMELFALL_2 = {
     id = 4291
@@ -1234,7 +1236,7 @@ STATE_THINSILVER = {
 STATE_VERDFALDO = {
     id = 4296
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x48ECFA" "x95A9F2" "xA5D18B" "xAED3F8" "xB7DB84" "xBAEF64" "xC670D1" "xD29AB2" "xE4E94C" "xEBD9E9" "xEDE166" "xF86EC4" }
+    provinces = { "x48ECFA" "x83EB8B" "x95A9F2" "xA5D18B" "xAED3F8" "xBAEF64" "xC670D1" "xD29AB2" "xE4E94C" "xEA61F3" "xEDE166" "xF86EC4" }
     city = x48ECFA
     wood = x95A9F2
     farm = xA5D18B
@@ -1247,7 +1249,7 @@ STATE_VERDFALDO = {
         bg_sulfur_mining = 32
         bg_logging = 11
     }
-
+    naval_exit_id = 3138
 }
 STATE_SUNFLORO = {
     id = 4297
@@ -1279,7 +1281,14 @@ STATE_MONTARBORA = {
     farm = xA39DCB
     mine = xAEDB82
     port = xBD89D0
-
+    arable_land = 100
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_tobacco_plantations" }
+    capped_resources = {
+        bg_coal_mining = 60
+        bg_iron_mining = 36
+        bg_lead_mining = 36
+        bg_logging = 15
+    }
 }
 
 
@@ -1331,7 +1340,7 @@ STATE_NOVAJLANDIO = {
 STATE_VENTAFALCO = {
     id = 4303
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x28DFEE" "x44FAF1" "x8AE68E" "xCB67FC" "xD7F466" "xD960EA" "xDBE1B7" "xE3E6BB" "xFC6CE8" "xFCF00E" "xFD61CD" }
+    provinces = { "x28DFEE" "x44FAF1" "x8AE68E" "xCB67FC" "xD960EA" "xDBE1B7" "xE3E6BB" "xFC6CE8" "xFCF00E" }
     city = x28DFEE
     wood = x44FAF1
     farm = x8AE68E
@@ -1356,11 +1365,12 @@ STATE_MONTEGO = {
     mine = xBCFAE9
     port = xC49BB2
 
+    naval_exit_id = 3141
 }
 STATE_PLUVPINTO = {
     id = 4305
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x6DE2E5" "x70B5E9" "x9499F9" "xA3EFEF" "xCAD15C" "xD7EC61" "xDF7DAD" "xE2A89B" "xE563F9" "xF058BC" "xF5F3E0" }
+    provinces = { "x6DE2E5" "x70B5E9" "x9499F9" "xA3EFEF" "xCAD15C" "xD7EC61" "xD7F466" "xDF7DAD" "xE2A89B" "xE563F9" "xF058BC" "xF5F3E0" "xFD61CD" }
     city = x6DE2E5
     wood = x70B5E9
     farm = x9499F9
@@ -1410,7 +1420,15 @@ STATE_KASKADVIVO = {
     farm = xDCBDD2
     mine = xDFA478
     port = xE5DB44
-
+    arable_land = 70
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_tobacco_plantations" }
+    capped_resources = {
+        bg_iron_mining = 30
+        bg_lead_mining = 27
+        bg_logging = 14
+        bg_whaling = 4
+        bg_fishing = 8
+    }
     naval_exit_id = 3005
 }
 STATE_RUGAKAMPO = {
@@ -1422,7 +1440,14 @@ STATE_RUGAKAMPO = {
     farm = x73E3C5
     mine = x9C7AF0
     port = xD695D7
-
+    arable_land = 85
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_tobacco_plantations" }
+    capped_resources = {
+        bg_coal_mining = 10
+        bg_logging = 7
+        bg_whaling = 2
+        bg_fishing = 7
+    }
     naval_exit_id = 3005
 }
 STATE_SENCERBO = {
@@ -1434,7 +1459,16 @@ STATE_SENCERBO = {
     farm = xADF5B6
     mine = xAFC8D3
     port = xC1EE71
-
+    arable_land = 110
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_tobacco_plantations" }
+    capped_resources = {
+        bg_coal_mining = 10
+        bg_sulfur_mining = 10
+        bg_logging = 7
+        bg_whaling = 2
+        bg_fishing = 6
+    }
+    naval_exit_id = 3005
 }
 STATE_MONTROSO = {
     id = 4312
@@ -1489,6 +1523,7 @@ STATE_FLORBORDO = {
         type = "bg_rubber"
         undiscovered_amount = 24
     }
+    naval_exit_id = 3139
 }
 STATE_VESPERVIDO = {
     id = 4317
@@ -1514,13 +1549,13 @@ STATE_VESPERVIDO = {
 STATE_TRANKVILEJO = {
     id = 4319
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x68D1D1" "x83EB8B" "x95F071" "xC477CF" "xC977DD" "xD656F7" "xDF54EE" "xE7E191" "xEA61F3" "xF1FA46" "xF4D6D8" }
+    provinces = { "x68D1D1" "x95F071" "xC477CF" "xC977DD" "xD656F7" "xDF54EE" "xE7E191" "xF1FA46" "xF4D6D8" }
     city = x68D1D1
     wood = x83EB8B
     farm = x95F071
     mine = xC477CF
     port = xC977DD
-
+    naval_exit_id = 3136
 }
 STATE_SONGBIENO = {
     id = 4320
@@ -1551,13 +1586,22 @@ STATE_LAGOEKRANO = {
     farm = x85A8E5
     mine = x8EEEE6
     port = xB08FFA
-
+    arable_land = 40
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_tobacco_plantations" }
+    capped_resources = {
+        bg_coal_mining = 36
+        bg_iron_mining = 33
+        bg_lead_mining = 39
+        bg_sulfur_mining = 28
+        bg_logging = 11
+        bg_fishing = 6
+    }
     naval_exit_id = 3005
 }
 STATE_FELICGRUNDO = {
     id = 4322
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x87C4B5" "xB3C191" "xC39ACF" "xC951F2" "xD052E0" "xE1CD71" "xE3938F" "xEB54C3" }
+    provinces = { "x87C4B5" "xB3C191" "xC39ACF" "xC951F2" "xD052E0" "xE1CD71" "xEB54C3" }
     city = x87C4B5
     wood = xB3C191
     farm = xC39ACF
@@ -1592,30 +1636,30 @@ STATE_RADIANTAJO = {
 STATE_NOVAJEGO = {
     id = 4324
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x58EBD3" "x87F0C3" "x91A7BD" "x9DF5DC" "x9EE18A" "xAED19B" "xAFE6D2" "xB2CCFA" "xCEE460" "xD0FDF7" "xE5B2CA" "xEBF77C" "xEFD15E" "xF6E351" }
+    provinces = { "x58EBD3" "x87F0C3" "x91A7BD" "x9DF5DC" "x9EE18A" "xAED19B" "xAFE6D2" "xB2CCFA" "xB7DB84" "xCEE460" "xD0FDF7" "xE5B2CA" "xEBD9E9" "xEBF77C" "xEFD15E" "xF6E351" }
     city = x58EBD3
     wood = x87F0C3
     farm = x91A7BD
     mine = x9DF5DC
     port = x9EE18A
-	arable_land = 22
+    arable_land = 22
     arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_vineyard_plantations" "bg_cotton_plantations" "bg_tea_plantations" "bg_songberry_plantations" }
     capped_resources = {
         bg_logging = 9
-		bg_fishing = 7
+        bg_fishing = 7
     }
     naval_exit_id = 3005
 }
 STATE_INSULECO = {
     id = 4325
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x7DB3FC" "x91F295" "xBDA6EF" "xD85BF1" "xE5C08C" "xE6C17B" "xF38A78" "xFA7DC4" "xFDEBBB" }
+    provinces = { "x7DB3FC" "x91F295" "xBDA6EF" "xD85BF1" "xE3938F" "xE5C08C" "xE6C17B" "xF38A78" "xFA7DC4" "xFDEBBB" }
     city = x7DB3FC
     wood = x91F295
     farm = xBDA6EF
     mine = xD85BF1
     port = xE5C08C
-
+    naval_exit_id = 3136
 }
 STATE_KOTIK = {
     id = 4326
@@ -1677,6 +1721,7 @@ STATE_FOBAN = {
         type = "bg_rubber"
         undiscovered_amount = 16
     }
+    naval_exit_id = 3145
 }
 STATE_LIPOLAN = {
     id = 4329
@@ -1692,6 +1737,7 @@ STATE_LIPOLAN = {
     capped_resources = {
         bg_logging = 18
     }
+    naval_exit_id = 3140
 }
 STATE_ZIKAN = {
     id = 4330
@@ -1713,6 +1759,7 @@ STATE_ZIKAN = {
         type = "bg_rubber"
         undiscovered_amount = 20
     }
+#naval_exit_id = 3143
 }
 STATE_XODAN = {
     id = 4331
@@ -1723,11 +1770,11 @@ STATE_XODAN = {
     farm = xBC65F7
     mine = xC0D46B
     port = xCEC1EC
-	arable_land = 35
+    arable_land = 35
     arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_vineyard_plantations" "bg_cotton_plantations" "bg_tea_plantations" "bg_songberry_plantations" }
     capped_resources = {
         bg_logging = 12
-		bg_fishing = 5
+        bg_fishing = 5
     }
     naval_exit_id = 3005
 }
@@ -1753,7 +1800,7 @@ STATE_ZALULIK = {
 STATE_NAN = {
     id = 4334
     subsistence_building = "building_subsistence_orchards"
-    provinces = { "x24E6F5" "x97D5C1" "xB195D1" "xBAD5DB" "xBAEB61" "xC4CC9F" "xC5E3D4" "xCAD4F2" "xDAD0EA" "xE537DF" "xF5CB55" "xF61BF1" "xF7FEEF" "xFCC277" }
+    provinces = { "x24E6F5" "x97D5C1" "xC4CC9F" "xC5E3D4" "xCAD4F2" "xE537DF" "xF5CB55" "xF61BF1" "xF7FEEF" "xFCC277" }
     city = x24E6F5
     wood = x59DDBF
     farm = x97D5C1
@@ -1764,6 +1811,7 @@ STATE_NAN = {
     capped_resources = {
         bg_logging = 8
     }
+    naval_exit_id = 3140
 }
 STATE_FIKOLIK = {
     id = 4335
@@ -1790,6 +1838,7 @@ STATE_FIKOLIK = {
         type = "bg_oil_extraction"
         undiscovered_amount = 5
     }
+    naval_exit_id = 3139
 }
 STATE_VOTILAN = {
     id = 4336
@@ -1810,6 +1859,7 @@ STATE_VOTILAN = {
         type = "bg_rubber"
         undiscovered_amount = 32
     }
+    naval_exit_id = 3139
 }
 STATE_ZALANIX = {
     id = 4337
@@ -1830,6 +1880,7 @@ STATE_ZALANIX = {
         type = "bg_rubber"
         undiscovered_amount = 22
     }
+    naval_exit_id = 3141
 }
 STATE_BANOKIK = {
     id = 4338
@@ -1852,6 +1903,7 @@ STATE_BANOKIK = {
         type = "bg_rubber"
         undiscovered_amount = 22
     }
+    naval_exit_id = 3140
 }
 STATE_KULIKAN = {
     id = 4339
@@ -1863,6 +1915,7 @@ STATE_KULIKAN = {
     mine = x91B1E2
     port = x9CDCF3
 
+    naval_exit_id = 3141
 }
 STATE_POFIKAN = {
     id = 4340
@@ -1909,7 +1962,7 @@ STATE_NOLIPIK = {
 STATE_VAVULAN = {
     id = 4342
     subsistence_building = "building_subsistence_orchards"
-    provinces = { "x4CD1DB" "x65EAB8" "x83D2EB" "x848DE7" "x8CE9B9" "xA5B8DB" "xC9EB90" "xCA54EB" "xCEE26B" "xE6E390" "xE992AB" "xEBC34A" "xF6CB6B" }
+    provinces = { "x4CD1DB" "x65EAB8" "x83D2EB" "x848DE7" "x8CE9B9" "xA5B8DB" "xB195D1" "xBAD5DB" "xBAEB61" "xC9EB90" "xCA54EB" "xCEE26B" "xDAD0EA" "xE6E390" "xE992AB" "xEBC34A" "xF6CB6B" }
     traits = { "state_trait_valmis_pinnacle" }
     city = x4CD1DB
     wood = x65EAB8
@@ -1927,6 +1980,7 @@ STATE_VAVULAN = {
         type = "bg_rubber"
         undiscovered_amount = 8
     }
+#naval_exit_id = 3143
 }
 STATE_KANOBAN = {
     id = 4343
@@ -1989,6 +2043,7 @@ STATE_MIPOLIK = {
         type = "bg_rubber"
         undiscovered_amount = 16
     }
+    naval_exit_id = 3145
 }
 STATE_ALAMARA = {
     id = 4346
@@ -2063,7 +2118,7 @@ STATE_SAHARANDO = {
     mine = xA0C0D4
     port = xB1E3D2
     arable_land = 30
-    arable_resources = { "bg_livestock_ranches" }
+    arable_resources = { "bg_livestock_ranches" "bg_logging_crystalwood" }
     capped_resources = {
         bg_coal_mining = 36
         bg_iron_mining = 33
@@ -2226,7 +2281,7 @@ STATE_SARABENDO = {
     mine = x84ECBD
     port = x8BE4B1
     arable_land = 20
-    arable_resources = { "bg_livestock_ranches" }
+    arable_resources = { "bg_livestock_ranches" "bg_logging_crystalwood" }
     capped_resources = {
         bg_lead_mining = 12
         bg_haunted_grounds = 9
@@ -2243,7 +2298,7 @@ STATE_ESPARASHIM = {
     mine = x9F98C8
     port = xA98BC1
     arable_land = 10
-    arable_resources = { "bg_livestock_ranches" }
+    arable_resources = { "bg_livestock_ranches" "bg_logging_crystalwood" }
     resource = {
         type = "bg_oil_extraction"
         undiscovered_amount = 5
@@ -2273,7 +2328,7 @@ STATE_AZAROON = {
     mine = xA5C9E7
     port = xAEE3FC
     arable_land = 10
-    arable_resources = { "bg_livestock_ranches" }
+    arable_resources = { "bg_livestock_ranches" "bg_logging_crystalwood" }
     capped_resources = {
         bg_coal_mining = 16
     }
@@ -2305,7 +2360,7 @@ STATE_ALZAHRUD = {
     mine = x909AE1
     port = x93EC88
     arable_land = 30
-    arable_resources = { "bg_livestock_ranches" }
+    arable_resources = { "bg_livestock_ranches" "bg_logging_crystalwood" }
     capped_resources = {
         bg_iron_mining = 24
         bg_lead_mining = 36
@@ -2329,7 +2384,7 @@ STATE_SHIRAFIQ = {
         bg_haunted_grounds = 12
     }
     arable_land = 40
-    arable_resources = { "bg_livestock_ranches" }
+    arable_resources = { "bg_livestock_ranches" "bg_logging_crystalwood" }
 }
 STATE_NADHARIM = {
     id = 4370
@@ -2342,7 +2397,7 @@ STATE_NADHARIM = {
     mine = x9FCD9B
     port = xB2ADB7
     arable_land = 40
-    arable_resources = { "bg_livestock_ranches" }
+    arable_resources = { "bg_livestock_ranches" "bg_logging_crystalwood" }
     capped_resources = {
         bg_coal_mining = 36
         bg_iron_mining = 45
@@ -2360,7 +2415,7 @@ STATE_QAMARUD = {
     mine = x78C7C7
     port = x7AC1C8
     arable_land = 10
-    arable_resources = { "bg_livestock_ranches" }
+    arable_resources = { "bg_livestock_ranches" "bg_logging_crystalwood" }
     capped_resources = {
         bg_iron_mining = 30
         bg_sulfur_mining = 48
@@ -2383,7 +2438,7 @@ STATE_ZAHRAFI = {
     mine = x72CBEB
     port = x9EF0BF
     arable_land = 50
-    arable_resources = { "bg_livestock_ranches" }
+    arable_resources = { "bg_livestock_ranches" "bg_logging_crystalwood" }
     capped_resources = {
         bg_iron_mining = 30
         bg_lead_mining = 30
@@ -2415,9 +2470,8 @@ STATE_KASHAMAD = {
     mine = x9AEFEA
     port = x9B90D5
     arable_land = 102
-    arable_resources = {  "bg_livestock_ranches" }
+    arable_resources = { "bg_livestock_ranches" "bg_logging_crystalwood" }
     capped_resources = {
-        bg_wishstone_mining = 36
         bg_lead_mining = 14
         bg_haunted_grounds = 26
     }
@@ -2444,7 +2498,7 @@ STATE_ZAHRIFAR = {
     mine = x9CD8D5
     port = xA1BAD6
     arable_land = 11
-    arable_resources = { "bg_livestock_ranches" }
+    arable_resources = { "bg_livestock_ranches" "bg_logging_crystalwood" }
     capped_resources = {
         bg_coal_mining = 32
     }
@@ -2489,7 +2543,7 @@ STATE_ALNAHFID = {
     mine = x7CB0DA
     port = x90ED94
     arable_land = 80
-    arable_resources = { "bg_livestock_ranches" }
+    arable_resources = { "bg_livestock_ranches" "bg_logging_crystalwood" }
     capped_resources = {
         bg_coal_mining = 44
         bg_iron_mining = 27
@@ -2541,7 +2595,7 @@ STATE_KUMASKA = {
         bg_logging = 7
         bg_iron_mining = 5
     }
-
+    naval_exit_id = 3137
 }
 STATE_SC12 = {
     id = 4218
@@ -2584,7 +2638,7 @@ STATE_HANALLA = {
     farm = x68F5A4
     mine = x6FD4B6
     port = x72BAEE
-
+    naval_exit_id = 3137
 }
 STATE_SUKONCO = {
     id = 4409
@@ -2595,7 +2649,7 @@ STATE_SUKONCO = {
     farm = x50EECA
     mine = x61DAC2
     port = x639AF9
-
+    naval_exit_id = 3149
 }
 STATE_INAMGI = {
     id = 4410
@@ -2608,7 +2662,7 @@ STATE_INAMGI = {
     farm = x4ECAF2
     mine = x61BFEF
     port = x68ACFD
-
+    naval_exit_id = 3146
 }
 STATE_INAMGI_2 = {
     id = 4414
@@ -2619,6 +2673,7 @@ STATE_INAMGI_2 = {
     capped_resources = {
         bg_lead_mining = 9
     }
+    naval_exit_id = 3147
 }
 STATE_INAMGI_3 = {
     id = 4416
@@ -2626,6 +2681,7 @@ STATE_INAMGI_3 = {
     provinces = { "x26F1F0" "x3FDDF0" "xA15EFA" "xABC7B4" "xAFBD8F" "xD051E6" "xD664CE" "xECDB70" "xEECAF6" "xFAA8C1" "xFABE9E" }
     arable_land = 61
     arable_resources = { "bg_livestock_ranches" "bg_cotton_plantations" }
+    naval_exit_id = 3146
 }
 STATE_KUNCHI = {
     id = 4411
@@ -2636,7 +2692,7 @@ STATE_KUNCHI = {
     farm = xA2CCBA
     mine = xAD86E9
     port = xAFCFE6
-
+    naval_exit_id = 3150
 }
 STATE_SANGARI = {
     id = 4412
@@ -2663,7 +2719,7 @@ STATE_SUKONCO_2 = {
         bg_iron_mining = 18
         bg_logging = 10
     }
-
+    naval_exit_id = 3147
 }
 STATE_SUKONCO_3 = {
     id = 4415
@@ -2674,12 +2730,15 @@ STATE_SUKONCO_3 = {
     capped_resources = {
         bg_logging = 20
     }
+    naval_exit_id = 3147
 }
 STATE_SUKONCO_4 = {
     id = 4417
     provinces = { "x3EDAFA" "x69EEC8" "x8CD6C9" "x93FDC0" "x9AE7DA" "xC38EC5" "xD9C367" "xDDF694" "xDE55E1" "xE254E4" "xE98EE2" "xEADA32" "xEAE196" "xF1E641" "xF4ECBB" }
     impassable = { "xEADA32" "xC38EC5" "xeae196" "x9AE7DA" "xDE55E1" "xF1E641" "xF4ECBB" }
     traits = { "state_trait_crescent_range" }
+
+    naval_exit_id = 3148
 }
 STATE_SANGARI_2 = {
     id = 4418
@@ -2713,6 +2772,7 @@ STATE_SANGARI_3 = {
 STATE_HANALLA_4 = {
     id = 4422
     provinces = { "xA7E4D2" "xB8EFAC" "xBDEDBD" "xCEFE8A" "xCF42F4" "xD689E5" "xD881D4" "xE7DCEA" }
+    naval_exit_id = 3146
 }
 STATE_PINCER_PENINSULA = {
     id = 4571

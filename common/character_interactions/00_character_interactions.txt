@@ -329,7 +329,7 @@ marry_ruler_or_heir = {
 		scope:actor ?= {
 			has_law = law_type:law_monarchy
 			religion = {
-				has_discrimination_trait = christian
+				has_discrimination_trait = uriks_pantheon
 			}
 		}
 		age >= 18
@@ -572,53 +572,6 @@ exile_character = {
 					}
 				}
 			}
-		}
-		if = {
-			limit = {
-				owner = { has_journal_entry = je_caudillo }
-				interest_group = {
-					is_interest_group_type = ig_armed_forces
-				}
-			}
-			if = {
-				limit = {
-					interest_group = {
-						leader = {
-							this = ROOT
-						}
-					}
-				}
-				owner = {
-					custom_tooltip = {
-						text = lose_large_caudillo_points
-						change_variable = {
-							name = caudillo_var
-							add = -200
-						}
-					}
-				}
-			}
-			else = {
-				owner = {
-					custom_tooltip = {
-						text = lose_caudillo_points
-						change_variable = {
-							name = caudillo_var
-							add = -100
-						}
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				owner = {
-					is_player = yes
-					NOT = { has_variable = achievement_agitate_elsewhere_var }
-				}
-				popularity >= 100
-			}
-			owner = { set_variable = achievement_agitate_elsewhere_var }
 		}
 		hidden_effect = {
 			if = {

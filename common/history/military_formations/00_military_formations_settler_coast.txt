@@ -396,4 +396,94 @@
 			production_method = pm_general_training
 		}					
 	}
+	c:VOZ ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_nogi_desert
+			name = heros_of_hanseath
+
+			
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_SKYPIERCER_PEAK
+				count = 6
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cuirassiers
+				state_region = s:STATE_SKYPIERCER_PEAK
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_SKYPIERCER_PEAK
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_CLOUDSILVER_SPINE
+				count = 4
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cuirassiers
+				state_region = s:STATE_CLOUDSILVER_SPINE
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_CLOUDSILVER_SPINE
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_GRAVELROCK_ROAD
+				count = 6
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cuirassiers
+				state_region = s:STATE_GRAVELROCK_ROAD
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_GRAVELROCK_ROAD
+				count = 1
+			}
+
+			save_scope_as = heroes_of_hanseath
+		}
+
+		create_character = {
+			is_general = yes
+			first_name = Kiras
+			last_name = Panglima
+			historical = yes
+			hq = region_nogi_desert
+			commander_rank = commander_rank_2
+			age = 46
+			traits = {
+				reserved
+			}
+			save_scope_as = kiras_gen
+		}
+		
+		scope:kiras_gen = {
+			transfer_to_formation = scope:heroes_of_hanseath
+		}
+
+		activate_production_method = {
+			building_type = building_naval_base
+			production_method = pm_no_naval_theory
+		}	
+		activate_production_method = {
+			building_type = building_barracks
+			production_method = pm_no_organization
+		}
+	}
 }

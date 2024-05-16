@@ -258,7 +258,39 @@
 		}
   }
   s:STATE_LUMADHIA = {
-
+	region_state:MJE = {
+		create_pop = {
+			culture = xhurlob
+			size = 400000
+		}
+		create_pop = {
+			culture = rethrashar
+			size = 55000
+		}
+		create_pop = {
+			culture = varbat
+			size = 45000
+		}
+		create_pop = {
+			culture = kaalkid
+			size = 35000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = rethrashar
+			size = 25000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = mgzavri
+			size = 25000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = west_thalorian
+			size = 30000
+		}
+	}
   }
   s:STATE_GJILANIJA = {
 	region_state:REM = {
@@ -542,7 +574,43 @@
 	}
   }
   s:STATE_KERCOVA = {
-
+	region_state:KVG = {
+		create_pop = {
+			culture = rethrashar
+			size = 420000
+		}
+		create_pop = {
+			culture = xhurlob
+			size = 85000
+		}
+		create_pop = {
+			culture = varbat
+			size = 90000
+		}
+		create_pop = {
+			culture = west_thalorian
+			size = 25000
+		}
+		create_pop = {
+			culture = kaalkid
+			size = 50000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = varbat
+			size = 12000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = west_thalorian
+			size = 12000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = xhurlob
+			size = 12000
+		}
+	}
   }
   s:STATE_STRUGOVA = {
 	region_state:EKA = {
@@ -561,7 +629,44 @@
 	}
   }
   s:STATE_PRESPIA = {
-
+	region_state:KVG = {
+		create_pop = {
+			culture = rethrashar
+			size = 400000
+		}
+		create_pop = {
+			culture = xhurlob
+			size = 95000
+		}
+		create_pop = {
+			culture = varbat
+			size = 72000
+		}
+		create_pop = {
+			culture = mgzavri
+			size = 50000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = varbat
+			size = 6000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = west_thalorian
+			size = 12000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = xhurlob
+			size = 6000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = mgzavri
+			size = 12000
+		}
+	}
   }
   s:STATE_KRUSHEVA = {
 	region_state:EKA = {
@@ -627,7 +732,24 @@
 	}
   }
   s:STATE_KUKESPIA = {
-
+	region_state:DKO = {
+		create_pop = {
+			culture = west_thalorian
+			size = 361000
+		}
+		create_pop = {
+			culture = rethrashar
+			size = 18000
+		}
+		create_pop = {
+			culture = mgzavri
+			size = 16000
+		}
+		create_pop = {
+			culture = florishnom
+			size = 12000
+		}
+	}
   }
   s:STATE_NYZHNE_SENIA = {
 	region_state:MGR = {
@@ -651,13 +773,76 @@
 	}
   }
   s:STATE_SHPYNTESI = {
-
+	region_state:DKO = {
+		create_pop = {
+			culture = west_thalorian
+			size = 405000
+		}
+		create_pop = {
+			culture = rethrashar
+			size = 65000
+		}
+		create_pop = {
+			culture = mgzavri
+			size = 2000
+		}
+	}
   }
   s:STATE_ERSEKERA = {
-
+	region_state:MJE = {
+		create_pop = {
+			culture = xhurlob
+			size = 350000
+		}
+		create_pop = {
+			culture = rethrashar
+			size = 120000
+		}
+		create_pop = {
+			culture = mgzavri
+			size = 120000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = rethrashar
+			size = 55000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = mgzavri
+			size = 55000
+		}
+	}
   }
   s:STATE_ZATYRE = {
-
+	region_state:KVG = {
+		create_pop = {
+			culture = rethrashar
+			size = 380000
+		}
+		create_pop = {
+			culture = xhurlob
+			size = 85000
+		}
+		create_pop = {
+			culture = west_thalorian
+			size = 32000
+		}
+		create_pop = {
+			culture = kaalkid
+			size = 47000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = west_thalorian
+			size = 12000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = xhurlob
+			size = 16000
+		}
+	}
   }
   s:STATE_BREZHKE = {
 	region_state:MGR = {
@@ -686,7 +871,25 @@
 	}
   }
   s:STATE_USTRIZHYVKA = {
-
+	region_state:KVG = {
+		create_pop = {
+			culture = rethrashar
+			size = 470000
+		}
+		create_pop = {
+			culture = west_thalorian
+			size = 102000
+		}
+		create_pop = {
+			culture = xhurlob
+			size = 13000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = west_thalorian
+			size = 12000
+		}
+	}
   }
   s:STATE_TROPOJA = {
 	region_state:MGR  = {
@@ -736,13 +939,64 @@
 	}
   }
   s:STATE_TEPELENA = {
-
+	region_state:ARD = {
+		create_pop = {
+			culture = central_thalorian
+			size = 362000
+		}
+		create_pop = {
+			culture = west_thalorian
+			size = 118000
+		}
+		create_pop = {
+			culture = kaalkid
+			size = 3000
+		}
+		create_pop = {
+			culture = rethrashar
+			size = 27000
+		}
+	}
   }
   s:STATE_BELSHIA = {
-
+	region_state:DKO = {
+		create_pop = {
+			culture = west_thalorian
+			size = 281000
+		}
+		create_pop = {
+			culture = rethrashar
+			size = 16000
+		}
+		create_pop = {
+			culture = mgzavri
+			size = 25000
+		}
+	}
   }
   s:STATE_CERRIKUA = {
-
+	region_state:DKO = {
+		create_pop = {
+			culture = west_thalorian
+			size = 362000
+		}
+		create_pop = {
+			culture = rethrashar
+			size = 31000
+		}
+		create_pop = {
+			culture = mgzavri
+			size = 18000
+		}
+		create_pop = {
+			culture = xhurlob
+			size = 11000
+		}
+		create_pop = {
+			culture = varbat
+			size = 9000
+		}
+	}
   }
   s:STATE_KLOSI = {
 	region_state:EKA = {
@@ -1489,7 +1743,7 @@
 			size = 8264
 		}
 		create_pop = {
-			culture = kaalkid
+			culture = tozhi
 			size = 103300
 		}
 		create_pop = {
@@ -1519,7 +1773,7 @@
   s:STATE_NAKOKAIN = {
 	region_state:HOZ = {
 		create_pop = {
-			culture = kaalkid
+			culture = tozhi
 			size = 154982
 		}
 		create_pop = {
@@ -1566,7 +1820,7 @@
   s:STATE_KEENAVAZH = {
 	region_state:HOZ = {
 		create_pop = {
-			culture = kaalkid
+			culture = tozhi
 			size = 643804
 		}
 		create_pop = {
@@ -1587,7 +1841,7 @@
   s:STATE_NAVOYAZH = {
 	region_state:HOZ = {
 		create_pop = {
-			culture = kaalkid
+			culture = tozhi
 			size = 384820
 		}
 		create_pop = {
@@ -1609,7 +1863,7 @@
   s:STATE_SHINAKHAD = {
 	region_state:HOZ = {
 		create_pop = {
-			culture = kaalkid
+			culture = tozhi
 			size = 125492
 		}
 		create_pop = {
@@ -1627,7 +1881,7 @@
   s:STATE_THAGHIZHI = {
 	region_state:HOZ = {
 		create_pop = {
-			culture = kaalkid
+			culture = tozhi
 			size = 354651
 		}
 		create_pop = {
@@ -1854,7 +2108,20 @@
 	}
   }
   s:STATE_KLINGELBERG = {
-
+	region_state:TLE = {
+		create_pop = {
+			culture = central_thalorian
+			size = 400000
+		}
+		create_pop = {
+			culture = lake_thalorian
+			size = 211000
+		}
+		create_pop = {
+			culture = ravikian
+			size = 86000
+		}
+	}
   }
   s:STATE_VONKPLEIN = {
 	region_state:RAV = {
@@ -2086,7 +2353,20 @@
 	}
   }
   s:STATE_KRULWILGEN = {
-
+	region_state:TLE = {
+		create_pop = {
+			culture = lake_thalorian
+			size = 100000
+		}
+		create_pop = {
+			culture = central_thalorian
+			size = 500000
+		}
+		create_pop = {
+			culture = ravikian
+			size = 3000
+		}
+	}
   }
   s:STATE_KLINGELWEIDE = {
 	region_state:TLE = {
@@ -2126,7 +2406,20 @@
 	}
   }
   s:STATE_SNAARGRACHT = {
-
+	region_state:TLE = {
+		create_pop = {
+			culture = central_thalorian
+			size = 800000
+		}
+		create_pop = {
+			culture = lake_thalorian
+			size = 320000
+		}
+		create_pop = {
+			culture = ravikian
+			size = 250000
+		}
+	}
   }
   s:STATE_BELLENBOS = {
 	region_state:RAV = {
@@ -2340,7 +2633,28 @@
 	}
   }
   s:STATE_SPRONKERGROEN = {
-
+	region_state:TLE = {
+		create_pop = {
+			culture = central_thalorian
+			size = 650000
+		}
+		create_pop = {
+			culture = lake_thalorian
+			size = 121000
+		}
+		create_pop = {
+			culture = florishnom
+			size = 106000
+		}
+		create_pop = {
+			culture = west_thalorian
+			size = 190000
+		}
+		create_pop = {
+			culture = rethrashar
+			size = 118000
+		}
+	}
   }
   s:STATE_DRAAIKUST = {
 	region_state:RAV = {
@@ -2376,19 +2690,88 @@
 	}
   }
   s:STATE_VALORN = {
-
+	region_state:SBH = {
+		create_pop = {
+			culture = west_thalorian
+			size = 512000
+		}
+		create_pop = {
+			culture = central_thalorian
+			size = 122000
+		}
+		create_pop = {
+			culture = florishnom
+			size = 91000
+		}
+		create_pop = {
+			culture = rethrashar
+			size = 47000
+		}
+	}
   }
   s:STATE_EVERLUND = {
-
+	region_state:TLE = {
+		create_pop = {
+			culture = lake_thalorian
+			size = 150000
+		}
+		create_pop = {
+			culture = waldgnomklaai
+			size = 200000
+		}
+	}
   }
   s:STATE_HAVENSHIRE = {
-
+	region_state:TLE = {
+		create_pop = {
+			culture = lake_thalorian
+			size = 903000
+		}
+		create_pop = {
+			culture = waldgnomklaai
+			size = 172000
+		}
+		create_pop = {
+			culture = yrian
+			size = 89000
+		}
+		create_pop = {
+			culture = rahoru
+			size = 72000
+		}
+	}
   }
   s:STATE_HIGHMOOR = {
-
+	region_state:TLE = {
+		create_pop = {
+			culture = lake_thalorian
+			size = 550000
+		}
+		create_pop = {
+			culture = rahoru
+			size = 75000
+		}
+	}
   }
   s:STATE_IRONWOOD = {
-
+	region_state:TLE = {
+		create_pop = {
+			culture = lake_thalorian
+			size = 500000
+		}
+		create_pop = {
+			culture = ravikian
+			size = 201000
+		}
+		create_pop = {
+			culture = yrian
+			size = 33000
+		}
+		create_pop = {
+			culture = waldgnomklaai
+			size = 25000
+		}
+	}
   }
   s:STATE_STORMHOLM = {
 	region_state:TLE = {
@@ -2407,25 +2790,142 @@
 	}
   }
   s:STATE_RAVENHOLME = {
-
+	region_state:SBH = {
+		create_pop = {
+			culture = west_thalorian
+			size = 351000
+		}
+		create_pop = {
+			culture = central_thalorian
+			size = 92000
+		}
+		create_pop = {
+			culture = rethrashar
+			size = 13000
+		}
+	}
+	region_state:DKO = {
+		create_pop = {
+			culture = west_thalorian
+			size = 224000
+		}
+		create_pop = {
+			culture = rethrashar
+			size = 6000
+		}
+		create_pop = {
+			culture = central_thalorian
+			size = 39000
+		}
+		create_pop = {
+			culture = florishnom
+			size = 18000
+		}
+	}
   }
   s:STATE_THORNFIELD = {
-
+	region_state:TLE = {
+		create_pop = {
+			culture = dunaq
+			size = 76000
+		}
+		create_pop = {
+			culture = rahoru
+			size = 74000
+		}
+		create_pop = {
+			culture = lake_thalorian
+			size = 212000
+		}
+	}
   }
   s:STATE_FARREACH = {
-
+	region_state:TLE = {
+		create_pop = {
+			culture = lake_thalorian
+			size = 440300
+		}
+		create_pop = {
+			culture = waldgnomklaai
+			size = 150000
+		}
+		create_pop = {
+			culture = waste_walker
+			size = 75000
+		}
+		create_pop = {
+			culture = tqalt
+			size = 30000
+		}
+		create_pop = {
+			culture = rahoru
+			size = 33000
+		}
+	}
   }
   s:STATE_MOONSHADE = {
-
+	region_state:TLE = {
+		create_pop = {
+			culture = lake_thalorian
+			size = 250000
+		}
+		create_pop = {
+			culture = yrian
+			size = 100000
+		}
+		create_pop = {
+			culture = waldgnomklaai
+			size = 30000
+		}
+	}
   }
   s:STATE_STORMWATCH = {
-
+	region_state:TLE = {
+		create_pop = {
+			culture = lake_thalorian
+			size = 600000
+		}
+		create_pop = {
+			culture = rahoru
+			size = 65000
+		}
+	}
   }
   s:STATE_EMBERFALL = {
-
+	region_state:DKO = {
+		create_pop = {
+			culture = west_thalorian
+			size = 747000
+		}
+		create_pop = {
+			culture = rethrashar
+			size = 52000
+		}
+		create_pop = {
+			culture = ravikian
+			size = 2000
+		}
+	}
   }
   s:STATE_DRAGONCREST = {
-
+	region_state:GRA = {
+		create_pop = {
+			culture = west_thalorian
+			size = 297000
+		}
+		create_pop = {
+			culture = florishnom
+			size = 6000
+		}
+		create_pop = {
+			culture = mgzavri
+			size = 21000
+		}
+		create_pop = {
+			culture = rethrashar
+			size = 12000
+		}
+	}
   }
   s:STATE_BRIGHTWATER = {
 	region_state:TLE = {
@@ -2449,7 +2949,21 @@
 	}
   }
   s:STATE_DAWNRIDGE = {
-
+	region_state:VOR = {
+		create_pop = {
+			culture = rethrashar
+			size = 647000
+		}
+		create_pop = {
+			culture = west_thalorian
+			size = 100000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = west_thalorian
+			size = 67000
+		}
+	}
   }
   s:STATE_SUNDALE = {
 	region_state:TLE = {
@@ -2484,26 +2998,113 @@
 	}
   }
   s:STATE_RIVERTIDE = {
-
+	region_state:ARD = {
+		create_pop = {
+			culture = central_thalorian
+			size = 425000
+		}
+		create_pop = {
+			culture = west_thalorian
+			size = 64000
+		}
+		create_pop = {
+			culture = kaalkid
+			size = 13000
+		}
+		create_pop = {
+			culture = rethrashar
+			size = 15000
+		}
+	}
   }
   s:STATE_LIONS_ROOST = {
-
+	region_state:ARD = {
+		create_pop = {
+			culture = central_thalorian
+			size = 358000
+		}
+		create_pop = {
+			culture = west_thalorian
+			size = 126000
+		}
+		create_pop = {
+			culture = kaalkid
+			size = 47000
+		}
+	}
   }
   s:STATE_WINDMERE = {
-
+	region_state:DHR = {
+		create_pop = {
+			culture = central_thalorian
+			size = 512000
+		}
+		create_pop = {
+			culture = rethrashar
+			size = 148000
+		}
+	}
   }
   s:STATE_HOLLOWBROOK = {
-
+	region_state:BDT = {
+		create_pop = {
+			culture = central_thalorian
+			size = 421000
+		}
+		create_pop = {
+			culture = west_thalorian
+			size = 112000
+		}
+		create_pop = {
+			culture = rethrashar
+			size = 78000
+		}
+	}
   }
   s:STATE_SHADOWFEN = {
-
+	region_state:BDT = {
+		create_pop = {
+			culture = central_thalorian
+			size = 406000
+		}
+		create_pop = {
+			culture = west_thalorian
+			size = 126000
+		}
+		create_pop = {
+			culture = rethrashar
+			size = 92000
+		}
+	}
   }
   s:STATE_SUNDERPORT = {
-
+	region_state:GRA = {
+		create_pop = {
+			culture = west_thalorian
+			size = 302000
+		}
+		create_pop = {
+			culture = florishnom
+			size = 18000
+		}
+		create_pop = {
+			culture = rethrashar
+			size = 6000
+		}
+	}
   }
   s:STATE_AMBERWICK = {
+	region_state:ARD = {
+		create_pop = {
+			culture = central_thalorian
+			size = 323000
+		}
+		create_pop = {
+			culture = kaalkid
+			size = 151000
+		}
+	}
   }
-  
   s:STATE_WINDSONG = {
 		region_state:TLE = {
 			create_pop = {
@@ -2521,13 +3122,48 @@
 		}
   }
   s:STATE_WINDSPEAR = {
-
+	region_state:GRA = {
+		create_pop = {
+			culture = west_thalorian
+			size = 582000
+		}
+		create_pop = {
+			culture = mgzavri
+			size = 35000
+		}
+		create_pop = {
+			culture = rethrashar
+			size = 16000
+		}
+	}
   }
   s:STATE_MISTVALE = {
-
+	region_state:TLE = {
+		create_pop = {
+			culture = dunaq
+			size = 68000
+		}
+		create_pop = {
+			culture = rahoru
+			size = 42000
+		}
+		create_pop = {
+			culture = lake_thalorian
+			size = 358000
+		}
+	}
   }
   s:STATE_SILVERCREST = {
-
+	region_state:TLE = {
+		create_pop = {
+			culture = lake_thalorian
+			size = 708000
+		}
+		create_pop = {
+			culture = rahoru
+			size = 32000
+		}
+	}
   }
   s:STATE_GRINWALD = {
 	region_state:EKE = {

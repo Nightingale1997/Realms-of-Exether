@@ -35,10 +35,16 @@
   ## UN Resolution Concepts
   concept_diplomatic_weight: "Diplomatic Weights"
   concept_diplomatic_weight_desc: "Diplomatic weight refers to the influence and leverage a country possesses in international relations, shaped by factors such as its economic power, military strength, and historical alliances, which can be used to sway negotiations, shape policy, or resolve conflicts."
-  concept_supporters: "#p Supporters#!"
-  concept_supporters_desc: "Supporters are [concept_concord_member_state] that are currently voting #p for#!  the passing of a resolution. The total strength of their votes depends on the sum of their individual [concept_diplomatic_weight]\n \nThe current strength of [concept_supporters] against ongoing resolution is:\n#p  [GetPlayer.MakeScope.ScriptValue('supporting_value_total')|d]#!"
-  concept_opponents: "#n Opponents#!"
-  concept_opponents_desc: "Opponents are [concept_concord_member_state] that are currently voting against the passing of a resolution. The total strength of their votes depends on the sum of their individual [concept_diplomatic_weight]\n \nThe current strength of [concept_opponents] against ongoing resolution is:\n#n  [GetPlayer.MakeScope.ScriptValue('opposing_value_total')|d]#!"
+
+  concept_supporters_concord: "#p Supporters#!"
+  concept_supporters_concord_desc: "Supporters are [concept_concord_member_state] that are currently voting #p for#!  the passing of a resolution. The total strength of their votes depends on the sum of their individual [concept_diplomatic_weight]\n \nThe current strength of [concept_supporters_concord] against ongoing resolution is:\n#p  [GetPlayer.MakeScope.ScriptValue('supporting_value_total_concord')|d]#!"
+  concept_opponents_concord: "#n Opponents#!"
+  concept_opponents_concord_desc: "Opponents are [concept_concord_member_state] that are currently voting against the passing of a resolution. The total strength of their votes depends on the sum of their individual [concept_diplomatic_weight]\n \nThe current strength of [concept_opponents_concord] against ongoing resolution is:\n#n  [GetPlayer.MakeScope.ScriptValue('opposing_value_total_concord')|d]#!"
+
+  concept_supporters_consortium: "#p Supporters#!"
+  concept_supporters_consortium_desc: "Supporters are [concept_concord_member_state] that are currently voting #p for#!  the passing of a resolution. The total strength of their votes depends on the sum of their individual [concept_diplomatic_weight]\n \nThe current strength of [concept_supporters_consortium] against ongoing resolution is:\n#p  [GetPlayer.MakeScope.ScriptValue('supporting_value_total_consortium')|d]#!"
+  concept_opponents_consortium: "#n Opponents#!"
+  concept_opponents_consortium_desc: "Opponents are [concept_concord_member_state] that are currently voting against the passing of a resolution. The total strength of their votes depends on the sum of their individual [concept_diplomatic_weight]\n \nThe current strength of [concept_opponents_consortium] against ongoing resolution is:\n#n  [GetPlayer.MakeScope.ScriptValue('opposing_value_total_consortium')|d]#!"
 
   concept_concord_intervention: "United Nations Intervention"
   concept_concord_intervention_desc: "A UN intervention is an action taken by the United Nations, often through its peacekeeping forces or other specialized agencies, to address conflicts, humanitarian crises, or violations of international law in order to restore stability and protect human rights."
