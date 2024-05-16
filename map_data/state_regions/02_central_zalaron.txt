@@ -274,7 +274,7 @@ STATE_EASTERN_EMBERLAND = {
     wood = x76C2CC
     farm = x8FD7C4
     mine = x9AE5F2
-    port = x9B8AD9
+    port = xf6d4d2
     arable_land = 100
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
     capped_resources = {
@@ -286,7 +286,7 @@ STATE_EASTERN_EMBERLAND = {
         type = "bg_oil_extraction"
         undiscovered_amount = 60
     }
-
+    naval_exit_id = 3170
 }
 STATE_WESTERN_EMBERLAND = {
     id = 4237
@@ -303,7 +303,7 @@ STATE_WESTERN_EMBERLAND = {
         bg_coal_mining = 68
         bg_logging = 11
     }
-
+    naval_exit_id = 3170
 }
 STATE_CHANSONBOIS = {
     id = 4238
