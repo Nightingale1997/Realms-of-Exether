@@ -394,7 +394,6 @@ egalitarianism = {
 				OR = {
 					has_strategy = ai_strategy_conservative_agenda
 					has_strategy = ai_strategy_reactionary_agenda
-					has_strategy = ai_strategy_maintain_mandate_of_heaven
 				}			
 			}
 			add = -0.5
@@ -700,7 +699,6 @@ labor_movement = {
 				OR = {
 					has_strategy = ai_strategy_conservative_agenda
 					has_strategy = ai_strategy_reactionary_agenda
-					has_strategy = ai_strategy_maintain_mandate_of_heaven
 				}			
 			}
 			add = -0.5
@@ -768,7 +766,6 @@ human_rights = {
 				OR = {
 					has_strategy = ai_strategy_conservative_agenda
 					has_strategy = ai_strategy_reactionary_agenda
-					has_strategy = ai_strategy_maintain_mandate_of_heaven
 				}			
 			}
 			add = -0.5
@@ -826,7 +823,6 @@ feminism = {
 				OR = {
 					has_strategy = ai_strategy_conservative_agenda
 					has_strategy = ai_strategy_reactionary_agenda
-					has_strategy = ai_strategy_maintain_mandate_of_heaven
 				}			
 			}
 			add = -0.5
@@ -988,9 +984,32 @@ corporatism = {
 				NOT = { has_variable = corporatism_researched }
 			}
 			set_variable = corporatism_researched
-			ig:ig_devout = {
-				remove_ideology = ideology_pious
-				add_ideology = ideology_corporatist
+			ig:ig_devout ?= {
+				if = {
+					limit = {
+						has_ideology = ideology:ideology_pious_dark
+					}			
+						remove_ideology = ideology_pious_dark
+						add_ideology = ideology_corporatist_dark
+				}
+				else_if = {
+					limit = {
+						has_ideology = ideology:ideology_pious_magoclast
+					}			
+						remove_ideology = ideology_pious_magoclast
+						add_ideology = ideology_corporatist_magoclast
+				}
+				else_if = {
+					limit = {
+						has_ideology = ideology:ideology_pious_druidic
+					}			
+						remove_ideology = ideology_pious_druidic
+						add_ideology = ideology_corporatist_druidic
+				}
+				else = {
+						remove_ideology = ideology_pious
+						add_ideology = ideology_corporatist
+				}
 			}
 		}
 	}
@@ -1047,11 +1066,16 @@ pan-nationalism = {
 		if = {
 			limit = { 
 				OR = {
-					country_has_primary_culture = cu:north_german
-					country_has_primary_culture = cu:south_german
-					country_has_primary_culture = cu:north_italian
-					country_has_primary_culture = cu:south_italian
-				}				
+					country_has_primary_culture = cu:west_thalorian
+					country_has_primary_culture = cu:lake_thalorian
+					country_has_primary_culture = cu:qinnaat
+					country_has_primary_culture = cu:azmaraan
+					country_has_primary_culture = cu:varbat
+					country_has_primary_culture = cu:xhurlob
+					country_has_primary_culture = cu:rethrashar
+					country_has_primary_culture = cu:gulf_naga
+					country_has_primary_culture = cu:jungle_naga
+				}			
 			}
 			add = 2
 		}	

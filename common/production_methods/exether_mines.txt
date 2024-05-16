@@ -6,7 +6,7 @@ pm_mines_sleep_in_a_bottle = {
 	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
 	
 	unlocking_technologies = {
-	
+		alchemy
 	}
 	
 	building_modifiers = {
@@ -28,7 +28,7 @@ pm_mines_potions_of_fortitude = {
 	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
 	
 	unlocking_technologies = {
-		manufacturies
+		alchemy
 	}
 	
 	building_modifiers = {
@@ -52,7 +52,7 @@ pm_mines_potions_of_strength = {
 	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
 	
 	unlocking_technologies = {
-		manufacturies #later than this
+		alchemy #later than this
 	}
 	
 	building_modifiers = {
@@ -78,7 +78,7 @@ pm_rockrollers_mine = {
 	texture = "gfx/interface/icons/production_method_icons/steam_donkey.dds"
 	state_modifiers = {
 		workforce_scaled = {
-			state_pollution_generation_add = 5 #magic
+			state_veil_integrity_contribution = 5 #magic
 		}
 	}
 		
@@ -111,7 +111,7 @@ pm_godsblood_pump_building_lead_mine = {
 	
 	state_modifiers = {
 		workforce_scaled = {
-			state_pollution_generation_add = 15 #magic
+			state_veil_integrity_contribution = 15 #magic
 		}
 	}
 
@@ -129,7 +129,7 @@ pm_godsblood_pump_building_lead_mine = {
 			building_employment_laborers_add = 2000
 			building_employment_machinists_add = 1350
 			building_employment_engineers_add = 400
-			building_employment_wizards_add = 250
+			building_employment_hedge_wizards_add = 250
 		}
 		
 		unscaled = {
@@ -150,7 +150,7 @@ pm_wishstone_building_lead_mine = {
 	
 	state_modifiers = {
 		workforce_scaled = {
-			state_pollution_generation_add = 10 #magic
+			state_veil_integrity_contribution = 10 #magic
 		}
 	}
 
@@ -164,7 +164,7 @@ pm_wishstone_building_lead_mine = {
 		}
 
 		level_scaled = {
-			building_employment_wizards_add = 250
+			building_employment_hedge_wizards_add = 250
 		}
 
 		unscaled = {
@@ -185,7 +185,7 @@ pm_godsblood_pump_building_sulfur_mine = {
 	
 	state_modifiers = {
 		workforce_scaled = {
-			state_pollution_generation_add = 15 #magic
+			state_veil_integrity_contribution = 15 #magic
 		}
 	}
 
@@ -203,7 +203,7 @@ pm_godsblood_pump_building_sulfur_mine = {
 			building_employment_laborers_add = 2000
 			building_employment_machinists_add = 1350
 			building_employment_engineers_add = 400
-			building_employment_wizards_add = 250
+			building_employment_hedge_wizards_add = 250
 		}
 		
 		unscaled = {
@@ -224,7 +224,7 @@ pm_wishstone_building_sulfur_mine = {
 	
 	state_modifiers = {
 		workforce_scaled = {
-			state_pollution_generation_add = 10 #magic.  we could up this.  we could up this a lot.  in fact, pms like this could be a way 
+			state_veil_integrity_contribution = 10 #magic.  we could up this.  we could up this a lot.  in fact, pms like this could be a way 
 		}										#for the player to intentionally trade pop mortality for extra pollution
 	}
 
@@ -238,7 +238,7 @@ pm_wishstone_building_sulfur_mine = {
 		}
 
 		level_scaled = {
-			building_employment_wizards_add = 250
+			building_employment_hedge_wizards_add = 250
 		}
 
 		unscaled = {
@@ -259,7 +259,7 @@ pm_godsblood_pump_building_gold_mine = {
 	
 	state_modifiers = {
 		workforce_scaled = {
-			state_pollution_generation_add = 15 #magic
+			state_veil_integrity_contribution = 15 #magic
 		}
 	}
 
@@ -277,7 +277,7 @@ pm_godsblood_pump_building_gold_mine = {
 			building_employment_laborers_add = 2000
 			building_employment_machinists_add = 1350
 			building_employment_engineers_add = 400
-			building_employment_wizards_add = 250
+			building_employment_hedge_wizards_add = 250
 		}
 		
 		unscaled = {
@@ -298,7 +298,7 @@ pm_wishstone_building_gold_mine = {
 	
 	state_modifiers = {
 		workforce_scaled = {
-			state_pollution_generation_add = 10 #magic.  we could up this.  we could up this a lot.  in fact, pms like this could be a way 
+			state_veil_integrity_contribution = 10 #magic.  we could up this.  we could up this a lot.  in fact, pms like this could be a way 
 		}										#for the player to intentionally trade pop mortality for extra pollution
 	}
 
@@ -312,7 +312,7 @@ pm_wishstone_building_gold_mine = {
 		}
 
 		level_scaled = {
-			building_employment_wizards_add = 250
+			building_employment_hedge_wizards_add = 250
 		}
 
 		unscaled = {

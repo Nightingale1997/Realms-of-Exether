@@ -20,6 +20,16 @@ goods_output_wishstone_add = {
 	percent = no
 }
 
+goods_output_entertainment_add = {
+	good = yes
+	percent = no
+}
+
+goods_output_ectoplasm_add = {
+	good = yes
+	percent = no
+}
+
 goods_output_cloudsilver_add = {
 	good = yes
 	percent = no
@@ -50,9 +60,14 @@ goods_output_potions_add = {
 	percent = no
 }
 
-goods_output_cosmetic_potions_add = {
+goods_output_luxury_potions_add = {
 	good = yes
 	percent = no
+}
+
+goods_output_wood_mult = {
+	good = yes
+	percent = yes
 }
 
 goods_input_trinkets_add = {
@@ -90,12 +105,22 @@ goods_input_potions_add = {
 	percent = no
 }
 
-goods_input_cosmetic_potions_add = { #idk if we'll ever actually use this but it's here
+goods_input_luxury_potions_add = { #idk if we'll ever actually use this but it's here
 	good = yes
 	percent = no
 }
 
 goods_input_wishstone_add = {
+	good = yes
+	percent = no
+}
+
+goods_input_entertainment_add = {
+	good = yes
+	percent = no
+}
+
+goods_input_ectoplasm_add = {
 	good = yes
 	percent = no
 }
@@ -118,9 +143,32 @@ state_building_shipyards_max_level_add = {
 	num_decimals = 0
 }
 
+building_goods_output_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_subsistence_agriculture_output_add = {
+	good = yes
+	percent = no
+	num_decimals = 0
+}
+
+building_group_bg_subsistence_agriculture_output_mult = {
+	good = yes
+	percent = yes
+	num_decimals = 0
+}
+
 state_adventurer_coverage_add = {
 	good = yes
 	percent = no
+}
+
+state_veil_integrity_contribution = {
+	good = no
+	percent = no
+	num_decimals = 1
 }
 
 state_adventurer_coverage_mult = {
@@ -137,8 +185,4 @@ building_adventurers_mortality_mult = {
 
 
 
-country_veil_integrity_contribution = {
-	neutral = yes
-	percent = no
-	num_decimals = 0
-}
+

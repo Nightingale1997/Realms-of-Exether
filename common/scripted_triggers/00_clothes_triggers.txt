@@ -6,8 +6,12 @@
 				culture = {
 					OR = {
 						has_discrimination_trait = bird_heritage
+						has_discrimination_trait = lizardfolk_heritage
+						has_discrimination_trait = mechanical_heritage
+						has_discrimination_trait = dragon_heritage
 						has_discrimination_trait = beast
 						has_discrimination_trait = gnoll
+						has_discrimination_trait = naga
 					}
 				}
 			}
@@ -17,9 +21,13 @@
 			scope:pop = {
 				culture = {
 					OR = {
+						has_discrimination_trait = dragon_heritage
+						has_discrimination_trait = lizardfolk_heritage
+						has_discrimination_trait = mechanical_heritage
 						has_discrimination_trait = bird_heritage
 						has_discrimination_trait = beast
 						has_discrimination_trait = gnoll
+						has_discrimination_trait = naga
 					}
 					
 				}
@@ -114,15 +122,15 @@ french_empire_clothes_pop_trigger = {
 russian_empire_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
-		exists = c:RUS
+		exists = c:RAV
 		exists = home_country
 		home_country = {
 			OR = {
 				AND = {
-					c:RUS = this
+					c:RAV = this
 					is_subject = no # preventing uniform conflicts if RUS becomes a subject of another country with puppet uniforms
 				}
-				is_subject_of = c:RUS
+				is_subject_of = c:RAV
 			}		
 		}
 	}
@@ -131,14 +139,14 @@ russian_empire_clothes_trigger = {
 russian_empire_clothes_pop_trigger = {
 	exists = scope:pop
 	scope:pop = {
-		exists = c:RUS
+		exists = c:RAV
 		home_country = {
 			OR = {
 				AND = {
-					c:RUS = this
+					c:RAV = this
 					is_subject = no # preventing uniform conflicts if RUS becomes a subject of another country with puppet uniforms
 				}
-				is_subject_of = c:RUS
+				is_subject_of = c:RAV
 			}		
 		}
 	}

@@ -1067,7 +1067,16 @@ s:STATE_FAR_SHORE_2 = {
   }
 
   s:STATE_GRAVELROCK_ROAD = {
-
+	region_state:VOZ = {
+		create_pop = {
+			culture = vozi
+			size = 311230
+		}
+		create_pop = {
+			culture = aridrun
+			size = 85840
+		}
+	}
   }
 
   s:STATE_ELF1 = {
@@ -1162,23 +1171,68 @@ s:STATE_FAR_SHORE_2 = {
   }
 
   s:STATE_SKYPIERCER_PEAK = {
-
+	region_state:VOZ = {
+		create_pop = {
+			culture = vozi
+			size = 567210
+		}
+		create_pop = {
+			culture = aridrun
+			size = 39840
+		}
+	}
   }
 
   s:STATE_CLOUDSILVER_SPINE = {
-
+	region_state:VOZ = {
+		create_pop = {
+			culture = vozi
+			size = 219260
+		}
+		create_pop = {
+			culture = aridrun
+			size = 25840
+		}
+	}
   }
 
   s:STATE_VOZMEAD_LOWLANDS = {
-
+	region_state:VOZ = {
+		create_pop = {
+			culture = vozi
+			size = 92790
+		}
+		create_pop = {
+			culture = aridrun
+			size = 61170
+		}
+	}
   }
 
   s:STATE_SUNKEN_CLIFFS = {
-
+	region_state:VOZ = {
+		create_pop = {
+			culture = vozi
+			size = 100680
+		}
+		create_pop = {
+			culture = aridrun
+			size = 75840
+		}
+	}
   }
 
   s:STATE_DWARVENHAMMER = {
-
+	region_state:VOZ = {
+		create_pop = {
+			culture = vozi
+			size = 56260
+		}
+		create_pop = {
+			culture = aridrun
+			size = 35840
+		}
+	}
   }
 
   s:STATE_TARBANK = {

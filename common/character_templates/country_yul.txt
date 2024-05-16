@@ -1,0 +1,134 @@
+﻿##agitators
+
+YUL_chingis_tomorbaatar = { 
+	first_name = Chingis
+	last_name = Tomorbaatar
+	historical = yes
+	female = no
+	is_agitator = yes 
+	culture = primary_culture
+	religion = rel:scourgelore
+	interest_group = ig_rural_folk
+	ideology = ideology_anarchist
+	birth_date = 1202.11.11
+	traits = {
+		bandit
+		charismatic
+		brave
+	}
+    agitator_usage = {
+        country_trigger = {
+		
+				c:YUL?= THIS
+				
+			
+			has_dlc_feature = voice_of_the_people_content
+        }
+        interest_group_trigger = {
+			is_interest_group_type = ig_rural_folk
+        }   
+        earliest_usage_date = 1239.1.1
+        latest_usage_date = 1259.1.1
+        chance = 100 #YES
+    }   
+}
+
+YUL_gonchigtseren_togs = { 
+	first_name = Gonchigtseren
+	last_name = Togs-Ochiryn
+	historical = yes
+	female = no
+	is_agitator = yes 
+	culture = primary_culture
+	religion = rel:scourgelore
+	interest_group = ig_industrialists
+	ideology = ideology_artificer_baron
+	birth_date = 1190.11.12
+	traits = {
+		experienced_political_operator
+		imposing
+		bandit
+	}
+    agitator_usage = {
+        country_trigger = {
+			
+				c:YUL ?= THIS
+			
+			
+			has_dlc_feature = voice_of_the_people_content
+		}
+        interest_group_trigger = {
+			is_interest_group_type = ig_industrialists
+        }   
+        earliest_usage_date = 1216.1.1
+        latest_usage_date = 1238.1.1
+        chance = 50
+    }   
+}
+
+YUL_tuyaa_murdorj = { #Juan Silvano Godoi Echagüe
+	first_name = Tuyaa
+	last_name = Murdorj
+	historical = yes
+	female = yes
+	is_agitator = yes 
+	culture = primary_culture
+	religion = rel:scourgelore
+	interest_group = ig_intelligentsia
+	ideology = ideology_radical
+	birth_date = 1194.11.12
+	traits = {
+		experienced_political_operator
+		brave
+		literary
+	}
+    agitator_usage = {
+        country_trigger = {
+			
+				c:YUL ?= THIS
+			
+				
+			}
+			has_dlc_feature = voice_of_the_people_content
+		}
+        interest_group_trigger = {
+			is_interest_group_type = ig_intelligentsia
+        }   
+        earliest_usage_date = 1220.1.1
+        latest_usage_date = 1237.1.1
+        chance = 50
+       
+}
+
+YUL_bayartsetseg_jamyan = { 
+	first_name = Bayartsetseg
+	last_name = Jamyan
+	historical = yes
+	female = yes
+	is_agitator = yes 
+	culture = primary_culture
+	religion = rel:scourgelore
+	interest_group = ig_intelligentsia
+	ideology = ideology_magocrat
+	birth_date = 1140.1.7
+	traits = {
+		persistent
+		sickly
+		firebrand
+	}
+    agitator_usage = {
+        country_trigger = {
+			
+				c:YUL ?= THIS
+
+			
+			has_dlc_feature = voice_of_the_people_content
+		}
+        interest_group_trigger = {
+			is_interest_group_type = ig_intelligentsia
+        }   
+        earliest_usage_date = 1182.1.1
+        latest_usage_date = 1204.1.1
+        chance = 65
+    }   
+}

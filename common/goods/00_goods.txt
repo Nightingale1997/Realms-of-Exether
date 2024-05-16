@@ -588,6 +588,17 @@ fine_art = {
 #  Exether   #
 ##############
 
+entertainment = {
+	texture = "gfx/interface/icons/goods_icons/entertainment.dds"
+	cost = 30
+	category = staple
+	local = yes
+	
+	prestige_factor = 3
+	
+	consumption_tax_cost = 200
+}
+
 trinkets = {
 	texture = "gfx/interface/icons/goods_icons/trinkets.dds"
 	cost = 200
@@ -599,8 +610,8 @@ trinkets = {
 	traded_quantity = 2
 }
 
-cosmetic_potions = {
-	texture = "gfx/interface/icons/goods_icons/dye.dds"
+luxury_potions = {
+	texture = "gfx/interface/icons/goods_icons/luxury_potions.dds"
 	cost = 85  #debatable
 	category = luxury
 	
@@ -646,9 +657,20 @@ monster_essence = {
 }
 
 potions = {
-	#texture = "gfx/interface/icons/goods_icons/monster_essence.dds"
+	texture = "gfx/interface/icons/goods_icons/potions.dds"
 	cost = 55 #50?  60?
 	category = industrial #WIP?
 	
 	prestige_factor = 10
+}
+
+ectoplasm = {
+	texture = "gfx/interface/icons/goods_icons/ectoplasm.dds"
+	cost = 50
+	category = industrial
+	
+	prestige_factor = 10
+	
+	traded_quantity = 4
+	convoy_cost_multiplier = 1.5
 }

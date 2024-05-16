@@ -1,0 +1,97 @@
+﻿onaction_concord_calculation = {
+    # CONCORD Calculations
+    if = {
+        limit = {
+            global_var:var_concord_memberlist = {
+                exists = yes
+            }
+        }
+        set_global_variable = {
+            name = var_concord_memberlist
+            value = 0
+        }
+        every_country = {
+            limit = {
+                has_variable = concord_member
+            }
+            change_global_variable = {
+                name = var_concord_memberlist
+                add = 1
+            }
+        }
+    }
+    #CONCORD Voting for AI
+    if = {
+        limit = {
+            has_variable = concord_member
+        }
+        trigger_event = concord_ai_voting.1
+        trigger_event = concord_ai_voting.2
+    }
+}
+
+onaction_concord_application = {
+    # CONCORD Applications
+    if = {
+        limit = {
+            has_variable = application_progress_consortium
+        }
+        add_to_global_variable_list = {
+            name = concord_application_list
+            target = THIS
+        }
+    }
+    if = {
+        limit = {
+            has_variable = application_progress_consortium
+            application_progress_consortium <= 100
+        }
+        change_variable = {
+            name = application_progress_consortium
+            add = 3
+        }
+    }
+    if = {
+        limit = {
+            has_variable = application_progress_consortium
+            application_progress_consortium <= 100
+            supporting_countries_concord > required_support_consortium
+        }
+        change_variable = {
+            name = application_progress_consortium
+            add = 2
+        }
+    }
+    if = {
+        limit = {
+            has_variable = application_progress_consortium
+            application_progress_consortium >= 100
+            application_progress_consortium <= 150
+        }
+        change_variable = {
+            name = application_progress_consortium
+            add = 1
+        }
+    }
+    if = {
+        limit = {
+            has_variable = application_progress_consortium
+            var:application_progress_consortium >= 100
+            supporting_countries_concord >= required_support_consortium
+        }
+        effect_concord_application_approved = yes
+        rebuild_concord_memberlist = yes
+        trigger_event = concord_dynamic_resolution_events.4
+    }
+    if = {
+        limit = {
+            has_variable = application_progress_consortium
+            var:application_progress_consortium >= 150
+            not = {
+                supporting_countries_concord >= required_support_consortium
+            }
+        }
+        effect_concord_application_rejected = yes
+        trigger_event = concord_dynamic_resolution_events.5
+    }
+}

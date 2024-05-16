@@ -77,10 +77,10 @@
 		}
 
 		add = {
-			desc = "POP_BUREAUCRATS"
+			desc = "POP_HEDGE_WIZARDS"
 			if = {
 				limit = {
-					is_pop_type = bureaucrats
+					is_pop_type = hedge_wizards
 				}
 				value = 100
 			}
@@ -107,29 +107,16 @@
 			desc = "ASTROLOGICAL_STUDIES_LAW"
 			if = {
 				limit = {
-					is_pop_type = wizards
+					OR = {
+						is_pop_type = hedge_wizards
+						is_pop_type = wizards
+					}
+					
 					owner = {
 						has_law = law_type:law_astrological_studies
 					}
 				}
 				value = 25
-			}
-		}
-
-		if = {
-			limit = {
-				owner = {
-					has_law = law_type:law_court_mages
-				}
-			}
-			add = {
-				desc = "POP_BUREAUCRATS_MAGES"
-				if = {
-					limit = {
-						is_pop_type = bureaucrats
-					}
-					value = 50
-				}
 			}
 		}
 
@@ -157,11 +144,15 @@
 			desc = "ADMINISTRATION_ROLE"
 			if = {
 				limit = {
+					owner = {
+						has_law = law_type:law_magocracy
+					}
 					OR = {
 						is_pop_type = aristocrats
 						is_pop_type = clergymen
 						is_pop_type = capitalists
 						is_pop_type = wizards
+						is_pop_type = hedge_wizards
 					}
 					OR = {
 						pop_employment_building_group = bg_service

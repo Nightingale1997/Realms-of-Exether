@@ -22,7 +22,7 @@ effect_consortium_observer = {
 effect_consortium_application_approved = {
 	remove_variable = consortium_observer
 	remove_variable = consortium_supporting_list_size
-	remove_variable = application_progress_un
+	remove_variable = application_progress_consortium
 	clear_variable_list = consortium_supporting
 	clear_variable_list = consortium_abstaining
 	clear_variable_list = consortium_rejecting
@@ -35,7 +35,7 @@ effect_consortium_application_approved = {
 }
 effect_consortium_application_rejected = {
 	remove_variable = consortium_supporting_list_size
-	remove_variable = application_progress_un
+	remove_variable = application_progress_consortium
 	clear_variable_list = consortium_supporting
 	clear_variable_list = consortium_abstaining
 	clear_variable_list = consortium_rejecting
@@ -51,7 +51,7 @@ effect_consortium_application_rejected = {
 
 effect_reset_consortium_lists = {
 	set_global_variable = {
-		name = pending_resolution_progress
+		name = pending_resolution_progress_consortium
 		value = 0
 	}
 	every_country = {
@@ -63,17 +63,17 @@ effect_reset_consortium_lists = {
 		}
 		if = {
 			limit = {
-				has_variable = is_opposing
+				has_variable = is_supporting_consortium
 			}
-			remove_variable = is_opposing
+			remove_variable = is_supporting_consortium
 		}
 	}
 	remove_global_variable = asking_consortium_intervention_country
-	remove_global_variable = vetoed
-	remove_global_variable = pending_resolution
+	remove_global_variable = vetoed_consortium
+	remove_global_variable = pending_resolution_consortium
 }
 
-effect_remove_wargoals = {
+effect_remove_wargoals_consortium = {
 	every_diplomatic_play = { 
 		limit = {
 			has_play_goal = conquer_state
@@ -276,27 +276,27 @@ effect_remove_wargoals = {
 	}
 }
 
-effect_ai_vote_yes = {
-	set_variable = is_supporting
-	remove_variable = is_opposing
+effect_ai_vote_yes_consortium = {
+	set_variable = is_supporting_consortium
+	remove_variable = is_opposing_consortium
 	set_variable = {
 		name = consortium_alreadyvoted
 		days = 50
 	}
 }
 
-effect_ai_vote_no = {
-	set_variable = is_opposing
-	remove_variable = is_supporting
+effect_ai_vote_no_consortium = {
+	set_variable = is_opposing_consortium
+	remove_variable = is_supporting_consortium
 	set_variable = {
 		name = consortium_alreadyvoted
 		days = 50
 	}
 }
 
-effect_ai_vote_neutral = {
-	remove_variable = is_supporting
-	remove_variable = is_opposing
+effect_ai_vote_neutral_consortium = {
+	remove_variable = is_supporting_consortium
+	remove_variable = is_opposing_consortium
 	set_variable = {
 		name = consortium_alreadyvoted
 		days = 50

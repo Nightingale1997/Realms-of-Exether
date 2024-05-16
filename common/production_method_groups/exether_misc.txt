@@ -61,3 +61,109 @@ pmg_monster_hunters_squids = { #HUNTING BIGGER SQUIDS
 		pm_squid_squads
 	}
 }
+
+pmg_regional_mimosa = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_regional_logging
+		pm_mimosa_trees
+	}
+}
+
+pmg_syrup_trees = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_regional_logging
+		pm_canada_reference_here
+	}
+}
+
+pmg_potion_sap = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_no_potion_sap
+		pm_potion_sap
+		pm_increased_potion_sap
+	}
+}
+
+pmg_glass_bark = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_no_glass_bark
+		pm_glass_bark
+		pm_increased_glass_bark
+	}
+}
+
+pmg_base_building_logging_camp_stonewood = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_simple_forestry_stonewood
+		pm_saw_mills_stonewood
+		pm_electric_saw_mills_stonewood
+	}
+}
+
+pmg_base_building_logging_camp_crystalwood = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_simple_forestry_crystalwood
+		pm_saw_mills_crystalwood
+		pm_electric_saw_mills_crystalwood
+	}
+}
+
+pmg_liquortrees = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_regional_logging
+		pm_liquortrees
+	}
+}
+
+pmg_cloudsilver_roots = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_regional_logging
+		pm_cloudsilver_roots
+	}
+}
+
+pmg_base_building_haunted_grounds = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_ghost_hunters
+		pm_exorcists
+		pm_paranormal_containment_fields
+	}
+}
+
+pmg_equipment_haunted_grounds = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_no_equipment_haunted_grounds
+		pm_revealing_field_generators
+		pm_portable_ethereal_vacuums
+	}
+}
+
+pmg_transportation_haunted_grounds = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_rail_transport_building_logging_camp
+		pm_log_carts
+	}
+}
+
+pmg_ownership_capital_building_haunted_grounds = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	production_methods = {
+		pm_merchant_guilds_building_logging_camp
+		pm_privately_owned_building_logging_camp
+		pm_publicly_traded_building_logging_camp
+		pm_government_run_building_logging_camp
+		pm_worker_cooperative_building_logging_camp
+	}
+}

@@ -71,6 +71,13 @@ lawgroup_internal_security = {
 	regressive_movement_chance = 0.1
 }
 
+lawgroup_magic = {
+	law_group_category = power_structure
+	
+	progressive_movement_chance = 1
+	regressive_movement_chance = 0.255
+}
+
 lawgroup_economic_system = {
 	law_group_category = economy	
 	base_enactment_days = 150
@@ -171,13 +178,6 @@ lawgroup_welfare = {
 }
 
 lawgroup_migration = {
-	law_group_category = human_rights
-	
-	progressive_movement_chance = 1
-	regressive_movement_chance = 0.255
-}
-
-lawgroup_magic = {
 	law_group_category = human_rights
 	
 	progressive_movement_chance = 1

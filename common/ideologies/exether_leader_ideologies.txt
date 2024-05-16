@@ -126,3 +126,307 @@
 		}
 	}
 }
+
+ideology_artificer_baron = { #magical liberal
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_market_liberal.dds"
+	
+	character_ideology = yes
+
+	lawgroup_economic_system = {	
+		law_laissez_faire = strongly_approve
+		law_interventionism = neutral
+		law_agrarianism = disapprove
+		law_traditionalism = disapprove		
+		law_cooperative_ownership = strongly_disapprove
+		law_command_economy = strongly_disapprove
+		law_industry_banned = strongly_disapprove
+	}
+	
+	lawgroup_magic = {
+		law_no_magic = disapprove
+		law_divine_miracles = neutral
+		law_druidic_circles = neutral
+		law_artificer_guilds = strongly_approve
+		law_astrological_studies = neutral
+		law_dark_arts = neutral
+		law_mage_hunters = strongly_disapprove
+	}
+
+	lawgroup_childrens_rights = {
+		law_child_labor_allowed = approve
+		law_restricted_child_labor = disapprove
+		law_compulsory_primary_school = strongly_disapprove
+	}	
+	
+	lawgroup_trade_policy = {
+		law_free_trade = strongly_approve
+		law_mercantilism = disapprove
+		law_protectionism = disapprove		
+		law_isolationism = strongly_disapprove
+	}
+
+	lawgroup_labor_rights = {
+		law_regulatory_bodies = disapprove
+		law_worker_protections = strongly_disapprove
+	}
+
+	lawgroup_land_reform = {
+		law_collectivized_agriculture = strongly_disapprove
+		law_serfdom = disapprove
+		law_tenant_farmers = neutral
+		law_homesteading = neutral
+		law_commercialized_agriculture = approve
+	}	
+	possible = {
+		owner = {
+			has_technology_researched = stock_exchange
+			# capitalism must be relevant
+			exists = ig:ig_industrialists
+			ig:ig_industrialists = {
+				is_marginal = no
+			}
+		}
+		# Agitator ideologies should disapprove of a current law
+		NAND = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_laissez_faire
+				has_law = law_type:law_child_labor_allowed
+				has_law = law_type:law_free_trade
+				has_law = law_type:law_commercialized_agriculture
+			}
+		}
+		scope:interest_group = {
+			OR = {
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_landowners
+				is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_mages
+			}
+		}
+		scope:interest_group = {
+			NOR = {
+				has_variable = chose_vanguardism
+				has_variable = communist_ig_var
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	}
+
+	leader_weight = {
+		value = 100
+		# more likely for industrialists
+		if = {
+			limit = {
+				scope:interest_group = {
+					is_interest_group_type = ig_industrialists
+				}
+			}
+			add = 50
+		}
+		# more likely for mages, industrialists, and PB with traditional economic laws
+		if = {
+			limit = {
+				scope:interest_group = {
+					OR = {
+						is_interest_group_type = ig_petty_bourgeoisie
+						is_interest_group_type = ig_mages
+						is_interest_group_type = ig_industrialists
+					}
+				}
+				owner = {
+					OR = {
+						has_law = law_type:law_agrarianism
+						has_law = law_type:law_traditionalism
+						has_law = law_type:law_isolationism
+						has_law = law_type:law_mercantilism
+					}
+				}
+			}
+			add = 50
+		}
+		# more likely for weaker landowers when industrialists are powerful
+		if = {
+			limit = {
+				scope:interest_group = {
+					is_interest_group_type = ig_landowners
+					is_powerful = no
+				}
+				owner = {
+					exists = ig:ig_industrialists
+					ig:ig_industrialists = {
+						is_powerful = yes
+					}
+				}
+			}
+			add = 75
+		}
+		# less likely for powerful landowners under traditional laws
+		if = {
+			limit = {
+				scope:interest_group = {
+					is_interest_group_type = ig_landowners
+					is_powerful = yes
+				}
+				owner = {
+					OR = {
+						has_law = law_type:law_agrarianism
+						has_law = law_type:law_traditionalism
+					}
+				}
+			}
+			add = -75
+		}
+		# very unlikely in countries without a large urban center
+		if = {
+			limit = {
+				owner = {
+					NOT = {
+						any_scope_state = {
+							any_scope_building = {
+								is_building_type = building_urban_center
+								level >= 10
+							}
+						}
+					}
+				}
+			}
+			add = -150
+		}
+		# Less likely for unrecognized countries
+		if = {
+			limit = {
+				owner = {
+					is_country_type = unrecognized
+				}
+			}
+			add = -50
+		}
+		# More likely for GP's
+		if = {
+			limit = {
+				owner = {
+					country_rank = rank_value:great_power
+				}
+			}
+			add = 25
+		}
+		# Less likely if issues are not relevant
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_free_trade
+					has_law = law_type:law_laissez_faire
+					has_law = law_type:law_commercialized_agriculture
+					has_law = law_type:law_artificer_guilds
+				}
+			}
+			add = -75
+		}
+	}
+}
+
+ideology_druid = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/luddite.dds"
+	
+	character_ideology = yes
+
+	lawgroup_magic = {
+		law_no_magic = disapprove
+		law_divine_miracles = neutral
+		law_druidic_circles = strongly_approve
+		law_artificer_guilds = strongly_disapprove
+		law_astrological_studies = neutral
+		law_dark_arts = neutral
+		law_mage_hunters = disapprove
+	}
+
+	lawgroup_economic_system = {
+		law_industry_banned = strongly_approve
+		law_agrarianism = approve
+		law_cooperative_ownership = approve
+		law_traditionalism = neutral
+		law_laissez_faire = strongly_disapprove
+		law_interventionism = strongly_disapprove
+		law_command_economy = strongly_disapprove
+	}
+
+#	possible = {  ##might want to add a trigger here
+
+		# Agitator ideologies should disapprove of a current law
+		NAND = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_isolationism
+				has_law = law_type:law_industry_banned
+				has_law = law_type:law_druidic_circles
+			}
+		}
+		scope:interest_group = {
+			OR = {
+				is_interest_group_type = ig_rural_folk
+				is_interest_group_type = ig_devout
+				is_interest_group_type = ig_mages
+			}
+		}
+		scope:interest_group = {  #might remove this
+			NOR = {
+				has_variable = chose_vanguardism
+				has_variable = communist_ig_var
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+
+	leader_weight = {
+		value = 50 
+		# druids become politically active as encroachment occurs
+		if = {
+			limit = {
+				owner = {
+					any_scope_building = {
+						is_building_group = bg_subsistence_agriculture
+						level <= 12
+					}
+				}
+			}
+			add = 50
+		}
+		# More druids exist around farms
+		if = {
+			limit = {
+				owner = {
+					any_scope_state = {
+					OR = {
+						any_scope_building = {
+							is_building_group = bg_maize_farms
+							level >= 12
+						}
+						any_scope_building = {
+							is_building_group = bg_wheat_farms
+							level >= 12
+						}
+						any_scope_building = {
+							is_building_group = bg_millet_farms
+							level >= 12
+						}
+						any_scope_building = {
+							is_building_group = bg_rice_farms
+							level >= 8
+						}
+						any_scope_building = {
+							is_building_group = bg_plantations
+							level >= 10
+						}
+					}
+						
+					}
+				}
+			}
+			add = 50
+		}
+	}
+}

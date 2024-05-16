@@ -119,6 +119,16 @@
 			}
 		}
 
+		add = {
+			desc = "POP_HEROES"
+			if = {
+				limit = {
+					is_pop_type = heroes
+				}
+				value = 100
+			}
+		}
+
 		if = {
 			limit = {
 				owner = {
