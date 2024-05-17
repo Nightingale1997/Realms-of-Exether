@@ -1013,13 +1013,13 @@ STATE_MARZEHZARIN = {
     wood = x4AECD2
     farm = x63F0A9
     mine = x6DCAF9
-    port = x99D489
+    port = x4aecd2
     arable_land = 40
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_sugar_plantations" "bg_vineyard_plantations" }
     capped_resources = {
         bg_logging = 6
     }
-
+    naval_exit_id = 3179
 }
 STATE_HIGH_HARAVA = {
     id = 4284
@@ -1031,7 +1031,7 @@ STATE_HIGH_HARAVA = {
     wood = xA880F0
     farm = xBE6DEE
     mine = xD487D0
-    port = xFE8DFA
+    port = xa497fe
     arable_land = 25
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
     capped_resources = {
@@ -1040,7 +1040,7 @@ STATE_HIGH_HARAVA = {
         bg_iron_mining = 18
         bg_logging = 8
     }
-
+    naval_exit_id = 3179
 }
 STATE_PORCELAINGATE = {
     id = 4287
@@ -1053,7 +1053,7 @@ STATE_PORCELAINGATE = {
     wood = x90E39C
     farm = x9ECCEE
     mine = xA2F776
-    port = xEAEEA2
+    port = xd048e3
     arable_land = 50
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
     capped_resources = {
@@ -1066,7 +1066,7 @@ STATE_PORCELAINGATE = {
         type = "bg_oil_extraction"
         undiscovered_amount = 10
     }
-
+    naval_exit_id = 3179
 }
 STATE_LAERANELS_DESOLATION = {
     id = 4288
@@ -1077,7 +1077,7 @@ STATE_LAERANELS_DESOLATION = {
     wood = x45F5D8
     farm = x4AD9DF
     mine = x59D7CE
-    port = x68F6B3
+    port = x59d7ce
     arable_land = 50
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
@@ -1085,6 +1085,7 @@ STATE_LAERANELS_DESOLATION = {
         bg_coal_mining = 12
         bg_haunted_grounds = 4
     }
+    naval_exit_id = 3180
 }
 STATE_POMMELFALL = {
     id = 4289
