@@ -2329,7 +2329,7 @@ STATE_AZAROON = {
     wood = x84EDB6
     farm = x86EFEB
     mine = xA5C9E7
-    port = xAEE3FC
+    port = xb07ce0
     arable_land = 10
     arable_resources = { "bg_livestock_ranches" "bg_logging_crystalwood" }
     capped_resources = {
@@ -2339,6 +2339,7 @@ STATE_AZAROON = {
         type = "bg_oil_extraction"
         undiscovered_amount = 5
     }
+    naval_exit_id = 3183
 }
 STATE_KASHANIR = {
     id = 4367
@@ -2382,12 +2383,13 @@ STATE_SHIRAFIQ = {
     wood = x77D0FA
     farm = xA2CEB9
     mine = xACDAB4
-    port = xB0BFF2
+    port = xc2eb86
     capped_resources = {
         bg_haunted_grounds = 12
     }
     arable_land = 40
     arable_resources = { "bg_livestock_ranches" "bg_logging_crystalwood" }
+    naval_exit_id = 3183
 }
 STATE_NADHARIM = {
     id = 4370
@@ -2398,7 +2400,7 @@ STATE_NADHARIM = {
     wood = x90E9EF
     farm = x9EF287
     mine = x9FCD9B
-    port = xB2ADB7
+    port = x4eedf4
     arable_land = 40
     arable_resources = { "bg_livestock_ranches" "bg_logging_crystalwood" }
     capped_resources = {
@@ -2406,6 +2408,7 @@ STATE_NADHARIM = {
         bg_iron_mining = 45
         bg_haunted_grounds = 4
     }
+    naval_exit_id = 3183
 }
 STATE_QAMARUD = {
     id = 4371
@@ -2471,13 +2474,14 @@ STATE_KASHAMAD = {
     wood = x58C5F3
     farm = x83FCE2
     mine = x9AEFEA
-    port = x9B90D5
+    port = xd172e0
     arable_land = 102
     arable_resources = { "bg_livestock_ranches" "bg_logging_crystalwood" }
     capped_resources = {
         bg_lead_mining = 14
         bg_haunted_grounds = 26
     }
+    naval_exit_id = 3183
 }
 STATE_ALQADIM = {
     id = 4375
@@ -2499,7 +2503,7 @@ STATE_ZAHRIFAR = {
     wood = x8B79F1
     farm = x91BBBE
     mine = x9CD8D5
-    port = xA1BAD6
+    port = xe89693
     arable_land = 11
     arable_resources = { "bg_livestock_ranches" "bg_logging_crystalwood" }
     capped_resources = {
@@ -2509,6 +2513,7 @@ STATE_ZAHRIFAR = {
         type = "bg_oil_extraction"
         undiscovered_amount = 5
     }
+    naval_exit_id = 3182
 }
 STATE_FARASHIL = {
     id = 4377
@@ -2576,8 +2581,8 @@ STATE_AZHARIM = {
     wood = x40DBFB
     farm = x57CBF5
     mine = x6BD7D1
-    port = x75EF9B
-
+    port = xa3f6a0
+    naval_exit_id = 3182
 }
 STATE_KUMASKA = {
     id = 4406
