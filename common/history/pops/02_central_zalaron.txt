@@ -932,7 +932,20 @@
   }
     
   s:STATE_BLUMETO = {
-
+	region_state:VAI = {
+		create_pop = {
+			culture = vairian
+			size = 210000
+		}
+		create_pop = {
+			culture = kealohi
+			size = 160000
+		}
+		create_pop = {
+			culture = kotskarvi
+			size = 180000
+		}
+	}
   }
     
   s:STATE_STELALTAJO = {
