@@ -1283,7 +1283,7 @@ STATE_MONTARBORA = {
     wood = x98DBD0
     farm = xA39DCB
     mine = xAEDB82
-    port = xBD89D0
+    port = xf1d6b3
     arable_land = 100
     arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_tobacco_plantations" }
     capped_resources = {
@@ -1292,6 +1292,7 @@ STATE_MONTARBORA = {
         bg_lead_mining = 36
         bg_logging = 15
     }
+    naval_exit_id = 3192
 }
 
 
@@ -1401,6 +1402,7 @@ STATE_INSULBELA = {
     mine = xACE4AF
     port = xB9C8ED
 
+    naval_exit_id = 3192
 }
 STATE_TEROCARO = {
     id = 4308
@@ -1482,7 +1484,7 @@ STATE_MONTROSO = {
     farm = x7ADDE9
     mine = xB2EBE8
     port = xC56EE6
-
+    naval_exit_id = 3191
 }
 STATE_BLUMETO = {
     id = 4313
@@ -2150,8 +2152,9 @@ STATE_ALVEKSADO = {
     wood = x9FA0F2
     farm = xA8FE6F
     mine = xABC5F8
-    port = xAFA5A1
+    port = xC951E7
 
+    naval_exit_id = 3190
 }
 STATE_ALMARAQI = {
     id = 4353
@@ -2175,6 +2178,7 @@ STATE_NAJMAKULO = {
     mine = xD476E9
     port = xE3F4A6
 
+    naval_exit_id = 3190
 }
 STATE_KASIDA = {
     id = 4355
