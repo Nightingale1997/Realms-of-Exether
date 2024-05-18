@@ -1493,7 +1493,14 @@ STATE_BLUMETO = {
     farm = x71BDD4
     mine = x71C1EC
     port = xA5A5C9
-
+	arable_land = 22
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" "bg_mint_tea_plantations" "bg_wyrmfruit_plantations" }
+    capped_resources = {
+        bg_whaling = 4
+        bg_fishing = 6
+        bg_squidding = 6
+    }
+	naval_exit_id = 3089
 }
 STATE_STELALTAJO = {
     id = 4314

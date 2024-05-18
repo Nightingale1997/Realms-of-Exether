@@ -158,4 +158,480 @@
 			transfer_to_formation = scope:nra_fleet
 		}
 	}
+	c:KVA = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_amethyst_archipelago
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_HADRIA
+				count = 1
+			}
+			save_scope_as = kva_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_amethyst_archipelago
+			save_scope_as = kva_general
+		}
+		scope:kva_general = {
+			transfer_to_formation = scope:kva_army
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_amethyst_archipelago
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_HADRIA
+				count = 3
+			}
+			save_scope_as = kva_fleet
+		}
+
+		create_character = {
+			is_admiral = yes
+			hq = region_amethyst_archipelago
+			save_scope_as = kva_admiral
+		}
+		scope:kva_admiral = {
+			transfer_to_formation = scope:kva_fleet
+		}
+	}
+	c:QAR = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_thawed_lands
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_RAROMARA
+				count = 3
+			}
+			save_scope_as = qar_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_thawed_lands
+			save_scope_as = qar_general
+		}
+		scope:qar_general = {
+			transfer_to_formation = scope:qar_army
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_thawed_lands
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_RAROMARA
+				count = 1
+			}
+			save_scope_as = qar_fleet
+		}
+
+		create_character = {
+			is_admiral = yes
+			hq = region_thawed_lands
+			save_scope_as = qar_admiral
+		}
+		scope:qar_admiral = {
+			transfer_to_formation = scope:qar_fleet
+		}
+	}
+	c:TPK = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_thawed_lands
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_GARPATIA
+				count = 1
+			}
+
+			save_scope_as = tpk_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_thawed_lands
+			save_scope_as = tpk_general
+		}
+		scope:tpk_general = {
+			transfer_to_formation = scope:tpk_army
+		}
+	}
+	c:DIS = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_west_dragon_isles
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_CARTHAROS
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_SIGARA
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_CARTHAROS
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_SIGARA
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cuirassiers
+				state_region = s:STATE_CARTHAROS
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cuirassiers
+				state_region = s:STATE_SIGARA
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_CARTHAROS
+				service_type = conscript
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_SIGARA
+				service_type = conscript
+				count = 6
+			}
+			save_scope_as = dis_army_1
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_west_dragon_isles
+			save_scope_as = dis_general_1
+		}
+		scope:dis_general_1 = {
+			transfer_to_formation = scope:dis_army_1
+		}
+		
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_west_dragon_isles
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ZARTHOS
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_ZARTHOS
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cuirassiers
+				state_region = s:STATE_ZARTHOS
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_LILYBAEUM
+				service_type = conscript
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_CLYPYA
+				service_type = conscript
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_MOTHYA
+				service_type = conscript
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_SABRATHOS
+				service_type = conscript
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_CALTHA
+				service_type = conscript
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_LEPIDRA
+				service_type = conscript
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_ZAMARIS
+				service_type = conscript
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KLYPYRA
+				service_type = conscript
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_BYSARIS
+				service_type = conscript
+				count = 2
+			}
+			save_scope_as = dis_army_2
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_west_dragon_isles
+			save_scope_as = dis_general_2
+		}
+		scope:dis_general_2 = {
+			transfer_to_formation = scope:dis_army_2
+		}
+		
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_amethyst_archipelago
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_THAPSARIS
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_THAPSARIS
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cuirassiers
+				state_region = s:STATE_THAPSARIS
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_CERNIA
+				service_type = conscript
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_NEOSCARPIA
+				service_type = conscript
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_CARTHI
+				service_type = conscript
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_ZYRAS
+				service_type = conscript
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_LEPTHAR
+				service_type = conscript
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_SABRYA
+				service_type = conscript
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_LEPTISCA
+				service_type = conscript
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_THASPYR
+				service_type = conscript
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_OYRSA
+				service_type = conscript
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_EBRUS
+				service_type = conscript
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_ACRAS
+				service_type = conscript
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_THASPIA
+				service_type = conscript
+				count = 1
+			}
+			
+			save_scope_as = dis_army_3
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_amethyst_archipelago
+			save_scope_as = dis_general_3
+		}
+		scope:dis_general_3 = {
+			transfer_to_formation = scope:dis_army_3
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_west_dragon_isles
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_CARTHAROS
+				count = 20
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_CARTHAROS
+				count = 18
+			}
+			save_scope_as = dis_fleet
+		}
+
+		create_character = {
+			is_admiral = yes
+			hq = region_west_dragon_isles
+			save_scope_as = dis_admiral
+		}
+		scope:dis_admiral = {
+			set_commander_rank = 2
+			transfer_to_formation = scope:dis_fleet
+		}
+	}
+	c:IMR = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_west_dragon_isles
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_ZAMARA
+				count = 5
+			}
+
+			save_scope_as = imr_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_west_dragon_isles
+			save_scope_as = imr_general
+		}
+		scope:imr_general = {
+			transfer_to_formation = scope:imr_army
+		}
+	}
+	c:MVI = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_amethyst_archipelago
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_BYSSYRA
+				count = 6
+			}
+
+			save_scope_as = imr_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_amethyst_archipelago
+			save_scope_as = imr_general
+		}
+		scope:imr_general = {
+			transfer_to_formation = scope:imr_army
+		}
+	}
+	c:TKR = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_amethyst_archipelago
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_HADRA
+				count = 3
+			}
+
+			save_scope_as = imr_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_amethyst_archipelago
+			save_scope_as = imr_general
+		}
+		scope:imr_general = {
+			transfer_to_formation = scope:imr_army
+		}
+	}
+	c:RKO = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_west_dragon_isles
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KURTHARA
+				count = 1
+			}
+
+			save_scope_as = imr_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_west_dragon_isles
+			save_scope_as = imr_general
+		}
+		scope:imr_general = {
+			transfer_to_formation = scope:imr_army
+		}
+	}
 }
