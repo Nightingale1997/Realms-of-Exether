@@ -344,8 +344,6 @@ state_has_mountain = {
 
 }
 
-
-⠀⠀⠀⠀⠀⠀⠀
 no_beaches = {  
 #⠀⣞⢽⢪⢣⢣⢣⢫⡺⡵⣝⡮⣗⢷⢽⢽⢽⣮⡷⡽⣜⣜⢮⢺⣜⢷⢽⢝⡽⣝
 #⠸⡸⠜⠕⠕⠁⢁⢇⢏⢽⢺⣪⡳⡝⣎⣏⢯⢞⡿⣟⣷⣳⢯⡷⣽⢽⢯⣳⣫⠇
@@ -362,10 +360,10 @@ no_beaches = {
 #⠀⠀⠀⠀⠁⠇⠡⠩⡫⢿⣝⡻⡮⣒⢽⠋⠀⠀
 is_coastal = yes
 
-the_cooler_exether_is_coastal = no
+exether_is_coastal = no
 }
 
-the_cooler_exether_is_coastal = {
+exether_is_coastal = {
 	custom_tooltip = {
 		text = 	exether_is_coastal_tt
 		is_coastal = yes
@@ -957,36 +955,4 @@ the_cooler_exether_is_coastal = {
 		} 
 	}
 			
-	   }
-	
-
-
-
-
-
-is_sky_coastal = {
-	exether_is_coastal = no
-	is_coastal = yes
-}
-
-
-
-exether_is_coastal = {
-	custom_tooltip = {
-		text = 	exether_is_coastal_tt
-		is_coastal = yes
-		OR = {
-			state_has_mountain = no
-			state_region = s:STATE_GLASINBLAIR
-			state_region = s:STATE_ELDBERG
-			state_region = s:STATE_ESPRASHAD
-			state_region = s:STATE_STJERROPTOCHT
-			state_region = s:STATE_BLOODTHORN_WASTES
-			state_region = s:STATE_SALTSHORE
-			state_region = s:STATE_SALTSHORE_2
-			state_region = s:STATE_ANTAQAQA
-			state_region = s:STATE_GARRITXO
-			state_region = s:STATE_UDABERRI
-		}
-	}
 }
