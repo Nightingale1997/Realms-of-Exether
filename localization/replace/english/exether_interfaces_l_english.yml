@@ -180,3 +180,16 @@ ASTRAL_CALENDAR_SIGN_9: "[concept_horror]"
 ASTRAL_CALENDAR_SIGN_10: "[concept_kraken]"
 ASTRAL_CALENDAR_SIGN_11: "[concept_fiend]"
 ASTRAL_CALENDAR_SIGN_12: "[concept_angel]"
+
+SEA_NODE_TOOLTIP_SKY: "Sky Node"
+SEA_NODE_TOOLTIP_SEA: "#header [concept_sea_node] in [StrategicRegion.GetNameNoFormatting]#!\n$TOOLTIP_DELIMITER$\nThere are #v $NUM_CONVOYS$#! [concept_convoys] belonging to our [Concept('concept_shipping_lane', '$concept_shipping_lanes$')] that pass through this node[ConcatIfNeitherEmpty('\n','$SEA_NODE_DAMAGE$')]\n\n$SUPPLY_NETWORK$[ConcatIfNeitherEmpty('\n\n', StrategicRegion.GetConvoyRaidsDesc)]"
+
+SEA_NODE_TOOLTIP_SEA_PART_1: "#header [concept_sea_node] in [StrategicRegion.GetNameNoFormatting]#!\n$TOOLTIP_DELIMITER$\nThere are "
+
+SEA_NODE_TOOLTIP_SEA_PART_2: " [concept_convoys] belonging to our [Concept('concept_shipping_lane', '$concept_shipping_lanes$')] that pass through this node\n"
+
+SEA_NODE_TOOLTIP_SEA_PART_3: "[ConcatIfNeitherEmpty('\n\n', StrategicRegion.GetConvoyRaidsDesc)]"
+
+
+ SEA_NODE_TOOLTIP: "[AddTextIf(GetScriptedGui('is_sky_region').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('node_region', StrategicRegion.MakeScope).End), '1')][AddLocalizationIf(Not(GetScriptedGui('is_sky_region').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('node_region', StrategicRegion.MakeScope).End)), 'SEA_NODE_TOOLTIP_SEA_PART_1')][AddTextIf(Not(GetScriptedGui('is_sky_region').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('node_region', StrategicRegion.MakeScope).End)), '$NUM_CONVOYS$')][AddLocalizationIf(Not(GetScriptedGui('is_sky_region').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('node_region', StrategicRegion.MakeScope).End)), 'SEA_NODE_TOOLTIP_SEA_PART_2')][AddTextIf(Not(GetScriptedGui('is_sky_region').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('node_region', StrategicRegion.MakeScope).End)), '$SEA_NODE_DAMAGE$')][AddTextIf(Not(GetScriptedGui('is_sky_region').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('node_region', StrategicRegion.MakeScope).End)), '\n\n')][AddTextIf(Not(GetScriptedGui('is_sky_region').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('node_region', StrategicRegion.MakeScope).End)), '$SUPPLY_NETWORK$')][AddLocalizationIf(Not(GetScriptedGui('is_sky_region').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('node_region', StrategicRegion.MakeScope).End)), 'SEA_NODE_TOOLTIP_SEA_PART_3')]"
+ SEA_NODE_TOOLTIP_VALID: "[GetScriptedGui('is_sky_region').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('node_region', StrategicRegion.MakeScope).End)]"
