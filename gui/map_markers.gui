@@ -56,7 +56,7 @@ widget = {
 
 			### no supply
 			button = {
-				visible = "[And(Not(SeaNodeMarker.ShouldShowInteraction), Not(SeaNodeMarker.HasActiveSupplyNetwork))]"
+				visible = "[And(And(Not(SeaNodeMarker.ShouldShowInteraction), Not(SeaNodeMarker.HasActiveSupplyNetwork)), Not(EqualTo_string(SeaNodeMarker.GetSupplyNetworkTooltip, '1'))))]"
 				onclick = "[SeaNodeMarker.SelectClick]"
 				texture = "gfx/interface/map_markers/sea_node.dds"
 				gfxtype = framedbuttongfx
@@ -77,7 +77,7 @@ widget = {
 			### no supply - in interaction
 			button = {
 				alwaystransparent = yes
-				visible = "[And(SeaNodeMarker.ShouldShowInteraction, Not(SeaNodeMarker.HasActiveSupplyNetwork))]"
+				visible = "[And(And(SeaNodeMarker.ShouldShowInteraction, Not(SeaNodeMarker.HasActiveSupplyNetwork)), Not(EqualTo_string(SeaNodeMarker.GetSupplyNetworkTooltip, '1'))))]"
 				onclick = "[SeaNodeMarker.SelectInteractionClick]"
 				texture = "gfx/interface/map_markers/sea_node.dds"
 				gfxtype = framedbuttongfx
@@ -97,7 +97,7 @@ widget = {
 			button = {
 				onmousehierarchyenter = "[AccessHighlightManager.HighlightSupplyNetwork(Country.Self)]"
 				onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
-				visible = "[And(Not(SeaNodeMarker.ShouldShowInteraction), SeaNodeMarker.HasActiveSupplyNetwork)]"
+				visible = "[And(And(Not(SeaNodeMarker.ShouldShowInteraction), SeaNodeMarker.HasActiveSupplyNetwork), Not(EqualTo_string(SeaNodeMarker.GetSupplyNetworkTooltip, '1'))))]"
 				onclick = "[SeaNodeMarker.SelectClick]"
 				texture = "gfx/interface/map_markers/sea_node_have_supply.dds"
 				gfxtype = framedbuttongfx
@@ -116,7 +116,7 @@ widget = {
 			### has supply - in interaction
 			button = {
 				alwaystransparent = yes
-				visible = "[And(SeaNodeMarker.ShouldShowInteraction, SeaNodeMarker.HasActiveSupplyNetwork)]"
+				visible = "[And(And(SeaNodeMarker.ShouldShowInteraction, SeaNodeMarker.HasActiveSupplyNetwork), Not(EqualTo_string(SeaNodeMarker.GetSupplyNetworkTooltip, '1'))))]"
 				onclick = "[SeaNodeMarker.SelectInteractionClick]"
 				texture = "gfx/interface/map_markers/sea_node_have_supply.dds"
 				gfxtype = framedbuttongfx
@@ -154,7 +154,7 @@ widget = {
 
 			### no supply
 			button = {
-				visible = "[And(Not(SeaNodeMarker.ShouldShowInteraction), Not(SeaNodeMarker.HasActiveSupplyNetwork))]"
+				visible = "[And(And(Not(SeaNodeMarker.ShouldShowInteraction), Not(SeaNodeMarker.HasActiveSupplyNetwork)), Not(EqualTo_string(SeaNodeMarker.GetSupplyNetworkTooltip, '1'))))]"
 				onclick = "[SeaNodeMarker.SelectClick]"
 				texture = "gfx/interface/map_markers/sea_node.dds"
 				gfxtype = buttongfx
@@ -171,7 +171,7 @@ widget = {
 			### no supply - in interaction
 			button = {
 				alwaystransparent = yes
-				visible = "[And(SeaNodeMarker.ShouldShowInteraction, Not(SeaNodeMarker.HasActiveSupplyNetwork))]"
+				visible = "[And(And(SeaNodeMarker.ShouldShowInteraction, Not(SeaNodeMarker.HasActiveSupplyNetwork)), Not(EqualTo_string(SeaNodeMarker.GetSupplyNetworkTooltip, '1'))))]"
 				onclick = "[SeaNodeMarker.SelectClick]"
 				texture = "gfx/interface/map_markers/sea_node.dds"
 				gfxtype = buttongfx
