@@ -2119,7 +2119,7 @@ STATE_SAHARANDO = {
     wood = x7B91F9
     farm = x91E5CC
     mine = xA0C0D4
-    port = xB1E3D2
+    port = xda8d9a
     arable_land = 30
     arable_resources = { "bg_livestock_ranches" "bg_logging_crystalwood" }
     capped_resources = {
@@ -2127,6 +2127,7 @@ STATE_SAHARANDO = {
         bg_iron_mining = 33
         bg_haunted_grounds = 5
     }
+    naval_exit_id = 3187
 }
 STATE_ZAHARIDO = {
     id = 4351
@@ -2299,13 +2300,14 @@ STATE_ESPARASHIM = {
     wood = x90BAC2
     farm = x99F7D5
     mine = x9F98C8
-    port = xA98BC1
+    port = x4ff5be
     arable_land = 10
     arable_resources = { "bg_livestock_ranches" "bg_logging_crystalwood" }
     resource = {
         type = "bg_oil_extraction"
         undiscovered_amount = 5
     }
+    naval_exit_id = 3187
 }
 STATE_ALMAKSURO = {
     id = 4365
@@ -2362,7 +2364,7 @@ STATE_ALZAHRUD = {
     wood = x80E8CF
     farm = x85C8E1
     mine = x909AE1
-    port = x93EC88
+    port = xafa4cb
     arable_land = 30
     arable_resources = { "bg_livestock_ranches" "bg_logging_crystalwood" }
     capped_resources = {
@@ -2374,6 +2376,7 @@ STATE_ALZAHRUD = {
         type = "bg_oil_extraction"
         undiscovered_amount = 10
     }
+    naval_exit_id = 3189
 }
 STATE_SHIRAFIQ = {
     id = 4369
@@ -2419,7 +2422,7 @@ STATE_QAMARUD = {
     wood = x5BB6F6
     farm = x76F4BE
     mine = x78C7C7
-    port = x7AC1C8
+    port = xa4caa7
     arable_land = 10
     arable_resources = { "bg_livestock_ranches" "bg_logging_crystalwood" }
     capped_resources = {
@@ -2432,6 +2435,7 @@ STATE_QAMARUD = {
         depleted_type = "bg_gold_mining"
         undiscovered_amount = 10
     }
+    naval_exit_id = 3188
 }
 STATE_ZAHRAFI = {
     id = 4372
@@ -2442,7 +2446,7 @@ STATE_ZAHRAFI = {
     wood = x59CCDF
     farm = x6EEFC2
     mine = x72CBEB
-    port = x9EF0BF
+    port = xe4d092
     arable_land = 50
     arable_resources = { "bg_livestock_ranches" "bg_logging_crystalwood" }
     capped_resources = {
@@ -2452,6 +2456,7 @@ STATE_ZAHRAFI = {
         bg_gold_mining = 3
         bg_coal_mining = 6
     }
+    naval_exit_id = 3189
 }
 STATE_PARSIMAH = {
     id = 4373
@@ -2549,7 +2554,7 @@ STATE_ALNAHFID = {
     wood = x61D4F4
     farm = x73EBBA
     mine = x7CB0DA
-    port = x90ED94
+    port = xf0cd44
     arable_land = 80
     arable_resources = { "bg_livestock_ranches" "bg_logging_crystalwood" }
     capped_resources = {
@@ -2557,6 +2562,7 @@ STATE_ALNAHFID = {
         bg_iron_mining = 27
         bg_haunted_grounds = 26
     }
+    naval_exit_id = 3188
 }
 STATE_SHIRAZAN = {
     id = 4379
