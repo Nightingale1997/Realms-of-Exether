@@ -152,7 +152,7 @@ widget = {
 		container = {
 			visible = "[Not(IsZoomLevelFar)]"
 
-			### no supply
+			### no supply sea
 			button = {
 				visible = "[And(And(Not(SeaNodeMarker.ShouldShowInteraction), Not(SeaNodeMarker.HasActiveSupplyNetwork)), Not(EqualTo_string(SeaNodeMarker.GetSupplyNetworkTooltip, '1'))))]"
 				onclick = "[SeaNodeMarker.SelectClick]"
@@ -166,6 +166,23 @@ widget = {
 				parentanchor = center
 				using = tooltip_above
 				tooltip = "[SeaNodeMarker.GetSupplyNetworkTooltip]"
+			}
+
+			### no supply sky
+			button = {
+				visible = "[And(And(Not(SeaNodeMarker.ShouldShowInteraction), Not(SeaNodeMarker.HasActiveSupplyNetwork)), EqualTo_string(SeaNodeMarker.GetSupplyNetworkTooltip, '1')))]"
+				onclick = "[SeaNodeMarker.SelectClick]"
+				texture = "gfx/interface/map_markers/sky_node.dds"
+				gfxtype = buttongfx
+				effectname = "NoHighlight"
+				using = default_button_animation
+				using = select_button_sound
+				framesize = { 60 60 }
+				size = { 25 25 }
+				parentanchor = center
+				using = tooltip_above
+				tooltip = "[concept_sky_node]"
+				alpha = 0.75
 			}
 
 			### no supply - in interaction
@@ -183,11 +200,27 @@ widget = {
 				parentanchor = center
 			}
 
+			### no supply - in interaction sky
+			button = {
+				alwaystransparent = yes
+				visible = "[And(And(SeaNodeMarker.ShouldShowInteraction, Not(SeaNodeMarker.HasActiveSupplyNetwork)), EqualTo_string(SeaNodeMarker.GetSupplyNetworkTooltip, '1')))]"
+				onclick = "[SeaNodeMarker.SelectClick]"
+				texture = "gfx/interface/map_markers/sky_node.dds"
+				gfxtype = buttongfx
+				effectname = "NoHighlight"
+				using = default_button_animation
+				using = select_button_sound
+				framesize = { 60 60 }
+				size = { 25 25 }
+				parentanchor = center
+				alpha = 0.75
+			}
+
 			### has supply
 			button = {
 				onmousehierarchyenter = "[AccessHighlightManager.HighlightSupplyNetwork(Country.Self)]"
 				onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
-				visible = "[And(Not(SeaNodeMarker.ShouldShowInteraction), SeaNodeMarker.HasActiveSupplyNetwork)]"
+				visible = "[And(And(Not(SeaNodeMarker.ShouldShowInteraction), SeaNodeMarker.HasActiveSupplyNetwork), Not(EqualTo_string(SeaNodeMarker.GetSupplyNetworkTooltip, '1'))))]"
 				onclick = "[SeaNodeMarker.SelectClick]"
 				texture = "gfx/interface/map_markers/sea_node_have_supply.dds"
 				gfxtype = buttongfx
@@ -201,7 +234,57 @@ widget = {
 				tooltip = "[SeaNodeMarker.GetSupplyNetworkTooltip]"
 			}
 
+			### has supply sky
+			button = {
+				onmousehierarchyenter = "[AccessHighlightManager.HighlightSupplyNetwork(Country.Self)]"
+				onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+				visible = "[And(And(Not(SeaNodeMarker.ShouldShowInteraction), SeaNodeMarker.HasActiveSupplyNetwork), EqualTo_string(SeaNodeMarker.GetSupplyNetworkTooltip, '1')))]"
+				onclick = "[SeaNodeMarker.SelectClick]"
+				texture = "gfx/interface/map_markers/sky_node_have_supply.dds"
+				gfxtype = buttongfx
+				effectname = "NoHighlight"
+				using = default_button_animation
+				using = select_button_sound
+				framesize = { 60 60 }
+				size = { 30 30 }
+				parentanchor = center
+				using = tooltip_above
+				tooltip = "[concept_sky_node]"
+				alpha = 0.75
+			}
+
 			### has supply - in interaction
+			button = {
+				alwaystransparent = yes
+				visible = "[And(And(SeaNodeMarker.ShouldShowInteraction, SeaNodeMarker.HasActiveSupplyNetwork), Not(EqualTo_string(SeaNodeMarker.GetSupplyNetworkTooltip, '1'))))]"
+				onclick = "[SeaNodeMarker.SelectClick]"
+				texture = "gfx/interface/map_markers/sea_node_have_supply.dds"
+				gfxtype = buttongfx
+				effectname = "NoHighlight"
+				using = default_button_animation
+				using = select_button_sound
+				framesize = { 60 60 }
+				size = { 30 30 }
+				parentanchor = center
+			}
+
+			### has supply - in interaction
+			button = {
+				alwaystransparent = yes
+				visible = "[And(And(SeaNodeMarker.ShouldShowInteraction, SeaNodeMarker.HasActiveSupplyNetwork), EqualTo_string(SeaNodeMarker.GetSupplyNetworkTooltip, '1')))]"
+				onclick = "[SeaNodeMarker.SelectClick]"
+				texture = "gfx/interface/map_markers/sky_node_have_supply.dds"
+				gfxtype = buttongfx
+				effectname = "NoHighlight"
+				using = default_button_animation
+				using = select_button_sound
+				framesize = { 60 60 }
+				size = { 30 30 }
+				parentanchor = center
+				alpha = 0.75
+			}
+
+			### has supply - in interaction sky
 			button = {
 				alwaystransparent = yes
 				visible = "[And(SeaNodeMarker.ShouldShowInteraction, SeaNodeMarker.HasActiveSupplyNetwork)]"
