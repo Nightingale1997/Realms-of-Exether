@@ -1006,7 +1006,7 @@ STATE_ACHONIAN_HIGHLANDS = {
     wood = x90D796
     farm = x91DAA2
     mine = xB3EAC7
-    port = xC87BD5
+    port = x91daa2
     arable_land = 45
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
     capped_resources = {
@@ -1015,7 +1015,7 @@ STATE_ACHONIAN_HIGHLANDS = {
         bg_logging = 34
         bg_monuments = 1
     }
-
+    naval_exit_id = 3119
 }
 STATE_GLIMMERING_COAST = {
     id = 4176
@@ -1061,8 +1061,9 @@ STATE_HORSELORDS_DEMESNE = {
     wood = x69B6D9
     farm = x6AC9CD
     mine = x7F8EEC
-    port = x89F1E6
+    port = x3edeeb
 
+    naval_exit_id = 3199
 }
 STATE_ROCHENSTONE = {
     id = 4179
@@ -1074,6 +1075,7 @@ STATE_ROCHENSTONE = {
     mine = x72E4AA
     port = x80ABD8
 
+    naval_exit_id = 3199
 }
 STATE_SJETTSZCEK_MIRE = {
     id = 4180
@@ -1083,8 +1085,9 @@ STATE_SJETTSZCEK_MIRE = {
     wood = x94FEB0
     farm = x9DEC95
     mine = xBF8CFD
-    port = xC8C8EF
+    port = xe4aff0
 
+    naval_exit_id = 3199
 }
 STATE_THUNDERSPELL_COAST = {
     id = 4181
@@ -1149,7 +1152,7 @@ STATE_SHIFTING_SCAR = {
     city = x40E0DA
     wood = x51E0D7
     farm = x58CAF0
-    mine = x5FD7C1
+    mine = xf8d4ee
     arable_land = 30
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
@@ -1159,7 +1162,7 @@ STATE_SHIFTING_SCAR = {
         type = "bg_oil_extraction"
         undiscovered_amount = 5
     }
-
+    naval_exit_id = 3198
 }
 STATE_SHIFTING_SCAR_2 = {
     id = 3781
@@ -1168,7 +1171,7 @@ STATE_SHIFTING_SCAR_2 = {
     city = x40E0DA
     wood = x51E0D7
     farm = x58CAF0
-    mine = x5FD7C1
+    mine = xe29bb5
     arable_land = 14
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
@@ -1178,7 +1181,7 @@ STATE_SHIFTING_SCAR_2 = {
         type = "bg_oil_extraction"
         undiscovered_amount = 5
     }
-
+    naval_exit_id = 3198
 }
 STATE_OVERBURROW = {
     id = 4185
