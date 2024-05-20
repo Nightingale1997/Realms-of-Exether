@@ -840,6 +840,7 @@ STATE_GREENCOURT = {
     wood = x38F9E8
     farm = x6EFB9B
     mine = x76D2E6
+    port = x76d2e6
     arable_land = 32
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
     capped_resources = {
@@ -847,7 +848,7 @@ STATE_GREENCOURT = {
         bg_iron_mining = 60
         bg_logging = 12
     }
-
+    naval_exit_id = 3203
 }
 STATE_GREENCOURT_2 = {
     id = 4719
@@ -880,7 +881,7 @@ STATE_GOLDENACRE = {
         bg_iron_mining = 30
         bg_logging = 11
     }
-
+    naval_exit_id = 3203
 }
 STATE_SHARPWOOD = {
     id = 4168
@@ -889,13 +890,13 @@ STATE_SHARPWOOD = {
     city = x2ED4F9
     wood = x6BF7AB
     farm = x79F2DA
-    mine = x88EAA4
+    mine = xb4faf6
     arable_land = 70
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
     capped_resources = {
         bg_logging = 7
     }
-
+    naval_exit_id = 3203
 }
 STATE_VERDANT_VALE = {
     id = 4169
@@ -958,12 +959,13 @@ STATE_THE_MATCHES = {
     wood = x4FBCED
     farm = x6AE7CF
     mine = x77CBDE
+    port = xfc5df8
     arable_land = 70
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
     capped_resources = {
         bg_logging = 9
     }
-
+    naval_exit_id = 3203
 }
 STATE_RUNEPORT_GALESTRUM = {
     id = 4173
