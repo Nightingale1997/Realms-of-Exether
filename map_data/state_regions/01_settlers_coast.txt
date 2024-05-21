@@ -603,7 +603,7 @@ STATE_WAYFARE_MEADOWS = {
         bg_coal_mining = 62
         bg_logging = 9
     }
-
+    naval_exit_id = 3204
 }
 STATE_WAYFARE_MEADOWS_2 = {
     id = 3782
@@ -619,7 +619,7 @@ STATE_WAYFARE_MEADOWS_2 = {
         bg_coal_mining = 13
         bg_logging = 4
     }
-
+    naval_exit_id = 3204
 }
 STATE_THE_AMBER_RUN = {
     id = 4159
@@ -695,14 +695,14 @@ STATE_MISTREACH_2 = {
     city = x32E9DC
     wood = x38F9E8
     farm = x6EFB9B
-    mine = x76D2E6
+    mine = xe173e0
     arable_land = 36
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
     capped_resources = {
         bg_iron_mining = 11
         bg_logging = 6
     }
-
+    naval_exit_id = 3204
 }
 STATE_VICEROYS_PEARL = {
     id = 4161
@@ -857,7 +857,7 @@ STATE_GREENCOURT_2 = {
     city = x32E9DC
     wood = x38F9E8
     farm = x6EFB9B
-    mine = x76D2E6
+    mine = xf2f7e7
     arable_land = 23
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
     capped_resources = {
@@ -865,7 +865,7 @@ STATE_GREENCOURT_2 = {
         bg_sulfur_mining = 30
         bg_logging = 6
     }
-
+    naval_exit_id = 3204
 }
 STATE_GOLDENACRE = {
     id = 4167
@@ -1292,7 +1292,7 @@ STATE_MOUNT_YELFIS = {
         type = "bg_oil_extraction"
         undiscovered_amount = 5
     }
-
+    naval_exit_id = 3204
 }
 STATE_COGSREST = {
     id = 4193
