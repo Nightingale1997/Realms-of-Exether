@@ -1,4 +1,31 @@
-﻿pmg_base_building_wyrmfruit_plantation = {
+﻿pmg_base_building_songberry_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		default_building_songberry_plantation
+		gizmo_waterwrangler_irrigation_building_songberry_plantation
+		automatic_irrigation_building_songberry_plantation
+	}
+}
+
+pmg_train_automation_building_songberry_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_steam_rail_transport
+	}
+}
+
+pmg_ownership_land_building_songberry_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	production_methods = {
+		pm_privately_owned_plantation
+		pm_publicly_traded_plantation
+		pm_government_run_plantation
+		pm_worker_cooperative_plantation
+	}
+}
+
+pmg_base_building_wyrmfruit_plantation = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		default_building_wyrmfruit_plantation
@@ -14,6 +41,18 @@ pmg_train_automation_building_wyrmfruit_plantation = {
 		pm_steam_rail_transport
 	}
 }
+
+pmg_ownership_land_building_wyrmfruit_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	production_methods = {
+		pm_privately_owned_plantation
+		pm_publicly_traded_plantation
+		pm_government_run_plantation
+		pm_worker_cooperative_plantation
+	}
+}
+
+
 
 pmg_base_building_snowrubber_plantation = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
@@ -32,7 +71,7 @@ pmg_train_automation_building_snowrubber_plantation = {
 	}
 }
 
-pmg_base_building_snowcoffee_plantation = {
+pmg_base_building_mint_tea_plantation = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		default_building_coffee_plantation
@@ -41,7 +80,7 @@ pmg_base_building_snowcoffee_plantation = {
 	}
 }
 
-pmg_train_automation_building_snowcoffee_plantation = {
+pmg_train_automation_building_mint_tea_plantation = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	production_methods = {
 		pm_road_carts

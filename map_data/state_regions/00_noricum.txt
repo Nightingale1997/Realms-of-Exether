@@ -14,7 +14,7 @@
         bg_coal_mining = 44
         bg_logging = 7
     }
-    naval_exit_id = 3060
+
 }
 STATE_CALDAMUS = {
     id = 4002
@@ -48,7 +48,7 @@ STATE_SERONTAIN = {
         bg_coal_mining = 84
         bg_logging = 7
     }
-    naval_exit_id = 3060
+
 }
 STATE_NORTH_HIGHLANDS = {
     id = 4003
@@ -66,7 +66,7 @@ STATE_NORTH_HIGHLANDS = {
         bg_iron_mining = 63
         bg_logging = 13
     }
-    naval_exit_id = 3060
+
 }
 STATE_HIGHPASS = {
     id = 4004
@@ -83,7 +83,7 @@ STATE_HIGHPASS = {
         bg_iron_mining = 15
         bg_logging = 14
     }
-    naval_exit_id = 3060
+
 }
 STATE_SOUTH_HIGHLANDS = {
     id = 4005
@@ -100,7 +100,7 @@ STATE_SOUTH_HIGHLANDS = {
         bg_lead_mining = 45
         bg_logging = 17
     }
-    naval_exit_id = 3060
+
 }
 STATE_GULFWATCH = {
     id = 4006
@@ -212,7 +212,7 @@ STATE_TAR_PITS = {
         bg_sulfur_mining = 60
         bg_logging = 14
     }
-    naval_exit_id = 3060
+
 }
 STATE_WEST_YANGER_STEPPE = {
     id = 4012
@@ -230,7 +230,7 @@ STATE_WEST_YANGER_STEPPE = {
         bg_iron_mining = 21
         bg_logging = 5
     }
-    naval_exit_id = 3060
+
 }
 STATE_SOUTH_YANGER_STEPPE = {
     id = 3789
@@ -248,7 +248,7 @@ STATE_SOUTH_YANGER_STEPPE = {
         bg_iron_mining = 11
         bg_logging = 2
     }
-    naval_exit_id = 3060
+
 }
 STATE_EAST_YANGER_STEPPE = {
     id = 4013
@@ -283,7 +283,7 @@ STATE_RIDERS_MOOT = {
     capped_resources = {
         bg_logging = 6
     }
-    naval_exit_id = 3060
+
 }
 STATE_FROSTGATE = {
     id = 4015
@@ -405,7 +405,7 @@ STATE_RAVENCLIFF = {
         bg_iron_mining = 36
         bg_logging = 9
     }
-    naval_exit_id = 3060
+
 }
 STATE_HUNTERS_HILL = {
     id = 4022
@@ -420,7 +420,7 @@ STATE_HUNTERS_HILL = {
     capped_resources = {
         bg_logging = 17
     }
-    naval_exit_id = 3060
+
 }
 STATE_CROWNSHADE = {
     id = 4023
@@ -438,7 +438,7 @@ STATE_CROWNSHADE = {
         bg_coal_mining = 28
         bg_logging = 4
     }
-    naval_exit_id = 3060
+
 }
 STATE_TANISTS_RETREAT = {
     id = 4024
@@ -494,7 +494,7 @@ STATE_KOTHIAN = {
     farm = x83E0C6
     mine = x8FDB91
     port = xA0FCB9
-    naval_exit_id = 3060
+
 }
 STATE_DRAGONBANE_TUNDRA = {
     id = 4028
@@ -561,7 +561,7 @@ STATE_WHISPERPINE_WOODS = {
         type = "bg_oil_extraction"
         undiscovered_amount = 60
     }
-    naval_exit_id = 3061
+
 }
 STATE_BANEKERT = {
     id = 4031
@@ -591,7 +591,7 @@ STATE_ELDBERG = {
         bg_sulfur_mining = 20
         bg_whaling = 5
         bg_squidding = 4
-        bg_fishing_squidlets = 3
+        bg_fishing = 3
     }
     naval_exit_id = 3022
 }
@@ -610,7 +610,7 @@ STATE_ADRIANSEN = {
         bg_iron_mining = 30
         bg_logging = 6
     }
-    naval_exit_id = 3060
+
 }
 STATE_ARDSHIEL = {
     id = 4034
@@ -691,7 +691,7 @@ STATE_KILCREE = {
         bg_coal_mining = 60
         bg_logging = 11
     }
-    naval_exit_id = 3060
+
 }
 STATE_HAG_MARSHES = {
     id = 4039
@@ -722,7 +722,7 @@ STATE_BALLYNE = {
     farm = x9DAFC9
     mine = xA7F9E2
     port = xB363FC
-    naval_exit_id = 3060
+
 }
 STATE_URIKS_GIFT = {
     id = 4041
@@ -782,7 +782,7 @@ STATE_INVERINGAR = {
         bg_lead_mining = 24
         bg_logging = 8
     }
-    naval_exit_id = 3060
+
 }
 STATE_GLASLIESH = {
     id = 4045
@@ -810,7 +810,7 @@ STATE_BALATHOUL = {
         bg_wishstone_mining = 8
         bg_logging = 5
         bg_squidding = 6
-        bg_fishing_squidlets = 9
+        bg_fishing = 9
     }
     naval_exit_id = 3039
 }
@@ -824,7 +824,7 @@ STATE_LIGHTSCOURGE = {
     wood = xD98B96
     farm = xE69C9B
     mine = xF6F21F
-    naval_exit_id = 3061
+
 }
 STATE_KINGOUR = {
     id = 4048
@@ -842,7 +842,7 @@ STATE_KINGOUR = {
         bg_logging = 8
         bg_wishstone_mining = 8
         bg_squidding = 6
-        bg_fishing_squidlets = 7
+        bg_fishing = 7
     }
     naval_exit_id = 3039
 }
@@ -890,7 +890,7 @@ STATE_ROSKIRK = {
     farm = xBE6CE6
     mine = xBEAEEB
     port = xC160FD
-    naval_exit_id = 3060
+
 }
 STATE_SHROUDGUARD = {
     id = 4052
@@ -909,7 +909,7 @@ STATE_SHROUDGUARD = {
         bg_lead_mining = 60
         bg_logging = 13
     }
-    naval_exit_id = 3060
+
 }
 STATE_THORNWALL = {
     id = 4053
@@ -962,7 +962,7 @@ STATE_DUNMAFAR = {
     provinces = { "x3CCAFA" "x61F9B2" "x74FBB6" "xAAA4E2" "xAFFAA9" "xCCDEC0" "xDAC2AB" "xEBA0BC" }
     impassable = { "xAAA4E2" "x61F9B2" "xCCDEC0" }
     traits = { "state_trait_mammoth_cliffs" "state_trait_squid_breeding_grounds" }
-    city = x3CCAFA  
+    city = x3CCAFA
     farm = x61F9B2
     mine = xAAA4E2
     port = xAFFAA9
@@ -1117,7 +1117,7 @@ STATE_YSTRAD = {
         bg_coal_mining = 84
         bg_logging = 8
     }
-    naval_exit_id = 3060
+
 }
 STATE_GLYNFFORDD = {
     id = 4068
@@ -1156,7 +1156,7 @@ STATE_ALLTGLAS = {
         bg_wishstone_mining_depletable = 3
         bg_logging = 6
         bg_squidding = 7
-        bg_fishing_squidlets = 7
+        bg_fishing = 7
     }
     naval_exit_id = 3039
 }
@@ -1170,7 +1170,7 @@ STATE_HAFODFAN = {
     wood = xCEC69F
     farm = xD0C994
     mine = xD262ED
-    naval_exit_id = 3061
+
 }
 STATE_GWYNWEN = {
     id = 4072
@@ -1212,7 +1212,7 @@ STATE_CARREGRICE = {
     farm = x98D8CB
     mine = x9FE986
     port = xC94FFE
-    naval_exit_id = 3060
+
 }
 STATE_TALNANT = {
     id = 4075
@@ -1223,7 +1223,7 @@ STATE_TALNANT = {
     farm = xBADB7D
     mine = xC37AD4
     port = xCEE45A
-    naval_exit_id = 3060
+
 }
 STATE_BLACKDON = {
     id = 4076
@@ -1239,7 +1239,7 @@ STATE_BLACKDON = {
     capped_resources = {
         bg_logging = 13
     }
-    naval_exit_id = 3060
+
 }
 STATE_HARTHALGH = {
     id = 4078
@@ -1354,11 +1354,12 @@ STATE_HJELTIAS_GLACIER = {
     port = xA0BBCE
     arable_land = 23
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
-    bg_coal_mining = 19
-    bg_logging = 5
-    bg_squidding = 6
-    bg_fishing_squidlets = 9
-
+    capped_resources = {
+        bg_coal_mining = 19
+        bg_logging = 5
+        bg_squidding = 6
+        bg_fishing = 9
+    }
     naval_exit_id = 3039
 }
 STATE_NORDFJALL = {
@@ -1383,7 +1384,7 @@ STATE_NORDFJALL = {
         type = "bg_oil_extraction"
         undiscovered_amount = 50
     }
-    naval_exit_id = 3061
+
 }
 STATE_HRAUNLUND = {
     id = 4086
@@ -1396,7 +1397,7 @@ STATE_HRAUNLUND = {
     farm = x83DBF4
     mine = x9B9EDD
     port = xABC1BF
-    naval_exit_id = 3061
+
 }
 STATE_ZAWADKA = {
     id = 4087
@@ -1575,7 +1576,7 @@ STATE_HALDORHEIMR = {
     farm = x39F3FA
     mine = x6AF4B1
     port = x6FCDFB
-    naval_exit_id = 3061
+
 }
 STATE_POLYNKALA = {
     id = 4099
@@ -1717,7 +1718,7 @@ STATE_RAGNARKULL = {
         bg_logging = 13
         bg_whaling = 3
         bg_squidding = 5
-        bg_fishing_squidlets = 9
+        bg_fishing = 9
     }
     resource = {
         type = "bg_gold_fields"
@@ -1748,7 +1749,7 @@ STATE_BRISINGAMEN = {
         type = "bg_oil_extraction"
         undiscovered_amount = 20
     }
-    naval_exit_id = 3061
+
 }
 STATE_VIGAKULL = {
     id = 4113
@@ -1859,7 +1860,7 @@ STATE_HERVIK = {
     capped_resources = {
         bg_logging = 13
         bg_squidding = 4
-        bg_fishing_squidlets = 3
+        bg_fishing = 3
     }
     naval_exit_id = 3039
 }
@@ -1955,7 +1956,7 @@ STATE_GRYTINGARIK = {
     capped_resources = {
         bg_logging = 4
         bg_coal_mining = 14
-        bg_fishing_squidlets = 5
+        bg_fishing = 5
     }
     naval_exit_id = 3039
 }

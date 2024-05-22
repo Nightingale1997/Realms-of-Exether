@@ -5,7 +5,7 @@
 	levels_per_mesh = 5
 	
 	unlocking_technologies = {
-		atmospheric_engine
+		wishstone_machines
 	}
 
 	production_method_groups = {
@@ -31,12 +31,12 @@
 
 building_potion_distillery = {
 	building_group = bg_heavy_industry
-	texture = "gfx/interface/icons/building_icons/gizmo_workshop.dds"
+	texture = "gfx/interface/icons/building_icons/potions.dds"
 	city_type = city
 	levels_per_mesh = 5
 	
 	unlocking_technologies = {
-		manufacturies
+		alchemy
 	}
 
 	production_method_groups = {

@@ -1,4 +1,4 @@
-TRADE_ROUTES = {
+﻿TRADE_ROUTES = {
 	c:ORO ?= {
 		create_trade_route = {
 			goods = manowars
@@ -37,6 +37,14 @@ TRADE_ROUTES = {
 			level = 1
 			direction = import
 			target = c:RAV.market
+		}
+	}
+	c:KVA ?= {
+		create_trade_route = {
+			goods = manowars
+			level = 2
+			direction = import
+			target = c:QAR.market
 		}
 	}
 }

@@ -483,7 +483,8 @@ DMS = {
 
 #Sternenwacht
 STR = {
-	color = rgb{ 30  30  150 } 
+	color = hsv360 { 95 32 74 }
+	
 
 	country_type = recognized
 
@@ -606,7 +607,7 @@ SHE = {
 
 #Flussholm
 FLU = {
-	color = hsv360 { 95 32 74 }
+	color = rgb{ 30  30  80 } 
 
 	country_type = recognized
 
@@ -662,7 +663,7 @@ FIS = {
 	tier = principality
 
 	cultures = { stranfolk } 
-	capital = STATE_BLOEIJENDREAM
+	capital = STATE_WETTERWIIDTE
 }
 
 #Bûtenbosk
@@ -716,10 +717,22 @@ NEK = {
 XXP = {
 	color = { 47 30 110 }
 	
-	country_type = unrecognized
+	country_type = recognized
 
 	tier = kingdom
 	
-	cultures = { azmaraan qinnaat }
+	cultures = { timari }
 	capital = STATE_KASKADVIVO
+}
+
+#Whialor
+WHX = {
+	color = { 47 60 71 }
+	
+	country_type = recognized
+
+	tier = kingdom
+	
+	cultures = { whiali }
+	capital = STATE_RADIANTAJO
 }

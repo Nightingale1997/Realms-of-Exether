@@ -37,7 +37,7 @@ OH_DEER: "#italic 'Sup Doc, we have#! #bold [ErrorDeer.NumberOrErrors|v]#! #ital
  STATE_ADVENTURER_COVERAGE_DESC: "#header [concept_adventurer_coverage]#!\nThe $concept_adventurer_coverage$ balance in [State.GetName] is [State.MakeScope.ScriptValue('state_adventurer_coverage_balance')|1+=]\n$TOOLTIP_DELIMITER$\n$concept_adventurer_coverage$: #tooltippable #tooltip:[State.GetTooltipTag],STATE_ADVENTURER_COVERAGE_TOOLTIP [State.MakeScope.ScriptValue('state_adventurer_coverage_value')|1+]#!#!\n$concept_adventurer_coverage$ Usage: #tooltippable #tooltip:[State.GetTooltipTag],STATE_ADVENTURER_COVERAGE_USAGE_TOOLTIP [State.MakeScope.ScriptValue('state_adventurer_coverage_demand')|1-]#!#![SelectLocalization(GreaterThan_CFixedPoint(State.CalcTaxCapacityUsage, State.CalcTaxCapacity), 'STATE_ADVENTURER_COVERAGE_INSUFFICIENT_LONG', '')]"
 STATE_ADVENTURER_COVERAGE_TOOLTIP: "#bold [concept_adventurer_coverage]#!\n[State.GetName] has an [concept_adventurer_coverage] of #g [State.MakeScope.ScriptValue('state_adventurer_coverage_value')] #!\n$TOOLTIP_DELIMITER$ $ADVENTURER_COVERAGE_BASE_VALUE_BONUS$ [State.GetCustom('adventurer_coverage_bonus_loc')]"
 STATE_ADVENTURER_COVERAGE_DEMAND_TOOLTIP: "#bold [concept_adventurer_coverage]#!\n[State.GetName] has an [concept_adventurer_coverage] Usage of [State.MakeScope.ScriptValue('state_adventurer_coverage_demand')|0v] \n$TOOLTIP_DELIMITER$ $ADVENTURER_COVERAGE_DEMAND_BASE_VALUE$ [State.GetCustom('adventurer_coverage_demand_bonus_loc')] [State.GetCustom('adventurer_coverage_demand_urban_bonus_loc')]"
- ADVENTURER_COVERAGE_DEMAND_BASE_VALUE: "\n#r +[State.MakeScope.ScriptValue('state_adventurer_coverage_demand_arable_land')]#! from Arable Land"
+ ADVENTURER_COVERAGE_DEMAND_BASE_VALUE: "\n#r +[State.MakeScope.ScriptValue('state_adventurer_coverage_demand_arable_land')]#! from Unused Arable Land"
  ADVENTURER_COVERAGE_DEMAND_BASE_VALUE_BONUS: "\n#g -[State.MakeScope.ScriptValue('state_adventurer_coverage_demand_urban_center_reduction')]#! from Urban Center"
  STATE_ADVENTURER_COVERAGE_INSUFFICIENT: "\n Insufficient Coverage"
  STATE_ADVENTURER_COVERAGE_INSUFFICIENT_LONG: "\n\n@warning! Because usage is higher than capacity, the following effects are applied to the [concept_state]:\n[State.GetTaxCapacityEffectsDesc]"
@@ -149,13 +149,18 @@ VEIL_INTEGRITY_STATUS_STRENGTHENED: "#bold #o Strengthened#!#!"
 
 
   VEIL_INTEGRITY_TOOLTIP: "$VEIL_INTEGRITY_BALANCE$[GetPlayer.GetCustom('magic_reserves_loc')][SelectLocalization(GetMetaPlayer.GetPlayedOrObservedCountry.IsValid, 'VEIL_INTEGRITY_TOOLTIP_DELAYED', 'OBSERVER_NO_COUNTRY_SELECTED') ]"
-  VEIL_INTEGRITY_TOOLTIP_DELAYED: "\n$TOOLTIP_DELIMITER$\nThe current [concept_veil_integrity] is $VEIL_INTEGRITY_VALUE_TEXT$ @magic![Nbsp]due to:\n WIP"
+  VEIL_INTEGRITY_TOOLTIP_DELAYED: "\n$TOOLTIP_DELIMITER$\nOur Veil Impact:  [AccessPlayer.MakeScope.ScriptValue('country_veil_damage')|1-]\n$TOOLTIP_DELIMITER$\nTop Veil Damage (Past Month):\n1. [GetGlobalVariable('veil_damage_top_1').GetCountry.GetName] - [GetGlobalVariable('veil_damage_top_1_value').GetValue|-1]\n2. [GetGlobalVariable('veil_damage_top_2').GetCountry.GetName] - [GetGlobalVariable('veil_damage_top_2_value').GetValue|-1]\n3. [GetGlobalVariable('veil_damage_top_3').GetCountry.GetName] - [GetGlobalVariable('veil_damage_top_3_value').GetValue|-1]"
   VEIL_INTEGRITY_BALANCE: "@magic! #bold [concept_veil_integrity]#!\nCurrent integrity: $VEIL_INTEGRITY_STATUS$"
 
 VEIL_INTEGRITY_VALUE_TEXT: "[AddLocalizationIf(GreaterThan_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_VALUE_GOLD')][AddLocalizationIf(EqualTo_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_VALUE')][AddLocalizationIf(LessThan_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_VALUE_BLUE')]"
-VEIL_INTEGRITY_VALUE: "#v [AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')]%#!"
-VEIL_INTEGRITY_VALUE_GOLD: "#bold #o [AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')]%#!#!"
-VEIL_INTEGRITY_VALUE_BLUE: "#bold #u [AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')]%#!#!"
+VEIL_INTEGRITY_VALUE: "#v [AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')|1]%#!"
+VEIL_INTEGRITY_VALUE_GOLD: "#bold #o [AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')|1]%#!#!"
+VEIL_INTEGRITY_VALUE_BLUE: "#bold #u [AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')|1]%#!#!"
+
+VEIL_DAMAGE_COUNTRY: "[AccessPlayer.MakeScope.ScriptValue('country_veil_damage')]"
+
+STATE_VEIL_DAMAGE: "[Concept('concept_veil_integrity', 'Veil Impact')]\n  [State.MakeScope.ScriptValue('state_veil_damage')|1-] "
+
 
 ASTRAL_CALENDAR_YEAR: "Year of the $ASTRAL_CALENDAR_YEAR_SIGN$"
 
@@ -175,3 +180,13 @@ ASTRAL_CALENDAR_SIGN_9: "[concept_horror]"
 ASTRAL_CALENDAR_SIGN_10: "[concept_kraken]"
 ASTRAL_CALENDAR_SIGN_11: "[concept_fiend]"
 ASTRAL_CALENDAR_SIGN_12: "[concept_angel]"
+
+SEA_NODE_TOOLTIP_SKY: "Sky Node"
+SEA_NODE_TOOLTIP_SEA: "#header [concept_sea_node] in [StrategicRegion.GetNameNoFormatting]#!\n$TOOLTIP_DELIMITER$\nThere are #v $NUM_CONVOYS$#! [concept_convoys] belonging to our [Concept('concept_shipping_lane', '$concept_shipping_lanes$')] that pass through this node[ConcatIfNeitherEmpty('\n','$SEA_NODE_DAMAGE$')]\n\n$SUPPLY_NETWORK$[ConcatIfNeitherEmpty('\n\n', StrategicRegion.GetConvoyRaidsDesc)]"
+
+SEA_NODE_TOOLTIP_SEA_PART_1: "#header [concept_sea_node] in [StrategicRegion.GetNameNoFormatting]#!\n$TOOLTIP_DELIMITER$\n[ConcatIfNeitherEmpty('\n\n', StrategicRegion.GetConvoyRaidsDesc)]"
+
+
+
+ SEA_NODE_TOOLTIP: "[AddTextIf(GetScriptedGui('is_sky_region').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('node_region', StrategicRegion.MakeScope).End), '1')][AddLocalizationIf(Not(GetScriptedGui('is_sky_region').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('node_region', StrategicRegion.MakeScope).End)), 'SEA_NODE_TOOLTIP_SEA_PART_1')]" #Simply comment out this entry to make all nodes visible again
+ SEA_NODE_TOOLTIP_VALID: "[GetScriptedGui('is_sky_region').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('node_region', StrategicRegion.MakeScope).End)]" #Use this as SEA_NODE_TOOLTIP is performance tanks too hard

@@ -1,0 +1,29 @@
+﻿NMapName = {
+	NAME_DRAW_DISTANCE = 8000.0				# Remove names beyond this distance
+	NAME_FONT_NAME = "mapfont"		# Font used for drawing the map names
+	NAME_FONT_SIZE = 80						# Font size used for drawing the map names
+	FADE_SPEED = 2.0						# How fast names fade in/out
+	MAX_OPACITY = 0.8
+	MIN_OPACITY = 0.0						# minimum opacity. Names hidden by draw distance will still fade to 0
+	MIN_PROVINCES = 3						# minimum number of provinces for a name to be generated
+	ZOOM_STEPS_VISIBLE_SCALES = {	# Each map-name has a scale. This list contains min-max values for each zoom step. If a name's scale is outside that range it will not be visible
+		# min (hides names that are too small)
+		# max (hides names when they get to large)
+		0.0		0.0 	# 0
+		0.0		0.0 	# 1
+		0.0		0.0 	# 2
+		0.0		0.0 	# 3
+		0.0		0.05	# 4
+		0.0 	0.1		# 5
+		0.0 	0.2		# 6
+		0.0 	1.0		# 7 	Terrain map
+		0.0 	1.0		# 8
+		0.0 	2.0		# 9
+		0.0 	5.0		# 10	Flatmap
+		0.0 	5.0		# 11
+		0.0 	5.0		# 12
+		0.0 	5.0		# 13	No 2D UI on Map
+		0.0 	5.0		# 14
+		0.0 	5.0		# 15
+	}
+}

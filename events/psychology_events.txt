@@ -478,53 +478,21 @@ psychology_events.5 = {
 			name = freud_building_modifier
 			months = normal_modifier_time
 		}
-		if = {
-			limit = {
-				country_is_in_settler_coast = yes
+		custom_tooltip = sigmun_freud_else_tt
+		create_character = {
+			is_agitator = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_atheist
+			traits = {
+				ambitious
+				charismatic
+				cocaine_addiction
 			}
-			custom_tooltip = sigmun_freud_tt
-			create_character = {
-				first_name = Sigismund_Schlomo
-				last_name = Freud
-				historical = yes
-				is_agitator = yes
-				interest_group = ig_intelligentsia
-				female = no
-				dna = dna_sigmund_freud
-				religion = rel:jewish
-				ideology = ideology_atheist
-				traits = {
-					ambitious
-					charismatic
-					cocaine_addiction
-				}
-				on_created = {
-					add_modifier = {
-						name = freud_modifier
-						months = short_modifier_time
-						multiplier = 1
-					}
-				}
-			}
-		}
-		else = {
-			custom_tooltip = sigmun_freud_else_tt
-			create_character = {
-				is_agitator = yes
-				interest_group = ig_intelligentsia
-				religion = rel:jewish
-				ideology = ideology_atheist
-				traits = {
-					ambitious
-					charismatic
-					cocaine_addiction
-				}
-				on_created = {
-					add_modifier = {
-						name = freud_modifier
-						months = short_modifier_time
-						multiplier = 1
-					}
+			on_created = {
+				add_modifier = {
+					name = freud_modifier
+					months = short_modifier_time
+					multiplier = 1
 				}
 			}
 		}
@@ -545,53 +513,21 @@ psychology_events.5 = {
 	
 	option = { #make him IG leader
 		name = psychology_events.5.b 
-		if = {
-			limit = {
-				country_is_in_settler_coast = yes
+		custom_tooltip = sigmun_freud_else_tt
+		create_character = {
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_atheist
+			traits = {
+				ambitious
+				charismatic
+				cocaine_addiction
 			}
-			custom_tooltip = sigmun_freud_tt
-			create_character = {
-				first_name = Sigismund_Schlomo
-				last_name = Freud
-				historical = yes
-				ig_leader = yes
-				interest_group = ig_intelligentsia
-				female = no
-				dna = dna_sigmund_freud
-				religion = rel:jewish
-				ideology = ideology_atheist
-				traits = {
-					ambitious
-					charismatic
-					cocaine_addiction
-				}
-				on_created = {
-					add_modifier = {
-						name = freud_modifier
-						months = short_modifier_time
-						multiplier = 2
-					}
-				}
-			}
-		}
-		else = {
-			custom_tooltip = sigmun_freud_else_tt
-			create_character = {
-				ig_leader = yes
-				interest_group = ig_intelligentsia
-				religion = rel:jewish
-				ideology = ideology_atheist
-				traits = {
-					ambitious
-					charismatic
-					cocaine_addiction
-				}
-				on_created = {
-					add_modifier = {
-						name = freud_modifier
-						months = short_modifier_time
-						multiplier = 2
-					}
+			on_created = {
+				add_modifier = {
+					name = freud_modifier
+					months = short_modifier_time
+					multiplier = 2
 				}
 			}
 		}

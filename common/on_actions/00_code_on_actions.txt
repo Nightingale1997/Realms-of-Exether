@@ -13,6 +13,11 @@ on_monthly_pulse_country = {
 
 		# Comte
 		positivism.1
+
+		#Veil Superevents
+		veil_events.1
+		veil_events.2
+		veil_events.3
 	}
 	effect = {
 		every_character_in_exile_pool = {
@@ -21,10 +26,93 @@ on_monthly_pulse_country = {
 			}
 			kill_character = yes
 		}
+		
 		change_global_variable = {
 			name = veil_integrity_var
-			add = modifier:country_veil_integrity_contribution
+			add = var:veil_damage
 		}
+		set_variable = {
+			name = veil_damage
+			value = country_veil_damage
+		}
+
+		change_global_variable = {
+			name = veil_integrity_var
+			subtract = country_veil_damage
+		}
+		
+
+		if = {
+			limit = { NOT = { has_global_variable = recalculated_veil_impacts } }
+			set_global_variable = {
+				name = recalculated_veil_impacts
+				days = 29
+			}
+	
+	
+			set_global_variable = {
+				name = veil_damage_top_1_value
+				value = 0
+			}
+	
+	
+			set_global_variable = {
+				name = veil_damage_top_2_value
+				value = 0
+			}
+	
+	
+			set_global_variable = {
+				name = veil_damage_top_3_value
+				value = 0
+			}
+
+			every_country = {
+				if = {
+					limit = {
+						country_veil_damage > global_var:veil_damage_top_1_value
+					}
+					set_global_variable = {
+						name = veil_damage_top_1
+						value = this
+					}
+					set_global_variable = {
+						name = veil_damage_top_1_value
+						value = country_veil_damage
+					}
+				}
+				else_if = {
+					limit = {
+						country_veil_damage > global_var:veil_damage_top_2_value
+					}
+					set_global_variable = {
+						name = veil_damage_top_2
+						value = this
+					}
+					set_global_variable = {
+						name = veil_damage_top_2_value
+						value = country_veil_damage
+					}
+				}
+				else_if = {
+					limit = {
+						country_veil_damage > global_var:veil_damage_top_3_value
+					}
+					set_global_variable = {
+						name = veil_damage_top_3
+						value = this
+					}
+					set_global_variable = {
+						name = veil_damage_top_3_value
+						value = country_veil_damage
+					}
+				}
+			}
+		}
+	
+
+
+
 	}
 	# Election Events
 	random_events = {
@@ -121,6 +209,18 @@ on_monthly_pulse_country = {
 	random_events = {
 		5 = 0
 		1 = coup.1
+	}
+
+	events = {
+		# AI UN Resolution Events
+		concord_resolution_events.100
+		concord_resolution_events.101
+		concord_resolution_events.102
+		concord_resolution_events.103
+		consortium_resolution_events.100
+		consortium_resolution_events.101
+		consortium_resolution_events.102
+		consortium_resolution_events.103
 	}
 }
 
@@ -1089,7 +1189,6 @@ on_diplo_play_back_down = {
 					is_player = no
 				}
 			}
-			set_global_variable = achievement_mightier_than_the_sword
 		}
 	}
 }
@@ -1142,7 +1241,6 @@ on_diplo_play_subject_released_overlord = {
 # previous = Country switched from
 on_diplo_play_switch_sides = {
 	effect = {
-		set_global_variable = achievement_revo_needed
 	}
 }
 
@@ -1595,36 +1693,6 @@ on_law_enactment_pass = {
 					is_enacting_law = law_type:law_legacy_slavery
 				}
 			}
-			if = {
-				limit = {
-					has_modifier = unrestricted_slave_trade_modifier
-				}
-				remove_modifier = unrestricted_slave_trade_modifier
-			}
-			if = {
-				limit = {
-					has_modifier = restricted_slave_trade_modifier
-				}
-				remove_modifier = restricted_slave_trade_modifier
-			}
-			if = {
-				limit = {
-					has_modifier = slave_shipments_intercepted_small
-				}
-				remove_modifier = slave_shipments_intercepted_small
-			}
-			if = {
-				limit = {
-					has_modifier = slave_shipments_intercepted_large
-				}
-				remove_modifier = slave_shipments_intercepted_large
-			}
-			if = {
-				limit = {
-					has_variable = var_slave_trade_suppression_var
-				}
-				remove_variable = var_slave_trade_suppression_var
-			}
 		}
 		if = {
 			limit = {
@@ -1738,12 +1806,6 @@ on_secession_end = {
 # This action is triggered after `on_revolution_end`
 on_civil_war_won = {
 	effect = {
-		if = {
-			limit = {
-				has_global_variable = achievement_revo_needed
-			}
-			set_global_variable = achievement_revolutionary
-		}
 		if = {
 			limit = {
 				has_variable = anti_monarchist_revolution

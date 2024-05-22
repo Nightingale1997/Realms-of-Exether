@@ -1,0 +1,472 @@
+﻿namespace = concord_ai_voting
+concord_ai_voting.1 = {
+	# AI voting mechanism
+	type = country_event
+	placement = ROOT
+	trigger = {
+		is_ai = yes
+		has_global_variable = pending_resolution_concord
+		OR = {
+			has_variable = concord_member
+			has_variable = concord_major_member
+		}
+		nor = {
+			has_variable = concord_alreadyvoted
+			has_global_variable = vetoed_concord
+		}
+	}
+	immediate = {
+		every_country = {
+			limit = {
+				has_variable = asking_concord_intervention
+			}
+			save_scope_as = asking_concord_intervention_country
+		}
+		every_country = {
+			limit = {
+				has_variable = concord_intervention_enemy_country
+			}
+			save_scope_as = concord_intervention_enemy_country
+		}
+	}
+	# TODO - AI SCRIPTING
+	option = {
+		default_option = yes
+		name = concord_ai_voting.1.a
+		effect_ai_vote_yes_concord = yes
+		ai_chance = {
+			base = 0			# Declaration of human rights
+			modifier = {
+				trigger = {
+					and = {
+						has_journal_entry = je_korean_resolution
+						is_authoritarian = no
+					}
+				}
+				add = 50
+			}
+			# Declaration of human rights
+			modifier = {
+				trigger = {
+					and = {
+						has_journal_entry = je_declaration_of_human_rights
+						is_authoritarian = no
+					}
+				}
+				add = 50
+			}
+			modifier = {
+				trigger = {
+					and = {
+						has_journal_entry = je_decolonization_resolution
+						country_rank >= rank_value:great_power
+					}
+				}
+				add = 100
+			}
+			# UNCLOS 1
+			modifier = {
+				trigger = {
+					and = {
+						has_journal_entry = je_clos1
+						any_scope_state = {
+							is_coastal = yes
+						}
+					}
+				}
+				add = 50
+			}
+			# UN Intervention
+			modifier = {
+				trigger = {
+					and = {
+						has_journal_entry = je_intervention
+						scope:asking_concord_intervention_country = {
+							relations:root > relations_threshold:cordial
+						}
+					}
+				}
+				add = 50
+			}
+			modifier = {
+				trigger = {
+					and = {
+						has_journal_entry = je_intervention
+						scope:concord_intervention_enemy_country = {
+							relations:root < relations_threshold:hostile
+						}
+					}
+				}
+				add = 50
+			}
+		}
+	}
+	option = {
+		name = concord_ai_voting.1.b
+		effect_ai_vote_no_concord = yes
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = {
+					and = {
+						has_journal_entry = je_korean_resolution
+						is_authoritarian = yes
+					}
+				}
+				add = 60
+			}
+			# UNCLOS 1
+			modifier = {
+				trigger = {
+					and = {
+						has_journal_entry = je_clos1
+					}
+				}
+				add = 55
+			}
+			# UN Intervention
+			modifier = {
+				trigger = {
+					and = {
+						has_journal_entry = je_intervention
+						scope:asking_concord_intervention_country = {
+							relations:root < relations_threshold:neutral
+						}
+					}
+				}
+				add = 20
+			}
+			modifier = {
+				trigger = {
+					and = {
+						has_journal_entry = je_intervention
+						scope:asking_concord_intervention_country = {
+							relations:root < relations_threshold:cold
+						}
+					}
+				}
+				add = 30
+			}
+			modifier = {
+				trigger = {
+					and = {
+						has_journal_entry = je_intervention
+						scope:asking_concord_intervention_country = {
+							relations:root < relations_threshold:hostile
+						}
+					}
+				}
+				add = 50
+			}
+			modifier = {
+				trigger = {
+					and = {
+						has_journal_entry = je_intervention
+						scope:concord_intervention_enemy_country = {
+							relations:root > relations_threshold:neutral
+						}
+					}
+				}
+				add = 50
+			}
+		}
+	}
+	option = {
+		name = concord_ai_voting.1.c
+		effect_ai_vote_neutral_concord = yes
+		ai_chance = {
+			base = 5
+			modifier = {
+				trigger = {
+					has_journal_entry = je_korean_resolution
+				}
+				add = 30
+			}
+			# Declaration of human rights
+			modifier = {
+				trigger = {
+					and = {
+						has_journal_entry = je_declaration_of_human_rights
+						is_authoritarian = yes
+					}
+				}
+				add = 50
+			}
+			# UN Intervention
+			modifier = {
+				trigger = {
+					and = {
+						has_journal_entry = je_intervention
+						not = {
+							ruler = {
+								has_trait = paranoid
+							}
+						}
+					}
+				}
+				add = 50
+			}
+			modifier = {
+				trigger = {
+					and = {
+						has_journal_entry = je_intervention
+						scope:asking_concord_intervention_country = {
+							relations:root = relations_threshold:neutral
+						}
+					}
+				}
+				add = 50
+			}
+			modifier = {
+				trigger = {
+					and = {
+						has_journal_entry = je_intervention
+						scope:concord_intervention_enemy_country = {
+							relations:root > relations_threshold:neutral
+						}
+					}
+				}
+				add = 50
+			}
+		}
+	}
+}
+
+concord_ai_voting.2 = {
+	# AI Application voting mechanism
+	type = country_event
+	placement = ROOT
+	trigger = {
+		is_ai = yes
+		OR = {
+			has_variable = concord_member
+			has_variable = concord_major_member
+		}
+		not = {
+			has_variable = has_voted_on_application
+		}
+		any_country = {
+			has_variable = application_progress_concord
+		}
+	}
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = application_progress_concord
+			}
+			save_scope_as = applicant_country_scope
+		}
+	}
+	# TODO - AI SCRIPTING
+	option = {
+		default_option = yes
+		name = concord_ai_voting.2.a
+		set_variable = {
+			name = has_voted_on_application
+			days = 50
+		}
+		if = {
+			limit = {
+				or = {
+					supporting_countries_concord <= concord_memberstates
+					not = {
+						exists = var:concord_supporting_list_size
+					}
+				}
+			}
+			scope:applicant_country_scope = {
+				if = {
+					limit = {
+						not = {
+							is_target_in_variable_list = {
+								name = concord_supporting
+								target = ROOT
+							}
+						}
+					}
+					change_variable = {
+						name = concord_supporting_list_size
+						add = 1
+					}
+					add_to_variable_list = {
+						name = concord_supporting
+						target = ROOT
+					}
+				}
+				if = {
+					limit = {
+						is_target_in_variable_list = {
+							name = concord_rejecting
+							target = ROOT
+						}
+					}
+					change_variable = {
+						name = concord_supporting_list_size
+						add = 1
+					}
+				}
+				remove_list_variable = {
+					name = concord_rejecting
+					target = ROOT
+				}
+				remove_list_variable = {
+					name = concord_abstaining
+					target = ROOT
+				}
+			}
+		}
+		ai_chance = {
+			base = 30
+			modifier = {
+				trigger = {
+					scope:applicant_country_scope = {
+						relations:root >= relations_threshold:cordial
+					}
+				}
+				add = 100
+			}
+		}
+	}
+	option = {
+		name = concord_ai_voting.2.b
+		set_variable = {
+			name = has_voted_on_application
+			days = 50
+		}
+		if = {
+			limit = {
+				or = {
+					supporting_countries_concord <= concord_memberstates
+					not = {
+						exists = var:concord_supporting_list_size
+					}
+				}
+			}
+			scope:applicant_country_scope = {
+				add_to_variable_list = {
+					name = concord_abstaining
+					target = ROOT
+				}
+				if = {
+					limit = {
+						is_target_in_variable_list = {
+							name = concord_supporting
+							target = ROOT
+						}
+					}
+					change_variable = {
+						name = concord_supporting_list_size
+						subtract = 1
+					}
+				}
+				if = {
+					limit = {
+						is_target_in_variable_list = {
+							name = concord_rejecting
+							target = ROOT
+						}
+					}
+					change_variable = {
+						name = concord_supporting_list_size
+						add = 1
+					}
+				}
+				remove_list_variable = {
+					name = concord_supporting
+					target = ROOT
+				}
+				remove_list_variable = {
+					name = concord_rejecting
+					target = ROOT
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				trigger = {
+					scope:applicant_country_scope = {
+						relations:root = relations_threshold:neutral
+					}
+				}
+				add = 5
+			}
+		}
+	}
+	option = {
+		name = concord_ai_voting.2.c
+		set_variable = {
+			name = has_voted_on_application
+			days = 50
+		}
+		if = {
+			limit = {
+				or = {
+					supporting_countries_concord <= concord_memberstates
+					not = {
+						exists = var:concord_supporting_list_size
+					}
+				}
+			}
+			scope:applicant_country_scope = {
+				if = {
+					limit = {
+						not = {
+							is_target_in_variable_list = {
+								name = concord_rejecting
+								target = ROOT
+							}
+						}
+					}
+					change_variable = {
+						name = concord_supporting_list_size
+						subtract = 1
+					}
+					add_to_variable_list = {
+						name = concord_rejecting
+						target = ROOT
+					}
+				}
+				if = {
+					limit = {
+						is_target_in_variable_list = {
+							name = concord_supporting
+							target = ROOT
+						}
+					}
+					change_variable = {
+						name = concord_supporting_list_size
+						subtract = 1
+					}
+				}
+				remove_list_variable = {
+					name = concord_supporting
+					target = ROOT
+				}
+				remove_list_variable = {
+					name = concord_abstaining
+					target = ROOT
+				}
+			}
+		}
+		ai_chance = {
+			base = 5
+			modifier = {
+				trigger = {
+					scope:applicant_country_scope = {
+						relations:root < relations_threshold:neutral
+					}
+				}
+				add = 30
+			}
+			modifier = {
+				trigger = {
+					scope:applicant_country_scope = {
+						relations:root <= relations_threshold:hostile
+					}
+				}
+				add = 30
+			}
+		}
+	}
+}

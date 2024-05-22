@@ -45,4 +45,34 @@
 			transfer_to_formation = scope:gpk_army
 		}
 	}
+	c:HOR = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_north_chin_desert
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				service_type = conscript
+				state_region = s:STATE_TAYTAQOCHA
+				count = 14
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				service_type = conscript
+				state_region = s:STATE_TAYTAQOCHA
+				count = 2
+			}
+
+			save_scope_as = hor_army
+		}
+		
+		create_character = {
+			is_general = yes
+			hq = region_north_chin_desert
+			save_scope_as = hor_general
+		}
+		scope:hor_general = {
+			transfer_to_formation = scope:hor_army
+		}
+	}
 }

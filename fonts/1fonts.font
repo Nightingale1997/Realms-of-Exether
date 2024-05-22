@@ -1,0 +1,91 @@
+### mapfont
+fontfiles = {
+    name = "mapfont"
+    always_load = yes
+
+    group = {
+        languages = { "l_english" "l_braz_por" "l_french" "l_german" "l_polish" "l_spanish" "l_turkish" }
+        files = {
+            "fonts/amarante/Amarante-Regular.ttf"
+			"fonts/ZenOldMincho/ZenOldMincho-Regular.ttf" # Zen Old Mincho is used for Playfair in Japanese
+            "fonts/SB-Aggro/SB-Aggro-M.ttf" # SB-Aggro is used for Playfair in Korean
+            "fonts/NotoSerif/NotoSerifSC-Black.otf" # Noto Serif is used for Playfair in Simplified Chinese
+            "fonts/NotoSans/NotoSans-Regular.ttf"
+        }
+    }
+    
+    group = {
+        languages = { "l_russian" }
+        files = {
+            "fonts/amarante/Amarante-Regular.ttf"
+			"fonts/ZenOldMincho/ZenOldMincho-Regular.ttf" # Zen Old Mincho is used for Playfair in Japanese
+            "fonts/SB-Aggro/SB-Aggro-M.ttf" # SB-Aggro is used for Playfair in Korean
+            "fonts/NotoSerif/NotoSerifSC-Black.otf" # Noto Serif is used for Playfair in Simplified Chinese
+            "fonts/NotoSans/NotoSans-Regular.ttf"
+        }
+    }
+
+    group = {
+        languages = { "l_japanese" }
+        files = {
+		"fonts/セイビ正楷书体.ttf" # Zen Old Mincho is used for Playfair in Japanese
+            "fonts/PlayfairDisplay/PlayfairDisplay-Regular.ttf"
+            "fonts/SB-Aggro/SB-Aggro-M.ttf" # SB-Aggro is used for Playfair in Korean
+            "fonts/NotoSerif/NotoSerifSC-Black.otf" # Noto Serif is used for Playfair in Simplified Chinese
+            "fonts/NotoSans/NotoSans-Regular.ttf"
+        }
+    }
+
+    group = {
+        languages = { "l_korean" }
+        files = {
+            "fonts/SB-Aggro/SB-Aggro-M.ttf" # SB-Aggro is used for Playfair in Korean
+            "fonts/PlayfairDisplay/PlayfairDisplay-Regular.ttf"
+			"fonts/ZenOldMincho/ZenOldMincho-Regular.ttf" # Zen Old Mincho is used for Playfair in Japanese
+            "fonts/NotoSerif/NotoSerifSC-Black.otf" # Noto Serif is used for Playfair in Simplified Chinese
+            "fonts/NotoSans/NotoSans-Regular.ttf"
+        }
+    }
+    
+    group = {
+        languages = { "l_simp_chinese" }
+        files = {
+            "fonts/Lishu.ttf" # Noto Serif is used for Playfair in Simplified Chinese
+            "fonts/PlayfairDisplay/PlayfairDisplay-Regular.ttf"
+			"fonts/ZenOldMincho/ZenOldMincho-Regular.ttf" # Zen Old Mincho is used for Playfair in Japanese
+            "fonts/SB-Aggro/SB-Aggro-M.ttf" # SB-Aggro is used for Playfair in Korean
+            "fonts/NotoSans/NotoSans-Regular.ttf"
+        }
+    }
+}
+
+
+font = {
+    name = "mapfont"
+    
+    fontstyle = {
+        style = regular
+        fontfiles = "mapfont"
+    }
+    fontstyle = {
+        style = bold
+        fontfiles = "PlayfairDisplay-Bold"
+    }
+    fontstyle = {
+        style = italic
+        fontfiles = "PlayfairDisplay-Italic"
+    }
+}
+
+font = {
+    name = "Fancy"
+    
+    fontstyle = {
+        style = regular
+        fontfiles = "mapfont"
+    }
+    fontstyle = {
+        style = bold
+        fontfiles = "mapfont"
+    }
+}

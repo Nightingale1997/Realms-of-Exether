@@ -135,6 +135,14 @@ bg_ship_graveyard = {  #deplete into building_fishing_wharf or building_whaling_
 	default_building = building_ship_graveyard
 }
 
+bg_mountain_maize_farms = {
+	parent_group = bg_agriculture
+	
+	default_building = building_mountain_maize_farm
+	
+	cash_reserves_max = 25000
+}
+
 bg_wishstone_mining_depletable = { 
 	parent_group = bg_special_depletables_taxable
 
@@ -268,10 +276,6 @@ bg_fishing_goldfish = {
 	default_building = building_fishing_wharf_goldfish
 }
 
-bg_fishing_squidlets = {
-	parent_group = bg_fishing
-	default_building = building_fishing_wharf_squidlets
-}
 bg_plantations_discoverable = {
 	category = rural
 
@@ -303,16 +307,45 @@ bg_wyrmfruit_plantations = {
 	default_building = building_wyrmfruit_plantation
 }
 
-bg_snowrubber_plantations = {
+bg_songberry_plantations = {
 	parent_group = bg_plantations_discoverable
 	
-	default_building = building_snowrubber_plantation
+	default_building = building_songberry_plantation
 }
 
-bg_snowcoffee_plantations = {
-	parent_group = bg_plantations_discoverable
+bg_cold_rubber = {
+	category = rural 
 	
-	default_building = building_snowcoffee_plantation
+	capped_by_resources = yes
+	
+	economy_of_scale = yes
+
+	can_use_slaves = yes
+	
+	discoverable_resource = yes
+	
+	depletable_resource = no
+	
+	default_building = building_snowrubber_plantation
+	
+	lens = forestry	
+	
+	cash_reserves_max = 25000 
+	
+	urbanization = 5
+	infrastructure_usage_per_level = 1
+	
+	should_auto_expand = { 
+		default_auto_expand_rule = yes
+	}
+	
+	economy_of_scale_ai_factor = 1.5
+}
+
+bg_mint_tea_plantations = {
+	parent_group = bg_plantations_discoverable
+
+	default_building = building_mint_tea_plantation
 }
 
 bg_rice_farms_leechgardens = {
@@ -331,12 +364,79 @@ bg_logging_mimosa = {
 	can_use_slaves = yes
 }
 
-bg_logging_potion_sap = {
-	parent_group = bg_logging
-	
-	default_building = building_logging_camp_potion_sap
+bg_logging_stonewood = {
+	category = rural
 
+	capped_by_resources = yes
+	
+	economy_of_scale = yes
+	
 	can_use_slaves = yes
+	
+	default_building = building_logging_camp_stonewood
+	
+	lens = forestry	
+	
+	cash_reserves_max = 25000
+	
+	urbanization = 5
+	infrastructure_usage_per_level = 1
+	
+	should_auto_expand = { 
+		default_auto_expand_rule = yes
+	}
+	
+	economy_of_scale_ai_factor = 1.5
+}
+
+bg_logging_crystalwood = {
+	category = rural
+
+	land_usage = rural
+	
+	economy_of_scale = yes
+	
+	can_use_slaves = yes
+	
+	default_building = building_logging_camp_crystalwood
+	
+	lens = forestry	
+	
+	cash_reserves_max = 25000
+	
+	urbanization = 5
+	infrastructure_usage_per_level = 1
+	
+	should_auto_expand = { 
+		default_auto_expand_rule = yes
+	}
+	
+	economy_of_scale_ai_factor = 1.5
+}
+
+bg_haunted_grounds = {
+	category = rural
+
+	capped_by_resources = yes
+	
+	economy_of_scale = yes
+	
+	can_use_slaves = no
+	
+	default_building = building_haunted_grounds
+	
+	lens = forestry	
+	
+	cash_reserves_max = 25000
+	
+	urbanization = 5
+	infrastructure_usage_per_level = 1
+	
+	should_auto_expand = { 
+		default_auto_expand_rule = yes
+	}
+	
+	economy_of_scale_ai_factor = 1.5
 }
 
 bg_logging_syrup_trees = {
@@ -361,4 +461,5 @@ bg_logging_liquortrees = {
 	default_building = building_logging_camp_liquortrees
 
 	can_use_slaves = yes
+
 }

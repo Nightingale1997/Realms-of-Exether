@@ -4,13 +4,27 @@
 	texture = "gfx/interface/icons/war_goals/open_market.dds"
 
 	possible = {
+		OR = {
+			has_strategic_land_adjacency = scope:target_country
+			AND = {
+				any_scope_state = {
+					exether_is_coastal = yes
+				}
+				navy_size >= 10
+				scope:target_country = {
+					any_scope_state = {
+						exether_is_coastal = yes
+					}
+				}
+			}
+		}
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = organization }
+		NOT = { is_country_type = consortium }
 		aggressive_diplomatic_plays_permitted = yes
 		NOT = { is_subject_of = scope:target_country }		
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = organization }
+		NOT = { is_country_type = consortium }
 			NOT = { is_subject_of = root }
 		}
 	}
@@ -29,13 +43,27 @@ dp_regime_change = {
 	texture = "gfx/interface/icons/war_goals/regime_change.dds"
 
 	possible = {
+		OR = {
+			has_strategic_land_adjacency = scope:target_country
+			AND = {
+				any_scope_state = {
+					exether_is_coastal = yes
+				}
+				navy_size >= 10
+				scope:target_country = {
+					any_scope_state = {
+						exether_is_coastal = yes
+					}
+				}
+			}
+		}
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = organization }
+		NOT = { is_country_type = consortium }
 		aggressive_diplomatic_plays_permitted = yes
 		NOT = { is_subject_of = scope:target_country }	
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = organization }
+		NOT = { is_country_type = consortium }
 		}	
 	}
 
@@ -52,13 +80,27 @@ dp_ban_slavery = {
 	texture = "gfx/interface/icons/war_goals/ban_slavery.dds"
 
 	possible = {
+		OR = {
+			has_strategic_land_adjacency = scope:target_country
+			AND = {
+				any_scope_state = {
+					exether_is_coastal = yes
+				}
+				navy_size >= 10
+				scope:target_country = {
+					any_scope_state = {
+						exether_is_coastal = yes
+					}
+				}
+			}
+		}
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = organization }
+		NOT = { is_country_type = consortium }
 		aggressive_diplomatic_plays_permitted = yes
 		NOT = { is_subject_of = scope:target_country }	
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = organization }
+		NOT = { is_country_type = consortium }
 		}	
 	}
 
@@ -75,13 +117,28 @@ dp_conquer_state = {
 	texture = "gfx/interface/icons/war_goals/conquer_state.dds"
 	
 	possible = {
+		OR = {
+			has_strategic_land_adjacency = scope:target_country
+			AND = {
+				any_scope_state = {
+					exether_is_coastal = yes
+				}
+				navy_size >= 10
+				scope:target_country = {
+					any_scope_state = {
+						exether_is_coastal = yes
+					}
+				}
+			}
+		}
+
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = organization }
+		NOT = { is_country_type = consortium }
 		aggressive_diplomatic_plays_permitted = yes
 		NOT = { is_subject_of = scope:target_country }
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
-			NOT = { is_country_type = organization }
+			NOT = { is_country_type = consortium }
 			NOT = { is_subject_of = root }
 		}	
 		diplomatic_play_has_no_relations_blockers = yes		
@@ -102,13 +159,27 @@ dp_return_state = {
 	texture = "gfx/interface/icons/war_goals/return_state.dds"
 	
 	possible = {
+		OR = {
+			has_strategic_land_adjacency = scope:target_country
+			AND = {
+				any_scope_state = {
+					exether_is_coastal = yes
+				}
+				navy_size >= 10
+				scope:target_country = {
+					any_scope_state = {
+						exether_is_coastal = yes
+					}
+				}
+			}
+		}
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = organization }
+		NOT = { is_country_type = consortium }
 		aggressive_diplomatic_plays_permitted = yes
 		NOT = { is_subject_of = scope:target_country }	
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = organization }
+		NOT = { is_country_type = consortium }
 			NOT = { is_subject_of = root }
 		}
 		diplomatic_play_has_no_relations_blockers = yes
@@ -127,13 +198,27 @@ dp_liberate_subject = {
 	texture = "gfx/interface/icons/war_goals/liberate_subject.dds"
 
 	possible = {
+		OR = {
+			has_strategic_land_adjacency = scope:target_country
+			AND = {
+				any_scope_state = {
+					exether_is_coastal = yes
+				}
+				navy_size >= 10
+				scope:target_country = {
+					any_scope_state = {
+						exether_is_coastal = yes
+					}
+				}
+			}
+		}
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = organization }
+		NOT = { is_country_type = consortium }
 		aggressive_diplomatic_plays_permitted = yes
 		NOT = { is_subject_of = scope:target_country }	
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = organization }
+		NOT = { is_country_type = consortium }
 			is_subject = yes
 			NOT = { is_subject_of = root }
 		}
@@ -153,8 +238,22 @@ dp_liberate_country = {
 	texture = "gfx/interface/icons/war_goals/liberate_country.dds"
 
 	possible = {
+		OR = {
+			has_strategic_land_adjacency = scope:target_country
+			AND = {
+				any_scope_state = {
+					exether_is_coastal = yes
+				}
+				navy_size >= 10
+				scope:target_country = {
+					any_scope_state = {
+						exether_is_coastal = yes
+					}
+				}
+			}
+		}
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = organization }
+		NOT = { is_country_type = consortium }
 		aggressive_diplomatic_plays_permitted = yes
 		NOT = { is_subject_of = scope:target_country }	
 		diplomatic_play_has_no_relations_blockers = yes
@@ -175,8 +274,22 @@ dp_independence = {
 	texture = "gfx/interface/icons/war_goals/independence.dds"
 
 	possible = {
+		OR = {
+			has_strategic_land_adjacency = scope:target_country
+			AND = {
+				any_scope_state = {
+					exether_is_coastal = yes
+				}
+				navy_size >= 10
+				scope:target_country = {
+					any_scope_state = {
+						exether_is_coastal = yes
+					}
+				}
+			}
+		}
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = organization }
+		NOT = { is_country_type = consortium }
 	}
 
 	on_weekly_pulse = {}
@@ -193,13 +306,27 @@ dp_take_treaty_port = {
 	texture = "gfx/interface/icons/war_goals/take_treaty_port.dds"
 	
 	possible = {
+		OR = {
+			has_strategic_land_adjacency = scope:target_country
+			AND = {
+				any_scope_state = {
+					exether_is_coastal = yes
+				}
+				navy_size >= 10
+				scope:target_country = {
+					any_scope_state = {
+						exether_is_coastal = yes
+					}
+				}
+			}
+		}
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = organization }
+		NOT = { is_country_type = consortium }
 		aggressive_diplomatic_plays_permitted = yes
 		NOT = { is_subject_of = scope:target_country }
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = organization }
+		NOT = { is_country_type = consortium }
 			NOT = { is_subject_of = root }
 		}
 		diplomatic_play_has_no_relations_blockers = yes	
@@ -220,6 +347,20 @@ dp_increase_autonomy = {
 	texture = "gfx/interface/icons/war_goals/increase_autonomy.dds"
 	
 	possible = {
+		OR = {
+			has_strategic_land_adjacency = scope:target_country
+			AND = {
+				any_scope_state = {
+					exether_is_coastal = yes
+				}
+				navy_size >= 10
+				scope:target_country = {
+					any_scope_state = {
+						exether_is_coastal = yes
+					}
+				}
+			}
+		}
 		is_subject = yes
 	}
 	
@@ -238,6 +379,20 @@ dp_reduce_autonomy = {
 	texture = "gfx/interface/icons/war_goals/reduce_autonomy.dds"
 	
 	possible = {
+		OR = {
+			has_strategic_land_adjacency = scope:target_country
+			AND = {
+				any_scope_state = {
+					exether_is_coastal = yes
+				}
+				navy_size >= 10
+				scope:target_country = {
+					any_scope_state = {
+						exether_is_coastal = yes
+					}
+				}
+			}
+		}
 		aggressive_diplomatic_plays_permitted = yes
 		scope:target_country = { is_subject = yes }
 	}
@@ -255,6 +410,20 @@ dp_make_tributary = {
 	texture = "gfx/interface/icons/war_goals/make_tributary.dds"
 	
 	possible = {
+		OR = {
+			has_strategic_land_adjacency = scope:target_country
+			AND = {
+				any_scope_state = {
+					exether_is_coastal = yes
+				}
+				navy_size >= 10
+				scope:target_country = {
+					any_scope_state = {
+						exether_is_coastal = yes
+					}
+				}
+			}
+		}
 		aggressive_diplomatic_plays_permitted = yes	
 	}
 	
@@ -270,7 +439,21 @@ dp_make_protectorate = {
 	
 	texture = "gfx/interface/icons/war_goals/make_protectorate.dds"
 	
-	possible = {	
+	possible = {
+		OR = {
+			has_strategic_land_adjacency = scope:target_country
+			AND = {
+				any_scope_state = {
+					exether_is_coastal = yes
+				}
+				navy_size >= 10
+				scope:target_country = {
+					any_scope_state = {
+						exether_is_coastal = yes
+					}
+				}
+			}
+		}	
 		aggressive_diplomatic_plays_permitted = yes				
 	}
 	
@@ -286,14 +469,28 @@ dp_transfer_subject = {
 	
 	texture = "gfx/interface/icons/war_goals/transfer_subject.dds"
 	
-	possible = {	
+	possible = {
+		OR = {
+			has_strategic_land_adjacency = scope:target_country
+			AND = {
+				any_scope_state = {
+					exether_is_coastal = yes
+				}
+				navy_size >= 10
+				scope:target_country = {
+					any_scope_state = {
+						exether_is_coastal = yes
+					}
+				}
+			}
+		}	
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = organization }
+		NOT = { is_country_type = consortium }
 		aggressive_diplomatic_plays_permitted = yes
 		NOT = { is_subject_of = scope:target_country }	
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = organization }
+		NOT = { is_country_type = consortium }
 			is_subject = yes
 			NOT = { is_subject_of = root }
 		}
@@ -313,12 +510,26 @@ dp_annex_subject = {
 	texture = "gfx/interface/icons/war_goals/annex_country.dds"
 	
 	possible = {
+		OR = {
+			has_strategic_land_adjacency = scope:target_country
+			AND = {
+				any_scope_state = {
+					exether_is_coastal = yes
+				}
+				navy_size >= 10
+				scope:target_country = {
+					any_scope_state = {
+						exether_is_coastal = yes
+					}
+				}
+			}
+		}
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = organization }
+		NOT = { is_country_type = consortium }
 		aggressive_diplomatic_plays_permitted = yes
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = organization }
+		NOT = { is_country_type = consortium }
 			is_direct_subject_of = root
 			OR = {
 				has_diplomatic_pact = { who = root type = puppet }
@@ -346,6 +557,20 @@ dp_force_recognition = {
 	}
 	
 	possible = {
+		OR = {
+			has_strategic_land_adjacency = scope:target_country
+			AND = {
+				any_scope_state = {
+					exether_is_coastal = yes
+				}
+				navy_size >= 10
+				scope:target_country = {
+					any_scope_state = {
+						exether_is_coastal = yes
+					}
+				}
+			}
+		}
 		is_country_type = unrecognized
 		aggressive_diplomatic_plays_permitted = yes
 		scope:target_country = {
@@ -382,6 +607,20 @@ dp_revolution = {
 	}	
 	
 	possible = {
+		OR = {
+			has_strategic_land_adjacency = scope:target_country
+			AND = {
+				any_scope_state = {
+					exether_is_coastal = yes
+				}
+				navy_size >= 10
+				scope:target_country = {
+					any_scope_state = {
+						exether_is_coastal = yes
+					}
+				}
+			}
+		}
 		scope:initiator = {
 			is_revolutionary = yes
 		}
@@ -390,7 +629,7 @@ dp_revolution = {
 
 	additional_involvement_trigger = {
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = organization }
+		NOT = { is_country_type = consortium }
 		aggressive_diplomatic_plays_permitted = yes
 	
 		scope:target_country = {
@@ -438,6 +677,20 @@ dp_secession = {
 	}		
 	
 	possible = {
+		OR = {
+			has_strategic_land_adjacency = scope:target_country
+			AND = {
+				any_scope_state = {
+					exether_is_coastal = yes
+				}
+				navy_size >= 10
+				scope:target_country = {
+					any_scope_state = {
+						exether_is_coastal = yes
+					}
+				}
+			}
+		}
 		scope:target_country = {
 			is_secessionist = yes
 		}
@@ -445,7 +698,7 @@ dp_secession = {
 
 	additional_involvement_trigger = {
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = organization }
+		NOT = { is_country_type = consortium }
 		aggressive_diplomatic_plays_permitted = yes
 	
 		scope:target_country = {
@@ -479,13 +732,27 @@ dp_contain_threat = {
 	texture = "gfx/interface/icons/war_goals/contain_threat.dds"
 	
 	possible = {
+		OR = {
+			has_strategic_land_adjacency = scope:target_country
+			AND = {
+				any_scope_state = {
+					exether_is_coastal = yes
+				}
+				navy_size >= 10
+				scope:target_country = {
+					any_scope_state = {
+						exether_is_coastal = yes
+					}
+				}
+			}
+		}
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = organization }
+		NOT = { is_country_type = consortium }
 		aggressive_diplomatic_plays_permitted = yes
 		NOT = { is_subject_of = scope:target_country }
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = organization }
+			NOT = { is_country_type = consortium }
 			NOT = { is_subject_of = root }
 		}	
 		custom_tooltip = {
@@ -500,7 +767,7 @@ dp_contain_threat = {
 
 	additional_involvement_trigger = {
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = organization }
+		NOT = { is_country_type = consortium }
 		country_rank >= rank_value:great_power
 		aggressive_diplomatic_plays_permitted = yes
 	}
@@ -512,49 +779,6 @@ dp_contain_threat = {
 	on_war_end = {}
 }
 
-dp_taiping_rebellion = {
-	war_goal = annex_country
-	mirror_war_goal = yes
-	add_infamy_for_starting_initiator_wargoals = no
-	
-	texture = "gfx/interface/icons/war_goals/annex_country.dds"
-	
-	selectable_in_lens = {
-		always = no
-	}
-	
-	possible = {
-		exists = c:TPG
-		scope:target_country = {
-			this = c:TPG
-		}
-	}
-	
-	additional_involvement_trigger = {
-		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = organization }
-		aggressive_diplomatic_plays_permitted = yes
-	
-		scope:target_country = {
-			capital = {
-				region = {
-					save_temporary_scope_as = target_capital_region
-				}
-			}
-		}
-		
-		OR = {
-			has_interest_marker_in_region = scope:target_capital_region
-			is_home_country_for = scope:target_country
-		}
-	}
-	
-	on_weekly_pulse = {}
-	
-	on_war_begins = {}
-
-	on_war_end = {}
-}
 
 dp_native_uprising = {
 	war_goal = colonization_rights
@@ -569,6 +793,20 @@ dp_native_uprising = {
 	}
 	
 	possible = {
+		OR = {
+			has_strategic_land_adjacency = scope:target_country
+			AND = {
+				any_scope_state = {
+					exether_is_coastal = yes
+				}
+				navy_size >= 10
+				scope:target_country = {
+					any_scope_state = {
+						exether_is_coastal = yes
+					}
+				}
+			}
+		}
 		is_country_type = decentralized
 	}
 	
@@ -589,7 +827,21 @@ dp_annex_war = {
 		always = no
 	}
 	
-	possible = {}
+	possible = {
+		OR = {
+			has_strategic_land_adjacency = scope:target_country
+			AND = {
+				any_scope_state = {
+					exether_is_coastal = yes
+				}
+				navy_size >= 10
+				scope:target_country = {
+					any_scope_state = {
+						exether_is_coastal = yes
+					}
+				}
+			}
+		}}
 	
 	on_weekly_pulse = {}
 	
@@ -603,7 +855,21 @@ dp_humiliation = {
 	
 	texture = "gfx/interface/icons/war_goals/humiliation.dds"
 	
-	possible = {	
+	possible = {
+		OR = {
+			has_strategic_land_adjacency = scope:target_country
+			AND = {
+				any_scope_state = {
+					exether_is_coastal = yes
+				}
+				navy_size >= 10
+				scope:target_country = {
+					any_scope_state = {
+						exether_is_coastal = yes
+					}
+				}
+			}
+		}	
 		aggressive_diplomatic_plays_permitted = yes		
 	}
 	
@@ -628,9 +894,23 @@ dp_unify_khus = {
 	}
 	
 	possible = {
+		OR = {
+			has_strategic_land_adjacency = scope:target_country
+			AND = {
+				any_scope_state = {
+					exether_is_coastal = yes
+				}
+				navy_size >= 10
+				scope:target_country = {
+					any_scope_state = {
+						exether_is_coastal = yes
+					}
+				}
+			}
+		}
 		NOT = { exists = c:NEK }
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = organization }
+		NOT = { is_country_type = consortium }
 		has_technology_researched = nationalism
 	}
 	
@@ -655,9 +935,23 @@ dp_unify_gavkhan = {
 	}
 	
 	possible = {
+		OR = {
+			has_strategic_land_adjacency = scope:target_country
+			AND = {
+				any_scope_state = {
+					exether_is_coastal = yes
+				}
+				navy_size >= 10
+				scope:target_country = {
+					any_scope_state = {
+						exether_is_coastal = yes
+					}
+				}
+			}
+		}
 		NOT = { exists = c:GAV }
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = organization }
+		NOT = { is_country_type = consortium }
 		has_technology_researched = nationalism
 	}
 	
@@ -682,9 +976,23 @@ dp_unify_thaloria = {
 	}
 	
 	possible = {
+		OR = {
+			has_strategic_land_adjacency = scope:target_country
+			AND = {
+				any_scope_state = {
+					exether_is_coastal = yes
+				}
+				navy_size >= 10
+				scope:target_country = {
+					any_scope_state = {
+						exether_is_coastal = yes
+					}
+				}
+			}
+		}
 		NOT = { exists = c:TLA }
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = organization }
+		NOT = { is_country_type = consortium }
 		has_technology_researched = nationalism
 	}
 	
@@ -709,9 +1017,23 @@ dp_unify_nagabumi = {
 	}
 	
 	possible = {
+		OR = {
+			has_strategic_land_adjacency = scope:target_country
+			AND = {
+				any_scope_state = {
+					exether_is_coastal = yes
+				}
+				navy_size >= 10
+				scope:target_country = {
+					any_scope_state = {
+						exether_is_coastal = yes
+					}
+				}
+			}
+		}
 		NOT = { exists = c:NBI }
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = organization }
+		NOT = { is_country_type = consortium }
 		has_technology_researched = nationalism
 	}
 	
@@ -735,6 +1057,20 @@ dp_leadership_nagabumi = {
 	}	
 	
 	possible = {
+		OR = {
+			has_strategic_land_adjacency = scope:target_country
+			AND = {
+				any_scope_state = {
+					exether_is_coastal = yes
+				}
+				navy_size >= 10
+				scope:target_country = {
+					any_scope_state = {
+						exether_is_coastal = yes
+					}
+				}
+			}
+		}
 		has_technology_researched = nationalism			
 	}
 	
@@ -758,6 +1094,20 @@ dp_leadership_thaloria = {
 	}	
 	
 	possible = {
+		OR = {
+			has_strategic_land_adjacency = scope:target_country
+			AND = {
+				any_scope_state = {
+					exether_is_coastal = yes
+				}
+				navy_size >= 10
+				scope:target_country = {
+					any_scope_state = {
+						exether_is_coastal = yes
+					}
+				}
+			}
+		}
 		has_technology_researched = nationalism			
 	}
 	
@@ -782,6 +1132,20 @@ dp_leadership_khus = {
 	}	
 	
 	possible = {
+		OR = {
+			has_strategic_land_adjacency = scope:target_country
+			AND = {
+				any_scope_state = {
+					exether_is_coastal = yes
+				}
+				navy_size >= 10
+				scope:target_country = {
+					any_scope_state = {
+						exether_is_coastal = yes
+					}
+				}
+			}
+		}
 		has_technology_researched = nationalism			
 	}
 	
@@ -805,6 +1169,20 @@ dp_leadership_gavkhan = {
 	}	
 	
 	possible = {
+		OR = {
+			has_strategic_land_adjacency = scope:target_country
+			AND = {
+				any_scope_state = {
+					exether_is_coastal = yes
+				}
+				navy_size >= 10
+				scope:target_country = {
+					any_scope_state = {
+						exether_is_coastal = yes
+					}
+				}
+			}
+		}
 		has_technology_researched = nationalism			
 	}
 	
