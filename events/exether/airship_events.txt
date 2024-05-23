@@ -90,3 +90,63 @@ airship.11 = {  #this is the event that triggers new airship routes as new airsh
 		}
 	}
 }
+
+airship.12 = {  #this is the event that triggers new airship routes as new airship docks are made
+	type = country_event
+	placement = ROOT
+	hidden = yes
+
+	trigger = {
+		OR = {
+			year >= 1210
+			OR = {
+				any_scope_state = {
+					state_region = s:STATE_FOBAN
+					any_scope_building = {
+						is_building_type = building_airship_dock
+					}
+				}
+
+				any_scope_state = {
+					state_region = s:STATE_POFIKAN
+					any_scope_building = {
+						is_building_type = building_airship_dock
+					}
+				}
+
+				any_scope_state = {
+					state_region = s:STATE_BIFAN
+					any_scope_building = {
+						is_building_type = building_airship_dock
+					}
+				}
+
+				any_scope_state = {
+					state_region = s:STATE_KOTIK
+					any_scope_building = {
+						is_building_type = building_airship_dock
+					}
+				}
+				#more states go here
+			}	
+		}
+		NOT = {
+			has_variable = lumanta_airship 
+		}
+	}
+
+	immediate = {
+
+		set_variable = lumanta_airship 
+		random_scope_state = {
+			save_scope_as = hidden_canal_state
+		}
+		scope:hidden_canal_state = {
+			create_building = {
+				building = building_lumantan_heights_connection
+				level = 1
+
+			}	
+		}
+	}
+}
