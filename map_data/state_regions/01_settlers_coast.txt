@@ -397,8 +397,9 @@ STATE_FORESTS_HEART = {
     wood = x47FBB3
     farm = x59D5FD
     mine = x79A2FE
-    port = x79CEB7
+    port = x79a2fe
 
+    naval_exit_id = 3108
 }
 STATE_FORESTS_HEART_2 = {
     traits = { "state_trait_plaguewood" }
@@ -413,8 +414,9 @@ STATE_FORESTS_HEART_3 = {
     id = 4710
     subsistence_building = "building_subsistence_farms"
     provinces = { "x49DEFE" "x83F8E4" "x91BDEC" "xA3D8DB" "xA8CFE0" "xB39CCC" "xB4FC70" "xB9E382" "xC28FFC" "xD1C670" "xD1E0F6" "xE69B99" "xEA94A4" "xED9F6B" "xEEB873" "xF2EC8C" "xF2FEFB" "xF8D27E" "xFC39CF" }
+    port = x49defe
 
-
+    naval_exit_id = 3108
 }
 STATE_FORESTS_HEART_3_2 = {
     #just try and stop me
@@ -434,8 +436,9 @@ STATE_PLAGUEWOOD_HINTERLANDS = {
     wood = x49DEFE
     farm = x4CDAD5
     mine = x7ACFE9
-    port = x83F8E4
+    port = xd4f456
 
+    naval_exit_id = 3108
 }
 STATE_PLAGUEWOOD_HINTERLANDS_2 = {
     traits = { "state_trait_plaguewood" }
@@ -446,8 +449,9 @@ STATE_PLAGUEWOOD_HINTERLANDS_2 = {
     wood = x49DEFE
     farm = x4CDAD5
     mine = x7ACFE9
-    port = x83F8E4
+    port = x8cdba9
 
+    naval_exit_id = 3108
 }
 STATE_PLAGUEWOOD_HINTERLANDS_3 = {
     traits = { "state_trait_plaguewood" "state_trait_sandwall_mountains" }
@@ -458,8 +462,9 @@ STATE_PLAGUEWOOD_HINTERLANDS_3 = {
     wood = x49DEFE
     farm = x4CDAD5
     mine = x7ACFE9
-    port = x83F8E4
+    port = xe8db33
 
+    naval_exit_id = 3108
 }
 STATE_ASHWICK = {
     id = 4154
@@ -662,13 +667,13 @@ STATE_THE_AMBER_RUN_3 = {
     wood = x2DE2F7
     farm = x4FB2FE
     mine = x6CC8D3
-    port = x7AC5EA
+    port = xdefc1d
     arable_land = 39
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
     capped_resources = {
         bg_logging = 4
     }
-
+    naval_exit_id = 3107
 }
 STATE_MISTREACH = {
     id = 4160
