@@ -1,0 +1,30 @@
+﻿CHARACTERS = {
+	c:IMR = {
+		create_character = {
+			first_name = "Irakli"
+			last_name = "Nikoladze"
+			historical = yes
+			ruler = yes
+			age = 39
+			interest_group = ig_landowners
+			ideology = ideology_moderate
+			traits = {
+				imposing
+				engineer
+			}
+		}
+		create_character = {
+			first_name = "Shalva"
+			last_name = "Nikoladze"
+			historical = yes
+			heir = yes
+			age = 6
+			interest_group = ig_landowners
+			ideology = ideology_moderate
+			traits = {
+				trait_child
+			}
+		}
+	}
+}
+
