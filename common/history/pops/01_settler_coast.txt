@@ -1012,19 +1012,96 @@ s:STATE_FAR_SHORE_2 = {
   }
 
   s:STATE_STOUTHEART_BASIN = {
-
+	region_state:CLR = {
+		create_pop = {
+			culture = highland_halfling
+			size = 129756
+		}
+		create_pop = {
+			culture = highland_halfling
+			religion = church_of_man
+			size = 283138
+		}
+		create_pop = {
+			culture = clearbough
+			size = 1451436
+		}
+		create_pop = {
+			culture = clearbough
+			religion = church_of_man
+			size = 206634
+		}
+	}
   }
 
   s:STATE_CROPHEART_DALE = {
-
+	region_state:CLR = {
+		create_pop = {
+			culture = clearbough
+			size = 284196
+		}
+		create_pop = {
+			culture = dorite
+			size = 160000
+		}
+		create_pop = {
+			culture = highland_halfling
+			size = 40000
+		}
+		create_pop = {
+			culture = clearbough
+			religion = church_of_man
+			size = 197200
+		}
+		create_pop = {
+			culture = highland_halfling
+			religion = church_of_man
+			size = 44000
+		}
+	}
   }
 
   s:STATE_CLEARBOUGH_ESTATES = {
-
+	region_state:CLR = {
+		create_pop = {
+			culture = clearbough
+			religion = church_of_man
+			size = 1902402
+		}
+		create_pop = {
+			culture = clearbough
+			size = 3023909
+		}
+		create_pop = {
+			culture = highland_halfling
+			size = 98199
+		}
+		create_pop = {
+			culture = erdei
+			size = 66400
+		}
+	}
   }
 
   s:STATE_GOLDENMOOR = {
-
+	region_state:CLR = {
+		create_pop = {
+			culture = clearbough
+			size = 282048
+		}
+		create_pop = {
+			culture = erdei
+			size = 48040
+		}
+		create_pop = {
+			culture = dorite
+			size = 16000
+		}
+		create_pop = {
+			culture = thiralian
+			size = 20140
+		}
+	}
   }
 
   s:STATE_MOUNT_YELFIS= {
@@ -1286,7 +1363,21 @@ s:STATE_FAR_SHORE_2 = {
   }
 
   s:STATE_SILVERTARGE = {
-
+	region_state:CLR = {
+		create_pop = {
+			culture = clearbough
+			religion = church_of_man
+			size = 320014
+		}
+		create_pop = {
+			culture = clearbough
+			size = 388400
+		}
+		create_pop = {
+			culture = highland_halfling
+			size = 186786
+		}
+	}
   }
 
 }
