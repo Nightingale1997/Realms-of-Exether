@@ -742,7 +742,11 @@ add_homeland = cu:dorite
 s:STATE_GRAVELROCK_ROAD = {
     create_state = {
         country = c:VOZ
-        owned_provinces = { "x63DAD0" "x65C7FA" "x67EAEC" "x6A94FC"  "x8FA2F7" "x9FA3FC" "xA7D1FE" "xA9F281" "xAEF0F3" "xB58BCD" "xC1EDA1" "xCA98D7" "xDC76D7"  "xE7CF8E" "xE8F925" "xEFD0DB" "xF8E0DB" "xF8F1C7" "xF94FF0" "xFAE19F" "xFCBDBD" "xFDE638" }
+        owned_provinces = { "x63DAD0" "x6A94FC" "x8FA2F7" "xB58BCD" "xC1EDA1" "xCA98D7" "xDC76D7" "xE7CF8E" "xE8F925" "xFAE19F" }
+}
+create_state = {
+    country = c:DRO
+    owned_provinces = { "x65C7FA" "x67EAEC" "x9FA3FC" "xA7D1FE" "xA9F281" "xAEF0F3" "xEFD0DB" "xF8E0DB" "xF8F1C7" "xF94FF0" "xFCBDBD" "xFDE638" }
 }
     add_homeland = cu:vozi
 }
