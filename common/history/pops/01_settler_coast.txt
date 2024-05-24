@@ -1070,12 +1070,23 @@ s:STATE_FAR_SHORE_2 = {
 	region_state:DRO = {
 		create_pop = {
 			culture = aridrun
-			size = 548528
+			size = 132264
 		}
 		create_pop = {
 			culture = vozi
 			size = 32264
 		}
+	}
+	region_state:VOZ = {
+		create_pop = {
+			culture = vozi
+			size = 448528
+		}
+		create_pop = {
+			culture = aridrun
+			size = 48528
+		}
+
 	}
   }
 
@@ -1110,11 +1121,11 @@ s:STATE_FAR_SHORE_2 = {
 		region_state:VOZ = {
 			create_pop = {
 				culture = vozi
-				size = 798528
+				size = 398528
 			}
 			create_pop = {
 				culture = aridrun
-				size = 42264
+				size = 442264
 			}
 		}
   }

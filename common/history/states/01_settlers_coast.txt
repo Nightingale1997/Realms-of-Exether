@@ -647,7 +647,7 @@ s:STATE_SHIFTING_SCAR = {
         country = c:MMD
         owned_provinces = { "x5FD7C1" "x6CB4F9" "x6CE0B7" "x78DBCC" "x7AEFC6" "x82FBAD" "x9AF3DD" "x9ED4ED" "xA2C095" "xA3E3FA" "xA7E7B3" "xABC89C" "xACE3DF" "xB0CE78" "xB491E3" "xBDCB9D" "xC8E588" "xC8F659" "xC9E995" "xD2F25A" "xD68EC6" "xD6D1C9" "xE2EB2B" "xE358D3" "xE3E76A" "xE4E37F" "xEBFA9D" "xEBFC39" "xECCE6B" "xEFE62F" "xF058DA" "xF3DBD4" "xF76C95" "xF8CDCC" "xF8D4EE" "xFA3DE5" "xFD5EBA" }
 }
-add_homeland = cu:dorite
+add_homeland = cu:changeling
 }
 
 s:STATE_SHIFTING_SCAR_2 = {
@@ -655,7 +655,7 @@ s:STATE_SHIFTING_SCAR_2 = {
         country = c:MMD
         owned_provinces = { "x40E0DA" "x51E0D7" "x58CAF0" "x62E9AE" "x67FAFA" "x72D6C9" "x88E9A7" "x959DFA" "xA0BAC6" "xADC2DB" "xAED4F6" "xB091FA" "xB3A8AE" "xBAF266" "xC8BEF3" "xCBC493" "xCEEA5C" "xD2E777" "xD2FB46" "xDCA2D3" "xDD94C8" "xE067E9" "xE147E7" "xE29BB5" "xE64BDA" "xECD142" "xF9CFB5" "xFA879F" }
 }
-add_homeland = cu:dorite
+add_homeland = cu:changeling
 }
 
 s:STATE_OVERBURROW = {
@@ -728,7 +728,7 @@ s:STATE_COGSREST = {
         country = c:DRO
         owned_provinces = { "x16F9F5" "x37F1DB" "x41E6EE" "x61DCCB" "x62EFB6" "x70C7C9" "x7DDDCB" "x87CBDF" "x91D8EA" "xADE7E4" "xB2F865" "xB3C0A6" "xB6D7E3" "xB754F8" "xC07AD7" "xC084C0" "xC5EF47" "xCAE961" "xD1DA4A" "xDC75DE" "xDE4BEE" "xE06DAF" "xE85EF0" "xEA6DB2" "xEF63E7" "xEF859A" "xF49FF4" "xF592E2" "xF8E1F0" "xFA4BD4" "xFAEC54" }
 }
-add_homeland = cu:dorite
+add_homeland = cu:aridrun
 }
 
 s:STATE_NOGI_SANDS = {
@@ -736,7 +736,7 @@ s:STATE_NOGI_SANDS = {
         country = c:DRO
         owned_provinces = { "x22E8ED" "x3BE7E4" "x61BAE9" "x69F6FB" "x70F89D" "x74DCC5" "x7FF1B2" "x81ED8D" "x81FBDD" "x92FCC8" "x95F0AA" "x97B3BC" "x9BE6E1" "x9D75F2" "xA4A5F8" "xA5F0E6" "xA6A1AF" "xA7C1EE" "xB1B896" "xB3B0B1" "xB4AAE9" "xB5A1B5" "xB6F27B" "xBAD7D7" "xC3D0E0" "xCA97D5" "xCEDB65" "xCFB8CB" "xD0FC8D" "xD7A5B6" "xD8E53A" "xDAFE2F" "xDEE2BD" "xDEE837" "xDFDCDC" "xE0ACD7" "xE6C0E7" "xE7C952" "xE8A874" "xE99DE9" "xEBD2A0" "xECFA1D" "xED97C9" "xEDC3D8" "xEE4ED3" "xEEE750" "xEEEEA7" "xF082A6" "xF1C3E6" "xF241E1" "xF3AAE7" "xF486C3" "xF6A675" "xF6DBE9" "xF73BCD" "xF8DF79" "xFA14EC" "xFA99C7" "xFC80BA" "xFED6B1" }
 }
-add_homeland = cu:dorite
+add_homeland = cu:aridrun
 }
 
 s:STATE_GRAVELROCK_ROAD = {
@@ -749,6 +749,7 @@ create_state = {
     owned_provinces = { "x65C7FA" "x67EAEC" "x9FA3FC" "xCA98D7" "xA7D1FE" "xA9F281" "xAEF0F3" "xEFD0DB" "xE8F925" "xF8E0DB" "xF8F1C7" "xF94FF0" "xFCBDBD" "xFDE638" }
 }
     add_homeland = cu:vozi
+    add_homeland = cu:aridrun
 }
 
 s:STATE_ELF1 = {
@@ -756,7 +757,7 @@ s:STATE_ELF1 = {
         country = c:DRO
         owned_provinces = { "x12F6FE" "x93D5DF" "x95C7CE" "xA2BF9A" "xC0A0CE" "xD7E9BB" "xDA86C6" "xDBA8A2" "xE1A6E8" "xF7BB79" }
 }
-add_homeland = cu:dorite
+add_homeland = cu:aridrun
 }
 
 s:STATE_ELF2 = {
@@ -764,7 +765,7 @@ s:STATE_ELF2 = {
         country = c:DRO
         owned_provinces = { "x69D0D0" "x94EC76" "x97F4E5" "x9EE0C8" "xA8F8EA" "xBABDC8" "xC8BD96" "xDBDA7C" "xE2F7BA" "xE6BD7C" }
 }
-add_homeland = cu:dorite
+add_homeland = cu:aridrun
 }
 
 s:STATE_ELF3 = {
@@ -772,7 +773,7 @@ s:STATE_ELF3 = {
         country = c:DRO
         owned_provinces = { "x60F0C6" "x82C7BE" "x91B3C3" "xA1E2C3" "xA8B0A3" "xADE6C9" "xB5D6E3" "xC1B8CB" "xCBAF8E" "xCBB3A7" "xDDD161" "xDDD471" "xDFC17D" "xE3E8A6" "xF635F9" }
 }
-add_homeland = cu:dorite
+add_homeland = cu:aridrun
 }
 
 s:STATE_ELF4 = {
@@ -780,7 +781,9 @@ s:STATE_ELF4 = {
         country = c:VOZ
         owned_provinces = { "x4CFECE" "x7DF886" "x9FF0DE" "xA09AD5" "xA3D6ED" "xBF45F2" "xCDB396" "xCDF773" "xD1AC7C" "xD374B3" "xDFE1CD" "xEB8BE2" "xFDF5EF" }
 }
-add_homeland = cu:dorite
+add_homeland = cu:aridrun
+add_homeland = cu:vozi
+
 }
 
 s:STATE_HAZELDEEP = {
@@ -796,7 +799,7 @@ s:STATE_AZURETHORN = {
         country = c:AHO
         owned_provinces = { "x8596E6" "x8FCA9F" "x9CFB9A" "xA3AABD" "xA3FAF9" "xBCD5F3" "xD2F9FE" "xDC2DF8" "xE5DB9E" "xF6F895" "xFD82C4" }
 }
-add_homeland = cu:dorite
+add_homeland = cu:achonite
 }
 
 s:STATE_FERNSEA = {
