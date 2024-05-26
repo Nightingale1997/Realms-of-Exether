@@ -1241,7 +1241,14 @@ STATE_STOUTHEART_BASIN = {
     farm = x87DE96
     mine = xA983FB
     port = xA9DBFB
-
+    arable_land = 50
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_coal_mining = 48
+        bg_iron_mining = 24
+        bg_lead_mining = 24
+        bg_logging = 6
+    }
 }
 STATE_CROPHEART_DALE = {
     id = 4189
@@ -1252,6 +1259,15 @@ STATE_CROPHEART_DALE = {
     farm = x52F2D2
     mine = x61DDC4
     port = xA2CEA8
+    arable_land = 46
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 4
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 10
+    }
     naval_exit_id = 3171
 }
 STATE_CLEARBOUGH_ESTATES = {
@@ -1264,6 +1280,12 @@ STATE_CLEARBOUGH_ESTATES = {
     farm = x38EFDB
     mine = x78F9C8
     port = x82D99B
+    arable_land = 126
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 32
+        bg_logging = 9
+    }
     naval_exit_id = 3171
 }
 STATE_GOLDENMOOR = {
@@ -1276,6 +1298,11 @@ STATE_GOLDENMOOR = {
     farm = x83AAD0
     mine = xA0A4EA
     port = xA190EB
+    arable_land = 20
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_logging = 14
+    }
     naval_exit_id = 3171
 }
 STATE_MOUNT_YELFIS = {
@@ -1622,7 +1649,13 @@ STATE_SILVERTARGE = {
     farm = x61D8DE
     mine = x75C5E3
     port = x85EBA5
-
+    arable_land = 40
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_iron_mining = 30
+        bg_lead_mining = 30
+        bg_logging = 17
+    }
 }
 STATE_SC5 = {
     id = 4211
