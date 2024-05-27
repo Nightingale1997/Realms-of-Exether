@@ -193,3 +193,41 @@ PLG = {
 	ai_will_do = { always = yes }
 
 }
+
+KNG = {
+	states = { 
+		STATE_PRESPIA
+		STATE_USTRIZHYVKA
+		STATE_ZATYRE
+		STATE_KERCOVA
+		STATE_LUMADHIA
+		STATE_ERSEKERA
+		STATE_FIERANA
+		STATE_BERATIA
+		STATE_SARANDOVA
+		STATE_DURRESIA
+		STATE_KULLAMAL
+		STATE_KORCAJA
+		STATE_ELBASHTIA
+		STATE_SHKODERIA
+		STATE_VALBARDA
+		STATE_GJILANIJA
+		STATE_KRUJANA
+		STATE_LEZHANIA
+		STATE_GJAKOVA
+		STATE_VLORIANA
+		STATE_VOSKOPOJANA
+		STATE_KURBULL
+		STATE_PESHKOPINA
+		STATE_DIBRA
+		STATE_VITHKUQJA
+	}
+
+	required_states_fraction = 0.76
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = pan-nationalism
+	}
+}
