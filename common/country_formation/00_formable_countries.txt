@@ -46,3 +46,34 @@ UTS = {
 
 	ai_will_do = { always = yes }
 }
+
+
+
+ORK = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.8
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+
+}
+
+PLG = {
+	states = { 
+		STATE_FORESTS_HEART_3_2
+		STATE_EASTERN_PLAGUEWOOD
+		STATE_EASTERN_PLAGUEWOOD_2
+		STATE_FORESTS_HEART_2
+		STATE_FORESTS_HEART
+		STATE_FORESTS_HEART_3
+	}
+
+	required_states_fraction = 0.8
+	
+	ai_will_do = { always = yes }
+
+}
