@@ -198,7 +198,18 @@ BRB = {
 	country_type = recognized
 
 	tier = grand_principality
-	cultures = { highland_halfling } 
+	cultures = { highland_halfling  } 
+	capital = STATE_OVERBURROW
+}
+
+#Grand Estate
+GES = {
+	color = rgb{ 78  120  60 } #random
+
+	country_type = recognized
+
+	tier = grand_principality
+	cultures = { highland_halfling clearbough } 
 	capital = STATE_OVERBURROW
 }
 

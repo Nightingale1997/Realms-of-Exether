@@ -64,6 +64,28 @@ NTL = {
 
 }
 
+#Grand Estate
+GES = {
+	states = { 
+		STATE_NEWBANKS
+		STATE_UPPER_GOLDENLEAF
+		STATE_OVERBURROW
+		STATE_CROPHEART_DALE
+		STATE_STOUTHEART_BASIN
+		STATE_CLEARBOUGH_ESTATES
+		STATE_GOLDENMOOR
+		STATE_SILVERTARGE
+	}
+
+	required_states_fraction = 0.87
+
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+
+}
 ORK = {
 	use_culture_states = yes
 
