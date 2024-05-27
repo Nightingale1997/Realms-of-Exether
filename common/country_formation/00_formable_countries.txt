@@ -86,6 +86,33 @@ GES = {
 	}
 
 }
+
+#SMALLAND
+SLD = {
+	states = { 
+		STATE_NEWBANKS
+		STATE_UPPER_GOLDENLEAF
+		STATE_OVERBURROW
+		STATE_CROPHEART_DALE
+		STATE_STOUTHEART_BASIN
+		STATE_CLEARBOUGH_ESTATES
+		STATE_GOLDENMOOR
+		STATE_SILVERTARGE
+		STATE_LOWER_GOLDENLEAF
+		STATE_VERDANT_VALE
+		STATE_TWO_BARREL_COAST
+	}
+
+	required_states_fraction = 0.9
+
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = pan-nationalism
+	}
+
+}
+
 ORK = {
 	use_culture_states = yes
 

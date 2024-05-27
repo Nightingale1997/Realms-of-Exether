@@ -208,7 +208,19 @@ GES = {
 
 	country_type = recognized
 
-	tier = grand_principality
+	tier = kingdom
+	cultures = { highland_halfling clearbough } 
+	capital = STATE_OVERBURROW
+}
+
+
+#Smalland
+SLD = {
+	color = rgb{ 78  120  60 } #random
+
+	country_type = recognized
+
+	tier = empire
 	cultures = { highland_halfling clearbough } 
 	capital = STATE_OVERBURROW
 }
