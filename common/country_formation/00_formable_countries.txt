@@ -353,6 +353,30 @@ PLG = {
 
 }
 
+AST = {
+	states = { 
+		STATE_CAVES_OF_RIMELAC
+		STATE_LILAC_SHORE
+		STATE_AETHELBOSQUE
+		STATE_HAZELDEEP
+		STATE_DUSHAMBAY
+		STATE_WESTERN_EQUINE_PLAIN
+		STATE_CENTRAL_EQUINE_PLAIN
+		STATE_EASTERN_EQUINE_PLAIN
+		STATE_BARIKHARGUL
+		STATE_DILAFSHAN
+	}
+
+	required_states_fraction = 0.6 #intentionally low because it includes the rivercrosser lands
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+
+}
+
 KNG = {
 	states = { 
 		STATE_PRESPIA
