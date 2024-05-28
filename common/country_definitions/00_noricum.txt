@@ -36,6 +36,17 @@ AKN = {
 	capital = STATE_CROWNPEAK #Which state holds this nation's default capital
 }
 
+MAN = {
+	color = hsv{ 1.01  0.8  0.5 } #the cooler dumonia
+
+	country_type = recognized #See common\country_types
+
+	tier = hegemony #See common\country_ranks
+
+	cultures = { avalorean dewaric dumonian ralaurian yanger meriwyn jalian } #What are their primary culture/s - you can set multiple.
+	capital = STATE_CROWNPEAK #Which state holds this nation's default capital
+}
+
 #Albriar
 ABR = {
 	color = rgb{ 100  80  150 } 
@@ -60,7 +71,7 @@ DEW = {
 	capital = STATE_ALYEA #Which state holds this nation's default capital
 }
 
-#Dewaria
+#Ralauria
 RAL = {
 	color = rgb{ 70  20  70 } 
 
@@ -80,7 +91,7 @@ GED = {
 
 	tier = principality #See common\country_ranks
 
-	cultures = { ralaurian } #What are their primary culture/s - you can set multiple.
+	cultures = { gelidrumin } #What are their primary culture/s - you can set multiple.
 	capital = STATE_ALYEA #Which state holds this nation's default capital
 }
 
@@ -92,7 +103,7 @@ UPP = {
 
 	tier = principality #See common\country_ranks
 
-	cultures = { ralaurian } #What are their primary culture/s - you can set multiple.
+	cultures = { uplander } #What are their primary culture/s - you can set multiple.
 	capital = STATE_ALYEA #Which state holds this nation's default capital
 }
 
