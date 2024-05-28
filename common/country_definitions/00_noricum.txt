@@ -37,6 +37,54 @@ ABR = {
 	capital = STATE_MIDCLACK #Which state holds this nation's default capital
 }
 
+#Dewaria
+DEW = {
+	color = rgb{ 140  20  50 } 
+
+	country_type = recognized #See common\country_types
+
+	tier = principality #See common\country_ranks
+
+	cultures = { dewaric } #What are their primary culture/s - you can set multiple.
+	capital = STATE_ALYEA #Which state holds this nation's default capital
+}
+
+#Dewaria
+RAL = {
+	color = rgb{ 70  20  70 } 
+
+	country_type = recognized #See common\country_types
+
+	tier = principality #See common\country_ranks
+
+	cultures = { ralaurian } #What are their primary culture/s - you can set multiple.
+	capital = STATE_ALYEA #Which state holds this nation's default capital
+}
+
+#Gelidrun
+GED = {
+	color = rgb{ 120  20  10 } 
+
+	country_type = recognized #See common\country_types
+
+	tier = principality #See common\country_ranks
+
+	cultures = { ralaurian } #What are their primary culture/s - you can set multiple.
+	capital = STATE_ALYEA #Which state holds this nation's default capital
+}
+
+#Upland
+UPP = {
+	color = rgb{ 100  57  40 } 
+
+	country_type = recognized #See common\country_types
+
+	tier = principality #See common\country_ranks
+
+	cultures = { ralaurian } #What are their primary culture/s - you can set multiple.
+	capital = STATE_ALYEA #Which state holds this nation's default capital
+}
+
 #Cult of Aumaunator
 AUM = {
 	color = rgb{ 200  100  0 } 
