@@ -25,6 +25,17 @@ DUM = {
 	capital = STATE_CROWNPEAK #Which state holds this nation's default capital
 }
 
+AKN = {
+	color = hsv{ 1.01  0.8  0.5 } #the cooler dumonia
+
+	country_type = recognized #See common\country_types
+
+	tier = empire #See common\country_ranks
+
+	cultures = { avalorean dewaric dumonian ralaurian  } #What are their primary culture/s - you can set multiple.
+	capital = STATE_CROWNPEAK #Which state holds this nation's default capital
+}
+
 #Albriar
 ABR = {
 	color = rgb{ 100  80  150 } 
