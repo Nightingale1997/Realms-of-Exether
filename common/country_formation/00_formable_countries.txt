@@ -353,6 +353,70 @@ PLG = {
 
 }
 
+DWO = {
+	states = { 
+		STATE_DINASHIN
+		STATE_SHIMAKAI
+		STATE_KEENAVOK
+	}
+
+	required_states_fraction = 1
+	
+	ai_will_do = { always = yes }  #lets come back to this
+
+	possible = {  #wholesome chungus dworc state
+
+
+		cu:duneshar = {
+			NOT = { culture_is_discriminated_in = ROOT }
+		}
+		OR = {
+			cu:tozhi = {
+				NOT = { culture_is_discriminated_in = ROOT }
+			}
+			cu:kaalkid = {
+				NOT = { culture_is_discriminated_in = ROOT }
+			}
+		}
+	}
+
+}
+
+HOF = {
+	states = { 
+		STATE_DINASHIN
+		STATE_SHIMAKAI
+		STATE_KEENAVOK
+		STATE_YAZHIDZI
+		STATE_KEENAVAZH
+		STATE_NAKOKAIN
+		STATE_NASHAYAZH
+		STATE_SHINOGOZH
+		STATE_DIYINAKHAD
+	}
+
+	required_states_fraction = 1
+	
+	ai_will_do = { always = yes }  #lets come back to this
+
+	possible = {  #wholesome chungus dworc state
+
+
+		cu:duneshar = {
+			NOT = { culture_is_discriminated_in = ROOT }
+		}
+		OR = {
+			cu:tozhi = {
+				NOT = { culture_is_discriminated_in = ROOT }
+			}
+			cu:kaalkid = {
+				NOT = { culture_is_discriminated_in = ROOT }
+			}
+		}
+	}
+
+}
+
 AST = {
 	states = { 
 		STATE_CAVES_OF_RIMELAC
