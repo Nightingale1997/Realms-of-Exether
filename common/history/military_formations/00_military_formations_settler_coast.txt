@@ -486,4 +486,70 @@
 			production_method = pm_no_organization
 		}
 	}
+
+	c:FTH ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_smallhills
+			name = Stone_Brigade
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_NEWBANKS
+				count = 2
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_NEWBANKS
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_NEWBANKS
+				count = 1
+			}
+		}
+	}
+
+	c:BRB ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_smallhills
+			name = Thornwatch
+
+			combat_unit = { 
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_OVERBURROW
+				count = 3
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_OVERBURROW
+				count = 1
+			}
+		}
+	}
+
+	c:GRH ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_smallhills
+			name = Green_Guard
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_UPPER_GOLDENLEAF
+				count = 2
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_UPPER_GOLDENLEAF
+				count = 1
+			}
+		}
+	}
 }
