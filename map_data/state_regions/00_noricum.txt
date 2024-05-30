@@ -228,7 +228,7 @@ STATE_WEST_YANGER_STEPPE = {
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
         bg_iron_mining = 21
-        bg_logging = 5
+        bg_logging = 15
     }
 
 }
@@ -242,11 +242,11 @@ STATE_SOUTH_YANGER_STEPPE = {
     farm = x62A1F5
     mine = x66DBE6
     port = x70C7D5
-    arable_land = 19
+    arable_land = 24
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
         bg_iron_mining = 11
-        bg_logging = 2
+        bg_logging = 14
     }
 
 }
@@ -260,10 +260,10 @@ STATE_EAST_YANGER_STEPPE = {
     farm = x5CF4AD
     mine = x6BF2E1
     port = x6CD7D5
-    arable_land = 20
+    arable_land = 32
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
     capped_resources = {
-        bg_logging = 4
+        bg_logging = 10
         bg_squidding = 4
     }
     naval_exit_id = 3025
@@ -494,6 +494,12 @@ STATE_KOTHIAN = {
     farm = x83E0C6
     mine = x8FDB91
     port = xA0FCB9
+    arable_land = 74
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 24
+        bg_logging = 10
+    }
 
 }
 STATE_DRAGONBANE_TUNDRA = {
@@ -722,7 +728,12 @@ STATE_BALLYNE = {
     farm = x9DAFC9
     mine = xA7F9E2
     port = xB363FC
-
+    arable_land = 50
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 14
+        bg_logging = 10
+    }
 }
 STATE_URIKS_GIFT = {
     id = 4041
@@ -734,11 +745,11 @@ STATE_URIKS_GIFT = {
     farm = x65F4DB
     mine = x69E4DE
     port = x6CD1BC
-    arable_land = 35
+    arable_land = 45
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_sulfur_mining = 40
-        bg_logging = 2
+        bg_logging = 24
     }
     resource = {
         type = "bg_oil_extraction"
@@ -792,6 +803,13 @@ STATE_GLASLIESH = {
     wood = x88F9C1
     farm = xBF93CA
     port = xD4D384
+    arable_land = 30
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_lead_mining = 14
+        bg_logging = 2
+        bg_fishing = 6
+    }
     naval_exit_id = 3022
 }
 STATE_BALATHOUL = {
@@ -890,7 +908,11 @@ STATE_ROSKIRK = {
     farm = xBE6CE6
     mine = xBEAEEB
     port = xC160FD
-
+    arable_land = 48
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 8
+    }
 }
 STATE_SHROUDGUARD = {
     id = 4052
@@ -921,6 +943,12 @@ STATE_THORNWALL = {
     farm = x90B8EC
     mine = x95D2B9
     port = x97D0C1
+    arable_land = 46
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" "bg_cotton_plantations" }
+    capped_resources = {
+        bg_logging = 13
+        bg_fishing = 3
+    } 
     naval_exit_id = 3007
 }
 STATE_SNOWBREACH = {
@@ -977,6 +1005,14 @@ STATE_COLESSIE = {
     farm = x41E9DF
     mine = xA2C5A9
     port = xBAF5F3
+    arable_land = 52
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 24
+        bg_logging = 3
+        bg_fishing = 6
+        bg_squidding = 7
+    }
     naval_exit_id = 3022
 }
 STATE_TOLFAR = {
@@ -1007,6 +1043,12 @@ STATE_KENLYNE = {
     farm = xB698ED
     mine = xEB59CD
     port = xF1FD8F
+    arable_land = 62
+    arable_resources = { "bg_rye_farms" }
+    capped_resources = {
+        bg_logging = 4
+        bg_fishing = 4
+    }
     naval_exit_id = 3022
 }
 STATE_BANCFAN = {
@@ -1201,6 +1243,13 @@ STATE_CASTELL_DRYSGOLMARK = {
     farm = xBDCCFD
     mine = xC1E9F1
     port = xD4B3E7
+    arable_land = 40
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_lead_mining = 8
+        bg_logging = 4
+        bg_fishing = 7
+    }
     naval_exit_id = 3025
 }
 STATE_CARREGRICE = {
@@ -1212,7 +1261,12 @@ STATE_CARREGRICE = {
     farm = x98D8CB
     mine = x9FE986
     port = xC94FFE
-
+    arable_land = 47
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 12
+        bg_logging = 6
+    }
 }
 STATE_TALNANT = {
     id = 4075
@@ -1223,6 +1277,12 @@ STATE_TALNANT = {
     farm = xBADB7D
     mine = xC37AD4
     port = xCEE45A
+    arable_land = 82
+    arable_resources = { "bg_cotton_plantations" "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 9
+        bg_fishing = 2
+    }
 
 }
 STATE_BLACKDON = {
@@ -1291,6 +1351,13 @@ STATE_GLASINBLAIR = {
     farm = xAF7EF5
     mine = xAFDDAE
     port = xC19FBF
+    arable_land = 20
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_iron_mining = 14
+        bg_logging = 4
+        bg_fishing = 10
+    }
     naval_exit_id = 3025
 }
 STATE_FALMAKELD = {
@@ -1340,6 +1407,12 @@ STATE_TYMANS_FOLLY = {
     farm = x7FF6EC
     mine = xAA9BF5
     port = xBAF5CA
+    arable_land = 20
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 24
+        bg_logging = 4
+    }
     naval_exit_id = 3039
 }
 STATE_HJELTIAS_GLACIER = {
