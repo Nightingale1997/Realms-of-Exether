@@ -155,6 +155,18 @@ WHI = {
 	capital = STATE_WHISKER_FIELDS
 }
 
+#Duranmarch
+DRM = {
+	color = rgb{ 50  90  30 } #random
+
+	country_type = recognized 
+
+	tier = principality
+
+	cultures = { bossardi } 
+	capital = STATE_DURANS_LAND
+}
+
 #Alchemist's Refuse
 ALC = {
 	color = rgb{ 0  70  0 } 
@@ -188,6 +200,40 @@ BRB = {
 	tier = principality
 
 	cultures = { highland_halfling } 
+	capital = STATE_OVERBURROW
+}
+
+#Northland Estate
+BRB = {
+	color = rgb{ 30  50  60 } #random
+
+	country_type = recognized
+
+	tier = grand_principality
+	cultures = { highland_halfling  } 
+	capital = STATE_OVERBURROW
+}
+
+#Grand Estate
+GES = {
+	color = rgb{ 78  120  60 } #random
+
+	country_type = recognized
+
+	tier = kingdom
+	cultures = { highland_halfling clearbough } 
+	capital = STATE_OVERBURROW
+}
+
+
+#Smalland
+SLD = {
+	color = rgb{ 78  120  60 } #random
+
+	country_type = recognized
+
+	tier = empire
+	cultures = { highland_halfling clearbough } 
 	capital = STATE_OVERBURROW
 }
 
@@ -331,6 +377,30 @@ BDB = {
 	country_type = unrecognized 
 
 	tier = principality
+
+	cultures = { plaguedweller } 
+	capital = STATE_FORESTS_HEART
+}
+
+#Plaguemonger
+PLG = {
+	color = rgb{ 98  161  8 } 
+
+	country_type = unrecognized 
+
+	tier = grand_principality
+
+	cultures = { plaguedweller } 
+	capital = STATE_FORESTS_HEART
+}
+
+#Buralair
+ORK = {
+	color = rgb{ 185  22  12 } 
+
+	country_type = unrecognized 
+
+	tier = kingdom
 
 	cultures = { plaguedweller } 
 	capital = STATE_FORESTS_HEART
