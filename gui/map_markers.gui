@@ -52,7 +52,7 @@ widget = {
 
 		### ZOOM FAR
 		container = {
-			visible = "[And(IsZoomLevelFar, Not(EqualTo_string(SeaNodeMarker.GetSupplyNetworkTooltip, '1')))]"
+			visible = "[And(IsZoomLevelFar, And(EqualTo_string(SeaNodeMarker.GetSupplyNetworkTooltip, 'Deploy to Sea Node'), Not(EqualTo_string(SeaNodeMarker.GetSupplyNetworkTooltip, '1'))))]"
 
 			### no supply
 			button = {
@@ -150,7 +150,8 @@ widget = {
 
 		### ZOOM NEAR
 		container = {
-			visible = "[Not(IsZoomLevelFar)]"
+			visible = "[And(Not(IsZoomLevelFar), EqualTo_string(SeaNodeMarker.GetSupplyNetworkTooltip, 'Deploy to Sea Node'))]"
+			
 
 			### no supply sea
 			button = {
