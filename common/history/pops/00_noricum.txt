@@ -756,11 +756,11 @@
       region_state:DUM = {
         create_pop = {
           culture = jalian
-          size = 464400
+          size = 334400
         }
         create_pop = {
           culture = dumonian
-          size = 21388
+          size = 131388
         }
       }
     }
@@ -854,11 +854,11 @@
       region_state:MBR = {
         create_pop = {
           culture = avalorean
-          size = 435000
+          size = 205000
         }
         create_pop = {
           culture = nivaskyan
-          size = 205000
+          size = 435000
         }
       }
   }
@@ -1022,9 +1022,12 @@
     s:STATE_COLESSIE = {
       region_state:BIE = {
         create_pop = {
-          culture = avalorean
-          religion = horse_worship
-          size = 1306400
+          culture = nivaskyan
+          size = 1006400
+        }
+        create_pop = {
+          culture = yanger
+          size = 306400
         }
       }
   }
@@ -1047,8 +1050,7 @@
     s:STATE_KENLYNE = {
       region_state:BIE = {
         create_pop = {
-          culture = avalorean
-          religion = horse_worship
+          culture = nivaskyan
           size = 1348900
         }
       }
@@ -1281,12 +1283,11 @@
       region_state:EVR = {
         create_pop = {
           culture = yanger
-          religion = church_of_man
-          size = 1532000
+          size = 214000
         }
         create_pop = {
           culture = avalorean
-          size = 214000
+          size = 1532000
         }
       }
   }
