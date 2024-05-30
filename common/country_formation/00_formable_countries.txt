@@ -64,51 +64,31 @@ NTL = {
 
 }
 
-#Grand Estate
-GES = {
-	states = { 
-		STATE_NEWBANKS
-		STATE_UPPER_GOLDENLEAF
-		STATE_OVERBURROW
-		STATE_CROPHEART_DALE
-		STATE_STOUTHEART_BASIN
-		STATE_CLEARBOUGH_ESTATES
-		STATE_GOLDENMOOR
-		STATE_SILVERTARGE
-	}
-
-	required_states_fraction = 0.87
-
-	ai_will_do = { always = yes }
-
-	possible = {
-		has_technology_researched = nationalism
-	}
-
-}
+#Grand Estate use for even bigger state that requires all halflings,
+# but add new halflings culture in arrador to bridge the gap first
+#GES = {
+#	use_culture_states = yes
+#
+#	required_states_fraction = 0.87
+#
+#	ai_will_do = { always = yes }
+#
+#	possible = {
+#		has_technology_researched = pan-nationalism
+#	}
+#
+#}
 
 #SMALLAND
 SLD = {
-	states = { 
-		STATE_NEWBANKS
-		STATE_UPPER_GOLDENLEAF
-		STATE_OVERBURROW
-		STATE_CROPHEART_DALE
-		STATE_STOUTHEART_BASIN
-		STATE_CLEARBOUGH_ESTATES
-		STATE_GOLDENMOOR
-		STATE_SILVERTARGE
-		STATE_LOWER_GOLDENLEAF
-		STATE_VERDANT_VALE
-		STATE_TWO_BARREL_COAST
-	}
+	use_culture_states = yes
 
 	required_states_fraction = 0.9
 
 	ai_will_do = { always = yes }
 
 	possible = {
-		has_technology_researched = pan-nationalism
+		has_technology_researched = nationalism
 	}
 
 }
@@ -215,117 +195,21 @@ KLK = {
 
 }
 
-AKN = {
-	states = { 
-		STATE_KOTHIAN
-		STATE_FROSTGATE
-		STATE_MIDCLACK
-		STATE_NORLEA
-		STATE_CALDAMUS
-		STATE_SERONTAIN
-		STATE_CROWNPEAK
-		STATE_INVERINGAR
-		STATE_MELENLECK
-		STATE_KILCREE
-		STATE_MALINMORE
-		STATE_LOCHTYRE
-		STATE_SLUDGE_COAST
-		STATE_ALYEA
-		STATE_NORTH_HIGHLANDS
-		STATE_HIGHPASS
-		STATE_SOUTH_HIGHLANDS
-		STATE_ADRIANSEN
-		STATE_ZENDEN
-		STATE_BANEKERT
-		STATE_LAST_HEARTH
-		STATE_ARDSHIEL
-		STATE_OSTREN
-		STATE_GULFWATCH
-		STATE_MERCHANT_BAY
-		STATE_TAR_PITS
-	}
+DUM = {
+	use_culture_states = yes
 
 	required_states_fraction = 0.8
 	
 	ai_will_do = { always = yes }
 
 	possible = {
-		has_technology_researched = pan-nationalism
+		has_technology_researched = nationalism
 	}
 
 }
 
 MAN = {
-	states = { 
-		STATE_KOTHIAN
-		STATE_FROSTGATE
-		STATE_MIDCLACK
-		STATE_NORLEA
-		STATE_CALDAMUS
-		STATE_SERONTAIN
-		STATE_CROWNPEAK
-		STATE_INVERINGAR
-		STATE_MELENLECK
-		STATE_KILCREE
-		STATE_MALINMORE
-		STATE_LOCHTYRE
-		STATE_SLUDGE_COAST
-		STATE_ALYEA
-		STATE_NORTH_HIGHLANDS
-		STATE_HIGHPASS
-		STATE_SOUTH_HIGHLANDS
-		STATE_ADRIANSEN
-		STATE_ZENDEN
-		STATE_BANEKERT
-		STATE_LAST_HEARTH
-		STATE_ARDSHIEL
-		STATE_OSTREN
-		STATE_GULFWATCH
-		STATE_MERCHANT_BAY
-		STATE_TAR_PITS
-		STATE_COLNAIG
-		STATE_TEMPLE_HILL
-		STATE_BALLYNE
-		STATE_THORNWALL
-		STATE_ROSKIRK
-		STATE_GLASINBLAIR
-		STATE_SHROUDGUARD
-		STATE_PONTBRAN
-		STATE_YSTRAD
-		STATE_RAVENCLIFF
-		STATE_BLACKDON
-		STATE_BANCFAN
-		STATE_CAECARW
-		STATE_MAESBELAN
-		STATE_HUNTERS_HILL
-		STATE_MALDARBLANE
-		STATE_ALLTBAN
-		STATE_HAG_MARSHES
-		STATE_TOLFAR
-		STATE_GLYNFFORDD
-		STATE_INCHMARA
-		STATE_GWYNWEN
-		STATE_HARTHALGH
-		STATE_EAST_YANGER_STEPPE
-		STATE_CASTELL_DRYGOLMARK
-		STATE_RIDERS_MOOT
-		STATE_SOUTH_YANGER_STEPPE
-		STATE_WEST_YANGER_STEPPE
-		STATE_CROWNSHADE
-		STATE_URIKS_GIFT
-		STATE_KENLYNE
-		STATE_COLESSIE
-		STATE_TALNANT
-		STATE_CARREGRICE
-		STATE_GLASLIESH
-		STATE_TYMANS_FOLLY
-		STATE_COLDSHEAR
-		STATE_SNOWBREACH
-		STATE_LIGHTSCOURGE
-		STATE_FALMAKELD
-		STATE_GRYTINGARIK
-		STATE_HJELTIAS_GLACIER
-	}
+	use_culture_states = yes
 
 	required_states_fraction = 0.8
 	
@@ -353,47 +237,8 @@ PLG = {
 
 }
 
-DWO = {
-	states = { 
-		STATE_DINASHIN
-		STATE_SHIMAKAI
-		STATE_KEENAVOK
-	}
-
-	required_states_fraction = 1
-	
-	ai_will_do = { always = yes }  #lets come back to this
-
-	possible = {  #wholesome chungus dworc state
-
-
-		cu:duneshar = {
-			NOT = { culture_is_discriminated_in = ROOT }
-		}
-		OR = {
-			cu:tozhi = {
-				NOT = { culture_is_discriminated_in = ROOT }
-			}
-			cu:kaalkid = {
-				NOT = { culture_is_discriminated_in = ROOT }
-			}
-		}
-	}
-
-}
-
 HOF = {
-	states = { 
-		STATE_DINASHIN
-		STATE_SHIMAKAI
-		STATE_KEENAVOK
-		STATE_YAZHIDZI
-		STATE_KEENAVAZH
-		STATE_NAKOKAIN
-		STATE_NASHAYAZH
-		STATE_SHINOGOZH
-		STATE_DIYINAKHAD
-	}
+	use_culture_states = yes
 
 	required_states_fraction = 1
 	
@@ -401,11 +246,7 @@ HOF = {
 
 	possible = {  #wholesome chungus dworc state
 
-
-		cu:duneshar = {
-			NOT = { culture_is_discriminated_in = ROOT }
-		}
-		OR = {
+		AND = {
 			cu:tozhi = {
 				NOT = { culture_is_discriminated_in = ROOT }
 			}
@@ -431,7 +272,7 @@ AST = {
 		STATE_DILAFSHAN
 	}
 
-	required_states_fraction = 0.6 #intentionally low because it includes the rivercrosser lands
+	required_states_fraction = 0.9 #intentionally high so you need the rivercrosser lands
 	
 	ai_will_do = { always = yes }
 
@@ -442,46 +283,7 @@ AST = {
 }
 
 KNG = {
-	states = { 
-		STATE_PRESPIA
-		STATE_USTRIZHYVKA
-		STATE_ZATYRE
-		STATE_KERCOVA
-		STATE_LUMADHIA
-		STATE_ERSEKERA
-		STATE_FIERANA
-		STATE_BERATIA
-		STATE_SARANDOVA
-		STATE_DURRESIA
-		STATE_KULLAMAL
-		STATE_KORCAJA
-		STATE_ELBASHTIA
-		STATE_SHKODERIA
-		STATE_VALBARDA
-		STATE_GJILANIJA
-		STATE_KRUJANA
-		STATE_LEZHANIA
-		STATE_GJAKOVA
-		STATE_VLORIANA
-		STATE_VOSKOPOJANA
-		STATE_KURBULL
-		STATE_PESHKOPINA
-		STATE_DIBRA
-		STATE_VITHKUQJA
-		STATE_RUSYLESH
-		STATE_ZARJAPE
-		STATE_PODBARDISHTA
-		STATE_STRUGOVA
-		STATE_SKRAPARIA
-		STATE_KLOSI
-		STATE_KAVAJANA
-		STATE_TETOVAJA
-		STATE_KRUSHEVA
-		STATE_DEBARIA
-		STATE_MILOTI
-		STATE_KORCOVA
-		STATE_XHAMADHANI
-	}
+	use_culture_states = yes
 
 	required_states_fraction = 0.76
 	
