@@ -57,7 +57,7 @@ widget = {
 			container = {
 				visible = "[SeaNodeMarker.ShouldShowInteraction]"
 				container = {
-					visible = "[EqualTo_string(SeaNodeMarker.GetSupplyNetworkTooltip, 'Deploy to Sea Node')]"
+					#visible = "[EqualTo_string(SeaNodeMarker.GetSupplyNetworkTooltip, 'Deploy to Sea Node')]" This works, but lags.
 		
 					### no supply
 					button = {
@@ -257,172 +257,265 @@ widget = {
 		### ZOOM NEAR
 		container = {
 			visible = "[Not(IsZoomLevelFar)]"
+
 			container = {
-				visible = "[EqualTo_string(SeaNodeMarker.GetSupplyNetworkTooltip, '1')]"
-	
-				### no supply
-				button = {
-					visible = "[And(Not(SeaNodeMarker.ShouldShowInteraction), Not(SeaNodeMarker.HasActiveSupplyNetwork))]"
-					onclick = "[SeaNodeMarker.SelectClick]"
-					texture = "gfx/interface/map_markers/sky_node.dds"
-					gfxtype = buttongfx
-					effectname = "NoHighlight"
-					using = default_button_animation
-					using = select_button_sound
-					framesize = { 60 60 }
-					size = { 25 25 }
-					parentanchor = center
-					using = tooltip_above
-					tooltip = "[SeaNodeMarker.GetSupplyNetworkTooltip]"
-				}
-	
-				### no supply - in interaction
-				button = {
-					alwaystransparent = yes
-					visible = "[And(SeaNodeMarker.ShouldShowInteraction, Not(SeaNodeMarker.HasActiveSupplyNetwork))]"
-					onclick = "[SeaNodeMarker.SelectClick]"
-					texture = "gfx/interface/map_markers/sky_node.dds"
-					gfxtype = buttongfx
-					effectname = "NoHighlight"
-					using = default_button_animation
-					using = select_button_sound
-					framesize = { 60 60 }
-					size = { 25 25 }
-					parentanchor = center
-				}
-	
-				### has supply
-				button = {
-					onmousehierarchyenter = "[AccessHighlightManager.HighlightSupplyNetwork(Country.Self)]"
-					onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
-					visible = "[And(Not(SeaNodeMarker.ShouldShowInteraction), SeaNodeMarker.HasActiveSupplyNetwork)]"
-					onclick = "[SeaNodeMarker.SelectClick]"
-					texture = "gfx/interface/map_markers/sky_node_have_supply.dds"
-					gfxtype = buttongfx
-					effectname = "NoHighlight"
-					using = default_button_animation
-					using = select_button_sound
-					framesize = { 60 60 }
-					size = { 30 30 }
-					parentanchor = center
-					using = tooltip_above
-					tooltip = "[SeaNodeMarker.GetSupplyNetworkTooltip]"
-				}
-	
-				### has supply - in interaction
-				button = {
-					alwaystransparent = yes
-					visible = "[And(SeaNodeMarker.ShouldShowInteraction, SeaNodeMarker.HasActiveSupplyNetwork)]"
-					onclick = "[SeaNodeMarker.SelectClick]"
-					texture = "gfx/interface/map_markers/sky_node_have_supply.dds"
-					gfxtype = buttongfx
-					effectname = "NoHighlight"
-					using = default_button_animation
-					using = select_button_sound
-					framesize = { 60 60 }
-					size = { 30 30 }
-					parentanchor = center
-				}
-	
-				### selected / interface panel opened
-				widget = {
-					onmousehierarchyenter = "[AccessHighlightManager.HighlightSupplyNetwork(Country.Self)]"
-					onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
-					size = { 100% 100% }
-					icon = {
-						visible = "[SeaNodeMarker.IsSelected]"
-						size = { 35 35 }
-						texture = "gfx/interface/main_hud/selected_arrow.dds"
-						position = { 0 15 }
-						parentanchor = hcenter
-						alwaystransparent = yes
+				visible = "[SeaNodeMarker.ShouldShowInteraction]"
+				container = {
+					#visible = "[Not(EqualTo_string(SeaNodeMarker.GetSupplyNetworkTooltip, '1'))]"
+		
+					### no supply
+					button = {
+						visible = "[And(Not(SeaNodeMarker.ShouldShowInteraction), Not(SeaNodeMarker.HasActiveSupplyNetwork))]"
+						onclick = "[SeaNodeMarker.SelectClick]"
+						texture = "gfx/interface/map_markers/sea_node.dds"
+						gfxtype = buttongfx
+						effectname = "NoHighlight"
+						using = default_button_animation
+						using = select_button_sound
+						framesize = { 60 60 }
+						size = { 25 25 }
+						parentanchor = center
+						using = tooltip_above
+						tooltip = "[SeaNodeMarker.GetSupplyNetworkTooltip]"
 					}
-					using = tooltip_above
-					tooltip = "[SeaNodeMarker.GetSupplyNetworkTooltip]"
+		
+					### no supply - in interaction
+					button = {
+						alwaystransparent = yes
+						visible = "[And(SeaNodeMarker.ShouldShowInteraction, Not(SeaNodeMarker.HasActiveSupplyNetwork))]"
+						onclick = "[SeaNodeMarker.SelectClick]"
+						texture = "gfx/interface/map_markers/sea_node.dds"
+						gfxtype = buttongfx
+						effectname = "NoHighlight"
+						using = default_button_animation
+						using = select_button_sound
+						framesize = { 60 60 }
+						size = { 25 25 }
+						parentanchor = center
+					}
+		
+					### has supply
+					button = {
+						onmousehierarchyenter = "[AccessHighlightManager.HighlightSupplyNetwork(Country.Self)]"
+						onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+						visible = "[And(Not(SeaNodeMarker.ShouldShowInteraction), SeaNodeMarker.HasActiveSupplyNetwork)]"
+						onclick = "[SeaNodeMarker.SelectClick]"
+						texture = "gfx/interface/map_markers/sea_node_have_supply.dds"
+						gfxtype = buttongfx
+						effectname = "NoHighlight"
+						using = default_button_animation
+						using = select_button_sound
+						framesize = { 60 60 }
+						size = { 30 30 }
+						parentanchor = center
+						using = tooltip_above
+						tooltip = "[SeaNodeMarker.GetSupplyNetworkTooltip]"
+					}
+		
+					### has supply - in interaction
+					button = {
+						alwaystransparent = yes
+						visible = "[And(SeaNodeMarker.ShouldShowInteraction, SeaNodeMarker.HasActiveSupplyNetwork)]"
+						onclick = "[SeaNodeMarker.SelectClick]"
+						texture = "gfx/interface/map_markers/sea_node_have_supply.dds"
+						gfxtype = buttongfx
+						effectname = "NoHighlight"
+						using = default_button_animation
+						using = select_button_sound
+						framesize = { 60 60 }
+						size = { 30 30 }
+						parentanchor = center
+					}
+		
+					### selected / interface panel opened
+					widget = {
+						onmousehierarchyenter = "[AccessHighlightManager.HighlightSupplyNetwork(Country.Self)]"
+						onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+						size = { 100% 100% }
+						icon = {
+							visible = "[SeaNodeMarker.IsSelected]"
+							size = { 35 35 }
+							texture = "gfx/interface/main_hud/selected_arrow.dds"
+							position = { 0 15 }
+							parentanchor = hcenter
+							alwaystransparent = yes
+						}
+						using = tooltip_above
+						tooltip = "[SeaNodeMarker.GetSupplyNetworkTooltip]"
+					}
 				}
 			}
+
 			container = {
-				visible = "[Not(EqualTo_string(SeaNodeMarker.GetSupplyNetworkTooltip, '1'))]"
-	
-				### no supply
-				button = {
-					visible = "[And(Not(SeaNodeMarker.ShouldShowInteraction), Not(SeaNodeMarker.HasActiveSupplyNetwork))]"
-					onclick = "[SeaNodeMarker.SelectClick]"
-					texture = "gfx/interface/map_markers/sea_node.dds"
-					gfxtype = buttongfx
-					effectname = "NoHighlight"
-					using = default_button_animation
-					using = select_button_sound
-					framesize = { 60 60 }
-					size = { 25 25 }
-					parentanchor = center
-					using = tooltip_above
-					tooltip = "[SeaNodeMarker.GetSupplyNetworkTooltip]"
-				}
-	
-				### no supply - in interaction
-				button = {
-					alwaystransparent = yes
-					visible = "[And(SeaNodeMarker.ShouldShowInteraction, Not(SeaNodeMarker.HasActiveSupplyNetwork))]"
-					onclick = "[SeaNodeMarker.SelectClick]"
-					texture = "gfx/interface/map_markers/sea_node.dds"
-					gfxtype = buttongfx
-					effectname = "NoHighlight"
-					using = default_button_animation
-					using = select_button_sound
-					framesize = { 60 60 }
-					size = { 25 25 }
-					parentanchor = center
-				}
-	
-				### has supply
-				button = {
-					onmousehierarchyenter = "[AccessHighlightManager.HighlightSupplyNetwork(Country.Self)]"
-					onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
-					visible = "[And(Not(SeaNodeMarker.ShouldShowInteraction), SeaNodeMarker.HasActiveSupplyNetwork)]"
-					onclick = "[SeaNodeMarker.SelectClick]"
-					texture = "gfx/interface/map_markers/sea_node_have_supply.dds"
-					gfxtype = buttongfx
-					effectname = "NoHighlight"
-					using = default_button_animation
-					using = select_button_sound
-					framesize = { 60 60 }
-					size = { 30 30 }
-					parentanchor = center
-					using = tooltip_above
-					tooltip = "[SeaNodeMarker.GetSupplyNetworkTooltip]"
-				}
-	
-				### has supply - in interaction
-				button = {
-					alwaystransparent = yes
-					visible = "[And(SeaNodeMarker.ShouldShowInteraction, SeaNodeMarker.HasActiveSupplyNetwork)]"
-					onclick = "[SeaNodeMarker.SelectClick]"
-					texture = "gfx/interface/map_markers/sea_node_have_supply.dds"
-					gfxtype = buttongfx
-					effectname = "NoHighlight"
-					using = default_button_animation
-					using = select_button_sound
-					framesize = { 60 60 }
-					size = { 30 30 }
-					parentanchor = center
-				}
-	
-				### selected / interface panel opened
-				widget = {
-					onmousehierarchyenter = "[AccessHighlightManager.HighlightSupplyNetwork(Country.Self)]"
-					onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
-					size = { 100% 100% }
-					icon = {
-						visible = "[SeaNodeMarker.IsSelected]"
-						size = { 35 35 }
-						texture = "gfx/interface/main_hud/selected_arrow.dds"
-						position = { 0 15 }
-						parentanchor = hcenter
-						alwaystransparent = yes
+				visible = "[Not(SeaNodeMarker.ShouldShowInteraction)]"
+
+				container = {
+					visible = "[EqualTo_string(SeaNodeMarker.GetSupplyNetworkTooltip, '1')]"
+		
+					### no supply
+					button = {
+						visible = "[And(Not(SeaNodeMarker.ShouldShowInteraction), Not(SeaNodeMarker.HasActiveSupplyNetwork))]"
+						onclick = "[SeaNodeMarker.SelectClick]"
+						texture = "gfx/interface/map_markers/sky_node.dds"
+						gfxtype = buttongfx
+						effectname = "NoHighlight"
+						using = default_button_animation
+						using = select_button_sound
+						framesize = { 60 60 }
+						size = { 25 25 }
+						parentanchor = center
+						using = tooltip_above
+						tooltip = "[SeaNodeMarker.GetSupplyNetworkTooltip]"
 					}
-					using = tooltip_above
-					tooltip = "[SeaNodeMarker.GetSupplyNetworkTooltip]"
+		
+					### no supply - in interaction
+					button = {
+						alwaystransparent = yes
+						visible = "[And(SeaNodeMarker.ShouldShowInteraction, Not(SeaNodeMarker.HasActiveSupplyNetwork))]"
+						onclick = "[SeaNodeMarker.SelectClick]"
+						texture = "gfx/interface/map_markers/sky_node.dds"
+						gfxtype = buttongfx
+						effectname = "NoHighlight"
+						using = default_button_animation
+						using = select_button_sound
+						framesize = { 60 60 }
+						size = { 25 25 }
+						parentanchor = center
+					}
+		
+					### has supply
+					button = {
+						onmousehierarchyenter = "[AccessHighlightManager.HighlightSupplyNetwork(Country.Self)]"
+						onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+						visible = "[And(Not(SeaNodeMarker.ShouldShowInteraction), SeaNodeMarker.HasActiveSupplyNetwork)]"
+						onclick = "[SeaNodeMarker.SelectClick]"
+						texture = "gfx/interface/map_markers/sky_node_have_supply.dds"
+						gfxtype = buttongfx
+						effectname = "NoHighlight"
+						using = default_button_animation
+						using = select_button_sound
+						framesize = { 60 60 }
+						size = { 30 30 }
+						parentanchor = center
+						using = tooltip_above
+						tooltip = "[SeaNodeMarker.GetSupplyNetworkTooltip]"
+					}
+		
+					### has supply - in interaction
+					button = {
+						alwaystransparent = yes
+						visible = "[And(SeaNodeMarker.ShouldShowInteraction, SeaNodeMarker.HasActiveSupplyNetwork)]"
+						onclick = "[SeaNodeMarker.SelectClick]"
+						texture = "gfx/interface/map_markers/sky_node_have_supply.dds"
+						gfxtype = buttongfx
+						effectname = "NoHighlight"
+						using = default_button_animation
+						using = select_button_sound
+						framesize = { 60 60 }
+						size = { 30 30 }
+						parentanchor = center
+					}
+		
+					### selected / interface panel opened
+					widget = {
+						onmousehierarchyenter = "[AccessHighlightManager.HighlightSupplyNetwork(Country.Self)]"
+						onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+						size = { 100% 100% }
+						icon = {
+							visible = "[SeaNodeMarker.IsSelected]"
+							size = { 35 35 }
+							texture = "gfx/interface/main_hud/selected_arrow.dds"
+							position = { 0 15 }
+							parentanchor = hcenter
+							alwaystransparent = yes
+						}
+						using = tooltip_above
+						tooltip = "[SeaNodeMarker.GetSupplyNetworkTooltip]"
+					}
+				}
+				container = {
+					visible = "[Not(EqualTo_string(SeaNodeMarker.GetSupplyNetworkTooltip, '1'))]"
+		
+					### no supply
+					button = {
+						visible = "[And(Not(SeaNodeMarker.ShouldShowInteraction), Not(SeaNodeMarker.HasActiveSupplyNetwork))]"
+						onclick = "[SeaNodeMarker.SelectClick]"
+						texture = "gfx/interface/map_markers/sea_node.dds"
+						gfxtype = buttongfx
+						effectname = "NoHighlight"
+						using = default_button_animation
+						using = select_button_sound
+						framesize = { 60 60 }
+						size = { 25 25 }
+						parentanchor = center
+						using = tooltip_above
+						tooltip = "[SeaNodeMarker.GetSupplyNetworkTooltip]"
+					}
+		
+					### no supply - in interaction
+					button = {
+						alwaystransparent = yes
+						visible = "[And(SeaNodeMarker.ShouldShowInteraction, Not(SeaNodeMarker.HasActiveSupplyNetwork))]"
+						onclick = "[SeaNodeMarker.SelectClick]"
+						texture = "gfx/interface/map_markers/sea_node.dds"
+						gfxtype = buttongfx
+						effectname = "NoHighlight"
+						using = default_button_animation
+						using = select_button_sound
+						framesize = { 60 60 }
+						size = { 25 25 }
+						parentanchor = center
+					}
+		
+					### has supply
+					button = {
+						onmousehierarchyenter = "[AccessHighlightManager.HighlightSupplyNetwork(Country.Self)]"
+						onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+						visible = "[And(Not(SeaNodeMarker.ShouldShowInteraction), SeaNodeMarker.HasActiveSupplyNetwork)]"
+						onclick = "[SeaNodeMarker.SelectClick]"
+						texture = "gfx/interface/map_markers/sea_node_have_supply.dds"
+						gfxtype = buttongfx
+						effectname = "NoHighlight"
+						using = default_button_animation
+						using = select_button_sound
+						framesize = { 60 60 }
+						size = { 30 30 }
+						parentanchor = center
+						using = tooltip_above
+						tooltip = "[SeaNodeMarker.GetSupplyNetworkTooltip]"
+					}
+		
+					### has supply - in interaction
+					button = {
+						alwaystransparent = yes
+						visible = "[And(SeaNodeMarker.ShouldShowInteraction, SeaNodeMarker.HasActiveSupplyNetwork)]"
+						onclick = "[SeaNodeMarker.SelectClick]"
+						texture = "gfx/interface/map_markers/sea_node_have_supply.dds"
+						gfxtype = buttongfx
+						effectname = "NoHighlight"
+						using = default_button_animation
+						using = select_button_sound
+						framesize = { 60 60 }
+						size = { 30 30 }
+						parentanchor = center
+					}
+		
+					### selected / interface panel opened
+					widget = {
+						onmousehierarchyenter = "[AccessHighlightManager.HighlightSupplyNetwork(Country.Self)]"
+						onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+						size = { 100% 100% }
+						icon = {
+							visible = "[SeaNodeMarker.IsSelected]"
+							size = { 35 35 }
+							texture = "gfx/interface/main_hud/selected_arrow.dds"
+							position = { 0 15 }
+							parentanchor = hcenter
+							alwaystransparent = yes
+						}
+						using = tooltip_above
+						tooltip = "[SeaNodeMarker.GetSupplyNetworkTooltip]"
+					}
 				}
 			}
 		}
