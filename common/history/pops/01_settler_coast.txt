@@ -1000,15 +1000,51 @@ s:STATE_FAR_SHORE_2 = {
   }
 
   s:STATE_OVERBURROW = {
-
+	region_state:BRB = {
+		create_pop = {
+			culture = highland_halfling
+			size = 2107689
+		}
+		create_pop = {
+			culture = changeling
+			size = 120176
+		}
+	}
   }
 
   s:STATE_UPPER_GOLDENLEAF = {
-
+	region_state:GRH = { 
+		create_pop = {
+			culture = highland_halfling
+			size = 1041552
+		}
+		create_pop = {
+			culture = highland_halfling
+			religion = church_of_man
+			size = 121531
+		}
+		create_pop = {
+			culture = dorite
+			size = 141552
+		}
+		create_pop = {
+			culture = clearbough
+			size = 116857
+		}
+	}
   }
 
   s:STATE_NEWBANKS = {
-
+	region_state:FTH = {
+		create_pop = {
+			culture = highland_halfling
+			size = 759604
+		}
+		create_pop = {
+			culture = clearbough
+			size = 58302
+		}
+	}
   }
 
   s:STATE_STOUTHEART_BASIN = {
