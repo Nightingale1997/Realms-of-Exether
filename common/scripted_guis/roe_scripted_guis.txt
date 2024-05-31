@@ -116,7 +116,9 @@ is_sky_state = {
 			scope:node_state = s:STATE_LUMANTAN_HEIGHTS
 			scope:node_state = s:STATE_EAST_OPALATH_HEIGHTS
 			scope:node_state = s:STATE_KASKADVIVO_HEIGHTS
-			scope:node_state = s:STATE_BEANLAKE_SKIES 
+			scope:node_state = s:STATE_BEANLAKE_SKIES
+			scope:node_state = s:STATE_SADHANA_HEIGHTS
+			scope:node_state = s:STATE_SEERSKIES
 		}
 		
 
@@ -241,6 +243,8 @@ is_sky_region = {
 		scope:node_region = sr:region_morassian_heights
 		scope:node_region = sr:region_senekskies
 		scope:node_region = sr:region_khamoskies
+		scope:node_region = sr:region_sadhana_heights
+		scope:node_region = sr:region_seerskies
 	}
 	}
 }
