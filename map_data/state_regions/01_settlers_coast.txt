@@ -438,7 +438,13 @@ STATE_PLAGUEWOOD_HINTERLANDS = {
     farm = x4CDAD5
     mine = x7ACFE9
     port = xd4f456
-
+    arable_land = 20
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_silk_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_iron_mining = 27
+        bg_lead_mining = 21
+        bg_logging = 2
+    }
     naval_exit_id = 3208
 }
 STATE_PLAGUEWOOD_HINTERLANDS_2 = {

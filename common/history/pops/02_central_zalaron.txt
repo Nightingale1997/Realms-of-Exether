@@ -44,22 +44,78 @@
 			size = 149900
 		}
 		create_pop = {
-			culture = assyrian
+			culture = waste_walker
 			size = 30400
 		}
 	}
   }
     
   s:STATE_PLAGUES_END = {
-
+	region_state:OCR = {
+		create_pop = {
+			culture = korkaz
+			size = 928804
+		}
+		create_pop = {
+			culture = buramog
+			size = 318804
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = astreval
+			size = 6000
+		}
+		create_pop = {
+			culture = aridrun
+			size = 108808
+		}
+	}
   }
     
   s:STATE_KESHARQAN = {
-
+	region_state:OCR = {
+		create_pop = {
+			culture = korkaz
+			size = 319996
+		}
+		create_pop = {
+			culture = plaguedweller
+			size = 116004
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = astreval
+			size = 6000
+		}
+	}
   }
     
   s:STATE_DILAFSHAN = {
-
+	region_state:RCR = {
+		create_pop = {
+			culture = korkaz
+			size = 268948
+		}
+		create_pop = {
+			culture = plaguedweller
+			size = 195534
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = astreval
+			size = 11400
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = bossardi
+			size = 8550
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = plaguedweller
+			size = 8550
+		}
+	}
   }
     
   s:STATE_EASTERN_EQUINE_PLAIN = {
@@ -76,7 +132,17 @@
   }
     
   s:STATE_BARIKHARGUL = {
-
+	region_state:RCR = {
+		create_pop = {
+			culture = korkaz
+			size = 523988
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = astreval
+			size = 13000
+		}
+	}
   }
     
   s:STATE_WESTERN_EQUINE_PLAIN = {

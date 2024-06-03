@@ -362,7 +362,20 @@ s:STATE_CAEL_VALEN_2 = {
   }
 
   s:STATE_PLAGUEWOOD_HINTERLANDS = {
-
+	region_state:OCR = {
+		create_pop = {
+			culture = korkaz
+			size = 180996
+		}
+		create_pop = {
+			culture = plaguedweller
+			size = 76000
+		}
+		create_pop = {
+			culture = aridrun
+			size = 8004
+		}
+	}
   }
 
   s:STATE_ASHWICK = {

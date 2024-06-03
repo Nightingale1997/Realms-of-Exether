@@ -460,7 +460,14 @@
   }
 
   s:STATE_PLAGUEWOOD_HINTERLANDS = {
-
+	region_state:OCR={
+		create_building={
+			building="building_millet_farm"
+			level=2
+			reserves=1
+			activate_production_methods={ "pm_simple_farming" "pm_privately_owned" "pm_tools_disabled" "pm_citrus_orchards" }
+		}
+	}
   }
 
   s:STATE_ASHWICK = {
