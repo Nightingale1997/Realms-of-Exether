@@ -120,6 +120,18 @@ is_sky_state = {
 			scope:node_state = s:STATE_SADHANA_HEIGHTS
 			scope:node_state = s:STATE_SEERSKIES
 			scope:node_state = s:STATE_UPLAND_HEIGHTS
+			scope:node_state = s:STATE_THE_WHITE_SKIES
+			scope:node_state = s:STATE_ZEPHYRSKIES
+			scope:node_state = s:STATE_FLUSSHOLM_SKIES
+			scope:node_state = s:STATE_SOLILOQUE_HEIGHTS
+			scope:node_state = s:STATE_NORTHERN_FEYSTALK_SKIES
+			scope:node_state = s:STATE_SOUTHERN_FEYSTALK_SKIES
+			scope:node_state = s:STATE_ICAN_SKIES
+			scope:node_state = s:STATE_DROWNED_SKIES
+			scope:node_state = s:STATE_MORASSIAN_HEIGHTS
+
+
+
 		}
 		
 
@@ -247,6 +259,10 @@ is_sky_region = {
 		scope:node_region = sr:region_sadhana_heights
 		scope:node_region = sr:region_seerskies
 		scope:node_region = sr:region_upland_heights
+		scope:node_region = sr:region_the_white_skies
+		scope:node_region = sr:region_zephyrskies
+		scope:node_region = sr:region_flussholm_skies
+		scope:node_region = sr:region_soliloque_heights
 	}
 	}
 }
