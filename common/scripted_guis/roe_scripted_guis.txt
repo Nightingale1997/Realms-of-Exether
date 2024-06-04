@@ -129,7 +129,7 @@ is_sky_state = {
 			scope:node_state = s:STATE_ICAN_SKIES
 			scope:node_state = s:STATE_DROWNED_SKIES
 			scope:node_state = s:STATE_MORASSIAN_HEIGHTS
-
+			scope:node_state = s:STATE_CROWNPEAK_HEIGHTS
 
 
 		}
@@ -263,6 +263,7 @@ is_sky_region = {
 		scope:node_region = sr:region_zephyrskies
 		scope:node_region = sr:region_flussholm_skies
 		scope:node_region = sr:region_soliloque_heights
+		scope:node_region = sr:region_crownpeak_heights
 	}
 	}
 }

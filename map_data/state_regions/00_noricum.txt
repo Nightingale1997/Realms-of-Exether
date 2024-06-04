@@ -8,13 +8,14 @@
     wood = x91B3B1
     farm = xABE279
     mine = xD8EA93
+    port = xf08bce
     arable_land = 80
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_coal_mining = 44
         bg_logging = 7
     }
-
+    naval_exit_id = 3225
 }
 STATE_CALDAMUS = {
     id = 4002
@@ -41,14 +42,14 @@ STATE_SERONTAIN = {
     wood = x8EEFE2
     farm = xAF99FB
     mine = xB7B7E1
-
+    port = xd98b95
     arable_land = 120
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_coal_mining = 84
         bg_logging = 7
     }
-
+    naval_exit_id = 3225
 }
 STATE_NORTH_HIGHLANDS = {
     id = 4003
@@ -774,6 +775,7 @@ STATE_INVERINGAR = {
     wood = x3CD9FA
     farm = x5CE0CC
     mine = x6AD0DE
+    port = xaf77d1
     arable_land = 40
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
@@ -782,7 +784,7 @@ STATE_INVERINGAR = {
         bg_lead_mining = 24
         bg_logging = 8
     }
-
+    naval_exit_id = 3225
 }
 STATE_GLASLIESH = {
     id = 4045
