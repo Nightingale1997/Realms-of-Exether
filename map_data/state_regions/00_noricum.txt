@@ -686,13 +686,14 @@ STATE_KILCREE = {
     wood = x78C3BB
     farm = x9FD0D3
     mine = xCFDE86
+    port = xe1f13f
     arable_land = 25
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_coal_mining = 60
         bg_logging = 11
     }
-
+    naval_exit_id = 3227
 }
 STATE_HAG_MARSHES = {
     id = 4039
@@ -722,8 +723,9 @@ STATE_BALLYNE = {
     wood = x86C5EF
     farm = x9DAFC9
     mine = xA7F9E2
-    port = xB363FC
+    port = x86c5ef
 
+    naval_exit_id = 3227
 }
 STATE_URIKS_GIFT = {
     id = 4041
@@ -891,8 +893,9 @@ STATE_ROSKIRK = {
     wood = xB4BADF
     farm = xBE6CE6
     mine = xBEAEEB
-    port = xC160FD
+    port = xbe6ce6
 
+    naval_exit_id = 3227
 }
 STATE_SHROUDGUARD = {
     id = 4052
