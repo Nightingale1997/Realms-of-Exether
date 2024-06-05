@@ -132,6 +132,8 @@ is_sky_state = {
 			scope:node_state = s:STATE_CROWNPEAK_HEIGHTS
 			scope:node_state = s:STATE_DOVESFLIGHT
 			scope:node_state = s:STATE_RAVENFLIGHT
+			scope:node_state = s:STATE_EAST_YANGERSKIES
+			scope:node_state = s:STATE_WEST_YANGERSKIES
 		}
 		
 
@@ -266,6 +268,8 @@ is_sky_region = {
 		scope:node_region = sr:region_crownpeak_heights
 		scope:node_region = sr:region_dovesflight
 		scope:node_region = sr:region_ravenflight
+		scope:node_region = sr:region_east_yangerskies
+		scope:node_region = sr:region_west_yangerskies
 	}
 	}
 }

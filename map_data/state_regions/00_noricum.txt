@@ -221,17 +221,17 @@ STATE_WEST_YANGER_STEPPE = {
     subsistence_building = "building_subsistence_pastures"
     provinces = { "x70C7D5" "x7B8BFA" "x9691DC" "x9ADDFD" "xA0EA8B" "xA0F09C" "xA3D3F8" "xA976DB" "xA9E5E0" "xADFCA3" "xB2A6A5" "xB9F085" "xBAA8C8" "xBEDC64" "xC1D3A2" "xC5A6D5" "xC7C767" "xD0FBD3" "xD4EA48" "xDBEAE4" "xDF73D7" "xE3CC68" "xF0CE8A" "xF279C2" "xF57FEC" "xF8E18D" "xFAD96F" "xFEC74B" }
     city = x22E6F3
-    wood = x4FD5E2
+    wood = x9ADDFD
     farm = x62A1F5
     mine = x66DBE6
-    port = x70C7D5
+    port = xd23584
     arable_land = 30
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
         bg_iron_mining = 21
         bg_logging = 5
     }
-
+    naval_exit_id = 3232
 }
 STATE_SOUTH_YANGER_STEPPE = {
     id = 3789
@@ -242,14 +242,14 @@ STATE_SOUTH_YANGER_STEPPE = {
     wood = x4FD5E2
     farm = x62A1F5
     mine = x66DBE6
-    port = x70C7D5
+    port = xeb93e9
     arable_land = 19
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
         bg_iron_mining = 11
         bg_logging = 2
     }
-
+    naval_exit_id = 3231
 }
 STATE_EAST_YANGER_STEPPE = {
     id = 4013
@@ -278,13 +278,13 @@ STATE_RIDERS_MOOT = {
     wood = x78B5D8
     farm = x99FAB1
     mine = xA087DF
-    port = xAF7EE4
+    port = xf7b05e
     arable_land = 100
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_tea_plantations" }
     capped_resources = {
         bg_logging = 6
     }
-
+    naval_exit_id = 3231
 }
 STATE_FROSTGATE = {
     id = 4015
@@ -434,14 +434,14 @@ STATE_CROWNSHADE = {
     city = x65A8F5
     farm = x94C2B8
     mine = x95E4D4
-    port = x9EEA90
+    port = x94c2b8
     arable_land = 30
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
         bg_coal_mining = 28
         bg_logging = 4
     }
-
+    naval_exit_id = 3232
 }
 STATE_TANISTS_RETREAT = {
     id = 4024
