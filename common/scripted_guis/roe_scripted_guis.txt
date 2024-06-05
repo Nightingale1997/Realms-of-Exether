@@ -131,7 +131,7 @@ is_sky_state = {
 			scope:node_state = s:STATE_MORASSIAN_HEIGHTS
 			scope:node_state = s:STATE_CROWNPEAK_HEIGHTS
 			scope:node_state = s:STATE_DOVESFLIGHT
-		
+			scope:node_state = s:STATE_RAVENFLIGHT
 		}
 		
 
@@ -265,6 +265,7 @@ is_sky_region = {
 		scope:node_region = sr:region_soliloque_heights
 		scope:node_region = sr:region_crownpeak_heights
 		scope:node_region = sr:region_dovesflight
+		scope:node_region = sr:region_ravenflight
 	}
 	}
 }

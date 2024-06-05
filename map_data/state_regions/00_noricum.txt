@@ -399,6 +399,7 @@ STATE_RAVENCLIFF = {
     wood = x86E2FC
     farm = x8BDAEA
     mine = x97C2CC
+    port = x86e2fc
     arable_land = 60
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
@@ -406,7 +407,7 @@ STATE_RAVENCLIFF = {
         bg_iron_mining = 36
         bg_logging = 9
     }
-
+    naval_exit_id = 3229
 }
 STATE_HUNTERS_HILL = {
     id = 4022
@@ -416,12 +417,13 @@ STATE_HUNTERS_HILL = {
     wood = xA793F7
     farm = xAD94DF
     mine = xBF89F8
+    port = xbf89f8
     arable_land = 60
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 17
     }
-
+    naval_exit_id = 3229
 }
 STATE_CROWNSHADE = {
     id = 4023
@@ -907,6 +909,7 @@ STATE_SHROUDGUARD = {
     wood = x9FB4F5
     farm = xCBDECE
     mine = xCFDB66
+    port = xd7d0c4
     arable_land = 80
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
@@ -914,7 +917,7 @@ STATE_SHROUDGUARD = {
         bg_lead_mining = 60
         bg_logging = 13
     }
-
+    naval_exit_id = 3229
 }
 STATE_THORNWALL = {
     id = 4053
@@ -1122,7 +1125,7 @@ STATE_YSTRAD = {
         bg_coal_mining = 84
         bg_logging = 8
     }
-
+    naval_exit_id = 3229
 }
 STATE_GLYNFFORDD = {
     id = 4068
@@ -1238,13 +1241,13 @@ STATE_BLACKDON = {
     wood = xA072EC
     farm = xA1EE8B
     mine = xB78EB2
-    port = xB7BBAE
+    port = xa072ec
     arable_land = 100
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 13
     }
-
+    naval_exit_id = 3229
 }
 STATE_HARTHALGH = {
     id = 4078
