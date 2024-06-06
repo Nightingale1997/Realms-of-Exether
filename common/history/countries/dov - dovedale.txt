@@ -1,0 +1,36 @@
+COUNTRIES = {
+	c:DOV = {
+		effect_starting_technology_tier_2_tech = yes
+		effect_starting_politics_conservative = yes
+		add_technology_researched = postal_savings
+		set_tax_level = low 
+		#i think that Dovedale has a very low taxation capacity bc it doesn't have sufficient bureaucracy, therefore, it isn't able to sustain a schoolar institution 
+
+		# Laws 
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_oligarchy
+		activate_law = law_type:law_denominational_exclusion
+		activate_law = law_type:law_women_own_property
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_mercantilism
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_local_police
+		activate_law = law_type:law_no_schools
+		activate_law = law_type:law_censorship
+		activate_law = law_type:law_consumption_based_taxation
+		activate_law = law_type:law_no_colonial_affairs
+
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 1
+		}		
+
+		ig:ig_landowners = {
+			add_ruling_interest_group = yes
+		}
+
+		effect_concord_major_member = yes
+
+	}
+}
