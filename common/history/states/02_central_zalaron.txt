@@ -69,7 +69,7 @@ s:STATE_PLAGUES_END = {
         country = c:OCR
         owned_provinces = { "x2BE0F2" "x45C7ED" "x89F7B7" "x9FF187" "xA397DE" "xA5A8BA" "xB0BDB6" "xB3AF94" "xB69ED7" "xBCEBCC" "xBFA88F" "xC78FEA" "xC9C1BF" "xCD929F" "xD4D6ED" "xE1B2A1" "xE2F5B4" "xE5BA96" "xE866BC" "xEB9581" "xEE9BD7" "xF98E6F" }
 }
-add_homeland = cu:tefereti
+add_homeland = cu:korkaz
 }
 
 s:STATE_KESHARQAN = {
@@ -77,7 +77,7 @@ s:STATE_KESHARQAN = {
         country = c:OCR
         owned_provinces = { "x16F5F8" "x76B1D1" "x93EAF6" "xABD388" "xAFB49A" "xB5E39F" "xCA51DF" "xCBE091" "xD18AE8" "xD1DB98" "xD1F45A" "xD7F32B" "xE099F1" "xE4CAA9" "xE6AEF6" "xF670E8" "xF7F8F6" "xFCE71A" }
 }
-add_homeland = cu:tefereti
+add_homeland = cu:korkaz
 }
 
 s:STATE_DILAFSHAN = {
@@ -86,6 +86,7 @@ s:STATE_DILAFSHAN = {
         owned_provinces = { "x73D8FA" "x7CFBED" "x8AF2B2" "x93C0A3" "xA391C8" "xB799CA" "xBA61DF" "xC1EAB8" "xC9E793" "xCC8DEE" "xD4E497" "xE887A4" "xEC4CDE" "xEE8AA5" "xF1B393" "xF2B6BF" "xF2F471" "xF746F7" "xFC9F7E" }
 }
 add_homeland = cu:plaguedweller
+add_homeland = cu:korkaz
 }
 
 s:STATE_EASTERN_EQUINE_PLAIN = {
@@ -101,7 +102,7 @@ s:STATE_BARIKHARGUL = {
         country = c:RCR
         owned_provinces = { "x37FBD4" "x64DCF3" "x6ED7CE" "x81A6DA" "x9292F7" "x9EF4D3" "xA1FE87" "xA7F5B0" "xB0CE97" "xB65DFA" "xB9A4CA" "xC383B5" "xC3DC6B" "xC7999A" "xC7FDFB" "xCA5CF3" "xDAD3A7" "xE8AA90" "xEBC392" "xEDF028" "xF1D750" "xF1EA58" "xF9C16C" "xFEDB7B" }
 }
-add_homeland = cu:plaguedweller
+add_homeland = cu:korkaz
 }
 
 s:STATE_WESTERN_EQUINE_PLAIN = {
@@ -1019,7 +1020,7 @@ s:STATE_ALAMARA = {
         country = c:TIS
         owned_provinces = { "x50F9CF" "x5CEDC1" "x65B2E2" "x73B7FC" "x88BEC2" "x91B4B3" "xE9DDBB" "xF349C3" "xF4D1FB" }
 }
-add_homeland = cu:tefereti
+add_homeland = cu:azmaraan
 }
 
 s:STATE_ESPRANOOR = {
@@ -1043,7 +1044,8 @@ s:STATE_KALIBRANTO = {
         country = c:TIS
         owned_provinces = { "x64E9B4" "x70BDF8" "xA7B3FD" "xAE79E3" "xC7F853" "xF45AD0" "xFDD72F" }
 }
-add_homeland = cu:tefereti
+add_homeland = cu:azmaraan
+add_homeland = cu:qinnaat
 }
 
 s:STATE_SAHARANDO = {
@@ -1059,7 +1061,8 @@ s:STATE_ZAHARIDO = {
         country = c:VER
         owned_provinces = { "x46FEDE" "x8BE3F4" "x8CDE9E" "x8CF379" "x90FEE6" "xA69CC9" "xC6DFD0" "xD4FDD6" }
 }
-add_homeland = cu:tefereti
+add_homeland = cu:azmaraan
+add_homeland = cu:qinnaat
 }
 
 s:STATE_ALVEKSADO = {
@@ -1067,7 +1070,7 @@ s:STATE_ALVEKSADO = {
         country = c:LIS
         owned_provinces = { "x85E5D1" "x96E5AC" "x9FA0F2" "xA8FE6F" "xABC5F8" "xAFA5A1" "xBEA6A7" "xC0BCB7" "xC693D0" "xCEB9D7" "xF363F3" "xFDBE60" }
 }
-add_homeland = cu:tefereti
+add_homeland = cu:azmaraan
 }
 
 s:STATE_ALMARAQI = {
@@ -1075,7 +1078,7 @@ s:STATE_ALMARAQI = {
         country = c:LIS
         owned_provinces = { "x60DCD7" "x84E2AF" "xA0E486" "xBE5FF5" "xBEF17F" "xC6ADE3" "xCBC9A1" "xCFEBFC" "xDFEC6F" "xE0C65B" "xECC74F" "xEEE096" "xF3D685" "xF3FD52" "xFA66FE" }
 }
-add_homeland = cu:tefereti
+add_homeland = cu:azmaraan
 }
 
 s:STATE_NAJMAKULO = {
@@ -1083,7 +1086,7 @@ s:STATE_NAJMAKULO = {
         country = c:ZUB
         owned_provinces = { "x62F2BB" "xB46EEE" "xBCBAC7" "xD476E9" "xE3F4A6" "xEA91AD" "xF0DEB1" "xFB68C0" }
 }
-add_homeland = cu:tefereti
+add_homeland = cu:azmaraan
 }
 
 s:STATE_KASIDA = {
@@ -1091,7 +1094,7 @@ s:STATE_KASIDA = {
         country = c:OAZ
         owned_provinces = { "x44EDE8" "x66E9C0" "x6AC0D4" "x85F8B8" "x947AEB" "x9FA0D1" "xA9E2CA" "xAA96E2" "xC4E5D5" "xC5F4A8" "xD469DC" "xD9CA67" "xDDF544" "xEDA3F4" "xF8A2B7" "xFCB672" }
 }
-add_homeland = cu:tefereti
+add_homeland = cu:qinnaat
 }
 
 s:STATE_ESPRASHAD = {
@@ -1099,7 +1102,7 @@ s:STATE_ESPRASHAD = {
         country = c:ZUB
         owned_provinces = { "x59ADF4" "x8CEC82" "x8EF487" "x9AE0B3" "xA0B9D3" "xA0C0D4" "xA9E0C3" "xB7CDE3" "xB9D4D7" "xD0B4BC" "xD57BA6" "xDB56FC" "xE8C28D" "xEDD6B1" "xEE83C3" "xEF4BE8" "xF1EC84" "xF3E3EC" "xFDD7B0" }
 }
-add_homeland = cu:tefereti
+add_homeland = cu:azmaraan
 }
 
 s:STATE_RAHMANTO = {
@@ -1107,7 +1110,7 @@ s:STATE_RAHMANTO = {
         country = c:ZHR
         owned_provinces = { "x69E5B6" "x8881FB" "x8AF0A8" "x94ECDD" "xA7E4BB" "xB2A3AF" "xB2F294" "xC6E67A" "xE0A57B" "xE49A95" "xE63AED" "xEDE679" "xFCBB7B" }
 }
-add_homeland = cu:tefereti
+add_homeland = cu:qinnaat
 }
 
 s:STATE_ZAKARIYA = {
@@ -1115,7 +1118,7 @@ s:STATE_ZAKARIYA = {
         country = c:OAZ
         owned_provinces = { "x45F4DB" "x9CA9FB" "xAEE3FC" "xCCD97A" "xCDD7DC" "xD0CF60" "xD7E09D" "xDADEE2" "xDC1FFE" "xDE85DA" "xDECFAB" "xEBEA61" "xF9CFAE" "xFEADC1" }
 }
-add_homeland = cu:tefereti
+add_homeland = cu:qinnaat
 }
 
 s:STATE_NURADINO = {
@@ -1123,7 +1126,8 @@ s:STATE_NURADINO = {
         country = c:SNM
         owned_provinces = { "x48F2F5" "x60A5FA" "x95C0F4" "x9AF980" "xA1DC82" "xC3E478" "xC3FEF2" "xC5D675" "xDC69C7" "xE1A47D" "xF0F64A" "xF1A2FD" "xF6FE3C" "xF8CB91" }
 }
-add_homeland = cu:tefereti
+add_homeland = cu:azmaraan
+add_homeland = cu:qinnaat
 }
 
 s:STATE_ALJUMARO = {
@@ -1131,7 +1135,7 @@ s:STATE_ALJUMARO = {
         country = c:OAZ
         owned_provinces = { "x5ED1E7" "x6F91FA" "x75FEA1" "x9DEABD" "xBEA9B4" "xD1F647" "xEBFEA5" "xF7D090" }
 }
-add_homeland = cu:tefereti
+add_homeland = cu:qinnaat
 }
 
 s:STATE_ZAHIDUMO = {
@@ -1139,7 +1143,7 @@ s:STATE_ZAHIDUMO = {
         country = c:OAZ
         owned_provinces = { "x45EBC6" "x47FDE1" "x5EFDA6" "x6BAEDD" "x84D79F" "x85FCE5" "x898DFA" "x8AA3FD" "x95FADF" "xADF9E4" "xB6ACD8" "xB985B7" "xBFBCF9" "xBFF3B2" "xD36DD6" "xD9E6E2" "xDAA478" "xE0AB7F" "xEAF2F7" "xFB7988" "xFDD17D" }
 }
-add_homeland = cu:tefereti
+add_homeland = cu:qinnaat
 }
 
 s:STATE_KAJRANDO = {
@@ -1147,7 +1151,8 @@ s:STATE_KAJRANDO = {
         country = c:SNM
         owned_provinces = { "x96A7FD" "xA3A4C2" "xA9EF85" "xADACB7" "xBACDD0" "xBAE7EE" "xC850EB" "xD5EE3C" "xDBC562" "xED92CD" }
 }
-add_homeland = cu:tefereti
+add_homeland = cu:azmaraan
+add_homeland = cu:qinnaat
 }
 
 s:STATE_SARABENDO = {
@@ -1171,7 +1176,8 @@ s:STATE_ALMAKSURO = {
         country = c:ZUB
         owned_provinces = { "x41F9E5" "x8DF2B3" "xB1E3D2" "xB8EBDD" "xCCDCB5" "xD6CBFD" "xF88AC4" "xFCDF4A" }
 }
-add_homeland = cu:tefereti
+add_homeland = cu:azmaraan
+add_homeland = cu:qinnaat
 }
 
 s:STATE_AZAROON = {
