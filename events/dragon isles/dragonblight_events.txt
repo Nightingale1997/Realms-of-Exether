@@ -1,0 +1,203 @@
+﻿namespace = dragonblight
+
+dragonblight.1 = { #meant to be yearly for all states
+	type = country_event
+	placement = ROOT
+
+	hidden = yes
+	trigger = {
+	}
+
+	immediate = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:illvasaari
+				}
+				change_pop_culture = {
+					target = cu:kotskarvi
+					value = 0.015
+				}
+			}	
+	}
+}
+
+dragonblight.2 = { #outbreaks states receive this event + the other one for 5% total
+	type = country_event
+	placement = ROOT
+
+	hidden = yes
+	trigger = {
+		any_scope_state = {
+			has_modifier = modifier_active_dragonblight_outbreak
+		}
+	}
+
+	immediate = {
+		every_scope_state = {
+			limit = {
+				has_modifier = modifier_active_dragonblight_outbreak
+			}
+			every_scope_pop = {
+				limit = {
+					culture = cu:illvasaari
+				}
+				change_pop_culture = {
+					target = cu:kotskarvi
+					value = 0.035
+				}
+			}
+		}	
+	}
+}
+
+#dragonblight 3  event about a local writer declaring that the dragonblight is representative of a moral failing, and that no "true dragonborn" could fall victim to it
+
+	#option 1
+		#of course this is true 
+			#+landowner/clergy/both ig approval  
+			#+lower class radicals
+			#create some shithead clergy or landowner agitator, like the Nigel Farage of the Dragon Isles
+	#option 2
+		#this matter is beneath us
+			# +clergy ig attraction
+	#option 3
+		#we ought to step in and dispell myths like these
+			# +education access per SOL
+			#-bureaucracy
+
+#dragonblight 4 event about a local industrialist constructing a sickhouse for the poor
+	#only in outbreak states
+
+	#option 1
+		#this is to be commended
+			# +industrialist ig attraction
+			# +industrialist ig clout
+			# -1.5% conversion in state for 4 years
+	#option 2	
+		#bah, humbug
+			#-industrialist ig approval
+			#-1% conversion in state for 4 years
+	#option 3
+		#they ought to ALL do this!
+			# ---industrialist ig approval
+			# +++upper class radicals
+			# -industrialist ig clout
+			# -0.75% conversion in ALL outbreak states for 4 years
+			
+	#dragonblight 5 locals are refusing to come work, citing fear of the dragonblight
+
+		#option 1
+			#then we must force them to work!
+				#-authority gain for 2 years
+				#+10% factory and port throughput for 2 years
+				#+lower class radicals
+		#option 2	
+				#this is probably for the best...
+					#-12.5% factory/port throughput for 2 years
+					#-0.75% conversion in state for 2 years
+
+	#dragonblight 6 our sailors are intentionally prolonging their journeys to minimize their risk of exposure
+
+		#option 1
+			#they are cowards.  Our magistrates will sort out the logistics themselves.
+				# -bureaucracy
+				# +lower class radicals
+		
+		#option 2
+			#there is nothing we can do...
+				#-10% port throughput
+
+	#dragonblight 7 dragon NIMBYs complaining about a sickhouse near their neighborhood
+
+		#option 1
+			#we will rebuild the sickhouse elsewhere
+				#-bureaucracy
+				#-construction throughput in state
+			
+		#option 2
+			#it is a sickhouse. stop complaining
+				# +upper class radicals
+				# ++middle class radicals
+		
+		#option 3
+			#it will be torn down
+				# +0.5% conversion in state
+				# +lower class radicals
+
+	#dragonblight 8 conversion cult intentionally seeking to be infected
+
+			#option 1
+				#we are certainly not going to try and stop them
+					# +loyalists
+					# +0.25% conversion rate in state
+					#leads to other events
+
+			#option 2
+				#we must crack down on this cult
+					# +radicals from discrimination
+					# +clergy approval
+					# ++mortality from turmoil
+
+	#dragonblight 9 the hunt for kobold robin hood #####CASTRO???????
+		#COULD MAYBE BE AN EXPEDITION??? idk
+		
+		#option 1 
+			#sounds like a regular folk hero!
+				# -radicals from discrimination
+				# +0.6 sol in state
+				# --mapi prices in state
+				# +upper class radicals
+				# +rural folk attraction
+				# +rural folk clout
+		
+		#option 2 
+			#if we strike him down, he will become more powerful than we could ever imagine
+				# --mapi prices in state
+				# +0.6 sol in state
+				# +rural folk attraction
+
+		#option 3
+			#we must do something about this
+				# +0.2 sol in state
+				# slight -mapi prices in state
+				# +soldier mortality in state
+				# +adventurer mortality in state
+				# +armed forces attraction
+				# +increased adventurer coverage needed in state
+		#all options lead to further events
+
+	#dragonblight 10 kobold robinhood moves to another state
+
+			#option 1 
+				#oh, that RASCAL! requires option 1 from 9
+					#removes effects from 9, applies it to new state
+
+			#option 2
+				#we must be patient
+					#effects from 2 in 9
+			#option 3	
+				#this has gone too far requires 1 or 2 from 9
+					#effects from option 3 in 9
+
+	#dragonblight 11 the hunt begins requires 3 from 9
+		
+		#option 1
+			#we will seek to negotiate
+				#kobold robin hood becomes leader of the rural folk
+				# -radicals from discrimination
+				# +rural folk ig attraction
+				# +rural folk clout
+
+		#option 2
+			#we will destroy him
+				#base 40% of success
+				# +30% if adventurer coverage = 100%
+				# +15% if >5 military bases in state
+				# + additional 10% if >9 military bases in state,
+				# +20% if violent suppression edict active
+				# -30% if state turmoil >20%
+				# - additional 40% if state turmoil >50%
+				# -20% if empowering rural folk
+				## potentially -20% if greater than 20% kobolds in state
+			#leads to either success event 12 or failure event 13.  if killed, the state he died in becomes a kobold homeland.  if he is NOT killed, this state will not,
+			#but every other he enters from now on will become a kobold homeland
