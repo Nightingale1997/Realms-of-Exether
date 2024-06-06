@@ -1073,7 +1073,12 @@ s:STATE_FAR_SHORE_2 = {
 	region_state:AHO = {
 		create_pop = {
 			culture = changeling
-			size = 1740004
+			size = 1040004
+		}
+		create_pop = {
+			culture = changeling
+			religion = cult_of_knowledge
+			size = 740004
 		}
 		create_pop = {
 			culture = eberri
