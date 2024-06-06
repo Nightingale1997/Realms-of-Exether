@@ -1114,7 +1114,13 @@ STATE_HORSELORDS_DEMESNE = {
     farm = x6AC9CD
     mine = x7F8EEC
     port = x3edeeb
-
+    arable_land = 60
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 36
+        bg_iron_mining = 36
+        bg_logging = 9
+    }
     naval_exit_id = 3199
 }
 STATE_ROCHENSTONE = {
@@ -1126,7 +1132,13 @@ STATE_ROCHENSTONE = {
     farm = x65D7FE
     mine = x72E4AA
     port = x80ABD8
-
+    arable_land = 80
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 84
+        bg_lead_mining = 60
+        bg_logging = 13
+    }
     naval_exit_id = 3199
 }
 STATE_SJETTSZCEK_MIRE = {
@@ -1138,7 +1150,17 @@ STATE_SJETTSZCEK_MIRE = {
     farm = x9DEC95
     mine = xBF8CFD
     port = xe4aff0
-
+    arable_land = 145
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 140
+        bg_iron_mining = 33
+        bg_logging = 17
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 30
+    }
     naval_exit_id = 3199
 }
 STATE_THUNDERSPELL_COAST = {
