@@ -71,4 +71,749 @@
 			transfer_to_formation = scope:hou_army
 		}
 	}
+	c:VAI = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_vairia
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_VENTAFALCO
+				count = 17
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_SONGBIENO
+				count = 13
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_PLUVPINTO
+				count = 9
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_VERDFALDO
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_VENTAFALCO
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_SONGBIENO
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_PLUVPINTO
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_VERDFALDO
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_VENTAFALCO
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_SONGBIENO
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_PLUVPINTO
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_VERDFALDO
+				count = 2
+			}
+
+			save_scope_as = vai_army_1
+		}
+		create_character = {
+			is_general = yes
+			hq = region_vairia
+			save_scope_as = vai_general_1
+		}
+		scope:vai_general_1 = {
+			set_commander_rank = 2
+			transfer_to_formation = scope:vai_army_1
+		}
+		
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_steepcliff
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_FELICGRUNDO
+				count = 12
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_FELICGRUNDO
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_FELICGRUNDO
+				count = 1
+			}
+
+			save_scope_as = vai_army_2
+		}
+		create_character = {
+			is_general = yes
+			hq = region_steepcliff
+			save_scope_as = vai_general_2
+		}
+		scope:vai_general_2 = {
+			transfer_to_formation = scope:vai_army_2
+		}
+		
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_whisperpine
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ZAWADKA
+				count = 5
+			}
+
+			save_scope_as = vai_army_3
+		}
+		create_character = {
+			is_general = yes
+			hq = region_whisperpine
+			save_scope_as = vai_general_3
+		}
+		scope:vai_general_3 = {
+			transfer_to_formation = scope:vai_army_3
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_vairia
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_VENTAFALCO
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_PLUVPINTO
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_VENTAFALCO
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_PLUVPINTO
+				count = 3
+			}
+			save_scope_as = vai_fleet_1
+		}
+		create_character = {
+			is_admiral = yes
+			hq = region_vairia
+			save_scope_as = vai_admiral_1
+		}
+		scope:vai_admiral_1 = {
+			transfer_to_formation = scope:vai_fleet_1
+		}
+		
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_vairia
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_VENTAFALCO
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_PLUVPINTO
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_VENTAFALCO
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_PLUVPINTO
+				count = 2
+			}
+			save_scope_as = vai_fleet_2
+		}
+		create_character = {
+			is_admiral = yes
+			hq = region_vairia
+			save_scope_as = vai_admiral_2
+		}
+		scope:vai_admiral_2 = {
+			transfer_to_formation = scope:vai_fleet_2
+		}
+	}
+	c:WHX = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_steepcliff
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_RADIANTAJO
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_INSULECO
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_TRANKVILEJO
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_RADIANTAJO
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_RADIANTAJO
+				count = 1
+			}
+
+			save_scope_as = whx_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_steepcliff
+			save_scope_as = whx_general
+		}
+		
+		scope:whx_general = {
+			transfer_to_formation = scope:whx_army
+		}
+		
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_steepcliff
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_RADIANTAJO
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_RADIANTAJO
+				count = 3
+			}
+			save_scope_as = whx_fleet
+		}
+		create_character = {
+			is_admiral = yes
+			hq = region_steepcliff
+			save_scope_as = whx_admiral
+		}
+		scope:whx_admiral = {
+			transfer_to_formation = scope:whx_fleet
+		}
+	}
+	c:XXP = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_vairia
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KASKADVIVO
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_RUGAKAMPO
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_SENCERBO
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_LAGOEKRANO
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_KASKADVIVO
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_KASKADVIVO
+				count = 2
+			}
+
+			save_scope_as = xxp_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_vairia
+			save_scope_as = xxp_general
+		}
+		
+		scope:xxp_general = {
+			transfer_to_formation = scope:xxp_army
+		}
+		
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_vairia
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_KASKADVIVO
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_KASKADVIVO
+				count = 6
+			}
+			save_scope_as = xxp_fleet
+		}
+		create_character = {
+			is_admiral = yes
+			hq = region_vairia
+			save_scope_as = xxp_admiral
+		}
+		scope:xxp_admiral = {
+			transfer_to_formation = scope:xxp_fleet
+		}
+	}
+	c:LIS = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_shimmering_coast
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ALMARAQI
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ALVEKSADO
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_ALMARAQI
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_ALVEKSADO
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_ALMARAQI
+				count = 1
+			}
+
+			save_scope_as = lis_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_shimmering_coast
+			save_scope_as = lis_general
+		}
+		
+		scope:lis_general = {
+			transfer_to_formation = scope:lis_army
+		}
+		
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_shimmering_coast
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_ALMARAQI
+				count = 2
+			}
+			save_scope_as = lis_fleet
+		}
+		create_character = {
+			is_admiral = yes
+			hq = region_shimmering_coast
+			save_scope_as = lis_admiral
+		}
+		scope:lis_admiral = {
+			transfer_to_formation = scope:lis_fleet
+		}
+	}
+	c:ZUB = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_shimmering_coast
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ESPRASHAD
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_NAJMAKULO
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ALMAKSURO
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_ESPRASHAD
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_ESPRASHAD
+				count = 1
+			}
+
+			save_scope_as = zub_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_shimmering_coast
+			save_scope_as = zub_general
+		}
+		
+		scope:zub_general = {
+			transfer_to_formation = scope:zub_army
+		}
+		
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_shimmering_coast
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_ESPRASHAD
+				count = 2
+			}
+			save_scope_as = zub_fleet
+		}
+		create_character = {
+			is_admiral = yes
+			hq = region_shimmering_coast
+			save_scope_as = zub_admiral
+		}
+		scope:zub_admiral = {
+			transfer_to_formation = scope:zub_fleet
+		}
+	}
+	c:VER = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_shimmering_coast
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ZAHARIDO
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_ZAHARIDO
+				count = 1
+			}
+
+			save_scope_as = ver_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_shimmering_coast
+			save_scope_as = ver_general
+		}
+		
+		scope:ver_general = {
+			transfer_to_formation = scope:ver_army
+		}
+		
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_shimmering_coast
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_ZAHARIDO
+				count = 1
+			}
+			save_scope_as = ver_fleet
+		}
+		create_character = {
+			is_admiral = yes
+			hq = region_shimmering_coast
+			save_scope_as = ver_admiral
+		}
+		scope:ver_admiral = {
+			transfer_to_formation = scope:ver_fleet
+		}
+	}
+	c:SNM = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_shimmering_coast
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_NURADINO
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KAJRANDO
+				count = 3
+			}
+
+			save_scope_as = snm_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_shimmering_coast
+			save_scope_as = snm_general
+		}
+		
+		scope:snm_general = {
+			transfer_to_formation = scope:snm_army
+		}
+		
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_shimmering_coast
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_NURADINO
+				count = 1
+			}
+			save_scope_as = snm_fleet
+		}
+		create_character = {
+			is_admiral = yes
+			hq = region_shimmering_coast
+			save_scope_as = snm_admiral
+		}
+		scope:snm_admiral = {
+			transfer_to_formation = scope:snm_fleet
+		}
+	}
+	c:ZHR = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_shimmering_coast
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_RAHMANTO
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_RAHMANTO
+				count = 1
+			}
+
+			save_scope_as = zhr_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_shimmering_coast
+			save_scope_as = zhr_general
+		}
+		
+		scope:zhr_general = {
+			transfer_to_formation = scope:zhr_army
+		}
+		
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_shimmering_coast
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_RAHMANTO
+				count = 3
+			}
+			save_scope_as = zhr_fleet
+		}
+		create_character = {
+			is_admiral = yes
+			hq = region_shimmering_coast
+			save_scope_as = zhr_admiral
+		}
+		scope:zhr_admiral = {
+			transfer_to_formation = scope:zhr_fleet
+		}
+	}
+	c:TIS = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_shimmering_coast
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KALIBRANTO
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ALAMARA
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_ALAMARA
+				count = 1
+			}
+
+			save_scope_as = tis_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_shimmering_coast
+			save_scope_as = tis_general
+		}
+		
+		scope:tis_general = {
+			transfer_to_formation = scope:tis_army
+		}
+		
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_shimmering_coast
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_ALAMARA
+				count = 4
+			}
+			save_scope_as = tis_fleet
+		}
+		create_character = {
+			is_admiral = yes
+			hq = region_shimmering_coast
+			save_scope_as = tis_admiral
+		}
+		scope:tis_admiral = {
+			transfer_to_formation = scope:tis_fleet
+		}
+	}
+	c:OAZ = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_shimmering_coast
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ALJUMARO
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KASIDA
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ZAKARIYA
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ZAHIDUMO
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_ALJUMARO
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_ALJUMARO
+				count = 1
+			}
+
+			save_scope_as = oaz_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_shimmering_coast
+			save_scope_as = oaz_general
+		}
+		
+		scope:oaz_general = {
+			transfer_to_formation = scope:oaz_army
+		}
+		
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_shimmering_coast
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_ALJUMARO
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_ALJUMARO
+				count = 1
+			}
+			save_scope_as = oaz_fleet
+		}
+		create_character = {
+			is_admiral = yes
+			hq = region_shimmering_coast
+			save_scope_as = oaz_admiral
+		}
+		scope:oaz_admiral = {
+			transfer_to_formation = scope:oaz_fleet
+		}
+	}
 }

@@ -21,7 +21,18 @@ DUM = {
 
 	tier = empire #See common\country_ranks
 
-	cultures = { dumonian } #What are their primary culture/s - you can set multiple.
+	cultures = { dumonian uplander gelidrumin dewaric ralaurian avalorean } #What are their primary culture/s - you can set multiple.
+	capital = STATE_CROWNPEAK #Which state holds this nation's default capital
+}
+
+MAN = {
+	color = hsv{ 1.01  0.8  0.5 } #the cooler dumonia
+
+	country_type = recognized #See common\country_types
+
+	tier = empire #See common\country_ranks
+
+	cultures = { dumonian avalorean dewaric ralaurian yanger meriwyn jalian uplander gelidrumin } #What are their primary culture/s - you can set multiple.
 	capital = STATE_CROWNPEAK #Which state holds this nation's default capital
 }
 
@@ -31,10 +42,58 @@ ABR = {
 
 	country_type = recognized #See common\country_types
 
-	tier = empire #See common\country_ranks
+	tier = kingdom #See common\country_ranks
 
 	cultures = { avalorean } #What are their primary culture/s - you can set multiple.
 	capital = STATE_MIDCLACK #Which state holds this nation's default capital
+}
+
+#Dewaria
+DEW = {
+	color = rgb{ 140  20  50 } 
+
+	country_type = recognized #See common\country_types
+
+	tier = principality #See common\country_ranks
+
+	cultures = { dewaric } #What are their primary culture/s - you can set multiple.
+	capital = STATE_ALYEA #Which state holds this nation's default capital
+}
+
+#Ralauria
+RAL = {
+	color = rgb{ 70  20  70 } 
+
+	country_type = recognized #See common\country_types
+
+	tier = principality #See common\country_ranks
+
+	cultures = { ralaurian } #What are their primary culture/s - you can set multiple.
+	capital = STATE_ALYEA #Which state holds this nation's default capital
+}
+
+#Gelidrun
+GED = {
+	color = rgb{ 120  20  10 } 
+
+	country_type = recognized #See common\country_types
+
+	tier = principality #See common\country_ranks
+
+	cultures = { gelidrumin } #What are their primary culture/s - you can set multiple.
+	capital = STATE_ALYEA #Which state holds this nation's default capital
+}
+
+#Upland
+UPP = {
+	color = rgb{ 100  57  40 } 
+
+	country_type = recognized #See common\country_types
+
+	tier = principality #See common\country_ranks
+
+	cultures = { uplander } #What are their primary culture/s - you can set multiple.
+	capital = STATE_ALYEA #Which state holds this nation's default capital
 }
 
 #Cult of Aumaunator

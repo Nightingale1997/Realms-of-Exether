@@ -183,7 +183,7 @@ ZHR= {
 
 #Verkisirio
 VER= {
-	color = rgb{ 180  50  100 } 
+	color = rgb{ 50  180  100 } 
 
 	country_type = recognized 
 
@@ -213,7 +213,19 @@ DSB = {
 
 	tier = principality
 
-	cultures = { thiralian } 
+	cultures = { astreval } 
+	capital = STATE_DUSHAMBAY
+}
+
+#Astrevon
+AST = {
+	color = rgb{ 80  60  130 }
+
+	country_type = recognized 
+
+	tier = grand_principality
+
+	cultures = { astreval } 
 	capital = STATE_DUSHAMBAY
 }
 
@@ -225,7 +237,7 @@ FAR = {
 
 	tier = principality
 
-	cultures = { dumonian } 
+	cultures = { korkaz } 
 	capital = STATE_BARIKHARGUL
 }
 
@@ -237,8 +249,8 @@ OCR = {
 
 	tier = principality
 
-	cultures = { dumonian } 
-	capital = STATE_KESHARQAN
+	cultures = { korkaz } 
+	capital = STATE_PLAGUES_END
 }
 
 #Redmane

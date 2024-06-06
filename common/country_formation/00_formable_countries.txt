@@ -46,3 +46,250 @@ UTS = {
 
 	ai_will_do = { always = yes }
 }
+
+NTL = {
+	states = { 
+		STATE_NEWBANKS
+		STATE_UPPER_GOLDENLEAF
+		STATE_OVERBURROW
+	}
+
+	required_states_fraction = 1
+
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+
+}
+
+#Grand Estate use for even bigger state that requires all halflings,
+# but add new halflings culture in arrador to bridge the gap first
+#GES = {
+#	use_culture_states = yes
+#
+#	required_states_fraction = 0.87
+#
+#	ai_will_do = { always = yes }
+#
+#	possible = {
+#		has_technology_researched = pan-nationalism
+#	}
+#
+#}
+
+#SMALLAND
+SLD = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.9
+
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+
+}
+
+ORK = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.8
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+
+}
+
+TQL = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.7
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+
+}
+
+VBT = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.8
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+
+}
+
+XLB = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.8
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+
+}
+
+SAN = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.75
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+
+}
+
+CLF = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.75
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+}
+
+LOM = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.7
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+}
+
+KLK = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.8
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+
+}
+
+DUM = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.8
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+
+}
+
+MAN = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.8
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = pan-nationalism
+	}
+
+}
+
+PLG = {
+	states = { 
+		STATE_FORESTS_HEART_3_2
+		STATE_EASTERN_PLAGUEWOOD
+		STATE_EASTERN_PLAGUEWOOD_2
+		STATE_FORESTS_HEART_2
+		STATE_FORESTS_HEART
+		STATE_FORESTS_HEART_3
+	}
+
+	required_states_fraction = 0.8
+	
+	ai_will_do = { always = yes }
+
+}
+
+HOF = {
+	use_culture_states = yes
+
+	required_states_fraction = 1
+	
+	ai_will_do = { always = yes }  #lets come back to this
+
+	possible = {  #wholesome chungus dworc state
+
+		AND = {
+			cu:tozhi = {
+				NOT = { culture_is_discriminated_in = ROOT }
+			}
+			cu:kaalkid = {
+				NOT = { culture_is_discriminated_in = ROOT }
+			}
+		}
+	}
+
+}
+
+AST = {
+	states = { 
+		STATE_CAVES_OF_RIMELAC
+		STATE_LILAC_SHORE
+		STATE_AETHELBOSQUE
+		STATE_HAZELDEEP
+		STATE_DUSHAMBAY
+		STATE_WESTERN_EQUINE_PLAIN
+		STATE_CENTRAL_EQUINE_PLAIN
+		STATE_EASTERN_EQUINE_PLAIN
+		STATE_BARIKHARGUL
+		STATE_DILAFSHAN
+	}
+
+	required_states_fraction = 0.9 #intentionally high so you need the rivercrosser lands
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+
+}
+
+KNG = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.76
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = pan-nationalism
+	}
+}
