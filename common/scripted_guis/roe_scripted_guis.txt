@@ -134,6 +134,19 @@ is_sky_state = {
 			scope:node_state = s:STATE_RAVENFLIGHT
 			scope:node_state = s:STATE_EAST_YANGERSKIES
 			scope:node_state = s:STATE_WEST_YANGERSKIES
+			scope:node_state = s:STATE_KAMUY_PEAKS
+			scope:node_state = s:STATE_ISTRANA_SKIES
+			scope:node_state = s:STATE_OLDSLOPE_SKIES
+			scope:node_state = s:STATE_YELLOW_VALLEY_HEIGHTS
+			scope:node_state = s:STATE_WEST_AMETHYST_HEIGHTS
+			scope:node_state = s:STATE_SKIMERSSKIES
+			scope:node_state = s:STATE_DEAD_SEA_SKIES
+			scope:node_state = s:STATE_SALTGATE_HEIGHTS
+			scope:node_state = s:STATE_VERDSKIES
+			scope:node_state = s:STATE_MONTEGO_HEIGHTS
+			scope:node_state = s:STATE_ALVEKSKIES
+			scope:node_state = s:STATE_SAHARANDO_SKIES
+			scope:node_state = s:STATE_FIERCEHOLD_HEIGHTS
 		}
 		
 
@@ -270,6 +283,8 @@ is_sky_region = {
 		scope:node_region = sr:region_ravenflight
 		scope:node_region = sr:region_east_yangerskies
 		scope:node_region = sr:region_west_yangerskies
+		scope:node_region = sr:region_kamuy_peaks
+		scope:node_region = sr:region_istrana_skies
 	}
 	}
 }
