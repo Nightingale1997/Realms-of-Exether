@@ -1287,23 +1287,26 @@ very_overweight_pop_trigger = {
 		AND = {
 			exists = scope:pop
 			scope:pop = {
-				culture = {
-					OR = {
-						has_discrimination_trait = halfling_heritage
-						has_discrimination_trait = ogre_heritage
-					}
-				}
 				OR = {
-					AND = {
-						standard_of_living >= 20
-						standard_of_living < 40
-						pop_weight_modifier_scale >= 95
+					culture = {
+						OR = {
+							has_discrimination_trait = halfling_heritage
+							has_discrimination_trait = ogre_heritage
+						}
 					}
-					AND = {
-						standard_of_living >= 40
-						pop_weight_modifier_scale >= 90
-					}				
-				}	
+					OR = {
+						AND = {
+							standard_of_living >= 20
+							standard_of_living < 40
+							pop_weight_modifier_scale >= 95
+						}
+						AND = {
+							standard_of_living >= 40
+							pop_weight_modifier_scale >= 90
+						}				
+					}	
+				}
+
 			}
 		}
 	}
