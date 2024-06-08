@@ -663,6 +663,27 @@ s:STATE_THE_AMBER_RUN_3 = {
 		}
   }
 
+  s:STATE_MISTREACH_2 = {
+	region_state:PRI = {
+		create_pop = {
+			culture = bossardi
+			size = 304908
+		}
+		create_pop = {
+			culture = yelfi
+			size = 3196
+		}
+		create_pop = {
+			culture = wealder
+			size = 372400
+		}
+		create_pop = {
+			culture = dorite
+			size = 183996
+		}
+	}
+}
+
   s:STATE_VICEROYS_PEARL = {
 		region_state:ARR = {
 			create_pop = {
@@ -1018,15 +1039,77 @@ s:STATE_FAR_SHORE_2 = {
   }
 
   s:STATE_HORSELORDS_DEMESNE = {
-
+	region_state:PFL = {
+		create_pop = {
+			culture = changeling
+			size = 897396
+		}
+		create_pop = {
+			culture = changeling
+			religion = cult_of_knowledge
+			size = 32000
+		}
+		create_pop = {
+			culture = eberri
+			size = 112400
+		}
+		create_pop = {
+			culture = achonian
+			size = 20000
+		}
+		create_pop = {
+			culture = dorite
+			size = 8000
+		}
+	}
   }
 
   s:STATE_ROCHENSTONE = {
-
+	region_state:PFL = {
+		create_pop = {
+			culture = changeling
+			size = 1057396
+		}
+		create_pop = {
+			culture = changeling
+			religion = cult_of_knowledge
+			size = 24000
+		}
+		create_pop = {
+			culture = achonian
+			size = 119212
+		}
+		create_pop = {
+			culture = eberri
+			size = 88000
+		}
+		create_pop = {
+			culture = dorite
+			size = 20000
+		}
+	}
   }
 
   s:STATE_SJETTSZCEK_MIRE = {
-
+	region_state:AHO = {
+		create_pop = {
+			culture = changeling
+			size = 1040004
+		}
+		create_pop = {
+			culture = changeling
+			religion = cult_of_knowledge
+			size = 740004
+		}
+		create_pop = {
+			culture = eberri
+			size = 28000
+		}
+		create_pop = {
+			culture = achonian
+			size = 288000
+		}
+	}
   }
 
   s:STATE_THUNDERSPELL_COAST = {

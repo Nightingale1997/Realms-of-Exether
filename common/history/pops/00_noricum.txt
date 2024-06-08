@@ -1,5 +1,4 @@
 ﻿POPS = {
-
   s:STATE_CROWNPEAK = {
 		region_state:DUM = {
 			create_pop = {
@@ -546,7 +545,20 @@
 
 
     s:STATE_KOTHIAN = {
-
+      region_state:ABR = {
+        create_pop = {
+          culture = avalorean
+          size = 983000
+        }
+        create_pop = {
+          culture = nivaskyan
+          size = 678000
+        }
+        create_pop = {
+          culture = dumonian
+          size = 57000
+        }
+      }
   }
 
 
@@ -744,11 +756,11 @@
       region_state:DUM = {
         create_pop = {
           culture = jalian
-          size = 464400
+          size = 334400
         }
         create_pop = {
           culture = dumonian
-          size = 21388
+          size = 131388
         }
       }
     }
@@ -769,7 +781,26 @@
 
 
     s:STATE_BALLYNE = {
-
+      region_state:DOV = {
+        create_pop = {
+          culture = jalian
+          size = 450960
+        }
+        create_pop = {
+          culture = jalian
+          religion = cult_of_the_sun
+          size = 320500
+        }
+        create_pop = {
+          culture = meriwyn
+          size = 317200
+        }
+        create_pop = {
+          culture = dumonian
+          religion = cult_of_the_sun
+          size = 147500
+        }
+      }
   }
 
 
@@ -819,9 +850,17 @@
       }
     }
 
-
     s:STATE_GLASLIESH = {
-
+      region_state:MBR = {
+        create_pop = {
+          culture = avalorean
+          size = 205000
+        }
+        create_pop = {
+          culture = nivaskyan
+          size = 435000
+        }
+      }
   }
 
 
@@ -897,7 +936,25 @@
 
 
     s:STATE_ROSKIRK = {
-
+      region_state:DOV = {
+        create_pop = {
+          culture = jalian
+          size = 879406
+        }
+        create_pop = {
+          culture = jalian
+          religion = cult_of_the_sun
+          size = 145000
+        }
+        create_pop = {
+          culture = dumonian
+          size = 33000
+        }
+        create_pop = {
+          culture = meriwyn
+          size = 78000
+        }
+      }
   }
 
 
@@ -924,7 +981,21 @@
 
 
     s:STATE_THORNWALL = {
-
+      region_state:DOV = {
+        create_pop = {
+          culture = jalian
+          size = 360000
+        }
+        create_pop = {
+          culture = jalian
+          religion = cult_of_the_sun
+          size = 490000
+        }
+        create_pop = {
+          culture = meriwyn
+          size = 180000
+        }
+      }
   }
 
 
@@ -949,7 +1020,16 @@
 
 
     s:STATE_COLESSIE = {
-
+      region_state:BIE = {
+        create_pop = {
+          culture = nivaskyan
+          size = 1006400
+        }
+        create_pop = {
+          culture = yanger
+          size = 306400
+        }
+      }
   }
 
 
@@ -968,7 +1048,12 @@
 
 
     s:STATE_KENLYNE = {
-
+      region_state:BIE = {
+        create_pop = {
+          culture = nivaskyan
+          size = 1348900
+        }
+      }
   }
 
 
@@ -1162,17 +1247,49 @@
 
 
     s:STATE_CASTELL_DRYSGOLMARK = {
-
+      region_state:DRK = {
+        create_pop = {
+          culture = jalian
+          size = 806400
+        }
+        create_pop = {
+          culture = yanger
+          size = 93000
+        }
+        create_pop = {
+          culture = jalian
+          religion = horse_worship
+          size = 170028
+        }
+      }
   }
 
 
     s:STATE_CARREGRICE = {
-
+      region_state:ABR = {
+        create_pop = {
+          culture = avalorean
+          size = 423000
+        }
+        create_pop = {
+          culture = nivaskyan
+          size = 360000
+        }
+      }
   }
 
 
     s:STATE_TALNANT = {
-
+      region_state:EVR = {
+        create_pop = {
+          culture = yanger
+          size = 214000
+        }
+        create_pop = {
+          culture = avalorean
+          size = 1532000
+        }
+      }
   }
 
 
@@ -1235,7 +1352,12 @@
 
 
     s:STATE_GLASINBLAIR = {
-
+      region_state:DOV = {
+        create_pop = {
+          culture = jalian
+          size = 456000
+        }
+      }
   }
 
 
@@ -1259,7 +1381,16 @@
 
 
     s:STATE_TYMANS_FOLLY = {
-
+      region_state:MBR = {
+        create_pop = {
+          culture = nivaskyan
+          size = 300700
+        }
+        create_pop = {
+          culture = avalorean
+          size = 145600
+        }
+      }
   }
 
 
