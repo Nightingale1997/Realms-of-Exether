@@ -930,6 +930,12 @@ STATE_THORNWALL = {
     farm = x90B8EC
     mine = x95D2B9
     port = x97D0C1
+    arable_land = 46
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" "bg_cotton_plantations" }
+    capped_resources = {
+        bg_logging = 13
+        bg_fishing = 3
+    }
     naval_exit_id = 3007
 }
 STATE_SNOWBREACH = {
