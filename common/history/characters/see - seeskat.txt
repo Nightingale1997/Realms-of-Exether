@@ -1,0 +1,30 @@
+﻿CHARACTERS = {
+	c:SEE = {
+		create_character = {
+			first_name = "Bonifaas"
+			last_name = "Boucqueau_de_Villeraye"
+			historical = yes
+			ruler = yes
+			is_general = yes
+			age = 38
+			interest_group = ig_landowners
+			ideology = ideology_traditionalist
+			traits = {
+				honorable
+				basic_political_operator
+			}
+		}
+		create_character = {
+			first_name = "Filip"
+			last_name = "Boucqueau_de_Villeraye"
+			historical = yes
+			heir = yes
+			age = 12
+			interest_group = ig_landowners
+			ideology = ideology_traditionalist
+			traits = {
+				trait_child
+			}
+		}
+	}
+}

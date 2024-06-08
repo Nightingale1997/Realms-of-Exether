@@ -1,6 +1,6 @@
-BUILDINGS = {
+﻿BUILDINGS = {
   s:STATE_KHAULAN = {
-    region_state:YUL = {
+    region_state:SUN = {
     }
   }
 
@@ -733,13 +733,14 @@ BUILDINGS = {
         level=1
         reserves=1
         activate_production_methods={ "pm_crude_tools" "pm_automation_disabled" "pm_privately_owned_building_tooling_workshops" }
+    }
+      create_building={
+      building="building_coal_mine"
+      level=5
+      reserves=1
+      activate_production_methods={ "pm_picks_and_shovels_building_coal_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" "pm_privately_owned_building_coal_mine" }
+      
       }
-	  create_building={
-		building="building_coal_mine"
-		level=5
-		reserves=1
-		activate_production_methods={ "pm_picks_and_shovels_building_coal_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" "pm_privately_owned_building_coal_mine" }
-	  
     }
   }
 
@@ -1077,13 +1078,7 @@ BUILDINGS = {
   }
 
   s:STATE_BATOKYOAN = {
-    region_state:SUN = {
-	  create_building={
-        building="building_government_administration"
-        level=2
-        reserves=1
-        activate_production_methods={ "pm_simple_organization" }
-      }
+    region_state:GOL = {
       create_building={
         building="building_tea_plantation"
         level=1
@@ -1328,32 +1323,82 @@ BUILDINGS = {
   }
 
   s:STATE_PLACEHOLDER_EMPTY_1 = {
+    region_state:ONG={
+			create_building={
+				building="building_barracks"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+			}
+		}
   }
 
   s:STATE_PLACEHOLDER_EMPTY_2 = {
-  }
-
-  s:STATE_PLACEHOLDER_EMPTY_3 = {
+    region_state:ONG={
+			create_building={
+				building="building_wheat_farm"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_citrus_orchards" "pm_tools_disabled" "pm_homesteading" }
+			}
+			create_building={
+				building="building_barracks"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+			}
+      create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_basic_port" }
+			}
+		}
   }
 
   s:STATE_PLACEHOLDER_EMPTY_4 = {
-  }
-
-  s:STATE_PLACEHOLDER_EMPTY_5 = {
-  }
-
-  s:STATE_PLACEHOLDER_EMPTY_6 = {
-  }
-
-  s:STATE_PLACEHOLDER_EMPTY_7 = {
+    region_state:ONG={
+      
+		}
   }
 
   s:STATE_PLACEHOLDER_EMPTY_8 = {
+    region_state:ONG={
+			create_building={
+				building="building_wheat_farm"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_citrus_orchards" "pm_tools_disabled" "pm_homesteading" }
+			}
+			create_building={
+				building="building_livestock_ranch"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_butchering_tools" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated" "pm_homesteading" }
+			}
+			create_building={
+				building="building_barracks"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+			}
+			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_basic_port" }
+			}
+		}
   }
 
   s:STATE_PLACEHOLDER_EMPTY_9 = {
-  }
-
-  s:STATE_PLACEHOLDER_EMPTY_10 = {
+    region_state:ONG={
+			create_building={
+				building="building_livestock_ranch"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_butchering_tools" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated" "pm_homesteading" }
+			}
+		}
   }
 }

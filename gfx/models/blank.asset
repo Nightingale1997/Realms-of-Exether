@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "blank_mesh"
+	file = "blank.mesh"
+
+	meshsettings = {
+		name = "pCubeShape1"
+		index = 0
+		texture_diffuse = "blank.dds"
+		texture_normal = "no_normal.dds"
+		texture_specular = "no_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "blank_entity"
+	pdxmesh = "blank_mesh"
+}

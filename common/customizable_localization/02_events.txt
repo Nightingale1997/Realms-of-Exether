@@ -9,16 +9,6 @@
 	}
 
 	text = {
-		trigger = {
-			has_law = law_type:law_council_republic
-			cu:russian = {
-				is_primary_culture_of = root
-			}
-		}
-		localization_key = custom_newspaper_pravda
-	}
-
-	text = {
 		localization_key = custom_generic_newspaper
 	}
 
@@ -349,38 +339,6 @@ place_event = {
 		localization_key = place_event_destroyer
 	}
 
-	text = {
-		trigger = {
-			exists = c:GBR
-			this = c:GBR
-		}
-		localization_key = place_event_houses_of_parliament
-	}
-
-	text = {
-		trigger = {
-			exists = c:GBR
-			this = c:GBR
-		}
-		localization_key = place_event_jersey
-	}
-
-	text = {
-		trigger = {
-			exists = c:BRZ
-			this = c:BRZ
-		}
-		localization_key = place_event_largo
-	}
-
-	text = {
-		trigger = {
-			exists = c:NET
-			this = c:NET
-		}
-		localization_key = place_event_binnenhof
-	}
-
 	
 }
 
@@ -403,13 +361,6 @@ assassin_description = {
 		localization_key = assassin_description_angry_man
 	}
 
-	text = {
-		trigger = {
-			exists = c:USA
-			this = c:USA
-		}
-		localization_key = assassin_description_mkc
-	}
 }
 
 assassin_movement = {
@@ -657,151 +608,14 @@ job_title = {
 alcohol = {
 	type = country
 	random_valid = yes
-	
-	text = {
-		trigger = {
-			OR = {
-				cu:russian = {
-					is_primary_culture_of = root
-				}
-				cu:polish = {
-					is_primary_culture_of = root
-				}
-			}
-		
-		}
-		localization_key = custom_vodka
-	}
-	text = {
-		trigger = {
-			cu:french = {
-				is_primary_culture_of = root
-			}
-		}
-		localization_key = custom_champagne
-	}
-	text = {
-		trigger = {
-			cu:mongol = {
-				is_primary_culture_of = root
-			}
-		}
-		localization_key = custom_kumis
-	}
-	text = {
-		trigger = {
-			cu:japanese = {
-				is_primary_culture_of = root
-			}
-		}
-		localization_key = custom_sake
-	}
-	text = {
-		trigger = {
-			cu:korean = {
-				is_primary_culture_of = root
-			}
-		}
-		localization_key = custom_soju
-	}
-	text = {
-		trigger = {
-			cu:scottish = {
-				is_primary_culture_of = root
-			}
-		}
-		localization_key = custom_scotch
-	}
-	text = {
-		trigger = {
-			cu:south_andean = {
-				is_primary_culture_of = root
-			}
-		
-		}
-		localization_key = custom_pisco
-	}
-	text = {
-		trigger = {
-			cu:han = {
-				is_primary_culture_of = root
-			}
-		
-		}
-		localization_key = custom_baijiu
-	}
+
 	text = {
 		localization_key = custom_wine
 	}
 }
 
-dynamic_titanic = {
-	type = country
-	text = {
-		trigger = { has_variable = custom_titanic_var }
-		localization_key = custom_titanic
-	}
-	text = {
-		trigger = { has_variable = custom_olympic_var }
-		localization_key = custom_olympic
-	}
-	text = {
-		trigger = { has_variable = custom_gigantic_var }
-		localization_key = custom_gigantic
-	}
-	text = {
-		trigger = { has_variable = custom_colosssal_var }
-		localization_key = custom_colosssal
-	}
-	text = {
-		trigger = { has_variable = custom_herculean_var }
-		localization_key = custom_herculean
-	}
-	text = {
-		trigger = { has_variable = custom_gargantuan_var }
-		localization_key = custom_gargantuan
-	}
-}
-
 GetDivinity = {
 	type = country
-	text = {
-		trigger = {
-			OR = { 
-				religion = rel:catholic
-				religion = rel:protestant
-				religion = rel:orthodox
-				religion = rel:oriental_orthodox
-			}
-		}
-		localization_key = custom_god
-	}
-	text = {
-		trigger = { religion = rel:jewish }
-		localization_key = custom_the_lord
-	}
-	text = {
-		trigger = {
-			OR = { 
-				religion = rel:sunni
-				religion = rel:shiite
-			}
-		}
-		localization_key = custom_allah
-	}
-	text = {
-		trigger = {
-			religion = rel:hindu
-			religion = rel:sikh
-		}
-		localization_key = custom_gods
-	}
-	text = {
-		trigger = {
-			religion = rel:shinto
-		}
-		localization_key = custom_gods
-	}
 	text = {
 		trigger = {
 			religion = rel:animist
@@ -811,16 +625,6 @@ GetDivinity = {
 	text = {
 		trigger = {
 			NOR = { 
-				religion = rel:catholic
-				religion = rel:protestant
-				religion = rel:orthodox
-				religion = rel:oriental_orthodox
-				religion = rel:jewish
-				religion = rel:sunni
-				religion = rel:shiite
-				religion = rel:hindu
-				religion = rel:sikh
-				religion = rel:shinto
 				religion = rel:animist
 			}
 		}
@@ -864,52 +668,6 @@ mother_father = {
 
 fiction_cliche = {
 	type = country
-	
-	text = {
-		trigger = {
-			OR = {
-				country_has_primary_culture = cu:russian
-			} 
-		}
-		localization_key = fanfic_ship_russia
-	}
-	
-	text = {
-		trigger = {
-			OR = {
-				country_is_in_settler_coast = yes
-				country_is_in_northwestern_zalaron = yes
-			}
-		}
-		localization_key = fanfic_ship_west
-	}
-
-	text = {
-		trigger = {
-			country_is_in_gavkhan = yes
-		}
-		localization_key = fanfic_ship_south_america
-	}
-
-	text = {
-		trigger = {
-			OR = {
-				country_has_primary_culture = cu:han
-				country_has_primary_culture = cu:manchu
-			} 
-		}
-		localization_key = fanfic_ship_china
-	}
-
-	text = {
-		trigger = {
-			OR = {
-				country_has_primary_culture = cu:japanese
-				country_has_primary_culture = cu:korean
-			} 
-		}
-		localization_key = fanfic_ship_japan
-	}
 
 	text = {
 		localization_key = fanfic_ship_generic

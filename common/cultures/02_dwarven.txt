@@ -162,8 +162,101 @@ starwoken={
 	graphics = south_asian
 }
 
+yelfi={
+	color= hsv{ 0.24 0.64 0.36 }
+	religion = dwarven_dark_magic
+	traits = { dwarf_heritage}
+	male_common_first_names={
+		Ang
+		Norodom
+		Pok
+		Satha
+		Sisowath
+		Thommo
+	}
+	female_common_first_names = {
+		Aut
+		Bunlei
+		Di
+		Mey
+		Ros
+		Vanthy
+		Vara
+	}	
+	noble_last_names = {
+		Ang
+		Varman
+	}
+	common_last_names={
+		Chan
+		Em
+		Eng
+		Mey
+		Non
+		Reachea
+		Sieng
+		Sinn
+		Snguon
+		Tong
+	}
+	ethnicities = {
+		1 = dwarf
+	}
+	graphics = south_asian
+}
+
 vozi={
 	color= hsv{ 0.33 0.10 0.74 }
+	religion = dwarven_ancestors
+	traits = { dwarf_heritage }
+	male_common_first_names={
+		Kiras
+		Nerus
+		Tifatul
+	}
+	female_common_first_names = {
+		Atiqah
+		Fatin
+		Sari
+		Sharena
+	}	
+	noble_last_names = {
+		Manisia
+		Marga_Sinambela
+		Odapodap
+		Panglima
+	}
+	common_last_names={
+		Angkat
+		Bako
+		Bangun
+		Berasa
+		Berutu
+		Bintang
+		Capah
+		Cibro
+		Gajah
+		Kesogihen
+		Kaloko
+		Longga
+		Meka
+		Padang
+		Pasi
+		Saraan
+		Sinamo
+		Suka
+		Tendang
+		Tinendung
+		Turutan
+	}
+	ethnicities = {
+		1 = dwarf
+	}
+	graphics = south_asian
+}
+
+tolorr={
+	color= hsv{ 0.53 0.30 0.74 }
 	religion = dwarven_ancestors
 	traits = { dwarf_heritage }
 	male_common_first_names={
@@ -217,36 +310,48 @@ vynduri={
 	religion = cult_of_knowledge
 	traits = { dwarf_heritage }
 	male_common_first_names={
-		Afanasiy
-		Aleksandr
-		Alitet
-		Diniyar
-		Donduk
-		Gabdull
-		Grigory
-		Mirsayet
-		Sihabetdin
-		Viktor
+		Amar
+		Bhakti
+		Bhim_Shamsher
+		Bhimsen
+		Bir_Shamsher
+		Chandra_Shamsher
+		Deva_Shamsher
+		Jang
+		Ranjur
+		Renaudip
+		Shamsher
 	}
 	female_common_first_names = {
-		Galina
-		Sainkho
+		Anuradha 
+		Divyeshwari
+		Durga
+		Lakshmi
+		Sangita
+		Sunita
+		Yogmaya 
 	}	
 	noble_last_names = {
-		Khan
+		Basnyat
+		Bahadur_Rana
+		Bhandari
+		Chautariya
+		Koirala
+		Kunwar
+		Mahat
+		Pande
+		Singh
+		Singh_Thapa
+		Thapa
+		Rana
 	}
 	common_last_names={
-		Bilyaletdinov
-		Chaoke
-		Khovalyg
-		Krakovetsky
-		Nemtushkin
-		Nulgynet
-		Potanin
-		Shaimiev
-		Shashkov
-		Shchapov
-		Yadrintsev
+		Acharya
+		Ban
+		Das
+		Devi
+		Neupane
+		Sob
 	}
 	ethnicities = {
 		1 = dwarf_light

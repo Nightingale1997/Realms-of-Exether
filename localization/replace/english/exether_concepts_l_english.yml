@@ -8,10 +8,10 @@
   concept_adventurer_coverage_desc: "$concept_adventurer_coverage$ is provided by [Concept('concept_building','$concept_buildings$')] like [SelectLocalization(GetPlayer.IsValid,'concept_adventurer_coverage_added','Adventuring Guild')]. It influences the wellbeing of the state, reducing [Concept('concept_pop_growth', '$concept_pop_growth_mortality$')].
 
   concept_divine_banishment: "Divine Banishment"
-  concept_divine_banishment_desc: "The divine banishment was a grand scheme orchestrated by a handful of gods during the [concept_age_of_gods] to erect a [concept_veil] around the [concept_material_plane] in order to protect the world from the apocalyptic wars between deities. This event began the [age_of_man]."
+  concept_divine_banishment_desc: "The divine banishment was a grand scheme orchestrated by a handful of gods during the [concept_age_of_gods] to erect a [concept_veil] around the [concept_material_plane] in order to protect the world from the apocalyptic wars between deities. This event began the [concept_age_of_man]."
 
   concept_dumonia: "Dumonia"
-  concept_dumonia_desc: "Founded by the legendary emperor Urik Romhaar, who was the first man to unite the human tribes, the empire of Dumonia used to be peak of human civilization, stretching from Noricum to the Salt Wastes of Zalaron. While the modern empire of Dumonia is merely a shadow of this past glory, its influence still remains through the language, religion and customs that it established all across Zalaron."
+  concept_dumonia_desc: "Founded by the legendary emperor Urik Romhaar, who was the first man to unite the human tribes, the empire of Dumonia used to be the peak of human civilization, stretching from Noricum to the Salt Wastes of Zalaron. While the modern empire of Dumonia is merely a shadow of this past glory, its influence still remains through the language, religion and customs that it established all across Zalaron."
 
   concept_khus: "Khus"
   concept_khus_desc: "Khus used to be a mighty kingdom in the middle of [concept_zalaron]. Thanks to its monopoly on magic during the final years of the [concept_age_of_man], it could even rival the mighty empire of [concept_dumonia]. The kingdom ended in disaster during the [concept_nightfall], and today remains a cursed wasteland where only monsters thrive."
@@ -33,6 +33,9 @@
 
   concept_material_plane: "Material Plane"
   concept_material_plane_desc: "The material plane, also known as [concept_exether] exists in between all of the [concept_outer_planes]. The [concept_creation_of_exether] was the result over an eternal struggle between the outer gods."
+
+  concept_veil_integrity: "Veil Integrity"
+  concept_veil_desc: "Veil Integrity is a measure of how much magic is seeping into the world through the [concept_veil]. Changes in Veil Integrity can have world-spanning repercussions that shape the future of [concept_exether]"
 
   concept_veil: "Veil"
   concept_veil_desc: "The veil was created to shield the [concept_material_plane] from the influence of the [concept_outer_planes]. Its creation ended the [concept_age_of_gods] and led to almost a thousand years without magic on [concept_exether]. During the [concept_nightfall], the veil was catastrophically damaged and magic has seeped into the material plane once more through the [concept_stars]."
@@ -68,10 +71,41 @@
   concept_magic_desc: "Magic is the harnessed power of the cosmos, seeping in through [concept_stars] into the world of [concept_exether]. It has only recently returned to the world after the [concept_age_of_man]."
 
   concept_outer_planes: "Outer Planes"
-  concept_outer_planes_desc: "The sixteen Outer planes formed during the [concept_coalescence]. Each one embodies a unique combinations of evil and good, as well as order and chaos. These planes are unchanging, and any outside influence on these planes will be erased over time by the natural forces of the universe."
+  concept_outer_planes_desc: "The twelve Outer planes formed during the [concept_coalescence]. Each one embodies a unique combination of evil and good, as well as order and chaos. These planes are unchanging, and any outside influence on these planes will be erased over time by the natural forces of the universe."
 
   concept_coalescence: "Coalescence"
   concept_coalescence_desc: "The most widely accepted tale of the world's origins is the myth of the Coalescence. The myth holds that the [concept_outer_planes] formed out of the primordial chaos between the Negative and Positive planes at the beginning of time. Soon, the cosmic winds of magic breathed life into the outer planes, giving birth to the first gods who were inextricably bound to their realms and soon sparked the [concept_creation_of_exether]."
 
-  concept_monstrous_nations: "Monstrous Nations"
-  concept_monstrous_nation_desc: "A [Concept('concept_country','$concept_country_nation$')] that share most properties of $concept_countries$ - [Concept('concept_pop','$concept_pops$')], a [concept_ruler], [Concept('concept_building','$concept_buildings$')], [Concept('concept_law','$concept_laws$')] and so on - but with a lack of centralized power (and/or will) to enforce borders. This makes them prone to [Concept('concept_colony','$concept_colonization$')] by $concept_countries$ who do not see them as equals to be properly [Concept('concept_diplomatic_play','$concept_diplomatic_play_negotiated$')] with for land rights.\n\n$concept_monstrous_nations$ are AI controlled and are not playable by humans."
+  concept_astral_calendar: "Astral Calendar"
+  concept_astral_calendar_desc: "The Astral Calendar is the most common interpretation of the movement of the [Concept('concept_constellation','constellations')] across the night sky. Spread across the known world during the height of the [Concept('concept_dumonia','Dumonian Empire')], this calendar categorizes the constellations into twelve star signs: [concept_storm_giant], [concept_hive], [concept_sphinx], [concept_golem], [concept_unicorn], [concept_fey], [concept_phoenix], [concept_djinn], [concept_horror], [concept_kraken], [concept_fiend] and [concept_angel]."
+  concept_zodiac: "Zodiac"
+  concept_zodiac_desc: "The Zodiac is a belt-shaped region of the universe created after the [concept_coalescence]. It consists of twelve [Concept('concept_constellation','constellations')] in a ring around the [concept_material_plane]. It is unknown if anything exists beyond the Zodiac."
+  concept_constellation: "Constellation"
+  concept_constellation_desc: "A constellation is collection of [concept_outer_planes] that have embody similar concepts. The constellations form a ring known as the [concept_zodiac]. On [concept_exether], they have been visible to the naked eye as [concept_stars] since the [concept_nightfall]."
+  concept_storm_giant: "Storm-Giant"
+  concept_storm_giant_desc: "The #bold Storm-Giant#! is the first astrological sign of the [concept_astral_calendar]. The Storm-Giant contains the [concept_outer_planes] of #bold Wind#! that embody freedom and the primal element of air."
+  concept_hive: "Hive"
+  concept_hive_desc: "The #bold Hive#! is the second astrological sign of the [concept_astral_calendar]. The Hive contains the [concept_outer_planes] of #bold Order#! that embody law and cooperation."
+  concept_sphinx: "Sphinx"
+  concept_sphinx_desc: "The #bold Sphinx#! is third second astrological sign of the [concept_astral_calendar]. The Sphinx contains the [concept_outer_planes] of #bold Logic#! that embody reason and learning."
+  concept_golem: "Golem"
+  concept_golem_desc: "The #bold Golem#! is the fourth astrological sign of the [concept_astral_calendar]. The Golem contains the [concept_outer_planes] of #bold Earth#! that embody reliability and the primal element of stone."
+  concept_unicorn: "Unicorn"
+  concept_unicorn_desc: "The #bold Unicorn#! is the fifth astrological sign of the [concept_astral_calendar]. The Unicorn contains the [concept_outer_planes] of #bold Light#! that embody compassion and empathy."
+  concept_fey: "Fey"
+  concept_fey_desc: "The #bold Fey#! is the sixth astrological sign of the [concept_astral_calendar]. The Fey contains the [concept_outer_planes] of #bold Life#! that embody nature and growth."
+  concept_phoenix: "Phoenix"
+  concept_phoenix_desc: "The #bold Phoenix#! is the seventh astrological sign of the [concept_astral_calendar]. The Phoenix contains the [concept_outer_planes] of #bold Flame#! that embody passion and and the primal element of fire."
+  concept_djinn: "Djinn"
+  concept_djinn_desc: "The #bold Djinn#! is the eighth astrological sign of the [concept_astral_calendar]. The Djinn contains the [concept_outer_planes] of #bold Chaos#! that embody disorder and change."
+  concept_horror: "Horror"
+  concept_horror_desc: "The #bold Horror#! is the ninth astrological sign of the [concept_astral_calendar]. The Horror contains the [concept_outer_planes] of #bold Emotion#! that embody feelings and intuition."
+  concept_kraken: "Kraken"
+  concept_kraken_desc: "The #bold Kraken#! is the tenth astrological sign of the [concept_astral_calendar]. The Kraken contains the [concept_outer_planes] of #bold Water#! that embody calmness and and the primal element of water."
+  concept_fiend: "Fiend"
+  concept_fiend_desc: "The #bold Fiend#! is the eleventh astrological sign of the [concept_astral_calendar]. The Fiend contains the [concept_outer_planes] of #bold Darkness#! that embody cruelty and apathy."
+  concept_angel: "Angel"
+  concept_angel_desc: "The #bold Angel#! is the twelfth astrological sign of the [concept_astral_calendar]. The Angel contains the [concept_outer_planes] of #bold Death#! that embody rot and decay."
+
+concept_subsidiary:0 "Subsidiary"
+concept_subsidiary_desc:1 "[Concept('concept_recognized_power','$concept_recognized_powers$')] may turn a weaker [concept_country] into their $concept_subsidiary$. A $concept_subsidiary$ is a more autonomous [concept_subject] type that are able to start their own [Concept('concept_diplomatic_play','$concept_diplomatic_plays$')] and are not forced to join their [Concept('concept_overlord','$concept_overlord_possessive$')] [Concept('concept_war','$concept_wars$')]. They must pay #v 25%#! of their [concept_treasury] income to their $concept_overlord$ each week."

@@ -1,4 +1,4 @@
-﻿# Vicky and the Expedition Machine
+# Vicky and the Expedition Machine
 ai_expedition_simulator_start = {
 	random_scope_character = {
 		limit = {
@@ -1314,6 +1314,9 @@ free_trade_agitator_election_scope_effect = {
 }
 
 gen_ruler_party = {
+	ruler.interest_group = {
+		save_scope_as = ruler_ig
+	}
 	if = {
 		limit = {
 			has_technology_researched = socialism
@@ -1331,6 +1334,7 @@ gen_ruler_party = {
 				is_party_type = communist_party
 			}
 			save_scope_as = only_legit_party_scope
+			add_ig_to_party = scope:ruler_ig
 		}
 		set_variable = { name = only_valid_party value = scope:only_legit_party_scope }
 	}
@@ -1359,6 +1363,7 @@ gen_ruler_party = {
 				is_party_type = fascist_party
 			}
 			save_scope_as = only_legit_party_scope
+			add_ig_to_party = scope:ruler_ig
 		}
 		set_variable = { name = only_valid_party value = scope:only_legit_party_scope }
 	}
@@ -1379,6 +1384,7 @@ gen_ruler_party = {
 				is_party_type = anarchist_party
 			}
 			save_scope_as = only_legit_party_scope
+			add_ig_to_party = scope:ruler_ig
 		}
 		set_variable = { name = only_valid_party value = scope:only_legit_party_scope }
 	}
@@ -1412,6 +1418,7 @@ gen_ruler_party = {
 				is_party_type = social_democrat_party
 			}
 			save_scope_as = only_legit_party_scope
+			add_ig_to_party = scope:ruler_ig
 		}
 		set_variable = { name = only_valid_party value = scope:only_legit_party_scope }
 	}
@@ -1432,6 +1439,7 @@ gen_ruler_party = {
 				is_party_type = radical_party
 			}
 			save_scope_as = only_legit_party_scope
+			add_ig_to_party = scope:ruler_ig
 		}
 		set_variable = { name = only_valid_party value = scope:only_legit_party_scope }
 	}
@@ -1455,6 +1463,7 @@ gen_ruler_party = {
 				is_party_type = liberal_party
 			}
 			save_scope_as = only_legit_party_scope
+			add_ig_to_party = scope:ruler_ig
 		}
 		set_variable = { name = only_valid_party value = scope:only_legit_party_scope }
 	}
@@ -1477,6 +1486,7 @@ gen_ruler_party = {
 				is_party_type = military_party
 			}
 			save_scope_as = only_legit_party_scope
+			add_ig_to_party = scope:ruler_ig
 		}
 		set_variable = { name = only_valid_party value = scope:only_legit_party_scope }
 	}
@@ -1500,6 +1510,7 @@ gen_ruler_party = {
 				is_party_type = free_trade_party
 			}
 			save_scope_as = only_legit_party_scope
+			add_ig_to_party = scope:ruler_ig
 		}
 		set_variable = { name = only_valid_party value = scope:only_legit_party_scope }
 	}
@@ -1522,6 +1533,7 @@ gen_ruler_party = {
 				is_party_type = agrarian_party
 			}
 			save_scope_as = only_legit_party_scope
+			add_ig_to_party = scope:ruler_ig
 		}
 		set_variable = { name = only_valid_party value = scope:only_legit_party_scope }
 	}
@@ -1531,6 +1543,7 @@ gen_ruler_party = {
 				is_party_type = conservative_party
 			}
 			save_scope_as = only_legit_party_scope
+			add_ig_to_party = scope:ruler_ig
 		}
 		set_variable = { name = only_valid_party value = scope:only_legit_party_scope }
 	}
@@ -1546,7 +1559,7 @@ enact_preferred_governance_principle = {
 	}
 	if = {
 		limit = {
-			scope:ruling_ig = {
+			scope:ruling_ig ?= {
 				law_stance = {
 					law = law_type:law_council_republic
 					value = strongly_approve
@@ -1557,7 +1570,7 @@ enact_preferred_governance_principle = {
 	}
 	else_if = {
 		limit = {
-			scope:ruling_ig = {
+			scope:ruling_ig ?= {
 				law_stance = {
 					law = law_type:law_monarchy
 					value = strongly_approve
@@ -1568,7 +1581,7 @@ enact_preferred_governance_principle = {
 	}
 	else_if = {
 		limit = {
-			scope:ruling_ig = {
+			scope:ruling_ig ?= {
 				law_stance = {
 					law = law_type:law_parliamentary_republic
 					value = strongly_approve
@@ -1579,7 +1592,7 @@ enact_preferred_governance_principle = {
 	}
 	else_if = {
 		limit = {
-			scope:ruling_ig = {
+			scope:ruling_ig ?= {
 				law_stance = {
 					law = law_type:law_presidential_republic
 					value = strongly_approve
@@ -1590,7 +1603,7 @@ enact_preferred_governance_principle = {
 	}
 	else_if = {
 		limit = {
-			scope:ruling_ig = {
+			scope:ruling_ig ?= {
 				law_stance = {
 					law = law_type:law_theocracy
 					value = strongly_approve
@@ -1601,7 +1614,7 @@ enact_preferred_governance_principle = {
 	}
 	else_if = {
 		limit = {
-			scope:ruling_ig = {
+			scope:ruling_ig ?= {
 				law_stance = {
 					law = law_type:law_council_republic
 					value = approve
@@ -1612,7 +1625,7 @@ enact_preferred_governance_principle = {
 	}
 	else_if = {
 		limit = {
-			scope:ruling_ig = {
+			scope:ruling_ig ?= {
 				law_stance = {
 					law = law_type:law_monarchy
 					value = approve
@@ -1623,7 +1636,7 @@ enact_preferred_governance_principle = {
 	}
 	else_if = {
 		limit = {
-			scope:ruling_ig = {
+			scope:ruling_ig ?= {
 				law_stance = {
 					law = law_type:law_parliamentary_republic
 					value = approve
@@ -1634,7 +1647,7 @@ enact_preferred_governance_principle = {
 	}
 	else_if = {
 		limit = {
-			scope:ruling_ig = {
+			scope:ruling_ig ?= {
 				law_stance = {
 					law = law_type:law_presidential_republic
 					value = approve
@@ -1645,7 +1658,7 @@ enact_preferred_governance_principle = {
 	}
 	else_if = {
 		limit = {
-			scope:ruling_ig = {
+			scope:ruling_ig ?= {
 				law_stance = {
 					law = law_type:law_theocracy
 					value = approve
@@ -1658,7 +1671,7 @@ enact_preferred_governance_principle = {
 		activate_law = law_type:law_presidential_republic
 		if = {
 			limit = {
-				civil_war_origin_country = {
+				civil_war_origin_country ?= {
 					has_law = law_type:law_monarchy
 				}
 			}
@@ -1666,7 +1679,7 @@ enact_preferred_governance_principle = {
 		}
 		else_if = {
 			limit = {
-				civil_war_origin_country = {
+				civil_war_origin_country ?= {
 					has_law = law_type:law_theocracy
 				}
 			}
@@ -1674,7 +1687,7 @@ enact_preferred_governance_principle = {
 		}
 		else_if = {
 			limit = {
-				civil_war_origin_country = {
+				civil_war_origin_country ?= {
 					has_law = law_type:law_council_republic
 				}
 			}
@@ -1788,315 +1801,6 @@ exile_character_with_martyrdom = {
 	exile_character = yes
 }
 
-# Divided Monarchists
-# Made by Victoria/Pacifica/AcresOfAsteraceae
-# Refer to comments here and in 02_french_monarchism to get an idea as to how this works.
-fra_set_divided_monarchist_variables = {
-	#Bonapartist Variables
-	set_variable = { name = bonapartist_progress value = 10 } #Master progress variable. This is incremented by the other variables, and corresponds to the progress bar if the Bonapartists are in the lead.
-	set_variable = { name = bonapartist_progress_from_characters value = 0 } #Progress-from-character component. This updates with the combined popularities of every Bonapartist character later on, and is used to calculate bonapartist_progress_next.
-	set_variable = { name = bonapartist_progress_from_igs value = 0 } #Progress-from-IG component. This updates with the combined clout of every Bonapartist IG later on, and is used to calculate bonapartist_progress_next.
-	set_variable = { name = bonapartist_progress_from_military value = 0 } #Progress-from-military-building component. This updates with the sum of military building levels in France later on, and is used to calculate bonapartist_progress_next.
-	set_variable = { name = bonapartist_progress_from_legitimacy value = 0 } #Progress-from-legitimacy component. This updates with the current government legitimacy, and is also used to calculate bonapartist_progress_next.
-	set_variable = { name = bonapartist_progress_from_effects value = 0 } #Final element in bonapartist_progress_next. This is defined by various effects, and is based solely on scripted effects. This is how designers can manually grant ticking bonuses or maluses to this mechanic.
-	set_variable = { name = bonapartist_progress_next value = 0 } #This variable is an incrementor - it is calculated by the previous five variables on a weekly basis, and is added to bonapartist_progress on the monthly. This is used in localisation to tell the player what the current rate of change for bonapartist_progress is.
-	
-	#Orleanist Variables
-	if = {
-		limit = {
-			game_date < 1836.2.1 #Why? Because ruler scope doesn't exist the first time this script is executed.
-		}
-		set_variable = { name = orleanist_progress value = 25 } #This is done because the Orleanists have an advantage the first time the script is executed, but do not necessarily have that advantage if the JE is activated elsewhere.
-	}
-	else = {
-		set_variable = { name = orleanist_progress value = 10 }
-	}
-	set_variable = { name = orleanist_progress_from_characters value = 0 } 
-	set_variable = { name = orleanist_progress_from_igs value = 0 }
-	set_variable = { name = orleanist_progress_from_factories value = 0 } #These variables use the same scheme as the Bonapartist ones, with the exception that Orleanists derive from the sum of light/heavy industry building levels in France.
-	set_variable = { name = orleanist_progress_from_legitimacy value = 0 }
-	set_variable = { name = orleanist_progress_from_effects value = 0 }
-	set_variable = { name = orleanist_progress_next value = 0 }
-
-	#Legitimist Variables
-	set_variable = { name = legitimist_progress value = 10 }
-	set_variable = { name = legitimist_progress_from_characters value = 0 }
-	set_variable = { name = legitimist_progress_from_igs value = 0 }
-	set_variable = { name = legitimist_progress_from_farms value = 0 } #These variables use the same scheme as the Bonapartist ones, with the exception that Legitimists derive from the sum of agricultural building levels in France.
-	set_variable = { name = legitimist_progress_from_legitimacy value = 0 }
-	set_variable = { name = legitimist_progress_from_effects value = 0 }
-	set_variable = { name = legitimist_progress_next value = 0 }
-
-	set_variable = { name = ig_weight value = 0 } #This variable is used solely for mathematical purposes, and is set as equivalent to the clout of a given interest group. It exists so that IGs can be weighted higher or lower depending on whether they're in-government or not.
-}
-
-fra_weekly_pulse_bonapartist_progress = { #Effects like these are run three times, one for each house. All of them function essentially the same way.
-	set_variable = { name = bonapartist_progress_from_characters value = 0 } #All of these variables are ephemeral and should never be manually set to anything.
-	set_variable = { name = bonapartist_progress_from_igs value = 0 }
-	set_variable = { name = bonapartist_progress_from_military value = 0 }
-	set_variable = { name = bonapartist_progress_from_legitimacy value = root.government_legitimacy } #Government legitimacy is a single constant, and so this variable is set immediately rather than needing a calculation.
-	set_variable = { name = bonapartist_progress_next value = 0 }
-	#From Characters
-	every_scope_character = {
-		limit = {
-			has_ideology = ideology:ideology_bonapartist
-		}
-		ROOT = {
-			change_variable = { name = bonapartist_progress_from_characters add = prev.popularity } #for_each loop. For each character of ideology_bonapartist, add that character's popularity to bonapartist_progress_from_characters.
-		}
-	}
-	change_variable = { name = bonapartist_progress_from_characters divide = 100 } #Character popularities are -100/100, rather than our desired -1/1, so divide by 100.
-	# From Interest Groups
-	every_interest_group = {
-		limit = {
-			leader = {
-				has_ideology = ideology:ideology_bonapartist
-			}
-		}
-		ROOT = {														#for_each loop. For each interest group of ideology_bonapartist, perform the following steps in sequence.
-			set_variable = { name = ig_weight value = prev.ig_clout } 	#1. Set ig_weight as equal to the interest group's clout.
-		}
-		if = {
-			limit = {
-				is_in_government = yes
-			}
-			ROOT = {
-				change_variable = { name = ig_weight multiply = 3 }		#2. If that IG is in government, multiply ig_weight by a given value.
-			}
-		}
-		ROOT = {
-			change_variable = { name = bonapartist_progress_from_igs add = var:ig_weight }	#3. Add ig_weight to the central bonapartist_progress_from_igs variable. This will run until there are no more Bonapartist IGs.
-		}
-	}
-	# From Buildings
-	every_scope_building = { 
-		limit = {
-			is_building_group = bg_military # Derives from barracks and naval bases.
-			occupancy >= 0.5
-		}
-		ROOT = {
-			change_variable = { name = bonapartist_progress_from_military add = prev.level } #for_each loop, uses similar context to the character component. Iterates through every building in the country matching the filter, gets that building's level, and adds it to the central bonapartist_progress_from_military variable.
-		}
-	}
-	change_variable = { name = bonapartist_progress_from_military divide = 100 } #Building levels are converted to decimal. This usually equals something between 1 and 3, with 0.01 = one building level.
-	# From Legitimacy
-	change_variable = { name = bonapartist_progress_from_legitimacy divide = 100 } #Legitimacy divided by 100, to make it minimum 0 and maximum 1.
-	change_variable = { name = bonapartist_progress_from_legitimacy subtract = 0.5 } #Legitimacy subtracted by 0.5, to make it minimum -0.5 and maximum 0.5. Balanced scale of negative to absolute value.
-	if = {
-		limit = {
-			NOT = {
-				ruler_is_bonapartist = yes #If the ruler is Bonapartist, then the Bonapartists benefit from high legitimacy and suffer from low legitimacy.
-			}
-		}
-		change_variable = { name = bonapartist_progress_from_legitimacy multiply = -0.5 } #If the ruler is not Bonapartist, they benefit from low legitimacy and suffer from high legitimacy.
-	}
-
-	#Final Compilation
-	change_variable = { name = bonapartist_progress_next add = var:bonapartist_progress_from_characters } #All sub-variables are added to bonapartist_progress_next here. At this point, all of the component variables are calculated properly, and converted to a decimal scale.
-	change_variable = { name = bonapartist_progress_next add = var:bonapartist_progress_from_igs }
-	change_variable = { name = bonapartist_progress_next add = var:bonapartist_progress_from_military }
-	change_variable = { name = bonapartist_progress_next add = var:bonapartist_progress_from_legitimacy }
-	change_variable = { name = bonapartist_progress_next add = var:bonapartist_progress_from_effects }
-}
-
-fra_weekly_pulse_orleanist_progress = { #See Bonapartist progress to see how this works.
-	set_variable = { name = orleanist_progress_from_characters value = 0 }
-	set_variable = { name = orleanist_progress_from_igs value = 0 }
-	set_variable = { name = orleanist_progress_from_factories value = 0 }
-	set_variable = { name = orleanist_progress_from_legitimacy value = root.government_legitimacy }
-	set_variable = { name = orleanist_progress_next value = 0 }
-	#From Characters
-	every_scope_character = {
-		limit = {
-			has_ideology = ideology:ideology_orleanist
-		}
-		ROOT = {
-			change_variable = { name = orleanist_progress_from_characters add = prev.popularity }
-		}
-	}
-	change_variable = { name = orleanist_progress_from_characters divide = 100 }
-	# From Interest Groups
-	every_interest_group = {
-		limit = {
-			leader = {
-				has_ideology = ideology:ideology_orleanist
-			}
-		}
-		ROOT = {
-			set_variable = { name = ig_weight value = prev.ig_clout }
-		}
-		if = {
-			limit = {
-				is_in_government = yes
-			}
-			ROOT = {
-				change_variable = { name = ig_weight multiply = 3 }
-			}
-		}
-		ROOT = {
-			change_variable = { name = orleanist_progress_from_igs add = var:ig_weight }
-		}
-	}
-	# From Buildings
-	every_scope_building = {
-		limit = {
-			is_building_group = bg_manufacturing
-			weekly_profit > 0
-		}
-		ROOT = {
-			change_variable = { name = orleanist_progress_from_factories add = prev.level }
-		}
-	}
-	change_variable = { name = orleanist_progress_from_factories divide = 100 }
-	# From Legitimacy
-	change_variable = { name = orleanist_progress_from_legitimacy divide = 100 }
-	change_variable = { name = orleanist_progress_from_legitimacy subtract = 0.5 }
-	if = {
-		limit = {
-			NOT = {
-				ruler_is_orleanist = yes
-			}
-		}
-		change_variable = { name = orleanist_progress_from_legitimacy multiply = -0.5 }
-	}
-
-	#Final Compilation
-	change_variable = { name = orleanist_progress_next add = var:orleanist_progress_from_characters }
-	change_variable = { name = orleanist_progress_next add = var:orleanist_progress_from_igs }
-	change_variable = { name = orleanist_progress_next add = var:orleanist_progress_from_factories }
-	change_variable = { name = orleanist_progress_next add = var:orleanist_progress_from_legitimacy }
-	change_variable = { name = orleanist_progress_next add = var:orleanist_progress_from_effects }
-}
-
-fra_weekly_pulse_legitimist_progress = { #See Legitimist progress to see how this works.
-	set_variable = { name = legitimist_progress_from_characters value = 0 }
-	set_variable = { name = legitimist_progress_from_igs value = 0 }
-	set_variable = { name = legitimist_progress_from_farms value = 0 }
-	set_variable = { name = legitimist_progress_from_legitimacy value = root.government_legitimacy }
-	set_variable = { name = legitimist_progress_next value = 0 }
-	#From Characters
-	every_scope_character = {
-		limit = {
-			has_ideology = ideology:ideology_legitimist
-		}
-		ROOT = {
-			change_variable = { name = legitimist_progress_from_characters add = prev.popularity }
-		}
-	}
-	change_variable = { name = legitimist_progress_from_characters divide = 100 }
-	# From Interest Groups
-	every_interest_group = {
-		limit = {
-			leader = {
-				has_ideology = ideology:ideology_legitimist
-			}
-		}
-		ROOT = {
-			set_variable = { name = ig_weight value = prev.ig_clout }
-		}
-		if = {
-			limit = {
-				is_in_government = yes
-			}
-			ROOT = {
-				change_variable = { name = ig_weight multiply = 3 }
-			}
-		}
-		ROOT = {
-			change_variable = { name = legitimist_progress_from_igs add = var:ig_weight }
-		}
-	}
-	# From Buildings
-	every_scope_building = {
-		limit = {
-			is_building_group = bg_agriculture
-			NOT = {
-				is_building_group = bg_subsistence_agriculture
-			}
-			weekly_profit > 0
-		}
-		ROOT = {
-			change_variable = { name = legitimist_progress_from_farms add = prev.level }
-		}
-	}
-	change_variable = { name = legitimist_progress_from_farms divide = 100 }
-	# From Legitimacy
-	change_variable = { name = legitimist_progress_from_legitimacy divide = 100 }
-	change_variable = { name = legitimist_progress_from_legitimacy subtract = 0.5 }
-	if = {
-		limit = {
-			NOT = {
-				ruler_is_legitimist = yes
-			}
-		}
-		change_variable = { name = legitimist_progress_from_legitimacy multiply = -0.5 }
-	}
-
-	#Final Compilation
-	change_variable = { name = legitimist_progress_next add = var:legitimist_progress_from_characters }
-	change_variable = { name = legitimist_progress_next add = var:legitimist_progress_from_igs }
-	change_variable = { name = legitimist_progress_next add = var:legitimist_progress_from_farms }
-	change_variable = { name = legitimist_progress_next add = var:legitimist_progress_from_legitimacy }
-	change_variable = { name = legitimist_progress_next add = var:legitimist_progress_from_effects }
-}
-
-fra_clear_divided_monarchist_variables = { #Clears all variables, to save memory/performance. Should be executed by anything that makes Divided Monarchists irrelevant.
-	remove_variable = bonapartist_progress 
-	remove_variable = bonapartist_progress_from_characters 
-	remove_variable = bonapartist_progress_from_igs 
-	remove_variable = bonapartist_progress_from_military 
-	remove_variable = bonapartist_progress_from_legitimacy 
-	remove_variable = bonapartist_progress_from_effects 
-	remove_variable = bonapartist_progress_next 
-	remove_variable = bonapartist_progress 
-	remove_variable = orleanist_progress_from_characters 
-	remove_variable = orleanist_progress_from_igs 
-	remove_variable = orleanist_progress_from_factories 
-	remove_variable = orleanist_progress_from_legitimacy 
-	remove_variable = orleanist_progress_from_effects 
-	remove_variable = orleanist_progress_next 
-	remove_variable = legitimist_progress 
-	remove_variable = legitimist_progress_from_characters 
-	remove_variable = legitimist_progress_from_igs 
-	remove_variable = legitimist_progress_from_farms 
-	remove_variable = legitimist_progress_from_legitimacy 
-	remove_variable = legitimist_progress_from_effects 
-	remove_variable = legitimist_progress_next 
-	remove_variable = ig_weight 
-}
-
-fra_freeze_divided_monarchist_progress = { #Used upon initiation of cement_the_rightful_dynasty, to prevent the bars from excessively accumulating.
-	set_variable = fra_divided_monarchists_freeze
-	set_variable = { name = bonapartist_progress_next value = 0 }
-	set_variable = { name = orleanist_progress_next value = 0 }
-	set_variable = { name = legitimist_progress_next value = 0 }
-}
-
-fra_define_leading_dynasty = { #This scripted effect determines which dynasty is the most powerful one, and sets fra_leading_dynasty_progress to be equal to that dynasty's progress variable. This allows the bar to work, and much easier calculation to take place.
-	if = {
-		limit = {
-			var:bonapartist_progress > var:legitimist_progress
-			var:bonapartist_progress > var:orleanist_progress
-		}
-		set_variable = { name = fra_leading_dynasty_progress value = var:bonapartist_progress }
-	}
-	else_if = {
-		limit = {
-			var:orleanist_progress > var:legitimist_progress
-			var:orleanist_progress > var:bonapartist_progress
-		}
-		set_variable = { name = fra_leading_dynasty_progress value = var:orleanist_progress }
-	}
-	else_if = {
-		limit = {
-			var:legitimist_progress > var:orleanist_progress
-			var:legitimist_progress > var:bonapartist_progress
-		}
-		set_variable = { name = fra_leading_dynasty_progress value = var:legitimist_progress }
-	}
-	clamp_variable = { name = fra_leading_dynasty_progress max = 360 min = 0 }  #These variables cannot exceed 360 or 0, to prevent bad and ugly displays.
-}
-
 do_risorgimento_math = {
 	set_variable = { name = italian_states_pop_total value = 0 }
 	set_variable = { name = italian_states_radicals_total value = 0 }
@@ -2104,7 +1808,7 @@ do_risorgimento_math = {
 		limit = {
 			state_region = {
 				OR = {
-					is_homeland = cu:qinaat
+					is_homeland = cu:qinnaat
 					is_homeland = cu:azmaraan
 				}
 			}
@@ -2243,10 +1947,20 @@ calculate_communism_progress = {
 		}
 		change_variable = { name = temp_ha_var_contribution multiply = -0.5 }
 	}
-	change_variable = { name = communism_progress_from_laws add = var:temp_policing_var_contribution }
-	change_variable = { name = communism_progress_from_laws add = var:temp_ha_var_contribution }
-	remove_variable = temp_policing_var_contribution
-	remove_variable = temp_ha_var_contribution
+	if = {
+		limit = {
+			has_variable = temp_policing_var_contribution
+		}
+		change_variable = { name = communism_progress_from_laws add = var:temp_policing_var_contribution }
+		remove_variable = temp_policing_var_contribution
+	}
+	if = {
+		limit = {
+			has_variable = temp_ha_var_contribution
+		}
+		change_variable = { name = communism_progress_from_laws add = var:temp_ha_var_contribution }
+		remove_variable = temp_ha_var_contribution
+	}
 
 	# Compilation
 	change_variable = { name = communism_progress_var_next add = var:communism_progress_from_radicals }
@@ -2469,7 +2183,7 @@ calculate_national_identity_progress = {
 
 add_national_identity_progress = {
 	change_variable = { name = national_identity_progress_var add = var:national_identity_progress_var_next }
-	clamp_variable = { name = orleanist_progress max = 100 min = 0 }
+	clamp_variable = { name = national_identity_progress_var max = 100 min = 0 }
 }
 
 set_national_identity_vars = {
@@ -2557,18 +2271,268 @@ replicate_laws_from_prev = {
 	}
 }
 
-paris_commune_update_tick = {
-	set_global_variable = {
-		name = paris_commune_drift_final_var
-		value = 0
+capitulate_to_revolution = {
+	scope:ongoing_revolution_movement = { #Can't trigger if they want governance reforms anyway.
+		this.desired_law = {
+			save_scope_as = revolutionaries_law
+		}
 	}
-	change_global_variable = {
-		name = paris_commune_drift_final_var
-		add = global_var:paris_commune_progress_drift
+	every_interest_group = {
+		limit = {
+			is_insurrectionary = yes
+		}
+		set_variable = { name = revolutionary_ig days = 7 }
 	}
-	change_global_variable = {
-		name = paris_commune_drift_final_var
-		add = var:PRC_recognition_level
+	ordered_interest_group = {
+		limit = {
+			is_insurrectionary = yes
+		}
+		order_by = ig_clout
+		save_scope_as = revolution_leader_ig
+	}
+	if = { # Never activate Governance Principles twice.
+		limit = {
+			NOR = {
+				scope:revolutionaries_law = law_type:law_presidential_republic
+				scope:revolutionaries_law = law_type:law_parliamentary_republic
+				scope:revolutionaries_law = law_type:law_monarchy
+				scope:revolutionaries_law = law_type:law_council_republic
+				scope:revolutionaries_law = law_type:law_theocracy
+				scope:revolutionaries_law = law_type:law_magocracy
+			}
+		}
+		if = {
+			limit = {
+				scope:revolution_leader_ig = {
+					law_stance = {
+						law = law_type:law_council_republic
+						value = strongly_approve
+					}
+				}
+				NOT = {
+					has_law = law_type:law_council_republic
+				}
+			}
+			activate_law = law_type:law_council_republic
+		}
+		else_if = {
+			limit = {
+				scope:revolution_leader_ig = {
+					law_stance = {
+						law = law_type:law_monarchy
+						value = strongly_approve
+					}
+				}
+				NOT = {
+					has_law = law_type:law_monarchy
+				}
+			}
+			activate_law = law_type:law_monarchy
+		}
+		else_if = {
+			limit = {
+				scope:revolution_leader_ig = {
+					law_stance = {
+						law = law_type:law_parliamentary_republic
+						value = strongly_approve
+					}
+				}
+				NOT = {
+					has_law = law_type:law_parliamentary_republic
+				}
+			}
+			activate_law = law_type:law_parliamentary_republic
+		}
+		else_if = {
+			limit = {
+				scope:revolution_leader_ig = {
+					law_stance = {
+						law = law_type:law_presidential_republic
+						value = strongly_approve
+					}
+				}
+				NOT = {
+					has_law = law_type:law_presidential_republic
+				}
+			}
+			activate_law = law_type:law_presidential_republic
+		}
+		else_if = {
+			limit = {
+				scope:revolution_leader_ig = {
+					law_stance = {
+						law = law_type:law_theocracy
+						value = strongly_approve
+					}
+				}
+				NOT = {
+					has_law = law_type:law_theocracy
+				}
+			}
+			activate_law = law_type:law_theocracy
+		}
+		else_if = {
+			limit = {
+				scope:revolution_leader_ig = {
+					law_stance = {
+						law = law_type:law_council_republic
+						value = approve
+					}
+				}
+				NOT = {
+					has_law = law_type:law_council_republic
+				}
+			}
+			activate_law = law_type:law_council_republic
+		}
+		else_if = {
+			limit = {
+				scope:revolution_leader_ig = {
+					law_stance = {
+						law = law_type:law_monarchy
+						value = approve
+					}
+				}
+				NOT = {
+					has_law = law_type:law_monarchy
+				}
+			}
+			activate_law = law_type:law_monarchy
+		}
+		else_if = {
+			limit = {
+				scope:revolution_leader_ig = {
+					law_stance = {
+						law = law_type:law_magocracy
+						value = approve
+					}
+				}
+				NOT = {
+					has_law = law_type:law_magocracy
+				}
+			}
+			activate_law = law_type:law_magocracy
+		}
+		else_if = {
+			limit = {
+				scope:revolution_leader_ig = {
+					law_stance = {
+						law = law_type:law_parliamentary_republic
+						value = approve
+					}
+				}
+				NOT = {
+					has_law = law_type:law_parliamentary_republic
+				}
+			}
+			activate_law = law_type:law_parliamentary_republic
+		}
+		else_if = {
+			limit = {
+				scope:revolution_leader_ig = {
+					law_stance = {
+						law = law_type:law_presidential_republic
+						value = approve
+					}
+				}
+				NOT = {
+					has_law = law_type:law_presidential_republic
+				}
+			}
+			activate_law = law_type:law_presidential_republic
+		}
+		else_if = {
+			limit = {
+				scope:revolution_leader_ig = {
+					law_stance = {
+						law = law_type:law_theocracy
+						value = approve
+					}
+				}
+				NOT = {
+					has_law = law_type:law_theocracy
+				}
+			}
+			activate_law = law_type:law_theocracy
+		}
+	}
+
+	if = {
+		limit = {
+			scope:ongoing_revolution_movement = {
+				is_political_movement_type = movement_to_preserve
+			}
+		}
+		cancel_enactment = yes
+	}
+	else = {
+		activate_law = scope:revolutionaries_law
+	}
+
+	add_loyalists = {
+		value = 0.25
+	}
+	
+	every_interest_group = {
+		limit = {
+			has_variable = revolutionary_ig
+		}
+		owner = {
+			add_loyalists = {
+				value = 0.8
+				interest_group = PREV
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			country_has_voting_franchise = yes
+		}
+		call_election = {
+			months = 6
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_law = law_type:law_monarchy
+			}
+		}
+		hidden_effect = {
+			scope:revolution_leader_ig = {
+				leader = {
+					set_character_as_ruler = yes
+				}
+			}
+		}
+	}
+	
+	every_interest_group = {
+		limit = {
+			is_in_government = yes
+		}
+		remove_ruling_interest_group = yes
+		add_modifier = {
+			name = modifier_revolution_defeated_light
+			months = normal_modifier_time
+			is_decaying = yes
+		}
+	}
+
+	every_interest_group = {
+		limit = {
+			has_variable = revolutionary_ig
+		}
+		hidden_effect = {
+			abandon_revolution = yes
+		}
+		add_modifier = {
+			name = modifier_revolution_victorious_light
+			months = normal_modifier_time
+			is_decaying = yes
+		}
+		add_ruling_interest_group = yes
 	}
 }
 
@@ -2656,16 +2620,6 @@ calculate_brazil_slavery_progress = {
 			change_variable = {
 				name = brz_slavery_next
 				add = -1
-			}
-		}
-		# Away from slaveowner Domination
-		if = {
-			limit = {
-				has_variable = var_slave_trade_suppression_var
-			}
-			change_variable = {
-				name = brz_slavery_next
-				add = 1
 			}
 		}
 		if = {
@@ -2862,7 +2816,6 @@ calculate_caudillo_progress = {
 			name = caudillo_next
 			add = -1
 		}
-
 	}
 }
 
@@ -2881,5 +2834,61 @@ chi_remove_1_fragile_unity = { # Actually adds to the bar
 	change_variable = {
 		name = china_warlord_explosion
 		add = 1
+	}
+}
+
+handle_revolutionary_sps = {
+	hidden_effect = {
+		random_active_party = {
+			disband_party = yes
+		}
+		scripted_effect_parties_disappearence = yes
+		clear_legal_single_party = yes
+		if = {
+			limit = {
+				ROOT = {
+					ruler.interest_group = {
+						has_party = yes
+					}
+				}
+			}
+			ROOT = {
+				set_variable = { name = only_valid_party value = ruler.interest_group.party }
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					any_active_party = {
+						exists = this
+					}
+				}
+			}
+			root = { gen_ruler_party = yes }
+		}
+	}
+	hidden_effect = { #Clears all currently active parties
+		deactivate_parties = yes
+	}
+	update_party_support = yes #Reactivates precisely one legal party
+	
+	custom_tooltip = {
+		text = sps_government_reshuffle_tt
+		every_interest_group = {
+			limit = {
+				is_in_government = yes
+				NOT = { #Removes all IGs from government that aren't in your party
+					has_party = yes
+				}
+			}
+			remove_ruling_interest_group = yes
+		}
+		every_interest_group = {
+			limit = { #Adds all IGs that are in your party to the government
+				is_in_government = no
+				has_party = yes
+			}
+			add_ruling_interest_group = yes
+		}
 	}
 }

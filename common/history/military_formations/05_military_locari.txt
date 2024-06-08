@@ -1,0 +1,290 @@
+﻿MILITARY_FORMATIONS = {
+	c:DOB = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_thoughtsmith_ridge
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_JALALABAKOV
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KUNDUZOV
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_MAZAROV
+				count = 5
+			}
+
+			save_scope_as = dob_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_thoughtsmith_ridge
+			save_scope_as = dob_general
+		}
+		scope:dob_general = {
+			transfer_to_formation = scope:dob_army
+		}
+	}
+	
+	c:TKI = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_new_dumonia
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_TSURWA
+				count = 8
+			}
+
+			save_scope_as = tki_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_new_dumonia
+			save_scope_as = tki_general
+		}
+		
+		scope:tki_general = {
+			transfer_to_formation = scope:tki_army
+		}
+	}
+	
+	c:TEN = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_anantadesh
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_SUKHODAYA
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_BODHISATTVA
+				count = 13
+			}
+
+			save_scope_as = ten_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_anantadesh
+			save_scope_as = ten_general
+		}
+		
+		scope:ten_general = {
+			transfer_to_formation = scope:ten_army
+		}
+	}
+	
+	c:KRK = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_new_dumonia
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_GANDENASKIY
+				count = 7
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KHAMOSKIWAN
+				count = 15
+			}
+
+			save_scope_as = krk_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_new_dumonia
+			save_scope_as = krk_general
+		}
+		
+		scope:krk_general = {
+			transfer_to_formation = scope:krk_army
+		}
+	}
+	
+	c:DUU = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_new_dumonia
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_LHASHI
+				count = 5
+			}
+
+			save_scope_as = duu_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_new_dumonia
+			save_scope_as = duu_general
+		}
+		
+		scope:duu_general = {
+			transfer_to_formation = scope:duu_army
+		}
+	}
+	
+	c:SEK = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_new_dumonia
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_POTALANIPIY
+				count = 7
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_NAMTSOOSKIWAN
+				count = 3
+			}
+
+			save_scope_as = sek_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_new_dumonia
+			save_scope_as = sek_general
+		}
+		
+		scope:sek_general = {
+			transfer_to_formation = scope:sek_army
+		}
+	}
+	
+	c:IZA = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_new_dumonia
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_TSEGYALNIPIY
+				count = 8
+			}
+
+			save_scope_as = iza_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_new_dumonia
+			save_scope_as = iza_general
+		}
+		
+		scope:iza_general = {
+			transfer_to_formation = scope:iza_army
+		}
+	}
+	
+	c:GAH = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_scalethane_realms
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_MYTHOS
+				count = 15
+			}
+
+			save_scope_as = gah_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_scalethane_realms
+			save_scope_as = gah_general
+		}
+		
+		scope:gah_general = {
+			transfer_to_formation = scope:gah_army
+		}
+	}
+	
+	c:PAY = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_scalethane_realms
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KOTAYNOS
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_DILMELIA
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ARIMOS
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_HERMENIA
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cuirassiers
+				state_region = s:STATE_HERMENIA
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_HELLENOVA
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ARTAXIAHAN
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_GREOS
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ELENIKAR
+				count = 3
+			}
+
+			save_scope_as = pay_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_scalethane_realms
+			save_scope_as = pay_general
+		}
+		
+		scope:pay_general = {
+			transfer_to_formation = scope:pay_army
+		}
+	}
+}

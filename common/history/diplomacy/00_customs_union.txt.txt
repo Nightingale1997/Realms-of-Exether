@@ -1,0 +1,22 @@
+DIPLOMACY = {
+	c:VOZ = {
+		create_diplomatic_pact = {
+			country = c:DRO
+			type = customs_union
+		}
+	}
+	c:ZUB ?= {	
+		create_diplomatic_pact = {
+			country = c:LIS
+			type = customs_union
+		}
+		create_diplomatic_pact = {
+			country = c:VER
+			type = customs_union
+		}
+		create_diplomatic_pact = {
+			country = c:TIS
+			type = customs_union
+		}		
+	}
+}

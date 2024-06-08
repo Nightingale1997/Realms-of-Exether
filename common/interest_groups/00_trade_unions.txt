@@ -24,20 +24,9 @@
 	
 	on_enable = {
 		ig:ig_trade_unions = {
-			if = {
-				limit = {
-					has_dlc_feature = voice_of_the_people_content
-					owner = { c:FRA ?= this }
-				}
-				set_ig_trait = ig_trait:ig_trait_work_to_rule
-				set_ig_trait = ig_trait:ig_trait_industrial_organizers
-				set_ig_trait = ig_trait:ig_trait_bourse_du_travail
-			}
-			else = {
-				set_ig_trait = ig_trait:ig_trait_work_to_rule
-				set_ig_trait = ig_trait:ig_trait_industrial_organizers
-				set_ig_trait = ig_trait:ig_trait_solidarity
-			}
+			set_ig_trait = ig_trait:ig_trait_work_to_rule
+			set_ig_trait = ig_trait:ig_trait_industrial_organizers
+			set_ig_trait = ig_trait:ig_trait_solidarity
 		}
 		
 		### Socialism

@@ -892,10 +892,199 @@ avalorean={
 	graphics = european
 }
 
+whiali = {
+	color= hsv{ 0.82 0.51 0.75 }
+	religion = church_of_man
+	traits = { human_heritage vairia_culture_group }
+	male_common_first_names={
+		Abel
+		Adriano
+		Afonso
+		Alberto
+		Alexandre
+		Alfredo
+		Andre
+		Antonio_2
+		Aquilino
+		Artur
+		Augusto
+		Bartolomeu
+		Bernardo
+		Bruno
+		Caetano
+		Carlos
+		Christovao
+		Claudio_2
+		Candido
+		Damiao
+		Daniel
+		David
+		Dinis
+		Diogo
+		Duarte
+		Ernesto
+		Estevao
+		Eugenio
+		Fernando
+		Filipe
+		Francisco
+		Francisco_Xavier
+		Gastao
+		Hermenegildo
+		Ignacio_2
+		Jeronimo
+		Joaquim
+		Jorge
+		Jose
+		Joao
+		Julio_2
+		Leopoldo
+		Luis_2
+		Manuel
+		Miguel
+		Mario_2
+		Nicolau
+		Nuno
+		Orlando
+		Pascoal
+		Paulo
+		Pedro
+		Rafael_2
+		Raul
+		Roberto
+		Rodrigo
+		Rui
+		Santiago
+		Sebastiao
+		Teodoro
+		Teofilo
+		Tiago
+		Tome
+		Urbano
+		Vasco
+		Vicente
+		Vitorino
+		Vitorio
+		Alvaro
+		Oscar_2
+	}
+	female_common_first_names = {
+		Adelgundes
+		Ana
+		Antonia_2
+		Avelina
+		Benedita
+		Bernardina
+		Carlota
+		Eulalia_2
+		Francisca
+		Gabriela
+		Isabel
+		Joana
+		Joaquina
+		Josefa
+		Leopoldina
+		Maria
+		Micaela
+		Rafaela
+		Rita
+		Rosa
+		Rosalia
+		Sofia
+		Teresa
+	}	
+	noble_last_names = {
+		Correia_de_Sa
+		Costa
+		da_Cunna
+		da_Silva_Pereira
+		de_Almada
+		de_Braganza
+		de_Braganca-Coburgo
+		Carballo
+		de_Caula
+		de_Oliveira
+		de_Queiros
+		de_Sousa
+		de_Sousa_Coutinno
+		de_Vasconcelos
+		dos_Anxos
+		Rangel
+		Rebelo
+		Vilela
+	}
+	common_last_names={
+		Amaral
+		Barreto
+		Bleck
+		Braga
+		Cabral
+		Capelo
+		Carmona
+		Coelho
+		Correia
+		Coutinho
+		Dias
+		Fernandes
+		Ferreira
+		Figueira
+		Freire_de_Andrade
+		Gago
+		Gil
+		Gomes
+		Herculano
+		Ivens
+		Keil
+		Lopes
+		Machado
+		Magalhaes
+		Mendes
+		Moniz
+		Mouzinho
+		Nogueira
+		Nunes
+		Ortigao
+		Pereira
+		Pinheiro
+		Pinto
+		Pires
+		Pomar
+		Pulido
+		Queiroz
+		Quintanilha
+		Ribeiro
+		Rodrigues
+		Salazar
+		Sampaio
+		Silveira
+		Sergio_2
+		Tavares
+		Teixeira
+		Vidigal
+		Vieira
+		da_Silva
+		de_Almeida
+		de_Arriaga
+		de_Castro
+		de_Gusmao
+		de_Lacerda
+		de_Mesquita
+		de_Moura
+		de_Noronha
+		de_Paiva
+		dos_Reis
+		dos_Santos
+	}
+	ethnicities = {
+		1 = caucasian
+	}
+	graphics = european
+}
+
 vairian = {
 	color= hsv{ 0.52 0.51 0.75 }
 	religion = cult_of_the_sea
-	traits = { human_heritage }
+	traits = { human_heritage vairia_culture_group }
 	male_common_first_names={
 		Abel
 		Adriano
@@ -1083,6 +1272,88 @@ vairian = {
 
 west_thalorian={
 	color= hsv{ 0.40 0.03 0.58 }
+	religion = old_faith
+	traits = { thalorian_culture_group human_heritage }
+	male_common_first_names={
+		Alessandru
+		Beru
+		Duminku
+		Enrico
+		Evarist
+		Ferlad
+		Fernardu
+		Frangisku
+		Gabriel
+		Gorg
+		Joseph
+		Karmenu
+		Lawrenz
+		Marju
+		Mikiel
+		Ninu
+		Pawlu
+		Rokku
+		Saber
+		Ugo
+		Valent
+	}
+	female_common_first_names = {
+		Agatha
+		Aloisetta
+		Atanasia
+		Beatrici
+		Dorothea
+		Duminka
+		Elizabetta
+		Fawstina
+		Guljetta
+		Guzeppa
+		Helena
+		Karmena
+		Lucija
+		Margerita
+		Marthese
+		Therese
+		Vittorja
+	}	
+	noble_last_names = {
+		Cachia
+		Micallef
+		Moscati
+		Tabone
+	}
+	common_last_names={
+		Abela
+		Adami
+		Azzopardi
+		Boffa
+		Borg
+		Buhagiar
+		Cassar
+		Cumbo
+		Farrugia
+		Frendo
+		Gonzi
+		Howard
+		Mifsud
+		Mintoff
+		Mizzi
+		Muscat
+		Olivier
+		Puli
+		Pullicino
+		Strickland
+		Vella
+	}
+	graphics = european
+	ethnicities = {
+		1 = south_american
+	}
+}
+
+
+central_thalorian={
+	color= hsv{ 0.70 0.2 0.58 }
 	religion = old_faith
 	traits = { thalorian_culture_group human_heritage }
 	male_common_first_names={
@@ -1728,6 +1999,154 @@ thiralian={
 	}
 }
 
+astreval={
+	color= hsv{ 0.53 0.21 0.29 }
+	religion = rose_court
+	traits = { human_heritage }
+	male_common_first_names={
+		Alexis
+		Andre
+		Antoine
+		Antenor
+		Augustin
+		Balthazar
+		Beaubrun
+		Charlemagne
+		Charles
+		Cincinnatus
+		Celigny
+		Dantes
+		Demesvar
+		Denys
+		Emmanuel
+		Eugene
+		Fabre
+		Faustin
+		Florvil
+		Francois
+		Guillaume
+		Hannibal
+		Henri
+		Jacques
+		Jean
+		Jean-Baptiste
+		Jean-Louis
+		Jean_Pierre
+		Jonathas
+		Joseph
+		Louis
+		Louis-Eugene
+		Louis-Joseph
+		Lysius
+		Leon
+		Michel
+		Monpoint
+		Nissage
+		Nord
+		Oreste
+		Philippe
+		Pierre
+		Simon
+		Stenio
+		Sylvain
+		Tandrede
+		Thomas
+		Timoleon
+		Tiresias
+		Vilbrum
+	}
+	female_common_first_names = {
+		Adelina
+		Amethyste
+		Anne
+		Argentine
+		Athenais
+		Cecile
+		Celestina
+		Claire
+		Elisabeth
+		Euphemie
+		Francoise
+		Hersilie
+		Jeanne
+		Marie
+		Marie-Claire
+		Marie-Louise
+		Marie-Madeleine
+		Marie-Rose
+		Olive
+		Paulette
+		Pauline
+		Simone
+		Suzanne
+		Timemenne
+	}	
+	noble_last_names = {
+		Bonheur
+		Breda
+		Dessalines
+		Lachenais
+		Lobelot
+		Rigaud
+		Petion
+		Soulouque
+	}
+	common_last_names={
+		Alexis
+		Ardouin
+		Auguste
+		Bellegarde
+		Boisrond-Canal
+		Bonnet
+		Borno
+		Boyer
+		Brutus
+		Christophe
+		Conze
+		Dartiguenave
+		Delorme
+		Domingue
+		Firmin
+		Geffrad
+		Granville
+		Guerrier
+		Hyppolite
+		Iginac
+		Janvier
+		Jeune
+		Lafontant
+		Laleau
+		Leconte
+		Legouaze
+		Lherisson
+		Legitime
+		Leon
+		Madiou
+		Pierrot
+		Planchet
+		Price
+		Price-Mars
+		Peralte
+		Riche
+		Rigaud
+		Riviere-Herard
+		Roumain
+		Roy
+		Saget
+		Salnave
+		Salomon
+		Sam
+		Simon
+		Theodore
+		Vincent
+		Zamor
+	}
+	graphics = european
+	ethnicities = {
+		1 = caucasian
+	}
+}
+
 anwarthi={
 	color={ 255 156 156 }
 	religion = mortals_burden
@@ -2365,6 +2784,98 @@ kusichaki={
 }
 
 
+dunaq={
+	color= hsv{ 0.10 0.3 0.29 }
+	religion = lords_of_avarice
+	traits = { human_heritage qiin_culture_group }
+	male_common_first_names={
+		Agustin
+		Alejandro
+		Antauro
+		Antonio
+		Basilio
+		Daniel
+		Diego
+		Eugenio_2
+		Facundo
+		Felipe
+		Francisco
+		Gustavo
+		Hilario
+		Inca
+		Isaac
+		Jose_Maria
+		Julio
+		Lorenzo
+		Manuel
+		Marcos
+		Mariano
+		Martin_2
+		Nicolas_2
+		Osvaldo
+		RenE_
+		Roberto
+		Simon_2
+		Tupac
+		Ulises
+		Victor_2
+	}
+	female_common_first_names = {
+		Angelica
+		Casimira
+		Felicita
+		Juanita
+		Luzmila
+		Mercedes
+		Micael
+		Nilda
+		Savina
+		Silvia
+	}	
+	noble_last_names = {
+		Collahuazo
+		Duchicela
+		Poma
+		Quispe
+		Santa_Cruz
+	}
+	common_last_names={
+		Arguedas
+		Barrientos
+		Cajahuanca
+		Canchata
+		Chambi
+		Chihuan
+		Cusurichi
+		Espejo
+		Frisancho
+		Gamarra
+		Guaman
+		Guayasamin
+		Gutierrez
+		Heredia
+		Humala
+		Iturri
+		Lazarte
+		Luduena
+		Melgarejo
+		Noguera
+		Palacios
+		Patino
+		Rodriguez
+		Roncaglia
+		Sosa
+		Sumac
+		Toledo
+		Vargas
+		Wallparrimachi
+	}
+	ethnicities = {
+		1 = native_american
+	}
+	graphics = european
+}
+
 morastlinge={
 	color= rgb{ 102 178 255 }
 	religion = church_of_man
@@ -2969,7 +3480,7 @@ zemvelo={
 }
 
 bakibi={
-	color= hsv{ 0.98 0.59 0.64 }
+	color= hsv{ 0.28 0.59 0.64 }
 	religion = animist
 	traits = { human_heritage }
 	male_common_first_names={
@@ -3170,7 +3681,7 @@ achonian={
 }
 
 eberri={
-	color= hsv{ 0.40 0.26 0.58 }
+	color= hsv{ 0.70 0.26 0.58 }
 	religion = church_of_man
 	traits = { human_heritage }
 	male_common_first_names={
@@ -3318,6 +3829,7 @@ dorite={
 		Jean
 		Jean-Denis
 		Julien
+		Mathieu
 		Michel-Augustin
 		Mordiern
 		Nathan
@@ -3627,7 +4139,7 @@ nivaskyan={
 		Yaptunay
 		Yar
 	}
-	graphics = asian
+	graphics = european
 	ethnicities = {
 		1 = circumpolar
 	}

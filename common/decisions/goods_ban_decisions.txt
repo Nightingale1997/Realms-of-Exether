@@ -1,4 +1,4 @@
-ban_opium = {
+﻿ban_opium = {
 	is_shown = {
 		has_journal_entry = je_opium_obsession
 		exists = market
@@ -107,7 +107,11 @@ remove_opium_ban = {
 	}
 
 	when_taken = {
-		remove_banned_goods = g:opium	
+		remove_banned_goods = g:opium
+		if = {
+			limit = { has_modifier = opium_ban_authority }
+			remove_modifier = opium_ban_authority
+		}	
 	}
 	
    ai_chance = {

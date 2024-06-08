@@ -1,0 +1,90 @@
+﻿l_english:
+  
+  ## ORGANIZATIONS
+  concept_valkurian_concord: "Valkurian Concord"
+  concept_valkurian_concord_desc: "The Valkurian Concord is one of many [concept_international_organization]; its' stated purposes are to maintain international peace and security, develop friendly relations among nations, achieve international cooperation, and be a centre for harmonizing the actions of nations."
+  concept_drakewarden_council: "Drakewarden Council"
+  concept_drakewarden_council_desc: "The Drakewarden Council is one of many [concept_international_organization]; its' stated purposes are to maintain international peace and security, develop friendly relations among nations, achieve international cooperation, and be a centre for harmonizing the actions of nations."
+  concept_astral_consortium: "Astral Consortium"
+  concept_astral_consortium_desc: "The Astral Consortium is one of many [concept_international_organization]; its' stated purposes are to maintain international peace and security, develop friendly relations among nations, achieve international cooperation, and be a centre for harmonizing the actions of nations."
+  concept_international_organization: "International Organizations"
+  concept_international_organization_desc: "An international organization is a grouping of states that have a mutually agreed upon set of norms and rules meant to govern and enforce various military and economic goals. Notable organizations include the [concept_valkurian_concord], the [concept_world_health_organization] and [concept_nato]. International organizations are composed of primarily [Concept('concept_member_state', 'Member States')], but certain nations may hold an [concept_observer_status]."
+  concept_observer_status: "Observer Status"
+  concept_observer_status_desc: "Observer status is a status granted to a [concept_country] that is not a [concept_member_state] of an [concept_international_organization], but wishes to participate in the organization's activities. They are not allowed to vote on decisions, but often participate in discussions and debate, and have agreed to generally abide by the laws enacted by said organization."
+  concept_world_health_organization: "World Health Organization"
+  concept_world_health_organization_desc: "The World Health Organization (WHO) is a specialized agency within the [concept_valkurian_concord] responsible for international public health."
+  concept_member_state: "Member State"
+  concept_member_state_desc: "A member state is a [concept_country] that is a member of an [concept_international_organization], federation, or confederation."
+  concept_alignment: "Alignment"
+  concept_alignment_desc: "Each [concept_country] has the ability to align with a [concept_superpower] and support their global affairs."
+  concept_superpower: "Superpower"
+  concept_superpower_desc: "A [concept_country] that is in a primary leadership position in global affairs, with extensive ability to project both might and power, an unmistakable ability to bend the will of even the greatest powers.\n \nThese countries are considered $concept_superpowers$. $concept_superpowers$ frequently exchange blows with other $concept_superpowers$ and involve themselves in the affairs of lesser countries such as $concept_great_powers$.[AddLocalizationIf(GetPlayer.IsValid,'concept_superpower_desc_added')]"
+  concept_superpower_desc_added: "\n\n$concept_superpowers$ gain the following benefits:\n[GetRankModifier('superpower').GetDesc]"
+  concept_superpowers: "Superpowers"
+  concept_nato: "NATO"
+  concept_nato_desc: "The North Atlantic Treaty Organization (NATO), is an intergovernmental military [concept_alliance] established in the aftermath of World War II. [concept_nato] is a collective security system within which its independent member states agree to defend each other against third party aggression. "
+  concept_warsaw_pact: "Warsaw Pact"
+  concept_warsaw_pact_desc: "The Warsaw Pact is a collective defense treaty under the leadership of the Soviet Union. It is primarily a communist organization that acts as a balance of power or counterweight to [concept_nato]."
+  concept_non_aligned: "Non-Aligned"
+  concept_non_aligned_desc: "The Non-Aligned Movement (NAM) is a an organization made up of countries not formally aligned with or against any bloc. After the [concept_valkurian_concord], it is the largest grouping of states worldwide."
+  concept_concord_member_state: " UN Member State"
+  concept_concord_member_state_desc: "A UN member state is a sovereign country that has been admitted to the United Nations as a full and equal member, participating in its global governance and decision-making processes."
+  concept_concord_major_member: "UNSC Members"
+  concept_concord_major_member_desc: "A UNSC member state is a country that holds a seat on the United Nations Security Council, playing a key role in maintaining international peace and security through decision-making and the potential use of sanctions or military force."
+
+  ## UN Resolution Concepts
+  concept_diplomatic_weight: "Diplomatic Weights"
+  concept_diplomatic_weight_desc: "Diplomatic weight refers to the influence and leverage a country possesses in international relations, shaped by factors such as its economic power, military strength, and historical alliances, which can be used to sway negotiations, shape policy, or resolve conflicts."
+
+  concept_supporters_concord: "#p Supporters#!"
+  concept_supporters_concord_desc: "Supporters are [concept_concord_member_state] that are currently voting #p for#!  the passing of a resolution. The total strength of their votes depends on the sum of their individual [concept_diplomatic_weight]\n \nThe current strength of [concept_supporters_concord] against ongoing resolution is:\n#p  [GetPlayer.MakeScope.ScriptValue('supporting_value_total_concord')|d]#!"
+  concept_opponents_concord: "#n Opponents#!"
+  concept_opponents_concord_desc: "Opponents are [concept_concord_member_state] that are currently voting against the passing of a resolution. The total strength of their votes depends on the sum of their individual [concept_diplomatic_weight]\n \nThe current strength of [concept_opponents_concord] against ongoing resolution is:\n#n  [GetPlayer.MakeScope.ScriptValue('opposing_value_total_concord')|d]#!"
+
+  concept_supporters_consortium: "#p Supporters#!"
+  concept_supporters_consortium_desc: "Supporters are [concept_concord_member_state] that are currently voting #p for#!  the passing of a resolution. The total strength of their votes depends on the sum of their individual [concept_diplomatic_weight]\n \nThe current strength of [concept_supporters_consortium] against ongoing resolution is:\n#p  [GetPlayer.MakeScope.ScriptValue('supporting_value_total_consortium')|d]#!"
+  concept_opponents_consortium: "#n Opponents#!"
+  concept_opponents_consortium_desc: "Opponents are [concept_concord_member_state] that are currently voting against the passing of a resolution. The total strength of their votes depends on the sum of their individual [concept_diplomatic_weight]\n \nThe current strength of [concept_opponents_consortium] against ongoing resolution is:\n#n  [GetPlayer.MakeScope.ScriptValue('opposing_value_total_consortium')|d]#!"
+
+  concept_concord_intervention: "United Nations Intervention"
+  concept_concord_intervention_desc: "A UN intervention is an action taken by the United Nations, often through its peacekeeping forces or other specialized agencies, to address conflicts, humanitarian crises, or violations of international law in order to restore stability and protect human rights."
+
+  # IMF GDP 
+  CWP_NORMAL_IMF: "[GetPlayer.MakeScope.ScriptValue('global_gdp_IMF')|vd]"
+  CWP_TRILLION_IMF: "#v [GetPlayer.MakeScope.ScriptValue('global_gdp_IMF_div')|v]T#!"
+
+  concept_IMF: "International Monetary Fund"
+  concept_IMF_desc: "[concept_IMF] (IMF) is one of many [concept_international_organization]; established in 1944 with the goal of promoting global economic stability and growth. It provides financial assistance, policy advice, and technical expertise to its member countries to address economic challenges and imbalances. The IMF plays a crucial role in managing financial crises, promoting exchange rate stability, and supporting sustainable economic development worldwide."
+  
+  concept_external_debt: "External Debt"
+  concept_external_debt_desc: "TODO"
+
+  IMF_DESC: "$concept_IMF_desc$"
+  concept_concessionary_loan_IMF: "Concessionary"
+  concept_concessionary_loan_IMF_desc: "Concessionary loans are primarily given to nations that are undeveloped or have a low [concept_bank_credibility]\n\nConcessionary loans doe not accrue #gold interest#!.
+  concept_nonconcessionary_loan_IMF: "Non-Concessionary"
+  concept_nonconcessionary_loan_IMF_desc: "Non-Concessionary loans are primarily given to nations that are developed and have a high [concept_bank_credibility]\n\nNon-Concessionary loans accrue #gold Interest#!"
+
+  concept_IMF_credit_returns: "IMF Credit Returns"
+  concept_IMF_credit_returns_desc: "IMF Credit Returns are the sum of money received per month by creditor nations, the amount received is determined by global debt payment of [concept_IMF_debtor]s divided by the [concept_IMF_contribution_share] of the IMF Member"
+
+  concept_IMF_credit_payments: "IMF Credit Payments"
+  concept_IMF_credit_payments_desc: "IMF Credit Payments is the amount of money transferred to a nation's treasury from their [concept_IMF_credit] limit."
+
+  concept_IMF_contribution_share: "IMF Contribution Share"
+  concept_IMF_contribution_share_desc: "IMF Contribution share is the percentage of money contributed to the [concept_IMF] compared to all other contributors."
+
+  concept_IMF_debtor: "IMF Debtor"
+  concept_IMF_debtor_desc: "IMF Debtors are nations that have taken loans from the [concept_IMF]"
+
+  concept_IMF_credit: "IMF Credit"
+  concept_IMF_credit_desc: "IMF Credit is the amount of money given to a nation as part of either an [concept_concessionary_loan_IMF] or [concept_nonconcessionary_loan_IMF] loan."
+
+  concept_IMF_bailout: "IMF Bailout"
+  concept_IMF_bailout_desc: "IMF Bailouts are a special type of loan with no interest that wipes out a country's domestic debt but have terms and conditions that have to be met in order to complete."
+
+  INTERNATIONAL_ORGANIZATIONS: "Organizations"
+  INTERNATIONAL_ORGANIZATIONS_DESC: "[concept_international_organization] are a stable set of norms and rules meant to govern the behaviors of a [concept_country] in an international system.\n These organizations may be political, economic, or military in nature and may be established by treaties and by extension of other international organizations such as the [concept_valkurian_concord]."
+  concord_DESC: "[concept_valkurian_concord_desc]"
+  dragon_DESC: "[concept_drakewarden_council_desc]"
+  consortium_DESC: "[concept_astral_consortium_desc]"

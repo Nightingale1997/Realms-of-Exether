@@ -1,0 +1,60 @@
+﻿no_beaches_port = {
+#	graphical_culture = "french"
+	city_type = port
+	center_building_mesh = "blank_mesh"
+	modifier_key_prefix = "no_beaches_port_01"
+	modifier_key_suffix = "entity"
+	center_building_size = { 1 1 }
+
+	trigger = {
+		any_scope_state = {
+			no_beaches = yes
+		}
+	}
+
+	weight = 1
+
+	min_residential_buildings = 4
+	max_residential_buildings = 50
+	max_residence_points = 100
+	
+	rich_building_meshes = {
+		"blank_mesh"
+		"blank_mesh"
+		"blank_mesh"
+	}
+	rich_building_offsets = {
+		position = 0.0	#in grid-space units. 1.0 means the mesh can be placed anywhere inside its allotted cell
+		rotation = 0.0	#in degrees
+	}
+	mid_building_meshes = {
+		"blank_mesh"
+		"blank_mesh"
+		"blank_mesh"
+	}
+	mid_building_offsets = {
+		position = 0.2
+		rotation = 6.25
+	}
+	poor_building_meshes = {
+		"blank_mesh"
+		"blank_mesh"
+		"blank_mesh"
+		"blank_mesh"
+	}
+	poor_building_offsets = {
+		position = 0.2
+		rotation = 20.0
+	}
+	building_offsets = {	#offsets for regular buildings
+		position = 0.0
+		rotation = 0.0
+	}
+	
+	building_fishing_wharf = {}
+	building_whaling_station = {}
+	building_port = {}
+	building_naval_base = {}
+	building_shipyards = {}
+	building_military_shipyards = {}
+}

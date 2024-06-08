@@ -40,14 +40,14 @@
 						has_discrimination_trait = nature_domain
 						NOT = {
 							has_discrimination_trait = chivalrous_heritage
+						}
 					}
-					
 				}
 			}
 			ig:ig_devout = {
 				set_interest_group_name = ig_druids
-				remove_ideology = ideology_patriarchal
-				add_ideology = ideology_luddite_devout
+				remove_ideology = ideology_pious
+				add_ideology = ideology_pious_druidic
 			}
 		}
 
@@ -109,9 +109,32 @@
 			limit = {
 				has_technology_researched = corporatism
 			}
-			ig:ig_devout = {
-				remove_ideology = ideology_pious
-				add_ideology = ideology_corporatist
+			ig:ig_devout ?= {
+				if = {
+					limit = {
+						has_ideology = ideology:ideology_pious_dark
+					}			
+						remove_ideology = ideology_pious_dark
+						add_ideology = ideology_corporatist_dark
+				}
+				else_if = {
+					limit = {
+						has_ideology = ideology:ideology_pious_magoclast
+					}			
+						remove_ideology = ideology_pious_magoclast
+						add_ideology = ideology_corporatist_magoclast
+				}
+				else_if = {
+					limit = {
+						has_ideology = ideology:ideology_pious_druidic
+					}			
+						remove_ideology = ideology_pious_druidic
+						add_ideology = ideology_corporatist_druidic
+				}
+				else = {
+						remove_ideology = ideology_pious
+						add_ideology = ideology_corporatist
+				}
 			}
 		}
 	}

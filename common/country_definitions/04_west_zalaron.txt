@@ -8,7 +8,7 @@ RAV = {
 	tier = empire
 
 	cultures = { ravikian } 
-	capital = STATE_TINKELHOVEN
+	capital = STATE_TROMMELKUST
 }
 
 #Thassarcia
@@ -57,7 +57,7 @@ VLT = {
 	tier = principality
 
 	cultures = { varbat } 
-	capital = STATE_LATORIIVE
+	capital = STATE_VITHKUQJA
 }
 
 #Lugzar
@@ -70,6 +70,53 @@ LGZ = {
 
 	cultures = { varbat } 
 	capital = STATE_GJAKOVA
+}
+
+#Varbatia
+VBT = {
+	color = rgb{ 15 35 65 } 
+
+	country_type = unrecognized 
+
+	tier = grand_principality
+
+	cultures = { varbat } 
+	capital = STATE_GJAKOVA
+}
+
+#Xhurloban
+XLB = {
+	color = rgb{ 85 75 25 } 
+
+	country_type = unrecognized 
+
+	tier = grand_principality
+
+	cultures = { varbat } 
+	capital = STATE_GJAKOVA
+}
+
+#Khalkon
+KLK = {
+	color = rgb{ 35 25 2 } 
+
+	country_type = unrecognized 
+
+	tier = grand_principality
+
+	cultures = { kaalkid } 
+	capital = STATE_DIYINAKHAD
+}
+
+HOF = {
+	color = rgb{ 75 15 25 } 
+
+	country_type = unrecognized 
+
+	tier = kingdom
+
+	cultures = { kaalkid tozhi } 
+	capital = STATE_DIYINAKHAD
 }
 
 #Kullgrim
@@ -106,6 +153,18 @@ TUF = {
 	tier = principality
 
 	cultures = { xhurlob } 
+	capital = STATE_BERATIA
+}
+
+#Kuronilbogan
+KNG = {
+	color = rgb{ 175 15 175 } 
+
+	country_type = unrecognized 
+
+	tier = empire
+
+	cultures = { xhurlob varbat rethrashar dales_togrul } 
 	capital = STATE_BERATIA
 }
 
@@ -166,7 +225,7 @@ OLT = {
 	tier = principality
 
 	cultures = { west_thalorian } 
-	capital = STATE_STONEHAVEN
+	capital = STATE_THORNFIELD
 }
 
 #Ardwen
@@ -177,7 +236,7 @@ ARD = {
 
 	tier = kingdom
 
-	cultures = { west_thalorian } 
+	cultures = { central_thalorian } 
 	capital = STATE_AMBERWICK
 }
 
@@ -189,7 +248,7 @@ BDT = {
 
 	tier = principality
 
-	cultures = { west_thalorian } 
+	cultures = { central_thalorian } 
 	capital = STATE_HOLLOWBROOK
 }
 
@@ -227,7 +286,7 @@ VOR = {
 	tier = principality
 
 	cultures = { rethrashar } 
-	capital = STATE_GLENWOOD
+	capital = STATE_DAWNRIDGE
 }
 
 #Dahra
@@ -238,7 +297,7 @@ DHR = {
 
 	tier = principality
 
-	cultures = { west_thalorian } 
+	cultures = { central_thalorian } 
 	capital = STATE_WINDMERE
 }
 
@@ -251,7 +310,7 @@ DKO = {
 	tier = principality
 
 	cultures = { west_thalorian } 
-	capital = STATE_WINDMERE
+	capital = STATE_EMBERFALL
 }
 
 #Hozhoogo
@@ -262,7 +321,7 @@ HOZ = {
 
 	tier = principality
 
-	cultures = { kaalkid } 
+	cultures = { tozhi } 
 	capital = STATE_THAGHIZHI
 }
 
@@ -299,7 +358,7 @@ THK = {
 	tier = principality
 
 	cultures = { kaalkid } 
-	capital = STATE_MLIMASHWARI
+	capital = STATE_SHANAKONG
 }
 
 #Thaland
@@ -344,7 +403,7 @@ GAV = {
 
 	country_type = unrecognized
 	
-	tier = empire
+	tier = kingdom
 	
 	cultures = { varbat xhurlob rethrashar }
 	capital = STATE_BERATIA
@@ -371,7 +430,7 @@ TLE = {
 	tier = kingdom
 	
 	cultures = { lake_thalorian }
-	capital = STATE_STORMHOLM
+	capital = STATE_VONKENDAM
 }
 
 #West Thaloria

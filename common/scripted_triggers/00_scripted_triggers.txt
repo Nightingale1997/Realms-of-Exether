@@ -646,8 +646,14 @@ can_reach_target_country = {
 		AND = {
 			navy_size >= 10
 			has_port = yes
-			scope:target_country = { has_port = yes }
+			scope:target_country = { 
+				has_port = yes
+				any_scope_state = {
+					exether_is_coastal = yes
+				}
+			 }
 		}
+
 	}
 }
 
@@ -658,7 +664,7 @@ can_reach_target_state = {
 		AND = {
 			navy_size >= 10
 			has_port = yes
-			scope:target_state = { is_coastal = yes }
+			scope:target_state = { exether_is_coastal = yes }
 		}
 	}
 }
@@ -786,9 +792,6 @@ reactionary_revolution_ongoing = {
 								has_ideology = ideology:ideology_fascist
 								has_ideology = ideology:ideology_integralist
 								has_ideology = ideology:ideology_royalist
-								has_ideology = ideology:ideology_orleanist
-								has_ideology = ideology:ideology_bonapartist
-								has_ideology = ideology:ideology_legitimist
 								has_ideology = ideology:ideology_theocrat
 								has_ideology = ideology:ideology_ethno_nationalist
 								has_ideology = ideology:ideology_traditionalist
@@ -814,9 +817,6 @@ reactionary_revolution_ongoing = {
 						has_ideology = ideology:ideology_fascist
 						has_ideology = ideology:ideology_integralist
 						has_ideology = ideology:ideology_royalist
-						has_ideology = ideology:ideology_orleanist
-						has_ideology = ideology:ideology_bonapartist
-						has_ideology = ideology:ideology_legitimist
 						has_ideology = ideology:ideology_theocrat
 						has_ideology = ideology:ideology_ethno_nationalist
 						has_ideology = ideology:ideology_traditionalist
@@ -906,9 +906,6 @@ ig_is_reactionary = {
 				has_ideology = ideology:ideology_fascist
 				has_ideology = ideology:ideology_integralist
 				has_ideology = ideology:ideology_royalist
-				has_ideology = ideology:ideology_orleanist
-				has_ideology = ideology:ideology_bonapartist
-				has_ideology = ideology:ideology_legitimist
 				has_ideology = ideology:ideology_theocrat
 			}
 		}
@@ -1115,15 +1112,6 @@ ig_is_anti_dreyfusard = {
 			has_ideology = ideology:ideology_authoritarian
 		}
 		leader = {
-			has_ideology = ideology:ideology_legitimist
-		}
-		leader = {
-			has_ideology = ideology:ideology_bonapartist
-		}
-		leader = {
-			has_ideology = ideology:ideology_orleanist
-		}
-		leader = {
 			has_ideology = ideology:ideology_royalist
 		}
 	}
@@ -1202,7 +1190,6 @@ has_progressive_ideology = {
 		has_ideology = ideology:ideology_atheist
 		has_ideology = ideology:ideology_radical
 		has_ideology = ideology:ideology_feminist
-		has_ideology = ideology:ideology_pacifist
 		has_ideology = ideology:ideology_social_democrat
 		has_ideology = ideology:ideology_humanitarian
 		has_ideology = ideology:ideology_humanitarian_royalist
@@ -1224,7 +1211,6 @@ has_reactionary_ideology = {
 		has_ideology = ideology:ideology_integralist
 		has_ideology = ideology:ideology_ethno_nationalist
 		has_ideology = ideology:ideology_theocrat
-		has_ideology = ideology:ideology_legitimist
 		has_ideology = ideology:ideology_luddite
 		has_ideology = ideology:ideology_corporatist_leader
 	}
@@ -1235,8 +1221,6 @@ has_conservative_ideology = {
 		has_ideology = ideology:ideology_traditionalist
 		has_ideology = ideology:ideology_slaver
 		has_ideology = ideology:ideology_royalist
-		has_ideology = ideology:ideology_orleanist
-		has_ideology = ideology:ideology_bonapartist
 		has_ideology = ideology:ideology_theocrat
 		has_ideology = ideology:ideology_magocrat
 		has_ideology = ideology:ideology_corporatist_leader
@@ -1246,9 +1230,6 @@ has_conservative_ideology = {
 has_monarchist_ideology = {
 	OR = {
 		has_ideology = ideology:ideology_royalist
-		has_ideology = ideology:ideology_orleanist
-		has_ideology = ideology:ideology_bonapartist
-		has_ideology = ideology:ideology_legitimist	
 	}
 }
 

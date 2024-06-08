@@ -1,8 +1,8 @@
-POPS = {
+﻿POPS = {
 	s:STATE_DHARMARAJYA = {
 		region_state:KAY = {
 			create_pop = {
-				culture = gulf_naga
+				culture = jungle_naga
 				size = 1841220
 			}
 			create_pop = {
@@ -66,35 +66,67 @@ POPS = {
 	}
 
 	s:STATE_SURYANAGARI = {
-	
+		region_state:DJA = {
+			create_pop = {
+				culture = awakened
+				size = 36000
+			}
+		}
 	}
 
 	s:STATE_BHAVANASARA = {
-	
+		region_state:DJA = {
+			create_pop = {
+				culture = awakened
+				size = 38000
+			}
+		}
 	}
 
 	s:STATE_SUKHODAYA = {
-	
+		region_state:TEN = {
+			create_pop = {
+				culture = taiamican
+				size = 1258200
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = taiamican
+				size = 9000
+			}
+		}
 	}
 
 	s:STATE_BODHISATTVA = {
-	
-	}
-
-	s:STATE_VIJAYAPURA = {
-	
+		region_state:TEN = {
+			create_pop = {
+				culture = taiamican
+				size = 1424000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = taiamican
+				size = 29000
+			}
+		}
 	}
 
 	s:STATE_ANANTAPURI = {
-	
-	}
-
-	s:STATE_SAUBHAGYAVATI = {
-	
+		region_state:MLL = {
+			create_pop = {
+				culture = awakened
+				size = 45000
+			}
+		}
 	}
 
 	s:STATE_JIVANASUTA = {
-	
+		region_state:YIR = {
+			create_pop = {
+				culture = awakened
+				size = 50000
+			}
+		}
 	}
 
 	s:STATE_SADHANA_MANDAL = {
@@ -150,27 +182,32 @@ POPS = {
 	}
 
 	s:STATE_SUKHIBHAVA = {
-	
-	}
-
-	s:STATE_ANANDAVATI = {
-		region_state:SAP = {
+		region_state:KUL = {
 			create_pop = {
-				culture = gulf_naga
-				size = 2332290
-			}
-			create_pop = {
-				culture = gulf_naga
-				religion = animist
-				size = 133290
-			}
-			create_pop = {
-				pop_type = slaves
 				culture = awakened
-				size = 20000
+				size = 45000
 			}
 		}
 	}
+
+#	s:STATE_ANANDAVATI = {
+#		region_state:SAP = {
+#			create_pop = {
+#				culture = gulf_naga
+#				size = 2332290
+#			}
+#			create_pop = {
+#				culture = gulf_naga
+#				religion = animist
+#				size = 133290
+#			}
+#			create_pop = {
+#				pop_type = slaves
+#				culture = awakened
+#				size = 20000
+#			}
+#		}
+#	}
 
 	s:STATE_CHINTANAGIRI = {
 		region_state:WLR = {
@@ -191,24 +228,24 @@ POPS = {
 		}
 	}
 
-	s:STATE_PRABUDHYAMANA = {
-		region_state:AKB = {
-			create_pop = {
-				culture = jungle_naga
-				size = 553996
-			}
-			create_pop = {
-				culture = jungle_naga
-				religion = animist
-				size = 68000
-			}
-			create_pop = {
-				pop_type = slaves
-				culture = awakened
-				size = 30000
-			}
-		}
-	}
+#	s:STATE_PRABUDHYAMANA = {
+#		region_state:AKB = {
+#			create_pop = {
+#				culture = jungle_naga
+#				size = 553996
+#			}
+#			create_pop = {
+#				culture = jungle_naga
+#				religion = animist
+#				size = 68000
+#			}
+#			create_pop = {
+#				pop_type = slaves
+#				culture = awakened
+#				size = 30000
+#			}
+#		}
+#	}
 
 	s:STATE_ANUTTARAPUR = {
 		region_state:SAP = {
@@ -254,8 +291,7 @@ POPS = {
 				size = 951351
 			}
 			create_pop = {
-				culture = gulf_naga
-				religion = awakened
+				culture = awakened
 				size = 1164904
 			}
 			create_pop = {
@@ -269,10 +305,6 @@ POPS = {
 				size = 80500
 			}
 		}
-	}
-
-	s:STATE_BUDAKURRI = {
-	
 	}
 
 	s:STATE_YARLUWANDU = {
@@ -311,10 +343,6 @@ POPS = {
 				size = 30063
 			}
 		}
-	}
-
-	s:STATE_WANGADARRI = {
-	
 	}
 
 	s:STATE_KURUBBA = {
@@ -399,15 +427,30 @@ POPS = {
 	}
 
 	s:STATE_WADAWURRUM = {
-	
+		region_state:TJI = {
+			create_pop = {
+				culture = awakened
+				size = 105000
+			}
+		}
 	}
 
 	s:STATE_JALAGAMKATTA = {
-	
+		region_state:WAM = {
+			create_pop = {
+				culture = awakened
+				size = 65000
+			}
+		}
 	}
 
 	s:STATE_KARINGARRI = {
-	
+		region_state:KOO = {
+			create_pop = {
+				culture = awakened
+				size = 125000
+			}
+		}
 	}
 
 	s:STATE_KULUWANDU = {
@@ -440,7 +483,7 @@ POPS = {
 				size = 9370101
 			}
 			create_pop = {
-				culture = bengali
+				culture = gulf_naga
 				religion = animist
 				size = 109096
 			}
@@ -465,10 +508,6 @@ POPS = {
 				size = 60063
 			}
 		}
-	}
-
-	s:STATE_MARLIYAGIRRA = {
-	
 	}
 
 	s:STATE_DAMARLARA = {
@@ -502,228 +541,610 @@ POPS = {
 	}
 
 	s:STATE_KURRADUYARRA = {
-	
-	}
-
-	s:STATE_WARRANGBANU = {
-	
-	}
-
-	s:STATE_BANUBABU = {
-	
-	}
-
-	s:STATE_BULARRANG = {
-		region_state:JIV = {
+		region_state:KOO = {
 			create_pop = {
-				culture = gulf_naga
-				religion = animist
-				size = 382000
-			}
-			create_pop = {
-				culture = gulf_naga
-				size = 4004000
-			}
-			create_pop = {
-				pop_type = slaves
-				culture = gulf_naga
-				religion = animist
-				size = 34000
-			}
-			create_pop = {
-				pop_type = slaves
 				culture = awakened
-				size = 104000
+				size = 75000
 			}
 		}
 	}
 
-	s:STATE_DANKASEMBE = {
-	
+	s:STATE_WARRANGBANU = {
+		region_state:NWU = {
+			create_pop = {
+				culture = awakened
+				size = 80000
+			}
+		}
 	}
 
-	s:STATE_CRESI = {
-	
+#	s:STATE_BULARRANG = {
+#		region_state:JIV = {
+#			create_pop = {
+#				culture = gulf_naga
+#				religion = animist
+#				size = 382000
+#			}
+#			create_pop = {
+#				culture = gulf_naga
+#				size = 4004000
+#			}
+#			create_pop = {
+#				pop_type = slaves
+#				culture = gulf_naga
+#				religion = animist
+#				size = 34000
+#			}
+#			create_pop = {
+#				pop_type = slaves
+#				culture = awakened
+#				size = 104000
+#			}
+#		}
+#	}
+
+	s:STATE_DANKASEMBE = {
+		region_state:NWU = {
+			create_pop = {
+				culture = awakened
+				size = 100000
+			}
+		}
 	}
 
 	s:STATE_TSEGYALNIPIY = {
-	
-	}
-
-	s:STATE_LHAMOOSKIWAN = {
-	
-	}
-
-	s:STATE_TSEPO = {
-	
-	}
-
-	s:STATE_DHARMASHALAPIMIY = {
-	
-	}
-
-	s:STATE_SAKYAASKIY = {
-	
+		region_state:IZA = {
+			create_pop = {
+				culture = navrozdok
+				size = 758456
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = navrozdok
+				size = 5000
+			}
+		}
 	}
 
 	s:STATE_NYINGMAWASKAHIKAN = {
-	
+		region_state:SSC = {
+			create_pop = {
+				culture = taiamican
+				size = 184400
+			}
+			create_pop = {
+				culture = dumonian
+				religion = cult_of_the_sun
+				size = 48000
+			}
+			create_pop = {
+				culture = navrozdok
+				size = 8000
+			}
+			create_pop = {
+				culture = koquilla
+				size = 27996
+			}
+		}
 	}
 
 	s:STATE_POTALANIPIY = {
-	
+		region_state:SEK = {
+			create_pop = {
+				culture = navrozdok
+				size = 958456
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = navrozdok
+				size = 2000
+			}
+		}
 	}
 
 	s:STATE_GANDNI = {
-	
+		region_state:SSC = {
+			create_pop = {
+				culture = koquilla
+				size = 132000
+			}
+			create_pop = {
+				culture = dumonian
+				religion = cult_of_the_sun
+				size = 4000
+			}
+			create_pop = {
+				culture = avalorean
+				size = 25000
+			}
+			create_pop = {
+				culture = navrozdok
+				size = 62000
+			}
+		}
 	}
 
 	s:STATE_KHANGYO = {
-	
+		region_state:SSC = {
+			create_pop = {
+				culture = koquilla
+				size = 163992
+			}
+			create_pop = {
+				culture = navrozdok
+				size = 40004
+			}
+			create_pop = {
+				culture = koquilla
+				religion = cult_of_the_sun
+				size = 108000
+			}
+			create_pop = {
+				culture = dumonian
+				size = 44100
+			}
+			create_pop = {
+				culture = dumonian
+				religion = cult_of_the_sun
+				size = 95508
+			}
+		}
 	}
 
 	s:STATE_TSURWA = {
-	
-	}
-
-	s:STATE_YAMYAM = {
-	
+		region_state:TKI = {
+			create_pop = {
+				culture = taiamican
+				size = 1647000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = taiamican
+				size = 1800
+			}
+		}
 	}
 
 	s:STATE_NAMTSOOSKIWAN = {
-	
+		region_state:SEK = {
+			create_pop = {
+				culture = navrozdok
+				size = 1458456
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = navrozdok
+				size = 50000
+			}
+		}
 	}
 
 	s:STATE_SHIGATSENIPIY = {
-	
-	}
-
-	s:STATE_DHACREE = {
-	
+		region_state:SSC = {
+			create_pop = {
+				culture = koquilla
+				size = 271804
+			}
+			create_pop = {
+				culture = dumonian
+				religion = cult_of_the_sun
+				size = 10192
+			}
+			create_pop = {
+				culture = taiamican
+				size = 164396
+			}
+			create_pop = {
+				culture = navrozdok
+				size = 48000
+			}
+		}
 	}
 
 	s:STATE_GANDENASKIY = {
-	
-	}
-
-	s:STATE_THOLINGNIPIY = {
-	
+		region_state:KRK = {
+			create_pop = {
+				culture = taiamican
+				size = 1959000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = taiamican
+				size = 4500
+			}
+		}
 	}
 
 	s:STATE_KHAMOSKIWAN = {
-	
-	}
-
-	s:STATE_CREEGYAL = {
-	
+		region_state:KRK = {
+			create_pop = {
+				culture = taiamican
+				size = 1521000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = taiamican
+				size = 1200
+			}
+		}
 	}
 
 	s:STATE_LHASHI = {
-	
+		region_state:DUU = {
+			create_pop = {
+				culture = taiamican
+				size = 982447
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = taiamican
+				size = 2000
+			}
+		}
 	}
 
 	s:STATE_ARIMOS = {
-	
-	}
-
-	s:STATE_GREGAN = {
-	
+		region_state:PAY = {
+			create_pop = {
+				culture = lusakaran
+				size = 338456
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = lusakaran
+				size = 5000
+			}
+		}
 	}
 
 	s:STATE_HERMENIA = {
-	
-	}
-
-	s:STATE_HALLEOS = {
-	
+		region_state:PAY = {
+			create_pop = {
+				culture = lusakaran
+				size = 738456
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = lusakaran
+				size = 9000
+			}
+		}
 	}
 
 	s:STATE_DILMELIA = {
-	
+		region_state:PAY = {
+			create_pop = {
+				culture = lusakaran
+				size = 438456
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = lusakaran
+				size = 15000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = navrozdok
+				size = 10000
+			}
+		}
 	}
 
 	s:STATE_GREOS = {
-	
+		region_state:PAY = {
+			create_pop = {
+				culture = lusakaran
+				size = 500000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = lusakaran
+				size = 12000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = navrozdok
+				size = 2000
+			}
+		}
 	}
 
 	s:STATE_HELLENOVA = {
-	
+		region_state:PAY = {
+			create_pop = {
+				culture = lusakaran
+				size = 600000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = lusakaran
+				size = 12000
+			}
+		}
 	}
 
 	s:STATE_KOTAYNOS = {
-	
+		region_state:PAY = {
+			create_pop = {
+				culture = lusakaran
+				size = 1258456
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = lusakaran
+				size = 30000
+			}
+			create_pop = {
+				culture = navrozdok
+				size = 25500
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = navrozdok
+				size = 20000
+			}
+		}
 	}
 
 	s:STATE_YERNAGRIA = {
-	
+		region_state:RAS = {
+			create_pop = {
+				culture = kailando_lacertian
+				size = 383996
+			}
+			create_pop = {
+				culture = south_sea_ravager
+				size = 8396
+			}
+			create_pop = {
+				culture = east_lacertian
+				size = 96004
+			}
+			create_pop = {
+				culture = zemvelo
+				size = 12004
+			}
+		}
 	}
 
 	s:STATE_ARTAXIAHAN = {
-	
+		region_state:PAY = {
+			create_pop = {
+				culture = lusakaran
+				size = 450000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = lusakaran
+				size = 10000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = navrozdok
+				size = 2000
+			}
+		}
 	}
 
 	s:STATE_ZANPIQ = {
-	
+		region_state:SSC = {
+			create_pop = {
+				culture = navrozdok
+				size = 353400
+			}
+			create_pop = {
+				culture = avalorean
+				size = 12200
+			}
+			create_pop = {
+				culture = koquilla
+				size = 10000
+			}
+		}
 	}
 
 	s:STATE_ELENIKAR = {
-	
+		region_state:PAY = {
+			create_pop = {
+				culture = lusakaran
+				size = 350000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = navrozdok
+				size = 2000
+			}
+		}
 	}
 
 	s:STATE_ARGYSTSIK = {
-	
+		region_state:CCO = {
+			create_pop = {
+				culture = south_sea_ravager
+				size = 166508
+			}
+			create_pop = {
+				culture = moluccan
+				religion = church_of_man
+				size = 79213
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = south_sea_ravager
+				religion = church_of_man
+				size = 35676
+			}
+			create_pop = {
+				culture = kailando_lacertian
+				size = 12078
+			}
+		}
 	}
 
 	s:STATE_GRAEA = {
-	
+		region_state:BTR = {
+			create_pop = {
+				culture = south_sea_ravager
+				size = 699600
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = kailando_lacertian
+				size = 11000
+			}
+			create_pop = {
+				culture = kailando_lacertian
+				size = 27404
+			}
+		}
 	}
 
 	s:STATE_JERMENION = {
-	
+		region_state:BTR = {
+			create_pop = {
+				culture = south_sea_ravager
+				size = 75000
+			}
+			create_pop = {
+				culture = south_sea_ravager
+				religion = church_of_man
+				size = 12000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = south_sea_ravager
+				size = 18000
+			}
+			create_pop = {
+				culture = east_lacertian
+				size = 7196
+			}
+			create_pop = {
+				culture = kailando_lacertian
+				size = 100196
+			}
+		}
 	}
 
 	s:STATE_ARTHERA = {
-	
+		region_state:CCO = {
+			create_pop = {
+				culture = south_sea_ravager
+				size = 506000
+			}
+			create_pop = {
+				culture = kailando_lacertian
+				size = 135800
+			}
+			create_pop = {
+				culture = south_sea_ravager
+				religion = church_of_man
+				size = 20311
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = kailando_lacertian
+				size = 10000
+			}
+			create_pop = {
+				culture = east_lacertian
+				size = 20004
+			}
+		}
 	}
 
 	s:STATE_COCOHAYAT = {
-	
-	}
-
-	s:STATE_NIKA = {
-	
+		region_state:CCO = {
+			create_pop = {
+				culture = south_sea_ravager
+				size = 96000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = navrozdok
+				size = 20000
+			}
+			create_pop = {
+				culture = kailando_lacertian
+				size = 44020
+			}
+		}
 	}
 
 	s:STATE_HELARM = {
-	
+		region_state:RAS = {
+			create_pop = {
+				culture = kailando_lacertian
+				size = 690000
+			}
+			create_pop = {
+				culture = east_lacertian
+				size = 68996
+			}
+			create_pop = {
+				culture = south_sea_ravager
+				size = 60000
+			}
+		}
 	}
 
 	s:STATE_MYTHOS = {
-	
-	}
-
-	s:STATE_KABUSKAYA = {
-	
+		region_state:GAH = {
+			create_pop = {
+				culture = navrozdok
+				size = 1974567
+			}
+			create_pop = {
+				culture = lusakaran
+				size = 4500
+			}
+			create_pop = {
+				culture = dumonian
+				religion = cult_of_the_sun
+				size = 1000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = navrozdok
+				size = 25000
+			}
+		}
 	}
 
 	s:STATE_MOSKHAN = {
-	
-	}
-
-	s:STATE_HERASLAV = {
-	
+		region_state:VOL = {
+			create_pop = {
+				culture = awakened_east
+				size = 724817
+			}
+		}
 	}
 
 	s:STATE_TASHKAVSK = {
-	
+		region_state:VOL = {
+			create_pop = {
+				culture = awakened_east
+				size = 709922
+			}
+		}
 	}
 
 	s:STATE_NEFUDISTAN = {
-	
+		region_state:ASR = {
+			create_pop = {
+				culture = qadimra
+				size = 90000
+			}
+		}
 	}
 
 	s:STATE_SAMARKH = {
-	
+		region_state:VOL = {
+			create_pop = {
+				culture = awakened_east
+				size = 697456
+			}
+		}
 	}
 
 	s:STATE_DUSHANBARYA = {
@@ -751,31 +1172,80 @@ POPS = {
 	}
 
 	s:STATE_MAZAROV = {
-	
+		region_state:DOB = {
+			create_pop = {
+				culture = hornodukh
+				size = 1250000
+			}
+			create_pop = {
+				culture = awakened_east
+				size = 40000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = awakened_east
+				size = 10000
+			}
+		}
 	}
 
 	s:STATE_KHOSTOV = {
-	
+		region_state:YAS = {
+			create_pop = {
+				culture = qadimra
+				size = 400000
+			}
+			create_pop = {
+				culture = awakened_east
+				size = 100000
+			}
+		}
 	}
-
-	s:STATE_BALKHSK = {
 	
-	}
-
 	s:STATE_KUNDUZOV = {
-	
+		region_state:DOB = {
+			create_pop = {
+				culture = hornodukh
+				size = 998000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = hornodukh
+				size = 2000
+			}
+		}
 	}
 
 	s:STATE_PULIKOTSK = {
-	
+		region_state:ZAR = {
+			create_pop = {
+				culture = awakened_east
+				size = 381836
+			}
+		}
 	}
 
 	s:STATE_TERMEZSK = {
-	
+		region_state:GAN = {
+			create_pop = {
+				culture = awakened_east
+				size = 797012
+			}
+		}
 	}
 
 	s:STATE_JALALABAKOV = {
-	
+		region_state:DOB = {
+			create_pop = {
+				culture = hornodukh
+				size = 1620000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = hornodukh
+				size = 5000
+			}
+		}
 	}
 
 	s:STATE_FARGHANOV = {
@@ -788,15 +1258,21 @@ POPS = {
 	}
 
 	s:STATE_GHAZNINSKIY = {
-	
+		region_state:YKG = {
+			create_pop = {
+				culture = awakened_east
+				size = 992817
+			}
+		}
 	}
 
 	s:STATE_ANDIZHANSK = {
-	
-	}
-
-	s:STATE_BAMIANOV = {
-	
+		region_state:AYS = {
+			create_pop = {
+				culture = awakened_east
+				size = 497437
+			}
+		}
 	}
 
 	s:STATE_RUKHAM = {

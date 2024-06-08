@@ -1,119 +1,559 @@
 ﻿POPS = {
 	s:STATE_KILIMASAWA = {
-
+		region_state:GHR = {
+			create_pop = {
+				culture = gnoll
+				size = 194000
+			}
+		}
 	}
 	s:STATE_MAJIMBA = {
-
+		region_state:GHR = {
+			create_pop = {
+				culture = gnoll
+				size = 97000
+			}
+		}
 	}
 	s:STATE_PWANIQWA = {
-
+		region_state:SKR = {
+			create_pop = {
+				culture = gnoll
+				size = 536000
+			}
+		}
 	}
 	s:STATE_SAWAMAJI = {
-
+		region_state:SKR = {
+			create_pop = {
+				culture = gnoll
+				size = 383000
+			}
+		}
 	}
 	s:STATE_JITOKANYA = {
-
+		region_state:YIP = {
+			create_pop = {
+				culture = gnoll
+				size = 196000
+			}
+		}
 	}
 	s:STATE_MAWINGUCHANYA = {
-
+		region_state:SKR = {
+			create_pop = {
+				culture = gnoll
+				size = 496000
+			}
+		}
 	}
 	s:STATE_PWANIQILIMA = {
-
+		region_state:PRO = {
+			create_pop = {
+				culture = gnoll
+				size = 412908
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = kaalkid
+				size = 1000
+			}
+		}
 	}
 	s:STATE_UZURIPWA = {
-
+		region_state:THT = {
+			create_pop = {
+				culture = gnoll
+				size = 191000
+			}
+		}
 	}
 	s:STATE_SAWAMREMBO = {
-
+		region_state:YUY = {
+			create_pop = {
+				culture = gnoll
+				size = 27796
+			}
+			create_pop = {
+				culture = dunaq
+				size = 18000
+			}
+		}
 	}
 	s:STATE_MAJILIMA = {
-
+		region_state:RIK = {
+			create_pop = {
+				culture = gnoll
+				size = 164000
+			}
+		}
 	}
 	s:STATE_KIJITOQWA = {
-
+		region_state:SKR = {
+			create_pop = {
+				culture = gnoll
+				size = 342000
+			}
+		}
 	}
 	s:STATE_KILIMADADA = {
-
-	}
-	s:STATE_PWAKUISHI = {
-
+		region_state:GHR = {
+			create_pop = {
+				culture = gnoll
+				size = 182000
+			}
+		}
 	}
 	s:STATE_MAWIMBIMAJI = {
-
+		region_state:PRO = {
+			create_pop = {
+				culture = gnoll
+				size = 378129
+			}
+			create_pop = {
+				culture = kaalkid
+				size = 1000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = pabardian
+				size = 500
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = kaalkid
+				size = 2000
+			}
+		}
 	}
 	s:STATE_UZURIKILIMA = {
-
+		region_state:XOC = {
+			create_pop = {
+				culture = giff
+				size = 480000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = gnoll
+				size = 2000
+			}
+		}
 	}
 	s:STATE_KILIMASHWARI = {
-
+		region_state:XOC = {
+			create_pop = {
+				culture = giff
+				size = 720000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = gnoll
+				size = 2000
+			}
+		}
 	}
 	s:STATE_JITOMREMBO = {
-
+		region_state:THT = {
+			create_pop = {
+				culture = gnoll
+				size = 141000
+			}
+		}
 	}
 	s:STATE_PWAWAKATI = {
-
+		region_state:YIP = {
+			create_pop = {
+				culture = gnoll
+				size = 181000
+			}
+		}
 	}
 	s:STATE_PACHAQULLU = {
-
+		region_state:KUN = {
+			create_pop = {
+				culture = yachaymanchi
+				size = 169628
+			}
+			create_pop = {
+				culture = kusichaki
+				size = 283796
+			}
+			create_pop = {
+				culture = vandori
+				size = 5996
+			}
+			create_pop = {
+				culture = dunaq
+				size = 36000
+			}
+			create_pop = {
+				pop_type = gnoll
+				culture = equatorial_bantu
+				size = 16800
+			}
+		}
 	}
 	s:STATE_INTIWINA = {
-
+		region_state:KUN = {
+			create_pop = {
+				culture = dunaq
+				size = 30000
+			}
+			create_pop = {
+				culture = yachaymanchi
+				size = 4000
+			}
+			create_pop = {
+				culture = kusichaki
+				size = 8000
+			}
+			create_pop = {
+				pop_type = gnoll
+				culture = equatorial_bantu
+				size = 6000
+			}
+		}
 	}
 	s:STATE_WAYLLAPAMPA = {
-
+		region_state:TIT = {
+			create_pop = {
+				culture = yachaymanchi
+				size = 245953
+			}
+			create_pop = {
+				culture = kusichaki
+				size = 904215
+			}
+			create_pop = {
+				culture = dunaq
+				size = 304215
+			}
+			create_pop = {
+				culture = vandori
+				size = 4646
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = gnoll
+				size = 32020
+			}
+		}
 	}
 	s:STATE_MALLKIYAKU = {
-
+		region_state:KUN = {
+			create_pop = {
+				culture = yachaymanchi
+				size = 171604
+			}
+			create_pop = {
+				culture = dunaq
+				size = 60000
+			}
+			create_pop = {
+				culture = kusichaki
+				size = 173132
+			}
+			create_pop = {
+				culture = vandori
+				size = 2996
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = gnoll
+				size = 20000
+			}
+		}
 	}
 	s:STATE_QAQAMANTA = {
-
+		region_state:KAN = {
+			create_pop = {
+				culture = dunaq
+				size = 124000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = kusichaki
+				size = 5200
+			}
+			create_pop = {
+				culture = kusichaki
+				size = 45000
+			}
+		}
 	}
 	s:STATE_SUYANAKU = {
-	
+		region_state:GPK={
+			create_pop = {
+				culture = mgzavri
+				size = 215000
+			}
+			create_pop = {
+				culture = dunaq
+				size = 5402
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = dunaq
+				size = 7800
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = kaalkid
+				size = 1000
+			}
+			create_pop = {
+				culture = kusichaki
+				size = 2000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = kusichaki
+				size = 6000
+			}
+		}
 	}
 	s:STATE_WAMANPATA = {
-	
+		region_state:GPK={
+			create_pop = {
+				culture = mgzavri
+				size = 342000
+			}
+			create_pop = {
+				culture = dunaq
+				size = 222396
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = kaalkid
+				size = 14000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = lake_thalorian
+				size = 5000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = kusichaki
+				size = 4000
+			}
+		}
+	}
+	s:STATE_NAWI_OASIS = {
+		region_state:WAQ={
+			create_pop = {
+				culture = yachaymanchi
+				size = 700000
+			}
+			create_pop = {
+				culture = dunaq
+				size = 75000
+			}
+			create_pop = {
+				culture = kusichaki
+				size = 92000
+			}
+			create_pop = {
+				culture = rahoru
+				size = 7500
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = rahoru
+				size = 7500
+			}
+			create_pop = {
+				culture = vandori
+				size = 3000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = gnoll
+				size = 2000
+			}
+		}
 	}
 	s:STATE_LLANKAYUQ = {
-	
+		region_state:KAN = {
+			create_pop = {
+				culture = mgzavri
+				size = 4000
+			}
+			create_pop = {
+				culture = dunaq
+				size = 40000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = kusichaki
+				size = 4000
+			}
+		}
 	}
 	s:STATE_TIKAQULLU = {
-	
+		region_state:TIT = {
+			create_pop = {
+				culture = kusichaki
+				size = 1165804
+			}
+			create_pop = {
+				culture = yachaymanchi
+				pop_type = aristocrats
+				size = 19204
+			}
+			create_pop = {
+				culture = vandori
+				size = 2000
+			}
+			create_pop = {
+				culture = dunaq
+				size = 100000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = tqalt
+				size = 11000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = gnoll
+				size = 13000
+			}
+		}
 	}
 	s:STATE_PUKARAQOCHA = {
-	
+		region_state:WAY = {
+			create_pop = {
+				culture = kusichaki
+				size = 21000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = rahoru
+				size = 2000
+			}
+			create_pop = {
+				culture = yachaymanchi
+				size = 2000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = gnoll
+				size = 5000
+			}
+			create_pop = {
+				culture = dunaq
+				size = 48396
+			}
+		}
 	}
 	s:STATE_KUCHUYPATA = {
-	
-	}
-	s:STATE_YANAPAYUQ = {
-	
+		region_state:PAC = {
+			create_pop = {
+				culture = kusichaki
+				size = 374188
+			}
+			create_pop = {
+				culture = vandori
+				size = 12800
+			}
+			create_pop = {
+				culture = yachaymanchi
+				size = 71800
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = dunaq
+				size = 34000
+			}
+		}
 	}
 	s:STATE_MIKHUYUQ = {
-	
+		region_state:KAW = {
+			create_pop = {
+				culture = dunaq
+				size = 65600
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = rahoru
+				size = 12400
+			}
+			create_pop = {
+				culture = kusichaki
+				size = 8004
+			}
+		}
 	}
 	s:STATE_PISQUPATA = {
-	
-	}
-	s:STATE_CHAKAPAMPA = {
-	
+		region_state:TAY = {
+			create_pop = {
+				culture = dunaq
+				size = 36000
+			}
+			create_pop = {
+				culture = kusichaki
+				size = 12000
+			}
+			create_pop = {
+				culture = yachaymanchi
+				size = 4000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = lake_thalorian
+				size = 4400
+			}
+		}
 	}
 	s:STATE_QOMERQOCHA = {
-	
+		region_state:WAR = {
+			create_pop = {
+				culture = dunaq
+				size = 28000
+			}
+		}
 	}
 	s:STATE_ANTAQAQA = {
-	
+		region_state:YKU = {
+			create_pop = {
+				culture = kusichaki
+				size = 386700
+			}
+			create_pop = {
+				culture = rahoru
+				size = 206700
+			}
+			create_pop = {
+				culture = vandori
+				size = 42500
+			}
+			create_pop = {
+				culture = yachaymanchi
+				size = 293996
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = rahoru
+				size = 50000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = tqalt
+				size = 56000
+			}
+		}
 	}
 	s:STATE_URQUNAYUQ = {
 		region_state:HOR = {
 			create_pop = {
 				culture = rahoru
-				size = 302907
+				size = 292907
 			}
 			create_pop = {
 				culture = rahoru
 				religion = orc_father
-				size = 100000
+				size = 50000
 			}
 			create_pop = {
 				culture = tqalt
@@ -122,6 +562,14 @@
 			create_pop = {
 				culture = tqalt
 				religion = orc_mother
+				size = 10000
+			}
+			create_pop = {
+				culture = kusichaki
+				size = 50000
+			}
+			create_pop = {
+				culture = yachaymanchi
 				size = 10000
 			}
 		}
@@ -182,14 +630,15 @@
 				size = 30000
 			}
 			create_pop = {
-				culture = lake_thalorian
-				religion = orc_mother
-				size = 2500
-			}
-			create_pop = {
-				culture = waste_walker
+				culture = dunaq
 				size = 1000
 				pop_type = slaves
+			}
+		}
+		region_state:KAW = {
+			create_pop = {
+				culture = dunaq
+				size = 210000
 			}
 		}
 	}

@@ -21,7 +21,7 @@
 # max_hiring_rate = X					Maximum value for how much of the building's max staffing level can be hired in a single week (default NDefines::NEconomy::DEFAULT_MAX_HIRING_RATE)
 # proportionality_limit = X				How high is the building's tolerance for pop types being out of proportion? default NDefines::NEconomy::EMPLOYMENT_PROPORTIONALITY_LIMIT)
 # hires_unemployed_only = yes			If yes, buildings in this group may only hire from the unemployment pool. Default no.
-
+# is_shown_in_outliner = yes			If no, buildingtypes in this group will not show up in the outliner, this is for special stuff like the monuments
 # Manufacturing
 
 bg_manufacturing = {
@@ -70,6 +70,27 @@ bg_military_shipyards = {
 		
 	urbanization = 20
 	infrastructure_usage_per_level = 2
+}
+
+bg_artillery_foundaries = {
+	parent_group = bg_light_industry
+		
+	urbanization = 20
+	infrastructure_usage_per_level = 2
+}
+
+bg_arms_industries = {
+	parent_group = bg_light_industry
+		
+	urbanization = 20
+	infrastructure_usage_per_level = 2
+}
+
+bg_munition_plants = {
+	parent_group = bg_heavy_industry
+		
+	urbanization = 20
+	infrastructure_usage_per_level = 3
 }
 
 # Agriculture
@@ -234,31 +255,6 @@ bg_plantations = {
 	economy_of_scale_ai_factor = 1.5
 }
 
-bg_chimesilt_mounds = {
-	category = rural
-
-	capped_by_resources = yes
-	
-	economy_of_scale = yes
-	
-	can_use_slaves = yes
-	
-	default_building = building_logging_camp
-	
-	lens = forestry	
-	
-	cash_reserves_max = 25000
-	
-	urbanization = 5
-	infrastructure_usage_per_level = 1
-	
-	should_auto_expand = { 
-		default_auto_expand_rule = yes
-	}
-	
-	economy_of_scale_ai_factor = 1.5
-}
-
 bg_coffee_plantations = {
 	parent_group = bg_plantations
 	
@@ -284,6 +280,7 @@ bg_dye_plantations = {
 	default_building = building_dye_plantation
 }
 
+#Changed for exether
 bg_opium_plantations = {
 	parent_group = bg_chimesilt_mounds
 	
@@ -458,7 +455,7 @@ bg_whaling = {
 	
 	economy_of_scale = yes
 	
-	default_building = building_whaling_station
+	default_building = building_leviathan_outpost
 	
 	lens = fishing
 	
@@ -715,6 +712,7 @@ bg_monuments = {
 	parent_group = bg_government
 	lens = special
 	inheritable_construction = yes
+	economy_of_scale = no
 }
 
 # Military
@@ -752,76 +750,10 @@ bg_navy = {
 
 bg_skyscraper = {
 	parent_group = bg_government
+	economy_of_scale = no
 }
 
 bg_monuments_hidden = {
 	always_possible = yes
+	is_shown_in_outliner = no
 }
-
-#Exether
-
-bg_adventuring = {
-	parent_group = bg_urban_facilities
-	infrastructure_usage_per_level = 0.5
-}
-
-bg_cloud_collecting = {
-	parent_group = bg_mining
-	
-	default_building = building_cloud_collectors
-
-	can_use_slaves = yes
-}
-
-bg_wishstone_extraction = {
-	category = rural
-
-	capped_by_resources = yes
-	
-	economy_of_scale = yes
-	
-	discoverable_resource = yes
-	
-	default_building = building_wishstone_excavation
-	
-	lens = mine
-	
-	cash_reserves_max = 25000
-	
-	urbanization = 10
-	infrastructure_usage_per_level = 2
-	
-	should_auto_expand = { 
-		default_auto_expand_rule = yes
-	}
-	
-	can_use_slaves = yes
-
-	economy_of_scale_ai_factor = 2.0
-}
-
-bg_wishstone_extraction_sea = {
-	category = rural
-
-	capped_by_resources = yes
-	
-	economy_of_scale = yes
-	
-	default_building = building_whaling_station
-	
-	lens = fishing
-	
-	cash_reserves_max = 25000
-	
-	urbanization = 5
-	infrastructure_usage_per_level = 1
-	
-	should_auto_expand = { 
-		default_auto_expand_rule = yes
-	}
-	
-	can_use_slaves = yes
-
-	economy_of_scale_ai_factor = 2.0
-}
-

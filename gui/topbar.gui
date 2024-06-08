@@ -13,8 +13,8 @@ types topbar_components
 {
 	### SECONDARY ICONS
 	type topbar_secondary_icons = container {
-		position = { 130 0 }
-		
+		position = { 120 0 }
+
 		flowcontainer = {
 			visible = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 			block "animation" {
@@ -52,18 +52,19 @@ types topbar_components
 				using = dark_area_rounded
 				margin = { 0 -5 }
 				margin_left = 5
+				margin_right = 20
 			}
 			
 			flowcontainer = {
 				name = "tutorial_highlight_gdp"
-				minimumsize = { 90 30 }
-				maximumsize = { 90 30 }
+				minimumsize = { 88 30 }
+				maximumsize = { 88 30 }
 				spacing = 2
 				using = GDP_tooltip_with_graph
 				using = tooltip_below
 
-				onmousehierarchyenter = "[SelectMapModeByKey('mm_gdp')]"
-				onmousehierarchyleave = "[UnforceMapMode]"
+				onmousehierarchyenter = "[SetTempMapModeByKey('mm_gdp')]"
+				onmousehierarchyleave = "[RemoveTempMapMode]"
 				alwaystransparent = no
 				
 				icon = {
@@ -76,17 +77,19 @@ types topbar_components
 					raw_text = "#variable [Country.GetGDP|1*]#!"
 					autoresize = yes
 					align = left|nobaseline
+					elide = right
+					fontsize_min = 12
 				}
 			}
 			
 			flowcontainer = {
-				minimumsize = { 90 30 }
-				maximumsize = { 90 30 }
+				minimumsize = { 84 30 }
+				maximumsize = { 84 30 }
 				spacing = 2
 				using = literacy_tooltip_with_graph
 				using = tooltip_below
-				onmousehierarchyenter = "[SelectMapModeByKey('mm_literacy')]"
-				onmousehierarchyleave = "[UnforceMapMode]"
+				onmousehierarchyenter = "[SetTempMapModeByKey('mm_literacy')]"
+				onmousehierarchyleave = "[RemoveTempMapMode]"
 				alwaystransparent = no
 		
 				icon = {
@@ -99,16 +102,18 @@ types topbar_components
 					raw_text = "#variable [Country.GetIncorporatedLiteracyRate|%1]#!"
 					autoresize = yes
 					align = left|nobaseline
+					elide = right
+					fontsize_min = 12
 				}
 			}
 			flowcontainer = {
-				minimumsize = { 90 30 }
-				maximumsize = { 90 30 }
+				minimumsize = { 68 30 }
+				maximumsize = { 68 30 }
 				spacing = 2
 				using = average_standard_of_living_tooltip_with_graph
 				using = tooltip_below
-				onmousehierarchyenter = "[SelectMapModeByKey('mm_standard_of_living')]"
-				onmousehierarchyleave = "[UnforceMapMode]"
+				onmousehierarchyenter = "[SetTempMapModeByKey('mm_standard_of_living')]"
+				onmousehierarchyleave = "[RemoveTempMapMode]"
 				alwaystransparent = no
 			
 				textbox = {
@@ -124,17 +129,19 @@ types topbar_components
 					text = "[Country.GetFormattedStandardOfLivingAll|v]"
 					autoresize = yes
 					align = left|nobaseline
-					margin_left = 3
+					elide = right
+					fontsize_min = 12
+					margin_right = 3
 				}
 			}
 			flowcontainer = {
-				minimumsize = { 90 30 }
-				maximumsize = { 90 30 }
-				spacing = 2	
+				minimumsize = { 78 30 }
+				maximumsize = { 78 30 }
+				spacing = 2
 				using = population_tooltip_with_graph
 				using = tooltip_below
-				onmousehierarchyenter = "[SelectMapModeByKey('mm_population')]"
-				onmousehierarchyleave = "[UnforceMapMode]"
+				onmousehierarchyenter = "[SetTempMapModeByKey('mm_population')]"
+				onmousehierarchyleave = "[RemoveTempMapMode]"
 				alwaystransparent = no
 		
 				icon = {
@@ -147,16 +154,19 @@ types topbar_components
 					raw_text = "#variable [Country.GetTotalPopulation|D]#!"
 					autoresize = yes
 					align = left|nobaseline
+					elide = right
+					fontsize_min = 12
+					margin_right = 3
 				}
 			}
 			flowcontainer = {
-				minimumsize = { 90 30 }
-				maximumsize = { 90 30 }
-				spacing = 2	
+				minimumsize = { 76 30 }
+				maximumsize = { 76 30 }
+				spacing = 2
 				using = radicals_tooltip_with_graph
 				using = tooltip_below
-				onmousehierarchyenter = "[SelectMapModeByKey('mm_radicals')]"
-				onmousehierarchyleave = "[UnforceMapMode]"
+				onmousehierarchyenter = "[SetTempMapModeByKey('mm_radicals')]"
+				onmousehierarchyleave = "[RemoveTempMapMode]"
 				alpha = "[TransparentIfZero_int64(Country.GetNumRadicals)]"
 				alwaystransparent = no
 		
@@ -170,16 +180,18 @@ types topbar_components
 					raw_text = "#variable [Country.GetNumRadicals|D]#!"
 					autoresize = yes
 					align = left|nobaseline
+					elide = right
+					fontsize_min = 12
 				}
 			}
 			flowcontainer = {
-				minimumsize = { 90 30 }
-				maximumsize = { 90 30 }
-				spacing = 2	
+				minimumsize = { 76 30 }
+				maximumsize = { 76 30 }
+				spacing = 2
 				using = loyalists_tooltip_with_graph
 				using = tooltip_below
-				onmousehierarchyenter = "[SelectMapModeByKey('mm_loyalists')]"
-				onmousehierarchyleave = "[UnforceMapMode]"
+				onmousehierarchyenter = "[SetTempMapModeByKey('mm_loyalists')]"
+				onmousehierarchyleave = "[RemoveTempMapMode]"
 				alpha = "[TransparentIfZero_int64(Country.GetNumLoyalists)]"
 				alwaystransparent = no
 		
@@ -193,6 +205,33 @@ types topbar_components
 					raw_text = "#variable [Country.GetNumLoyalists|D]#!"
 					autoresize = yes
 					align = left|nobaseline
+					elide = right
+					fontsize_min = 12
+				}
+			}
+			flowcontainer = {
+				minimumsize = { 66 30 }
+				maximumsize = { 66 30 }
+				spacing = 2
+				tooltip = "[Country.GetInfamyDesc]"
+				using = tooltip_below
+				onmousehierarchyenter = "[SetTempMapModeByKey('mm_infamy')]"
+				onmousehierarchyleave = "[RemoveTempMapMode]"
+				alpha = "[TransparentIfZero(Country.GetInfamy)]"
+				alwaystransparent = no
+
+				icon = {
+					size = { @secondary_icon_size @secondary_icon_size }
+					texture = "[Country.GetInfamyIconTexture]"
+					parentanchor = vcenter
+				}
+				textbox = {
+					parentanchor = vcenter
+					raw_text = "#variable [Country.GetInfamy|0]#!"
+					autoresize = yes
+					align = left|nobaseline
+					elide = right
+					fontsize_min = 12
 				}
 			}
 		}
@@ -318,6 +357,7 @@ types topbar_components
 									using = tooltip_below
 									onclick = "[InformationPanelBar.OpenPanelTab('politics', 'institutions')]"
 									onclick = "[GetVariableSystem.Clear('show_magic')]"
+									onclick = "[GetVariableSystem.Clear('international_open')]"
 									enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 							
 									icon = {
@@ -361,6 +401,7 @@ types topbar_components
 									using = tooltip_below
 									onclick = "[InformationPanelBar.OpenPanelTab('politics', 'default')]"
 									onclick = "[GetVariableSystem.Clear('show_magic')]"
+									onclick = "[GetVariableSystem.Clear('international_open')]"
 									enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 							
 									icon = {
@@ -404,6 +445,7 @@ types topbar_components
 									using = tooltip_below
 									onclick = "[InformationPanelBar.OpenPanelTab('diplomatic_overview', 'default')]"
 									onclick = "[GetVariableSystem.Clear('show_magic')]"
+									onclick = "[GetVariableSystem.Clear('international_open')]"
 									enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 									
 									icon = {
@@ -446,6 +488,8 @@ types topbar_components
 									using = tooltip_below
 									onclick = "[GetVariableSystem.Toggle('show_magic')]"
 									onclick = "[InformationPanelBar.ClosePanel]"
+									onclick = "[MapListPanelManager.CloseCurrentPanel]"
+									onclick = "[GetVariableSystem.Clear('international_open')]"
 									enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 									
 									icon = {
@@ -492,6 +536,7 @@ types topbar_components
 									using = tooltip_below
 									onclick = "[InformationPanelBar.OpenMarketPanelTab(AccessPlayer.AccessFirstMarket, 'trade_routes')]"
 									onclick = "[GetVariableSystem.Clear('show_magic')]"
+									onclick = "[GetVariableSystem.Clear('international_open')]"
 									enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 									alpha = "[TransparentIfZero(GetPlayer.GetSupplyNetworkStrength)]"
 									
@@ -546,6 +591,7 @@ types topbar_components
 									using = money_tooltip_with_graph
 									onclick = "[InformationPanelBar.OpenPanelTab('budget', 'default')]"
 									onclick = "[GetVariableSystem.Clear('show_magic')]"
+									onclick = "[GetVariableSystem.Clear('international_open')]"
 									enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 								
 									icon = {
@@ -629,8 +675,8 @@ types topbar_components
 				visible = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 				size = { 24 24 }
 				parentanchor = bottom|right
-				position = { -30 -9 }
-				
+				position = { -25 -9 }
+
 				alpha = 0
 				
 				state = {
@@ -701,7 +747,7 @@ types topbar_components
 		position = { -4 78 }
 		
 		onclick = "[MapListPanelManager.ToggleCurrentPanel]"
-		onclick = "[SelectMapModeByKey('mm_default')]"
+		onclick = "[SetTempMapModeByKey('mm_default')]"
 
 		### RANK
 		rank_badge = {

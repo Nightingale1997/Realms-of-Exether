@@ -1,0 +1,68 @@
+﻿current_resolution_concord = {
+	type = country
+	text = {
+		trigger = {
+			has_journal_entry = je_declaration_of_human_rights
+		}
+		localization_key = "je_declaration_of_human_rights"
+	}
+	text = {
+		trigger = {
+			has_journal_entry = je_unclos1
+		}
+		localization_key = "je_unclos1"
+	}
+	text = {
+		trigger = {
+			has_journal_entry = je_consortium_intervention
+		}
+		localization_key = "je_consortium_intervention_gui"
+	}
+	text = {
+		trigger = {
+			has_journal_entry = je_korean_resolution
+		}
+		localization_key = "je_korean_resolution"
+	}
+	text = {
+		trigger = {
+			has_journal_entry = je_decolonization_resolution
+		}
+		localization_key = "je_decolonization_resolution"
+	}
+	text = {
+		localization_key = "NO_CURRENT_RESOLUTION"
+	}
+}
+
+pending_resolution_loc_concord = {
+	type = country
+	text = {
+		trigger = {
+			has_global_variable = pending_resolution_concord
+		}
+		localization_key = "RESOLUTION_YES"
+	}
+	text = {
+		localization_key = "no"
+	}
+}
+
+consortium_voting_balance = {
+	type = country
+	text = {
+		trigger = {
+			supporting_value_total_concord >= opposing_value_total_concord
+		}
+		localization_key = "CONSORTIUM_WINNING_BALANCE"
+	}
+	text = {
+		trigger = {
+			opposing_value_total_concord >= supporting_value_total_concord
+		}
+		localization_key = "CONSORTIUM_LOSING_BALANCE"
+	}
+	text = {
+		localization_key = "CONSORTIUM_NONE_BALANCE"
+	}
+}

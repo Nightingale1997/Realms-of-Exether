@@ -1,0 +1,71 @@
+﻿namespace = depletable
+
+depletable.1 = { 
+	type = country_event
+	placement = ROOT
+	title = "discover ship graveyard using force_resource_discovery & create_building"
+	duration = 8<
+	
+	
+	immediate = {
+		random_scope_state = {
+			limit = {
+			has_potential_resource = bg_ship_graveyard
+			}
+			save_scope_as = ship_graveyard_state
+		}
+	}
+	option = {
+		name = "oh no evil mine"
+		scope:ship_graveyard_state = {
+			force_resource_discovery = bg_ship_graveyard
+			create_building = {
+				building = building_ship_graveyard
+				reserves = 0.65
+				level = 1
+
+				}	
+			}
+		}
+	option = {
+		name = "CANCEL"
+		default_option = yes
+	}	
+	}
+
+    depletable.2 = { #forces depletion of ship graveyard
+	type = country_event
+	title = "Dungeon deletion test using only force_resource_depletion"
+	duration = 8
+	cooldown = { months = normal_modifier_time }
+
+	trigger = {
+		any_scope_state = {
+			any_scope_building = {
+ 				is_building_type = building_ship_graveyard
+			}
+		}
+	}
+	immediate = {
+		random_scope_state = {
+			limit = { 
+				any_scope_building = {
+ 					is_building_type = building_ship_graveyard
+				}
+			}	
+			save_scope_as = ship_graveyard_no_more_state
+		}
+	}
+	option = {
+		name = "oh yes no evil mine"
+		scope:ship_graveyard_no_more_state = {
+		force_resource_depletion = bg_ship_graveyard
+		}
+	}
+
+	option = {
+		name = "CANCEL"
+		default_option = yes
+	}	
+	
+}

@@ -1,0 +1,53 @@
+﻿namespace = newspaper_toggle
+
+# Newspaper toggle event
+newspaper_toggle.1 = {
+
+	dlc = dlc_roe
+	type = country_event
+
+	title = newspaper_toggle.1.t
+	desc = newspaper_toggle.1.d
+	flavor = newspaper_toggle.1.f
+
+	event_image = {
+		video = "unspecific_ruler_speaking_to_people"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 1
+
+	trigger = {
+		# triggered by newspaper toggle decision
+	}
+
+	immediate = {
+	}
+
+	option = { # turning on the newspaper
+		name = newspaper_toggle.1.a
+		trigger = {
+			has_variable = newspaper_events_bool
+		}
+		default_option = yes
+		custom_tooltip = newspaper_toggle_tt
+		set_variable = {
+            name = newspaper_events_bool
+            value = yes
+        }
+	}
+	option = { # turning off the newspaper
+		name = newspaper_toggle.1.b
+		trigger = {
+			has_variable = newspaper_events_bool
+		}
+		custom_tooltip = newspaper_toggle_tt
+		set_variable = {
+            name = newspaper_events_bool
+            value = no
+        }
+	}
+}

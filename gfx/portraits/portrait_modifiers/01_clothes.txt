@@ -210,7 +210,7 @@
                     arabic_clothes_trigger = yes
                     scope:character ?= {
                         culture = {
-                            has_discrimination_trait = vandori_heritage
+                            has_discrimination_trait = planetouched_heritage
                         }
                     }
                 }
@@ -303,7 +303,7 @@
                 add = 90000
                 OR = {
                     scope:character ?= {
-                        has_template = BRZ_virgulino_ferreira
+                        always = no
                     }
                     AND = {
                         scope:character ?= {
@@ -313,8 +313,8 @@
                                     culture = cu:west_thalorian
                                 }
                                 AND = {
-                                    exists = cu:lacustrine_thalorian
-                                    culture = cu:lacustrine_thalorian
+                                    exists = cu:lake_thalorian
+                                    culture = cu:lake_thalorian
                                 }
                             }
                         }
@@ -565,7 +565,7 @@
                 add = 90000
 
                 scope:character ?= {
-                    has_template = BRZ_virgulino_ferreira
+                    always = no
                 }
             }
         }
@@ -598,7 +598,7 @@
                 add = 90000
 
                 scope:character ?= {
-                    has_template = BRZ_getulio_vargas_character_template
+                    always = no
                 }
             }
         }
@@ -750,7 +750,7 @@
                     scope:character ?= {
                         culture = {
                             OR = {
-                                has_discrimination_trait = vandori_heritage
+                                has_discrimination_trait = planetouched_heritage
                             }
                         }
                     }
@@ -1507,14 +1507,16 @@
                     AND = {
                         scope:character ?= {
                             age > 10
-                            exists = c:BRZ
+                           # exists = c:BRZ
+                           always = no
                             home_country = {
                                 OR = {
                                     AND = {
-                                        c:BRZ = this
+                                        always = no
                                         is_subject = no # preventing uniform conflicts if BRZ becomes a subject of another country with puppet uniforms
                                     }
-                                    is_subject_of = c:BRZ
+                                    #is_subject_of = c:BRZ
+                                    always = no
                                 }       
                             }
                         }
@@ -1529,14 +1531,17 @@
                     }
                     AND = {
                         scope:pop ?= {
-                            exists = c:BRZ
+                            #exists = c:BRZ
+                            always = no
                             home_country = {
                                 OR = {
                                     AND = {
-                                        c:BRZ = this
+                                       # c:BRZ = this
+                                       always = no
                                         is_subject = no # preventing uniform conflicts if BRZ becomes a subject of another country with puppet uniforms
                                     }
-                                    is_subject_of = c:BRZ
+                                   # is_subject_of = c:BRZ
+                                   always = no
                                 }       
                             }
                         }
@@ -1569,14 +1574,17 @@
                 add = 10000
 
                 scope:pop ?= {
-                    exists = c:BRZ
+                    #exists = c:BRZ
+                    always = no
                     home_country = {
                         OR = {
                             AND = {
-                                c:BRZ = this
+                                #c:BRZ = this
+                                always = no
                                 is_subject = no # preventing uniform conflicts if BRZ becomes a subject of another country with puppet uniforms
                             }
-                            is_subject_of = c:BRZ
+                            #is_subject_of = c:BRZ
+                            always = no
                         }       
                     }
                 }
@@ -2087,11 +2095,6 @@
                         is_ruler = yes
                         OR = {
                             age <= 10
-                            NOT = {
-                                owner ?= {
-                                    has_variable = KOR_korean_empire_declared
-                                }
-                            }
                         }
                     }
                 }
@@ -2116,7 +2119,7 @@ arabic_clothes = {
                 arabic_clothes_trigger = yes
                 scope:character ?= {
                     culture = {
-                        has_discrimination_trait = vandori_heritage
+                        has_discrimination_trait = planetouched_heritage
                     }
                 }
             }
@@ -2143,7 +2146,7 @@ arabic_coats = {
                     arabic_clothes_pop_trigger = yes
                     scope:pop ?= {
                         culture = {
-                            has_discrimination_trait = vandori_heritage
+                            has_discrimination_trait = planetouched_heritage
                         }
                     }
                 }
@@ -2994,7 +2997,7 @@ chinese_upper_clothes = {
                     AND = {
                         scope:pop ?= {
                             culture = {
-                                has_discrimination_trait = vandori_heritage
+                                has_discrimination_trait = planetouched_heritage
                             }
                         }
                         OR = {

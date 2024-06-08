@@ -32,7 +32,7 @@ TEF = {
 	tier = kingdom
 
 	cultures = { tefereti } 
-	capital = STATE_BRIGHTWATER
+	capital = STATE_MARZEHZARIN
 }
 
 #Seleneth
@@ -68,8 +68,58 @@ THI = {
 	tier = kingdom
 
 	cultures = { thiralian } 
-	capital = STATE_MONSVERDE
+	capital = STATE_AUBERN_FLOW
 }
+
+#Prilyra
+PRI = {
+	color = hsv360{ 73  195  41 }
+
+	country_type = recognized 
+
+	tier = grand_principality
+
+	cultures = { wealder } 
+	capital = STATE_WAYFARE_MEADOWS
+}
+
+#Kracia
+KRC = {
+	color = hsv360{ 20  195  41 }
+
+	country_type = recognized 
+
+	tier = principality
+
+	cultures = { bossardi } 
+	capital = STATE_MISTREACH
+}
+
+#Emparal
+EMP = {
+	color = hsv360{ 33  105  101 }
+
+	country_type = recognized 
+
+	tier = grand_principality
+
+	cultures = { bossardi } 
+	capital = STATE_THE_AMBER_RUN
+}
+
+
+#Darvak
+DAR = {
+	color = hsv360{ 173  255  41 }
+
+	country_type = recognized 
+
+	tier = kingdom
+
+	cultures = { yelfi } 
+	capital = STATE_MOUNT_YELFIS
+}
+
 
 #Lisinia
 LIS = {
@@ -80,7 +130,7 @@ LIS = {
 	tier = principality
 
 	cultures = { azmaraan } 
-	capital = STATE_MONSVERDE
+	capital = STATE_ALMARAQI
 }
 
 #Tisenaria
@@ -133,7 +183,7 @@ ZHR= {
 
 #Verkisirio
 VER= {
-	color = rgb{ 180  50  100 } 
+	color = rgb{ 50  180  100 } 
 
 	country_type = recognized 
 
@@ -163,7 +213,19 @@ DSB = {
 
 	tier = principality
 
-	cultures = { thiralian } 
+	cultures = { astreval } 
+	capital = STATE_DUSHAMBAY
+}
+
+#Astrevon
+AST = {
+	color = rgb{ 80  60  130 }
+
+	country_type = recognized 
+
+	tier = grand_principality
+
+	cultures = { astreval } 
 	capital = STATE_DUSHAMBAY
 }
 
@@ -175,7 +237,7 @@ FAR = {
 
 	tier = principality
 
-	cultures = { dumonian } 
+	cultures = { korkaz } 
 	capital = STATE_BARIKHARGUL
 }
 
@@ -187,8 +249,8 @@ OCR = {
 
 	tier = principality
 
-	cultures = { dumonian } 
-	capital = STATE_KESHARQAN
+	cultures = { korkaz } 
+	capital = STATE_PLAGUES_END
 }
 
 #Redmane
@@ -279,7 +341,7 @@ KHK = {
 KHU = {
 	color = rgb{ 70  20  70 } 
 
-	country_type = monstrous
+	country_type = decentralized
 
 	tier = principality
 
@@ -303,7 +365,7 @@ LIA = {
 ZIL = {
 	color = rgb{ 200  180  20 } 
 
-	country_type = unrecognized
+	country_type = decentralized
 
 	tier = principality
 
@@ -315,7 +377,7 @@ ZIL = {
 KRO = {
 	color = rgb{ 120  60  20 } 
 
-	country_type = unrecognized
+	country_type = decentralized
 
 	tier = principality
 
@@ -363,7 +425,7 @@ PVA = {
 WRA = {
 	color = rgb{ 120  200  180 } 
 
-	country_type = unrecognized
+	country_type = decentralized
 
 	tier = principality
 
@@ -375,7 +437,7 @@ WRA = {
 XAL = {
 	color = rgb{ 120  200  20 } 
 
-	country_type = monstrous
+	country_type = decentralized
 
 	tier = principality
 
@@ -399,7 +461,7 @@ LTA = {
 MLA = {
 	color = rgb{ 60  120  120 } 
 
-	country_type = unrecognized
+	country_type = decentralized
 
 	tier = principality
 
@@ -433,7 +495,8 @@ DMS = {
 
 #Sternenwacht
 STR = {
-	color = rgb{ 30  30  150 } 
+	color = hsv360 { 95 32 74 }
+	
 
 	country_type = recognized
 
@@ -509,7 +572,7 @@ CHR = {
 WTH = {
 	color = hsv360 { 105 72 54 }
 
-	country_type = monstrous
+	country_type = decentralized
 
 	tier = principality
 
@@ -521,7 +584,7 @@ WTH = {
 EAH = {
 	color = hsv360 { 35 72 54 }
 
-	country_type = monstrous
+	country_type = decentralized
 
 	tier = principality
 
@@ -533,7 +596,7 @@ EAH = {
 STH = {
 	color = hsv360 { 75 72 54 }
 
-	country_type = monstrous
+	country_type = decentralized
 
 	tier = principality
 
@@ -556,7 +619,7 @@ SHE = {
 
 #Flussholm
 FLU = {
-	color = hsv360 { 95 32 74 }
+	color = rgb{ 30  30  80 } 
 
 	country_type = recognized
 
@@ -612,7 +675,7 @@ FIS = {
 	tier = principality
 
 	cultures = { stranfolk } 
-	capital = STATE_BLOEIJENDREAM
+	capital = STATE_WETTERWIIDTE
 }
 
 #Bûtenbosk
@@ -661,4 +724,27 @@ NEK = {
 	
 	cultures = { azmaraan qinnaat }
 	capital = STATE_NURADINO
+}
+
+XXP = {
+	color = { 47 30 110 }
+	
+	country_type = recognized
+
+	tier = kingdom
+	
+	cultures = { timari }
+	capital = STATE_KASKADVIVO
+}
+
+#Whialor
+WHX = {
+	color = { 47 60 71 }
+	
+	country_type = recognized
+
+	tier = kingdom
+	
+	cultures = { whiali }
+	capital = STATE_RADIANTAJO
 }

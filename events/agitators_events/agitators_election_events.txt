@@ -6172,13 +6172,9 @@ agitators_election_events.44 = {
 		scope:anti_democratic_party = {
 			add_momentum = momentum_medium
 		}
-		custom_tooltip = {
-			text = agitators_election_events.44.c.tt
-
-			add_modifier = {
-				name = modifier_radical_womens_universal_suffrage_support
-				months = normal_modifier_time
-			}
+		add_modifier = {
+			name = modifier_radical_womens_universal_suffrage_support
+			months = normal_modifier_time
 		}
 		add_radicals = {
 			value = small_radicals

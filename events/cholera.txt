@@ -8,13 +8,6 @@ cholera.1 = {
 	desc = {
 		first_valid = {
 			triggered_desc = {
-				desc = cholera.1.d1
-				trigger = {
-					exists = c:GBR
-					this = c:GBR
-				}
-			}
-			triggered_desc = {
 				desc = cholera.1.d2
 				trigger = {
 					always = yes
@@ -100,28 +93,6 @@ cholera.1 = {
 		add_technology_progress = {
 			progress = 3500
 			technology = pharmaceuticals
-		}
-		scope:cholera_state = {
-			add_modifier = {
-				name = cholera_modifier
-				months = short_modifier_time
-			}
-		}
-	}
-	option = {
-		name = cholera.1.c
-		trigger = {
-			exists = c:GBR
-			THIS = c:GBR
-			ig:ig_intelligentsia = {
-				is_marginal = no
-			}
-		}
-		ig:ig_intelligentsia = {
-			add_modifier = {
-				name = john_snow_knows_nothing
-				months = short_modifier_time
-			}
 		}
 		scope:cholera_state = {
 			add_modifier = {

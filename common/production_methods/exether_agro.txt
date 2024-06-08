@@ -1,0 +1,348 @@
+﻿pm_farms_no_enhancement = {
+
+}
+
+pm_farms_basic_earth_shaping = {
+	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
+	
+	unlocking_laws = {
+		#druid shit idk
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_wishstone_add = 2
+			goods_output_grain_add = 3
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_hedge_wizards_add = 500
+			building_employment_laborers_add = -1000
+		}
+		unscaled = {
+			#building modifiers
+			building_throughput_add = 0.15
+		}
+	}
+}
+
+pm_farms_mass_plant_growth = {  #could also be "hastened growth cycles"
+	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
+	
+	unlocking_laws = {
+		#druid shit idk
+	}
+
+	unlocking_technologies = {
+		improved_fertilizer
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_wishstone_add = 4
+			goods_output_grain_add = 6
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_hedge_wizards_add = 500
+			building_employment_laborers_add = -1000
+		}
+		unscaled = {
+			#building modifiers
+			building_throughput_add = 0.3
+		}
+	}
+}
+
+pm_rice_farms_no_enhancement = {
+
+}
+
+pm_rice_farms_basic_earth_shaping = {
+	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
+	
+	unlocking_laws = {
+		#druid shit idk
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_wishstone_add = 4
+			goods_output_grain_add = 6
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_hedge_wizards_add = 1000
+			building_employment_laborers_add = -2000
+		}
+		unscaled = {
+			#building modifiers
+			building_throughput_add = 0.15
+		}
+	}
+}
+
+pm_rice_farms_mass_plant_growth = {  #could also be "hastened growth cycles"
+	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
+	
+	unlocking_laws = {
+		#druid shit idk
+	}
+
+	unlocking_technologies = {
+		improved_fertilizer
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_wishstone_add = 7
+			goods_output_grain_add = 12
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_hedge_wizards_add = 1000
+			building_employment_laborers_add = -2000
+		}
+		unscaled = {
+			#building modifiers
+			building_throughput_add = 0.3
+		}
+	}
+}
+
+pm_livestock_no_enhancement = {
+
+}
+
+pm_livestock_fertility_rites = {
+	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
+	
+	unlocking_laws = {
+		#druid shit idk
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_wishstone_add = 3
+			goods_output_meat_add = 3
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_hedge_wizards_add = 500
+			building_employment_laborers_add = -1000
+		}
+		unscaled = {
+			#building modifiers
+			building_throughput_add = 0.15
+		}
+	}
+}
+
+pm_livestock_magical_selection = {  #magical selection is a METAL fucking name omg
+	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
+	
+	unlocking_laws = {
+		#druid shit idk
+	}
+
+	unlocking_technologies = {
+		improved_fertilizer
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_wishstone_add = 5
+			goods_output_meat_add = 5
+		}
+
+		level_scaled = {
+			#employment
+			building_employment_hedge_wizards_add = 500
+			building_employment_laborers_add = -1000
+		}
+		unscaled = {
+			#building modifiers
+			building_throughput_add = 0.3
+		}
+	}
+}
+
+pm_seedshooters = {
+	texture = "gfx/interface/icons/production_method_icons/harvesting_tools.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 5 #magic
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_gizmos_add = 3
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -1000
+		}
+	}
+}
+
+pm_seedspinners = {
+	texture = "gfx/interface/icons/production_method_icons/tractors.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 15 #magic
+		}
+	}
+
+	unlocking_technologies = {
+		threshing_machine #maybe later
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods								
+			goods_input_wishstone_add = 4 
+			goods_input_gizmos_add = 3
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -2500
+			building_employment_engineers_add = 500
+		}
+	}
+}
+
+pm_ricerooters = {
+	texture = "gfx/interface/icons/production_method_icons/harvesting_tools.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_gizmos_add = 6
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -2000
+		}
+	}
+}
+
+pm_no_regional = {
+	texture = "gfx/interface/icons/production_method_icons/no_orchards.dds"
+
+}
+
+pm_tree_of_life_orchards_no_harvesting = {
+	texture = "gfx/interface/icons/production_method_icons/no_orchards.dds"
+	state_modifiers = {
+		unscaled = {
+			state_mortality_mult = -0.1
+			state_birth_rate_mult = 0.15
+		}
+	}
+}
+
+pm_tree_of_life_orchards_harvesting = {
+	texture = "gfx/interface/icons/production_method_icons/no_orchards.dds"
+	
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_grain_add = -15
+			goods_output_luxury_potions_add = 8
+		}
+	}
+
+	state_modifiers = {
+		unscaled = {
+			building_group_bg_subsistence_agriculture_output_mult = -0.04
+		}
+	}
+}
+
+pm_honeybee_hives = {
+	texture = "gfx/interface/icons/production_method_icons/potatoes.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_grain_add = -15
+			goods_output_potions_add = 8.5
+			goods_output_sugar_add = 5
+		}
+	}
+}
+
+pm_songberry_groves = {
+	texture = "gfx/interface/icons/production_method_icons/orchards.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_grain_add = -15
+			goods_output_fruit_add = 10
+			goods_output_sugar_add = 3
+			goods_output_services_add = 2 
+		}
+	}
+}
+
+pm_sweetsmoke = {
+	texture = "gfx/interface/icons/production_method_icons/orchards.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_grain_add = -15
+			goods_output_fruit_add = 10
+			goods_output_sugar_add = 3
+			goods_output_tobacco_add = 2
+		}
+	}
+}
+
+pm_i_dont_think_that_was_pipeweed_bro = {
+	texture = "gfx/interface/icons/production_method_icons/orchards.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_grain_add = -15
+			goods_output_tobacco_add = 7
+			goods_output_fabric_add = 8
+		}
+	}
+}
+
+pm_traditional_cooladjective_herb_gardens = {
+	texture = "gfx/interface/icons/production_method_icons/orchards.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_grain_add = -15
+			goods_output_tea_add = 9
+			goods_output_potions_add = 3
+		}
+	}
+}
+
+pm_leechgardens = { #for rice
+	texture = "gfx/interface/icons/production_method_icons/orchards.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_grain_add = -30
+			goods_output_meat_add = 20
+			goods_output_monster_essence_add = 6
+		}
+	}
+}

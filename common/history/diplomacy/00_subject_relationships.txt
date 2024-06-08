@@ -9,8 +9,18 @@
 			type = dominion
 		}
 		create_diplomatic_pact = {
+			country = c:COV
+			type = puppet
+		}
+		create_diplomatic_pact = {
 			country = c:AUM
 			type =  protectorate
+		}
+	}
+	c:EME = {
+		create_diplomatic_pact = {
+			country = c:LAC
+			type = dominion
 		}
 	}
 	c:AUM = {
@@ -20,16 +30,9 @@
 		}
 	}
 	c:RAV = {
-		create_diplomatic_pact = {
-			country = c:THY
-			type = dominion
-		}
+
 	}
 	c:ARR = {
-		create_diplomatic_pact = {
-			country = c:WHI
-			type = puppet
-		}
 		create_diplomatic_pact = {
 			country = c:CLR
 			type = protectorate
@@ -38,6 +41,12 @@
 	c:SMA= {
 		create_diplomatic_pact = {
 			country = c:MID
+			type = personal_union
+		}
+	}
+	c:EMP= {
+		create_diplomatic_pact = {
+			country = c:KRC
 			type = personal_union
 		}
 	}
@@ -63,6 +72,16 @@
 		create_diplomatic_pact = {
 			country = c:ZHU
 			type = tributary
+		}
+	}
+	c:OAZ = {
+		create_diplomatic_pact = {
+			country = c:SNM
+			type = dominion
+		}
+		create_diplomatic_pact = {
+			country = c:ZHR
+			type = puppet
 		}
 	}
 }

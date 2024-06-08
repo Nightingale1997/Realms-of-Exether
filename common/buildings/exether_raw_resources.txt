@@ -19,23 +19,65 @@
 	}
  }
 
- building_wishstone_fields = {
-	building_group = bg_wishstone_extraction
-	texture = "gfx/interface/icons/building_icons/wishstone_fields.dds"
+ building_wishstone_mine = {
+	building_group = bg_wishstone_mining
+	texture = "gfx/interface/icons/building_icons/wishstone_vein.dds"
 	city_type = mine
 	levels_per_mesh = 5
 	required_construction = construction_cost_medium
-
+	terrain_manipulator = mining
 	unlocking_technologies = {
-		pumpjacks
+		shaft_mining
 	}
 	
+
 	production_method_groups = {
-		pmg_base_building_oil_rig
-		pmg_transportation_building_oil_rig
-		pmg_ownership_capital_building_oil_rig
+		pmg_mining_equipment_building_wishstone_mine
+		pmg_explosives_building_wishstone_mine
+		pmg_mines_potions
+		pmg_steam_automation_building_wishstone_mine
+		pmg_train_automation_building_wishstone_mine
+		pmg_ownership_capital_building_wishstone_mine
 	}
+}
+
+building_wishstone_mine_depletable = {
+	building_group = bg_wishstone_mining_depletable
+	texture = "gfx/interface/icons/building_icons/coal_mine.dds"
+	city_type = mine
+	levels_per_mesh = 5
+	required_construction = construction_cost_medium
+	terrain_manipulator = mining
+	unlocking_technologies = {
+		shaft_mining
+	}
+
+	production_method_groups = {
+		pmg_mining_equipment_building_wishstone_mine
+		pmg_explosives_building_wishstone_mine
+		pmg_mines_potions
+		pmg_steam_automation_building_wishstone_mine
+		pmg_train_automation_building_wishstone_mine
+		pmg_ownership_capital_building_wishstone_mine
+	}
+}
+
+building_wishstone_fields = {
+	building_group = bg_wishstone_fields
+	texture = "gfx/interface/icons/building_icons/wishstone_fields.dds"
+	city_type = mine
+	levels_per_mesh = 5
+	buildable = no
+	expandable = no
+	terrain_manipulator = mining
 	
+	unlocking_technologies = {
+		celestial_mapping
+	}
+
+	production_method_groups = {
+		pmg_base_building_wishstone_fields
+	}
 }
 
 building_wishstone_reefs = {
@@ -60,5 +102,193 @@ building_wishstone_reefs = {
 			severity = fail
 			is_sea_adjacent = yes
 		}
+	}
+}
+
+building_blubber_plants = {
+	building_group = bg_heavy_industry
+	texture = "gfx/interface/icons/building_icons/synthetics_plants.dds"
+	city_type = city
+	levels_per_mesh = 5
+	
+	unlocking_technologies = {
+		aniline #this is just what synthetic dye plants were unlocked by
+	}
+	
+	production_method_groups = {
+		pmg_blubber
+		pmg_blubber_military_production
+		pmg_ownership_capital_building_synthetics_plants
+	}
+	
+	required_construction = construction_cost_very_high
+
+	possible = {
+		error_check = {
+			severity = fail
+			this = {
+				owner = { 
+					NOT = { has_law = law_type:law_industry_banned } 
+				}
+			}
+		}
+	}
+}
+
+building_squid_squad = {
+	building_group = bg_squidding
+	texture = "gfx/interface/icons/building_icons/cephalopods.dds"
+	city_type = port
+	required_construction = construction_cost_low
+
+	production_method_groups = {
+		pmg_base_building_squid_squad
+		pmg_monster_hunters_squids
+		pmg_refrigeration_building_fishing_wharf
+		pmg_ownership_capital_building_fishing_wharf
+	}
+		
+	possible = {
+		error_check = {
+			severity = fail
+			is_sea_adjacent = yes
+		}
+	}
+}
+
+building_seasnake_wharf = {
+	building_group = bg_fishing
+	texture = "gfx/interface/icons/building_icons/sea_snakes.dds"
+	city_type = port
+	required_construction = construction_cost_low
+
+	production_method_groups = {
+		pmg_base_building_seasnake_wharf
+		pmg_protective_equipment
+		pmg_refrigeration_building_seasnake_wharf
+		pmg_ownership_capital_building_seasnake_wharf
+	}
+	
+	possible = {
+		error_check = {
+			severity = fail
+			is_sea_adjacent = yes
+		}
+	}
+}
+building_krakeneer_outpost = { 
+	building_group = bg_fishing
+	texture = "gfx/interface/icons/building_icons/fishing_wharf.dds"
+	city_type = port
+	required_construction = construction_cost_low
+
+	production_method_groups = {
+		pmg_base_building_seasnake_wharf
+		pmg_protective_equipment
+		pmg_refrigeration_building_seasnake_wharf
+		pmg_ownership_capital_building_seasnake_wharf
+	}
+	
+	possible = {
+		error_check = {
+			severity = fail
+			is_sea_adjacent = yes
+		}
+	}
+}
+building_medium_sea_monster_outpost = { #sharks?  hydro-hydras??
+	building_group = bg_fishing
+	texture = "gfx/interface/icons/building_icons/fishing_wharf.dds"
+	city_type = port
+	required_construction = construction_cost_low
+
+	production_method_groups = {
+		pmg_base_building_seasnake_wharf
+		pmg_protective_equipment
+		pmg_refrigeration_building_seasnake_wharf
+		pmg_ownership_capital_building_seasnake_wharf
+	}
+	
+	possible = {
+		error_check = {
+			severity = fail
+			is_sea_adjacent = yes
+		}
+	}
+}
+building_leviathan_outpost = {
+	building_group = bg_whaling
+	texture = "gfx/interface/icons/building_icons/whaling_station.dds"
+	city_type = port
+	required_construction = construction_cost_low
+
+	production_method_groups = {
+		pmg_base_building_leviathan_outpost
+		pmg_protective_equipment
+		pmg_refrigeration_building_leviathan_outpost
+		pmg_ownership_capital_building_leviathan_outpost
+	}
+	
+	possible = {
+		error_check = {
+			severity = fail
+			is_sea_adjacent = yes
+		}
+	}
+}
+
+building_fishing_wharf_irontails = {
+	building_group = bg_fishing_irontails
+	texture = "gfx/interface/icons/building_icons/rusttail.dds"
+	city_type = port
+	required_construction = construction_cost_low
+
+	production_method_groups = {
+		pmg_base_building_fishing_wharf
+		pmg_irontails
+		pmg_refrigeration_building_fishing_wharf
+		pmg_ownership_capital_building_fishing_wharf
+	}
+}
+
+building_fishing_wharf_blubberfish = {
+	building_group = bg_fishing_blubberfish
+	texture = "gfx/interface/icons/building_icons/fishing_wharf.dds"
+	city_type = port
+	required_construction = construction_cost_low
+
+	production_method_groups = {
+		pmg_base_building_fishing_wharf
+		pmg_blubberfish
+		pmg_refrigeration_building_fishing_wharf
+		pmg_ownership_capital_building_fishing_wharf
+	}
+}
+
+building_fishing_wharf_goldfish = {
+	building_group = bg_fishing_goldfish
+	texture = "gfx/interface/icons/building_icons/true_goldfish.dds"
+	city_type = port
+	required_construction = construction_cost_low
+
+	production_method_groups = {
+		pmg_base_building_fishing_wharf
+		pmg_goldfish
+		pmg_refrigeration_building_fishing_wharf
+		pmg_ownership_capital_building_fishing_wharf
+	}
+}
+
+building_fishing_wharf_glowfish = {
+	building_group = bg_fishing_glowfish
+	texture = "gfx/interface/icons/building_icons/lanternfish.dds"
+	city_type = port
+	required_construction = construction_cost_low
+
+	production_method_groups = {
+		pmg_base_building_fishing_wharf
+		pmg_glowfish
+		pmg_refrigeration_building_fishing_wharf
+		pmg_ownership_capital_building_fishing_wharf
 	}
 }

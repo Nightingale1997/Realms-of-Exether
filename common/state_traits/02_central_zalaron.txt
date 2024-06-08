@@ -6,3 +6,34 @@
 		state_infrastructure_mult = -0.15
 	}
 }
+
+state_trait_starshimmer_pool = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	
+	modifier = {
+		state_infrastructure_add = 15
+	}	
+}
+
+state_trait_chin_desert = {
+	icon = "gfx/interface/icons/state_trait_icons/dry_climate.dds"
+	
+	modifier = {
+        building_group_bg_ranching_throughput_add = -0.1
+		building_group_bg_agriculture_throughput_add = -0.2
+		building_group_bg_plantations_throughput_add = -0.2
+		state_construction_mult = -0.25
+		state_infrastructure_mult = -0.25
+	}
+}
+
+state_trait_inland_state = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	
+	modifier = {
+		state_building_port_max_level_add = -99
+		state_building_shipyards_max_level_add = -99
+		state_building_naval_base_max_level_add = -99
+		state_building_military_shipyards_max_level_add = -99
+	}	
+}

@@ -1,0 +1,343 @@
+﻿#############################################################################
+################################ UN APPLICATIONS ############################
+#############################################################################
+#### varcheck_consortium
+consortium_resolution_visible_sidepanel = {
+	is_shown = {
+		has_variable = consortium_member
+		has_global_variable = pending_resolution_consortium
+	}
+}
+consortium_approve_membership_varcheck_consortium = {
+	is_shown = {
+		has_variable = consortium_member
+		scope:applicant_country_scope = {
+			not = {
+				is_target_in_variable_list = {
+					name = consortium_supporting
+					target = ROOT
+				}
+			}
+		}
+	}
+}
+consortium_abstain_membership_varcheck_consortium = {
+	is_shown = {
+		has_variable = consortium_member
+		scope:applicant_country_scope = {
+			not = {
+				is_target_in_variable_list = {
+					name = consortium_abstaining
+					target = ROOT
+				}
+			}
+		}
+	}
+}
+consortium_reject_membership_varcheck_consortium = {
+	is_shown = {
+		has_variable = consortium_member
+		scope:applicant_country_scope = {
+			not = {
+				is_target_in_variable_list = {
+					name = consortium_rejecting
+					target = ROOT
+				}
+			}
+		}
+	}
+}
+
+##### Effects
+consortium_approve_membership = {
+	effect = {
+		scope:applicant_country_scope = {
+			add_to_variable_list = {
+				name = consortium_supporting
+				target = ROOT
+			}
+			change_variable = {
+				name = consortium_supporting_list_size
+				add = 1
+			}
+			if = {
+				limit = {
+					is_target_in_variable_list = {
+						name = consortium_rejecting
+						target = ROOT
+					}
+				}
+				change_variable = {
+					name = consortium_supporting_list_size
+					add = 1
+				}
+			}
+			remove_list_variable = {
+				name = consortium_rejecting
+				target = ROOT
+			}
+			remove_list_variable = {
+				name = consortium_abstaining
+				target = ROOT
+			}
+		}
+	}
+}
+consortium_abstain_membership = {
+	effect = {
+		scope:applicant_country_scope = {
+			add_to_variable_list = {
+				name = consortium_abstaining
+				target = ROOT
+			}
+			if = {
+				limit = {
+					is_target_in_variable_list = {
+						name = consortium_supporting
+						target = ROOT
+					}
+				}
+				change_variable = {
+					name = consortium_supporting_list_size
+					subtract = 1
+				}
+			}
+			if = {
+				limit = {
+					is_target_in_variable_list = {
+						name = consortium_rejecting
+						target = ROOT
+					}
+				}
+				change_variable = {
+					name = consortium_supporting_list_size
+					add = 1
+				}
+			}
+			remove_list_variable = {
+				name = consortium_supporting
+				target = ROOT
+			}
+			remove_list_variable = {
+				name = consortium_rejecting
+				target = ROOT
+			}
+		}
+	}
+}
+consortium_reject_membership = {
+	effect = {
+		scope:applicant_country_scope = {
+			add_to_variable_list = {
+				name = consortium_rejecting
+				target = ROOT
+			}
+			change_variable = {
+				name = consortium_supporting_list_size
+				subtract = 1
+			}
+			if = {
+				limit = {
+					is_target_in_variable_list = {
+						name = consortium_supporting	
+						target = ROOT
+					}
+				}
+				change_variable = {
+					name = consortium_supporting_list_size
+					subtract = 1
+				}
+			}
+			remove_list_variable = {
+				name = consortium_supporting
+				target = ROOT
+			}
+			remove_list_variable = {
+				name = consortium_abstaining
+				target = ROOT
+			}
+		}
+	}
+}
+
+##########################################
+showmodifier_declaration_human_rights = {
+	effect = {
+		add_modifier = declaration_of_human_rights
+	}
+}
+
+add_opposing_consortium = {
+	effect = {
+		set_variable = is_opposing_consortium
+		remove_variable = is_supporting_consortium
+	}
+}
+
+add_supporting_consortium = {
+	effect = {
+		set_variable = is_supporting_consortium
+		remove_variable = is_opposing_consortium
+	}
+}
+
+add_abstaining_consortium = {
+	effect = {
+		remove_variable = is_supporting_consortium
+		remove_variable = is_opposing_consortium
+	}
+}
+
+add_veto_consortium = {
+	effect = {
+		set_global_variable = {
+			name = vetoed_consortium
+			value = 0
+		}
+	}
+}
+
+#############################################################################
+################################ GENERIC GUI ################################
+#############################################################################
+############# Declaration of Human Rights
+# varcheck_consortium
+declaration_of_human_rights_varcheck_consortium = {
+	is_shown = {
+		NOR = {
+			has_global_variable = pending_resolution_consortium
+			has_global_variable = declaration_of_human_rightscomplete
+			has_global_variable = declaration_of_human_rightsfail
+		}
+	}
+}
+# Execute
+consortium_activate_declaration_of_human_rights_je = {
+	effect = {
+		every_country = {
+			if = {
+				limit = {
+					or = {
+						has_variable = consortium_major_member
+						has_variable = consortium_member
+					}
+				}
+				add_journal_entry = {
+					type = je_declaration_of_human_rights
+				}
+			}
+		}
+		set_global_variable = pending_resolution_consortium
+		set_global_variable = {
+			name = pending_resolution_progress_consortium
+			value = 0
+		}
+	}
+}
+############# Decolonization Resolution
+# varcheck_consortium
+decolonization_resolution_varcheck_consortium = {
+	is_shown = {
+		NOR = {
+			has_global_variable = pending_resolution_consortium
+			has_global_variable = decolonization_resolutioncomplete
+			has_global_variable = decolonization_resolutionfail
+		}
+	}
+}
+# Execute
+consortium_activate_consortium_decolonization_je = {
+	effect = {
+		every_country = {
+			if = {
+				limit = {
+					or = {
+						has_variable = consortium_major_member
+						has_variable = consortium_member
+					}
+				}
+				add_journal_entry = {
+					type = je_decolonization_resolution
+				}
+			}
+		}
+		set_global_variable = pending_resolution_consortium
+		set_global_variable = {
+			name = pending_resolution_progress_consortium
+			value = 0
+		}
+	}
+}
+############# UNCLOS I
+# varcheck_consortium
+consortiumclos1_varcheck_consortium = {
+	is_shown = {
+		NOR = {
+			has_global_variable = pending_resolution_consortium
+			has_global_variable = consortiumclos1complete
+			has_global_variable = consortiumclos1fail
+		}
+	}
+}
+# Execute
+consortium_activate_consortiumclos1_je = {
+	effect = {
+		every_country = {
+			if = {
+				limit = {
+					or = {
+						has_variable = consortium_major_member
+						has_variable = consortium_member
+					}
+				}
+				add_journal_entry = {
+					type = je_consortiumclos1
+				}
+			}
+		}
+		set_global_variable = pending_resolution_consortium
+		set_global_variable = {
+			name = pending_resolution_progress_consortium
+			value = 0
+		}
+	}
+}
+############# Resolution on Korea
+# varcheck_consortium
+korean_resolution_varcheck_consortium = {
+	is_shown = {
+		and = {
+			exists = c:STK
+			exists = c:NRK
+		}
+		NOR = {
+			has_global_variable = pending_resolution_consortium
+			has_global_variable = korean_resolution_complete
+			has_global_variable = korean_resolution_fail
+			exists = c:KOR
+		}
+	}
+}
+# Execute
+consortium_activate_korean_resolution_je = {
+	effect = {
+		every_country = {
+			if = {
+				limit = {
+					or = {
+						has_variable = consortium_major_member
+						has_variable = consortium_member
+					}
+				}
+				add_journal_entry = {
+					type = je_korean_resolution
+				}
+			}
+		}
+		set_global_variable = pending_resolution_consortium
+		set_global_variable = {
+			name = pending_resolution_progress_consortium
+			value = 0
+		}
+	}
+}

@@ -113,21 +113,21 @@ coa_secessionist_or_revolutionary_trigger = {
 ### scope is COUNTRY DEFINITION ###
 
 coa_def_independent_trigger = {
-	exists = scope:target
-	scope:target = { is_subject = no }
+	exists = scope:actor
+	scope:actor ?= { is_subject = no }
 }
 
 coa_def_subject_trigger = {
 	exists = scope:actor
-	scope:actor = { is_subject = yes }
+	scope:actor ?= { is_subject = yes }
 }
 
 coa_def_lesser_subject_trigger = {
 	OR = {
 		NOT = { exists = scope:target }
 		AND = {
-			exists = scope:target
-			scope:target = { 
+			exists = scope:actor
+			scope:actor ?= { 
 				OR = {
 					is_subject_type = subject_type_puppet
 					is_subject_type = subject_type_vassal
@@ -141,77 +141,82 @@ coa_def_lesser_subject_trigger = {
 
 coa_def_monarchy_flag_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_monarchy_trigger = yes }
+	scope:actor ?= { coa_monarchy_trigger = yes }
 }
 
 coa_def_absolute_monarchy_flag_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_absolute_monarchy_trigger = yes }
+	scope:actor ?= { coa_absolute_monarchy_trigger = yes }
 }
 
 coa_def_undemocratic_monarchy_flag_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_undemocratic_monarchy_trigger = yes }
+	scope:actor ?= { coa_undemocratic_monarchy_trigger = yes }
 }
 
 coa_def_republic_flag_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_republic_trigger = yes }
+	scope:actor ?= { coa_republic_trigger = yes }
 }
 
 coa_def_theocracy_flag_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_theocracy_trigger = yes }
+	scope:actor ?= { coa_theocracy_trigger = yes }
 }
 
 coa_def_multicultural_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_multicultural_trigger = yes }
+	scope:actor ?= { coa_multicultural_trigger = yes }
 }
 
 coa_def_autocracy_flag_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_autocracy_trigger = yes }
+	scope:actor ?= { coa_autocracy_trigger = yes }
 }
 
 coa_def_communist_flag_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_communist_trigger = yes }
+	scope:actor ?= { coa_communist_trigger = yes }
 }
 
 coa_def_anarchy_flag_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_anarchy_trigger = yes }
+	scope:actor ?= { coa_anarchy_trigger = yes }
 }
 
 coa_def_dictatorship_flag_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_dictatorship_trigger = yes }
+	scope:actor ?= { coa_dictatorship_trigger = yes }
 }
 
 coa_def_oligarchy_flag_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_oligarchy_trigger = yes }
+	scope:actor ?= { coa_oligarchy_trigger = yes }
 }
 
 coa_def_state_religion_flag_trigger = {
 	exists = scope:actor
-	scope:actor = { has_law = law_type:law_state_religion }
+	scope:actor ?= { has_law = law_type:law_state_religion }
 }
 
 coa_def_egalitarian_flag_trigger = {
 	exists = scope:actor
-	scope:actor = { has_law = law_type:law_multicultural }
+	scope:actor ?= { has_law = law_type:law_multicultural }
 }
 
 coa_def_military_junta_flag_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_military_trigger = yes }
+	scope:actor ?= { coa_military_trigger = yes }
 }
 
 coa_def_fascist_flag_trigger = {
 	exists = scope:actor
-	scope:actor = { coa_fascist_trigger = yes }
+	scope:actor ?= { coa_fascist_trigger = yes }
+}
+
+coa_def_nihilist_flag_trigger = {
+	exists = scope:actor
+	scope:actor ?= { coa_nihilist_trigger = yes }
 }
 
 # Overlord
@@ -219,10 +224,10 @@ coa_def_fascist_flag_trigger = {
 coa_def_ensign_trigger = {
 	NOT = { has_game_rule = no_subject_flags }
 	exists = scope:overlord
-	scope:overlord = {
+	scope:overlord ?= {
 		OR = {
 			this = scope:custom_overlord
-			any_overlord_or_above = {
+			any_overlord_or_above ?= {
 				this = scope:custom_overlord
 			} 
 		}
@@ -231,20 +236,20 @@ coa_def_ensign_trigger = {
 
 coa_def_war_trigger = {
 	exists = scope:actor
-	scope:actor = {
+	scope:actor ?= {
 		is_at_war = yes
 	}
 }
 coa_def_secessionist_or_revolutionary_trigger = {
 	exists = scope:target
-	scope:target = {
+	scope:target ?= {
 		coa_secessionist_or_revolutionary_trigger = yes
 	}
 }
 
 coa_def_secessionist_country_trigger = {
 	exists = scope:target
-	scope:target = {
+	scope:target ?= {
 		is_secessionist = yes
 	}
 }

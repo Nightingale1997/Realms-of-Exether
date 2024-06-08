@@ -19,6 +19,7 @@ small_arms = {
 	cost = 60
 	category = military
 	
+	obsession_chance = 0.5
 	prestige_factor = 5
 }
 
@@ -47,6 +48,7 @@ aeroplanes = {
 	cost = 80
 	category = military
 	
+	obsession_chance = 0.5
 	prestige_factor = 10
 	traded_quantity = 3
 	convoy_cost_multiplier = 2.0
@@ -222,6 +224,7 @@ clippers = {
 	cost = 60
 	category = industrial
 	
+	obsession_chance = 0.5
 	prestige_factor = 5
 	traded_quantity = 3.5
 	convoy_cost_multiplier = 0.25
@@ -232,6 +235,7 @@ steamers = {
 	cost = 70
 	category = industrial
 	
+	obsession_chance = 0.5
 	prestige_factor = 5
 	traded_quantity = 3.5
 	convoy_cost_multiplier = 0.25
@@ -261,13 +265,6 @@ sulfur = {
 	prestige_factor = 5
 }
 
-cloudsilver = {
-	texture = "gfx/interface/icons/goods_icons/cloudsilver.dds"
-	cost = 50
-	category = industrial
-	
-	prestige_factor = 5
-}
 
 coal = {
 	texture = "gfx/interface/icons/goods_icons/coal.dds"
@@ -346,6 +343,16 @@ gizmos = {
 	convoy_cost_multiplier = 1.5
 }
 
+thaumacore = {
+	texture = "gfx/interface/icons/goods_icons/gizmo.dds" #Replace icon later
+	cost = 100
+	category = industrial
+	
+	prestige_factor = 10
+	traded_quantity = 4
+}
+
+
 steel = {
 	texture = "gfx/interface/icons/goods_icons/steel.dds"
 	cost = 50
@@ -388,16 +395,6 @@ explosives = {
 	prestige_factor = 10
 	
 	traded_quantity = 4
-	convoy_cost_multiplier = 1.5
-}
-
-wishstone = {
-	texture = "gfx/interface/icons/goods_icons/wishstone.dds"
-	cost = 50
-	category = industrial
-	
-	prestige_factor = 10
-	
 	convoy_cost_multiplier = 1.5
 }
 
@@ -525,6 +522,8 @@ automobiles = {
 	obsession_chance = 1.0
 	prestige_factor = 10
 	traded_quantity = 4
+	
+	pop_consumption_can_add_infrastructure = yes
 }
 
 telephones = {
@@ -585,6 +584,21 @@ fine_art = {
 	traded_quantity = 2
 }
 
+##############
+#  Exether   #
+##############
+
+entertainment = {
+	texture = "gfx/interface/icons/goods_icons/entertainment.dds"
+	cost = 30
+	category = staple
+	local = yes
+	
+	prestige_factor = 3
+	
+	consumption_tax_cost = 200
+}
+
 trinkets = {
 	texture = "gfx/interface/icons/goods_icons/trinkets.dds"
 	cost = 200
@@ -596,10 +610,67 @@ trinkets = {
 	traded_quantity = 2
 }
 
+luxury_potions = {
+	texture = "gfx/interface/icons/goods_icons/luxury_potions.dds"
+	cost = 85  #debatable
+	category = luxury
+	
+	obsession_chance = 1.8 #hmmm
+	prestige_factor = 15
+}
+
+
 cloudsilver = {
 	texture = "gfx/interface/icons/goods_icons/cloudsilver.dds"
+	cost = 45
+	category = industrial
+	
+	prestige_factor = 5
+}
+
+blubber = {
+	texture = "gfx/interface/icons/goods_icons/blubber.dds"
 	cost = 40
 	category = industrial
 	
 	prestige_factor = 5
+	
+	consumption_tax_cost = 200
+}	
+
+wishstone = {
+	texture = "gfx/interface/icons/goods_icons/wishstone.dds"
+	cost = 50
+	category = industrial
+	
+	prestige_factor = 10
+	
+	convoy_cost_multiplier = 1.5
+}
+
+monster_essence = {
+	texture = "gfx/interface/icons/goods_icons/monster_essence.dds"
+	cost = 40
+	category = industrial #WIP?
+	
+	prestige_factor = 5
+}
+
+potions = {
+	texture = "gfx/interface/icons/goods_icons/potions.dds"
+	cost = 55 #50?  60?
+	category = industrial #WIP?
+	
+	prestige_factor = 10
+}
+
+ectoplasm = {
+	texture = "gfx/interface/icons/goods_icons/ectoplasm.dds"
+	cost = 50
+	category = industrial
+	
+	prestige_factor = 10
+	
+	traded_quantity = 4
+	convoy_cost_multiplier = 1.5
 }

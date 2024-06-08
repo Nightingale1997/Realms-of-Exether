@@ -13,6 +13,17 @@ state_is_in_settler_coast = {
 	}
 }
 
+state_is_in_noricum = {
+	OR = {
+		region = sr:region_gulfwatch
+		region = sr:region_southwestern_noricum
+		region = sr:region_dumonian_heartlands
+		region = sr:region_central_noricum
+		region = sr:region_worlds_end
+		region = sr:region_yanger_steppe
+	}
+}
+
 state_is_in_locari = {
 	OR = {
 		region = sr:region_east_mindrend_sands	
@@ -83,6 +94,8 @@ state_is_in_kharaa_ur = {
 	}
 }
 
+
+
 state_is_in_yulug = {
 	OR = {
 		region = sr:region_valley_of_golden_fields
@@ -126,6 +139,57 @@ state_is_in_gavkhan = {
 		region = sr:region_tokalivar
 	}
 }
+
+##compat triggers
+
+state_is_in_china = { #these seemingly useless triggers will help us play better with mods like BPM
+	OR = {
+		region = sr:region_valley_of_golden_fields
+		region = sr:region_bataar_kharaal
+		region = sr:region_boroo_jirta
+		region = sr:region_muru
+		# not counting manchuria here deliberately
+	}
+}
+
+state_is_in_east_asia = { #these seemingly useless triggers will help us play better with mods like BPM
+	OR = {
+		region = sr:region_hirugolaima
+		region = sr:region_ongoryu
+		region = sr:region_yamkhanato
+		region = sr:region_bataar_kharaal
+		region = sr:region_boroo_jirta
+		region = sr:region_muru
+		region = sr:region_valley_of_golden_fields
+		region = sr:region_khantar
+		region = sr:region_strait_of_aranmendi
+	}
+}
+
+state_is_in_europe = { #I did my best
+	OR = {
+		region = sr:region_gulfwatch
+		region = sr:region_southwestern_noricum
+		region = sr:region_dumonian_heartlands
+		region = sr:region_central_noricum
+		region = sr:region_worlds_end
+		region = sr:region_achon
+		region = sr:region_arrador
+		region = sr:region_moorweald
+		region = sr:region_lake_bossard
+		region = sr:region_ceraun
+		region = sr:region_lagoon_coast
+		region = sr:region_keystone_peninsula
+		region = sr:region_ravik
+		region = sr:region_hasals_mirror
+	}
+}
+
+
+state_is_in_africa = {
+	state_is_in_locari = yes
+}
+
 ### Country geography triggers
 # exists = capital checks are necessary only because we may test these triggers and scope switch to capitals before states are initialized properly
 
@@ -147,6 +211,13 @@ country_is_in_northwestern_zalaron = {
 	exists = capital
 	capital = {
 		state_is_in_northwestern_zalaron = yes
+	}
+}
+
+country_is_in_noricum= {
+	exists = capital
+	capital = {
+		state_is_in_noricum = yes
 	}
 }
 
@@ -196,6 +267,35 @@ country_is_in_citrus_currents = {
 	exists = capital
 	capital = {
 		state_is_in_citrus_currents = yes
+	}
+}
+
+## almost vanilla
+country_is_in_europe= {
+	exists = capital
+	capital = {
+		state_is_in_europe = yes
+	}
+}
+
+country_is_in_africa= {
+	exists = capital
+	capital = {
+		state_is_in_locari = yes
+	}
+}
+
+country_is_in_east_asia = {
+	exists = capital
+	capital = {
+		state_is_in_east_asia = yes
+	}
+}
+
+country_is_in_china = {
+	exists = capital
+	capital = {
+		state_is_in_china = yes
 	}
 }
 
@@ -303,8 +403,656 @@ is_arid_region = {
 }
 
 state_has_mountain = {
-	OR = {
-		#has_state_trait = state_trait_rhine_river
-		always = yes
+		OR = {
+			has_state_trait = state_trait_crescent_range
+			has_state_trait = state_trait_sandwall_mountains
+			has_state_trait = state_trait_stormguard_mountains
+			has_state_trait = state_trait_mount_grim
+			has_state_trait = state_trait_mount_yelfis
+			has_state_trait = state_trait_whistling_summits
+			has_state_trait = state_trait_mukhalis_fangs
+			has_state_trait = state_trait_colicier_mountains
+			has_state_trait = state_trait_mount_surriden
+			has_state_trait = state_trait_vitics_roosts
+			has_state_trait = state_trait_misty_peaks
+			has_state_trait = state_trait_mammoth_cliffs
+			has_state_trait = state_trait_birstall_range
+			has_state_trait = state_trait_wardon_peaks
+			has_state_trait = state_trait_westerly_mountains
+			has_state_trait = state_trait_sulrans_spine
+			has_state_trait = state_trait_scarlet_ridge
+			has_state_trait = state_trait_ambalt_rise
+			has_state_trait = state_trait_mount_gladraine
+			has_state_trait = state_trait_caraly_peak
+			has_state_trait = state_trait_stokeford_heights
+			has_state_trait = state_trait_wynsard_range
+			has_state_trait = state_trait_wakaman_hill
+			has_state_trait = state_trait_ferstone_ridge
+			has_state_trait = state_trait_terforte_slopes
+			has_state_trait = state_trait_baxfil_ridge
+			has_state_trait = state_trait_asrar_peaks
+			has_state_trait = state_trait_asrar_peaks
+			has_state_trait = state_trait_twilan_summit
+			has_state_trait = state_trait_dehistun_mountains
+			has_state_trait = state_trait_mirazara_mountains
+			has_state_trait = state_trait_crescent_range
+			has_state_trait = state_trait_caslinet_highlands
+			has_state_trait = state_trait_valmis_pinnacle
+			has_state_trait = state_trait_faljour_hill
+		}
+	
+
+}
+
+no_beaches = {  
+#⠀⣞⢽⢪⢣⢣⢣⢫⡺⡵⣝⡮⣗⢷⢽⢽⢽⣮⡷⡽⣜⣜⢮⢺⣜⢷⢽⢝⡽⣝
+#⠸⡸⠜⠕⠕⠁⢁⢇⢏⢽⢺⣪⡳⡝⣎⣏⢯⢞⡿⣟⣷⣳⢯⡷⣽⢽⢯⣳⣫⠇
+#⠀⠀⢀⢀⢄⢬⢪⡪⡎⣆⡈⠚⠜⠕⠇⠗⠝⢕⢯⢫⣞⣯⣿⣻⡽⣏⢗⣗⠏⠀
+#⠀⠪⡪⡪⣪⢪⢺⢸⢢⢓⢆⢤⢀⠀⠀⠀⠀⠈⢊⢞⡾⣿⡯⣏⢮⠷⠁⠀⠀
+#⠀⠀⠀⠈⠊⠆⡃⠕⢕⢇⢇⢇⢇⢇⢏⢎⢎⢆⢄⠀⢑⣽⣿⢝⠲⠉⠀⠀⠀⠀
+#⠀⠀⠀⠀⠀⡿⠂⠠⠀⡇⢇⠕⢈⣀⠀⠁⠡⠣⡣⡫⣂⣿⠯⢪⠰⠂⠀⠀⠀⠀
+#⠀⠀⠀⠀⡦⡙⡂⢀⢤⢣⠣⡈⣾⡃⠠⠄⠀⡄⢱⣌⣶⢏⢊⠂⠀⠀⠀⠀⠀⠀
+#⠀⠀⠀⠀⢝⡲⣜⡮⡏⢎⢌⢂⠙⠢⠐⢀⢘⢵⣽⣿⡿⠁⠁⠀⠀⠀⠀⠀⠀⠀
+#⠀⠀⠀⠀⠨⣺⡺⡕⡕⡱⡑⡆⡕⡅⡕⡜⡼⢽⡻⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+#⠀⠀⠀⠀⣼⣳⣫⣾⣵⣗⡵⡱⡡⢣⢑⢕⢜⢕⡝⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+#⠀⠀⠀⣴⣿⣾⣿⣿⣿⡿⡽⡑⢌⠪⡢⡣⣣⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+#⠀⠀⠀⡟⡾⣿⢿⢿⢵⣽⣾⣼⣘⢸⢸⣞⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+#⠀⠀⠀⠀⠁⠇⠡⠩⡫⢿⣝⡻⡮⣒⢽⠋⠀⠀
+is_coastal = yes
+
+exether_is_coastal = no
+}
+
+exether_is_coastal = {
+	custom_tooltip = {
+		text = 	exether_is_coastal_tt
+		is_coastal = yes
+		OR = { 
+			state_region = s:STATE_BAIDAL
+			state_region = s:STATE_BATSI
+			state_region = s:STATE_TOSON
+			state_region = s:STATE_SERGER
+			state_region = s:STATE_KHONGO
+			state_region = s:STATE_GURVA
+			state_region = s:STATE_BOLDOO
+			state_region = s:STATE_OROGOO
+			state_region = s:STATE_DALAI
+			state_region = s:STATE_GARBOL
+			state_region = s:STATE_KHAIRI
+			state_region = s:STATE_CHADBA
+			state_region = s:STATE_KHANGAWA
+			state_region = s:STATE_ORONAKA
+			state_region = s:STATE_BUYANT
+			state_region = s:STATE_KURULANDU
+			state_region = s:STATE_YAMAKHANJU
+			state_region = s:STATE_NISHIGUCHI
+			state_region = s:STATE_FUJIMORIYAMA
+			state_region = s:STATE_KIYOMATSUE
+			state_region = s:STATE_JARGALYO
+			state_region = s:STATE_KHASUNEN
+			state_region = s:STATE_TSUKHANJUKU
+			state_region = s:STATE_HARUGAWASAI
+			state_region = s:STATE_MONGOROKKU
+			state_region = s:STATE_KAMISHINBA
+			state_region = s:STATE_KAMITAI
+			state_region = s:STATE_MONGOGAWA
+			state_region = s:STATE_HAYAKHAMURA
+			state_region = s:STATE_KHULEKI
+			state_region = s:STATE_TSURUKHAN
+			state_region = s:STATE_HOKUDAIHAN
+			state_region = s:STATE_HIRAMACHI
+			state_region = s:STATE_ERDENEA
+			state_region = s:STATE_URRATEGI
+			state_region = s:STATE_ERKBALB
+			state_region = s:STATE_GOLMOK
+			state_region = s:STATE_KRAGKYL
+			state_region = s:STATE_KYRTHOR
+			state_region = s:STATE_ZURKYL
+			state_region = s:STATE_GROMKYL
+			state_region = s:STATE_KYRTHAL
+			state_region = s:STATE_KAZTHOK
+			state_region = s:STATE_BURZOK
+			state_region = s:STATE_DALSHTOK
+			state_region = s:STATE_RAZOK
+			state_region = s:STATE_BALDBAN #TAKE YOUR FINASTERIDE
+			state_region = s:STATE_KYRGRUK
+			state_region = s:STATE_KRAKYR
+			state_region = s:STATE_GNAKYR
+			state_region = s:STATE_DORAZ
+			state_region = s:STATE_GROMMOK
+			state_region = s:STATE_KAZTHYR
+			state_region = s:STATE_DROKYN
+			state_region = s:STATE_KYRGRIM
+			state_region = s:STATE_URTHOR
+			state_region = s:STATE_THARKYR
+			state_region = s:STATE_GULTHYR
+			state_region = s:STATE_BAIZOR
+			state_region = s:STATE_ALBAIN
+			state_region = s:STATE_MUGARA
+			state_region = s:STATE_NISHIGARRA
+			state_region = s:STATE_PLACEHOLDER_EMPTY_1
+			state_region = s:STATE_PLACEHOLDER_EMPTY_2
+			state_region = s:STATE_PLACEHOLDER_EMPTY_4
+			state_region = s:STATE_PLACEHOLDER_EMPTY_6
+			state_region = s:STATE_PLACEHOLDER_EMPTY_7
+			state_region = s:STATE_PLACEHOLDER_EMPTY_8
+			state_region = s:STATE_PLACEHOLDER_EMPTY_9
+			state_region = s:STATE_IBAIA
+			state_region = s:STATE_ARGI
+			state_region = s:STATE_HIRUMENDI
+			state_region = s:STATE_MENDARI
+			state_region = s:STATE_OLARRA
+			state_region = s:STATE_BAIDAL
+			state_region = s:STATE_BATOHAIN
+			state_region = s:STATE_KHANBA
+			state_region = s:STATE_KASKOHARI
+			state_region = s:STATE_ARATZIRI
+			state_region = s:STATE_IHARKHAN
+			state_region = s:STATE_OLABEGI
+			state_region = s:STATE_OLABEGI_2
+			state_region = s:STATE_EGUZKI
+			state_region = s:STATE_ASTINDU
+			state_region = s:STATE_ITXAROPEN
+			state_region = s:STATE_GIPUZK
+			state_region = s:STATE_NABARR
+			state_region = s:STATE_ARROLA
+			state_region = s:STATE_TIHAR
+			state_region = s:STATE_TXINPART
+			state_region = s:STATE_OSTATU
+			state_region = s:STATE_LARRIN
+			state_region = s:STATE_HADRUMEA
+			state_region = s:STATE_BAIDAL
+			state_region = s:STATE_BATSI
+			state_region = s:STATE_KOILARRA
+			state_region = s:STATE_SUTAN
+			state_region = s:STATE_MALKART
+			state_region = s:STATE_XILABA
+			state_region = s:STATE_ARGIA
+			state_region = s:STATE_ZUHAITZ
+			state_region = s:STATE_KABI
+			state_region = s:STATE_UHINAK
+			state_region = s:STATE_IRAURBE
+			state_region = s:STATE_ZUBEROA
+			state_region = s:STATE_GARRITXO
+			state_region = s:STATE_UDABERRI
+			state_region = s:STATE_MIZPIRIKA
+			state_region = s:STATE_URRAZPI
+			state_region = s:STATE_ARTEAGA
+			state_region = s:STATE_KASKOGARA
+			state_region = s:STATE_KHIARHI
+			state_region = s:STATE_ONDARA
+			state_region = s:STATE_KHANOR
+			state_region = s:STATE_ERDIGARA
+			state_region = s:STATE_GORRIMENDIA
+			state_region = s:STATE_ARRIGORRI
+			state_region = s:STATE_TXORI
+			state_region = s:STATE_ERDI
+			state_region = s:STATE_AROA
+			state_region = s:STATE_ZIENTZI
+			state_region = s:STATE_LUMINEVRA
+			state_region = s:STATE_SYLVARIN
+			state_region = s:STATE_AIGAI
+			state_region = s:STATE_SAMIEL
+			state_region = s:STATE_SILENTWISP
+			state_region = s:STATE_RAHKIS
+			state_region = s:STATE_AIRU
+			state_region = s:STATE_ELDORIA
+			state_region = s:STATE_ELVERWISP
+			state_region = s:STATE_RAVGA
+			state_region = s:STATE_ELVERLEAF
+			state_region = s:STATE_AURORIL
+			state_region = s:STATE_SYLVASKA
+			state_region = s:STATE_AHKKU
+			state_region = s:STATE_SILVERSONG
+			state_region = s:STATE_GIELAS
+			state_region = s:STATE_ARVEDELL
+			state_region = s:STATE_MENDIBURU
+			state_region = s:STATE_EBYSUS
+			state_region = s:STATE_KURTHARA
+			state_region = s:STATE_KLYPYRA
+			state_region = s:STATE_ZAMARIS
+			state_region = s:STATE_THYRIS
+			state_region = s:STATE_ZARTHOS
+			state_region = s:STATE_CALTHA
+			state_region = s:STATE_ZABARA
+			state_region = s:STATE_SABRATHOS
+			state_region = s:STATE_MALYBA
+			state_region = s:STATE_ZAMARA
+			state_region = s:STATE_LEPTORIA
+			state_region = s:STATE_CARTHALIA
+			state_region = s:STATE_GADYRUS
+			state_region = s:STATE_EBYSS
+			state_region = s:STATE_SIGARA
+			state_region = s:STATE_MOTHYA
+			state_region = s:STATE_CLYPYA
+			state_region = s:STATE_LILYBAEUM
+			state_region = s:STATE_RUSARYA
+			state_region = s:STATE_CARTHAROS
+			state_region = s:STATE_HADRA
+			state_region = s:STATE_BYRTHAS
+			state_region = s:STATE_OYRSA
+			state_region = s:STATE_SABRYA
+			state_region = s:STATE_LEPTHAR
+			state_region = s:STATE_ZYRAS
+			state_region = s:STATE_CARTHI
+			state_region = s:STATE_HADRIA
+			state_region = s:STATE_CYRRA
+			state_region = s:STATE_OYSSARA
+			state_region = s:STATE_LEPTARIA
+			state_region = s:STATE_THAPSARIS
+			state_region = s:STATE_ZUCARA
+			state_region = s:STATE_GADIRIS
+			state_region = s:STATE_ACRAS
+			state_region = s:STATE_THASPIA
+			state_region = s:STATE_CERNIA
+			state_region = s:STATE_NEOSCARPIA
+			state_region = s:STATE_BYSSYRA
+			state_region = s:STATE_WHIRINAKI
+			state_region = s:STATE_RAROMARA
+			state_region = s:STATE_PATARENI
+			state_region = s:STATE_PUCOVATU
+			state_region = s:STATE_WHANAKOA
+			state_region = s:STATE_RONGOMARA
+			state_region = s:STATE_TARAMOA
+			state_region = s:STATE_RUMATARI
+			state_region = s:STATE_LUNARATA
+			state_region = s:STATE_XHAMADHANI
+			state_region = s:STATE_KORCOVA
+			state_region = s:STATE_MILOTI
+			state_region = s:STATE_TURAKINA
+			state_region = s:STATE_MARAMAROA
+			state_region = s:STATE_BLUMETO
+			state_region = s:STATE_KAVAJANA
+			state_region = s:STATE_TETOVAJA
+			state_region = s:STATE_DEBARIA
+			state_region = s:STATE_KRUSHEVA
+			state_region = s:STATE_KLOSI
+			state_region = s:STATE_SKRAPARIA
+			state_region = s:STATE_STRUGOVA
+			state_region = s:STATE_ZARJAPE
+			state_region = s:STATE_PODBARDISHTA
+			state_region = s:STATE_RUSYLESH
+			state_region = s:STATE_AKVALITVA
+			state_region = s:STATE_UOSTOCATAL
+			state_region = s:STATE_SALASLITVA
+			state_region = s:STATE_RAMUMARI
+			state_region = s:STATE_PLACIUKATAL
+			state_region = s:STATE_LAIVINMAR
+			state_region = s:STATE_LISIJA
+			state_region = s:STATE_TAKAYAMAAN
+			state_region = s:STATE_KILIMAKAZI
+			state_region = s:STATE_MAJIWAZIRI
+			state_region = s:STATE_ZAMARA
+			state_region = s:STATE_JUALALA
+			state_region = s:STATE_SWAHAKLONG
+			state_region = s:STATE_THASAMAKI
+			state_region = s:STATE_KEEDZAI
+			state_region = s:STATE_SWAHATHAI
+			state_region = s:STATE_KILIMAMAI
+			state_region = s:STATE_KISIKLONG
+			state_region = s:STATE_JUACHAI
+			state_region = s:STATE_SAWATHONG #yes I did
+			state_region = s:STATE_MAJISAMAKI
+			state_region = s:STATE_HADRA
+			state_region = s:STATE_KLONGBARIDI
+			state_region = s:STATE_MAJIPEMBE
+			state_region = s:STATE_CHANGAVUTA
+			state_region = s:STATE_KLONGLALA
+			state_region = s:STATE_KILIMASHWARI
+			state_region = s:STATE_UZURIKILIMA
+			state_region = s:STATE_SAWABARA
+			state_region = s:STATE_KISITONG
+			state_region = s:STATE_VEDAMALA
+			state_region = s:STATE_MANASI
+			state_region = s:STATE_MILINDRA
+			state_region = s:STATE_RANJITA
+			state_region = s:STATE_SUSHOBHANA
+			state_region = s:STATE_DHARMILA
+			state_region = s:STATE_APLUKACAL
+			state_region = s:STATE_MARITIMLIS
+			state_region = s:STATE_KRIOKLYKATAL
+			state_region = s:STATE_ZVEJYCATIA
+			state_region = s:STATE_UPESTARR
+			state_region = s:STATE_BALTIJOSCAT
+			state_region = s:STATE_LIUTUKATAL
+			state_region = s:STATE_PAPLUDIMIS
+			state_region = s:STATE_BANGALITVA
+			state_region = s:STATE_VITHKUQJA
+			state_region = s:STATE_KAINAVA
+			state_region = s:STATE_NASHAYAZH
+			state_region = s:STATE_SHIMAKAI
+			state_region = s:STATE_YAZHIDZI
+			state_region = s:STATE_AMBERWICK
+			state_region = s:STATE_LIONS_ROOST
+			state_region = s:STATE_TEPELENA
+			state_region = s:STATE_ZATYRE
+			state_region = s:STATE_KERCOVA
+			state_region = s:STATE_SHKODERIA
+			state_region = s:STATE_VALBARDA
+			state_region = s:STATE_GJILANIJA
+			state_region = s:STATE_DIBRA
+			state_region = s:STATE_LEZHANIA
+			state_region = s:STATE_GJAKOVA
+			state_region = s:STATE_KURBULL
+			state_region = s:STATE_PESHKOPINA
+			state_region = s:STATE_DURRESIA
+			state_region = s:STATE_KULLAMAL
+			state_region = s:STATE_BERATIA
+			state_region = s:STATE_SARANDOVA
+			state_region = s:STATE_FIERANA
+			state_region = s:STATE_SHKUMBINIA
+			state_region = s:STATE_BREZHKE
+			state_region = s:STATE_TROPOJA
+			state_region = s:STATE_HUTSULANE
+			state_region = s:STATE_BELSHIA
+			state_region = s:STATE_CERRIKUA
+			state_region = s:STATE_KUKESPIA
+			state_region = s:STATE_SUNDERPORT
+			state_region = s:STATE_WINDSPEAR
+			state_region = s:STATE_DRAGONCREST
+			state_region = s:STATE_GNURKENSTAD
+			state_region = s:STATE_GNURKENRADE
+			state_region = s:STATE_SMIDSHOEK
+			state_region = s:STATE_DRAAIKUST
+			state_region = s:STATE_RATELKUST
+			state_region = s:STATE_MOLENWOUD
+			state_region = s:STATE_PIEPERDORP
+			state_region = s:STATE_FLUITERHEIDE
+			state_region = s:STATE_VUURHOEK
+			state_region = s:STATE_TROMMELKUST
+			state_region = s:STATE_DRAAIVELD
+			state_region = s:STATE_KLOMPPLEIN
+			state_region = s:STATE_KRULHOVEN
+			state_region = s:STATE_SINNEBEAM
+			state_region = s:STATE_EKENKUST
+			state_region = s:STATE_REINFALL
+			state_region = s:STATE_DAUWBLED
+			state_region = s:STATE_FLUSTERBEEK
+			state_region = s:STATE_HIMMELSTIM
+			state_region = s:STATE_WALDLJOCHT
+			state_region = s:STATE_WOLKENEVEL
+			state_region = s:STATE_MAANSTIEN
+			state_region = s:STATE_WETTERWIIDTE
+			state_region = s:STATE_BLOEIJENDREAM
+			state_region = s:STATE_KLAVERBOSK
+			state_region = s:STATE_NACHTSIMMER
+			state_region = s:STATE_STILTEBRUZJE
+			state_region = s:STATE_SKIMERWALD
+			state_region = s:STATE_STREAMFLAMME
+			state_region = s:STATE_MISTGLANS
+			state_region = s:STATE_STJERROPTOCHT
+			state_region = s:STATE_XODAN
+			state_region = s:STATE_NOVAJEGO
+			state_region = s:STATE_RADIANTAJO
+			state_region = s:STATE_TEROCARO
+			state_region = s:STATE_STELALTAJO
+			state_region = s:STATE_FELICGRUNDO
+			state_region = s:STATE_PLUVPINTO
+			state_region = s:STATE_VENTAFALCO
+			state_region = s:STATE_NOVAJLANDIO
+			state_region = s:STATE_SONGBIENO
+			state_region = s:STATE_SUNFLORO
+			state_region = s:STATE_VESPERVIDO
+			state_region = s:STATE_SHKUMBINIA
+			state_region = s:STATE_LAGOEKRANO
+			state_region = s:STATE_KASKADVIVO
+			state_region = s:STATE_SENCERBO
+			state_region = s:STATE_RUGAKAMPO
+			state_region = s:STATE_ALMARAQI
+			state_region = s:STATE_STELINSULO
+			state_region = s:STATE_ESPRASHAD
+			state_region = s:STATE_ZAHARIDO
+			state_region = s:STATE_NURADINO
+			state_region = s:STATE_ALAMARA
+			state_region = s:STATE_KALIBRANTO
+			state_region = s:STATE_RAHMANTO
+			state_region = s:STATE_ALJUMARO
+			state_region = s:STATE_ZAHIDUMO
+			state_region = s:STATE_SARABENDO
+			state_region = s:STATE_ZAFIRAN
+			state_region = s:STATE_ESPRANOOR
+			state_region = s:STATE_SOLEMN_STONES
+			state_region = s:STATE_THUNDERSPELL_COAST
+			state_region = s:STATE_LEYLINE_COAST
+			state_region = s:STATE_GLIMMERING_COAST
+			state_region = s:STATE_TWOTORS
+			state_region = s:STATE_RUNEPORT_GALESTRUM
+			state_region = s:STATE_TWO_BARREL_COAST
+			state_region = s:STATE_VICEROYS_PEARL
+			state_region = s:STATE_BYRIVER
+			state_region = s:STATE_FIRST_BOROUGH
+			state_region = s:STATE_OUTER_MOORWEALD_3
+			state_region = s:STATE_OUTER_MOORWEALD_2
+			state_region = s:STATE_OUTER_MOORWEALD
+			state_region = s:STATE_RIVER_MEDDEN
+			state_region = s:STATE_PENDYM_GWYN
+			state_region = s:STATE_PENDYM_GWYN_2
+			state_region = s:STATE_CAEL_VALEN
+			state_region = s:STATE_CAEL_VALEN_2
+			state_region = s:STATE_LANDING_AT_SEA
+			state_region = s:STATE_SAINT_MER_2
+			state_region = s:STATE_SHARINDLARS_NEEDLE
+			state_region = s:STATE_CHANTSIRENE #something might be up here; cwtools behaving strangely
+			state_region = s:STATE_ABAISSE_DE_MARBRUN #okay it's not picking up this entire region
+			state_region = s:STATE_AZURSOL  #I think it's working though so idgaf
+			state_region = s:STATE_MERACIEL_AUBELAC
+			state_region = s:STATE_SUNKEN_CLIFFS
+			state_region = s:STATE_VOZMEAD_LOWLANDS
+			state_region = s:STATE_ELF4
+			state_region = s:STATE_ELF3
+			state_region = s:STATE_ELF2
+			state_region = s:STATE_ELF1
+			state_region = s:STATE_ASHWICK_3
+			state_region = s:STATE_PLAGUES_END
+			state_region = s:STATE_KESHARQAN
+			state_region = s:STATE_EASTERN_EQUINE_PLAIN
+			state_region = s:STATE_CENTRAL_EQUINE_PLAIN
+			state_region = s:STATE_WESTERN_EQUINE_PLAIN
+			state_region = s:STATE_DUSHAMBAY
+			state_region = s:STATE_AETHELBOSQUE
+			state_region = s:STATE_LILAC_SHORE
+			state_region = s:STATE_AUBERN_FLOW
+			state_region = s:STATE_IRONWOOD_PENINSULA
+			state_region = s:STATE_OLD_AUBERN
+			state_region = s:STATE_HAAR_FEN
+			state_region = s:STATE_ROZANGAR
+			state_region = s:STATE_EIREKS_WASH
+			state_region = s:STATE_CANDLEMIRE
+			state_region = s:STATE_THE_CRIMSON_MORASS
+			state_region = s:STATE_GLADEMIRE
+			state_region = s:STATE_SOUTHERN_DRAIN
+			state_region = s:STATE_JOURNEYEND
+			state_region = s:STATE_INTOKI
+			state_region = s:STATE_PINCER_PENINSULA
+			state_region = s:STATE_SC12
+			state_region = s:STATE_BLOODTHORN_WASTES
+			state_region = s:STATE_SALTSHORE
+			state_region = s:STATE_SALTSHORE_2
+			state_region = s:STATE_ANTAQAQA
+			state_region = s:STATE_URQUNAYUQ
+			state_region = s:STATE_KUCHUYPATA
+			state_region = s:STATE_TIKAQULLU
+			state_region = s:STATE_WAYLLAPAMPA
+			state_region = s:STATE_MALLKIYAKU
+			state_region = s:STATE_PACHAQULLU
+
+			state_region = s:STATE_FIANARIVO
+			state_region = s:STATE_VAROTSOA
+			state_region = s:STATE_IVONDRO
+			state_region = s:STATE_IVOLOINA
+			state_region = s:STATE_TOMBONT
+			state_region = s:STATE_ANKAZOBE
+
+			state_region = s:STATE_UMAGAMA
+			state_region = s:STATE_XABELO
+			state_region = s:STATE_MALANDA
+			state_region = s:STATE_GONJOLA
+			state_region = s:STATE_BEXAMBA
+			state_region = s:STATE_AMALUMA
+			state_region = s:STATE_ALENMAR
+			state_region = s:STATE_TERRABELA
+			state_region = s:STATE_APAFONTE
+			state_region = s:STATE_LISAZISA
+			state_region = s:STATE_BELENDLE
+
+			state_region = s:STATE_MALANJAPORT
+			state_region = s:STATE_MAPACHECO
+			state_region = s:STATE_JERMENION
+			state_region = s:STATE_GRAEA
+			state_region = s:STATE_ARGYSTSIK
+			state_region = s:STATE_ARTHERA
+			state_region = s:STATE_COCOHAYAT
+			state_region = s:STATE_CIDADOURO
+			state_region = s:STATE_ALMADOURO
+
+			state_region = s:STATE_HERMENIA
+			state_region = s:STATE_ARIMOS
+			state_region = s:STATE_DILMELIA
+			state_region = s:STATE_KOTAYNOS
+			state_region = s:STATE_MYTHOS
+			state_region = s:STATE_ZANPIQ
+			state_region = s:STATE_GANDNI
+			state_region = s:STATE_KHANGYO
+			state_region = s:STATE_SHIGATSENIPIY
+			state_region = s:STATE_NYINGMAWASKAHIKAN
+			state_region = s:STATE_BODHISATTVA
+			state_region = s:STATE_SUKHODAYA
+			state_region = s:STATE_DHARMARAJYA
+			state_region = s:STATE_PANNYA
+			state_region = s:STATE_SHANTINAGAR
+			state_region = s:STATE_VISHUDDHIKARA
+			state_region = s:STATE_BUDAMURAYIRI
+			state_region = s:STATE_SAMYAKVARTA
+			state_region = s:STATE_ANUTTARAPUR
+			state_region = s:STATE_KULUWANDU
+			state_region = s:STATE_KURUBBA
+			state_region = s:STATE_BOODJARRA
+			state_region = s:STATE_MOGORRTI
+			state_region = s:STATE_GASHAWARRA
+			state_region = s:STATE_YARRAGANBALA
+			state_region = s:STATE_DUSHANBARYA
+			state_region = s:STATE_MAZAROV
+			state_region = s:STATE_LUMO
+			state_region = s:STATE_AZURETHORN
+			state_region = s:STATE_NGURULAN
+			state_region = s:STATE_ZEPHROPULU	#lazy lazy
+			state_region = s:STATE_BARICORA
+			state_region = s:STATE_POLYNKALA
+			state_region = s:STATE_ZAWADKA
+			state_region = s:STATE_JAWOREK
+			state_region = s:STATE_ZARKI
+			state_region = s:STATE_NIWKA
+			state_region = s:STATE_CZERWIONKA
+			state_region = s:STATE_ANGERTORP
+			state_region = s:STATE_SOLVIK
+			state_region = s:STATE_FRIGGASVEIT
+			state_region = s:STATE_DRUMAGAR
+			state_region = s:STATE_KINGOUR
+			state_region = s:STATE_FALMAKELD
+			state_region = s:STATE_ICEWIND
+			state_region = s:STATE_SNOWBREACH
+			state_region = s:STATE_COLDSHEAR
+			state_region = s:STATE_HJELTIAS_GLACIER
+			state_region = s:STATE_BALATHOUL
+			state_region = s:STATE_ELDBERG
+			state_region = s:STATE_TANISTS_RETREAT
+			state_region = s:STATE_ANGERTORP
+			state_region = s:STATE_EOGHANS_SPEAR
+			state_region = s:STATE_GLENKELD
+			state_region = s:STATE_DUNMAFAR
+			state_region = s:STATE_KENLYNE
+			state_region = s:STATE_COLESSIE
+			state_region = s:STATE_URIKS_GIFT
+			state_region = s:STATE_TYMANS_FOLLY
+			state_region = s:STATE_GRYTINGARIK
+			state_region = s:STATE_EAST_YANGER_STEPPE
+			state_region = s:STATE_CASTELL_DRYSGOLMARK
+			state_region = s:STATE_BHAVANASARA #lazy lazy
+			state_region = s:STATE_ELDBERG
+			state_region = s:STATE_TANISTS_RETREAT
+			state_region = s:STATE_ANGERTORP
+			state_region = s:STATE_EOGHANS_SPEAR
+			state_region = s:STATE_GLENKELD
+			state_region = s:STATE_DUNMAFAR
+			state_region = s:STATE_KENLYNE
+			state_region = s:STATE_COLESSIE
+			state_region = s:STATE_URIKS_GIFT
+			state_region = s:STATE_TYMANS_FOLLY
+			state_region = s:STATE_GRYTINGARIK
+			state_region = s:STATE_EAST_YANGER_STEPPE
+			state_region = s:STATE_CASTELL_DRYSGOLMARK
+			state_region = s:STATE_NORTHERN_DRAIN
+			state_region = s:STATE_KILIMADADA
+			state_region = s:STATE_KILIMASAWA
+			state_region = s:STATE_UZURIPWA
+			state_region = s:STATE_JITOMREMBO
+			state_region = s:STATE_PWAWAKATI
+			state_region = s:STATE_TSIMIHAVANA
+			state_region = s:STATE_LUMBELO
+			state_region = s:STATE_YERNAGRIA
+			state_region = s:STATE_HELARM
+			state_region = s:STATE_MAXANGA
+			state_region = s:STATE_BELOZA
+			state_region = s:STATE_MAROMITA
+			state_region = s:STATE_SURYANAGARI
+			state_region = s:STATE_VIRULENT_EGRESS
+			state_region = s:STATE_VIRULENT_EGRESS_2
+			state_region = s:STATE_VIRULENT_EGRESS_3
+			state_region = s:STATE_GIANTS_STRIDE
+			state_region = s:STATE_AHORNAU
+			state_region = s:STATE_SANGARI
+			state_region = s:STATE_SANGARI_2
+			state_region = s:STATE_SANGARI_3
+			state_region = s:STATE_MOSKHAN
+			state_region = s:STATE_ANDIZHANSK
+			state_region = s:STATE_TERMEZSK
+			state_region = s:STATE_GHAZNINSKIY
+			state_region = s:STATE_FROSTGATE
+			state_region = s:STATE_MIDCLACK
+			state_region = s:STATE_NORLEA
+			state_region = s:STATE_CALDAMUS
+			state_region = s:STATE_SLUDGE_COAST
+			state_region = s:STATE_ALYEA
+			state_region = s:STATE_BANEKERT
+			state_region = s:STATE_ZENDEN
+			state_region = s:STATE_LAST_HEARTH
+			state_region = s:STATE_ARDSHIEL
+			state_region = s:STATE_OSTREN
+			state_region = s:STATE_GULFWATCH
+			state_region = s:STATE_MERCHANT_BAY
+			state_region = s:STATE_LOCHTYRE
+			state_region = s:STATE_MALINMORE
+			state_region = s:STATE_MELENLECK
+			state_region = s:STATE_COLNAIG
+			state_region = s:STATE_TEMPLE_HILL
+			state_region = s:STATE_FALNALECK
+			state_region = s:STATE_THORNWALL
+			state_region = s:STATE_PONTBRAN
+			state_region = s:STATE_BANCFAN
+			state_region = s:STATE_CAECARW
+			state_region = s:STATE_MAESBELAN
+			state_region = s:STATE_HAG_MARSHES
+			state_region = s:STATE_ALLTBRAN
+			state_region = s:STATE_MALDARBLANE
+			state_region = s:STATE_TOLFAR
+			state_region = s:STATE_GLYNFFORDD
+			state_region = s:STATE_INCHMARA
+			state_region = s:STATE_GWYNWEN
+			state_region = s:STATE_GLASINBLAIR
+			state_region = s:STATE_SKALKA
+			state_region = s:STATE_YGGHAMN
+			state_region = s:STATE_WYRMBONE_CLIFFS
+			state_region = s:STATE_FREYRSFJORDR
+			state_region = s:STATE_SIFSKER
+			state_region = s:STATE_HLIDSKJALF
+			state_region = s:STATE_HALSTEAD
+			state_region = s:STATE_FORRTORP
+			state_region = s:STATE_VIGAKULL
+			state_region = s:STATE_DRAGONBANE_TUNDRA
+			state_region = s:STATE_EIRIKSHOF
+			state_region = s:STATE_SAMARTHYA
+			state_region = s:STATE_JIVANTA
+		} 
 	}
+			
 }

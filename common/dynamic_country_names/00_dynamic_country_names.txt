@@ -1,4 +1,4 @@
-### Try to keep tags in alphabetical order if it's not too far gone, please.
+﻿### Try to keep tags in alphabetical order if it's not too far gone, please.
 
 ################################################################
 ## DEFAULT COUNTRY NAMES EXAMPLE CAN BE USED WITH ANY COUNTRY ##
@@ -16,7 +16,7 @@ DEFAULT = {
 		
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 				has_law = law_type:law_council_republic
 				any_interest_group = {
@@ -42,7 +42,7 @@ DEFAULT = {
 		
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 				NOT = { has_law = law_type:law_council_republic }
 				any_interest_group = {
@@ -68,7 +68,7 @@ DEFAULT = {
 		
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 				NOT = { has_law = law_type:law_council_republic }
 				any_interest_group = {
@@ -76,72 +76,6 @@ DEFAULT = {
 					is_strongest_ig_in_government = yes
 					leader = {
 						has_ideology = ideology:ideology_radical
-					}
-				}
-			}
-		}
-	}
-	dynamic_country_name = {
-		name = generic_revolt_bonapartist
-		adjective = generic_revolt_bonapartist_adj
-		
-		is_revolutionary = yes
-		priority = 0
-		
-		trigger = {
-			exists = scope:actor
-			scope:actor = {
-				is_secessionist = no
-				has_law = law_type:law_monarchy
-				any_interest_group = {
-					is_in_government = yes
-					is_strongest_ig_in_government = yes
-					leader = {
-						has_ideology = ideology:ideology_bonapartist
-					}
-				}
-			}
-		}
-	}
-	dynamic_country_name = {
-		name = generic_revolt_legitimist
-		adjective = generic_revolt_legitimist_adj
-		
-		is_revolutionary = yes
-		priority = 0
-		
-		trigger = {
-			exists = scope:actor
-			scope:actor = {
-				is_secessionist = no
-				has_law = law_type:law_monarchy
-				any_interest_group = {
-					is_in_government = yes
-					is_strongest_ig_in_government = yes
-					leader = {
-						has_ideology = ideology:ideology_legitimist
-					}
-				}
-			}
-		}
-	}
-	dynamic_country_name = {
-		name = generic_revolt_orleanist
-		adjective = generic_revolt_orleanist_adj
-		
-		is_revolutionary = yes
-		priority = 0
-		
-		trigger = {
-			exists = scope:actor
-			scope:actor = {
-				is_secessionist = no
-				has_law = law_type:law_monarchy
-				any_interest_group = {
-					is_in_government = yes
-					is_strongest_ig_in_government = yes
-					leader = {
-						has_ideology = ideology:ideology_orleanist
 					}
 				}
 			}
@@ -157,7 +91,7 @@ DEFAULT = {
 		
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 				ig:ig_rural_folk = {
 					is_in_government = yes
@@ -176,7 +110,7 @@ DEFAULT = {
 		trigger = {
 
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 				ig:ig_landowners = {
 					is_in_government = yes
@@ -194,7 +128,7 @@ DEFAULT = {
 		
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 				any_interest_group = {
 					is_in_government = yes
@@ -219,7 +153,7 @@ DEFAULT = {
 		
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 				ig:ig_industrialists = {
 					is_in_government = yes
@@ -237,7 +171,7 @@ DEFAULT = {
 		
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 				ig:ig_armed_forces = {
 					is_in_government = yes
@@ -255,7 +189,7 @@ DEFAULT = {
 		
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 				ig:ig_devout = {
 					is_in_government = yes
@@ -273,7 +207,7 @@ DEFAULT = {
 		
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 				ig:ig_petty_bourgeoisie = {
 					is_in_government = yes
@@ -291,7 +225,7 @@ DEFAULT = {
 		
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 				ig:ig_trade_unions = {
 					is_in_government = yes
@@ -310,7 +244,7 @@ DEFAULT = {
 		
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 			}
 		}
@@ -324,7 +258,7 @@ DEFAULT = {
 		
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 			}
 		}
@@ -338,257 +272,39 @@ DEFAULT = {
 		
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 			}
 		}
 	}
 }
 
-ARG = { # Argentina
-	dynamic_country_name = {
-		name = dyn_c_argentine_confederation
-		adjective = ARG_ADJ
-		
-		is_main_tag_only = yes
-		priority = 0
-		
-		trigger = {
-			coa_def_dictatorship_flag_trigger = yes
+DUM = { # Dumonia
+	dynamic_country_name = { # Dumonia Empire
+	name = dyn_c_dumonia_empire
+	adjective = dyn_c_dumonia_empire
 
-			scope:actor = {
-				any_scope_character = {
-					is_ruler = yes
-					has_template = ARG_Juan_Manuel_de_Rosas
-				}
+	is_main_tag_only = yes
+	priority = 10
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { 
+				has_law = law_type:law_monarchy
 			}
+
 		}
 	}
-
-	dynamic_country_name = { # Rio de la Plata also has this dynamic name
-		name = dyn_c_river_plate
-		adjective = dyn_c_river_plate_adj
-
-		is_main_tag_only = yes
-		priority = 1
-		
-		trigger = {
-			exists = c:GBR
-			scope:actor = {
-				is_subject_of = c:GBR
-			}
-		}
-	}
-
-	dynamic_country_name = {
-		name = dyn_c_argentina_legionaria
-		adjective = ARG_ADJ
+	dynamic_country_name = { # Dumonia
+		name = dyn_c_dumonia
+		adjective = dyn_c_dumonia
 		
 		is_main_tag_only = yes
-		priority = 30
-		
-		trigger = {
-			scope:actor = {
-				coa_fascist_trigger = yes
-				NOT = {
-					has_law = law_type:law_council_republic
-				}
-			}
-		}
-	}
-}
-
-ECU = {
-	dynamic_country_name = {
-		name = dyn_c_quito
-		adjective = dyn_c_quito_adj
-
-		is_main_tag_only = yes
-		priority = 0
-		
-		trigger = {
-			exists = c:SPA
-			scope:actor = {
-				is_subject_of = c:SPA
-			}
-		}
-	}
-}
-
-URU = {
-	dynamic_country_name = {
-		name = dyn_c_cisplatina
-		adjective = dyn_c_cisplatina_adj
-
-		is_main_tag_only = yes
-		priority = 0
-		
-		trigger = {
-			OR = {
-				AND = {
-					exists = c:BRZ
-					scope:actor = {
-						is_subject_of = c:BRZ
-					}
-				}
-				AND = {
-					exists = c:POR
-					scope:actor = {
-						is_subject_of = c:POR
-					}
-				}
-			}
-		}
-	}
-
-
-	dynamic_country_name = {
-		name = dyn_c_banda_oriental
-		adjective = dyn_c_banda_oriental_adj
-
-		is_main_tag_only = yes
-		priority = 0
-		
-		trigger = {
-			exists = c:SPA
-			scope:actor = {
-				is_subject_of = c:SPA
-			}
-		}
-	}
-}
-
-BOL = {
-	dynamic_country_name = {
-		name = dyn_c_charcas
-		adjective = dyn_c_charcas_adj
-
-		is_main_tag_only = yes
-		priority = 1
-		
-		trigger = {
-			exists = c:SPA
-			scope:actor = {
-				is_subject_of = c:SPA
-			}
-		}
-	}
-	dynamic_country_name = {
-		name = dyn_c_upper_peru
-		adjective = dyn_c_upper_peru_adj
-
-		is_main_tag_only = yes
-		priority = 0
-		
-		trigger = {
-			exists = c:SPA
-			exists = c:PEU
-			c:PEU = {
-				is_subject_of = c:SPA
-			}
-			scope:actor = {
-				is_subject_of = c:PEU
-			}
-		}
-	}
-	dynamic_country_name = {
-		name = dyn_c_plurinational_bolivia
-		adjective = BOL_ADJ
-
-		is_main_tag_only = yes
-		priority = 0
+		priority = 5
 		
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
-				has_law = law_type:law_multicultural
-			}
-			coa_def_republic_flag_trigger = yes
-			NOT = { coa_def_communist_flag_trigger = yes }
-		}
-	}
-}
-
-VNZ = {
-	dynamic_country_name = {
-		name = dyn_c_klein_venedig
-		adjective = dyn_c_klein_venedig_adj
-
-		is_main_tag_only = yes
-		priority = 0
-		
-		trigger = {
-			OR = {
-				AND = {
-					exists = c:HRE
-					scope:actor = {
-						is_subject_of = c:HRE
-					}
-				}
-				AND = {
-					exists = c:GER
-					scope:actor = {
-						is_subject_of = c:GER
-					}
-				}
-				AND = {
-					exists = c:AUS
-					scope:actor = {
-						is_subject_of = c:AUS
-					}
-				}
-			}
-		}
-	}
-}
-
-PLT = {
-	dynamic_country_name = { # Argentina also has this dynamic name
-		name = dyn_c_river_plate
-		adjective = dyn_c_river_plate_adj
-
-		is_main_tag_only = yes
-		priority = 1
-		
-		trigger = {
-			exists = c:GBR
-			scope:actor = {
-				is_subject_of = c:GBR
-			}
 		}
 	}
 
-	dynamic_country_name = {
-		name = dyn_c_sudamerica_legionaria
-		adjective = dyn_c_sudamerica_legionaria_adj
-
-		is_main_tag_only = yes
-		priority = 0
-		
-		trigger = {
-			exists = scope:actor
-			scope:actor = {
-				was_formed_from = ARG
-				coa_fascist_trigger = yes
-				NOT = {
-					has_law = law_type:law_council_republic
-				}
-			}
-		}
-	}	
-	dynamic_country_name = {
-		name = dyn_c_confederacion_sudamericana
-		adjective = dyn_c_confederacion_sudamericana_adj
-		
-		is_main_tag_only = yes
-		priority = 0
-		
-		trigger = {
-			coa_def_dictatorship_flag_trigger = yes
-			exists = scope:actor
-			scope:actor = {
-				was_formed_from = ARG
-			}
-		}
-	}
 }

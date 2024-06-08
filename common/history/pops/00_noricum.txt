@@ -1,5 +1,4 @@
-POPS = {
-
+﻿POPS = {
   s:STATE_CROWNPEAK = {
 		region_state:DUM = {
 			create_pop = {
@@ -11,16 +10,16 @@ POPS = {
 				size = 1996
 			}
 			create_pop = {
-				culture = hungarian
+				culture = uplander
 				size = 16000
 			}
 			create_pop = {
-				culture = czech
-				religion = catholic
+				culture = jalian
+				religion = cult_of_the_sun
 				size = 24000
 			}
 			create_pop = {
-				culture = hungarian
+				culture = uplander
 				religion = protestant
 				size = 8000
 			}
@@ -125,7 +124,7 @@ POPS = {
           size = 1397200
         }
         create_pop = {
-          culture = scottish
+          culture = uplander
           religion = cult_of_the_sun
           size = 188000
         }
@@ -228,7 +227,7 @@ POPS = {
     s:STATE_ZENDEN = {
       region_state:DUM = {
         create_pop = {
-          culture = ralaurian
+          culture = dewaric
           size = 59044
         }
         create_pop = {
@@ -236,7 +235,7 @@ POPS = {
           size = 3000
         }
         create_pop = {
-          culture = dewaric
+          culture = ralaurian
           size = 90004
         }
         create_pop = {
@@ -279,17 +278,80 @@ POPS = {
 
 
     s:STATE_WEST_YANGER_STEPPE = {
-
+      region_state:YAN = {
+        create_pop = {
+          culture = yanger
+          size = 196000
+        }
+        create_pop = {
+          culture = dumonian
+          size = 2000
+        }
+        create_pop = {
+          culture = jalian
+          size = 38000
+        }
+      }
   }
 
+  s:STATE_SOUTH_YANGER_STEPPE = {
+    region_state:YAN = {
+      create_pop = {
+        culture = yanger
+        size = 165632
+      }
+      create_pop = {
+        culture = dumonian
+        size = 2700
+      }
+      create_pop = {
+        culture = jalian
+        size = 25700
+      }
+    }
+} 
 
     s:STATE_EAST_YANGER_STEPPE = {
-
+      region_state:YAN = {
+        create_pop = {
+          culture = yanger
+          size = 276396
+        }
+        create_pop = {
+          culture = dumonian
+          size = 7400
+        }
+        create_pop = {
+          culture = jalian
+          size = 16000
+        }
+        create_pop = {
+          culture = meriwyn
+          size = 13000
+        }
+      }
   }
 
 
     s:STATE_RIDERS_MOOT = {
-
+      region_state:YAN = {
+        create_pop = {
+          culture = yanger
+          size = 1852396
+        }
+        create_pop = {
+          culture = dumonian
+          size = 10204
+        }
+        create_pop = {
+          culture = jalian
+          size = 36000
+        }
+        create_pop = {
+          culture = vandori
+          size = 8000
+        }
+      }
   }
 
 
@@ -436,6 +498,20 @@ POPS = {
 
 
     s:STATE_CROWNSHADE = {
+      region_state:YAN = {
+        create_pop = {
+          culture = yanger
+          size = 50000
+        }
+        create_pop = {
+          culture = dumonian
+          size = 4000
+        }
+        create_pop = {
+          culture = jalian
+          size = 1200
+        }
+      }
 
   }
 
@@ -469,22 +545,70 @@ POPS = {
 
 
     s:STATE_KOTHIAN = {
-
+      region_state:ABR = {
+        create_pop = {
+          culture = avalorean
+          size = 983000
+        }
+        create_pop = {
+          culture = nivaskyan
+          size = 678000
+        }
+        create_pop = {
+          culture = dumonian
+          size = 57000
+        }
+      }
   }
 
 
     s:STATE_DRAGONBANE_TUNDRA = {
-
+      region_state:SGE = {
+        create_pop = {
+          culture = frost_giant
+          size = 23780
+        }
+        create_pop = {
+          culture = zakonish
+          size = 852
+        }
+        create_pop = {
+          culture = glethach
+          size = 7980
+        }
+      }
   }
 
 
     s:STATE_WYRMBONE_CLIFFS = {
-
+      region_state:SDN = {
+        create_pop = {
+          culture = cloud_giant
+          size = 20980
+        }
+        create_pop = {
+          culture = frost_giant
+          size = 4968
+        }
+      }
   }
 
 
     s:STATE_WHISPERPINE_WOODS = {
-
+      region_state:PTD = {
+        create_pop = {
+          culture = wood_giant
+          size = 252000
+        }
+        create_pop = {
+          culture = frost_giant
+          size = 2000
+        }
+        create_pop = {
+          culture = zakonish
+          size = 14380
+        }
+      }
   }
 
 
@@ -570,7 +694,12 @@ POPS = {
 
 
     s:STATE_DRUMAGAR = {
-
+      region_state:CAO = {
+        create_pop = {
+          culture = frost_giant
+          size = 278091
+        }
+      }
   }
 
 
@@ -613,7 +742,7 @@ POPS = {
           size = 65087
         }
         create_pop = {
-          culture = meriwyn
+          culture = jalian
           size = 3001
         }
         create_pop = {
@@ -626,12 +755,12 @@ POPS = {
     s:STATE_KILCREE = {
       region_state:DUM = {
         create_pop = {
-          culture = meriwyn
-          size = 464400
+          culture = jalian
+          size = 334400
         }
         create_pop = {
           culture = dumonian
-          size = 21388
+          size = 131388
         }
       }
     }
@@ -652,12 +781,44 @@ POPS = {
 
 
     s:STATE_BALLYNE = {
-
+      region_state:DOV = {
+        create_pop = {
+          culture = jalian
+          size = 450960
+        }
+        create_pop = {
+          culture = jalian
+          religion = cult_of_the_sun
+          size = 320500
+        }
+        create_pop = {
+          culture = meriwyn
+          size = 317200
+        }
+        create_pop = {
+          culture = dumonian
+          religion = cult_of_the_sun
+          size = 147500
+        }
+      }
   }
 
 
     s:STATE_URIKS_GIFT = {
-
+      region_state:YAN = {
+        create_pop = {
+          culture = yanger
+          size = 426004
+        }
+        create_pop = {
+          culture = avalorean
+          size = 37004
+        }
+        create_pop = {
+          culture = dumonian
+          size = 6004
+        }
+      }
   }
 
 
@@ -689,19 +850,31 @@ POPS = {
       }
     }
 
-
-    s:STATE_DALROCH = {
-
-  }
-
-
     s:STATE_GLASLIESH = {
-
+      region_state:MBR = {
+        create_pop = {
+          culture = avalorean
+          size = 205000
+        }
+        create_pop = {
+          culture = nivaskyan
+          size = 435000
+        }
+      }
   }
 
 
     s:STATE_BALATHOUL = {
-
+      region_state:BFU = {
+        create_pop = {
+          culture = glethach
+          size = 364796
+        }
+        create_pop = {
+          culture = grendleth
+          size = 86738
+        }
+      }
   }
 
 
@@ -711,8 +884,17 @@ POPS = {
 
 
     s:STATE_KINGOUR = {
-
-  }
+      region_state:RIS = {
+      create_pop = {
+        culture = glethach
+        size = 484796
+      }
+      create_pop = {
+        culture = grendleth
+        size = 82738
+      }
+   }
+ }
 
 
     s:STATE_MALINMORE = {
@@ -727,7 +909,7 @@ POPS = {
         }
         create_pop = {
           culture = gelidrumin
-          religion = protestant
+          religion = cult_of_the_sun
           size = 3030
         }
         create_pop = {
@@ -754,7 +936,25 @@ POPS = {
 
 
     s:STATE_ROSKIRK = {
-
+      region_state:DOV = {
+        create_pop = {
+          culture = jalian
+          size = 879406
+        }
+        create_pop = {
+          culture = jalian
+          religion = cult_of_the_sun
+          size = 145000
+        }
+        create_pop = {
+          culture = dumonian
+          size = 33000
+        }
+        create_pop = {
+          culture = meriwyn
+          size = 78000
+        }
+      }
   }
 
 
@@ -781,7 +981,21 @@ POPS = {
 
 
     s:STATE_THORNWALL = {
-
+      region_state:DOV = {
+        create_pop = {
+          culture = jalian
+          size = 360000
+        }
+        create_pop = {
+          culture = jalian
+          religion = cult_of_the_sun
+          size = 490000
+        }
+        create_pop = {
+          culture = meriwyn
+          size = 180000
+        }
+      }
   }
 
 
@@ -806,7 +1020,16 @@ POPS = {
 
 
     s:STATE_COLESSIE = {
-
+      region_state:BIE = {
+        create_pop = {
+          culture = nivaskyan
+          size = 1006400
+        }
+        create_pop = {
+          culture = yanger
+          size = 306400
+        }
+      }
   }
 
 
@@ -825,7 +1048,12 @@ POPS = {
 
 
     s:STATE_KENLYNE = {
-
+      region_state:BIE = {
+        create_pop = {
+          culture = nivaskyan
+          size = 1348900
+        }
+      }
   }
 
 
@@ -852,14 +1080,17 @@ POPS = {
 
 
     s:STATE_BRISINGAMEN = {
-
+      region_state:IGM = {
+        create_pop = {
+          culture = frost_giant
+          size = 5000
+        }			
+        create_pop = {
+          culture = fire_giant
+          size = 18000
+        }
+      }
   }
-
-
-    s:STATE_GELLIBRITH = {
-
-  }
-
 
     s:STATE_MAESBELAN = {
       region_state:JUR = {
@@ -960,16 +1191,34 @@ POPS = {
 
 
     s:STATE_GLYNFFORDD = {
-
+      region_state:FOX = {
+        create_pop = {
+          culture = jalian
+          size = 1283122
+        }
+        create_pop = {
+          culture = meriwyn
+          size = 675084
+        }
+        create_pop = {
+          culture = vampire
+          size = 6485
+        }
+      }
   }
-
-
-    s:STATE_PANTMARK = {
-
-  }
-
 
     s:STATE_ALLTGLAS = {
+      region_state:WHM = {
+        create_pop = {
+          culture = grendleth
+          size = 275777
+        }
+        create_pop = {
+          culture = glethach
+          size = 58058
+        }
+
+      }
 
   }
 
@@ -980,22 +1229,67 @@ POPS = {
 
 
     s:STATE_GWYNWEN = {
-
+      region_state:FOX = {
+        create_pop = {
+          culture = jalian
+          size = 1877581
+        }
+        create_pop = {
+          culture = meriwyn
+          size = 180989
+        }
+        create_pop = {
+          culture = vampire 
+          size = 900
+        }
+      }
   }
 
 
     s:STATE_CASTELL_DRYSGOLMARK = {
-
+      region_state:DRK = {
+        create_pop = {
+          culture = jalian
+          size = 806400
+        }
+        create_pop = {
+          culture = yanger
+          size = 93000
+        }
+        create_pop = {
+          culture = jalian
+          religion = horse_worship
+          size = 170028
+        }
+      }
   }
 
 
     s:STATE_CARREGRICE = {
-
+      region_state:ABR = {
+        create_pop = {
+          culture = avalorean
+          size = 423000
+        }
+        create_pop = {
+          culture = nivaskyan
+          size = 360000
+        }
+      }
   }
 
 
     s:STATE_TALNANT = {
-
+      region_state:EVR = {
+        create_pop = {
+          culture = yanger
+          size = 214000
+        }
+        create_pop = {
+          culture = avalorean
+          size = 1532000
+        }
+      }
   }
 
 
@@ -1025,23 +1319,45 @@ POPS = {
   }
 
 
-    s:STATE_KIRDON = {
-
-  }
-
-
     s:STATE_HARTHALGH = {
-
+      region_state:FOX = {
+        create_pop = {
+          culture = jalian # Catholics
+          size = 1349428
+        }
+        create_pop = {
+          culture = meriwyn # Anglicans
+          size = 28463
+        }
+      }
   }
 
 
     s:STATE_INCHMARA = {
-
+      region_state:FOX = {
+        create_pop = {
+          culture = jalian # Catholics
+          size = 2514388
+        }
+        create_pop = {
+          culture = meriwyn
+          size = 81856
+        }
+        create_pop = {
+          culture = vampire 
+          size = 4040
+        }
+      }
   }
 
 
     s:STATE_GLASINBLAIR = {
-
+      region_state:DOV = {
+        create_pop = {
+          culture = jalian
+          size = 456000
+        }
+      }
   }
 
 
@@ -1065,7 +1381,16 @@ POPS = {
 
 
     s:STATE_TYMANS_FOLLY = {
-
+      region_state:MBR = {
+        create_pop = {
+          culture = nivaskyan
+          size = 300700
+        }
+        create_pop = {
+          culture = avalorean
+          size = 145600
+        }
+      }
   }
 
 
@@ -1075,187 +1400,393 @@ POPS = {
 
 
     s:STATE_NORDFJALL = {
-
+      region_state:SDN = {
+        create_pop = {
+          culture = cloud_giant
+          size = 20400
+        }
+        create_pop = {
+          culture = frost_giant
+          size = 15000
+        }
+      }
   }
 
 
     s:STATE_HRAUNLUND = {
-
+      region_state:WRC = {
+        create_pop = {
+          culture = frost_giant
+          size = 41823
+        }
+      }
   }
 
 
     s:STATE_ZAWADKA = {
-
+      region_state:VAI = {
+        create_pop = {
+          culture = vairian
+          size = 366792
+        }
+        create_pop = {
+          culture = zakonish
+          size = 12200
+        }
+        create_pop = {
+          culture = wood_giant
+          size = 23400
+        }
+        create_pop = {
+          culture = frost_giant
+          size = 6902
+        }
+      }
   }
 
 
     s:STATE_HRAFNSDALR = {
-
+      region_state:SDN = {
+        create_pop = {
+          culture = cloud_giant
+          size = 8000
+        }
+        create_pop = {
+          culture =frost_giant
+          size = 4000
+        }
+      }
   }
 
 
     s:STATE_NIWKA = {
-
+      region_state:ZKW = {
+        create_pop = {
+          culture = glethach
+          size = 667
+        }
+        create_pop = {
+          culture = wood_giant
+          size = 52800
+        }
+        create_pop = {
+          culture = zakonish
+          size = 256573
+        }
+        create_pop = {
+          culture = vairian
+          size = 3333
+        }
+      }
   }
 
 
     s:STATE_CZERWIONKA = {
-
+      region_state:ZKW = {
+        create_pop = {
+          culture = wood_giant
+          size = 11980
+        }
+        create_pop = {
+          culture = frost_giant
+          size = 980
+        }
+      }
   }
 
 
     s:STATE_SKALKA = {
-
+      region_state:PTD = {
+        create_pop = {
+          culture = wood_giant
+          size = 122996
+        }
+        create_pop = {
+          culture = frost_giant
+          size = 2000
+        }
+        create_pop = {
+          culture = zakonish
+          size = 7200
+        }
+      }
   }
 
 
     s:STATE_YGGHAMN = {
-
+      region_state:GRL = {
+        create_pop = {
+          culture = frost_giant
+          size = 14000
+        }
+        create_pop = {
+          culture = cloud_giant
+          size = 2000
+        }
+      }
   }
 
 
     s:STATE_ZARKI = {
-
+      region_state:ZKW = {
+        create_pop = {
+          culture = zakonish
+          size = 547200
+        }
+        create_pop = {
+          culture = wood_giant
+          size = 5000
+        }
+        create_pop = {
+          culture = vairian
+          size = 3000
+        }
+      }
   }
 
 
     s:STATE_JAWOREK = {
-
+      region_state:ZKW = {
+        create_pop = {
+          culture = vairian
+          size = 14848
+        }		
+        create_pop = {
+          culture = zakonish
+          size = 16000
+        }
+        create_pop = {
+          culture = wood_giant
+          size = 33994
+        }
+      }
   }
 
 
     s:STATE_MARAMAROVA = {
-
-  }
-
-
-    s:STATE_PSOFRICA = {
-
-  }
-
-
-    s:STATE_PANGEI = {
-
+      region_state:TSI = {
+        create_pop = {
+          culture = korafri
+          size = 56004
+        }
+      }
   }
 
 
     s:STATE_HALDORHEIMR = {
-
+      region_state:CTI = {
+        create_pop = {
+          culture = frost_giant
+          size = 38742
+        }
+      }
   }
 
 
     s:STATE_POLYNKALA = {
-
+      region_state:TSI = {
+        create_pop = {
+          culture = korafri
+          size = 169004
+        }
+      }
   }
 
 
     s:STATE_NGURULAN = {
-
+      region_state:LAR = {
+        create_pop = {
+          pop_type = clergy
+          culture = dumonian
+          religion = cult_of_the_sun
+          size = 100
+        }
+        create_pop = {
+          pop_type = capitalists
+          culture = dumonian
+          size = 1050
+        }
+        create_pop = {
+          culture = korafri
+          size = 182304
+        }
+        create_pop = {
+          culture = hawaiian
+          religion = cult_of_the_sun
+          size = 8500
+        }
+      }
   }
 
 
     s:STATE_HLIDSKJALF = {
-
+      region_state:HRA = {
+        create_pop = {
+          culture = frost_giant
+          size = 41089
+        }
+      }
   }
-
-
-    s:STATE_PANGO = {
-
-  }
-
 
     s:STATE_LUMO = {
-
+      region_state:DUM = {
+        create_pop = {
+          culture = korafri
+          size = 23840
+        }
+        create_pop = {
+          culture = dumonian
+          size = 563
+        }
+      }
   }
 
 
     s:STATE_ZEPHROPULU = {
-
+      region_state:DUF = {
+        create_pop = {
+          culture = korafri
+          size = 23840
+        }
+        create_pop = {
+          culture = dumonian
+          size = 384
+        }
+      }
   }
 
 
     s:STATE_BARICORA = {
-
+      region_state:DUF = {
+        create_pop = {
+          culture = korafri
+          size = 82000
+        }
+      }
   }
 
 
     s:STATE_ANGERTORP = {
-
+      region_state:SRO = {
+        create_pop = {
+          culture = frost_giant
+          size = 72814
+        }
+      }
   }
-
-
-    s:STATE_KALEA = {
-
-  }
-
 
     s:STATE_RAGNARKULL = {
-
+      region_state:SCL = {
+        create_pop = {
+          culture = frost_giant
+          size = 3580
+        }
+        create_pop = {
+          culture = fire_giant
+          size = 6044
+        }
+      }
   }
 
 
     s:STATE_VIGAKULL = {
-
+      region_state:FFG = {
+        create_pop = {
+          culture = frost_giant
+          size = 17396
+        }
+        create_pop = {
+          culture = frost_giant
+          size = 65200
+        }
+      }
   }
 
 
     s:STATE_FORRTORP = {
-
+      region_state:PYH = {
+        create_pop = {
+          culture = fire_giant
+          size = 51100
+        }
+        create_pop = {
+          culture = arcthar
+          size = 16096
+        }
+        create_pop = {
+          culture = frost_giant
+          size = 800
+        }
+      }
   }
 
 
     s:STATE_FRIGGASVEIT = {
-
+      region_state:ASI = {
+        create_pop = {
+          culture = frost_giant
+          size = 28791
+        }
+        create_pop = {
+          culture = cloud_giant
+          size = 15897
+        }
+      }
   }
 
 
     s:STATE_HERVIK = {
-
+      region_state:CRY = {
+        create_pop = {
+          culture = fire_giant
+          size = 5600
+        }
+        create_pop = {
+          culture = frost_giant
+          size = 3400
+        }
+      }
   }
-
-
-    s:STATE_EINHERJARHOLT = {
-
-  }
-
 
     s:STATE_EIRIKSHOF = {
-
+      region_state:ERT = {
+        create_pop = {
+          culture = frost_giant
+          size = 34132
+        }
+      }
   }
-
-
-    s:STATE_FRIGSHAVN = {
-
-  }
-
 
     s:STATE_HALSTEAD = {
-
+      region_state:SJA = {
+        create_pop = {
+          culture = frost_giant
+          size = 11254
+        }
+      }
   }
-
-
-    s:STATE_HODRSBORG = {
-
-  }
-
-
-    s:STATE_LOFNSTAD = {
-
-  }
-
 
     s:STATE_FREYRSFJORDR = {
-
-  }
-
-
-    s:STATE_SKADIHAVN = {
-
+      region_state:SPR = {
+        create_pop = {
+          culture = frost_giant
+          size = 10776
+        }
+        create_pop = {
+          culture = cloud_giant
+          size = 596
+        }
+      }
   }
 
 
     s:STATE_SIFSKER = {
-
+      region_state:MJO = {
+        create_pop = {
+          culture = frost_giant
+          size = 36204
+        }
+      }
   }
 
 
@@ -1265,7 +1796,16 @@ POPS = {
 
 
     s:STATE_SOLVIK = {
-
+      region_state:LEL = {
+        create_pop = {
+          culture = glethach
+          size = 34004
+        }
+        create_pop = {
+          culture = frost_giant
+          size = 6000
+        }
+      }
   }
 
 

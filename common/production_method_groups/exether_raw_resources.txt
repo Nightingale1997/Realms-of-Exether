@@ -29,3 +29,128 @@ pmg_arcane_building_cloud_collector = {
 		pm_cloud_compactor_cloud_collector
 	}
 }
+
+pmg_blubber = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_basic_blubber_production
+		pm_advanced_blubber_production
+		pm_perfect_blubber_production
+	}
+}
+
+pmg_blubber_military_production = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = { 
+	pm_blubber_standard_production
+	pm_blubber_military_production
+	}
+}
+
+pmg_base_building_wishstone_fields = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		default_building_wishstone_fields
+	}
+}
+pmg_base_building_seasnake_wharf = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_shore_snaking    #this sounds like a euphemism
+		pm_seasnake_trawlers
+		#pm_seasnake_manowars #not implemented yet
+		pm_steam_seasnake_trawlers
+	}
+}
+pmg_medical_supplies_seasnake_wharf = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_medical
+		pm_drink_and_a_prayer #make sure building causes at least 10% mortality else the liquor makes the workers live longer
+		pm_proper_medical_supplies_snakes
+		pm_potions_of_fortitude_snakes
+	}
+}
+pmg_base_building_leviathan_outpost = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+				pm_shore_leviathan_hunting
+				pm_wooden_leviathan_ships
+				pm_manowar_leviathan_ships
+				pm_steam_leviathan_ships
+			}
+}
+pmg_medical_supplies_leviathan_outpost = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_medical
+		pm_drink_and_a_prayer #make sure building causes at least 10% mortality else the liquor makes the workers live longer
+		pm_proper_medical_supplies_leviathan
+		pm_potions_of_fortitude_leviathan
+	}
+}
+pmg_airplanes_leviathan_outpost = {
+	#texture =
+	production_methods = {
+		pm_leviathan_no_airplanes
+		pm_leviathan_airplanes
+	}
+}
+pmg_refrigeration_building_seasnake_wharf = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_unrefrigerated
+		pm_refrigerated_storage_building_seasnake_wharf
+		pm_refrigerated_rail_cars_building_seasnake_wharf
+		pm_flash_freezing_building_seasnake_wharf
+	}
+}
+
+pmg_mining_equipment_building_wishstone_mine = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_picks_and_shovels_building_wishstone_mine
+		pm_atmospheric_engine_pump_building_wishstone_mine
+		pm_condensing_engine_pump_building_wishstone_mine
+		pm_godsblood_pump_building_wishstone_mine
+		pm_diesel_pump_building_wishstone_mine
+	}
+}
+
+pmg_explosives_building_wishstone_mine = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_explosives
+		pm_nitroglycerin_building_wishstone_mine
+		pm_wishstone_building_wishstone_mine
+		pm_dynamite_building_wishstone_mine
+	}
+}
+
+pmg_steam_automation_building_wishstone_mine = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_no_steam_automation
+		pm_rockrollers_building_wishstone_mine
+		pm_steam_donkey_building_wishstone_mine
+	}
+}
+
+pmg_train_automation_building_wishstone_mine = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_rail_transport_mine
+	}
+}
+
+pmg_ownership_capital_building_wishstone_mine = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	production_methods = {
+		pm_merchant_guilds_building_coal_mine
+		pm_privately_owned_building_coal_mine
+		pm_publicly_traded_building_coal_mine
+		pm_government_run_building_coal_mine
+		pm_worker_cooperative_building_coal_mine
+	}
+}

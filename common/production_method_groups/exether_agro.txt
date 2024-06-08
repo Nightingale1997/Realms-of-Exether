@@ -1,0 +1,37 @@
+﻿pmg_farms_enhancements = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_farms_no_enhancement
+		pm_farms_basic_earth_shaping
+		pm_farms_mass_plant_growth
+	}
+}
+
+pmg_rice_farms_enhancements = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_rice_farms_no_enhancement
+		pm_rice_farms_basic_earth_shaping
+		pm_rice_farms_mass_plant_growth
+	}
+}
+
+pmg_livestock_enhancements = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_livestock_no_enhancement
+		pm_livestock_fertility_rites
+		pm_livestock_magical_selection
+	}
+}
+
+
+##Regionals##
+
+pmg_secondary_building_rice_farm_leechgardens = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_no_secondary
+		pm_leechgardens
+	}
+}

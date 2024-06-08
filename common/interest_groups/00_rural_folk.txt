@@ -25,38 +25,22 @@
 		ig:ig_rural_folk = {
 			if = {
 				limit = {
-					owner = { c:RUS ?= this }
-				}
-				set_ig_trait = ig_trait:ig_trait_old_ways
-				set_ig_trait = ig_trait:ig_trait_honest_work
-				set_ig_trait = ig_trait:ig_trait_obshchina
-			}
-			else_if = {
-				limit = {
-					owner = { c:EGY ?= this }
-				}
-				set_interest_group_name = ig_fellahin
-				set_ig_trait = ig_trait:ig_trait_old_ways
-				set_ig_trait = ig_trait:ig_trait_fellahin
-				set_ig_trait = ig_trait:ig_trait_farmers_markets
-			}
-			else_if = {
-				limit = {
-				owner = { 
-					religion = {
-						AND = {
-							has_discrimination_trait = nature_domain
-							NOT = {
-								has_discrimination_trait = chivalrous_heritage
-						}
+					owner = { 
+						religion = {
+							AND = {
+								has_discrimination_trait = nature_domain
+								NOT = {
+									has_discrimination_trait = chivalrous_heritage
+								}
+							}
+						}	
 					}
-				}
 				}
 				set_interest_group_name = ig_foragers
 				set_ig_trait = ig_trait:ig_trait_old_ways
 				set_ig_trait = ig_trait:ig_trait_fellahin
 				set_ig_trait = ig_trait:ig_trait_guests_of_the_forest
-				add_ideology = ideology_luddite_devout
+				add_ideology = ideology_luddite_ig
 			}
 			else = {
 				set_ig_trait = ig_trait:ig_trait_old_ways
@@ -65,6 +49,7 @@
 			}
 		}
 	}
+
 	on_disable = {}
 	on_character_ig_membership = {}
 

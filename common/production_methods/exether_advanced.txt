@@ -19,7 +19,7 @@ pm_pest_control = {
 	texture = "gfx/interface/icons/production_method_icons/realist_art.dds"
 
 	unlocking_technologies = {
-		monster_hunting
+		monster_hunters
 	}
 
 	building_modifiers = {
@@ -161,8 +161,15 @@ pm_independent_adventurers = {
 
 pm_trophy_hunting = {
 	texture = "gfx/interface/icons/production_method_icons/trophy_hunting.dds"
-	unscaled = {
-		building_adventurers_mortality_mult = 0.1
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_monster_essence_add = 5
+		}
+
+		unscaled = {
+			building_adventurers_mortality_mult = 0.1
+		}
 	}
 }
 
@@ -175,7 +182,6 @@ pm_community_service = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_trinkets_add = -2
 			goods_output_services_add = 5
 		}
 
@@ -196,7 +202,6 @@ pm_objects_of_power = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_trinkets_add = -2
 			goods_output_wishstone_add = 2
 		}
 
@@ -328,4 +333,19 @@ pm_modern_port_airship = {
 			state_infrastructure_add = 10
 		}
 	}
-}	
+}
+
+pm_magocrats = {
+	texture = "gfx/interface/icons/production_method_icons/ownership_aristocrats.dds"
+	
+	unlocking_laws = {
+		law_court_mages
+	}
+	
+	building_modifiers = {
+		level_scaled = {
+			building_employment_hedge_wizards_add = 250
+			building_employment_bureaucrats_add = 250
+		}
+	}			
+}

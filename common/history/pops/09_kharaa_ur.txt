@@ -1,6 +1,6 @@
-POPS = {
+﻿POPS = {
   s:STATE_KHAULAN = {
-    region_state:YUL = {
+    region_state:SUN = {
       create_pop = {
         culture = khanaruk
         size = 69772
@@ -1140,7 +1140,7 @@ POPS = {
   }
 
   s:STATE_KIYOMORIN = {
-    region_state:SUN = {
+    region_state:GOL = {
       create_pop = {
         culture = yakamimbo
         size = 30000
@@ -1149,7 +1149,7 @@ POPS = {
   }
 
   s:STATE_BATOKYOAN = {
-    region_state:SUN = {
+    region_state:GOL = {
       create_pop = {
         culture = yakamimbo
         size = 308821
@@ -1158,7 +1158,7 @@ POPS = {
   }
 
   s:STATE_KHULEKKA = {
-    region_state:SUN = {
+    region_state:GOL = {
       create_pop = {
         culture = yakamimbo
         size = 69228
@@ -1432,32 +1432,97 @@ POPS = {
   }
 
   s:STATE_PLACEHOLDER_EMPTY_1 = {
+    region_state:ONG = {
+			create_pop = {
+				culture = onghori
+				size = 68600 
+			}
+			create_pop = {
+				culture = cliffpercher
+				size = 3004
+			}
+		}
   }
 
   s:STATE_PLACEHOLDER_EMPTY_2 = {
-  }
-
-  s:STATE_PLACEHOLDER_EMPTY_3 = {
+    region_state:ONG = {
+			create_pop = {
+				culture = kojiniu
+				size = 10500
+			}		
+			create_pop = {
+				culture = onghori
+				size = 22000
+			}
+		}
   }
 
   s:STATE_PLACEHOLDER_EMPTY_4 = {
-  }
-
-  s:STATE_PLACEHOLDER_EMPTY_5 = {
-  }
-
-  s:STATE_PLACEHOLDER_EMPTY_6 = {
-  }
-
-  s:STATE_PLACEHOLDER_EMPTY_7 = {
+    region_state:ONG = {
+			create_pop = {
+				culture = onghori
+				size = 31804
+			}
+		}
   }
 
   s:STATE_PLACEHOLDER_EMPTY_8 = {
+    region_state:ONG = {
+			create_pop = {
+				culture = sandcircler
+				size = 43200
+			}
+			create_pop = {
+				culture = onghori
+				size = 151384
+			}
+			create_pop = {
+				culture = kojiniu
+				size = 16080
+			}
+		}
+  }
+
+  s:STATE_PLACEHOLDER_EMPTY_7 = {
+    region_state:ONG = {
+			create_pop = {
+				culture = sandcircler
+				size = 53200
+			}
+			create_pop = {
+				culture = onghori
+				size = 201384
+			}
+			create_pop = {
+				culture = kojiniu
+				size = 20080
+			}
+		}
+  }
+
+  s:STATE_PLACEHOLDER_EMPTY_6 = {
+    region_state:ONG = {
+			create_pop = {
+				culture = onghori
+				size = 172200
+			}
+			create_pop = {
+				culture = kojiniu
+				size = 12000
+			}
+		}
   }
 
   s:STATE_PLACEHOLDER_EMPTY_9 = {
-  }
-
-  s:STATE_PLACEHOLDER_EMPTY_10 = {
+    region_state:ONG = {
+			create_pop = {
+				culture = onghori
+				size = 59200
+			}
+			create_pop = {
+				culture = kojiniu
+				size = 4000
+			}
+		}
   }
 }

@@ -1,0 +1,152 @@
+﻿namespace = airship
+
+airship.10 = {  #this is the event that triggers new airship routes as new airship docks are made
+	type = country_event
+	placement = ROOT
+	hidden = yes
+
+	trigger = {
+		OR = {
+			year >= 1210
+			OR = {
+				any_scope_state = {
+					#state_region = s:STATE_ACRAS ##random state
+					any_scope_building = {
+						is_building_type = building_airship_dock
+					}
+				}
+				#more states go here
+			}	
+		}
+		NOT = {
+			has_variable = unnamed_airship #prevents the event from triggering endlessly
+		}
+	}
+
+	immediate = {
+		set_variable = unnamed_airship 
+		random_scope_state = {
+			save_scope_as = hidden_canal_state
+		}
+		scope:hidden_canal_state = {
+			create_building = {
+				building = building_goes_here
+				level = 1
+
+			}	
+		}
+	}
+}
+
+airship.11 = {  #this is the event that triggers new airship routes as new airship docks are made
+	type = country_event
+	placement = ROOT
+	hidden = yes
+
+	trigger = {
+		OR = {
+			year >= 1210
+			OR = {
+				any_scope_state = {
+					state_region = s:STATE_BANOKIK 
+					any_scope_building = {
+						is_building_type = building_airship_dock
+					}
+				}
+
+				any_scope_state = {
+					state_region = s:STATE_NAN 
+					any_scope_building = {
+						is_building_type = building_airship_dock
+					}
+				}
+
+				any_scope_state = {
+					state_region = s:STATE_LIPOLAN
+					any_scope_building = {
+						is_building_type = building_airship_dock
+					}
+				}
+				#more states go here
+			}	
+		}
+		NOT = {
+			has_variable = wolkara_airship 
+		}
+	}
+
+	immediate = {
+
+		set_variable = wolkara_airship 
+		random_scope_state = {
+			save_scope_as = hidden_canal_state
+		}
+		scope:hidden_canal_state = {
+			create_building = {
+				building = building_wolkara_heights_connection
+				level = 1
+
+			}	
+		}
+	}
+}
+
+airship.12 = {  #this is the event that triggers new airship routes as new airship docks are made
+	type = country_event
+	placement = ROOT
+	hidden = yes
+
+	trigger = {
+		OR = {
+			year >= 1210
+			OR = {
+				any_scope_state = {
+					state_region = s:STATE_FOBAN
+					any_scope_building = {
+						is_building_type = building_airship_dock
+					}
+				}
+
+				any_scope_state = {
+					state_region = s:STATE_POFIKAN
+					any_scope_building = {
+						is_building_type = building_airship_dock
+					}
+				}
+
+				any_scope_state = {
+					state_region = s:STATE_BIFAN
+					any_scope_building = {
+						is_building_type = building_airship_dock
+					}
+				}
+
+				any_scope_state = {
+					state_region = s:STATE_KOTIK
+					any_scope_building = {
+						is_building_type = building_airship_dock
+					}
+				}
+				#more states go here
+			}	
+		}
+		NOT = {
+			has_variable = lumanta_airship 
+		}
+	}
+
+	immediate = {
+
+		set_variable = lumanta_airship 
+		random_scope_state = {
+			save_scope_as = hidden_canal_state
+		}
+		scope:hidden_canal_state = {
+			create_building = {
+				building = building_lumantan_heights_connection
+				level = 1
+
+			}	
+		}
+	}
+}
