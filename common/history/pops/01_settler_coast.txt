@@ -663,6 +663,27 @@ s:STATE_THE_AMBER_RUN_3 = {
 		}
   }
 
+  s:STATE_MISTREACH_2 = {
+	region_state:PRI = {
+		create_pop = {
+			culture = bossardi
+			size = 304908
+		}
+		create_pop = {
+			culture = yelfi
+			size = 3196
+		}
+		create_pop = {
+			culture = wealder
+			size = 372400
+		}
+		create_pop = {
+			culture = dorite
+			size = 183996
+		}
+	}
+}
+
   s:STATE_VICEROYS_PEARL = {
 		region_state:ARR = {
 			create_pop = {
