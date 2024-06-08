@@ -1104,20 +1104,53 @@ slightly_underweight_pop_trigger = {
 	scope:pop = {
 		OR = {
 			AND = {
-				pop_weight_modifier_scale < 25	
-				standard_of_living >= 10		
+				NOT = {
+					culture = {
+						OR = {
+							has_discrimination_trait = ogre_heritage
+							has_discrimination_trait = halfling_heritage
+						}  	
+					}	
+				}
+				OR = {
+					AND = {
+						pop_weight_modifier_scale < 25	
+						standard_of_living >= 10		
+					}
+					AND = {
+						standard_of_living >= 5
+						standard_of_living < 10
+						pop_weight_modifier_scale >= 25
+						pop_weight_modifier_scale < 50
+					}			
+					AND = {
+						standard_of_living < 5
+						pop_weight_modifier_scale >= 50
+					}		
+				}	
 			}
 			AND = {
-				standard_of_living >= 5
-				standard_of_living < 10
-				pop_weight_modifier_scale >= 25
-				pop_weight_modifier_scale < 50
-			}			
-			AND = {
-				standard_of_living < 5
-				pop_weight_modifier_scale >= 50
-			}		
-		}	
+				culture = {
+					OR = {
+						has_discrimination_trait = ogre_heritage
+						has_discrimination_trait = halfling_heritage
+					}  	
+				}	
+				OR = {
+					AND = {
+						pop_weight_modifier_scale < 25
+						standard_of_living >= 5
+						standard_of_living < 10
+					}		
+					AND = {
+						standard_of_living < 5
+						pop_weight_modifier_scale >= 25
+						pop_weight_modifier_scale < 50
+					}		
+				}	
+			}
+		}
+
     }
 }
 
@@ -1127,6 +1160,14 @@ underweight_pop_trigger = {
 		AND = {
 			exists = scope:pop
 			scope:pop = {
+				NOT = {
+					culture = {
+						OR = {
+							has_discrimination_trait = halfling_heritage
+							has_discrimination_trait = ogre_heritage
+						}  	
+					}	
+				}
 				OR = {
 					culture = {
 						OR = {
