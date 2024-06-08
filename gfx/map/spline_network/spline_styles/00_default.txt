@@ -185,7 +185,7 @@ pavedroad = {
 			texture = { file = "gfx/map/spline_network/air_route_diffuse.dds" }
 			texture = { file = "gfx/models/debug/no_normal.dds" srgb = no }
 			texture = { file = "gfx/map/spline_network/naval_route_properties.dds" }
-			texture = { file = "gfx/map/spline_network/air_route_diffuse_flatmap.dds" }
+			texture = { file = "gfx/map/spline_network/naval_route_diffuse_flatmap_highlight.dds" }
 			texture = { file = "gfx/models/debug/no_normal.dds" srgb = no }
 			texture = { file = "gfx/map/spline_network/naval_route_properties.dds" }
 		}
@@ -193,8 +193,8 @@ pavedroad = {
 			name = "Highlight"
 			texture = { file = "gfx/map/spline_network/naval_route_diffuse_highlight.dds" }
 			texture = { file = "gfx/models/debug/no_normal.dds" srgb = no }
-			texture = { file = "gfx/map/spline_network/air_route_properties.dds" }
-			texture = { file = "gfx/map/spline_network/air_route_diffuse_flatmap_highlight.dds" }
+			texture = { file = "gfx/map/spline_network/naval_route_properties.dds" }
+			texture = { file = "gfx/map/spline_network/naval_route_diffuse_flatmap_highlight.dds" }
 			texture = { file = "gfx/models/debug/no_normal.dds" srgb = no }
 			texture = { file = "gfx/map/spline_network/naval_route_properties.dds" }
 		}
@@ -287,20 +287,20 @@ air_route = {
 			name = "Default"
 			texture = { file = "gfx/map/spline_network/air_route_diffuse.dds" }
 			texture = { file = "gfx/models/debug/no_normal.dds" srgb = no }
-			texture = { file = "gfx/map/spline_network/air_route_properties.dds" }
-			texture = { file = "gfx/map/spline_network/air_route_diffuse_flatmap.dds" }
+			texture = { file = "gfx/map/spline_network/naval_route_properties.dds" }
+			texture = { file = "gfx/map/spline_network/naval_route_diffuse_flatmap_highlight.dds" }
 			texture = { file = "gfx/models/debug/no_normal.dds" srgb = no }
-			texture = { file = "gfx/map/spline_network/air_route_properties.dds" }
+			texture = { file = "gfx/map/spline_network/naval_route_properties.dds" }
 		}
 
 		texture_set = {
 			name = "Highlight"
 			texture = { file = "gfx/map/spline_network/air_route_diffuse_highlight.dds" }
 			texture = { file = "gfx/models/debug/no_normal.dds" srgb = no }
-			texture = { file = "gfx/map/spline_network/air_route_properties.dds" }
-			texture = { file = "gfx/map/spline_network/air_route_diffuse_flatmap_highlight.dds" }
+			texture = { file = "gfx/map/spline_network/naval_route_properties.dds" }
+			texture = { file = "gfx/map/spline_network/naval_route_diffuse_flatmap_highlight.dds" }
 			texture = { file = "gfx/models/debug/no_normal.dds" srgb = no }
-			texture = { file = "gfx/map/spline_network/air_route_properties.dds" }
+			texture = { file = "gfx/map/spline_network/naval_route_properties.dds" }
 		}
 	}
 	connections = hidden

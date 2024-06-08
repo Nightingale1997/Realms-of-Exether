@@ -35,11 +35,13 @@
 
 		if = {
 			limit = {
-				religion = {
-					AND = {
-						has_discrimination_trait = nature_domain
-						NOT = {
-							has_discrimination_trait = chivalrous_heritage
+				owner = {
+					religion = {
+						AND = {
+							has_discrimination_trait = nature_domain
+							NOT = {
+								has_discrimination_trait = chivalrous_heritage
+							}
 						}
 					}
 				}
@@ -53,15 +55,16 @@
 
 		if = {
 			limit = {
-				OR = {
-					religion = {
-						has_discrimination_trait = death_domain
-					}
-					religion = {
-						has_discrimination_trait = evil_heritage
+				owner = {
+					OR = {
+						religion = {
+							has_discrimination_trait = death_domain
+						}
+						religion = {
+							has_discrimination_trait = evil_heritage
+						}
 					}
 				}
-				
 			}
 			ig:ig_devout = {
 				remove_ideology = ideology_pious
@@ -71,8 +74,10 @@
 		if = {
 			limit = {
 				OR = {
-					religion = {
-						has_discrimination_trait = magoclast
+					owner = {
+						religion = {
+							has_discrimination_trait = magoclast
+						}
 					}
 				}
 				
