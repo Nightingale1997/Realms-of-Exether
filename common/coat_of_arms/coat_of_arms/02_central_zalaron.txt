@@ -14,6 +14,36 @@ ANW = {
 	
 }
 
+#Rannor
+CLL = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue_light"
+	
+	colored_emblem = {
+		texture = "ce_roe_ornate_border.dds"
+		color1 = "black"
+		color2 = "yellow"
+		color3 = "white"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
+	}	
+
+	colored_emblem = {
+		texture = "ce_royal_mantle.dds"
+		color1 = "black"
+		color2 = "yellow"
+		color3 = "white"
+		instance = { scale = { 0.75 0.75 } position = { 0.5 0.5 } }	
+	}	
+
+	colored_emblem = {
+		texture = "ce_bird_glt.dds"
+		color1 = "black"
+		color2 = "yellow"
+		color3 = "white"
+		instance = { scale = { 0.45 0.45 } position = { 0.5 0.55 } }	
+	}	
+}
+
 #Teferet
 TEF = {
 	pattern = "pattern_solid.tga"
