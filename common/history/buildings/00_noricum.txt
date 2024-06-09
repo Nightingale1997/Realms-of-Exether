@@ -1841,6 +1841,7 @@
           reserves=1
           activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
         }
+        create_building={
         building="building_rye_farm"
         level=4
         reserves=1
@@ -2179,7 +2180,7 @@
 
     s:STATE_POLYNKALA = {
 
-  }
+    }
 
 
     s:STATE_NGURULAN = {
@@ -2240,7 +2241,7 @@
 
     s:STATE_HLIDSKJALF = {
 
-  }
+    }
 
     s:STATE_LUMO = {
       region_state:DUM={
@@ -2252,71 +2253,71 @@
         }
       }
 
-  }
+    }
 
 
     s:STATE_ZEPHROPULU = {
       region_state:DUF={
       }
-  }
+    }
 
 
     s:STATE_BARICORA = {
       region_state:DUF={
       }
-  }
+    }
 
 
     s:STATE_ANGERTORP = {
 
-  }
+    }
 
     s:STATE_RAGNARKULL = {
 
-  }
+    }
 
 
     s:STATE_VIGAKULL = {
 
-  }
+    }
 
 
     s:STATE_FORRTORP = {
 
-  }
+    }
 
 
     s:STATE_FRIGGASVEIT = {
 
-  }
+    }
 
 
     s:STATE_HERVIK = {
 
-  }
+    }
 
     s:STATE_EIRIKSHOF = {
 
-  }
+    }
 
     s:STATE_HALSTEAD = {
 
-  }
+    }
 
 
     s:STATE_FREYRSFJORDR = {
 
-  }
+    }
 
 
     s:STATE_SIFSKER = {
 
-  }
+    }
 
 
     s:STATE_GRYTINGARIK = {
 
-  }
+    }
 
 
     s:STATE_SOLVIK = {
@@ -2334,8 +2335,6 @@
           activate_production_methods={ "pm_no_organization" }
         }
       }
+    }
+  
   }
-
-
-
-}
