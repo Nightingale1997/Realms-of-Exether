@@ -278,3 +278,33 @@ DEFAULT = {
 		}
 	}
 }
+
+DUM = { # Dumonia
+	dynamic_country_name = { # Dumonia Empire
+	name = dyn_c_dumonia_empire
+	adjective = dyn_c_dumonia_empire
+
+	is_main_tag_only = yes
+	priority = 10
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { 
+				has_law = law_type:law_monarchy
+			}
+
+		}
+	}
+	dynamic_country_name = { # Dumonia
+		name = dyn_c_dumonia
+		adjective = dyn_c_dumonia
+		
+		is_main_tag_only = yes
+		priority = 5
+		
+		trigger = {
+			exists = scope:actor
+		}
+	}
+
+}

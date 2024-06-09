@@ -47,4 +47,12 @@
 			target = c:QAR.market
 		}
 	}
+	c:WHX ?= {
+		create_trade_route = {
+			goods = iron
+			level = 3
+			direction = import
+			target = c:VAI.market
+		}
+	}
 }

@@ -72,6 +72,53 @@ LGZ = {
 	capital = STATE_GJAKOVA
 }
 
+#Varbatia
+VBT = {
+	color = rgb{ 15 35 65 } 
+
+	country_type = unrecognized 
+
+	tier = grand_principality
+
+	cultures = { varbat } 
+	capital = STATE_GJAKOVA
+}
+
+#Xhurloban
+XLB = {
+	color = rgb{ 85 75 25 } 
+
+	country_type = unrecognized 
+
+	tier = grand_principality
+
+	cultures = { varbat } 
+	capital = STATE_GJAKOVA
+}
+
+#Khalkon
+KLK = {
+	color = rgb{ 35 25 2 } 
+
+	country_type = unrecognized 
+
+	tier = grand_principality
+
+	cultures = { kaalkid } 
+	capital = STATE_DIYINAKHAD
+}
+
+HOF = {
+	color = rgb{ 75 15 25 } 
+
+	country_type = unrecognized 
+
+	tier = kingdom
+
+	cultures = { kaalkid tozhi } 
+	capital = STATE_DIYINAKHAD
+}
+
 #Kullgrim
 KGM = {
 	color = rgb{ 75 5 75 } 
@@ -106,6 +153,18 @@ TUF = {
 	tier = principality
 
 	cultures = { xhurlob } 
+	capital = STATE_BERATIA
+}
+
+#Kuronilbogan
+KNG = {
+	color = rgb{ 175 15 175 } 
+
+	country_type = unrecognized 
+
+	tier = empire
+
+	cultures = { xhurlob varbat rethrashar dales_togrul } 
 	capital = STATE_BERATIA
 }
 
@@ -344,7 +403,7 @@ GAV = {
 
 	country_type = unrecognized
 	
-	tier = empire
+	tier = kingdom
 	
 	cultures = { varbat xhurlob rethrashar }
 	capital = STATE_BERATIA
