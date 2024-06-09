@@ -1,4 +1,5 @@
 ﻿MILITARY_FORMATIONS = {
+	#Worlds end and Ravencliff armys and armadas	
 	c:JUR = {
 		create_military_formation = {
 			type = army
@@ -61,4 +62,629 @@
 			transfer_to_formation = scope:incinerator_armada_fleet
 		}
 	}
+	c:DOV = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_central_noricum
+			name = Great_Dovedalian_Army
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ROSKIRK
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_THORNWALL
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_BALLYNE
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_ROSKIRK
+				count = 2
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_BALLYNE
+				count = 1
+			}
+			save_scope_as = great_dovedalian_army
+		}
+
+		create_character = {
+			template = DOV_alf_cobcroft
+			save_scope_as = cobcroft_gen
+		}
+
+		scope:cobcroft_gen = {
+			transfer_to_formation = scope:great_dovedalian_army
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_central_noricum
+			name = dovedalian_armada
+		
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_MAESBELAN
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_MAESBELAN
+				count = 3
+			}
+			save_scope_as = dovedalian_fleet
+		}
+
+		create_character = {
+			template = DOV_stafford_clarke
+			save_scope_as = clarke_adm
+		}
+		scope:clarke_adm = {
+			transfer_to_formation = scope:dovedalian_fleet
+		}
+	}
+	c:RVC = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_ravencliff
+			name = The_White_Army
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_RAVENCLIFF
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_SHROUDGUARD
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_YSTRAD
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_BLACKDON
+				count = 2
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_RAVENCLIFF
+				count = 1
+			}
+			save_scope_as = white_army
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_ravencliff
+			name = black_armada
+		
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_PONTBRAN
+				count = 3
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_PONTBRAN
+				count = 6
+			}
+			save_scope_as = black_fleet
+		}
+
+	}
+	c:AUM = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_central_noricum
+			name = Holy_Sacred_Army
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_TEMPLE_HILL
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_COLNAIG
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_FALNALECK
+				count = 2
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_TEMPLE_HILL
+				count = 2
+			}
+			save_scope_as = hs_army
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_central_noricum
+			name = pontifical_armada
+		
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_TEMPLE_HILL
+				count = 2
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_TEMPLE_HILL
+				count = 4
+			}
+			save_scope_as = pontifical_fleet
+		}
+
+	}
+	c:ROF = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_worlds_end
+			name = First_Army
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_BANCFAN
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_CAECARW
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_BANCFAN
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_BANCFAN
+				count = 1
+			}
+			save_scope_as = first_army
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_worlds_end
+			name = the_great_fleet
+		
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_BANCFAN
+				count = 2
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_CAECARW
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_CAECARW
+				count = 2
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_BANCFAN
+				count = 3
+			}
+			save_scope_as = the_great_fleet
+		}
+
+	}
+	c:FOX = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_ravencliff
+			name = The_Red_Army
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_INCHMARA
+				count = 8
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_HARTHALGH
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_GWYNWEN
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_GLYNFFORDD
+				count = 4
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_INCHMARA
+				count = 3
+			}
+			save_scope_as = red_army
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_ravencliff
+			name = black_armada
+		
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_INCHMARA
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_INCHMARA
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_GWYNWEN
+				count = 3
+			}
+			save_scope_as = black_fleet
+		}
+
+	}
+	#Yanger steppe armys and armadas	
+	c:EVR = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_yanger_steppe
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_TALNANT
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_TALNANT
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_TALNANT
+				count = 1
+			}
+		}
+
+	}			
+	c:MBR = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_yanger_steppe
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_GLASLIESH
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_TYMANS_FOLLY
+				count = 2
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_TYMANS_FOLLY
+				count = 1
+			}
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_yanger_steppe
+		
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_GLASLIESH
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_GLASLIESH
+				count = 3
+			}
+		}
+
+	}
+	c:BIE = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_yanger_steppe
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KENLYNE
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_COLESSIE
+				count = 2
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_KENLYNE
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_COLESSIE
+				count = 1
+			}
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_yanger_steppe
+		
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_KENLYNE
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_KENLYNE
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_COLESSIE
+				count = 3
+			}
+		}
+
+	}
+	c:DRK = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_yanger_steppe
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_CASTELL_DRYSGOLMARK
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_CASTELL_DRYSGOLMARK
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_CASTELL_DRYSGOLMARK
+				count = 1
+			}
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_yanger_steppe
+		
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_CASTELL_DRYSGOLMARK
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_CASTELL_DRYSGOLMARK
+				count = 2
+			}
+		}
+
+	}	
+	#Coldreach armys and armadas	
+
+	#East Everfrost armys and armadas	
+	c:SRN = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_east_everfrost
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_EOGHANS_SPEAR
+				count = 4
+			}
+
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_east_everfrost
+		
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_GLASLIESH
+				count = 3
+			}
+		}
+
+	}
+	c:CVE = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_east_everfrost
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_GLENKELD
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_DUNMAFAR
+				count = 3
+			}
+
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_east_everfrost
+		
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_GLENKELD
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_GLENKELD
+				count = 2
+			}
+		}
+
+	}
+	c:BRR = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_east_everfrost
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_HAFODFAN
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_TANISTS_RETREAT
+				count = 3
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_TANISTS_RETREAT
+				count = 1
+			}
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_east_everfrost
+		
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_TANISTS_RETREAT
+				count = 2
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_TANISTS_RETREAT
+				count = 4
+			}
+		}
+
+	}
+	c:OEX = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_east_everfrost
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ELDBERG
+				count = 3
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_ELDBERG
+				count = 2
+			}
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_east_everfrost
+		
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_ELDBERG
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_ELDBERG
+				count = 4
+			}
+		}
+
+	}
+	c:BFU = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_east_everfrost
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_BALATHOUL
+				count = 3
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_BALATHOUL
+				count = 1
+			}
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_east_everfrost
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_BALATHOUL
+				count = 6
+			}
+		}
+
+	}		
 }

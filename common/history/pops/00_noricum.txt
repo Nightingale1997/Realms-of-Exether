@@ -374,7 +374,22 @@
 
 
     s:STATE_ICEWIND = {
-
+      region_state:ICE = {
+        create_pop = {
+          culture = avalorean
+          size = 340200
+        }
+        create_pop = {
+          culture = nivaskyan
+          size = 270100
+        }
+        create_pop = {
+          culture = dumonian
+          size = 104000
+        }
+      }
+      add_homeland = avalorean
+      add_homeland = nivaskyan
   }
 
 
@@ -517,12 +532,28 @@
 
 
     s:STATE_TANISTS_RETREAT = {
-
+      region_state:BRR = {
+        create_pop = {
+          culture = grendleth
+          size = 472090
+        }
+        create_pop = {
+          culture = glethach
+          size = 127802
+        }
+      }
+      add_homeland = cu:grendleth    
   }
 
 
     s:STATE_EOGHANS_SPEAR = {
-
+      region_state:SRN = {
+        create_pop = {
+          culture = grendleth
+          size = 670190
+        }
+      }
+      add_homeland = cu:grendleth
   }
 
 
@@ -1000,22 +1031,72 @@
 
 
     s:STATE_SNOWBREACH = {
-
+      region_state:ICE = {
+        create_pop = {
+          culture = nivaskyan
+          size = 340120
+        }
+        create_pop = {
+          culture = avalorean
+          size = 230502
+        }
+        create_pop = {
+          culture = dumonian
+          size = 450200
+        }
+      }
+      add_homeland = cu:nivaskyan
   }
 
 
-    s:STATE_COLDSHEAR = {
 
+    s:STATE_COLDSHEAR = {
+      region_state:ICE = {
+        create_pop = {
+          culture = dumonian
+          size = 120345
+        }
+        create_pop = {
+          culture = nivaskyan
+          size = 320918
+        }
+        create_pop = {
+          culture = avalorean
+          size = 201380
+        }
+      }
+      add_homeland = cu:nivaskyan
   }
 
 
     s:STATE_GLENKELD = {
+      region_state:CVE = {
+        create_pop = {
+          culture = grendleth
+          size = 320125
+        }
+        create_pop = {
+          culture = glethach
+          size = 78102
+        }
+      }
+      add_homeland = cu:grendleth
 
   }
 
 
     s:STATE_DUNMAFAR = {
-
+      region_state:CVE = {
+        create_pop = {
+          culture = grendlenth
+          size = 330190
+        }
+        create_pop = {
+          culture = glethach
+          size = 240180
+        }
+      }
+      add_homeland = cu:grendleth
   }
 
 
@@ -1224,7 +1305,13 @@
 
 
     s:STATE_HAFODFAN = {
-
+      region_state:BRR = {
+        create_pop = {
+          culture = grendleth
+          size = 216800
+        }
+      }
+      add_homeland = cu:grendleth    
   }
 
 
@@ -1362,7 +1449,26 @@
 
 
     s:STATE_FALMAKELD = {
-
+      region_state:ICE = {
+        create_pop = {
+          culture = dumonian
+          size = 870120
+        }
+        create_pop = {
+          culture = grendleth
+          size = 403000
+        }
+        create_pop = {
+          culture = nivaskyan
+          size = 120650
+        }
+        create_pop = {
+          culture = avalorean
+          size = 170890
+        }
+      }
+      add_homeland = grendleth
+      add_homeland = avalorean
   }
 
 
@@ -1395,7 +1501,21 @@
 
 
     s:STATE_HJELTIAS_GLACIER = {
-
+      region_state:ICE = {
+        create_pop = {
+          culture = grendleth
+          size = 460300
+        }
+        create_pop = {
+          culture = avalorean
+          size = 140900
+        }
+        create_pop = {
+          culture = nivaskyan
+          size = 120000
+        }
+      }
+      add_homeland = grendleth
   }
 
 
@@ -1791,7 +1911,26 @@
 
 
     s:STATE_GRYTINGARIK = {
-
+      region_state:ICE = {
+        create_pop = {
+          culture = avalorean
+          size = 450120
+        }
+        create_pop = {
+          culture = nivaskyan
+          size = 130290
+        }
+        create_pop = {
+          culture = dumonian
+          size = 240780
+        }
+        create_pop = {
+          culture = grendleth
+          size = 340200
+        }
+      }
+      add_homeland = cu:avalorean
+      add_homeland = cu:grendleth
   }
 
 

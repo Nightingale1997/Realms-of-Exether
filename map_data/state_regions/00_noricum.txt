@@ -452,6 +452,10 @@ STATE_TANISTS_RETREAT = {
     farm = x9DC9A1
     mine = xC89CB0
     port = xD18FEB
+    capped_resources = {
+        bg_logging = 5
+        bg_fishing = 7
+    }
     naval_exit_id = 3022
 }
 STATE_EOGHANS_SPEAR = {
@@ -463,6 +467,11 @@ STATE_EOGHANS_SPEAR = {
     farm = xAFC098
     mine = xB2F961
     port = xC06BCF
+    capped_resources = {
+        bg_logging = 5
+        bg_squidding = 4
+        bg_fishing = 7
+    }
     naval_exit_id = 3022
 }
 STATE_MIDCLACK = {
@@ -608,8 +617,11 @@ STATE_ELDBERG = {
     arable_land = 5
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
-        bg_sulfur_mining = 20
-        bg_whaling = 5
+        bg_sulfur_mining = 12
+        bg_coal_mining = 8
+        bg_iron_mining = 7
+        bg_lead_mining = 7
+        bg_whaling = 4
         bg_squidding = 4
         bg_fishing = 3
     }
@@ -660,6 +672,11 @@ STATE_DRUMAGAR = {
     farm = x89F6F8
     mine = x8EE089
     port = x96CDB7
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 1
+        bg_fishing = 5
+    }
     naval_exit_id = 3039
 }
 STATE_LOCHTYRE = {
@@ -1003,6 +1020,11 @@ STATE_GLENKELD = {
     farm = xA197C5
     mine = xA29BCD
     port = xBDBCD0
+    capped_resources = {
+        bg_logging = 4
+        bg_squidding = 1
+        bg_fishing = 5
+    }
     naval_exit_id = 3022
 }
 STATE_DUNMAFAR = {
@@ -1015,6 +1037,10 @@ STATE_DUNMAFAR = {
     farm = x61F9B2
     mine = xAAA4E2
     port = xAFFAA9
+    capped_resources = {
+        bg_logging = 7
+        bg_fishing = 6
+    }
     naval_exit_id = 3039
 }
 STATE_COLESSIE = {
@@ -1234,6 +1260,12 @@ STATE_HAFODFAN = {
     wood = xCEC69F
     farm = xD0C994
     mine = xD262ED
+    capped_resources = {
+        bg_coal_mining = 8
+        bg_iron_mining = 12
+        bg_wishstone_mining_depletable = 2
+        bg_logging = 3
+    }
 
 }
 STATE_GWYNWEN = {
@@ -1794,6 +1826,10 @@ STATE_ANGERTORP = {
     farm = x85D1A0
     mine = xA8C6E5
     port = xB0C1B4
+    capped_resources = {
+        bg_whaling = 4
+        bg_fishing = 4
+    }
 
     naval_exit_id = 3039
 }
@@ -1939,6 +1975,10 @@ STATE_FRIGGASVEIT = {
     farm = x92D9D9
     mine = x96F094
     port = xA196F9
+    capped_resources = {
+        bg_whaling = 2
+        bg_fishing = 3
+    }
     naval_exit_id = 3039
 }
 STATE_HERVIK = {
