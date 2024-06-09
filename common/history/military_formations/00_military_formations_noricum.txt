@@ -516,7 +516,114 @@
 
 	}	
 	#Coldreach armys and armadas	
+		# I think Srioman doesn't have army or armada, many territory, and only some pops
+	c:ICE = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_coldreach
 
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_COLDSHEAR
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_SNOWBREACH
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_FALMAKELD
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ICEWIND
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_HJELTIAS_GLACIER
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_GRYTINGARIK
+				count = 2
+			}
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_coldreach
+		
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_ICEWIND
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_SNOWBREACH
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_FALMAKELD
+				count = 3
+			}
+		}
+	}
+	c:CAO = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_coldreach
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_DRUMAGAR
+				count = 4
+			}
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_coldreach
+		
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_DRUMAGAR
+				count = 10
+			}
+		}
+	}
+	c:RIS = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_coldreach
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KINGOUR
+				count = 4
+			}
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_coldreach
+		
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_KINGOUR
+				count = 7
+			}
+		}
+	}
 	#East Everfrost armys and armadas	
 	c:SRN = {
 		create_military_formation = {
