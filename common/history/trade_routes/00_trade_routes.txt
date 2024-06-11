@@ -1,4 +1,326 @@
 ﻿TRADE_ROUTES = {
+	#North Noricum
+	c:ICE ?= {
+		create_trade_route = {
+			goods = tools
+			level = 1
+			target = c:DUM.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = manowars
+			level = 1
+			target = c:DUM.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = manowars
+			level = 1
+			target = c:CAO.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = clippers
+			level = 2
+			target = c:RIS.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = small_arms
+			level = 2
+			target = c:DUM.market
+			direction = import
+		}
+	}
+	c:CAO ?= {
+		create_trade_route = {
+			goods = clippers
+			level = 1
+			target = c:DUM.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = small_arms
+			level = 1
+			target = c:DUM.market
+			direction = import
+		}	
+		create_trade_route = {
+			goods = artillery
+			level = 1
+			target = c:DUM.market
+			direction = import
+		}
+	}
+	c:RIS ?= {
+		create_trade_route = {
+			goods = clippers
+			level = 1
+			target = c:DUM.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = manowars
+			level = 1
+			target = c:OEX.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = small_arms
+			level = 1
+			target = c:OEX.market
+			direction = import
+		}	
+		create_trade_route = {
+			goods = artillery
+			level = 1
+			target = c:OEX.market
+			direction = import
+		}	
+	}
+	c:BFU ?= {
+		create_trade_route = {
+			goods = clippers
+			level = 1
+			target = c:BRR.market
+			direction = import
+		}	
+		create_trade_route = {
+			goods = manowars
+			level = 1
+			target = c:OEX.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = small_arms
+			level = 1
+			target = c:OEX.market
+			direction = import
+		}	
+		create_trade_route = {
+			goods = artillery
+			level = 1
+			target = c:OEX.market
+			direction = import
+		}	
+	}
+	c:BRR ?= {
+		create_trade_route = {
+			goods = tools
+			level = 1
+			target = c:DRK.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = fabric
+			level = 1
+			target = c:BIE.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = tools
+			level = 1
+			target = c:MBR.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = manowars
+			level = 2
+			target = c:MBR.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = clippers
+			level = 2
+			target = c:MBR.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = small_arms
+			level = 2
+			target = c:MBR.market
+			direction = import
+		}	
+		create_trade_route = {
+			goods = artillery
+			level = 1
+			target = c:MBR.market
+			direction = import
+		}	
+	}
+	c:SRN ?= {
+		create_trade_route = {
+			goods = manowars
+			level = 1
+			target = c:MBR.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = clippers
+			level = 2
+			target = c:MBR.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = small_arms
+			level = 2
+			target = c:MBR.market
+			direction = import
+		}		
+	}
+	c:CVE ?= {
+		create_trade_route = {
+			goods = manowars
+			level = 1
+			target = c:MBR.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = clippers
+			level = 2
+			target = c:MBR.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = small_arms
+			level = 2
+			target = c:MBR.market
+			direction = import
+		}			
+	}
+	c:OEX ?= {
+		create_trade_route = {
+			goods = fabric
+			level = 2
+			target = c:SRN.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = fabric
+			level = 1
+			target = c:RIS.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = wood
+			level = 2
+			target = c:CVE.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = wood
+			level = 1
+			target = c:BFU.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = wood
+			level = 1
+			target = c:BRR.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = tools
+			level = 2
+			target = c:DRK.market
+			direction = import
+		}			
+	}
+# East Noricum
+	c:DRK ?= {
+		create_trade_route = {
+			goods = manowars
+			level = 1
+			target = c:MBR.market
+			direction = import
+		}	
+		create_trade_route = {
+			goods = clippers
+			level = 1
+			target = c:BRR.market
+			direction = import
+		}	
+		create_trade_route = {
+			goods = small_arms
+			level = 1
+			target = c:DUM.market
+			direction = import
+		}	
+		create_trade_route = {
+			goods = artillery
+			level = 1
+			target = c:DUM.market
+			direction = import
+		}
+	}	
+	c:BIE ?= {
+		create_trade_route = {
+			goods = manowars
+			level = 1
+			target = c:MBR.market
+			direction = import
+		}	
+		create_trade_route = {
+			goods = lead
+			level = 1
+			target = c:DUM.market
+			direction = import
+		}	
+		create_trade_route = {
+			goods = tools
+			level = 1
+			target = c:MBR.market
+			direction = import
+		}	
+		create_trade_route = {
+			goods = small_arms
+			level = 1
+			target = c:DUM.market
+			direction = import
+		}	
+		create_trade_route = {
+			goods = artillery
+			level = 1
+			target = c:DUM.market
+			direction = import
+		}
+	}	
+	c:MBR ?= {
+		create_trade_route = {
+			goods = iron
+			level = 2
+			target = c:DUM.market
+			direction = import
+		}	
+		create_trade_route = {
+			goods = hardwood
+			level = 2
+			target = c:EVR.market
+			direction = import
+		}
+	}	
+	c:EVR ?= {
+		create_trade_route = {
+			goods = small_arms
+			level = 1
+			target = c:DUM.market
+			direction = import
+		}	
+		create_trade_route = {
+			goods = artillery
+			level = 1
+			target = c:MBR.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = tools
+			level = 1
+			target = c:MBR.market
+			direction = import
+		}
+	}	
+
+# Rest of Noricum
 	c:ORO ?= {
 		create_trade_route = {
 			goods = manowars

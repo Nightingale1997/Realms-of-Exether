@@ -1063,6 +1063,25 @@
           activate_production_methods={ "pm_merchant_guilds_building_fishing_wharf" "pm_unrefrigerated" "pm_simple_fishing" }
         }
         create_building={
+          building="building_arms_industry"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_muskets" "pm_merchant_guilds_building_arms_industry" }
+        }
+        create_building={
+          building="building_artillery_foundries"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_cannons" "pm_automation_disabled" "pm_merchant_guilds_building_artillery_foundries" }
+        }
+        create_building={
+          building="building_military_shipyards"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_merchant_guilds_building_military_shipyards" "pm_military_shipbuilding_wooden" }
+        }
+
+        create_building={
           building="building_rye_farm"
           level=1
           reserves=1
