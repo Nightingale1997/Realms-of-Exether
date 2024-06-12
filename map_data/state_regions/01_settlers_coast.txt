@@ -729,11 +729,11 @@ STATE_MISTREACH = {
     farm = x2BFBFA
     mine = x45F5E1
     port = x71D5CA
-    arable_land = 44
+    arable_land = 64
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
     capped_resources = {
-        bg_iron_mining = 16
-        bg_logging = 5
+        bg_iron_mining = 27
+        bg_logging = 11
     }
     naval_exit_id = 3165
 }
@@ -745,11 +745,12 @@ STATE_MISTREACH_2 = {
     wood = x38F9E8
     farm = x6EFB9B
     mine = xe173e0
-    arable_land = 36
-    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
+    arable_land = 40
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_vineyard_plantations" }
     capped_resources = {
-        bg_iron_mining = 11
-        bg_logging = 6
+        bg_iron_mining = 48
+        bg_lead_mining = 39
+        bg_logging = 14
     }
     naval_exit_id = 3204
 }
@@ -1114,7 +1115,13 @@ STATE_HORSELORDS_DEMESNE = {
     farm = x6AC9CD
     mine = x7F8EEC
     port = x3edeeb
-
+    arable_land = 60
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 36
+        bg_iron_mining = 36
+        bg_logging = 9
+    }
     naval_exit_id = 3199
 }
 STATE_ROCHENSTONE = {
@@ -1126,7 +1133,13 @@ STATE_ROCHENSTONE = {
     farm = x65D7FE
     mine = x72E4AA
     port = x80ABD8
-
+    arable_land = 80
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 84
+        bg_lead_mining = 60
+        bg_logging = 13
+    }
     naval_exit_id = 3199
 }
 STATE_SJETTSZCEK_MIRE = {
@@ -1138,7 +1151,17 @@ STATE_SJETTSZCEK_MIRE = {
     farm = x9DEC95
     mine = xBF8CFD
     port = xe4aff0
-
+    arable_land = 145
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 140
+        bg_iron_mining = 33
+        bg_logging = 17
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 30
+    }
     naval_exit_id = 3199
 }
 STATE_THUNDERSPELL_COAST = {
@@ -1782,6 +1805,7 @@ STATE_SC9 = {
     id = 4215
     subsistence_building = "building_subsistence_pastures"
     provinces = { "x54EAFA" "x57FED8" "x58C1ED" "x6DE3C7" "x74FAB9" "x8EC0B3" "x94E4C6" "x98F5AD" "xA9BDDA" "xB4E17F" "xB788CF" "xB7FE8A" "xB84DFB" "xC461F6" "xC4E88C" "xD061D5" "xD884CF" "xDA5ECE" "xE46DDC" "xF0DF91" "xF5C4DC" "xF989BA" "xF9B0B3" "xFCCF58" }
+    impassable = { "xC4E88C" "xF5C4DC" "xD061D5" "x94E4C6" "xDA5ECE" "xB788CF" }
     traits = { "state_trait_mirazara_mountains" }
     city = x54EAFA
     wood = x57FED8

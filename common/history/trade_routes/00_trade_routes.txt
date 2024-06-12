@@ -1,4 +1,24 @@
 ﻿TRADE_ROUTES = {
+	c:ARR ?= {
+		create_trade_route = {
+			goods = silk
+			level = 12
+			direction = import
+			target = c:THI.market
+		}
+		create_trade_route = {
+			goods = sugar
+			level = 7
+			direction = import
+			target = c:THI.market
+		}
+		create_trade_route = {
+			goods = dye
+			level = 7
+			direction = import
+			target = c:AZI.market
+		}
+	}
 	c:ORO ?= {
 		create_trade_route = {
 			goods = manowars
