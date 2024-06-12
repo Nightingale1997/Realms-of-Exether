@@ -8,6 +8,12 @@
 				reserves=1
 				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
 			}
+      create_building={
+        building="building_artillery_foundries"
+        level=1
+        reserves=1
+        activate_production_methods={ "pm_cannons" "pm_automation_disabled" "pm_merchant_guilds_building_artillery_foundries" }
+      }
 			create_building={
 				building="building_construction_sector"
 				level=2
@@ -85,6 +91,12 @@
           level=5
           reserves=1
           activate_production_methods={ "pm_muskets" "pm_merchant_guilds_building_arms_industry" }
+        }
+        create_building={
+          building="building_artillery_foundries"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_cannons" "pm_automation_disabled" "pm_merchant_guilds_building_artillery_foundries" }
         }
         create_building={
           building="building_barracks"
@@ -633,7 +645,14 @@
 
 
     s:STATE_ICEWIND = {
-
+      region_state:ICE = {
+        create_building={
+          building="building_logging_camp"
+          level=2
+          reserves=1
+          activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" "pm_merchant_guilds_building_logging_camp" }
+        }	
+      }
   }
 
 
@@ -840,12 +859,50 @@
 
 
     s:STATE_TANISTS_RETREAT = {
-
+      region_state:BRR = {
+        create_building={
+          building="building_port"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_basic_port" }
+        }
+        create_building={
+          building="building_logging_camp"
+          level=2
+          reserves=1
+          activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" "pm_merchant_guilds_building_logging_camp" }
+        }	
+        create_building={
+          building="building_fishing_wharf"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+          }
+      }
   }
 
 
     s:STATE_EOGHANS_SPEAR = {
-
+      region_state:SRN = {
+        create_building={
+          building="building_port"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_basic_port" }
+        }
+        create_building={
+          building="building_logging_camp"
+          level=2
+          reserves=1
+          activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" "pm_merchant_guilds_building_logging_camp" }
+        }	
+        create_building={
+          building="building_fishing_wharf"
+          level=3
+          reserves=1
+          activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+          }
+      }
   }
 
 
@@ -988,11 +1045,42 @@
           activate_production_methods={ "pm_merchant_guilds_building_fishing_wharf" "pm_unrefrigerated" "pm_simple_fishing" }
         }
         create_building={
+          building="building_arms_industry"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_muskets" "pm_merchant_guilds_building_arms_industry" }
+        }
+        create_building={
+          building="building_artillery_foundries"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_cannons" "pm_automation_disabled" "pm_merchant_guilds_building_artillery_foundries" }
+        }
+        create_building={
+          building="building_military_shipyards"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_merchant_guilds_building_military_shipyards" "pm_military_shipbuilding_wooden" }
+        }
+
+        create_building={
+          building="building_rye_farm"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_simple_farming" "pm_privately_owned" "pm_tools_disabled" "pm_citrus_orchards" }
+        }
+        create_building={
           building="building_port"
           level=1
           reserves=1
           activate_production_methods={ "pm_anchorage" }
         }
+        create_building={
+          building="building_iron_mine"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" "pm_merchant_guilds_building_iron_mine" }
+        }	
       }
   }
 
@@ -1070,7 +1158,32 @@
 
 
     s:STATE_DRUMAGAR = {
-
+      region_state:CAO = {
+        create_building={
+          building="building_livestock_ranch"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_sheep_farms" "pm_slaughterhouses" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+        }
+        create_building={
+          building="building_military_shipyards"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_merchant_guilds_building_military_shipyards" "pm_military_shipbuilding_wooden" }
+        }
+        create_building={
+          building="building_fishing_wharf"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_merchant_guilds_building_fishing_wharf" "pm_unrefrigerated" "pm_simple_fishing" }
+        }
+        create_building={
+          building="building_port"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_anchorage" }
+        }
+      }
   }
 
 
@@ -1286,6 +1399,30 @@
           activate_production_methods={ "pm_pig_iron" "pm_automation_disabled" "pm_privately_owned_building_tooling_workshops" }
         }	
         create_building={
+          building="building_logging_camp"
+          level=2
+          reserves=1
+          activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" "pm_merchant_guilds_building_logging_camp" }
+        }	
+        create_building={
+          building="building_artillery_foundries"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_cannons" "pm_automation_disabled" "pm_merchant_guilds_building_artillery_foundries" }
+        }
+        create_building={
+          building="building_military_shipyards"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_merchant_guilds_building_military_shipyards" "pm_military_shipbuilding_wooden" }
+        }
+        create_building={
+          building="building_squid_squad"
+          level=2
+          reserves=1
+          activate_production_methods= { "pm_simple_squidding" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+        }
+        create_building={
           building="building_rye_farm"
           level=2
           reserves=1
@@ -1308,7 +1445,38 @@
 
 
     s:STATE_BALATHOUL = {
-
+      region_state:BFU = {
+        create_building={
+          building="building_port"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_basic_port" }
+        }
+        create_building={
+          building="building_wheat_farm"
+          level=4
+          reserves=1
+          activate_production_methods={ "pm_simple_farming" "pm_privately_owned" "pm_tools_disabled" "pm_citrus_orchards" }
+        }
+        create_building={
+          building="building_fishing_wharf"
+          level=2
+          reserves=1
+          activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+        }
+        create_building={
+          building="building_logging_camp"
+          level=2
+          reserves=1
+          activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" "pm_merchant_guilds_building_logging_camp" }
+        }	
+        create_building={
+          building="building_squid_squad"
+          level=1
+          reserves=1
+          activate_production_methods= { "pm_simple_squidding" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+        }
+      }
   }
 
 
@@ -1318,7 +1486,38 @@
 
 
     s:STATE_KINGOUR = {
-
+      region_state:RIS = {
+        create_building={
+          building="building_port"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_basic_port" }
+        }
+        create_building={
+          building="building_fishing_wharf"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+        }
+        create_building={
+          building="building_shipyards"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_basic_shipbuilding" "pm_merchant_guilds_building_shipyards" }
+        }
+        create_building={
+          building="building_logging_camp"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" "pm_merchant_guilds_building_logging_camp" }
+        }	
+        create_building={
+          building="building_livestock_ranch"
+          level=2
+          reserves=1
+          activate_production_methods={ "pm_sheep_farms" "pm_slaughterhouses" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+        }
+      }
   }
 
 
@@ -1485,22 +1684,86 @@
 
 
     s:STATE_SNOWBREACH = {
-
+      region_state:ICE = {
+        create_building={
+          building="building_logging_camp"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" "pm_merchant_guilds_building_logging_camp" }
+        }	
+        create_building={
+          building="building_fishing_wharf"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+          }
+      }
   }
 
 
     s:STATE_COLDSHEAR = {
-
+      region_state:ICE = {
+        create_building={
+          building="building_port"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_basic_port" }
+        }
+        create_building={
+          building="building_logging_camp"
+          level=2
+          reserves=1
+          activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" "pm_merchant_guilds_building_logging_camp" }
+        }	
+        create_building={
+          building="building_fishing_wharf"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+          }
+      }
   }
 
 
     s:STATE_GLENKELD = {
-
+      region_state:CVE = {
+        create_building={
+          building="building_port"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_basic_port" }
+        }
+        create_building={
+          building="building_logging_camp"
+          level=2
+          reserves=1
+          activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" "pm_merchant_guilds_building_logging_camp" }
+        }	
+        create_building={
+          building="building_fishing_wharf"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+          }
+      }
   }
 
 
     s:STATE_DUNMAFAR = {
-
+      region_state:CVE = {
+        create_building={
+          building="building_logging_camp"
+          level=4
+          reserves=1
+          activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" "pm_merchant_guilds_building_logging_camp" }
+        }	
+        create_building={
+          building="building_fishing_wharf"
+          level=2
+          reserves=1
+          activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+          }
+      }
   }
 
 
@@ -1739,7 +2002,32 @@
 
 
     s:STATE_HAFODFAN = {
-
+      region_state:BRR = {
+        create_building={
+          building="building_iron_mine"
+          level=2
+          reserves=1
+          activate_production_methods={ "pm_atmospheric_engine_pump_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" "pm_privately_owned_building_iron_mine" }
+        }
+        create_building={
+          building="building_shipyards"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_basic_shipbuilding" "pm_merchant_guilds_building_shipyards" }
+        }
+        create_building={
+          building="building_logging_camp"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" "pm_privately_owned_building_logging_camp" }
+        }
+        create_building={
+          building="building_coal_mine"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_atmospheric_engine_pump_building_coal_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" "pm_privately_owned_building_coal_mine" }
+        }
+      }
   }
 
 
@@ -1817,11 +2105,12 @@
           reserves=1
           activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
         }
+        create_building={
         building="building_rye_farm"
         level=4
         reserves=1
         activate_production_methods={ "pm_simple_farming" "pm_privately_owned" "pm_tools_disabled" "pm_no_secondary" }
-      
+        }
       create_building={
         building="building_logging_camp"
         level=2
@@ -1917,7 +2206,20 @@
 
 
     s:STATE_FALMAKELD = {
-
+      region_state:ICE = {
+        create_building={
+          building="building_fishing_wharf"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+        }
+        create_building={
+          building="building_livestock_ranch"
+          level=2
+          reserves=1
+          activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+        }
+      }
   }
 
 
@@ -1933,6 +2235,18 @@
           level=2
           reserves=1
           activate_production_methods={ "pm_atmospheric_engine_pump_building_coal_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" "pm_privately_owned_building_coal_mine" }
+        }
+        create_building={
+          building="building_shipyards"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_basic_shipbuilding" "pm_merchant_guilds_building_shipyards" }
+        }
+        create_building={
+          building="building_arms_industry"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_muskets" "pm_merchant_guilds_building_arms_industry" }
         }
         create_building={
           building="building_rye_farm"
@@ -1951,7 +2265,38 @@
 
 
     s:STATE_HJELTIAS_GLACIER = {
-
+      region_state:ICE = {
+        create_building={
+          building="building_fishing_wharf"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+        }
+        create_building={
+          building="building_wheat_farm"
+          level=3
+          reserves=1
+          activate_production_methods={ "pm_simple_farming" "pm_privately_owned" "pm_tools_disabled" "pm_citrus_orchards" }
+        }
+        create_building={
+          building="building_logging_camp"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" "pm_merchant_guilds_building_logging_camp" }
+        }	
+        create_building={
+          building="building_squid_squad"
+          level=1
+          reserves=1
+          activate_production_methods= { "pm_simple_squidding" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+        }
+        create_building={
+          building="building_livestock_ranch"
+          level=2
+          reserves=1
+          activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+        }
+      }
   }
 
 
@@ -2004,13 +2349,13 @@
           activate_production_methods={ "pm_basic_port" }
         }
       }
-  }
+    }
 
 
     s:STATE_HRAFNSDALR = {
       region_state:SDN={
       }
-  }
+    }
 
 
     s:STATE_NIWKA = {
@@ -2046,23 +2391,23 @@
           activate_production_methods={ "pm_merchant_guilds_building_fishing_wharf" "pm_unrefrigerated" "pm_fishing_trawlers" }
         }
       }
-  }
+    }
 
 
     s:STATE_CZERWIONKA = {
       region_state:ZKW={
       }
-  }
+    }
 
 
     s:STATE_SKALKA = {
       region_state:PTD={}
-  }
+    }
 
 
     s:STATE_YGGHAMN = {
 
-  }
+    }
 
 
     s:STATE_ZARKI = {
@@ -2116,7 +2461,7 @@
           activate_production_methods={ "pm_basic_port" }
         }
       }
-  }
+    }
 
 
     s:STATE_JAWOREK = {
@@ -2134,22 +2479,22 @@
           activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" "pm_privately_owned_building_logging_camp" }
         }
       }
-  }
+    }
 
 
     s:STATE_MARAMAROVA = {
 
-  }
+    }
 
 
     s:STATE_HALDORHEIMR = {
 
-  }
+    }
 
 
     s:STATE_POLYNKALA = {
 
-  }
+    }
 
 
     s:STATE_NGURULAN = {
@@ -2210,7 +2555,7 @@
 
     s:STATE_HLIDSKJALF = {
 
-  }
+    }
 
     s:STATE_LUMO = {
       region_state:DUM={
@@ -2222,71 +2567,102 @@
         }
       }
 
-  }
+    }
 
 
     s:STATE_ZEPHROPULU = {
       region_state:DUF={
       }
-  }
+    }
 
 
     s:STATE_BARICORA = {
       region_state:DUF={
       }
-  }
+    }
 
 
     s:STATE_ANGERTORP = {
 
-  }
+    }
 
     s:STATE_RAGNARKULL = {
 
-  }
+    }
 
 
     s:STATE_VIGAKULL = {
 
-  }
+    }
 
 
     s:STATE_FORRTORP = {
 
-  }
+    }
 
 
     s:STATE_FRIGGASVEIT = {
 
-  }
+    }
 
 
     s:STATE_HERVIK = {
 
-  }
+    }
 
     s:STATE_EIRIKSHOF = {
 
-  }
+    }
 
     s:STATE_HALSTEAD = {
 
-  }
+    }
 
 
     s:STATE_FREYRSFJORDR = {
 
-  }
+    }
 
 
     s:STATE_SIFSKER = {
 
-  }
+    }
 
 
     s:STATE_GRYTINGARIK = {
-
-  }
+      region_state:ICE = {
+        create_building={
+          building="building_port"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_basic_port" }
+        }
+        create_building={
+          building="building_fishing_wharf"
+          level=3
+          reserves=1
+          activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+        }
+        create_building={
+          building="building_coal_mine"
+          level=2
+          reserves=1
+          activate_production_methods={ "pm_atmospheric_engine_pump_building_coal_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" "pm_privately_owned_building_coal_mine" }
+        }
+        create_building={
+          building="building_livestock_ranch"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+        }
+        create_building={
+          building="building_logging_camp"
+          level=1
+          reserves=1
+          activate_production_methods={ "pm_simple_forestry" "pm_hardwood" "pm_no_equipment" "pm_road_carts" "pm_merchant_guilds_building_logging_camp" }
+        }
+      }
+    }
 
 
     s:STATE_SOLVIK = {
@@ -2304,8 +2680,5 @@
           activate_production_methods={ "pm_no_organization" }
         }
       }
+    }
   }
-
-
-
-}
