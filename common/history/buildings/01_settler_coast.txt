@@ -614,7 +614,7 @@
   }
 
   s:STATE_OUTER_MOORWEALD_2 = {
-	region_state:TAS={
+	region_state:SMA={
 	}
   }
 
@@ -774,13 +774,14 @@
   }
 
   s:STATE_MISTREACH_2 = {
-	create_building={
-		building="building_barracks"
-		level=2
-		reserves=1
-		activate_production_methods={ "pm_no_organization" }
-	}
+
 	region_state:PRI={
+		create_building={
+			building="building_barracks"
+			level=2
+			reserves=1
+			activate_production_methods={ "pm_no_organization" }
+		}
 		create_building={
 			building="building_tooling_workshops"
 			level=2
@@ -971,12 +972,6 @@
 				level=6
 				reserves=1
 				activate_production_methods={ "default_building_vineyard_plantation" "pm_privately_owned_plantation" }
-			}
-			create_building={
-				building="building_railway"
-				level=1
-				reserves=1
-				activate_production_methods={ "pm_steam_trains" "pm_wooden_passenger_carriages" }
 			}
 		}
   }
@@ -1195,12 +1190,6 @@
 			reserves=1
 			activate_production_methods={ "pm_iron_frame_buildings" }
 		}			
-		create_building={
-			building="building_chemical_plants"
-			level=2
-			reserves=1
-			activate_production_methods={ "pm_artificial_fertilizers" "pm_privately_owned_industry" }
-		}
 		create_building={
 			building="building_wheat_farm"
 			level=3

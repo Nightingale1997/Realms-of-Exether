@@ -1615,7 +1615,7 @@
                 scope:pop ?= {
                     home_country = {
                         any_scope_character = {
-                            has_variable = garibaldi_var # Garibaldi can be an agitator or general or politician, it's all valid
+                            always = no
                         }
                     }
                 }
