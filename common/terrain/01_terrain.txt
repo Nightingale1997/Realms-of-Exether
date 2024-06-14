@@ -509,7 +509,7 @@ mountain = {
 	pollution_mask_strength = 1.0
 	devastation_mask_strength = 1.0
 }
-
+	
 jungle = {
 	label = label_forested
 	label = label_hazardous
@@ -1569,4 +1569,29 @@ docks = {
 	
 	pollution_mask_strength = 1.0
     devastation_mask_strength = 1.0
+}
+
+undermountain = {  #Exether
+	label = label_elevated
+	label = label_hazardous
+	label = label_travel_harsh_environment
+	weight = 0
+	textures = {
+		{
+			weight = {
+				value = 1
+			}
+			path = "gfx/state_pictures/arctic_mountain.dds"
+			effect = "vfx_entity_ui_state_arctic"
+		}
+	}
+	combat_width = 0.3
+	risk = 0.5
+	materials = { 
+		#Woodlands_03 = 1
+	}
+	debug_color = hsv { 0.55 0.75 1 }
+	
+	pollution_mask_strength = 1.0
+	devastation_mask_strength = 1.0
 }
