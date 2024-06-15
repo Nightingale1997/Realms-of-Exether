@@ -398,8 +398,12 @@ s:STATE_CAEL_VALEN_2 = {
   s:STATE_RIVER_MEDDEN = {
 	region_state:MID = {
 		create_pop = {
+			culture =rivierling
+			size = 400989
+		}
+		create_pop = {
 			culture = coast_halfling
-			size = 600989
+			size = 200989
 		}
 		create_pop = {
 			culture = mousefolk
@@ -435,7 +439,62 @@ s:STATE_CAEL_VALEN_2 = {
   }
 
   s:STATE_FORESTS_HEART = {
+	region_state:BDB = {
+		create_pop = {
+			culture = plaguedweller
+			size = 553996
+		}
+		create_pop = {
+			culture = korkaz
+			size = 68000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = ceraunian
+			size = 30000
+		}
+	}
+  }
 
+  s:STATE_FORESTS_HEART_2 = {
+	region_state:BDB = {
+		create_pop = {
+			culture = plaguedweller
+			size = 1059596
+		}
+		create_pop = {
+			culture = korkaz
+			size = 68000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = plaguedweller
+			size = 50000
+		}
+	}
+  }
+
+  s:STATE_FORESTS_HEART_3 = {
+	region_state:BDB = {
+		create_pop = {
+			culture = plaguedweller
+			size = 408000
+		}
+		create_pop = {
+			culture = plaguedweller
+			religion = animist
+			size = 18000
+		}
+		create_pop = {
+			culture = korkaz
+			size = 218400
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = plaguedweller
+			size = 40000
+		}
+	}
   }
 
   s:STATE_PLAGUEWOOD_HINTERLANDS = {
@@ -451,6 +510,28 @@ s:STATE_CAEL_VALEN_2 = {
 		create_pop = {
 			culture = aridrun
 			size = 8004
+		}
+	}
+  }
+
+  s:STATE_PLAGUEWOOD_HINTERLANDS_2 = {
+	region_state:BDB = {
+		create_pop = {
+			culture = plaguedweller
+			size = 787900
+		}
+		create_pop = {
+			culture = bossardi
+			size = 12400
+		}
+		create_pop = {
+			culture = korkaz
+			size = 415600
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = astreval
+			size = 40000
 		}
 	}
   }
@@ -483,7 +564,11 @@ s:STATE_CAEL_VALEN_2 = {
 	region_state:MID = {
 		create_pop = {
 			culture = coast_halfling 
-			size = 224197
+			size = 202197
+		}
+		create_pop = {
+			culture = rivierling
+			size = 24186
 		}
 
 	}
