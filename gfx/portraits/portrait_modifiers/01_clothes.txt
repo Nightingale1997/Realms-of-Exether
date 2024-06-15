@@ -4050,4 +4050,373 @@ buddhist_religious_clothes = {
     }
 }
 
+
+slavik_kokoshnik_clothes = {
+    dna_modifiers = {
+       accessory = {
+           mode = add
+           gene = outfits
+           template = slavic_outfits_kokoshnik
+           range = { 0 1 }
+        }
+
+        accessory = {
+            mode = add
+            gene = legwear
+            template = south_american_legwear
+            range = { 0 1 }
+        }
+    }
+
+    weight = {
+        base = 0
+        modifier = {
+            add = 11000 # this should trump the midsummer clothes
+            has_cosmetic_dlc = "Dawn of Wonder"
+            OR = {
+                AND = {
+                    scope:character ?= {
+                        culture = {
+                            has_discrimination_trait = east_slavic
+                        }
+                        is_female = yes
+                        OR = {
+                            has_variable = getting_married
+                            has_modifier = marriage_popularity
+                        }
+                    }
+                }
+                AND = {
+                    upper_clothes_pop_trigger = yes
+                    scope:pop ?= { # Wear this clothing either during Midsummer or during a Royal Wedding
+                        culture = {
+                            has_discrimination_trait = east_slavic
+                        }
+                        OR = {
+                            scope:pop ?= {
+                                month = 5 # June. The trigger for months is on a 0-11 scale.
+                            }
+                            owner ?= {
+                                OR = {
+                                    has_modifier = royal_marriage
+                                    any_scope_character = {
+                                        OR = {
+                                            is_ruler = yes
+                                            is_heir = yes
+                                        }
+                                        has_modifier = marriage_popularity
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+hindu_diwali_clothes = {
+    dna_modifiers = {
+       accessory = {
+           mode = add
+           gene = outfits
+           template = female_outfit_indian_diwali
+           range = { 0 1 }
+        }
+    }
+
+    weight = {
+        base = 0
+        modifier = {
+            add = 2000
+            has_cosmetic_dlc = "Dawn of Wonder"
+            OR = {
+                AND = {
+                    indian_clothes_pop_trigger = yes
+                    hindu_clothes_pop_trigger = yes
+                    OR = {
+                        middle_clothes_pop_trigger = yes
+                        upper_clothes_pop_trigger = yes
+                    }
+                    scope:pop ?= {
+                        month = 10 # November. The trigger for months is on a 0-11 scale.
+                    }
+                }
+                AND = {
+                    indian_clothes_trigger = yes
+                    scope:character ?= {
+                        is_female = yes
+                        religion = rel:hindu
+                        month = 10 # November. The trigger for months is on a 0-11 scale.
+                    }
+                }
+            }
+        }
+    }
+}
+
+midsummer_clothes = {
+    dna_modifiers = {
+       accessory = {
+           mode = add
+           gene = outfits
+           template = female_outfit_midsummer
+           range = { 1 1 }
+        }
+        accessory = {
+            mode = add
+            gene = legwear
+            template = south_american_legwear
+            range = { 0 1 }
+        }
+    }
+
+    weight = {
+        base = 0
+        modifier = {
+            add = 2000
+            has_cosmetic_dlc = "Dawn of Wonder"
+            OR = {
+                AND = {
+                    officers_clothes_pop_trigger = no
+                    upper_clothes_pop_trigger = yes
+                    scope:pop ?= {
+                        culture = {
+                            AND = {
+                                 has_discrimination_trait = elf_heritage
+                                 NOT = {
+                                    has_discrimination_trait = wood_elf
+                                 }
+                            }
+                          
+                        }
+                    }
+                }
+                AND = {
+                    OR = {
+                        ruler_clothes_trigger = yes
+                        politician_clothes_trigger = yes
+                    }
+
+                    scope:character ?= {
+                        culture = {
+                            AND = {
+                                has_discrimination_trait = elf_heritage
+                                NOT = {
+                                   has_discrimination_trait = wood_elf
+                                }
+                                NOT = {
+                                    has_discrimination_trait = southern_elf
+                                }
+                           }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+pierrot_clothing = {
+    dna_modifiers = {
+       accessory = {
+           mode = add
+           gene = outfits
+           template = male_outfit_european_carnaval_pierrot_01
+           range = { 0 1 }
+        }
+    }
+
+    weight = {
+        base = 0
+        modifier = {
+            add = 11000
+            has_cosmetic_dlc = "Dawn of Wonder"
+            always = no #use this for some priests later
+        }
+    }
+}
+
+gaucho_clothes = {
+    dna_modifiers = {
+        accessory = {
+            mode = add
+            gene = top_layer
+            template = south_american_gaucho
+            range = { 0 1 }
+        }
+        accessory = {
+            mode = add
+            gene = legwear
+            template = south_american_legwear
+            range = { 0 1 } # For the randomness to work correctly
+        }
+        accessory = {
+            mode = add
+            gene = belts
+            template = gaucho_belts
+            range = { 0 1 } # For the randomness to work correctly
+        }
+    }
+    weight = {
+        base = 0
+        modifier = {
+            add = 10000
+
+            OR = {
+                scope:character ?= { # Sulista, Platinean, Argentine and Uruguayan RF & TU leaders and Brazilian RF & TU leaders post-Sulista integration should wear this
+                    OR = {
+                        culture = {
+                            has_discrimination_trait = thalorian_culture_group
+                        }
+                    }
+                    has_role = politician
+                    OR = {
+                        is_interest_group_type = ig_rural_folk
+                        is_interest_group_type = ig_trade_unions
+                    }
+                    OR = {
+                        is_ruler = no
+                        AND = {
+                            is_ruler = yes
+                            owner ?= {
+                                NOT = { has_law = law_type:law_monarchy}
+                            }
+                        }
+                    }
+                }
+                scope:pop ?= {
+                    OR = {
+                        culture = {
+                            has_discrimination_trait = thalorian_culture_group
+                        }
+
+                    }
+                    OR = {
+                        is_pop_type = farmers
+                        is_pop_type = laborers
+                        is_pop_type = peasants
+                    }
+                }
+                scope:character ?= { # All Sulista and Brazilian exiles (even pre-integration) should have this look.
+                    is_in_exile_pool = yes
+                    OR = {
+                        has_discrimination_trait = thalorian_culture_group
+                    }
+                }
+            }
+        }
+    }
+}
+
+ottoman_sultan_clothes = {
+    dna_modifiers = {
+        accessory = {
+            mode = add
+            gene = coats
+            template = ottoman_sultan_coats
+            accessory = male_coat_european_08_blue
+        }
+        accessory = {
+            mode = add
+            gene = legwear
+            template = european_legwear_colors
+            accessory = male_legwear_european_01_white
+        }
+        accessory = {
+            mode = add
+            gene = belts
+            template = all_belts
+            accessory = male_belt_generic_02 # HE'S GOT A SWORD
+        }
+        accessory = {
+            mode = add
+            gene = epaulettes
+            template = all_epaulettes
+            accessory = male_epaulettes_04
+        }
+    }
+    weight = {
+        base = 0
+        modifier = {
+            add = 10000
+
+            scope:character ?= {
+                exists = owner
+                exists = c:VAI
+                owner ?= {
+                    c:VAI = this
+                }
+                monarchy_clothes_trigger = yes
+                is_female = no
+            }
+        }
+    }
+}
+
+ottoman_military_clothes = {
+    dna_modifiers = {
+         accessory = {
+            mode = add
+            gene = coats
+            template = french_coats
+            range = { 0 1 }
+        }
+        accessory = {
+            mode = add
+            gene = legwear
+            template = european_legwear_colors
+            accessory = male_legwear_european_01_white
+        }
+        accessory = {
+            mode = add
+            gene = epaulettes
+            template = all_epaulettes
+            range = { 0 1 } # For the randomness to work correctly
+        }
+        accessory = {
+            mode = add
+            gene = belts
+            template = all_belts
+            accessory = male_belt_generic_01
+        }
+    }
+    weight = {
+        base = 0
+        modifier = {
+            add = 10000
+            OR = {
+                AND = {
+                    exists = c:VAI
+                    scope:character ?= {
+                        age > 10
+                        owner ?= {
+                            c:VAI = this
+                        }
+                    }
+                    OR = {
+                        military_clothes_trigger = yes
+                        AND = {
+                            armed_forces_clothes_trigger = yes
+                            politician_clothes_trigger = yes
+                        }
+                    }   
+                }
+                AND = {
+                    exists = c:VAI
+                    scope:pop ?= {
+                        owner ?= {
+                            c:VAI = this
+                        }
+                    }
+                    officers_clothes_pop_trigger = yes
+                }
+            }
+        }
+    }
+}
+
+
 }

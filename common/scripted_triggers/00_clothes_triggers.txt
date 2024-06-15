@@ -415,8 +415,14 @@ arabic_clothes_trigger = {
 
 ethiopian_clothes_trigger = {
 	exists = scope:character
+
+	NOT = {
+		has_cosmetic_dlc = "Dawn of Wonder"
+	}
 	scope:character = {
-		culture = cu:tefereti
+		culture = {
+			has_discrimination_trait = elf_heritage
+		}
 	}
 }
 
@@ -428,9 +434,7 @@ european_clothes_trigger = {
 				OR = {
 					AND = {
 						has_discrimination_trait = human_heritage
-						NOT = {
-							culture = cu:waste_walker
-						}
+
 					}
 				
 					has_discrimination_trait = halfling_heritage
@@ -454,6 +458,7 @@ european_clothes_trigger = {
 				culture = cu:anwarthi
 				culture = cu:qinnaat
 				culture = cu:azmaraan
+				culture = cu:waste_walker
 			}
 
 		}
@@ -724,9 +729,6 @@ european_clothes_pop_trigger = {
 				OR = {
 					AND = {
 						has_discrimination_trait = human_heritage
-						NOT = {
-							culture = cu:waste_walker
-						}
 					}
 					has_discrimination_trait = halfling_heritage
 				}
@@ -734,6 +736,9 @@ european_clothes_pop_trigger = {
 			culture = cu:vampire
 			culture = cu:sunkissed
 			culture = cu:changeling
+			NOT = {
+				culture = cu:waste_walker
+			}
 		}
 
 	}
@@ -758,17 +763,22 @@ indigenous_oceanic_clothes_trigger = {
 			exists = scope:pop
 			scope:pop = {
 				OR = {
-					culture = {
-						AND = {
-							has_discrimination_trait = orc_heritage
-							NOT = {
-								culture = cu:tqalt
-							}
-							NOT = {
-								culture = cu:rahoru
-							}
-					}  
-					}  
+					AND = {
+						NOT = {
+							culture = cu:tqalt
+						}
+						NOT = {
+							culture = cu:rahoru
+						}
+						
+						culture = {
+							AND = {
+								has_discrimination_trait = orc_heritage
+	
+						}  
+						}  	
+					}
+
 					culture = cu:castaway_dwarf
 				}
  
@@ -778,17 +788,21 @@ indigenous_oceanic_clothes_trigger = {
 			exists = scope:character
 			scope:character = {
 				OR = {
-					culture = {
-						AND = {
-							has_discrimination_trait = orc_heritage
-							NOT = {
-								culture = cu:tqalt
-							}
-							NOT = {
-								culture = cu:rahoru
-							}
-					} 
-				}
+					AND = {
+						culture = {
+							AND = {
+								has_discrimination_trait = orc_heritage
+	
+						} 
+					}
+					NOT = {
+						culture = cu:tqalt
+					}
+					NOT = {
+						culture = cu:rahoru
+					}
+					}
+
 					culture = cu:castaway_dwarf
 					AND = {
 						culture = {
