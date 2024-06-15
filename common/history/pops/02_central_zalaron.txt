@@ -603,40 +603,156 @@
   }
     
   s:STATE_CAM_RINNARA = {
-
+	region_state:CLL = {
+		create_pop = {
+			culture = rannorian
+			size = 808396
+		}
+		create_pop = {
+			culture = grunhain
+			size = 12000
+		}
+		create_pop = {
+			culture = beithaven
+			size = 135996
+		}
+		create_pop = {
+			religion = nuzaptan
+			size = 32000
+		}
+	}
   }
     
   s:STATE_CAM_NUALA = {
-
+	region_state:CLL = {
+		create_pop = {
+			culture = rannorian
+			size = 2295600
+		}
+		create_pop = {
+			culture = grunhain
+			size = 1003040
+		}
+		create_pop = {
+			culture = beithaven
+			size = 428000
+		}
+	}
   }
     
   s:STATE_FAOLNA_PASS = {
 		region_state:TEF = {
 			create_pop = {
 				culture = nangarlith
-				size = 704308
+				size = 504308
 			}
 			create_pop = {
 				culture = tefereti
-				size = 316804
+				size = 216804
+			}
+		}
+		region_state:CLL = {
+			create_pop = {
+				culture = nangarlith
+				size = 204308
+			}
+			create_pop = {
+				culture = rannorian
+				size = 116804
 			}
 		}
   }
     
   s:STATE_CAM_LIADRINE = {
-
+	region_state:CLL = {
+		create_pop = {
+			culture = rannorian
+			size = 158400
+		}
+		create_pop = {
+			culture = thiralian
+			size = 8000
+		}
+		create_pop = {
+			culture = nuzaptan
+			size = 28004
+		}
+		create_pop = {
+			culture = erdei
+			size = 11996
+		}
+		create_pop = {
+			culture = beithaven
+			size = 18996
+		}
+	}
   }
     
   s:STATE_CAM_CALLAIRD = {
-
+	region_state:CLL = {
+		create_pop = {
+			culture = rannorian
+			size = 3923992
+		}
+		create_pop = {
+			culture = nangarlith
+			size = 381996
+		}
+		create_pop = {
+			culture = grunhain
+			size = 141504
+		}
+		create_pop = {
+			culture = beithaven
+			size = 36400
+		}
+	}
   }
     
   s:STATE_SOUTHERN_FEYSTALK = {
-
+	region_state:CLL = {
+		create_pop = {
+			culture = rannorian
+			size = 1914584
+		}
+		create_pop = {
+			culture = erdei
+			size = 161992
+		}
+		create_pop = {
+			culture = nuzaptan
+			size = 41000
+		}
+		create_pop = {
+			culture = nangarlith
+			size = 16000
+		}
+		create_pop = {
+			culture = thiralian
+			size = 20400
+		}
+	}
   }
     
   s:STATE_NORTHERN_FEYSTALK = {
-
+	region_state:CLL = {
+		create_pop = {
+			culture = rannorian
+			size = 164800
+		}
+		create_pop = {
+			culture = nangarlith
+			size = 1093200
+		}
+		create_pop = {
+			culture = tefereti
+			size = 4004
+		}
+		create_pop = {
+			culture = erdei
+			size = 140004
+		}
+	}
   }
     
   s:STATE_AUTUMN_HILLS = {

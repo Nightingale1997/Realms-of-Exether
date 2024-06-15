@@ -888,6 +888,11 @@ STATE_CAM_RINNARA = {
     farm = x95DAD2
     mine = x98DBF5
     port = x99FBE2
+    arable_land = 50
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_logging = 6
+    }
     naval_exit_id = 3153
 }
 STATE_CAM_NUALA = {
@@ -900,6 +905,11 @@ STATE_CAM_NUALA = {
     farm = x5EDDFD
     mine = x61CCD9
     port = x81D5E1
+    arable_land = 200
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 18
+    }
     naval_exit_id = 3153
 }
 STATE_FAOLNA_PASS = {
@@ -930,6 +940,12 @@ STATE_CAM_LIADRINE = {
     farm = x6CC3D9
     mine = x6EF4BB
     port = x8DA0C9
+    arable_land = 40
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_vineyard_plantations" "bg_dye_plantations" }
+    capped_resources = {
+        bg_iron_mining = 15
+        bg_logging = 4
+    }
     naval_exit_id = 3159
 }
 STATE_CAM_CALLAIRD = {
@@ -942,6 +958,12 @@ STATE_CAM_CALLAIRD = {
     farm = x84F4D3
     mine = x8CD3FE
     port = xA1E4D3
+    arable_land = 235
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 72
+        bg_logging = 9
+    }
     naval_exit_id = 3160
 }
 STATE_SOUTHERN_FEYSTALK = {
@@ -953,6 +975,13 @@ STATE_SOUTHERN_FEYSTALK = {
     farm = x94D6DC
     mine = xAAD7DF
     port = xAE82D4
+    arable_land = 110
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_vineyard_plantations" "bg_dye_plantations" }
+    capped_resources = {
+        bg_coal_mining = 80
+        bg_iron_mining = 45
+        bg_logging = 7
+    }
     naval_exit_id = 3159
 }
 STATE_NORTHERN_FEYSTALK = {
@@ -965,6 +994,12 @@ STATE_NORTHERN_FEYSTALK = {
     farm = x4EEEC0
     mine = x86E5CE
     port = x88F9FE
+    arable_land = 90
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 68
+        bg_logging = 11
+    }
     naval_exit_id = 3160
 }
 STATE_AUTUMN_HILLS = {
