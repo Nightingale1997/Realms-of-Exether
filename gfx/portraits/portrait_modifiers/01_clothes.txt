@@ -208,11 +208,6 @@
                 agitator_character_trigger = yes
                 OR = {
                     arabic_clothes_trigger = yes
-                    scope:character ?= {
-                        culture = {
-                            has_discrimination_trait = planetouched_heritage
-                        }
-                    }
                 }
             }
         }
@@ -750,7 +745,7 @@
                     scope:character ?= {
                         culture = {
                             OR = {
-                                has_discrimination_trait = planetouched_heritage
+                                has_discrimination_trait = qiin_culture_group
                             }
                         }
                     }
@@ -803,7 +798,9 @@
                             exists = scope:character
                             scope:character ?= {
                                 OR = {
-                                    culture = cu:ravikian
+                                    culture = {
+                                        has_discrimination_trait = hasalian
+                                    }
                                     culture = {
                                         has_discrimination_trait = halfling_heritage
                                     }
@@ -869,7 +866,9 @@
                     european_clothes_trigger = yes
                     scope:character ?= {
                         OR = {
-                            culture = cu:ravikian
+                            culture = {
+                                has_discrimination_trait = hasalian
+                            }
                             culture = {
                                 has_discrimination_trait = halfling_heritage
                             }
@@ -919,7 +918,9 @@
                             exists = scope:character
                             scope:character ?= {
                                 OR = {
-                                    culture = cu:ravikian
+                                    culture = {
+                                        has_discrimination_trait = hasalian
+                                    }
                                     culture = {
                                         has_discrimination_trait = halfling_heritage
                                     }
@@ -964,7 +965,9 @@
                             exists = scope:character
                             scope:character ?= {
                                 OR = {
-                                    culture = cu:ravikian
+                                    culture = {
+                                        has_discrimination_trait = hasalian
+                                    }
                                     culture = {
                                         has_discrimination_trait = halfling_heritage
                                     }
@@ -2072,6 +2075,68 @@
         }
     }
 
+
+    korean_empire_military_clothes = {
+        dna_modifiers = {
+             accessory = {
+                mode = add
+                gene = coats
+                template = korean_empire_coats
+                range = { 0 0.5 } # Limited to single-breasted jacket so the aiguillette works properly
+            }
+            accessory = {
+                mode = add
+                gene = aiguillettes
+                template = all_aiguillettes
+                range = { 0 0 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear_colors
+                range = { 0.34 1 } #
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = epaulettes
+                template = all_epaulettes
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 10000
+                AND = {
+                    scope:character ?= {
+                        age > 10
+                        culture = {
+                            has_discrimination_trait = hasalian
+                        }
+                    }
+                    OR = {
+                        military_clothes_trigger = yes
+                        monarchy_clothes_trigger = yes
+                        AND = {
+                            armed_forces_clothes_trigger = yes
+                            politician_clothes_trigger = yes
+                        }
+                        AND = {
+                            ruler_clothes_trigger = yes
+                            armed_forces_clothes_trigger = yes
+                        }
+                    }   
+                }
+            }
+        }
+    }
+
     korean_imperial_clothes = {
         dna_modifiers = {
             accessory = {
@@ -2119,7 +2184,7 @@ arabic_clothes = {
                 arabic_clothes_trigger = yes
                 scope:character ?= {
                     culture = {
-                        has_discrimination_trait = planetouched_heritage
+                        has_discrimination_trait = qiin_culture_group
                     }
                 }
             }
@@ -2146,7 +2211,7 @@ arabic_coats = {
                     arabic_clothes_pop_trigger = yes
                     scope:pop ?= {
                         culture = {
-                            has_discrimination_trait = planetouched_heritage
+                            has_discrimination_trait = qiin_culture_group
                         }
                     }
                 }
@@ -2615,17 +2680,48 @@ indigenous_oceanic_high_clothes_recognized = {
         base = 0
         modifier = {
             add = 1000
-            indigenous_oceanic_clothes_trigger = yes
             OR = {
-                upper_clothes_pop_trigger = yes
-                middle_clothes_pop_trigger = yes
-                scope:character ?= {
-                    is_in_exile_pool = yes
+                indigenous_oceanic_clothes_trigger = yes
+                scope:pop ?= {
+                    culture = {
+                        has_discrimination_trait = hasalian
+                    }
                 }
+            }
+
+            OR = {
+                AND = {
+                    NOT = {
+                        scope:pop ?= {
+                            culture = {
+                                has_discrimination_trait = hasalian
+                            }
+                        }
+                    }
+                    OR = {
+                        upper_clothes_pop_trigger = yes
+                        middle_clothes_pop_trigger = yes
+                        scope:character ?= {
+                            is_in_exile_pool = yes
+                        }
+                    }
+                }
+
                 AND = {
                     OR = {
                         ruler_clothes_trigger = yes
                         politician_clothes_trigger = yes
+                        AND = {
+                            upper_clothes_pop_trigger = yes
+                            middle_clothes_pop_trigger = no
+                            officers_clothes_pop_trigger = no
+                            scope:pop ?= {
+                                culture = {
+                                    has_discrimination_trait = hasalian
+                                }
+                            }
+                        }
+
                     }                
                 }
             }
@@ -2997,7 +3093,7 @@ chinese_upper_clothes = {
                     AND = {
                         scope:pop ?= {
                             culture = {
-                                has_discrimination_trait = planetouched_heritage
+                                has_discrimination_trait = qiin_culture_group
                             }
                         }
                         OR = {
