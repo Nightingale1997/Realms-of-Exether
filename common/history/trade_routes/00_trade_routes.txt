@@ -398,4 +398,45 @@
 			target = c:AZI.market
 		}
 	}
+	#Central Zalaron
+	c:TEF ?= {
+		create_trade_route = {
+			goods = dye
+			level = 1
+			target = c:CLL.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = wood
+			level = 8
+			target = c:CLL.market
+			direction = import
+		}
+	}
+	c:CLL ?= {
+		create_trade_route = {
+			goods = sugar
+			level = 2
+			target = c:TEF.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = paper
+			level = 5
+			target = c:TEF.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = tools
+			level = 4
+			target = c:TEF.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = small_arms
+			level = 1
+			target = c:TEF.market
+			direction = import
+		}
+	}
 }
