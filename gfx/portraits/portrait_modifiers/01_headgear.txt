@@ -466,7 +466,23 @@
             modifier = {
                 add = 2000
                 has_cosmetic_dlc = "Dawn of Wonder"
-always = no
+                AND = {
+                 
+                    OR = {
+                        AND = {
+                            clergy_clothes_pop_trigger = yes
+                            scope:pop ?= {
+                            
+                                religion = rel:creed_of_hasal
+                            }
+                        }
+
+                        scope:character ?= {
+                            is_interest_group_type = ig_devout
+                            religion = rel:creed_of_hasal
+                        }
+                    }
+                }
             }
         }
     }
@@ -1567,12 +1583,15 @@ always = no
                         officers_clothes_pop_trigger = no
                         upper_clothes_pop_trigger = yes
                         scope:pop ?= {
+                            
                             culture = {
                                 AND = {
                                      has_discrimination_trait = wood_elf
                                 }
+                                
                               
                             }
+                            
                         }
                     }
                     AND = {
@@ -1585,8 +1604,10 @@ always = no
                             culture = {
                                 AND = {
                                     has_discrimination_trait = wood_elf
+                                
                                }
                             }
+                            is_female = yes
                         }
                     }
                 }
@@ -1621,8 +1642,10 @@ always = no
                                 culture = {
                                     AND = {
                                         has_discrimination_trait = southern_elf
+                                       
                                    }
                                 }
+                                is_female = yes
                             }
                         }
                     }

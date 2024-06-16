@@ -766,14 +766,30 @@
         weight = {
             base = 0
             modifier = {
-                add = 200
+                add = 2000
                 recognized_country_trigger = no
           
-                scope:character ?= {
-                    culture = {
-                        has_discrimination_trait = ogre_heritage
+                OR = {
+                    scope:character ?= {
+                        ruler_clothes_trigger = no
+                        OR = {
+                            culture = cu:waste_walker
+                            culture = {
+                                has_discrimination_trait = ogre_heritage
+                            }
+                        }
+                    }
+                    scope:pop ?= {
+                        poor_clothes_pop_trigger = yes
+                        OR = {
+                            culture = cu:waste_walker
+                            culture = {
+                                has_discrimination_trait = ogre_heritage
+                            }
+                        }
                     }
                 }
+
             }
         }
     }
@@ -2150,18 +2166,33 @@
         weight = {
             base = 0
             modifier = {
-                add = 1000
+                add = 10000
+                OR = {
                 AND = {
-                    exists = scope:character
-                    scope:character ?= {
+                    
+                        exists = scope:character
+                        scope:character ?= {
+                            culture = {
+                                has_discrimination_trait = ogre_heritage
+                            }
+                            OR = {
+                                is_interest_group_type = ig_landowners
+                                is_ruler = yes
+                            }
+                            
+                        }
+
+                    }
+                AND = {
+                    exists = scope:pop
+                    scope:pop ?= {
+                        upper_clothes_pop_trigger = yes
                         culture = {
                             has_discrimination_trait = ogre_heritage
                         }
-                        is_ruler = yes
-                        OR = {
-                            age <= 10
-                        }
                     }
+                }
+
                 }
            }
         }
@@ -4057,7 +4088,7 @@ slavik_kokoshnik_clothes = {
            mode = add
            gene = outfits
            template = slavic_outfits_kokoshnik
-           range = { 0 1 }
+           range = { 1 1 }
         }
 
         accessory = {
@@ -4071,43 +4102,21 @@ slavik_kokoshnik_clothes = {
     weight = {
         base = 0
         modifier = {
-            add = 11000 # this should trump the midsummer clothes
+            add = 11000
             has_cosmetic_dlc = "Dawn of Wonder"
             OR = {
+
                 AND = {
+                    OR = {
+                        ruler_clothes_trigger = yes
+                        politician_clothes_trigger = yes
+                    }
+
                     scope:character ?= {
                         culture = {
-                            has_discrimination_trait = east_slavic
-                        }
-                        is_female = yes
-                        OR = {
-                            has_variable = getting_married
-                            has_modifier = marriage_popularity
-                        }
-                    }
-                }
-                AND = {
-                    upper_clothes_pop_trigger = yes
-                    scope:pop ?= { # Wear this clothing either during Midsummer or during a Royal Wedding
-                        culture = {
-                            has_discrimination_trait = east_slavic
-                        }
-                        OR = {
-                            scope:pop ?= {
-                                month = 5 # June. The trigger for months is on a 0-11 scale.
-                            }
-                            owner ?= {
-                                OR = {
-                                    has_modifier = royal_marriage
-                                    any_scope_character = {
-                                        OR = {
-                                            is_ruler = yes
-                                            is_heir = yes
-                                        }
-                                        has_modifier = marriage_popularity
-                                    }
-                                }
-                            }
+                            AND = {
+                                has_discrimination_trait = southern_elf
+                           }
                         }
                     }
                 }
@@ -4133,22 +4142,18 @@ hindu_diwali_clothes = {
             has_cosmetic_dlc = "Dawn of Wonder"
             OR = {
                 AND = {
-                    indian_clothes_pop_trigger = yes
-                    hindu_clothes_pop_trigger = yes
                     OR = {
                         middle_clothes_pop_trigger = yes
                         upper_clothes_pop_trigger = yes
                     }
                     scope:pop ?= {
-                        month = 10 # November. The trigger for months is on a 0-11 scale.
+                        religion = rel:house_of_fate
                     }
                 }
                 AND = {
-                    indian_clothes_trigger = yes
                     scope:character ?= {
                         is_female = yes
-                        religion = rel:hindu
-                        month = 10 # November. The trigger for months is on a 0-11 scale.
+                        religion = rel:house_of_fate
                     }
                 }
             }
@@ -4234,7 +4239,23 @@ pierrot_clothing = {
         modifier = {
             add = 11000
             has_cosmetic_dlc = "Dawn of Wonder"
-            always = no #use this for some priests later
+            AND = {
+                OR = {
+                    AND = {
+                        clergy_clothes_pop_trigger = yes
+                        scope:pop ?= {
+                        
+                            religion = rel:creed_of_hasal
+                        }
+                    }
+
+                    scope:character ?= {
+                        is_interest_group_type = ig_devout
+                        religion = rel:creed_of_hasal
+                    }
+                }
+            }
+
         }
     }
 }
