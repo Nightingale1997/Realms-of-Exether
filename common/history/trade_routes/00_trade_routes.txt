@@ -439,4 +439,18 @@
 			direction = import
 		}
 	}
+	c:SET ?= {
+		create_trade_route = {
+			goods = small_arms
+			level = 1
+			target = c:TEF.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = tools
+			level = 1
+			target = c:TEF.market
+			direction = import
+		}
+	}
 }

@@ -2102,7 +2102,25 @@
   }
     
   s:STATE_PARSIMAH = {
-
+	region_state:SET = {
+		create_pop = {
+			culture = seleni
+			size = 159740
+		}
+		create_pop = {
+			culture = nightwalker
+			size = 200
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = wastecrawler
+			size = 60
+		}
+		create_pop = {
+			culture = tefereti
+			size = 16000
+		}
+	}
   }
     
   s:STATE_KASHAMAD = {
@@ -2172,11 +2190,57 @@
   }
     
   s:STATE_SHIRAZAN = {
-
+	region_state:SET = {
+		create_pop = {
+			culture = seleni
+			size = 76078
+		}
+		create_pop = {
+			culture = nightwalker
+			size = 250
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = wastecrawler
+			size = 80
+		}
+		create_pop = {
+			culture = tefereti
+			size = 2600
+		}
+	}
   }
     
   s:STATE_AZHARIM = {
-
+	region_state:SET = {
+		create_pop = {
+			culture = nightwalker
+			size = 60880
+		}
+		create_pop = {
+			culture = seleni
+			size = 60096
+		}
+		create_pop = {
+			culture = tefereti
+			size = 1000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = wastecrawler
+			size = 200
+		}
+	}
+	region_state:KHK = {
+		create_pop = {
+			culture = nightwalker
+			size = 37000
+		}
+		create_pop = {
+			culture = wastecrawler
+			size = 9900
+		}
+	}
   }
     
   s:STATE_KUMASKA = {

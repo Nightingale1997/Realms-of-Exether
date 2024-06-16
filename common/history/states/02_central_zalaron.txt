@@ -1297,11 +1297,20 @@ add_homeland = cu:tefereti
 }
 
 s:STATE_AZHARIM = {
+
+    
+
     create_state = {
         country = c:SET
-        owned_provinces = { "xA1BAD6" "xE8CD96" "xC7B08A" "xB3E064" "x2EEED9" "x40DBFB" "x57CBF5" "x6BD7D1" "x75EF9B" "x96E580" "x98CFDB" "x9D8EEC" "xA0A1EB" "xA3F6A0" "xA5BFF4" "xBDA4DD" "xC5CFB7" "xC7B8CC" "xCEC6E0" "xD4C8DB" "xD4D3A2" "xDAFB4E" "xE555F9" "xEB93F4" "xEE3AEC" "xF2EDAE" "xF4EDA6" }
+        owned_provinces = { "x40DBFB" "x57CBF5" "x6BD7D1" "x75EF9B" "x96E580" "x98CFDB" "x9D8EEC" "xA0A1EB" "xA3F6A0" "xA5BFF4" "xB3E064" "xBDA4DD" "xC5CFB7" "xC7B8CC" "xCEC6E0" "xD4D3A2" "xE555F9" "xF4EDA6" }
 }
-add_homeland = cu:tefereti
+
+    create_state = {
+        country = c:KHK
+        owned_provinces = { "xA1BAD6" "xE8CD96" "xC7B08A" "x2EEED9" "xD4C8DB" "xDAFB4E" "xEB93F4" "xEE3AEC" "xF2EDAE" }
+}
+add_homeland = cu:nightwalker
+add_claim = c:SET
 }
 
 s:STATE_KUMASKA = {

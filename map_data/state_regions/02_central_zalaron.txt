@@ -2688,6 +2688,11 @@ STATE_PARSIMAH = {
     farm = x70DAD5
     mine = x87B2C8
     port = x87b2c8
+    arable_land = 70
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_dye_plantations" "bg_sugar_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_logging = 13
+    }
     naval_exit_id = 3177
 }
 STATE_KASHAMAD = {
@@ -2750,7 +2755,7 @@ STATE_FARASHIL = {
     mine = x75E2C3
     port = xfbf9d2
     arable_land = 70
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_tea_plantations" "bg_sugar_plantations" "bg_tobacco_plantations" }
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_tea_plantations" "bg_sugar_plantations" "bg_tobacco_plantations" }
     capped_resources = {
         bg_coal_mining = 22
         bg_iron_mining = 11
@@ -2794,6 +2799,14 @@ STATE_SHIRAZAN = {
     farm = x9AAEC6
     mine = x9EF184
     port = xc2a1ab
+    arable_land = 60
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_dye_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_cotton_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_iron_mining = 39
+        bg_lead_mining = 15
+        bg_gold_mining = 3
+        bg_logging = 6
+    }
     naval_exit_id = 3178
 }
 STATE_AZHARIM = {
@@ -2807,6 +2820,13 @@ STATE_AZHARIM = {
     farm = x57CBF5
     mine = x6BD7D1
     port = xa3f6a0
+    arable_land = 120
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_dye_plantations" "bg_sugar_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_coal_mining = 40
+        bg_sulfur_mining = 52
+        bg_opium_plantations = 16
+    }
     naval_exit_id = 3182
 }
 STATE_KUMASKA = {
