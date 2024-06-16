@@ -813,7 +813,7 @@ umbradorn={
 }
 
 rannorian = {
-	color= hsv{ 0.35 0.58 0.54 }
+	color= hsv{ 0.45 0.58 0.54 }
 	religion = elf_magic
 	traits = { human_heritage elf_heritage half_elf }
 	male_common_first_names={
@@ -856,7 +856,55 @@ rannorian = {
 	
 	graphics = european
 	ethnicities = {
-		1 = caucasian
+		1 = half_elf_caucasian
+	}
+}
+
+grunhain = {
+	color= hsv{ 0.35 0.58 0.54 }
+	religion = elf_nature
+	traits = { human_heritage elf_heritage half_elf }
+	male_common_first_names={
+		Amroise-Dydime
+		Daniel
+		Gabriel
+		James
+		Jaque
+		Joel
+		John
+		Louis
+		William
+	}
+	female_common_first_names = {
+		Blance
+		Charlotte
+		Helene_2
+		Josephte 
+		Julie
+		Laura
+		Maria
+		Marie-Anne
+		Michele
+		Rosalie
+	}	
+	noble_last_names = {
+		Lepine
+		Riel
+		Sayer
+	}
+	common_last_names={
+		Bruce
+		Clarence
+		Dumont
+		Lacerte
+		Lesperance
+		Martin
+		Vandal
+	}
+	
+	graphics = european
+	ethnicities = {
+		1 = half_elf_caucasian
 	}
 }
 
@@ -904,7 +952,7 @@ timari = {
 	
 	graphics = european
 	ethnicities = {
-		1 = caucasian
+		1 = half_elf_caucasian
 	}
 }
 
