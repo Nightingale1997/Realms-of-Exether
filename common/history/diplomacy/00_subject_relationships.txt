@@ -74,10 +74,14 @@
 			type = tributary
 		}
 	}
-	c:VOZ = {
+	c:OAZ = {
 		create_diplomatic_pact = {
-			country = c:DRO
-			type = customs_union
+			country = c:SNM
+			type = dominion
+		}
+		create_diplomatic_pact = {
+			country = c:ZHR
+			type = puppet
 		}
 	}
 }

@@ -188,5 +188,7 @@ SEA_NODE_TOOLTIP_SEA_PART_1: "#header [concept_sea_node] in [StrategicRegion.Get
 
 
 
- SEA_NODE_TOOLTIP: "[AddTextIf(GetScriptedGui('is_sky_region').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('node_region', StrategicRegion.MakeScope).End), '1')][AddLocalizationIf(Not(GetScriptedGui('is_sky_region').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('node_region', StrategicRegion.MakeScope).End)), 'SEA_NODE_TOOLTIP_SEA_PART_1')]" #Simply comment out this entry to make all nodes visible again
+ SEA_NODE_TOOLTIP: "[AddTextIf(GetScriptedGui('is_sky_region').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('node_region', StrategicRegion.MakeScope).End), 'Sky Node')][AddLocalizationIf(Not(GetScriptedGui('is_sky_region').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('node_region', StrategicRegion.MakeScope).End)), 'SEA_NODE_TOOLTIP_SEA_PART_1')]" #Simply comment out this entry to make all nodes visible again
  SEA_NODE_TOOLTIP_VALID: "[GetScriptedGui('is_sky_region').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('node_region', StrategicRegion.MakeScope).End)]" #Use this as SEA_NODE_TOOLTIP is performance tanks too hard
+
+ #COMMAND_CONFIRMATION_DEPLOY_MILITARY_FORMATION_TO_SEA_NODE: "Deploy to Sea Node" Enable if trying to hide sea nodes

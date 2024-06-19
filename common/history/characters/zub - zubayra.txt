@@ -1,0 +1,29 @@
+﻿CHARACTERS = {
+	c:ZUB = {
+		create_character = {
+			first_name = "Chingiz"
+			last_name = "Khan"
+			historical = yes
+			ruler = yes
+			age = 61
+			interest_group = ig_landowners
+			ideology = ideology_moderate
+			traits = {
+				persistent
+				experienced_diplomat
+			}
+		}
+		create_character = {
+			first_name = "Izzat"
+			last_name = "Khan"
+			historical = yes
+			heir = yes
+			age = 12
+			interest_group = ig_landowners
+			ideology = ideology_magocrat
+			traits = {
+				trait_child
+			}
+		}
+	}
+}
