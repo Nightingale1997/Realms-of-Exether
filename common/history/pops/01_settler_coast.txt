@@ -13,8 +13,12 @@
 		  region_state:EME = {
 			    create_pop = {
 				      culture = ocelian 
-				      size = 280744
+				      size = 230744
 			    }
+				create_pop = {
+					culture = vozi
+					size = 50744
+				}
 			    create_pop = {
 				      culture = aridrun
 				      size = 20881
@@ -30,11 +34,11 @@
 			    }
 			    create_pop = {
 				      culture = vozi
-				      size = 113312
+				      size = 50312
 			    }				    
 			    create_pop = {
 				      culture = aridrun
-				      size = 50312
+				      size = 113312
 			    }			         
 		  }
   }
@@ -398,8 +402,12 @@ s:STATE_CAEL_VALEN_2 = {
   s:STATE_RIVER_MEDDEN = {
 	region_state:MID = {
 		create_pop = {
+			culture =rivierling
+			size = 400989
+		}
+		create_pop = {
 			culture = coast_halfling
-			size = 600989
+			size = 200989
 		}
 		create_pop = {
 			culture = mousefolk
@@ -435,7 +443,62 @@ s:STATE_CAEL_VALEN_2 = {
   }
 
   s:STATE_FORESTS_HEART = {
+	region_state:BDB = {
+		create_pop = {
+			culture = plaguedweller
+			size = 553996
+		}
+		create_pop = {
+			culture = korkaz
+			size = 68000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = ceraunian
+			size = 30000
+		}
+	}
+  }
 
+  s:STATE_FORESTS_HEART_2 = {
+	region_state:BDB = {
+		create_pop = {
+			culture = plaguedweller
+			size = 1059596
+		}
+		create_pop = {
+			culture = korkaz
+			size = 68000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = plaguedweller
+			size = 50000
+		}
+	}
+  }
+
+  s:STATE_FORESTS_HEART_3 = {
+	region_state:BDB = {
+		create_pop = {
+			culture = plaguedweller
+			size = 408000
+		}
+		create_pop = {
+			culture = plaguedweller
+			religion = animist
+			size = 18000
+		}
+		create_pop = {
+			culture = korkaz
+			size = 218400
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = plaguedweller
+			size = 40000
+		}
+	}
   }
 
   s:STATE_PLAGUEWOOD_HINTERLANDS = {
@@ -451,6 +514,28 @@ s:STATE_CAEL_VALEN_2 = {
 		create_pop = {
 			culture = aridrun
 			size = 8004
+		}
+	}
+  }
+
+  s:STATE_PLAGUEWOOD_HINTERLANDS_2 = {
+	region_state:BDB = {
+		create_pop = {
+			culture = plaguedweller
+			size = 787900
+		}
+		create_pop = {
+			culture = bossardi
+			size = 12400
+		}
+		create_pop = {
+			culture = korkaz
+			size = 415600
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = astreval
+			size = 40000
 		}
 	}
   }
@@ -483,7 +568,11 @@ s:STATE_CAEL_VALEN_2 = {
 	region_state:MID = {
 		create_pop = {
 			culture = coast_halfling 
-			size = 224197
+			size = 202197
+		}
+		create_pop = {
+			culture = rivierling
+			size = 24186
 		}
 
 	}
@@ -662,6 +751,27 @@ s:STATE_THE_AMBER_RUN_3 = {
 			}
 		}
   }
+
+  s:STATE_MISTREACH_2 = {
+	region_state:PRI = {
+		create_pop = {
+			culture = bossardi
+			size = 304908
+		}
+		create_pop = {
+			culture = yelfi
+			size = 3196
+		}
+		create_pop = {
+			culture = wealder
+			size = 372400
+		}
+		create_pop = {
+			culture = dorite
+			size = 183996
+		}
+	}
+}
 
   s:STATE_VICEROYS_PEARL = {
 		region_state:ARR = {
@@ -1018,15 +1128,77 @@ s:STATE_FAR_SHORE_2 = {
   }
 
   s:STATE_HORSELORDS_DEMESNE = {
-
+	region_state:PFL = {
+		create_pop = {
+			culture = changeling
+			size = 897396
+		}
+		create_pop = {
+			culture = changeling
+			religion = cult_of_knowledge
+			size = 32000
+		}
+		create_pop = {
+			culture = eberri
+			size = 112400
+		}
+		create_pop = {
+			culture = achonian
+			size = 20000
+		}
+		create_pop = {
+			culture = dorite
+			size = 8000
+		}
+	}
   }
 
   s:STATE_ROCHENSTONE = {
-
+	region_state:PFL = {
+		create_pop = {
+			culture = changeling
+			size = 1057396
+		}
+		create_pop = {
+			culture = changeling
+			religion = cult_of_knowledge
+			size = 24000
+		}
+		create_pop = {
+			culture = achonian
+			size = 119212
+		}
+		create_pop = {
+			culture = eberri
+			size = 88000
+		}
+		create_pop = {
+			culture = dorite
+			size = 20000
+		}
+	}
   }
 
   s:STATE_SJETTSZCEK_MIRE = {
-
+	region_state:AHO = {
+		create_pop = {
+			culture = changeling
+			size = 1040004
+		}
+		create_pop = {
+			culture = changeling
+			religion = cult_of_knowledge
+			size = 740004
+		}
+		create_pop = {
+			culture = eberri
+			size = 28000
+		}
+		create_pop = {
+			culture = achonian
+			size = 288000
+		}
+	}
   }
 
   s:STATE_THUNDERSPELL_COAST = {

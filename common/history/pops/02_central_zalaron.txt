@@ -391,7 +391,7 @@
   s:STATE_GIANTS_STRIDE = {
 	region_state:ABA = {
       create_pop = {
-        culture = lacertian
+        culture = east_lacertian
         size = 512000
       }
     }
@@ -603,40 +603,156 @@
   }
     
   s:STATE_CAM_RINNARA = {
-
+	region_state:CLL = {
+		create_pop = {
+			culture = rannorian
+			size = 808396
+		}
+		create_pop = {
+			culture = grunhain
+			size = 12000
+		}
+		create_pop = {
+			culture = beithaven
+			size = 135996
+		}
+		create_pop = {
+			religion = nuzaptan
+			size = 32000
+		}
+	}
   }
     
   s:STATE_CAM_NUALA = {
-
+	region_state:CLL = {
+		create_pop = {
+			culture = rannorian
+			size = 2295600
+		}
+		create_pop = {
+			culture = grunhain
+			size = 1003040
+		}
+		create_pop = {
+			culture = beithaven
+			size = 428000
+		}
+	}
   }
     
   s:STATE_FAOLNA_PASS = {
 		region_state:TEF = {
 			create_pop = {
 				culture = nangarlith
-				size = 704308
+				size = 504308
 			}
 			create_pop = {
 				culture = tefereti
-				size = 316804
+				size = 216804
+			}
+		}
+		region_state:CLL = {
+			create_pop = {
+				culture = nangarlith
+				size = 204308
+			}
+			create_pop = {
+				culture = rannorian
+				size = 116804
 			}
 		}
   }
     
   s:STATE_CAM_LIADRINE = {
-
+	region_state:CLL = {
+		create_pop = {
+			culture = rannorian
+			size = 158400
+		}
+		create_pop = {
+			culture = thiralian
+			size = 8000
+		}
+		create_pop = {
+			culture = nuzaptan
+			size = 28004
+		}
+		create_pop = {
+			culture = erdei
+			size = 11996
+		}
+		create_pop = {
+			culture = beithaven
+			size = 18996
+		}
+	}
   }
     
   s:STATE_CAM_CALLAIRD = {
-
+	region_state:CLL = {
+		create_pop = {
+			culture = rannorian
+			size = 3923992
+		}
+		create_pop = {
+			culture = nangarlith
+			size = 381996
+		}
+		create_pop = {
+			culture = grunhain
+			size = 141504
+		}
+		create_pop = {
+			culture = beithaven
+			size = 36400
+		}
+	}
   }
     
   s:STATE_SOUTHERN_FEYSTALK = {
-
+	region_state:CLL = {
+		create_pop = {
+			culture = rannorian
+			size = 1914584
+		}
+		create_pop = {
+			culture = erdei
+			size = 161992
+		}
+		create_pop = {
+			culture = nuzaptan
+			size = 41000
+		}
+		create_pop = {
+			culture = nangarlith
+			size = 16000
+		}
+		create_pop = {
+			culture = thiralian
+			size = 20400
+		}
+	}
   }
     
   s:STATE_NORTHERN_FEYSTALK = {
-
+	region_state:CLL = {
+		create_pop = {
+			culture = rannorian
+			size = 164800
+		}
+		create_pop = {
+			culture = nangarlith
+			size = 1093200
+		}
+		create_pop = {
+			culture = tefereti
+			size = 4004
+		}
+		create_pop = {
+			culture = erdei
+			size = 140004
+		}
+	}
   }
     
   s:STATE_AUTUMN_HILLS = {
@@ -937,7 +1053,12 @@
   }
     
   s:STATE_MONTEGO = {
-
+	region_state:MLA = {
+		create_pop = {
+			culture = glabrekthorn
+			size = 450000
+		}
+	}
   }
     
   s:STATE_PLUVPINTO = {
@@ -955,11 +1076,42 @@
   }
     
   s:STATE_INSULBELA = {
-
+	region_state:XXP = {
+		create_pop = {
+			culture = timari
+			size = 1000000
+		}
+		create_pop = {
+			culture = azmaraan
+			size = 506000
+		}
+		create_pop = {
+			culture = kashtarnel
+			size = 150000
+		}
+	}
   }
     
   s:STATE_TEROCARO = {
-
+	region_state:WHX = {
+		create_pop = {
+			culture = whiali
+			size = 400000
+		}
+		create_pop = {
+			culture = whiali
+			religion = cult_of_the_sea
+			size = 580000
+		}
+		create_pop = {
+			culture = vairian
+			size = 18000
+		}
+		create_pop = {
+			culture = stranfolk
+			size = 2000
+		}
+	}
   }
     
   s:STATE_KASKADVIVO = {
@@ -994,7 +1146,24 @@
   }
     
   s:STATE_MONTROSO = {
-
+	region_state:XXP = {
+		create_pop = {
+			culture = timari
+			size = 700000
+		}
+		create_pop = {
+			culture = kashtarnel
+			size = 100000
+		}
+		create_pop = {
+			culture = vairian
+			size = 200000
+		}
+		create_pop = {
+			culture = lumvareth
+			size = 80000
+		}
+	}
   }
     
   s:STATE_BLUMETO = {
@@ -1015,7 +1184,21 @@
   }
     
   s:STATE_STELALTAJO = {
-
+	region_state:WHX = {
+		create_pop = {
+			culture = whiali
+			size = 310000
+		}
+		create_pop = {
+			culture = whiali
+			religion = cult_of_the_sea
+			size = 450000
+		}
+		create_pop = {
+			culture = vairian
+			size = 9000
+		}
+	}
   }
     
   s:STATE_FLORBORDO = {
@@ -1047,7 +1230,26 @@
   }
     
   s:STATE_TRANKVILEJO = {
-
+	region_state:WHX = {
+		create_pop = {
+			culture = whiali
+			size = 1000000
+		}
+		create_pop = {
+			culture = whiali
+			religion = cult_of_the_sea
+			size = 600000
+		}
+		create_pop = {
+			culture = vairian
+			size = 25000
+		}
+		create_pop = {
+			culture = vairian
+			religion = church_of_man
+			size = 55000
+		}
+	}
   }
     
   s:STATE_SONGBIENO = {
@@ -1100,7 +1302,30 @@
   }
     
   s:STATE_RADIANTAJO = {
-
+	region_state:WHX = {
+		create_pop = {
+			culture = whiali
+			size = 850000
+		}
+		create_pop = {
+			culture = whiali
+			religion = cult_of_the_sea
+			size = 520000
+		}
+		create_pop = {
+			culture = vairian
+			size = 20000
+		}
+		create_pop = {
+			culture = vairian
+			religion = church_of_man
+			size = 32000
+		}
+		create_pop = {
+			culture = stranfolk
+			size = 10000
+		}
+	}
   }
     
   s:STATE_NOVAJEGO = {
@@ -1121,7 +1346,30 @@
   }
     
   s:STATE_INSULECO = {
-
+	region_state:WHX = {
+		create_pop = {
+			culture = whiali
+			size = 800000
+		}
+		create_pop = {
+			culture = whiali
+			religion = cult_of_the_sea
+			size = 450000
+		}
+		create_pop = {
+			culture = vairian
+			size = 10000
+		}
+		create_pop = {
+			culture = vairian
+			religion = church_of_man
+			size = 25000
+		}
+		create_pop = {
+			culture = stranfolk
+			size = 5000
+		}
+	}
   }
     
   s:STATE_KOTIK = {
@@ -1362,7 +1610,12 @@
   }
     
   s:STATE_KULIKAN = {
-
+	region_state:MLA = {
+		create_pop = {
+			culture = glabrekthorn
+			size = 410000
+		}
+	}
   }
     
   s:STATE_POFIKAN = {
@@ -1469,7 +1722,16 @@
   }
     
   s:STATE_ALAMARA = {
-
+	region_state:TIS = {
+		create_pop = {
+			culture = azmaraan
+			size = 550000
+		}
+		create_pop = {
+			culture = qinnaat
+			size = 250000
+		}
+	}
   }
     
   s:STATE_ESPRANOOR = {
@@ -1503,7 +1765,16 @@
   }
     
   s:STATE_KALIBRANTO = {
-
+	region_state:TIS = {
+		create_pop = {
+			culture = azmaraan
+			size = 780000
+		}
+		create_pop = {
+			culture = qinnaat
+			size = 500000
+		}
+	}
   }
     
   s:STATE_SAHARANDO = {
@@ -1520,51 +1791,159 @@
   }
     
   s:STATE_ZAHARIDO = {
-
+	region_state:VER = {
+		create_pop = {
+			culture = azmaraan
+			size = 650000
+		}
+		create_pop = {
+			culture = qinnaat
+			size = 340000
+		}
+	}
   }
     
   s:STATE_ALVEKSADO = {
-
+	region_state:LIS = {
+		create_pop = {
+			culture = azmaraan
+			size = 940000
+		}
+		create_pop = {
+			culture = timari
+			size = 208000
+		}
+		create_pop = {
+			culture = kashtarnel
+			size = 100000
+		}
+	}
   }
     
   s:STATE_ALMARAQI = {
-
+	region_state:LIS = {
+		create_pop = {
+			culture = azmaraan
+			size = 1020000
+		}
+		create_pop = {
+			culture = timari
+			size = 242000
+		}
+		create_pop = {
+			culture = vairian
+			size = 210000
+		}
+	}
   }
     
   s:STATE_NAJMAKULO = {
-
+	region_state:ZUB = {
+		create_pop = {
+			culture = azmaraan
+			size = 480000
+		}
+	}
   }
     
   s:STATE_KASIDA = {
-
+	region_state:OAZ = {
+		create_pop = {
+			culture = qinnaat
+			size = 1140000
+		}
+		create_pop = {
+			culture = achonian
+			size = 140000
+		}
+	}
   }
     
   s:STATE_ESPRASHAD = {
-
+	region_state:ZUB = {
+		create_pop = {
+			culture = azmaraan
+			size = 1000000
+		}
+		create_pop = {
+			culture = vairian
+			size = 280000
+		}
+	}
   }
     
   s:STATE_RAHMANTO = {
-
+	region_state:ZHR = {
+		create_pop = {
+			culture = qinnaat
+			size = 1200000
+		}
+	}
   }
     
   s:STATE_ZAKARIYA = {
-
+	region_state:OAZ = {
+		create_pop = {
+			culture = qinnaat
+			size = 500000
+		}
+		create_pop = {
+			culture = azmaraan
+			size = 12000
+		}
+	}
   }
     
   s:STATE_NURADINO = {
-
+	region_state:SNM = {
+		create_pop = {
+			culture = qinnaat
+			size = 1000000
+		}
+		create_pop = {
+			culture = azmaraan
+			size = 600000
+		}
+	}
   }
     
   s:STATE_ALJUMARO = {
-
+	region_state:OAZ = {
+		create_pop = {
+			culture = qinnaat
+			size = 428000
+		}
+		create_pop = {
+			culture = achonian
+			size = 200000
+		}
+		create_pop = {
+			culture = changeling
+			size = 12000
+		}
+	}
   }
     
   s:STATE_ZAHIDUMO = {
-
+	region_state:OAZ = {
+		create_pop = {
+			culture = qinnaat
+			size = 640000
+		}
+	}
   }
     
   s:STATE_KAJRANDO = {
-
+	region_state:SNM = {
+		create_pop = {
+			culture = qinnaat
+			size = 520000
+		}
+		create_pop = {
+			culture = azmaraan
+			size = 280000
+		}
+	}
   }
     
   s:STATE_SARABENDO = {
@@ -1602,7 +1981,16 @@
   }
     
   s:STATE_ALMAKSURO = {
-
+	region_state:ZUB = {
+		create_pop = {
+			culture = azmaraan
+			size = 640000
+		}
+		create_pop = {
+			culture = qinnaat
+			size = 320000
+		}
+	}
   }
     
   s:STATE_AZAROON = {
@@ -1714,7 +2102,25 @@
   }
     
   s:STATE_PARSIMAH = {
-
+	region_state:SET = {
+		create_pop = {
+			culture = seleni
+			size = 159740
+		}
+		create_pop = {
+			culture = nightwalker
+			size = 200
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = wastecrawler
+			size = 60
+		}
+		create_pop = {
+			culture = tefereti
+			size = 16000
+		}
+	}
   }
     
   s:STATE_KASHAMAD = {
@@ -1784,11 +2190,57 @@
   }
     
   s:STATE_SHIRAZAN = {
-
+	region_state:SET = {
+		create_pop = {
+			culture = seleni
+			size = 76078
+		}
+		create_pop = {
+			culture = nightwalker
+			size = 250
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = wastecrawler
+			size = 80
+		}
+		create_pop = {
+			culture = tefereti
+			size = 2600
+		}
+	}
   }
     
   s:STATE_AZHARIM = {
-
+	region_state:SET = {
+		create_pop = {
+			culture = nightwalker
+			size = 60880
+		}
+		create_pop = {
+			culture = seleni
+			size = 60096
+		}
+		create_pop = {
+			culture = tefereti
+			size = 1000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = wastecrawler
+			size = 200
+		}
+	}
+	region_state:KHK = {
+		create_pop = {
+			culture = nightwalker
+			size = 37000
+		}
+		create_pop = {
+			culture = wastecrawler
+			size = 9900
+		}
+	}
   }
     
   s:STATE_KUMASKA = {

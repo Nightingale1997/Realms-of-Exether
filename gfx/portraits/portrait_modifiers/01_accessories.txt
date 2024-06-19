@@ -67,11 +67,11 @@
                     monarchy_clothes_trigger = yes
                     age > 12
     				OR = {
-    					NOT = { exists = c:PAP }
+    					NOT = { exists = c:AUM }
     					AND = {
-    						exists = c:PAP
+    						exists = c:AUM
 							exists = home_country
-    						NOT = { home_country = c:PAP }
+    						NOT = { home_country = c:AUM }
     					}
     				}
     			}
@@ -162,8 +162,8 @@
                         scope:character = {
 							exists = home_country
                             home_country = {
-                                exists = c:CSA
-                                c:CSA = this
+                                exists = c:VAI
+                                c:VAI = this
                                 is_subject = no
                             }
                         }
@@ -231,9 +231,9 @@
                         ruler_clothes_trigger = yes
                         NOT = {
                             scope:character = {
-    							exists = c:PAP
+    							exists = c:AUM
 								exists = home_country
-                                home_country = c:PAP
+                                home_country = c:AUM
                             }
                         }
                     }

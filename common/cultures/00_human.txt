@@ -895,7 +895,7 @@ avalorean={
 whiali = {
 	color= hsv{ 0.82 0.51 0.75 }
 	religion = church_of_man
-	traits = { human_heritage }
+	traits = { human_heritage vairia_culture_group }
 	male_common_first_names={
 		Abel
 		Adriano
@@ -1084,7 +1084,7 @@ whiali = {
 vairian = {
 	color= hsv{ 0.52 0.51 0.75 }
 	religion = cult_of_the_sea
-	traits = { human_heritage }
+	traits = { human_heritage vairia_culture_group }
 	male_common_first_names={
 		Abel
 		Adriano
@@ -3681,7 +3681,7 @@ achonian={
 }
 
 eberri={
-	color= hsv{ 0.40 0.26 0.58 }
+	color= hsv{ 0.70 0.26 0.58 }
 	religion = church_of_man
 	traits = { human_heritage }
 	male_common_first_names={
@@ -4040,6 +4040,113 @@ south_sea_ravager={
 
 nivaskyan={
 	color= hsv{ 0.67 0 0.67 }
+	religion = church_of_man
+	traits = { human_heritage }
+	male_common_first_names={
+		Ervko
+		Igney
+		Iriko
+		Khasavako
+		Koka
+		Myusena
+		Natena
+		Neleyko
+		Noley
+		Nolyako
+		Osi
+		Petrako
+		Serakone
+		Sevtya
+		Vavlya
+		Vesako
+	}
+	female_common_first_names={
+		Edeyne
+		Evane
+		Khadako
+		Khadne
+		Khoni
+		Matryo
+		Neko
+		Nolyako
+		Parako
+		Pukhutsya
+		Savane
+		Syvne
+		Varuk
+		Yalyane
+		Yedeyne
+	}
+	noble_last_names={
+		Anagurichi
+		Ayvasedo
+		Ezyngi
+		Khorolya
+		Khudi
+		Lamdo
+		Lapsui
+		Laptander
+		Nenyang
+		Nerkagi
+		Ngokateta 
+		Okotetto
+		Pankov
+		Puyko
+		Pyak
+		Rebas
+		Salinder
+		Serotteto 
+		Tadibe
+		Tesda
+		Tesida
+		Vanuyto
+		Vella
+		Vengo
+		Vylka
+		Vylko
+		Yadne
+		Yaptunay
+		Yar
+	}
+	common_last_names={
+		Anagurichi
+		Ayvasedo
+		Ezyngi
+		Khorolya
+		Khudi
+		Lamdo
+		Lapsui
+		Laptander
+		Nenyang
+		Nerkagi
+		Ngokateta 
+		Okotetto
+		Pankov
+		Puyko
+		Pyak
+		Rebas
+		Salinder
+		Serotteto 
+		Tadibe
+		Tesda
+		Tesida
+		Vanuyto
+		Vella
+		Vengo
+		Vylka
+		Vylko
+		Yadne
+		Yaptunay
+		Yar
+	}
+	graphics = european
+	ethnicities = {
+		1 = circumpolar
+	}
+}
+
+varyngi={
+	color= hsv{ 0.47 0.2 0.67 }
 	religion = church_of_man
 	traits = { human_heritage }
 	male_common_first_names={
