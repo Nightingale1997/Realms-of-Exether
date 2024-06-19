@@ -813,16 +813,7 @@ on_character_death = {
 # Root = Character
 on_new_ruler = {
 	effect = {
-		if = {
-			limit = {
-				owner = {
-					NOT = {
-						has_variable = hide_ruler_change_notification
-					}
-				}
-			}
-			post_notification = new_ruler
-		}
+		post_notification = new_ruler
 	}
 }
 
