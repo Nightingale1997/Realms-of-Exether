@@ -1,0 +1,34 @@
+COUNTRIES = {
+	c:EVR = {
+		effect_starting_technology_tier_2_tech = yes
+		effect_starting_politics_conservative = yes
+		add_technology_researched = postal_savings
+		set_tax_level = low 
+
+		# Laws 
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_denominational_exclusion
+		activate_law = law_type:law_hereditary_bureaucrats
+		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_mercantilism
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_local_police
+		activate_law = law_type:law_no_schools
+		activate_law = law_type:law_censorship
+		activate_law = law_type:law_land_based_taxation
+		activate_law = law_type:law_no_colonial_affairs
+
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 2
+		}		
+		# I think Everglen is in the shit, irl it didn't have enough autority, so the government decided to become in a very autoritarian state, but it is very rural.
+		ig:ig_rural_folk = {
+			add_ruling_interest_group = yes
+		}
+
+		effect_concord_major_member = yes
+
+	}
+}

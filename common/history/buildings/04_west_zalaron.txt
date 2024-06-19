@@ -1432,7 +1432,7 @@
 				building="building_maize_farm"
 				level=1
 				reserves=1
-				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled" "pm_privately_owned" }
+				activate_production_methods={ "pm_soil_enriching_farming" "pm_no_secondary" "pm_tools_disabled" "pm_homesteading" }
 			}
 		}
   }
@@ -1553,8 +1553,8 @@
 				building="building_maize_farm"
 				level=4
 				reserves=1
-				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled" "pm_privately_owned" }
-			}			
+				activate_production_methods={ "pm_soil_enriching_farming" "pm_no_secondary" "pm_tools_disabled" "pm_homesteading" }
+			}		
 			create_building={
 				building="building_coffee_plantation"
 				level=6

@@ -28,10 +28,6 @@ historical_events.1 = { #First flight
 
 	immediate = {
 		set_global_variable = flight_discovered
-		set_variable = {
-			name = first_flight_achievement_check
-			value = yes
-		}
 		post_notification = first_flight
 
 		ROOT = {

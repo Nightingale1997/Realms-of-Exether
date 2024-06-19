@@ -176,7 +176,6 @@ STATE_SAWAMREMBO = {
         bg_logging = 6
     }
 
-    naval_exit_id = 3079
 }
 STATE_MAJILIMA = {
     id = 4459
@@ -193,7 +192,6 @@ STATE_MAJILIMA = {
         bg_logging = 4
         bg_sulfur_mining = 18
     }
-    naval_exit_id = 3078
 }
 STATE_KIJITOQWA = {
     id = 4460
@@ -431,7 +429,7 @@ STATE_QAQAMANTA = {
     id = 4473
     subsistence_building = "building_subsistence_pastures"
     provinces = { "x61B7F0" "x76D3F0" "x7FE1E2" "x87BCD9" "x88E2F8" "x9AF1AC" "x9EC6F6" "xA2CDEF" "xA4F6EE" "xAEE4BF" "xB0D0EF" "xB6EE5C" "xB7DC81" "xB99CDC" "xBBC1AC" "xBEB4FB" "xC17DC7" "xC5C5CB" "xC7E78A" "xCBEAAF" "xCEC9EF" "xD59CD0" "xDFF9E3" "xE0AAA5" "xE68EA0" "xEDD875" "xF18F9E" "xF3EC26" "xF5D5B9" "xFAD528" "xFAF2F3" "xFBBCC5" "xFC72A3" "xFE92CF" }
-    impassable = { "xCEC9EF" "xC5C5CB" "xAEE4BF" "xfe92cf" "xd59cd0" "xb99cdc" "x61B7F0" "xCBEAAF" "xfc72a3" "xDFF9E3" "xB6EE5C" "x7FE1E2" "xB7DC81" }
+    impassable = { "xCEC9EF" "xC5C5CB" "xAEE4BF" "xfe92cf" "xd59cd0" "xb99cdc" "x61B7F0" "xCBEAAF" "xfc72a3" "xDFF9E3" "xB6EE5C" "x7FE1E2" "xB7DC81" "xe0aaa5" "xfbbcc5" }
     city = x61B7F0
     wood = x76D3F0
     farm = x7FE1E2
@@ -448,7 +446,7 @@ STATE_QAQAMANTA = {
         type = "bg_oil_extraction"
         undiscovered_amount = 30
     }
-    naval_exit_id = 3100
+
 }
 STATE_SUYANAKU = {
     id = 4474
@@ -509,7 +507,7 @@ STATE_LLANKAYUQ = {
     capped_resources = {
         bg_opium_plantations = 23
     }
-    naval_exit_id = 3100
+
 }
 STATE_TIKAQULLU = {
     id = 4477
@@ -549,7 +547,7 @@ STATE_PUKARAQOCHA = {
         type = "bg_oil_extraction"
         undiscovered_amount = 5
     }
-    naval_exit_id = 3122
+
 }
 STATE_KUCHUYPATA = {
     id = 4479
@@ -587,7 +585,6 @@ STATE_MIKHUYUQ = {
     capped_resources = {
         bg_opium_plantations = 10
     }
-    naval_exit_id = 3125
 }
 STATE_PISQUPATA = {
     id = 4482
@@ -607,7 +604,6 @@ STATE_PISQUPATA = {
         type = "bg_oil_extraction"
         undiscovered_amount = 5
     }
-    naval_exit_id = 3124
 }
 STATE_QOMERQOCHA = {
     id = 4484

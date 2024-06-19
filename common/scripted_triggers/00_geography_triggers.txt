@@ -13,6 +13,17 @@ state_is_in_settler_coast = {
 	}
 }
 
+state_is_in_noricum = {
+	OR = {
+		region = sr:region_gulfwatch
+		region = sr:region_southwestern_noricum
+		region = sr:region_dumonian_heartlands
+		region = sr:region_central_noricum
+		region = sr:region_worlds_end
+		region = sr:region_yanger_steppe
+	}
+}
+
 state_is_in_locari = {
 	OR = {
 		region = sr:region_east_mindrend_sands	
@@ -83,6 +94,8 @@ state_is_in_kharaa_ur = {
 	}
 }
 
+
+
 state_is_in_yulug = {
 	OR = {
 		region = sr:region_valley_of_golden_fields
@@ -126,6 +139,57 @@ state_is_in_gavkhan = {
 		region = sr:region_tokalivar
 	}
 }
+
+##compat triggers
+
+state_is_in_china = { #these seemingly useless triggers will help us play better with mods like BPM
+	OR = {
+		region = sr:region_valley_of_golden_fields
+		region = sr:region_bataar_kharaal
+		region = sr:region_boroo_jirta
+		region = sr:region_muru
+		# not counting manchuria here deliberately
+	}
+}
+
+state_is_in_east_asia = { #these seemingly useless triggers will help us play better with mods like BPM
+	OR = {
+		region = sr:region_hirugolaima
+		region = sr:region_ongoryu
+		region = sr:region_yamkhanato
+		region = sr:region_bataar_kharaal
+		region = sr:region_boroo_jirta
+		region = sr:region_muru
+		region = sr:region_valley_of_golden_fields
+		region = sr:region_khantar
+		region = sr:region_strait_of_aranmendi
+	}
+}
+
+state_is_in_europe = { #I did my best
+	OR = {
+		region = sr:region_gulfwatch
+		region = sr:region_southwestern_noricum
+		region = sr:region_dumonian_heartlands
+		region = sr:region_central_noricum
+		region = sr:region_worlds_end
+		region = sr:region_achon
+		region = sr:region_arrador
+		region = sr:region_moorweald
+		region = sr:region_lake_bossard
+		region = sr:region_ceraun
+		region = sr:region_lagoon_coast
+		region = sr:region_keystone_peninsula
+		region = sr:region_ravik
+		region = sr:region_hasals_mirror
+	}
+}
+
+
+state_is_in_africa = {
+	state_is_in_locari = yes
+}
+
 ### Country geography triggers
 # exists = capital checks are necessary only because we may test these triggers and scope switch to capitals before states are initialized properly
 
@@ -147,6 +211,13 @@ country_is_in_northwestern_zalaron = {
 	exists = capital
 	capital = {
 		state_is_in_northwestern_zalaron = yes
+	}
+}
+
+country_is_in_noricum= {
+	exists = capital
+	capital = {
+		state_is_in_noricum = yes
 	}
 }
 
@@ -196,6 +267,35 @@ country_is_in_citrus_currents = {
 	exists = capital
 	capital = {
 		state_is_in_citrus_currents = yes
+	}
+}
+
+## almost vanilla
+country_is_in_europe= {
+	exists = capital
+	capital = {
+		state_is_in_europe = yes
+	}
+}
+
+country_is_in_africa= {
+	exists = capital
+	capital = {
+		state_is_in_locari = yes
+	}
+}
+
+country_is_in_east_asia = {
+	exists = capital
+	capital = {
+		state_is_in_east_asia = yes
+	}
+}
+
+country_is_in_china = {
+	exists = capital
+	capital = {
+		state_is_in_china = yes
 	}
 }
 
@@ -344,8 +444,6 @@ state_has_mountain = {
 
 }
 
-
-⠀⠀⠀⠀⠀⠀⠀
 no_beaches = {  
 #⠀⣞⢽⢪⢣⢣⢣⢫⡺⡵⣝⡮⣗⢷⢽⢽⢽⣮⡷⡽⣜⣜⢮⢺⣜⢷⢽⢝⡽⣝
 #⠸⡸⠜⠕⠕⠁⢁⢇⢏⢽⢺⣪⡳⡝⣎⣏⢯⢞⡿⣟⣷⣳⢯⡷⣽⢽⢯⣳⣫⠇
@@ -362,10 +460,10 @@ no_beaches = {
 #⠀⠀⠀⠀⠁⠇⠡⠩⡫⢿⣝⡻⡮⣒⢽⠋⠀⠀
 is_coastal = yes
 
-the_cooler_exether_is_coastal = no
+exether_is_coastal = no
 }
 
-the_cooler_exether_is_coastal = {
+exether_is_coastal = {
 	custom_tooltip = {
 		text = 	exether_is_coastal_tt
 		is_coastal = yes
@@ -957,36 +1055,4 @@ the_cooler_exether_is_coastal = {
 		} 
 	}
 			
-	   }
-	
-
-
-
-
-
-is_sky_coastal = {
-	exether_is_coastal = no
-	is_coastal = yes
-}
-
-
-
-exether_is_coastal = {
-	custom_tooltip = {
-		text = 	exether_is_coastal_tt
-		is_coastal = yes
-		OR = {
-			state_has_mountain = no
-			state_region = s:STATE_GLASINBLAIR
-			state_region = s:STATE_ELDBERG
-			state_region = s:STATE_ESPRASHAD
-			state_region = s:STATE_STJERROPTOCHT
-			state_region = s:STATE_BLOODTHORN_WASTES
-			state_region = s:STATE_SALTSHORE
-			state_region = s:STATE_SALTSHORE_2
-			state_region = s:STATE_ANTAQAQA
-			state_region = s:STATE_GARRITXO
-			state_region = s:STATE_UDABERRI
-		}
-	}
 }

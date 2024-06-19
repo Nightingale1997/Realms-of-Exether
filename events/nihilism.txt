@@ -457,33 +457,13 @@ nihilism.4 = {  #Fathers and Sons
 				months = normal_modifier_time
 			}
 		}
-		if = {
-			limit = {
-				ROOT = c:RUS
-			}
-			create_character = {
-				first_name = Ivan
-				last_name = Turgenev
-				historical = yes
-    			culture = cu:russian
-				birth_date = 1818.11.9
-				ig_leader = yes
-				interest_group = ig_intelligentsia
-				female = no
-				ideology = ideology_reformer
-				traits = {
-					persistent
-					romantic		
-				}
-			}
-		}
-		else = {
+
 			ig:ig_intelligentsia = {
 				leader = {
 					set_ideology = ideology:ideology_royalist	
 				}
 			}
-		}
+		
 		set_variable = { name = royalist_ig_leader_cooldown months = short_modifier_time }
 	}
 

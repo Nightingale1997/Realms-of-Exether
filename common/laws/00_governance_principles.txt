@@ -147,12 +147,6 @@ law_presidential_republic = {
 	ai_enact_weight_modifier = {
 		value = 0		
 		if = {
-			limit = {
-				has_journal_entry = je_pedro_republic
-			}
-			add = 100
-		}
-		if = {
 			limit = { 
 				has_journal_entry = je_government_petition
 				has_variable = desired_law_var

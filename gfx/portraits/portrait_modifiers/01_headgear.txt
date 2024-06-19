@@ -451,6 +451,45 @@
         }
     }
 
+    pierrot_headgear = {
+        dna_modifiers = {
+           accessory = {
+               mode = add
+               gene = headgear
+               template = male_headgear_carnaval_pierrot
+               range = { 0 1 }
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 2000
+                has_cosmetic_dlc = "Dawn of Wonder"
+                AND = {
+                 
+                    OR = {
+                        AND = {
+                            clergy_clothes_pop_trigger = yes
+                            scope:pop ?= {
+                            
+                                religion = rel:creed_of_hasal
+                            }
+                        }
+
+                        scope:character ?= {
+                            is_interest_group_type = ig_devout
+                            religion = rel:creed_of_hasal
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
     american_military_headgear = {
         # when updating triggers on this, please update american_military_hairstyles in game\gfx\portraits\portrait_modifiers\01_headgear.txt as well so that triggers continue to match up
         dna_modifiers = {
@@ -1485,4 +1524,134 @@
     #        }
     #    }
     #}
+
+    brazilian_bahiana_headgear = {
+        dna_modifiers = {
+           accessory = {
+               mode = add
+               gene = headgear
+               template = brazil_bahiana_headgear
+               range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 2000
+
+                OR = {
+                    scope:character ?= {
+                        culture = {
+                            has_discrimination_trait = orc_heritage
+                        }
+                        is_ruler = no
+                        is_interest_group_type = ig_rural_folk
+                    }
+                    scope:pop ?= {
+                        culture = {
+                            has_discrimination_trait = orc_heritage
+                        }
+                        OR = {
+                            is_pop_type = farmers
+                            is_pop_type = peasants
+                            is_pop_type = laborers
+                            is_pop_type = machinists
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    midsummer_headgear = {
+        dna_modifiers = {
+           accessory = {
+               mode = add
+               gene = headgear
+               template = female_headgear_slavic_midsummer
+               range = { 0 1 }
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 2000
+                has_cosmetic_dlc = "Dawn of Wonder"
+                OR = {
+                    AND = {
+                        officers_clothes_pop_trigger = no
+                        upper_clothes_pop_trigger = yes
+                        scope:pop ?= {
+                            
+                            culture = {
+                                AND = {
+                                     has_discrimination_trait = wood_elf
+                                }
+                                
+                              
+                            }
+                            
+                        }
+                    }
+                    AND = {
+                        OR = {
+                            ruler_clothes_trigger = yes
+                            politician_clothes_trigger = yes
+                        }
+    
+                        scope:character ?= {
+                            culture = {
+                                AND = {
+                                    has_discrimination_trait = wood_elf
+                                
+                               }
+                            }
+                            is_female = yes
+                        }
+                    }
+                }
+            }
+            }
+        }
+
+        slavik_kokoshnik_headgear = {
+            dna_modifiers = {
+               accessory = {
+                   mode = add
+                   gene = headgear
+                   template = female_headgear_slavic_kokoshnik
+                   range = { 0 1 }
+                }
+            }
+    
+            weight = {
+                base = 0
+                modifier = {
+                    add = 2000
+                    has_cosmetic_dlc = "Dawn of Wonder"
+                    OR = {
+       
+                        AND = {
+                            OR = {
+                                ruler_clothes_trigger = yes
+                                politician_clothes_trigger = yes
+                            }
+        
+                            scope:character ?= {
+                                culture = {
+                                    AND = {
+                                        has_discrimination_trait = southern_elf
+                                       
+                                   }
+                                }
+                                is_female = yes
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    
 }

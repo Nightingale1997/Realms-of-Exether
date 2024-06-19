@@ -1,8 +1,37 @@
 ﻿INTERESTS = {
+	c:ARR ?= {
+		add_declared_interest = region_new_dumonia
+		add_declared_interest = region_west_kailando
+	}
+	c:SET ?= {
+		add_declared_interest = region_teferet
+		add_declared_interest = region_anwarth
+	}
 	c:VAR ?= {
 		add_declared_interest = region_exiles_burden
 	}
 	c:KHD ?= {
 		add_declared_interest = region_ravik
+	}
+	c:KVA ?= {
+		add_declared_interest = region_thawed_lands
+	}
+	c:SRN ?= {
+		add_declared_interest = region_yanger_steppe
+	}
+	c:BRR ?= {
+		add_declared_interest = region_yanger_steppe
+	}
+	c:OEX ?= {
+		add_declared_interest = region_yanger_steppe
+	}
+	c:CVE ?= {
+		add_declared_interest = region_yanger_steppe
+	}
+	c:RIS ?= {
+		add_declared_interest = region_east_everfrost
+	}
+	c:BFU ?= {
+		add_declared_interest = region_east_everfrost
 	}
 }
