@@ -202,10 +202,16 @@ s:STATE_VOZMEAD_BORDERLANDS = {
         country = c:TLD
         owned_provinces = { "x0BEFFB" "x30EFF4" "x58BEF1" "x6CDBDF" "x6FC8D0" "x9BF7A7" "xB6ADA6"  "xBBD5EA" "xBD56FC" "xC677CF" "xC9989C"  "xDEC5A4" "xE047D4" "xE7AC99" "xE775E9" "xF0A29F" "xF444F1" "xF4DDFD" "xF892D1" "xFDEAF9" }
 }
-    create_state = {
-    country = c:CDW
-    owned_provinces = { "x8C82FA" "xC0D0A2" "xFDEAF9" "xDE84F6" "xC13EFC" "xF0A29F" "xC597CC" "x96EF9A" "xEAD7D3" "xB893EC" "x76F6EF" "xDBDEB3" "xDD96D1" "xF444F1" "x9ECFDD" "xEFAFA9" "x4DCFEC" "xD79791" "x64D7D4" }
+
+    add_homeland = cu:tolorr
+    add_homeland = cu:ceraunian
 }
+
+s:STATE_CRAGGEDWYN = {
+    create_state = {
+        country = c:CDW
+        owned_provinces = { "x8C82FA" "xC0D0A2" "xFDEAF9" "xDE84F6" "xC13EFC" "xF0A29F" "xC597CC" "x96EF9A" "xEAD7D3" "xB893EC" "x76F6EF" "xDBDEB3" "xDD96D1" "xF444F1" "x9ECFDD" "xEFAFA9" "x4DCFEC" "xD79791" "x64D7D4" }
+    }
     add_homeland = cu:tolorr
     add_homeland = cu:ceraunian
 }

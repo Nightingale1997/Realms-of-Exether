@@ -372,21 +372,22 @@ STATE_RIVER_MEDDEN = {
     }
     naval_exit_id = 3028
 }
+
 STATE_VOZMEAD_BORDERLANDS = {
     id = 4150
     subsistence_building = "building_subsistence_pastures"
-    provinces = { "x0BEFFB" "x30EFF4" "x4DCFEC" "x58BEF1" "x64D7D4" "x6CDBDF" "x6FC8D0" "x76F6EF" "x8C82FA" "x96EF9A" "x9BF7A7" "x9ECFDD" "xB6ADA6" "xB893EC" "xBBD5EA" "xBD56FC" "xC0D0A2" "xC13EFC" "xC597CC" "xC677CF" "xC9989C" "xD79791" "xDBDEB3" "xDD96D1" "xDE84F6" "xDEC5A4" "xE775E9" "xE7AC99" "xEAD7D3" "xEFAFA9" "xF0A29F" "xF444F1" "xF4DDFD" "xF892D1" "xFDEAF9" }
+    provinces = { "x0BEFFB" "x30EFF4" "x58BEF1" "x6CDBDF" "x6FC8D0" "x9BF7A7" "xB6ADA6" "xBBD5EA" "xBD56FC" "xC677CF" "xC9989C" "xDEC5A4" "xE047D4" "xE775E9" "xE7AC99" "xF4DDFD" "xF892D1" }
     city = x0BEFFB
     wood = x30EFF4
     farm = x4DCFEC
     mine = x64D7D4
     port = x6CDBDF
-    arable_land = 99
-    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
+    arable_land = 67
+    arable_resources = { "bg_livestock_ranches" "bg_vineyard_plantations" }
     capped_resources = {
-        bg_iron_mining = 55
-        bg_lead_mining = 19
-        bg_sulfur_mining = 18
+        bg_iron_mining = 33
+        bg_lead_mining = 12
+        bg_sulfur_mining = 12
         bg_logging = 6
         bg_fishing = 4
     }
@@ -395,6 +396,30 @@ STATE_VOZMEAD_BORDERLANDS = {
         undiscovered_amount = 5
     }
     naval_exit_id = 3035
+}
+
+STATE_CRAGGEDWYN = {
+    id = 4107
+    subsistence_building = "building_subsistence_pastures"
+    provinces = { "x4DCFEC" "x64D7D4" "x76F6EF" "x8C82FA" "x96EF9A" "x9ECFDD" "xB893EC" "xC0D0A2" "xC13EFC" "xC597CC" "xD79791" "xDBDEB3" "xDD96D1" "xDE84F6" "xEAD7D3" "xEFAFA9" "xF0A29F" "xF444F1" "xFDEAF9" }
+    city = x0BEFFB
+    wood = x30EFF4
+    farm = x4DCFEC
+    mine = x64D7D4
+    port = x6CDBDF
+    arable_land = 43
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_iron_mining = 35
+        bg_lead_mining = 7
+        bg_sulfur_mining = 6
+        bg_logging = 12
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 5
+    }
+
 }
 
 STATE_SERBINELLE = {
