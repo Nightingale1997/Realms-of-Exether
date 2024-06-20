@@ -1900,7 +1900,7 @@ STATE_XODAN = {
 STATE_ZALULIK = {
     id = 4332
     subsistence_building = "building_subsistence_orchards"
-    provinces = { "x67CAC9" "x68F5A4" "x76B3D9" "x94C7CF" "xADF8F6" "xBACDEB" "xCBF140" "xD16DED" "xDB4DFD" "xDEB1F5" "xDEF654" "xE02EFD" "xE394AC" "xF29FB2" "xF833FE" }
+    provinces = { "x42F5DB" "x72BAEE" "x73C3ED" "x81C2D6" "x83EECF" "x9EE8DB" "xDAC49C" "xE49686" "xEBEC83" "x67CAC9" "x68F5A4" "x76B3D9" "x94C7CF" "xADF8F6" "xBACDEB" "xCBF140" "xD16DED" "xDB4DFD" "xDEB1F5" "xDEF654" "xE02EFD" "xE394AC" "xF29FB2" "xF833FE" }
     city = x76B3D9
     wood = x94C7CF
     farm = xBACDEB
@@ -2888,6 +2888,12 @@ STATE_HANALLA = {
     farm = x68F5A4
     mine = x6FD4B6
     port = x72BAEE
+    arable_land = 50
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 12
+        bg_logging = 4
+    }
     naval_exit_id = 3137
 }
 STATE_SUKONCO = {
@@ -2904,24 +2910,28 @@ STATE_SUKONCO = {
 STATE_INAMGI = {
     id = 4410
     subsistence_building = "building_subsistence_pastures"
-    provinces = { "x4ECAF2" "x61BFEF" "x68ACFD" "x7BE3D0" "x81F19B" "x8BA9F6" "x98BAE9" "x9CBCEB" "xA6C98F" "xB09EC7" "xBFA3EA" "xE7DCAB" "xE8EAB6" "xE954EA" "xED11F7" "xEEB090" }
-    arable_land = 63
-    arable_resources = { "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" }
+    provinces = { "xA7E4D2" "xB8EFAC" "xBDEDBD" "xCEFE8A" "xCF42F4" "xD689E5" "xD881D4" "xE7DCEA" "x4ECAF2" "x61BFEF" "x68ACFD" "x7BE3D0" "x81F19B" "x8BA9F6" "x98BAE9" "x9CBCEB" "xA6C98F" "xB09EC7" "xBFA3EA" "xE7DCAB" "xE8EAB6" "xE954EA" "xED11F7" "xEEB090" }
     city = x26F1F0
     wood = x3FDDF0
     farm = x4ECAF2
     mine = x61BFEF
     port = x68ACFD
+    arable_land = 165
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 25
+    }
     naval_exit_id = 3146
 }
 STATE_INAMGI_2 = {
     id = 4414
     subsistence_building = "building_subsistence_pastures"
     provinces = { "x88FEC2" "xA0FCD1" "xB095F5" "xB2CCD2" "xB2E7C0" "xB6C1D0" "xD4AE85" "xD7BA65" "xD7F0C7" "xE081DD" "xEA5ED5" "xEBE0AD" "xEDB5FE" "xFACACE" }
-    arable_land = 55
-    arable_resources = { "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" }
+    arable_land = 20
+    arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
-        bg_lead_mining = 9
+        bg_coal_mining = 28
+        bg_logging = 4
     }
     naval_exit_id = 3147
 }
@@ -2929,8 +2939,17 @@ STATE_INAMGI_3 = {
     id = 4416
     subsistence_building = "building_subsistence_pastures"
     provinces = { "x26F1F0" "x3FDDF0" "xA15EFA" "xABC7B4" "xAFBD8F" "xD051E6" "xD664CE" "xECDB70" "xEECAF6" "xFAA8C1" "xFABE9E" }
-    arable_land = 61
-    arable_resources = { "bg_livestock_ranches" "bg_cotton_plantations" }
+    arable_land = 100
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 80
+        bg_iron_mining = 75
+        bg_logging = 25
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 60
+    }
     naval_exit_id = 3146
 }
 STATE_KUNCHI = {
@@ -2953,7 +2972,19 @@ STATE_SANGARI = {
     farm = x73EBB9
     mine = x73F1C3
     port = x75C4BE
-
+    arable_land = 20
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 36
+        bg_logging = 13
+        bg_whaling = 3
+        bg_fishing = 9
+    }
+    resource = {
+        type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
+        undiscovered_amount = 4
+    }
     naval_exit_id = 3087
 }
 STATE_SUKONCO_2 = {
@@ -2975,10 +3006,12 @@ STATE_SUKONCO_3 = {
     id = 4415
     subsistence_building = "building_subsistence_pastures"
     provinces = { "x61DAC2" "x639AF9" "x84B3D7" "x86E1A1" "x9387FE" "xACEBFE" "xADF776" "xB9DFAF" "xBAD6E4" "xC6DC70" "xD1F062" "xDBA08F" "xE629E6" "xF4A6C4" "xFCB9F1" "xFED12F" }
-    arable_land = 32
+    arable_land = 40
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
-        bg_logging = 20
+        bg_coal_mining = 44
+        bg_iron_mining = 18
+        bg_logging = 14
     }
     naval_exit_id = 3147
 }
@@ -2992,36 +3025,32 @@ STATE_SUKONCO_4 = {
 STATE_SANGARI_2 = {
     id = 4418
     subsistence_building = "default_building_subsistence_farms"
-    provinces = { "x73EBB9" "x9C92FE" "xA291CF" "xA6EA7E" "xA891F8" "xAEF58E" "xB6F174" "xBA98AE" "xBDF175" "xC687C1" "xD65FDB" "xEDCA3F" "xFEA76C" }
-    arable_land = 76
-    arable_resources = { "bg_maize_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_vineyard_plantations" }
+    provinces = { "x75C4BE" "x7BCDE2" "x8AEFB4" "x92DCD6" "xABF2BB" "xC2EA53" "xC7C1D5" "xC9C8ED" "xDCF187" "xE3EA62" "xF2DD6F" "x73EBB9" "x9C92FE" "xA291CF" "xA6EA7E" "xA891F8" "xAEF58E" "xB6F174" "xBA98AE" "xBDF175" "xC687C1" "xD65FDB" "xEDCA3F" "xFEA76C" }
+    arable_land = 50
+    arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
-        bg_logging = 8
-        bg_fishing = 12
-    }
-    resource = {
-        type = "bg_oil_extraction"
-        undiscovered_amount = 10
+        bg_coal_mining = 36
+        bg_fishing = 10
     }
 }
 STATE_HANALLA_2 = {
     id = 4419
     provinces = { "x7CE7AF" "xA1FBB5" "xABA2AD" "xB6EEFE" "xBDDEE0" "xBE8DE8" "xC09CAC" "xCFC676" "xD4E86E" "xDD79A3" "xE0ADA4" "xED40F4" "xF5DBD5" }
-}
-STATE_HANALLA_3 = {
-    id = 4420
-    provinces = { "x42F5DB" "x72BAEE" "x73C3ED" "x81C2D6" "x83EECF" "x9EE8DB" "xDAC49C" "xE49686" "xEBEC83" }
-}
-STATE_SANGARI_3 = {
-    id = 4421
-    provinces = { "x75C4BE" "x7BCDE2" "x8AEFB4" "x92DCD6" "xABF2BB" "xC2EA53" "xC7C1D5" "xC9C8ED" "xDCF187" "xE3EA62" "xF2DD6F" }
-
-    naval_exit_id = 3087
-}
-STATE_HANALLA_4 = {
-    id = 4422
-    provinces = { "xA7E4D2" "xB8EFAC" "xBDEDBD" "xCEFE8A" "xCF42F4" "xD689E5" "xD881D4" "xE7DCEA" }
-    naval_exit_id = 3146
+    city = x7CE7AF
+    wood = xA1FBB5
+    farm = xABA2AD
+    mine = xB6EEFE
+    port = xBDDEE0
+    arable_land = 11
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 32
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 5
+    }
+    naval_exit_id = 3137
 }
 STATE_PINCER_PENINSULA = {
     id = 4571
