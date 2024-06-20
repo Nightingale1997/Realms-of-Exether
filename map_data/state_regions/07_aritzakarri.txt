@@ -529,7 +529,7 @@ STATE_OLABEGI = {
     farm = x689BFC
     mine = x6EC0E0
     port = x799CFB
-    arable_land = 40
+    arable_land = 32
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_dye_plantations" "bg_sugar_plantations" "bg_silk_plantations" }
     capped_resources = {
         bg_sulfur_mining = 22
@@ -538,7 +538,7 @@ STATE_OLABEGI = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 60
+        undiscovered_amount = 42
     }
     naval_exit_id = 3059
 }
@@ -1011,16 +1011,17 @@ STATE_ARITZA = {
     #airship xBFE8F4
     id = 4674
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x5DF8CD" "x95FCA5" "x9DCBE1" "xA1BAC5" "xBFE8F4" "xC996D3" "xCDA697" "xD270D7" "xD4F977" "xD6F472" "xDBED37" "xE24DD6" "xEBA38D" "xF6EB25" "xFA4FF1" }
+    provinces = { "x54B1F2" "xAAFA77" "xB8B193" "xDBC2B3" "xF0DD2E" "x5DF8CD" "x95FCA5" "x9DCBE1" "xA1BAC5" "xBFE8F4" "xC996D3" "xCDA697" "xD270D7" "xD4F977" "xD6F472" "xDBED37" "xE24DD6" "xEBA38D" "xF6EB25" "xFA4FF1" }
     city = x5DF8CD
     wood = x95FCA5
     farm = x9DCBE1
     mine = xA1BAC5
     port = xA3F0D3
-    arable_land = 36
+    arable_land = 48
     arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
     capped_resources = {
-        bg_logging = 36
+        bg_logging = 40
+        bg_sulfur_mining = 4
     }
     resource = {
         type = "bg_rubber"
@@ -1028,7 +1029,7 @@ STATE_ARITZA = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 5
+        undiscovered_amount = 35
     }
     naval_exit_id = 3063
 }
