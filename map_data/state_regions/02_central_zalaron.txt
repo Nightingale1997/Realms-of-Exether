@@ -56,7 +56,6 @@ STATE_DILAFSHAN = {
         type = "bg_oil_extraction"
         undiscovered_amount = 5
     }
-    naval_exit_id = 3169
 }
 STATE_EASTERN_EQUINE_PLAIN = {
     id = 4223
@@ -91,7 +90,6 @@ STATE_BARIKHARGUL = {
     capped_resources = {
         bg_logging = 5
     }
-    naval_exit_id = 3169
 }
 STATE_WESTERN_EQUINE_PLAIN = {
     id = 4225
@@ -280,7 +278,7 @@ STATE_RAQUARTES_SHIELD = {
     id = 4235
     subsistence_building = "building_subsistence_orchards"
     provinces = { "x63EED4" "x67FBB7" "x6AC7CD" "x6BD9C4" "x9FE7EC" "xA6AAF9" "xAA8EC3" "xB0F88E" "xB3CEA2" "xBC93C1" "xC3F554" "xC46EE1" "xC542EE" "xC5F1BD" "xC7C9B0" "xCDD4E5" "xCFEEC6" "xD6A5A9" "xDAED9F" "xDEC8AD" "xDF89FE" "xE4B49A" "xE4C2C5" "xE4C4C9" "xE539DD" "xE93AE5" "xEAB598" "xEBEFAF" "xEDF8A4" "xF0CACC" "xF1CFA9" "xF1F0A7" "xF2CF84" "xF368B5" "xF7FC32" }
-    impassable = { "xdec8ad" "xbc93c1" "x9fe7ec" "xd6a5a9" }
+    impassable = { "xf2cf84" "xe4c2c5" "xdec8ad" "xbc93c1" "x9fe7ec" "xd6a5a9" }
     traits = { "state_trait_wynsard_range" }
     city = x6AC7CD
     wood = x6BD9C4
