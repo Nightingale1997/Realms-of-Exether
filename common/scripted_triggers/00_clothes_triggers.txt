@@ -440,9 +440,16 @@ european_clothes_trigger = {
 					has_discrimination_trait = halfling_heritage
 				}
 			}
-			culture = cu:vampire
-			culture = cu:sunkissed
-			culture = cu:changeling
+			AND = {
+				OR = {
+					culture = cu:vampire
+					culture = cu:sunkissed
+					culture = cu:changeling
+				}
+				NOT = {
+					culture = cu:waste_walker
+				}
+			}
 		}
 
 		NOT = {
@@ -733,12 +740,17 @@ european_clothes_pop_trigger = {
 					has_discrimination_trait = halfling_heritage
 				}
 			}
-			culture = cu:vampire
-			culture = cu:sunkissed
-			culture = cu:changeling
-			NOT = {
-				culture = cu:waste_walker
+			AND = {
+				OR = {
+					culture = cu:vampire
+					culture = cu:sunkissed
+					culture = cu:changeling
+				}
+				NOT = {
+					culture = cu:waste_walker
+				}
 			}
+
 		}
 
 	}
