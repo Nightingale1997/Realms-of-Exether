@@ -377,6 +377,15 @@
 			target = c:VAI.market
 		}
 	}
+	c:DUM ?= {
+		create_trade_route = {
+			goods = sugar
+			level = 3
+			direction = import
+			target = c:LAR.market
+		}
+	}
+
 	#Settler Coast
 	c:ARR ?= {
 		create_trade_route = {

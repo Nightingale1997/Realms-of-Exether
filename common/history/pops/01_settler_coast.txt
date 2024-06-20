@@ -12,9 +12,13 @@
   s:STATE_SHARINDLARS_NEEDLE = {
 		  region_state:EME = {
 			    create_pop = {
-				      culture = ocelian 
-				      size = 230744
+				      culture = enelli
+				      size = 130744
 			    }
+				create_pop = {
+					culture = ocelian 
+					size = 100223
+			  }
 				create_pop = {
 					culture = vozi
 					size = 50744
@@ -435,6 +439,64 @@ s:STATE_CAEL_VALEN_2 = {
   }
 
   s:STATE_VOZMEAD_BORDERLANDS = {
+	region_state:TLD = {
+		create_pop = {
+			culture = enelli
+			size = 245953
+		}
+		create_pop = {
+			culture = tolorr
+			size = 1204215
+		}
+		create_pop = {
+			culture = ocelian
+			size = 1401
+		}
+		create_pop = {
+			culture = mutant
+			size = 4646
+		}
+		create_pop = {
+			culture = ceraunian
+			size = 32020
+		}
+	}
+	region_state:CDW = {
+		create_pop = {
+			culture = tolorr
+			size = 18124
+		}
+		create_pop = {
+			culture = ceraunian
+			size = 262139
+		}
+		create_pop = {
+			culture = mutant
+			size = 304
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = plaguedweller
+			size = 9281
+		}
+	}
+  }
+
+  s:STATE_SERBINELLE = {
+	region_state:SEB = {
+		create_pop = {
+			culture = enelli
+			size = 504084
+		}
+		create_pop = {
+			culture = ocelian
+			size = 20032
+		}
+		create_pop = {
+			culture = tolorr
+			size = 4072
+		}
+	}
 
   }
 
