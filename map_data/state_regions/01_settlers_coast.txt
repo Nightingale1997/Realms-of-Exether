@@ -860,7 +860,7 @@ STATE_VICEROYS_PEARL = {
 STATE_FAR_SHORE = {
     id = 4162
     traits = { "state_trait_lake_bossard" "state_trait_terforte_slopes" }
-    
+
     subsistence_building = "building_subsistence_farms"
     provinces = { "x7DF9FE" "x83B6E8" "x96F8A3" "x98E882" "x99C49F" "xA1B7A8" "xA7C2BB" "xA7E07C" "xB4BA8F" "xB8F562" "xBBACA2" "xBED978" "xD0C669" "xD2A785" "xD9EE78" "xE082F5" "xF595E7" }
     impassable = { "xd0c669" "xb8f562" "x98e882" "x7df9fe" "x96f8a3" }
@@ -1849,7 +1849,8 @@ STATE_SILVERTARGE = {
 STATE_SC5 = {
     id = 4211
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x47FED3" "x7CFA8E" "x99F393" "xA4B7DD" "xA9D7B0" "xADC7CC" "xC366E1" "xC4BACA" "xD1E2D4" "xE2A193" "xE5DFC8" "xF6CAB2" "xF9E4B7" "xFEB3BA" }
+    provinces = { "x47FED3" "x7CFA8E" "x99F393" "xA4B7DD" "xA9D7B0" "xADC7CC" "xC366E1" "xC4BACA" "xD1E2D4" "xE2A193" "xE492CB" "xE5DFC8" "xEB7BCB" "xEF033B" "xF6CAB2" "xF9E4B7" "xFEB3BA" }
+    impassable = { "xef033b" "xe5dfc8" "xc4baca" }
     traits = { "state_trait_twilan_summit" }
     city = x47FED3
     wood = x7CFA8E
