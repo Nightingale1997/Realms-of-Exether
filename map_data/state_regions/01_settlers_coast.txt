@@ -428,7 +428,17 @@ STATE_EASTERN_PLAGUEWOOD = {
     farm = x5BEDAE
     mine = x62CEDF
     port = xd39db3
-
+    arable_land = 30
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_coal_mining = 32
+        bg_lead_mining = 36
+        bg_logging = 18
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 4
+    }
     naval_exit_id = 3210
 }
 STATE_EASTERN_PLAGUEWOOD_2 = {
@@ -442,6 +452,15 @@ STATE_EASTERN_PLAGUEWOOD_2 = {
     farm = x5BEDAE
     mine = x62CEDF
     port = xc07ef9
+    arable_land = 40
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 25
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 2
+    }
     naval_exit_id = 3209
 }
 STATE_FORESTS_HEART = {
@@ -489,22 +508,32 @@ STATE_FORESTS_HEART_3 = {
     id = 4710
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x49DEFE" "x83F8E4" "x91BDEC" "xA3D8DB" "xA8CFE0" "xB39CCC" "xB4FC70" "xB9E382" "xC28FFC" "xD1C670" "xD1E0F6" "xE69B99" "xEA94A4" "xED9F6B" "xEEB873" "xF2EC8C" "xF2FEFB" "xF8D27E" "xFC39CF" }
+    city = xA8CFE0
+    wood = x83F8E4
+    farm = xA3D8DB
+    mine = xA3D8DB
     port = x49defe
-    arable_land = 30
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tea_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
-    capped_resources = {
-        bg_logging = 20
-    }
+
     naval_exit_id = 3208
 }
 STATE_FORESTS_HEART_3_2 = {
-    #just try and stop me
     traits = { "state_trait_plaguewood" "state_trait_sandwall_mountains" }
     id = 4714
     subsistence_building = "building_subsistence_farms"
     provinces = { "x62CEDF" "x77D2F9" "x809EF1" "x8DE2FB" "x8EDF89" "x90E7D5" "xA3B2E0" "xACC392" "xB5E487" "xB6BDC8" "xCCB086" "xE6DED8" "xEE5FB2" "xF0A9DB" "xF36EF7" "xF47FD8" "xF5A48B" "xFACD77" }
     impassable = { "xf36ef7" "x62cedf" "x77d2f9" "xa3b2e0" "xee5fb2" "x809ef1" "xb5e487" }
+    city = x62CEDF
+    wood = x77D2F9
+    farm = x809EF1
+    mine = x8DE2FB
     port = xf5a48b
+    arable_land = 30
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_silk_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_coal_mining = 32
+        bg_iron_mining = 36
+        bg_logging = 23
+    }
     naval_exit_id = 3210
 }
 STATE_PLAGUEWOOD_HINTERLANDS = {

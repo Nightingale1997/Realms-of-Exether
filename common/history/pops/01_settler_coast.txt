@@ -501,7 +501,52 @@ s:STATE_CAEL_VALEN_2 = {
   }
 
   s:STATE_EASTERN_PLAGUEWOOD = {
+	region_state:RTD = {
+		create_pop = {
+			culture = plaguedweller
+			size = 636096
+		}
+		create_pop = {
+			culture = rivierling
+			size = 167500
+		}
+		create_pop = {
+			culture = ceraunian
+			size = 88400
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = rivierling
+			size = 30200
+		}
+	}
+  }
 
+  s:STATE_EASTERN_PLAGUEWOOD_2 = {
+	region_state:RTD = {
+		create_pop = {
+			culture = plaguedweller
+			size = 798000
+		}
+		create_pop = {
+			culture = ceraunian
+			size = 49000
+		}
+		create_pop = {
+			culture = rivierling
+			size = 294312
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = rivierling
+			size = 5000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = ceraunian
+			size = 13000
+		}
+	}
   }
 
   s:STATE_FORESTS_HEART = {
@@ -559,6 +604,33 @@ s:STATE_CAEL_VALEN_2 = {
 			pop_type = slaves
 			culture = plaguedweller
 			size = 40000
+		}
+	}
+  }
+
+  s:STATE_FORESTS_HEART_3_2 = {
+	region_state:RTD = {
+		create_pop = {
+			culture = plaguedweller
+			size = 340024
+		}
+		create_pop = {
+			culture = rivierling
+			size = 24832
+		}
+		create_pop = {
+			culture = ceraunian
+			size = 69000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = ceraunian
+			size = 11004
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = tolorr
+			size = 4000
 		}
 	}
   }
