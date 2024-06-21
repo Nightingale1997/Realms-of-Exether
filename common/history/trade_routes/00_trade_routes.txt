@@ -411,6 +411,12 @@
 	c:OPA ?= {
 		create_trade_route = {
 			goods = artillery
+			level = 2
+			direction = import
+			target = c:XXP.market
+		}
+		create_trade_route = {
+			goods = iron
 			level = 1
 			direction = import
 			target = c:XXP.market
@@ -418,6 +424,12 @@
 		create_trade_route = {
 			goods = iron
 			level = 1
+			direction = import
+			target = c:ZUB.market
+		}
+		create_trade_route = {
+			goods = grain
+			level = 2
 			direction = import
 			target = c:ZUB.market
 		}

@@ -603,6 +603,42 @@ s:STATE_CAEL_VALEN_2 = {
   }
 
   s:STATE_ASHWICK = {
+	region_state:ASW = {
+		create_pop = {
+			culture = plaguedweller
+			size = 64000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = bossardi
+			size = 8000
+		}
+		create_pop = {
+			culture = korkaz
+			size = 4000
+		}
+	}
+  }
+
+  s:STATE_ASHWICK_2 = {
+	region_state:ASW = {
+		create_pop = {
+			culture = plaguedweller
+			size = 56000
+		}
+		create_pop = {
+			culture = bossardi
+			size = 4000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = bossardi
+			size = 4000
+		}
+	}
+  }
+
+  s:STATE_ASHWICK_3 = {
 
   }
 
@@ -1737,6 +1773,26 @@ s:STATE_FAR_SHORE_2 = {
 		create_pop = {
 			culture = wealder
 			size = 136000
+		}
+	}
+	region_state:ASW = {
+		create_pop = {
+			culture = plaguedweller
+			size = 123996
+		}
+		create_pop = {
+			culture = mousefolk
+			size = 47440
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = bossardi
+			size = 10000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = mousefolk
+			size = 10000
 		}
 	}
   }

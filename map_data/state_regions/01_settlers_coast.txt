@@ -570,14 +570,31 @@ STATE_ASHWICK = {
     farm = x56FBF7
     mine = x5CE8D4
     port = x60DBCE
-
+    arable_land = 40
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 48
+        bg_logging = 5
+        bg_haunted_grounds = 20
+    }
 
 }
 STATE_ASHWICK_2 = {
     id = 4712
     subsistence_building = "building_subsistence_farms"
     provinces = { "x5CE8D4" "x7CF2BC" "xA9EE6F" "xABDE87" "xAC65F9" "xACF971" "xB798EA" "xD5C8F8" "xD8F7E1" "xDCEEDA" "xDD9596" "xE087DE" "xE590EE" "xE9F1BC" "xED8FA8" "xF3F312" "xFA9689" "xFAED99" }
-
+    city = x5CE8D4
+    wood = x7CF2BC
+    farm = xABDE87
+    mine = xAC65F9
+    port = xACF971
+    arable_land = 30
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_coal_mining = 32
+        bg_logging = 4
+        bg_haunted_grounds = 24
+    }
 }
 STATE_ASHWICK_3 = {
     id = 4713
