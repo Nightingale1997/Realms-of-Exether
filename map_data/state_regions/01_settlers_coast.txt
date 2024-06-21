@@ -624,11 +624,11 @@ STATE_OUTER_MOORWEALD_2 = {
     id = 4703
     subsistence_building = "building_subsistence_farms"
     provinces = { "x58E8D0" "x61D1ED" "x78E2C4" "x8CD1C4" "xB3E97F" "xBBCDC1" "xC082E1" "xC8CF79" "xE364BE" "xEBF3DC" "xECC154" "xF8BFE4" }
-    arable_land = 70
-    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    arable_land = 30
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_sugar_plantations"}
     capped_resources = {
-        bg_logging = 19
-        bg_fishing = 5
+        bg_logging = 4
+        bg_fishing = 12
     }
     naval_exit_id = 3038
 }

@@ -387,6 +387,44 @@
 	}
 
 	#Settler Coast
+	c:SMA?= {
+		create_trade_route = {
+			goods = tools
+			level = 4
+			direction = import
+			target = c:ARR.market
+		}
+		create_trade_route = {
+			goods = hardwood
+			level = 3
+			direction = import
+			target = c:SLB.market
+		}
+		create_trade_route = {
+			goods = hardwood
+			level = 3
+			direction = import
+			target = c:CER.market
+		}
+		create_trade_route = {
+			goods = fabric
+			level = 5
+			direction = import
+			target = c:WHI.market
+		}
+		create_trade_route = {
+			goods = silk
+			level = 4
+			direction = import
+			target = c:RDM.market
+		}
+		create_trade_route = {
+			goods = dye
+			level = 3
+			direction = import
+			target = c:VOZ.market
+		}
+	}
 	c:ARR ?= {
 		create_trade_route = {
 			goods = silk

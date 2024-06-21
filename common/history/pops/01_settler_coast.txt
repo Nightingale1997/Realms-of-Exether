@@ -677,7 +677,25 @@ s:STATE_CAEL_VALEN_2 = {
   }
 
   s:STATE_OUTER_MOORWEALD_2 = {
-	
+	region_state:SMA = {
+		create_pop = {
+			culture = coast_halfling
+			size = 842331
+		}
+		create_pop = {
+			culture = coast_halfling
+			religion = church_of_man
+			size = 327009
+		}
+		create_pop = {
+			culture = mousefolk
+			size = 26531
+		}
+		create_pop = {
+			culture = wealder
+			size = 34143
+		}
+	}
   }
 
   
@@ -703,6 +721,19 @@ s:STATE_CAEL_VALEN_2 = {
 		create_pop = {
 			culture = wealder
 			size = 25000
+		}
+	}
+  }
+
+  s:STATE_DEEPWOODS = {
+	region_state:MOO = {
+		create_pop = {
+			culture = coast_halfling
+			size = 212000
+		}
+		create_pop = {
+			culture = wealder
+			size = 14000
 		}
 	}
   }
