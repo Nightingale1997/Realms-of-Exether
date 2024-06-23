@@ -1,0 +1,98 @@
+﻿changeling = {
+    using = "changeling"
+    template = "ethnicity_template"
+    # skin_color = {
+    #   10 = { 0.0 0.1 0.5 0.15 }
+    # }
+
+    skin_color = {
+		10 = { 0.8 0.54 0.81 0.56 }
+		10 = { 0.80 0.53 0.82 0.55 }
+		10 = { 0.85 0.52 0.86 0.54 }
+	}
+
+    hairstyles = {
+        10 = { name = no_hairstyles       range = { 0 1 } }
+    }
+
+    mustaches = {
+        10 = { name = no_mustache       range = { 0.0 1.0 } }
+    }
+
+    beards = {
+    
+     10 = { name = no_beard      range = { 0.0 1.0 } }
+       
+
+    }
+
+	gene_head_height = {
+		10 = { name = head_height	range = { 0.8 1.0	}	}
+	}
+
+	gene_eye_shut = {
+		20 = { name = eye_shut	range = { 0.0 0.0 }	}
+
+	}
+
+	gene_head_top_height = {
+		10 = { name = head_top_height	range = { 0.8 1.0	}	}
+	}	
+
+	gene_head_top_width = {
+		10 = { name = head_top_width	range = { 0.0 0.2	}	}
+	}	
+
+	gene_eye_angle = {
+		5 = {  name = eye_angle		range = { 0.0 0.2 } }
+	}
+
+    eye_color = {
+        # Brown
+        20 = { 0.05 0.5 0.33 0.8 }
+        # Green
+        20 = { 0.33 0.5 0.67 0.8 }
+        # Blue
+        60 = { 0.67 0.5 1.0 0.8 }
+    }
+    hair_color = {
+        # # Blonde
+        # 10 = { 0.25 0.2 0.75 0.25 }
+        # # Brown
+        # 40 = { 0.65 0.45 0.9 1.0 }
+        # # Red
+        # 10 = { 0.85 0.0 1.0 0.5 }
+        # Black
+        30 = { 0.01 0.9 0.5 0.99 }
+    }
+
+   
+    
+    gene_eyebrows_shape = {
+        15 = {  name = avg_spacing_avg_thickness             range = { 0.5 1.0 }     }
+        5 = {  name = avg_spacing_high_thickness             range = { 0.5 1.0 }     }
+        15 = {  name = avg_spacing_low_thickness             range = { 0.5 1.0 }    }
+        10 = {  name = avg_spacing_lower_thickness             range = { 0.5 1.0 }    }
+
+        45 = {  name = far_spacing_avg_thickness             range = { 0.5 1.0 }     }
+        15 = {  name = far_spacing_high_thickness             range = { 0.5 1.0 }     }
+        45 = {  name = far_spacing_low_thickness             range = { 0.5 1.0 }    }
+        30 = {  name = far_spacing_lower_thickness             range = { 0.5 1.0 }    }
+
+        # 5 = {  name = close_spacing_avg_thickness             range = { 0.5 1.0 }     }
+        # 2 = {  name = close_spacing_high_thickness             range = { 0.5 1.0 }     }
+        # 2 = {  name = close_spacing_low_thickness             range = { 0.5 1.0 }    }
+        # 2 = {  name = close_spacing_lower_thickness             range = { 0.5 1.0 }    }
+    }
+
+    gene_eyebrows_fullness = {
+        # 10 = {  name = layer_2_avg_thickness             range = { 0.25 0.5 }     }
+        10 = {  name = layer_2_avg_thickness             range = { 0.5 1.0 }     }
+        # 5 = {  name = layer_2_high_thickness             range = { 0.25 0.5 }     }
+        5 = {  name = layer_2_high_thickness             range = { 0.5 1.0 }     }
+        # 10 = {  name = layer_2_low_thickness             range = { 0.25 0.5 }     }
+        10 = {  name = layer_2_low_thickness             range = { 0.5 1.0 }     }
+        10 = {  name = layer_2_lower_thickness             range = { 0.5 1.0 }     }
+    }
+
+} 

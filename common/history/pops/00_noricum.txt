@@ -377,19 +377,19 @@
       region_state:ICE = {
         create_pop = {
           culture = avalorean
-          size = 60200
+          size = 20200
         }
         create_pop = {
-          culture = nivaskyan
-          size = 70100
+          culture = varyngi
+          size = 100100
         }
         create_pop = {
           culture = dumonian
           size = 4200
         }
       }
-      add_homeland = avalorean
-      add_homeland = nivaskyan
+      
+      
   }
 
 
@@ -542,7 +542,7 @@
           size = 127802
         }
       }
-      add_homeland = cu:grendleth    
+      
   }
 
 
@@ -553,7 +553,7 @@
           size = 670190
         }
       }
-      add_homeland = cu:grendleth
+      
   }
 
 
@@ -1033,8 +1033,8 @@
     s:STATE_SNOWBREACH = {
       region_state:ICE = {
         create_pop = {
-          culture = nivaskyan
-          size = 34120
+          culture = varyngi
+          size = 39120
         }
         create_pop = {
           culture = avalorean
@@ -1042,10 +1042,9 @@
         }
         create_pop = {
           culture = dumonian
-          size = 10200
+          size = 5200
         }
       }
-      add_homeland = cu:nivaskyan
   }
 
 
@@ -1054,18 +1053,17 @@
       region_state:ICE = {
         create_pop = {
           culture = dumonian
-          size = 20345
-        }
-        create_pop = {
-          culture = nivaskyan
-          size = 50918
+          size = 15345
         }
         create_pop = {
           culture = avalorean
-          size = 41380
+          size = 50918
+        }
+        create_pop = {
+          culture = varyngi
+          size = 46380
         }
       }
-      add_homeland = cu:nivaskyan
   }
 
 
@@ -1080,7 +1078,7 @@
           size = 78102
         }
       }
-      add_homeland = cu:grendleth
+      
 
   }
 
@@ -1088,7 +1086,7 @@
     s:STATE_DUNMAFAR = {
       region_state:CVE = {
         create_pop = {
-          culture = grendlenth
+          culture = grendleth
           size = 330190
         }
         create_pop = {
@@ -1096,7 +1094,7 @@
           size = 240180
         }
       }
-      add_homeland = cu:grendleth
+      
   }
 
 
@@ -1311,7 +1309,7 @@
           size = 216800
         }
       }
-      add_homeland = cu:grendleth    
+      
   }
 
 
@@ -1451,24 +1449,20 @@
     s:STATE_FALMAKELD = {
       region_state:ICE = {
         create_pop = {
-          culture = dumonian
+          culture = grendleth
           size = 70120
         }
         create_pop = {
-          culture = grendleth
-          size = 43000
-        }
-        create_pop = {
-          culture = nivaskyan
-          size = 20650
-        }
-        create_pop = {
           culture = avalorean
-          size = 70890
+          size = 3000
+        }
+        create_pop = {
+          culture = varyngi
+          size = 120890
         }
       }
-      add_homeland = grendleth
-      add_homeland = avalorean
+      
+      
   }
 
 
@@ -1504,18 +1498,18 @@
       region_state:ICE = {
         create_pop = {
           culture = grendleth
-          size = 60300
+          size = 30300
         }
         create_pop = {
-          culture = avalorean
-          size = 10900
+          culture = varyngi
+          size = 40900
         }
         create_pop = {
           culture = nivaskyan
           size = 10000
         }
       }
-      add_homeland = grendleth
+      
   }
 
 
@@ -1913,24 +1907,24 @@
     s:STATE_GRYTINGARIK = {
       region_state:ICE = {
         create_pop = {
-          culture = avalorean
+          culture = nivaskyan
           size = 50120
         }
         create_pop = {
-          culture = nivaskyan
+          culture = grendlenth
           size = 20290
         }
         create_pop = {
-          culture = dumonian
+          culture = avalorean
           size = 10780
         }
         create_pop = {
-          culture = grendleth
+          culture = varyngi
           size = 40200
         }
       }
-      add_homeland = cu:avalorean
-      add_homeland = cu:grendleth
+      
+      
   }
 
 
