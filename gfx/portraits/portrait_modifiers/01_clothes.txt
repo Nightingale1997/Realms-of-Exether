@@ -444,6 +444,7 @@
         }
     }
 
+
     halfling_clothes = {
         dna_modifiers = {
             accessory = {
@@ -476,51 +477,22 @@
          }
  
 
-        weight = {
+         weight = {
             base = 0
             modifier = {
                 add = 1000
-                
-                OR = {
-                    upper_clothes_pop_trigger = yes
-                    scope:character ?= {
-                        has_role = politician
-                    }
-                }
                 halfling_clothes_trigger = yes
-            }
-        }
-    }
-
-    
-    halfling_rich_clothes = {
-
-        dna_modifiers = {
-            accessory = {
-               mode = add
-               gene = coats
-               template = agitator_blanqui
-               range = { 0 1 }
-            }
-
-            accessory = {
-                mode = add
-                gene = legwear
-                template = slavic_legwear
-                range = { 0 0.1 } 
-            }
-        }
-
-        weight = {
-            base = 0
-            modifier = {
-                add = 1000
-                halfling_clothes_trigger = yes'
 
                 OR = {
                     upper_clothes_pop_trigger = yes
                     scope:character ?= {
                         has_role = politician
+                        NOT = { 
+                            is_interest_group_type = ig_armed_forces
+                         }
+                         NOT = { 
+                           is_interest_group_type = ig_devout
+                         }
                         is_ruler = no
                     }
                 }
@@ -528,6 +500,8 @@
             }
         }
     }
+    
+
 
 
 ### END OF AGITATORS. ###
