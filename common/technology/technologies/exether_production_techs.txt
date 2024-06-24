@@ -31,6 +31,24 @@ ghost_busters = {
 	}
 }
 
+supernatural_pursuit = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/sericulture.dds"
+	category = production
+	
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		hunting_lodges
+		ghost_busters
+	}		
+	
+	ai_weight = {
+		value = 2
+	}
+}
+
 alchemy = {
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/alchemy.dds"
