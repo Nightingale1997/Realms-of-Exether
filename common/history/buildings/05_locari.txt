@@ -2,6 +2,7 @@
 	s:STATE_DHARMARAJYA = {
 		region_state:KAY={
 			create_building={
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
 				building="building_government_administration"
 				level=3
 				reserves=1
@@ -22,58 +23,618 @@
 			create_building={
 				building="building_tea_plantation"
 				level=2
+=======
+				building="building_arms_industry"
+				add_ownership={
+					country={
+						country="c:BIC"
+						levels=1
+					}
+				}
 				reserves=1
-				activate_production_methods={ "default_building_tea_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+				activate_production_methods={ "pm_muskets" "pm_automation_disabled"  }
 			}
 			create_building={
+				building="building_government_administration"
+				add_ownership={
+					country={
+						country="c:BIC"
+						levels=3
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_secular_bureaucrats" "pm_hereditary_bureaucrats" "pm_horizontal_drawer_cabinets" }
+			}
+			create_building={
+				building="building_tea_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:BIC"
+						levels=1
+						region="STATE_BIHAR"
+					}
+					building={
+						type="building_manor_house"
+						country="c:GBR"
+						levels=4
+						region="STATE_HOME_COUNTIES"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_tea_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_opium_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:BIC"
+						levels=5
+						region="STATE_BIHAR"
+					}
+					building={
+						type="building_manor_house"
+						country="c:GBR"
+						levels=20
+						region="STATE_HOME_COUNTIES"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_tobacco_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:BIC"
+						levels=1
+						region="STATE_BIHAR"
+					}
+					building={
+						type="building_manor_house"
+						country="c:GBR"
+						levels=2
+						region="STATE_HOME_COUNTIES"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_sugar_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:BIC"
+						levels=1
+						region="STATE_BIHAR"
+					}
+					building={
+						type="building_manor_house"
+						country="c:GBR"
+						levels=2
+						region="STATE_HOME_COUNTIES"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_dye_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:BIC"
+						levels=2
+						region="STATE_BIHAR"
+					}
+					building={
+						type="building_manor_house"
+						country="c:GBR"
+						levels=3
+						region="STATE_HOME_COUNTIES"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts"  }
+			}
+		}
+	}
+	s:STATE_NORTH_BENGAL={
+		region_state:BIC={
+			create_building={
+				building="building_government_administration"
+				add_ownership={
+					country={
+						country="c:BIC"
+						levels=5
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_horizontal_drawer_cabinets" "pm_hereditary_bureaucrats" "pm_secular_bureaucrats" }
+			}
+			create_building={
+				building="building_glassworks"
+				add_ownership={
+					building={
+						type="building_glassworks"
+						country="c:BIC"
+						levels=5
+						region="STATE_NORTH_BENGAL"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_forest_glass"  "pm_manual_glassblowing" "pm_ceramics" }
+			}
+			create_building={
+				building="building_iron_mine"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:GBR"
+						levels=2
+						region="STATE_HOME_COUNTIES"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_opium_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:BIC"
+						levels=5
+						region="STATE_NORTH_BENGAL"
+					}
+					building={
+						type="building_manor_house"
+						country="c:GBR"
+						levels=20
+						region="STATE_HOME_COUNTIES"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_silk_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:BIC"
+						levels=1
+						region="STATE_NORTH_BENGAL"
+					}
+					building={
+						type="building_manor_house"
+						country="c:GBR"
+						levels=3
+						region="STATE_HOME_COUNTIES"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_silk_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_tobacco_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:BIC"
+						levels=2
+						region="STATE_NORTH_BENGAL"
+					}
+					building={
+						type="building_manor_house"
+						country="c:GBR"
+						levels=4
+						region="STATE_HOME_COUNTIES"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
+			}
+		}
+	}
+	s:STATE_ASSAM={
+		region_state:BIC={
+			create_building={
+				building="building_government_administration"
+				add_ownership={
+					country={
+						country="c:BIC"
+						levels=2
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_horizontal_drawer_cabinets" "pm_hereditary_bureaucrats" "pm_secular_bureaucrats" }
+			}
+			create_building={
+				building="building_opium_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:BIC"
+						levels=3
+						region="STATE_ASSAM"
+					}
+					building={
+						type="building_manor_house"
+						country="c:GBR"
+						levels=12
+						region="STATE_HOME_COUNTIES"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_tea_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:BIC"
+						levels=2
+						region="STATE_ASSAM"
+					}
+					building={
+						type="building_manor_house"
+						country="c:GBR"
+						levels=3
+						region="STATE_HOME_COUNTIES"
+					}
+				}
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
+				reserves=1
+				activate_production_methods={ "default_building_tea_plantation" "pm_road_carts"  }
+			}
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
+=======
+		}
+	}
+	s:STATE_DELHI={
+		region_state:BIC={
+			create_building={
+				building="building_government_administration"
+				add_ownership={
+					country={
+						country="c:BIC"
+						levels=8
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_horizontal_drawer_cabinets" "pm_hereditary_bureaucrats" "pm_secular_bureaucrats" }
+			}
+			create_building={
+				building="building_construction_sector"
+				add_ownership={
+					country={
+						country="c:BIC"
+						levels=2
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_wooden_buildings" }
+			}
+			create_building={
+				building="building_textile_mills"
+				add_ownership={
+					building={
+						type="building_textile_mills"
+						country="c:BIC"
+						levels=5
+						region="STATE_DELHI"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_handsewn_clothes"  "pm_traditional_looms" "pm_craftsman_sewing" }
+			}
+			create_building={
+				building="building_arms_industry"
+				add_ownership={
+					country={
+						country="c:BIC"
+						levels=2
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_muskets" "pm_automation_disabled"  }
+			}
+			create_building={
+				building="building_paper_mills"
+				add_ownership={
+					building={
+						type="building_paper_mills"
+						country="c:BIC"
+						levels=3
+						region="STATE_DELHI"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_pulp_pressing" "pm_automation_disabled"  }
+			}
+			create_building={
+				building="building_cotton_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:BIC"
+						levels=2
+						region="STATE_DELHI"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_opium_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:BIC"
+						levels=3
+						region="STATE_DELHI"
+					}
+					building={
+						type="building_manor_house"
+						country="c:GBR"
+						levels=12
+						region="STATE_HOME_COUNTIES"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_tea_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:BIC"
+						levels=2
+						region="STATE_DELHI"
+					}
+					building={
+						type="building_manor_house"
+						country="c:GBR"
+						levels=8
+						region="STATE_HOME_COUNTIES"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_tea_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_iron_mine"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:GBR"
+						levels=3
+						region="STATE_HOME_COUNTIES"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts"  }
+			}
+		}
+	}
+	s:STATE_AWADH={
+		region_state:AWA={
+			create_building={
+				building="building_government_administration"
+				add_ownership={
+					country={
+						country="c:AWA"
+						levels=2
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_organization" "pm_hereditary_bureaucrats" "pm_religious_bureaucrats" }
+			}
+			create_building={
+				building="building_glassworks"
+				add_ownership={
+					building={
+						type="building_glassworks"
+						country="c:AWA"
+						levels=2
+						region="STATE_AWADH"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_forest_glass"  "pm_manual_glassblowing" "pm_ceramics" }
+			}
+			create_building={
+				building="building_opium_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:AWA"
+						levels=20
+						region="STATE_AWADH"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_dye_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:AWA"
+						levels=5
+						region="STATE_AWADH"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts"  }
+			}
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
+			create_building={
 				building="building_barracks"
-				level=20
+				add_ownership={
+					country={
+						country="c:AWA"
+						levels=20
+					}
+				}
 				reserves=1
 				activate_production_methods={ "pm_no_organization" }
 			}
 		}
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
+=======
+		region_state:BIC={
+			create_building={
+				building="building_furniture_manufacturies"
+				add_ownership={
+					building={
+						type="building_furniture_manufacturies"
+						country="c:BIC"
+						levels=3
+						region="STATE_AWADH"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_handcrafted_furniture"  "pm_automation_disabled" "pm_luxury_furniture" }
+			}
+			create_building={
+				building="building_opium_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:BIC"
+						levels=4
+						region="STATE_AWADH"
+					}
+					building={
+						type="building_manor_house"
+						country="c:GBR"
+						levels=14
+						region="STATE_HOME_COUNTIES"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_dye_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:BIC"
+						levels=2
+						region="STATE_AWADH"
+					}
+					building={
+						type="building_manor_house"
+						country="c:GBR"
+						levels=6
+						region="STATE_HOME_COUNTIES"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts"  }
+			}
+		}
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
 	}
 	s:STATE_PANNYA = {
 		region_state:GDY={
 			create_building={
 				building="building_government_administration"
-				level=2
+				add_ownership={
+					country={
+						country="c:BER"
+						levels=2
+					}
+				}
 				reserves=1
 				activate_production_methods={ "pm_simple_organization" }
 			}			
 			create_building={
 				building="building_furniture_manufacturies"
-				level=2
+				add_ownership={
+					building={
+						type="building_furniture_manufacturies"
+						country="c:BER"
+						levels=2
+						region="STATE_GUJARAT"
+					}
+				}
 				reserves=1
-				activate_production_methods={ "pm_handcrafted_furniture" "pm_merchant_guilds_building_furniture_manufacturies" "pm_automation_disabled" "pm_luxury_furniture" }
+				activate_production_methods={ "pm_handcrafted_furniture"  "pm_automation_disabled" "pm_luxury_furniture" }
 			}
 			create_building={
 				building="building_textile_mills"
-				level=2
+				add_ownership={
+					building={
+						type="building_textile_mills"
+						country="c:BER"
+						levels=2
+						region="STATE_GUJARAT"
+					}
+				}
 				reserves=1
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
 				activate_production_methods={ "pm_handsewn_clothes" "pm_merchant_guilds_building_textile_mills" "pm_traditional_looms" "pm_no_luxury_clothes" }
+=======
+				activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_traditional_looms"  }
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
 			}
 			create_building={
 				building="building_fishing_wharf"
-				level=3
+				add_ownership={
+					building={
+						type="building_fishing_wharf"
+						country="c:BER"
+						levels=3
+						region="STATE_GUJARAT"
+					}
+				}
 				reserves=1
-				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated"  }
 			}
 			create_building={
 				building="building_sugar_plantation"
-				level=3
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:BER"
+						levels=3
+						region="STATE_GUJARAT"
+					}
+				}
 				reserves=1
-				activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+				activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts"  }
 			}
 			create_building={
 				building="building_tobacco_plantation"
-				level=2
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:BER"
+						levels=2
+						region="STATE_GUJARAT"
+					}
+				}
 				reserves=1
-				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
 			}
 			create_building={
 				building="building_barracks"
-				level=20
+				add_ownership={
+					country={
+						country="c:BER"
+						levels=20
+					}
+				}
 				reserves=1
 				activate_production_methods={ "pm_no_organization" }
 			}
@@ -90,11 +651,23 @@
 			}
 			create_building={
 				building="building_fishing_wharf"
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
 				level=2
+=======
+				add_ownership={
+					building={
+						type="building_fishing_wharf"
+						country="c:KUT"
+						levels=1
+						region="STATE_GUJARAT"
+					}
+				}
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
 				reserves=1
-				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated"  }
 			}
 			create_building={
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
 				building="building_tobacco_plantation"
 				level=2
 				reserves=1
@@ -105,14 +678,169 @@
 				level=1
 				reserves=1
 				activate_production_methods={ "default_building_tea_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+=======
+				building="building_livestock_ranch"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:KUT"
+						levels=1
+						region="STATE_GUJARAT"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_open_air_stockyards" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated"  }
 			}
 			create_building={
 				building="building_barracks"
-				level=15
+				add_ownership={
+					country={
+						country="c:KUT"
+						levels=5
+					}
+				}
 				reserves=1
 				activate_production_methods={ "pm_no_organization" }
 			}
 		}
+	}
+	s:STATE_CENTRAL_INDIA={
+		region_state:IND={
+			create_building={
+				building="building_opium_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:IND"
+						levels=5
+						region="STATE_CENTRAL_INDIA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_barracks"
+				add_ownership={
+					country={
+						country="c:IND"
+						levels=10
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+			}
+		}
+		region_state:BUN={
+			create_building={
+				building="building_cotton_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:BUN"
+						levels=1
+						region="STATE_CENTRAL_INDIA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
+			}
+			create_building={
+				building="building_barracks"
+				add_ownership={
+					country={
+						country="c:BUN"
+						levels=15
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+			}
+		}
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
+=======
+		region_state:GWA={
+			create_building={
+				building="building_cotton_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:GWA"
+						levels=1
+						region="STATE_CENTRAL_INDIA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_opium_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:GWA"
+						levels=3
+						region="STATE_CENTRAL_INDIA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_barracks"
+				add_ownership={
+					country={
+						country="c:GWA"
+						levels=10
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+			}
+		}
+		region_state:BHO={
+			create_building={
+				building="building_opium_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:BHO"
+						levels=2
+						region="STATE_CENTRAL_INDIA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_barracks"
+				add_ownership={
+					country={
+						country="c:BHO"
+						levels=5
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+			}
+		}
+		region_state:BIC={
+			create_building={
+				building="building_cotton_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:BIC"
+						levels=1
+						region="STATE_CENTRAL_INDIA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
+			}
+		}
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
 	}
 
 	s:STATE_SURYANAGARI = {
@@ -127,11 +855,17 @@
 		region_state:TEN={
 			create_building={
 				building="building_government_administration"
-				level=1
+				add_ownership={
+					country={
+						country="c:PAN"
+						levels=1
+					}
+				}
 				reserves=1
 				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
 			}			
 			create_building={
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
 				building="building_tea_plantation"
 				level=1
 				reserves=1
@@ -146,10 +880,44 @@
 			create_building={
 				building="building_logging_camp"
 				level=2
+=======
+				building="building_arms_industry"
+				add_ownership={
+					country={
+						country="c:PAN"
+						levels=2
+					}
+				}
 				reserves=1
-				activate_production_methods={ "pm_simple_forestry" "pm_merchant_guilds_building_logging_camp" "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
+				activate_production_methods={ "pm_muskets" "pm_automation_disabled"  }
 			}
 			create_building={
+				building="building_artillery_foundries"
+				add_ownership={
+					country={
+						country="c:PAN"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_cannons" "pm_automation_disabled"  }
+			}
+			create_building={
+				building="building_logging_camp"
+				add_ownership={
+					building={
+						type="building_logging_camp"
+						country="c:PAN"
+						levels=4
+						region="STATE_KASHMIR"
+					}
+				}
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
+				reserves=1
+				activate_production_methods={ "pm_simple_forestry"  "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
+			}
+			create_building={
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
 				building="building_paper_mills"
 				level=1
 				reserves=1
@@ -160,10 +928,67 @@
 				level=1
 				reserves=1
 				activate_production_methods={ "pm_handcrafted_furniture" "pm_merchant_guilds_building_furniture_manufacturies" "pm_automation_disabled" "pm_luxury_furniture" }
+=======
+				building="building_livestock_ranch"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:PAN"
+						levels=2
+						region="STATE_KASHMIR"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_open_air_stockyards" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated"  }
+			}
+			create_building={
+				building="building_opium_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:PAN"
+						levels=3
+						region="STATE_KASHMIR"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts"  }
+			}
+		}
+	}
+	s:STATE_PUNJAB={
+		region_state:PAN={
+			create_building={
+				building="building_government_administration"
+				add_ownership={
+					country={
+						country="c:PAN"
+						levels=10
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_organization" "pm_hereditary_bureaucrats" "pm_religious_bureaucrats" }
+			}
+			create_building={
+				building="building_arms_industry"
+				add_ownership={
+					country={
+						country="c:PAN"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_muskets" "pm_automation_disabled"  }
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
 			}
 			create_building={
 				building="building_construction_sector"
-				level=2
+				add_ownership={
+					country={
+						country="c:PAN"
+						levels=2
+					}
+				}
 				reserves=1
 				activate_production_methods={ "pm_wooden_buildings" }
 			}	
@@ -173,6 +998,7 @@
 	s:STATE_BODHISATTVA = {
 		region_state:TEN={
 			create_building={
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
 				building="building_government_administration"
 				level=3
 				reserves=1
@@ -218,8 +1044,110 @@
 			create_building={
 				building="building_tea_plantation"
 				level=1
+=======
+				building="building_glassworks"
+				add_ownership={
+					building={
+						type="building_glassworks"
+						country="c:PAN"
+						levels=2
+						region="STATE_PUNJAB"
+					}
+				}
 				reserves=1
-				activate_production_methods={ "default_building_tea_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+				activate_production_methods={ "pm_forest_glass"  "pm_manual_glassblowing" "pm_ceramics" }
+			}
+			create_building={
+				building="building_textile_mills"
+				add_ownership={
+					building={
+						type="building_textile_mills"
+						country="c:PAN"
+						levels=3
+						region="STATE_PUNJAB"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_handsewn_clothes"  "pm_traditional_looms" "pm_craftsman_sewing" }
+			}
+			create_building={
+				building="building_furniture_manufacturies"
+				add_ownership={
+					building={
+						type="building_furniture_manufacturies"
+						country="c:PAN"
+						levels=2
+						region="STATE_PUNJAB"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_handcrafted_furniture" "pm_no_luxuries" "pm_automation_disabled"  }
+			}
+			create_building={
+				building="building_wheat_farm"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:PAN"
+						levels=2
+						region="STATE_PUNJAB"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_citrus_orchards" "pm_tools_disabled"  }
+			}
+			create_building={
+				building="building_vineyard_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:PAN"
+						levels=2
+						region="STATE_PUNJAB"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_vineyard_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_logging_camp"
+				add_ownership={
+					building={
+						type="building_logging_camp"
+						country="c:PAN"
+						levels=2
+						region="STATE_PUNJAB"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_forestry" "pm_hardwood" "pm_no_equipment" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_tobacco_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:PAN"
+						levels=7
+						region="STATE_PUNJAB"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_tea_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:PAN"
+						levels=7
+						region="STATE_PUNJAB"
+					}
+				}
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
+				reserves=1
+				activate_production_methods={ "default_building_tea_plantation" "pm_road_carts"  }
 			}
 			create_building={
 				building="building_rice_farm"
@@ -229,43 +1157,337 @@
 			}
 			create_building={
 				building="building_livestock_ranch"
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
 				level=1
 				reserves=1
 				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+=======
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:PAN"
+						levels=3
+						region="STATE_PUNJAB"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_open_air_stockyards" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated"  }
 			}
 			create_building={
+				building="building_silk_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:PAN"
+						levels=2
+						region="STATE_PUNJAB"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_silk_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_dye_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:PAN"
+						levels=4
+						region="STATE_PUNJAB"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts"  }
+			}
+		}
+		region_state:BIC={
+		}
+	}
+	s:STATE_NAGPUR={
+		region_state:BUN={
+			create_building={
 				building="building_barracks"
-				level=20
+				add_ownership={
+					country={
+						country="c:BUN"
+						levels=5
+					}
+				}
 				reserves=1
 				activate_production_methods={ "pm_no_organization" }
 			}
 		}
+		region_state:HYD={
+			create_building={
+				building="building_barracks"
+				add_ownership={
+					country={
+						country="c:HYD"
+						levels=5
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+			}
+		}
+		region_state:NAG={
+			create_building={
+				building="building_textile_mills"
+				add_ownership={
+					building={
+						type="building_textile_mills"
+						country="c:NAG"
+						levels=2
+						region="STATE_NAGPUR"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_traditional_looms"  }
+			}
+			create_building={
+				building="building_dye_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:NAG"
+						levels=3
+						region="STATE_NAGPUR"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_opium_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:NAG"
+						levels=3
+						region="STATE_NAGPUR"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts"  }
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
+			}
+			create_building={
+				building="building_barracks"
+				add_ownership={
+					country={
+						country="c:NAG"
+						levels=20
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+			}
+		}
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
+=======
+		region_state:BAS={
+			create_building={
+				building="building_textile_mills"
+				add_ownership={
+					building={
+						type="building_textile_mills"
+						country="c:BAS"
+						levels=1
+						region="STATE_NAGPUR"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_handsewn_clothes"  "pm_traditional_looms" "pm_craftsman_sewing" }
+			}
+			create_building={
+				building="building_opium_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:BAS"
+						levels=1
+						region="STATE_NAGPUR"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_dye_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:BAS"
+						levels=2
+						region="STATE_NAGPUR"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_barracks"
+				add_ownership={
+					country={
+						country="c:BAS"
+						levels=10
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+			}
+		}
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
 	}
 
 	s:STATE_VISHUDDHIKARA = {
 		region_state:VIP={
 			create_building={
 				building="building_government_administration"
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
 				level=1
+=======
+				add_ownership={
+					country={
+						country="c:BIC"
+						levels=10
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_horizontal_drawer_cabinets" "pm_hereditary_bureaucrats" "pm_secular_bureaucrats" }
+			}
+			create_building={
+				building="building_construction_sector"
+				add_ownership={
+					country={
+						country="c:BIC"
+						levels=1
+					}
+				}
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
 				reserves=1
 				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
 			}	
 			create_building={
 				building="building_textile_mills"
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
 				level=1
+=======
+				add_ownership={
+					building={
+						type="building_textile_mills"
+						country="c:BIC"
+						levels=8
+						region="STATE_SOUTH_BENGAL"
+					}
+				}
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
 				reserves=1
-				activate_production_methods={ "pm_handsewn_clothes" "pm_craftsman_sewing" "pm_traditional_looms" "pm_merchant_guilds_building_textile_mills" }
+				activate_production_methods={ "pm_handsewn_clothes" "pm_craftsman_sewing" "pm_traditional_looms"  }
 			}
 			create_building={
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
 				building="building_iron_mine"
 				level=2
 				reserves=1
 				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" "pm_merchant_guilds_building_iron_mine" }
+=======
+				building="building_paper_mills"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:BIC"
+						levels=3
+						region="STATE_SOUTH_BENGAL"
+					}
+					country={
+						country="c:BIC"
+						levels=2
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_pulp_pressing" "pm_automation_disabled"  }
+			}
+			create_building={
+				building="building_shipyards"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:BIC"
+						levels=3
+						region="STATE_SOUTH_BENGAL"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_basic_shipbuilding"  }
+			}
+			create_building={
+				building="building_military_shipyards"
+				add_ownership={
+					country={
+						country="c:BIC"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_military_shipbuilding_wooden"  }
+			}
+			create_building={
+				building="building_arms_industry"
+				add_ownership={
+					country={
+						country="c:BIC"
+						levels=4
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_muskets" "pm_automation_disabled"  }
+			}
+			create_building={
+				building="building_silk_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:BIC"
+						levels=2
+						region="STATE_SOUTH_BENGAL"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_silk_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_dye_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:BIC"
+						levels=6
+						region="STATE_SOUTH_BENGAL"
+					}
+					building={
+						type="building_manor_house"
+						country="c:GBR"
+						levels=6
+						region="STATE_HOME_COUNTIES"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts"  }
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
 			}
 			create_building={
 				building="building_fishing_wharf"
-				level=2
+				add_ownership={
+					building={
+						type="building_fishing_wharf"
+						country="c:BIC"
+						levels=2
+						region="STATE_SOUTH_BENGAL"
+					}
+				}
 				reserves=1
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
 				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
 			}
 			create_building={
@@ -289,11 +1511,24 @@
 			create_building={
 				building="building_port"
 				level=1
+=======
+				activate_production_methods={  "pm_unrefrigerated" "pm_fishing_trawlers" }
+			}
+			create_building={
+				building="building_port"
+				add_ownership={
+					country={
+						country="c:BIC"
+						levels=3
+					}
+				}
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
 				reserves=1
 				activate_production_methods={ "pm_basic_port" }
 			}
 		}
 	}
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
 
 	s:STATE_SUKHIBHAVA = {
 	
@@ -336,21 +1571,89 @@
 
 	s:STATE_CHINTANAGIRI = {
 		region_state:WLR={
+=======
+	s:STATE_SINDH={
+		region_state:SIN={
+			create_building={
+				building="building_fishing_wharf"
+				add_ownership={
+					building={
+						type="building_fishing_wharf"
+						country="c:SIN"
+						levels=1
+						region="STATE_SINDH"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated"  }
+			}
+			create_building={
+				building="building_wheat_farm"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:SIN"
+						levels=1
+						region="STATE_SINDH"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled"  }
+			}
+			create_building={
+				building="building_tea_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:SIN"
+						levels=1
+						region="STATE_SINDH"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_tea_plantation" "pm_road_carts"  }
+			}
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
 			create_building={
 				building="building_livestock_ranch"
-				level=1
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:SIN"
+						levels=1
+						region="STATE_SINDH"
+					}
+				}
 				reserves=1
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
 				activate_production_methods={ "pm_simple_ranch" "pm_privately_owned" "pm_standard_fences" "pm_unrefrigerated" "pm_open_air_stockyards" }
 			}
 			create_building={
 				building="building_logging_camp"
 				level=1
+=======
+				activate_production_methods={ "pm_open_air_stockyards" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated"  }
+			}
+			create_building={
+				building="building_barracks"
+				add_ownership={
+					country={
+						country="c:SIN"
+						levels=20
+					}
+				}
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
 				reserves=1
 				activate_production_methods={ "pm_simple_forestry" "pm_merchant_guilds_building_logging_camp" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
 			}
 			create_building={
 				building="building_barracks"
-				level=10
+				add_ownership={
+					country={
+						country="c:BIK"
+						levels=10
+					}
+				}
 				reserves=1
 				activate_production_methods={ "pm_no_organization" }
 			}
@@ -384,7 +1687,16 @@
 			}
 			create_building={
 				building="building_barracks"
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
 				level=6
+=======
+				add_ownership={
+					country={
+						country="c:JAS"
+						levels=5
+					}
+				}
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
 				reserves=1
 				activate_production_methods={ "pm_no_organization" }
 			}
@@ -394,10 +1706,35 @@
 	s:STATE_SAMYAKVARTA = {
 		region_state:SAP={
 			create_building={
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
 				building="building_sugar_plantation"
 				level=4
 				reserves=1
 				activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+=======
+				building="building_opium_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:MEW"
+						levels=4
+						region="STATE_RAJPUTANA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_barracks"
+				add_ownership={
+					country={
+						country="c:MEW"
+						levels=15
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
 			}
 		}
 	}
@@ -405,12 +1742,23 @@
 	s:STATE_NIRVANANANDA = {
 		region_state:SAP={
 			create_building={
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
 				building="building_government_administration"
 				level=5
+=======
+				building="building_barracks"
+				add_ownership={
+					country={
+						country="c:JOD"
+						levels=15
+					}
+				}
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
 				reserves=1
 				activate_production_methods={ "pm_simple_organization" }
 			}		
 			create_building={
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
 				building="building_glassworks"
 				level=3
 				reserves=1
@@ -473,10 +1821,41 @@
 				level=3
 				reserves=1
 				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+=======
+				building="building_textile_mills"
+				add_ownership={
+					building={
+						type="building_textile_mills"
+						country="c:JAI"
+						levels=1
+						region="STATE_RAJPUTANA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_handsewn_clothes"  "pm_traditional_looms" "pm_craftsman_sewing" }
+			}
+			create_building={
+				building="building_opium_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:JAI"
+						levels=2
+						region="STATE_RAJPUTANA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts"  }
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
 			}
 			create_building={
 				building="building_barracks"
-				level=20
+				add_ownership={
+					country={
+						country="c:JAI"
+						levels=20
+					}
+				}
 				reserves=1
 				activate_production_methods={ "pm_no_organization" }
 			}
@@ -493,36 +1872,70 @@
 		region_state:MAI={
 			create_building={
 				building="building_fishing_wharf"
-				level=2
+				add_ownership={
+					building={
+						type="building_fishing_wharf"
+						country="c:GBR"
+						levels=2
+						region="STATE_CEYLON"
+					}
+				}
 				reserves=1
-				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" "pm_merchant_guilds_building_fishing_wharf" }
+				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated"  }
 			}
 			create_building={
 				building="building_tea_plantation"
-				level=4
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:GBR"
+						levels=4
+						region="STATE_HOME_COUNTIES"
+					}
+				}
 				reserves=1
-				activate_production_methods={ "default_building_tea_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+				activate_production_methods={ "default_building_tea_plantation" "pm_road_carts"  }
 			}
 			create_building={
 				building="building_tobacco_plantation"
-				level=2
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:GBR"
+						levels=2
+						region="STATE_HOME_COUNTIES"
+					}
+				}
 				reserves=1
-				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
 			}
 			create_building={
 				building="building_coffee_plantation"
-				level=2
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:GBR"
+						levels=2
+						region="STATE_HOME_COUNTIES"
+					}
+				}
 				reserves=1
-				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts"  }
 			}
 			create_building={
 				building="building_port"
-				level=1
+				add_ownership={
+					country={
+						country="c:GBR"
+						levels=1
+					}
+				}
 				reserves=1
 				activate_production_methods={ "pm_basic_port" }
 			}			
 		}
 	}
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
 
 	s:STATE_BOODJARRA = {
 		region_state:JIV={
@@ -535,32 +1948,189 @@
 			create_building={
 				building="building_glassworks"
 				level=1
+=======
+	s:STATE_INDIAN_OCEAN_TERRITORY={
+		region_state:FRA={
+			create_building={
+				building="building_sugar_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:FRA"
+						levels=2
+						region="STATE_ILE_DE_FRANCE"
+					}
+				}
 				reserves=1
-				activate_production_methods={ "pm_forest_glass" "pm_ceramics" "pm_manual_glassblowing" "pm_merchant_guilds_building_glassworks" }
+				activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_port"
+				add_ownership={
+					country={
+						country="c:FRA"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_anchorage" }
+			}
+		}
+		region_state:GBR={
+			create_building={
+				building="building_sugar_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:GBR"
+						levels=1
+						region="STATE_HOME_COUNTIES"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_port"
+				add_ownership={
+					country={
+						country="c:GBR"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_anchorage" }
+			}
+		}
+	}
+	s:STATE_ORISSA={
+		region_state:ORI={
+			create_building={
+				building="building_sugar_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:ORI"
+						levels=4
+						region="STATE_ORISSA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts"  }
+			}
+		}
+		region_state:BIC={
+		}
+	}
+	s:STATE_CIRCARS={
+		region_state:BIC={
+			create_building={
+				building="building_government_administration"
+				add_ownership={
+					country={
+						country="c:BIC"
+						levels=5
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_horizontal_drawer_cabinets" "pm_hereditary_bureaucrats" "pm_secular_bureaucrats" }
+			}
+			create_building={
+				building="building_textile_mills"
+				add_ownership={
+					building={
+						type="building_textile_mills"
+						country="c:BIC"
+						levels=5
+						region="STATE_CIRCARS"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_handsewn_clothes" "pm_craftsman_sewing" "pm_traditional_looms"  }
+			}
+			create_building={
+				building="building_glassworks"
+				add_ownership={
+					building={
+						type="building_glassworks"
+						country="c:BIC"
+						levels=2
+						region="STATE_CIRCARS"
+					}
+				}
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
+				reserves=1
+				activate_production_methods={ "pm_forest_glass" "pm_ceramics" "pm_manual_glassblowing"  }
 			}
 			create_building={
 				building="building_iron_mine"
-				level=1
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:GBR"
+						levels=1
+						region="STATE_HOME_COUNTIES"
+					}
+				}
 				reserves=1
-				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" "pm_merchant_guilds_building_iron_mine" }
+				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts"  }
 			}
 			create_building={
 				building="building_tobacco_plantation"
-				level=4
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:BIC"
+						levels=2
+						region="STATE_CIRCARS"
+					}
+					building={
+						type="building_manor_house"
+						country="c:GBR"
+						levels=2
+						region="STATE_HOME_COUNTIES"
+					}
+				}
 				reserves=1
-				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
 			}
 			create_building={
 				building="building_dye_plantation"
-				level=6
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:BIC"
+						levels=2
+						region="STATE_CIRCARS"
+					}
+					building={
+						type="building_manor_house"
+						country="c:GBR"
+						levels=4
+						region="STATE_HOME_COUNTIES"
+					}
+				}
 				reserves=1
-				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts"  }
 			}
 			create_building={
 				building="building_sugar_plantation"
-				level=3
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:BIC"
+						levels=1
+						region="STATE_CIRCARS"
+					}
+					building={
+						type="building_manor_house"
+						country="c:GBR"
+						levels=2
+						region="STATE_HOME_COUNTIES"
+					}
+				}
 				reserves=1
-				activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+				activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts"  }
 			}
 		}
 	}
@@ -575,6 +2145,7 @@
 			}		
 			create_building={
 				building="building_textile_mills"
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
 				level=2
 				reserves=1
 				activate_production_methods={ "pm_handsewn_clothes" "pm_craftsman_sewing" "pm_traditional_looms" "pm_merchant_guilds_building_textile_mills" }
@@ -736,12 +2307,64 @@
 			create_building={
 				building="building_dye_plantation"
 				level=6
+=======
+				add_ownership={
+					building={
+						type="building_textile_mills"
+						country="c:MYS"
+						levels=1
+						region="STATE_MYSORE"
+					}
+				}
 				reserves=1
-				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+				activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_traditional_looms"  }
+			}
+			create_building={
+				building="building_gold_mine"
+				add_ownership={
+					country={
+						country="c:MYS"
+						levels=2
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_gold_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_coffee_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:MYS"
+						levels=4
+						region="STATE_MYSORE"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_dye_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:MYS"
+						levels=5
+						region="STATE_MYSORE"
+					}
+				}
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
+				reserves=1
+				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts"  }
 			}
 			create_building={
 				building="building_barracks"
-				level=20
+				add_ownership={
+					country={
+						country="c:MYS"
+						levels=20
+					}
+				}
 				reserves=1
 				activate_production_methods={ "pm_no_organization" }
 			}
@@ -792,6 +2415,7 @@
 	s:STATE_TSEGYALNIPIY = {
 		region_state:IZA={		
 			create_building={
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
 				building="building_livestock_ranch"
 				level=1
 				reserves=1
@@ -808,6 +2432,30 @@
 				level=1
 				reserves=1
 				activate_production_methods={ "pm_simple_forestry" "pm_merchant_guilds_building_logging_camp" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
+=======
+				building="building_coffee_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:BIC"
+						levels=1
+						region="STATE_MYSORE"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_gold_mine"
+				add_ownership={
+					country={
+						country="c:BIC"
+						levels=2
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_gold_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts"  }
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
 			}
 		}
 	}
@@ -815,6 +2463,7 @@
 	s:STATE_NYINGMAWASKAHIKAN = {
 		region_state:SSC={
 			create_building={
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
 				building="building_wheat_farm"
 				level=1
 				reserves=1
@@ -835,6 +2484,28 @@
 			create_building={
 				building="building_barracks"
 				level=5
+=======
+				building="building_tea_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:TRA"
+						levels=3
+						region="STATE_TRAVANCORE"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_tea_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_barracks"
+				add_ownership={
+					country={
+						country="c:TRA"
+						levels=10
+					}
+				}
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
 				reserves=1
 				activate_production_methods={ "pm_no_organization" }
 			}
@@ -844,6 +2515,7 @@
 	s:STATE_POTALANIPIY = {
 		region_state:SEK={
 			create_building={
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
 				building="building_government_administration"
 				level=1
 				reserves=1
@@ -854,6 +2526,19 @@
 				level=1
 				reserves=1
 				activate_production_methods={ "pm_privately_owned" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated" "pm_open_air_stockyards" }
+=======
+				building="building_coffee_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:BIC"
+						levels=2
+						region="STATE_TRAVANCORE"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts"  }
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
 			}
 		}
 	}
@@ -861,6 +2546,7 @@
 	s:STATE_GANDNI = {
 		region_state:SSC={
 			create_building={
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
 				building="building_livestock_ranch"
 				level=1
 				reserves=1
@@ -894,10 +2580,28 @@
 				level=5
 				reserves=1
 				activate_production_methods={ "pm_no_organization" }
+=======
+				building="building_dye_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:FRA"
+						levels=2
+						region="STATE_ILE_DE_FRANCE"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts"  }
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
 			}
 			create_building={
 				building="building_port"
-				level=1
+				add_ownership={
+					country={
+						country="c:FRA"
+						levels=1
+					}
+				}
 				reserves=1
 				activate_production_methods={ "pm_basic_port" }
 			}
@@ -1062,7 +2766,12 @@
 		region_state:PAY={
 			create_building={
 				building="building_government_administration"
-				level=8
+				add_ownership={
+					country={
+						country="c:BIC"
+						levels=8
+					}
+				}
 				reserves=1
 				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
 			}
@@ -1098,11 +2807,17 @@
 			}
 			create_building={
 				building="building_construction_sector"
-				level=1
+				add_ownership={
+					country={
+						country="c:BIC"
+						levels=1
+					}
+				}
 				reserves=1
 				activate_production_methods={ "pm_wooden_buildings" }
 			}
 			create_building={
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
 				building="building_tooling_workshops"
 				level=1
 				reserves=1
@@ -1113,6 +2828,30 @@
 				level=1
 				reserves=1
 				activate_production_methods={ "pm_muskets" "pm_merchant_guilds_building_arms_industry" }
+=======
+				building="building_textile_mills"
+				add_ownership={
+					building={
+						type="building_textile_mills"
+						country="c:BIC"
+						levels=4
+						region="STATE_MADRAS"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_handsewn_clothes" "pm_craftsman_sewing" "pm_traditional_looms"  }
+			}
+			create_building={
+				building="building_arms_industry"
+				add_ownership={
+					country={
+						country="c:BIC"
+						levels=2
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_muskets" "pm_automation_disabled"  }
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
 			}
 		}
 	}
@@ -1125,9 +2864,16 @@
 		region_state:PAY = {
 			create_building={
 				building="building_iron_mine"
-				level=2
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:GBR"
+						levels=2
+						region="STATE_HOME_COUNTIES"
+					}
+				}
 				reserves=1
-				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" "pm_merchant_guilds_building_iron_mine" }
+				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts"  }
 			}
 		}
 	}
@@ -1139,6 +2885,7 @@
 	s:STATE_KOTAYNOS = {
 		region_state:PAY={
 			create_building={
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
 				building="building_vineyard_plantation"
 				level=2
 				reserves=1
@@ -1199,8 +2946,45 @@
 			create_building={
 				building="building_dye_plantation"
 				level=1
+=======
+				building="building_fishing_wharf"
+				add_ownership={
+					building={
+						type="building_fishing_wharf"
+						country="c:BIC"
+						levels=2
+						region="STATE_MADRAS"
+					}
+				}
 				reserves=1
-				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated"  }
+			}
+			create_building={
+				building="building_coffee_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:BIC"
+						levels=4
+						region="STATE_MADRAS"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_dye_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:GBR"
+						levels=10
+						region="STATE_HOME_COUNTIES"
+					}
+				}
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
+				reserves=1
+				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts"  }
 			}
 			create_building={
 				building="building_barracks"
@@ -1279,30 +3063,139 @@
 			}
 			create_building={
 				building="building_tobacco_plantation"
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
 				level=1
+=======
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:GBR"
+						levels=6
+						region="STATE_HOME_COUNTIES"
+					}
+				}
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
 				reserves=1
-				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
 			}
 			create_building={
 				building="building_port"
-				level=1
+				add_ownership={
+					country={
+						country="c:BIC"
+						levels=1
+					}
+				}
 				reserves=1
 				activate_production_methods={ "pm_basic_port" }
 			}
 		}
 	}
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
 
 	s:STATE_COCOHAYAT = {
 		region_state:CCO={
+=======
+	s:STATE_HYDERABAD={
+		region_state:HYD={
+			create_building={
+				building="building_government_administration"
+				add_ownership={
+					country={
+						country="c:HYD"
+						levels=5
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_organization" "pm_hereditary_bureaucrats" "pm_religious_bureaucrats" }
+			}
+			create_building={
+				building="building_glassworks"
+				add_ownership={
+					building={
+						type="building_glassworks"
+						country="c:HYD"
+						levels=3
+						region="STATE_HYDERABAD"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_forest_glass"  "pm_manual_glassblowing" "pm_ceramics" }
+			}
+			create_building={
+				building="building_arms_industry"
+				add_ownership={
+					country={
+						country="c:HYD"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_muskets" "pm_automation_disabled"  }
+			}
+			create_building={
+				building="building_cotton_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:HYD"
+						levels=2
+						region="STATE_HYDERABAD"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_sugar_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:HYD"
+						levels=3
+						region="STATE_HYDERABAD"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_barracks"
+				add_ownership={
+					country={
+						country="c:HYD"
+						levels=20
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+			}
+		}
+	}
+	s:STATE_BOMBAY={
+		region_state:POR={
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
 			create_building={
 				building="building_dye_plantation"
-				level=2
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:POR"
+						levels=2
+						region="STATE_BEIRA"
+					}
+				}
 				reserves=1
-				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts"  }
 			}
 			create_building={
 				building="building_port"
-				level=1
+				add_ownership={
+					country={
+						country="c:POR"
+						levels=1
+					}
+				}
 				reserves=1
 				activate_production_methods={ "pm_anchorage" }
 			}
@@ -1317,7 +3210,12 @@
 		region_state:GAH={
 			create_building={
 				building="building_government_administration"
-				level=8
+				add_ownership={
+					country={
+						country="c:BIC"
+						levels=8
+					}
+				}
 				reserves=1
 				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
 			}
@@ -1359,7 +3257,12 @@
 			}
 			create_building={
 				building="building_construction_sector"
-				level=1
+				add_ownership={
+					country={
+						country="c:BIC"
+						levels=1
+					}
+				}
 				reserves=1
 				activate_production_methods={ "pm_wooden_buildings" }
 			}
@@ -1385,6 +3288,7 @@
 	s:STATE_DUSHANBARYA = {
 		region_state:AMR={
 			create_building={
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
 				building="building_fishing_wharf"
 				level=1
 				reserves=1
@@ -1399,10 +3303,52 @@
 			create_building={
 				building="building_tea_plantation"
 				level=1
+=======
+				building="building_textile_mills"
+				add_ownership={
+					building={
+						type="building_textile_mills"
+						country="c:BIC"
+						levels=4
+						region="STATE_BOMBAY"
+					}
+				}
 				reserves=1
-				activate_production_methods={ "default_building_tea_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+				activate_production_methods={ "pm_handsewn_clothes" "pm_craftsman_sewing" "pm_traditional_looms"  }
 			}
 			create_building={
+				building="building_arms_industry"
+				add_ownership={
+					country={
+						country="c:BIC"
+						levels=3
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_muskets" "pm_automation_disabled"  }
+			}
+			create_building={
+				building="building_tea_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:BIC"
+						levels=3
+						region="STATE_BOMBAY"
+					}
+					building={
+						type="building_manor_house"
+						country="c:GBR"
+						levels=3
+						region="STATE_HOME_COUNTIES"
+					}
+				}
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
+				reserves=1
+				activate_production_methods={ "default_building_tea_plantation" "pm_road_carts"  }
+			}
+			create_building={
+<<<<<<< HEAD:common/history/buildings/05_locari.txt
 				building="building_livestock_ranch"
 				level=1
 				reserves=1
@@ -1411,6 +3357,28 @@
 			create_building={
 				building="building_barracks"
 				level=20
+=======
+				building="building_fishing_wharf"
+				add_ownership={
+					building={
+						type="building_fishing_wharf"
+						country="c:BIC"
+						levels=3
+						region="STATE_BOMBAY"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated"  }
+			}
+			create_building={
+				building="building_port"
+				add_ownership={
+					country={
+						country="c:BIC"
+						levels=2
+					}
+				}
+>>>>>>> f55cedb6 (1.7):common/history/buildings/10_india.txt
 				reserves=1
 				activate_production_methods={ "pm_no_organization" }
 			}

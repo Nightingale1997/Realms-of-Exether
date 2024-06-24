@@ -1,13 +1,17 @@
 #positions for sidepanel buttons
 #(they cant be in flowcontainer because of the way the label buttons is set up to scale with the longest localized text)
+
+@politics_position = 0
 @budget_position = 50
 @buildings_position = 100
 @trade_position = 150
 @military_position = 200
+@power_bloc_position = 250
 
-@spacing_widget_1_position = 250
+@spacing_widget_1_position = 300
 @spacing_widget_size = 20
 
+<<<<<<< HEAD
 @maplist_position = 570
 @diplomatic_position = 270
 @technology_position = 310
@@ -19,6 +23,21 @@
 @international_position = 630
 @spacing_widget_2_position = 550
 
+=======
+@diplomatic_position = 320
+@technology_position = 360
+@culture_position = 400
+@population_position = 440
+@journal_position = 480
+@companies_position = 520
+
+@maplist_position = 580
+
+
+@spacing_widget_2_position = 560
+
+
+>>>>>>> f55cedb6 (1.7)
 
 types information_panel_bar_types {
 	type information_panel_bar = widget {
@@ -81,14 +100,65 @@ types information_panel_bar_types {
 			}
 		}
 
+<<<<<<< HEAD
 		### SIDEBAR BACKGROUND
 		icon = {
 			texture = "gfx/interface/main_hud/sidebar_bg.dds"
 			size = { 50 651 }
 			position = { 0 -17 }
+=======
+		container = {
+			position = { 0 -16 }
+>>>>>>> f55cedb6 (1.7)
 
-			using = hud_shiny_effect
+			### SIDEBAR BACKGROUND
+			flowcontainer = {
+				direction = vertical
+
+				icon = {
+					texture = "gfx/interface/main_hud/sidebar_skin_bg_1.dds"
+					size = { 50 171 }
+
+					using = hud_shiny_effect
+				}
+
+				icon = {
+					texture = "gfx/interface/main_hud/sidebar_skin_bg_2.dds"
+					size = { 50 50 }
+
+					using = hud_shiny_effect
+				}
+
+				icon = {
+					texture = "gfx/interface/main_hud/sidebar_skin_bg_2.dds"
+					size = { 50 50 }
+
+					using = hud_shiny_effect
+				}
+
+				icon = {
+					texture = "gfx/interface/main_hud/sidebar_skin_bg_3.dds"
+					size = { 50 230 }
+
+					using = hud_shiny_effect
+				}
+
+				icon = {
+					texture = "gfx/interface/main_hud/sidebar_skin_bg_4.dds"
+					size = { 50 40 }
+
+					using = hud_shiny_effect
+				}
+
+				icon = {
+					texture = "gfx/interface/main_hud/sidebar_skin_bg_5.dds"
+					size = { 50 128 }
+
+					using = hud_shiny_effect
+				}
+			}
 		}
+
 
 		### LABEL BUTTONS
 		flowcontainer = {
@@ -100,10 +170,69 @@ types information_panel_bar_types {
 			onmousehierarchyleave = "[PdxGuiInterruptThenTriggerAllAnimations('show_sidebar_labels','hide_sidebar_labels')]"
 
 			container = {
-			    name = "ingame_sidebar_buttons_container" # Do not rename otherwise `UiValidityCheck`s will just pretend to work
+			    name = "ingame_sidebar_buttons_container" # Don't rename otherwise `UiValidityCheck`s will just pretend to work
+				### POWER BLOC
+
+
+				#two different buttons for two different onclicks
+				sidebar_label_button = {
+					name = "power_bloc_member"
+					visible = "[GetPlayer.IsInPowerBloc]"
+
+					position = { -100 @power_bloc_position }
+					blockoverride "onclick" {
+						onclick = "[InformationPanelBar.OpenPanelCycleTabs('power_bloc_panel', 'default|members|modifiers')]"
+						input_action = "open_power_bloc"
+					}
+				}
+
+				sidebar_label_button = {
+					name = "power_bloc_not_member"
+					visible = "[Not(GetPlayer.IsInPowerBloc)]"
+
+					position = { -100 @power_bloc_position }
+					blockoverride "onclick" {
+						onclick = "[InformationPanelBar.OpenPanel('power_bloc_panel')]"
+						input_action = "open_power_bloc"
+					}
+				}
+
+
+				sidebar_label_text = {
+					position = { -100 @power_bloc_position }
+					text = "POWER_BLOC"
+				}
+
+				#two different buttons for two different onclicks
+
+				power_bloc_icon_button_widget = {
+					visible = "[GetPlayer.IsInPowerBloc]"
+
+					blockoverride "bloc_onclick" {
+						onclick = "[InformationPanelBar.OpenPanelCycleTabs('power_bloc_panel', 'default|members|modifiers')]"
+					}
+				}
+
+				power_bloc_icon_button_widget = {
+					visible = "[Not(GetPlayer.IsInPowerBloc)]"
+					name = "tutorial_highlight_power_bloc_button_non_member"
+					blockoverride "bloc_onclick" {
+						onclick = "[InformationPanelBar.OpenPanel('power_bloc_panel')]"
+					}
+				}
+
+				sidebar_tooltip_area = {
+					position = { 0 @power_bloc_position }
+					tooltip = "BUTTON_POWER_BLOC"
+					input_action = "open_power_bloc"
+				}
+
+
+
+
 				### POLITICS
 				sidebar_label_button = {
-					position = { -100 0 }
+					position = { -100 @politics_position }
 					blockoverride "onclick" {
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('politics', 'default|interest_groups|laws|institutions')]"
 						onclick = "[GetVariableSystem.Clear('politics_overview_exile_pool')]"
@@ -113,10 +242,11 @@ types information_panel_bar_types {
 					}
 				}
 				sidebar_label_text = {
-					position = { -100 0 }
+					position = { -100 @politics_position }
 					text = "POLITICS"
 				}
 				widget = {
+					position = { 0 @politics_position }
 					name = "tutorial_highlight_politics"
 					using = clickthrough_blocker
 					using = sidebar_button_size
@@ -164,7 +294,7 @@ types information_panel_bar_types {
 					}
 				}
 				sidebar_tooltip_area = {
-					position = { 0 0 }
+					position = { 0 @politics_position }
 					tooltip = "BUTTON_POLITICS"
 					input_action = "open_politics"
 				}
@@ -214,9 +344,13 @@ types information_panel_bar_types {
 				sidebar_label_button = {
 					position = { -100 @buildings_position }
 					blockoverride "onclick" {
+<<<<<<< HEAD
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('production_methods', 'urban|rural|development|construction_queues')]"
 						onclick = "[GetVariableSystem.Clear('show_magic')]"
 						onclick = "[GetVariableSystem.Clear('international_open')]"
+=======
+						onclick = "[InformationPanelBar.OpenCompactBuildingBrowserPanelCycleFilters( GetPlayer.Self, '|is_urban|is_rural|is_development' )]"
+>>>>>>> f55cedb6 (1.7)
 						input_action = "open_buildings"
 					}
 				}
@@ -231,18 +365,22 @@ types information_panel_bar_types {
 					using = sidebar_button_size
 					using = selected_sidepanel_animation
 					blockoverride "selected_visibility" {
-						visible = "[InformationPanelBar.IsPanelOpen('production_methods')]"
+						visible = "[InformationPanelBar.IsPanelOpen('compact_building_browser')]"
 					}
 					sidepanel_button_big = {
 						blockoverride "icon" {
 							texture = "gfx/interface/main_hud/production_overview_btn.dds"
 						}
 						blockoverride "button_selected" {
-							visible = "[InformationPanelBar.IsPanelOpen('production_methods')]"
+							visible = "[InformationPanelBar.IsPanelOpen('compact_building_browser')]"
 						}
+<<<<<<< HEAD
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('production_methods', 'urban|rural|development|construction_queues')]"
 						onclick = "[GetVariableSystem.Clear('show_magic')]"
 						onclick = "[GetVariableSystem.Clear('international_open')]"
+=======
+						onclick = "[InformationPanelBar.OpenCompactBuildingBrowserPanelCycleFilters( GetPlayer.Self, '|is_urban|is_rural|is_development' )]"
+>>>>>>> f55cedb6 (1.7)
 					}
 				}
 				sidebar_tooltip_area = {
@@ -347,9 +485,13 @@ types information_panel_bar_types {
 					enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 					position = { -100 @diplomatic_position }
 					blockoverride "onclick" {
+<<<<<<< HEAD
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('diplomatic_overview', 'default|release_subject')]"
 						onclick = "[GetVariableSystem.Clear('show_magic')]"
 						onclick = "[GetVariableSystem.Clear('international_open')]"
+=======
+						onclick = "[InformationPanelBar.OpenPanelCycleTabs('diplomatic_overview', 'default|subjects|release_subject|country_browser')]"
+>>>>>>> f55cedb6 (1.7)
 						input_action = "open_diplomatic"
 					}
 				}
@@ -374,9 +516,13 @@ types information_panel_bar_types {
 						blockoverride "button_selected" {
 							visible = "[InformationPanelBar.IsPanelOpen('diplomatic_overview')]"
 						}
+<<<<<<< HEAD
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('diplomatic_overview', 'default|release_subject')]"
 						onclick = "[GetVariableSystem.Clear('show_magic')]"
 						onclick = "[GetVariableSystem.Clear('international_open')]"
+=======
+						onclick = "[InformationPanelBar.OpenPanelCycleTabs('diplomatic_overview', 'default|subjects|release_subject|country_browser')]"
+>>>>>>> f55cedb6 (1.7)
 					}
 				}
 				sidebar_tooltip_area_small = {
@@ -648,10 +794,11 @@ types information_panel_bar_types {
 					enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 					position = { -100 @journal_position }
 					blockoverride "onclick" {
-						onclick = "[InformationPanelBar.OpenPanelCycleTabs('journal', 'default|decisions')]"
+						onclick = "[InformationPanelBar.OpenPanelCycleTabs('journal', 'default|inactive_journal_entries')]"
 						input_action = "open_journal"
 					}
 				}
+<<<<<<< HEAD
 				# HIDDEN DECISIONS BUTTON, JUST FOR SHORTCUT
 				button = {
 					size = { 0 0 }
@@ -660,6 +807,8 @@ types information_panel_bar_types {
 					onclick = "[GetVariableSystem.Clear('show_magic')]"
 						onclick = "[GetVariableSystem.Clear('international_open')]"
 				}
+=======
+>>>>>>> f55cedb6 (1.7)
 				sidebar_label_text_small = {
 					position = { -100 @journal_position }
 					text = "JOURNAL"
@@ -681,9 +830,13 @@ types information_panel_bar_types {
 						blockoverride "button_selected" {
 							visible = "[InformationPanelBar.IsPanelOpen('journal')]"
 						}
+<<<<<<< HEAD
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('journal', 'default|decisions')]"
 						onclick = "[GetVariableSystem.Clear('show_magic')]"
 						onclick = "[GetVariableSystem.Clear('international_open')]"
+=======
+						onclick = "[InformationPanelBar.OpenPanelCycleTabs('journal', 'default|inactive_journal_entries')]"
+>>>>>>> f55cedb6 (1.7)
 					}
 					textbox = {
 						parentanchor = right|top
@@ -811,6 +964,33 @@ types information_panel_bar_types {
 					position = { 0 @international_position }
 				}
 			}
+		}
+	}
+
+	type power_bloc_icon_button_widget = widget {
+
+		position = { 0 @power_bloc_position }
+		using = clickthrough_blocker
+		using = sidebar_button_size
+		using = selected_sidepanel_animation
+
+		blockoverride "selected_visibility" {
+			visible = "[InformationPanelBar.IsPanelOpen('power_bloc_panel')]"
+		}
+
+		sidepanel_button_big = {
+			blockoverride "icon" {
+				texture = "gfx/interface/main_hud/powerblocs.dds"
+			}
+
+			blockoverride "button_selected" {
+				visible = "[InformationPanelBar.IsPanelOpen('power_bloc_panel')]"
+			}
+
+			block "bloc_onclick" {
+
+			}
+
 		}
 	}
 }

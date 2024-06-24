@@ -1,6 +1,7 @@
 ﻿CHARACTERS = {
 	c:THK = {
 		create_character = {
+<<<<<<< HEAD:common/history/characters/thk - tsidiiyan.txt
 			first_name = "Mariano"
 			last_name = "Largos"
 			historical = yes
@@ -13,6 +14,29 @@
 				ambitious
 				popular_commander
 			}
+=======
+			template = AST_john_hindmarsh
+		}	
+
+		create_character = {
+			template = AST_robert_gouger
+		}
+		
+		create_character = {
+			template = AST_george_strickland_kensington
+		}
+		
+		create_character = {
+			template = AST_george_fife_angas
+		}
+		
+		create_character = {
+			template = AST_charles_howard
+		}
+
+		create_character = {
+			template = AST_william_light
+>>>>>>> f55cedb6 (1.7):common/history/characters/sas - south australia.txt
 		}
 	}
 }

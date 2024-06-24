@@ -6,22 +6,83 @@ idle = {
 	male = {
 		default = { head = "idle_entry" torso = "idle_entry" }
 
+		smoker_character_idle = {
+			animation = { head = "idle_entry" torso = "idle_entry" }
+
+	        weight = {
+	            base = 0
+	            modifier = {
+	                add = 90000
+
+	                has_dlc_feature = ep1_cosmetics
+
+	                scope:character ?= {
+	                    age >= define:NCharacters|ADULT_AGE # always refer to the Defines entry rather than set an arbitrary figure, just to keep things consistent
+
+	                    OR = {
+		                    has_trait = grifter
+		                    has_trait = expensive_tastes
+		                    has_trait = hedonist
+		                }
+	                }
+	            }
+	        }
+
+			portrait_modifier = { animations_props = smoking_attachment }
+		}
+
 		###################################
 		# POP Animations  #
 		###################################
 
+<<<<<<< HEAD
 		2d_pop_idle = {
 			animation = { head = "idle_entry" torso = "idle_entry" }
+=======
+		hatacademic_pop_idle = {
+			animation = { head = "idle_head_pop_hatacademic" torso = "idle_body_hatacademic" }
+>>>>>>> f55cedb6 (1.7)
 
 			weight = {
 				base = 0
 
 				modifier = {
+<<<<<<< HEAD
 					add = 1000
 					no_portrait_trigger = yes
 				}
 			}
 		}	
+=======
+					add = 200
+
+				    exists = scope:pop
+				    scope:pop = {
+						is_pop_type = academics
+					}
+					struggling_pop_trigger = no
+				}
+			}							
+		}
+
+		hatacademic_pop_idle_struggle = {
+			animation = { head = "idle_head_struggle_pop_hatacademic" torso = "idle_body_struggle_hatacademic" }
+
+			weight = {
+				base = 0
+
+				modifier = {
+					add = 200
+					
+				    exists = scope:pop
+				    scope:pop = {
+						is_pop_type = academics
+					}
+					struggling_pop_trigger = yes
+				}
+			}
+		}
+>>>>>>> f55cedb6 (1.7)
 
 		basket_pop_idle = {
 			animation = { head = "idle_head_pop_basket" torso = "idle_body_basket" }
@@ -324,23 +385,7 @@ idle = {
 					struggling_pop_trigger = no
 				}
 			}																
-		}		
-	
-
-		hatacademic_pop_idle = {
-			animation = { head = "idle_head_pop_hatacademic" torso = "idle_body_hatacademic" }
-
-			weight = {
-				base = 0
-
-				modifier = {
-					add = 100
-					upper_clothes_pop_trigger = yes
-					european_clothes_pop_trigger = yes
-					struggling_pop_trigger = no
-				}
-			}							
-		}
+		}				
 				
 		hatmonocle_pop_idle = {
 			animation = { head = "idle_head_pop_hatmonocle" torso = "idle_body_hatmonocle" }
@@ -652,22 +697,7 @@ idle = {
 				}
 			}
 		}						
-		
-		hatacademic_pop_idle_struggle = {
-			animation = { head = "idle_head_struggle_pop_hatacademic" torso = "idle_body_struggle_hatacademic" }
 
-			weight = {
-				base = 0
-
-				modifier = {
-					add = 150
-					upper_clothes_pop_trigger = yes
-					european_clothes_pop_trigger = yes
-					struggling_pop_trigger = yes
-				}
-			}
-		}
-		
 		hatmonocle_pop_idle_struggle = {
 			animation = { head = "idle_head_struggle_pop_hatmonocle" torso = "idle_body_struggle_hatmonocle" }
 

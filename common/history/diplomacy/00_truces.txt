@@ -1,26 +1,67 @@
 ﻿DIPLOMACY = {
+<<<<<<< HEAD
 	c:TEM = {
 		create_truce = {
 			country = c:YOK
+=======
+	c:NET ?= {
+		create_bidirectional_truce = {
+			country = c:BEL
+			months = 7
+		}
+	}	
+}
+
+DIPLOMACY = {
+	c:EGY= {
+		create_bidirectional_truce = {
+			country = c:TUR
+>>>>>>> f55cedb6 (1.7)
 			months = 48
 		}
 	}
 }
 
 DIPLOMACY = {
+<<<<<<< HEAD
 	c:YUL = {
 		create_truce = {
 			country = c:YOK
 			months = 48
+=======
+	c:ASH= {
+		create_bidirectional_truce = {
+			country = c:GBR
+			months = 6
+>>>>>>> f55cedb6 (1.7)
 		}
 	}
 }
 
 DIPLOMACY = {
+<<<<<<< HEAD
 	c:TSH = {
 		create_truce = {
 			country = c:THK
 			months = 60
+=======
+	c:GRE= {
+		create_bidirectional_truce = {
+			country = c:TUR
+			months = 12
+>>>>>>> f55cedb6 (1.7)
 		}
 	}
 }
+<<<<<<< HEAD
+=======
+
+DIPLOMACY = {
+	c:SIA= {
+		create_bidirectional_truce = {
+			country = c:DAI
+			months = 36
+		}
+	}	
+}
+>>>>>>> f55cedb6 (1.7)

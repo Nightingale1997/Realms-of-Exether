@@ -35,6 +35,7 @@
 
 		if = {
 			limit = {
+<<<<<<< HEAD
 				owner = {
 					religion = {
 						AND = {
@@ -45,6 +46,107 @@
 						}
 					}
 				}
+=======
+				country_has_state_religion = rel:mahayana
+				country_has_primary_culture = cu:japanese
+			}
+			ig:ig_devout = {
+				set_interest_group_name = ig_buddhist_monks
+				remove_ideology = ideology_moralist
+				add_ideology = ideology_buddhist_moralist
+			}
+		}
+		# Shinto Monks (Japan)
+		else_if = {
+			limit = {
+				country_has_state_religion = rel:shinto
+				country_has_primary_culture = cu:japanese
+			}
+			ig:ig_devout = {
+				set_interest_group_name = ig_shinto_monks
+				remove_ideology = ideology_moralist
+				add_ideology = ideology_shinto_moralist
+			}
+		}
+		# Christian Missionaries (Hawaii)
+		else_if = {
+			limit = {
+				country_has_state_religion = rel:protestant
+				country_has_primary_culture = cu:hawaiian
+			}
+			ig:ig_devout = {
+				set_interest_group_name = ig_christian_missionaries
+				add_ideology = ideology_laissez_faire
+			}
+		}
+		# Anglicans
+		else_if = {
+			limit = {
+				country_has_state_religion = rel:protestant
+				OR = {
+					country_has_primary_culture = cu:maori
+					country_has_primary_culture = cu:australian
+					country_has_primary_culture = cu:anglo_canadian
+					country_has_primary_culture = cu:british
+					country_has_primary_culture = cu:irish
+					c:NRU ?= this
+				}
+			}
+			ig:ig_devout = {
+				set_interest_group_name = ig_anglican_church
+			}
+		}
+		# Russian Orthodox Church
+		else_if = {
+			limit = {
+				country_has_state_religion = rel:orthodox
+				OR = {
+					country_has_primary_culture = cu:russian
+					country_has_primary_culture = cu:byelorussian
+					country_has_primary_culture = cu:ukrainian
+				}
+			}
+			ig:ig_devout = {
+				set_interest_group_name = ig_orthodox_church
+				remove_ideology = ideology_patriarchal
+				add_ideology = ideology_russian_patriarch
+			}
+		}
+		# Church of Denmark
+		else_if = {
+			limit = {
+				country_has_state_religion = rel:protestant
+				country_has_primary_culture = cu:danish
+			}
+			ig:ig_devout = {
+				set_interest_group_name = ig_church_of_denmark
+			}
+		}
+		# Church of Norway
+		else_if = {
+			limit = {
+				country_has_state_religion = rel:protestant
+				country_has_primary_culture = cu:norwegian
+			}
+			ig:ig_devout = {
+				set_interest_group_name = ig_church_of_norway
+			}
+		}
+		# Church of Sweden
+		else_if = {
+			limit = {
+				country_has_state_religion = rel:protestant
+				country_has_primary_culture = cu:swedish
+			}
+			ig:ig_devout = {
+				set_interest_group_name = ig_church_of_sweden
+			}
+		}
+		# Confucian Scholars
+		else_if = {
+			limit = {
+				country_has_state_religion = rel:confucian
+>>>>>>> f55cedb6 (1.7)
 			}
 			ig:ig_devout = {
 				set_interest_group_name = ig_druids

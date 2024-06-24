@@ -33,6 +33,7 @@ GLOBAL = {
 			}
 			add_technology_researched = human_tech
 		}
+<<<<<<< HEAD
 		if = {
 			limit = {
 				any_primary_culture = {
@@ -183,6 +184,9 @@ GLOBAL = {
 	}
 
 	# International List
+=======
+	}
+>>>>>>> f55cedb6 (1.7)
 
 	every_country = {
 		limit = {
@@ -357,6 +361,14 @@ GLOBAL = {
 		}
 	}
 
+	#Declaration of Independence
+	every_country = {
+		limit = {
+			is_subject = yes
+		}
+		set_variable = declaration_of_independence_ach_possible
+	}
+
 	#Event Variables
 	
 	set_global_variable = {
@@ -388,6 +400,57 @@ GLOBAL = {
 			value = 0
 		}
 
+<<<<<<< HEAD
+=======
+	c:PNI ?= {
+		trigger_event = {
+			id = garibaldi_events.1
+			days = 6
+		}
+	}
+	
+	c:RUS ?= {
+		every_scope_state = {
+            limit = {
+                OR = {
+                    state_region = s:STATE_KUBAN
+                    state_region = s:STATE_DAGESTAN 
+                }
+            }
+            add_radicals_in_state = {
+                value = 1.5
+                culture = cu:circassian
+            }
+			add_radicals_in_state = {
+                value = very_large_radicals
+            }
+            add_radicals_in_state = {
+                value = 0.75
+                culture = cu:north_caucasian
+            }
+			add_radicals_in_state = {
+                value = very_large_radicals
+            }
+        }
+        create_bidirectional_truce = {
+			country = c:CIR
+			months = 240
+		}
+		create_bidirectional_truce = {
+			country = c:CHC
+			months = 240
+		}
+		if = {
+			limit = {
+				has_dlc_feature = ep1_content
+			}
+			trigger_event = {
+				id = kazakhstan_events.2
+				days = 690
+			}
+		}
+	}
+>>>>>>> f55cedb6 (1.7)
 
 		calculate_rituals = yes
 
@@ -415,8 +478,21 @@ GLOBAL = {
 			}
 
 		}
+<<<<<<< HEAD
 
 
 
 
+=======
+		add_radicals = {
+			value = medium_radicals
+			culture = cu:han
+		}
+		
+		set_variable = {
+			name = china_warlord_explosion
+			value = 5
+		}
+	}
+>>>>>>> f55cedb6 (1.7)
 }

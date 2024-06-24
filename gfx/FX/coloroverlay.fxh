@@ -1,147 +1,79 @@
 Includes = {
 	"cw/terrain.fxh"
+	"cw/utility.fxh"
+	"cw/camera.fxh"
 	"jomini/jomini_colormap.fxh"
 	"jomini/jomini_colormap_constants.fxh"
 	"jomini/jomini_province_overlays.fxh"
-	"cw/utility.fxh"
-	"cw/camera.fxh"
 	"sharedconstants.fxh"
 	"constants_game.fxh"
+	"coloroverlay_utility.fxh"
+	"coloroverlay_powerbloc.fxh"
 }
 
 PixelShader = {
 
-	TextureSampler FlatmapNoiseMap
+	TextureSampler FlagDiffuse
 	{
-		Index = 7
+		Index = 11
 		MagFilter = "Linear"
 		MinFilter = "Linear"
 		MipFilter = "Linear"
 		SampleModeU = "Wrap"
 		SampleModeV = "Wrap"
-		File = "gfx/map/textures/flatmap_noise.dds"
-		srgb = no
-	}
-
-	TextureSampler LandMaskMap
-	{
-		Index = 9
-		MagFilter = "Linear"
-		MinFilter = "Linear"
-		MipFilter = "Linear"
-		SampleModeU = "Wrap"
-		SampleModeV = "Wrap"
-		File = "gfx/map/textures/land_mask.dds"
+		File = "gfx/map/textures/cloth.dds"
 		srgb = yes
 	}
-
-	#// Highlight in Red
-	#// Occupatioon in Green
-	TextureSampler HighlightGradient
-	{
-		Ref = HighlightGradient
-		MagFilter = "Linear"
-		MinFilter = "Linear"
-		MipFilter = "Linear"
-		SampleModeU = "Wrap"
-		SampleModeV = "Wrap"
-	}
-
-	TextureSampler ImpassableTerrainTexture
-	{
-		Ref = ImpassableTerrain
-		MagFilter = "Linear"
-		MinFilter = "Linear"
-		MipFilter = "Linear"
-		SampleModeU = "Wrap"
-		SampleModeV = "Wrap"
-	}
-
-	TextureSampler MapPaintingTextures
-	{
-		Ref = MapPaintingTexturesRef
-		MagFilter = "Linear"
-		MinFilter = "Linear"
-		MipFilter = "Linear"
-		SampleModeU = "Wrap"
-		SampleModeV = "Wrap"
-		type = "2darray"
-	}
-	TextureSampler FlatmapOverlayTexture
-	{
-		Ref = FlatmapOverlay
-		MagFilter = "Linear"
-		MinFilter = "Linear"
-		MipFilter = "Linear"
-		SampleModeU = "Wrap"
-		SampleModeV = "Clamp"
-	}
-
-	TextureSampler CountryColors
-	{
-		Ref = CountryColors
-		MagFilter = "Point"
-		MinFilter = "Point"
-		MipFilter = "Point"
-		SampleModeU = "Clamp"
-		SampleModeV = "Clamp"
-	}
-
-	TextureSampler CoaAtlas
-	{
-		Ref = CoaAtlasTexture
-		MagFilter = "Linear"
-		MinFilter = "Linear"
-		MipFilter = "Linear"
-		SampleModeU = "Wrap"
-		SampleModeV = "Wrap"
-	}
-	BufferTexture ProvinceCountryIdBuffer
-	{
-		Ref = ProvinceCountryId
-		type = int
-	}
-	BufferTexture ProvinceControllerIdBuffer
-	{
-		Ref = ProvinceControllerId
-		type = int
-	}
-	BufferTexture CountryCoaUvBuffer
-	{
-		Ref = CountryFlagUvs
-		type = float4
-	}
-
 
 	Code
 	[[
 		#define LAND_COLOR ToLinear( HSVtoRGB( float3( 0.1f, 0.17f, 0.77f ) ) )
 		#define HIGHLIGHT_RANGE 0.5f
 
-		int SampleCountryIndex( float2 MapCoords )
-		{
-			float2 ColorIndex = PdxTex2D( ProvinceColorIndirectionTexture, MapCoords ).rg;
-			int Index = ColorIndex.x * 255.0 + ColorIndex.y * 255.0 * 256.0;
-			return PdxReadBuffer( ProvinceCountryIdBuffer, Index ).r;
-		}
+		// Stripes
+		#define StripesGradientEdge 			0.25
+		#define StripeMaskMin					0.5
+		#define StripeMaskMax					1.5
+		#define StripeMaskMultiplier			2.2
 
-		int SampleControllerIndex( float2 MapCoords )
-		{
-			float2 ColorIndex = PdxTex2D( ProvinceColorIndirectionTexture, MapCoords ).rg;
-			int Index = ColorIndex.x * 255.0 + ColorIndex.y * 255.0 * 256.0;
-			return PdxReadBuffer( ProvinceControllerIdBuffer, Index ).r;
-		}
+		#define StripeMaskEdgeMin				0.0
+		#define StripeMaskEdgeMax				0.5
+		#define StripeMaskEdgeMultiplier		2.2
 
-		void ApplyStripeColorBlend( float2 MapCoords, float2 ParalaxCoord, inout float3 Color, inout float PreLightingBlend )
+		#define StripeOccupiedTransparency 		0.8
+		#define StripeControlledColor 			float3( 1.000, 0.374, 0.100 )
+		#define StripeControlledColorStrength 	2.5
+
+		// Animated Stripe pulse
+		#define StripePulseAngle 				-1.0
+		#define StripePulseTiling 				150.0
+		#define StripePulsePulseSpeed 			1.0
+
+		// Coa Flags and Waving
+		#define CoaControlledColor  			float3( 0.642, 0.321, 0.169 )
+		#define CoaGradientEdge 				0.4
+		#define CoaWaveScale 					100.0
+		#define CoaWaveStrenght 				0.05
+		#define CoaWaveSpeed 					0.5
+		#define CoaWaveHighlight 				1.1
+		#define CoaWaveShadow 					0.7
+		#define CoaGapSize 						1.02
+		#define CoaGapBlend 					0.02
+		#define CoaClothSizeFlatmap				1.5
+
+		void ApplyStripeColorBlend( float2 MapCoords, float2 ParallaxCoord, inout float3 Color, inout float PreLightingBlend, inout float PostLightingBlend )
 		{
 			// Coat of arms should only be shown in some map modes
-			if( !_CoaConstants._MapCoaEnabled )
+			if( !_CoaConstants._Enabled )
 			{
 				return;
 			}
 
-			int CountryId = SampleControllerIndex( MapCoords );
-			if( CountryId >= 0 )
+			float2 SampledIds = SampleControllerIndex( MapCoords );
+			float CountryId = SampledIds.r;
+			float Occupied = SampledIds.g;
+			float Controlled = 1.0 - Occupied;
+			if( CountryId >= 0.0 )
 			{
 				float Opacity = 1.0f;
 				#ifdef HIGH_QUALITY_SHADERS
@@ -149,102 +81,164 @@ PixelShader = {
 					float2 Pixel = ( MapCoords * _ProvinceMapSize + 0.5 );
 					float2 FracCoord = frac( Pixel );
 					Pixel = floor( Pixel ) / _ProvinceMapSize - Texel * 0.5f;
-					float C00 = 1.0f - saturate( abs( CountryId - SampleControllerIndex( Pixel ) ) );
-					float C10 = 1.0f - saturate( abs( CountryId - SampleControllerIndex( Pixel + float2( Texel.x, 0.0 ) ) ) );
-					float C01 = 1.0f - saturate( abs( CountryId - SampleControllerIndex( Pixel + float2( 0.0, Texel.y ) ) ) );
-					float C11 = 1.0f - saturate( abs( CountryId - SampleControllerIndex( Pixel + Texel ) ) );
+					float C00 = 1.0f - saturate( abs( CountryId - SampleControllerIndex( Pixel ).r ) );
+					float C10 = 1.0f - saturate( abs( CountryId - SampleControllerIndex( Pixel + float2( Texel.x, 0.0 ) ).r ) );
+					float C01 = 1.0f - saturate( abs( CountryId - SampleControllerIndex( Pixel + float2( 0.0, Texel.y ) ).r ) );
+					float C11 = 1.0f - saturate( abs( CountryId - SampleControllerIndex( Pixel + Texel ).r ) );
 					float x0 = lerp( C00, C10, FracCoord.x );
 					float x1 = lerp( C01, C11, FracCoord.x );
 					Opacity = RemapClamped( lerp( x0, x1, FracCoord.y ), 0.5f, 0.75f, 0.0f, 1.0f );
 				#endif
 
-				float4 StripeColor = PdxTex2DLoad0( CountryColors, int2( CountryId, 0 ) );
+				// Controller color
+				float3 StripeColor = PdxTex2DLoad0( CountryColors, float2( CountryId, 0.0 ) ).rgb;
 
-				Opacity *= ( _CoaConstants._MapCoaBlendOccupation * ( 1.0f - _FlatmapLerp ) ) + ( _CoaConstants._MapCoaBlendOccupationFlatmap * _FlatmapLerp );
-
+				// Opacity
+				Opacity *= ( _CoaConstants._BlendStripes * ( 1.0f - _FlatmapLerp ) ) + ( _CoaConstants._BlendStripesFlatmap * _FlatmapLerp );
 				Opacity = FadeCloseAlpha( Opacity );
 
-				float StripeScale = lerp( _CoaConstants._MapCoaStripeScale, _CoaConstants._MapCoaStripeScaleFlatmap, _FlatmapLerp );
-				Opacity *= CalculateStripeMask( MapCoords, 0.0, StripeScale );
+				// Edge Gradient
+				float4 ControllerColor = PdxTex2DLoad0( CountryColors, float2( CountryId, 0.0 ) );
+				float Gradient = PdxTex2D( HighlightGradient, MapCoords ).g;
+				Gradient = RemapClamped( Gradient, 0.0, StripesGradientEdge, 0.0, 1.0 );
+				Gradient = saturate( Gradient );
 
-				float Gradient = 1.0 - PdxTex2D( HighlightGradient, MapCoords ).g;
-				float GradientAdd = LevelsScan( Gradient, OCCUPATION_HIGHLIGHT_POSITION, OCCUPATION_HIGHLIGHT_CONTRAST );
-				float HighlightAlpha = GradientAdd * Gradient;
-				float3 HighlightColor = StripeColor.rgb * OCCUPATION_HIGHLIGHT_COLOR_MULT;
+				// Stripes
+				float StripeScale = lerp( _CoaConstants._StripeScale, _CoaConstants._StripeScaleFlatmap, _FlatmapLerp );
+				float StripeMask =  CalculateStripeMask( ParallaxCoord, 0.0, StripeScale );
+				StripeMask = smoothstep( StripeMaskMin, StripeMaskMax, StripeMask * StripeMaskMultiplier );
+				float StripeMaskEdge =  CalculateStripeMask( ParallaxCoord, 0.0, StripeScale );
+				StripeMaskEdge = smoothstep( StripeMaskEdgeMin, StripeMaskEdgeMax, StripeMaskEdge * StripeMaskMultiplier );
+				float StripeOpacity = StripeMaskEdge * Opacity;
 
-				PreLightingBlend = saturate( Opacity + PreLightingBlend + HighlightAlpha);
+				// Animated pulse
+				float Pulse = ( sin( ( ( MapCoords.x + MapCoords.y * StripePulseAngle ) * StripePulseTiling ) - GlobalTime * StripePulsePulseSpeed ) * 0.4 + 0.6 );
+				StripeColor = lerp( StripeColor, StripeColor * 2.0, Pulse * Controlled );
+				Opacity = saturate( Opacity * StripeOpacity + Gradient * Controlled * Opacity );
+				Opacity = lerp( Opacity, Opacity * StripeOccupiedTransparency, Occupied );
 
-				Color = lerp( Color, StripeColor.rgb, Opacity );
-				Color = lerp( Color, saturate( HighlightColor ), saturate( HighlightAlpha * OCCUPATION_HIGHLIGHT_STRENGTH ) * OCCUPATION_HIGHLIGHT_ALPHA );
+				// Controlled color
+				float3 OccupiedColor = lerp( StripeColor * 0.75, StripeColor, StripeMask );
+				float3 ControlledColor = StripeControlledColor * StripeControlledColorStrength;
+				ControlledColor = lerp( StripeColor, ControlledColor * 1.5, Pulse );
+				ControlledColor = lerp( ControlledColor, StripeColor, StripeMask );
+				StripeColor = lerp( OccupiedColor, ControlledColor, Controlled );
+
+				// Final Color
+				Color = lerp( Color, StripeColor, StripeOpacity );
+				Color = lerp( Color, ControllerColor, Gradient * Controlled );
+				PreLightingBlend = lerp( PreLightingBlend, 0.0, Opacity );
+				PostLightingBlend = lerp( PostLightingBlend, 1.0, Opacity );
 			}
 		}
 
-		void ApplyCoaColorBlend( float2 MapCoords, float2 ParalaxCoord, inout float3 Color, inout float PreLightingBlend )
+		void ApplyCoaColorBlend( float2 MapCoords, float2 ParallaxCoord, inout float3 Color, inout float PreLightingBlend, inout float PostLightingBlend )
 		{
 			// Coat of arms should only be shown in some map modes
-			if( !_CoaConstants._MapCoaEnabled )
+			if( !_CoaConstants._Enabled )
 			{
 				return;
 			}
 
 			// Provinces where Controller == Owner will have CountryId -1
-			int CountryId = SampleControllerIndex( MapCoords );
+			float2 SampledIds = SampleControllerIndex( MapCoords );
+			float CountryId = SampledIds.r;
+			float Occupied = SampledIds.g;
+			float Controlled = 1.0 - Occupied;
 			if( CountryId >= 0 )
 			{
+				// Wave Calculation
+				float2 WaveUvOrigin = MapCoords;
+				WaveUvOrigin.y -= 0.1;
+				float WaveX = GlobalTime * CoaWaveSpeed - length( WaveUvOrigin * CoaWaveScale );
+				float Wave = ( sin( 4.0 * sin( WaveX ) ) + 1.0 ) * 0.5;
+
+				// Coa Calculation
 				float Opacity = 1.0f;
 				#ifdef HIGH_QUALITY_SHADERS
 					float2 Texel = vec2( 1.0f ) / _ProvinceMapSize;
 					float2 Pixel = ( MapCoords * _ProvinceMapSize + 0.5 );
 					float2 FracCoord = frac( Pixel );
 					Pixel = floor( Pixel ) / _ProvinceMapSize - Texel * 0.5f;
-					float C00 = 1.0f - saturate( abs( CountryId - SampleControllerIndex( Pixel ) ) );
-					float C10 = 1.0f - saturate( abs( CountryId - SampleControllerIndex( Pixel + float2( Texel.x, 0.0 ) ) ) );
-					float C01 = 1.0f - saturate( abs( CountryId - SampleControllerIndex( Pixel + float2( 0.0, Texel.y ) ) ) );
-					float C11 = 1.0f - saturate( abs( CountryId - SampleControllerIndex( Pixel + Texel ) ) );
+					float C00 = 1.0f - saturate( abs( CountryId - SampleControllerIndex( Pixel ).r ) );
+					float C10 = 1.0f - saturate( abs( CountryId - SampleControllerIndex( Pixel + float2( Texel.x, 0.0 ) ).r ) );
+					float C01 = 1.0f - saturate( abs( CountryId - SampleControllerIndex( Pixel + float2( 0.0, Texel.y ) ).r ) );
+					float C11 = 1.0f - saturate( abs( CountryId - SampleControllerIndex( Pixel + Texel ).r ) );
 					float x0 = lerp( C00, C10, FracCoord.x );
 					float x1 = lerp( C01, C11, FracCoord.x );
 					Opacity = RemapClamped( lerp( x0, x1, FracCoord.y ), 0.5f, 0.75f, 0.0f, 1.0f );
 				#endif
+
 				float4 FlagUvs = PdxReadBuffer4( CountryCoaUvBuffer, CountryId );
-				float2 CoaSize = _FlatmapLerp < 0.5f ? float2( _CoaConstants._MapCoaSize, _CoaConstants._MapCoaSize / _CoaConstants._MapCoaAspectRatio ) : float2( _CoaConstants._MapCoaSizeFlatmap, _CoaConstants._MapCoaSizeFlatmap / _CoaConstants._MapCoaAspectRatio );
-				float2 CoaUV = ParalaxCoord * _ProvinceMapSize / CoaSize;
+				float2 CoaSize = _FlatmapLerp < 0.5f ? float2( _CoaConstants._Size, _CoaConstants._Size / _CoaConstants._AspectRatio ) : float2( _CoaConstants._SizeFlatmap, _CoaConstants._SizeFlatmap / _CoaConstants._AspectRatio );
+				float2 CoaUv = ParallaxCoord * _ProvinceMapSize / CoaSize;
+				CoaUv -= Wave * CoaWaveStrenght * Controlled;
 
 				// Rotate
-				float2 Rotation = float2( cos( _CoaConstants._MapCoaAngle ), sin( _CoaConstants._MapCoaAngle ) );
-				CoaUV.x *= _CoaConstants._MapCoaAspectRatio;
-				CoaUV = float2( CoaUV.x * Rotation.x - CoaUV.y * Rotation.y, CoaUV.x * Rotation.y + CoaUV.y * Rotation.x );
-				CoaUV.x /= _CoaConstants._MapCoaAspectRatio;
-
-				float2 CoaDdx = ddx( CoaUV );
-				float2 CoaDdy = ddy( CoaUV );
+				float2 Rotation = float2( cos( _CoaConstants._Angle ), sin( _CoaConstants._Angle ) );
+				CoaUv.x *= _CoaConstants._AspectRatio;
+				CoaUv = float2( CoaUv.x * Rotation.x - CoaUv.y * Rotation.y, CoaUv.x * Rotation.y + CoaUv.y * Rotation.x );
+				CoaUv.x /= _CoaConstants._AspectRatio;
+				float2 CoaDdx = ddx( CoaUv );
+				float2 CoaDdy = ddy( CoaUv );
 
 				// Offset rows horizontally
-				CoaUV.x += _CoaConstants._MapCoaRowOffset * int( mod( CoaUV.y, _CoaConstants._MapCoaRowCount ) );
+				CoaUv.x += _CoaConstants._RowOffset * int( mod( CoaUv.y, _CoaConstants._RowCount ) );
 
 				// Tile, flip, and scale to match the atlas
-				CoaUV = frac( CoaUV );
-				CoaUV.y = 1.0f - CoaUV.y;
-				CoaUV = FlagUvs.xy + CoaUV * FlagUvs.zw;
+				CoaUv = frac( CoaUv );
+				CoaUv.y = 1.0f - CoaUv.y;
+				float GapX = CoaGapSize * mod( CoaUv.x, 1.0 ) ;
+				float GapY = CoaGapSize * mod( CoaUv.y, 1.0 ) ;
+				CoaUv = CoaGapSize * mod( CoaUv, 1.0 );
+				CoaUv -= ( CoaGapSize - 1.0 ) * 0.5;
+				CoaUv = FlagUvs.xy + CoaUv * FlagUvs.zw;
 
 				// First blend in gradient border color on top of CoA color
 				// Then adjust the border blend value so that CoA is always shown regardless of gradient
-				float3 CoaColor = PdxTex2DGrad( CoaAtlas, CoaUV, CoaDdx, CoaDdy ).rgb;
+				float3 CoaColor = PdxTex2DGrad( CoaAtlas, CoaUv, CoaDdx, CoaDdy ).rgb;
 				CoaColor = ToLinear( CoaColor );
-
-				Opacity *= ( _CoaConstants._MapCoaBlend * ( 1.0f - _FlatmapLerp ) ) + ( _CoaConstants._MapCoaBlendFlatmap * _FlatmapLerp );
-
+				Opacity *= ( _CoaConstants._Blend * ( 1.0f - _FlatmapLerp ) ) + ( _CoaConstants._BlendFlatmap * _FlatmapLerp );
 				Opacity = FadeCloseAlpha( Opacity );
 
-				PreLightingBlend = max( Opacity, PreLightingBlend );
+				// Country inner edge color
+				float OccupationOpacity = 0.90;
+				float4 ControllerColor = PdxTex2DLoad0( CountryColors, float2( CountryId, 0.0 ) );
+				Color = lerp( Color, ControllerColor, Controlled );
+				Opacity = lerp( Opacity * OccupationOpacity, Opacity, Controlled );
 
-				// Occupation highlight
-				float Gradient = 1.0 - PdxTex2D( HighlightGradient, MapCoords ).g;
-				float GradientAdd = LevelsScan( Gradient, OCCUPATION_HIGHLIGHT_POSITION, OCCUPATION_HIGHLIGHT_CONTRAST );
-				float HighlightAlpha = Opacity * GradientAdd * Gradient;
-				float3 HighlightColor = Color * OCCUPATION_HIGHLIGHT_COLOR_MULT;
+				// Edge Gradient
+				float Gradient = PdxTex2D( HighlightGradient, MapCoords ).g;
+				Gradient = RemapClamped( Gradient, 0.0, CoaGradientEdge, 0.0, 1.0 );
+				Gradient = saturate( Gradient );
+				Opacity = lerp( Opacity, 0.0, Gradient );
 
-				Color = lerp( Color, saturate( CoaColor ), Opacity );
-				Color = lerp( Color, saturate( HighlightColor ), saturate( HighlightAlpha * OCCUPATION_HIGHLIGHT_STRENGTH ) * OCCUPATION_HIGHLIGHT_ALPHA );
+				// Gap Color
+				float3 GapColor = vec3( 0.025 );
+				float3 ControlledGapColor = ToLinear( CoaControlledColor );
+				float Gap = saturate( 1.0 - ( step( GapX, 1.0 ) * step( GapY, 1.0 ) ) );
+				GapColor = lerp( GapColor, ControlledGapColor, Controlled );
+				float GapXLerp = smoothstep( 1.0 - CoaGapBlend, 1.0, GapX - ( CoaGapSize - 1.0 ) * 0.5 );
+				float GapYLerp = smoothstep( 1.0 - CoaGapBlend, 1.0, GapY - ( CoaGapSize - 1.0 ) * 0.5 );
+				GapXLerp += smoothstep( CoaGapBlend, 0.0, GapX - ( CoaGapSize - 1.0 ) * 0.5 );
+				GapYLerp += smoothstep( CoaGapBlend, 0.0, GapY - ( CoaGapSize - 1.0 ) * 0.5 );
+				float GapLerp = saturate( GapXLerp + GapYLerp );
+				CoaColor = lerp( CoaColor, ControllerColor.rgb * 0.5, GapLerp * Occupied );
+
+				// Wave light and texture
+				float2 TextureUv = ParallaxCoord * _ProvinceMapSize / CoaSize;
+				TextureUv = lerp( TextureUv, TextureUv * CoaClothSizeFlatmap, _FlatmapLerp );
+				TextureUv -= Wave * CoaWaveStrenght * Controlled;
+				float3 ClothTexture = PdxTex2D( FlagDiffuse, TextureUv ).r * 4.0;
+				CoaColor = Overlay( CoaColor, ClothTexture, 3.0 );
+
+				Color = lerp( Color, CoaColor, Opacity );
+				Color = lerp( Color, Overlay( GapColor, ClothTexture, 1.0 ) * 5.0 * ( Wave * 0.5 + 0.5 ), GapLerp * Controlled );
+				Color = lerp( Color, Color * Wave * CoaWaveHighlight, CoaWaveShadow * Controlled * ( 1.0 - Gradient ) );
+
+				// Country inner edge color
+				PreLightingBlend = lerp( PreLightingBlend, 0.0, Opacity );
+				PostLightingBlend = lerp( PostLightingBlend, 1.0, Opacity );
 			}
  		}
 
@@ -259,9 +253,10 @@ PixelShader = {
 		{
 			// Paralx Coord
 			float3 ToCam = normalize( CameraPosition - WorldSpacePos );
-			float ParalaxDist = ( _ImpassableTerrainHeight - WorldSpacePos.y ) / ToCam.y;
-			float3 ParalaxCoord = WorldSpacePos + ToCam * ParalaxDist;
-			ParalaxCoord.xz = ParalaxCoord.xz * _WorldSpaceToTerrain0To1;
+			float ParalaxDist = ( _ParallaxHeight - WorldSpacePos.y ) / ToCam.y;
+			ParalaxDist = lerp ( ParalaxDist, 0.0, _FlatmapLerp );
+			float3 ParallaxCoord = WorldSpacePos + ToCam * ParalaxDist;
+			ParallaxCoord.xz = ParallaxCoord.xz * _WorldSpaceToTerrain0To1;
 
 			// Gradient border values
 			float DistanceFieldValue = CalcDistanceFieldValue( ColorMapCoords );
@@ -277,12 +272,7 @@ PixelShader = {
 			float4 SecondaryColor = BilinearColorSampleAtOffset( ColorMapCoords, IndirectionMapSize, InvIndirectionMapSize, ProvinceColorIndirectionTexture, ProvinceColorTexture, SecondaryProvinceColorsOffset );
 			float4 AlternateColor = BilinearColorSampleAtOffset( ColorMapCoords, IndirectionMapSize, InvIndirectionMapSize, ProvinceColorIndirectionTexture, ProvinceColorTexture, AlternateProvinceColorsOffset );
 
-			// Land/Ocean/Lake masks
-			float LandMask = PdxTex2DLod0( LandMaskMap, float2( ColorMapCoords.x, 1.0f - ColorMapCoords.y ) ).r;
-			float EndLandMask = 0.0f;
-			float ShoreLinesStripes = 0.0f;
-
-			// Primary as texture or color
+			// Primary as color or texture
 			if ( !_UseMapmodeTextures )
 			{
 				// Get color
@@ -300,7 +290,7 @@ PixelShader = {
 				ProvinceOverlayColorWithAlpha = lerp( ProvinceOverlayColorWithAlpha, DecentralizedColor, DecentralizedMask );
 
 				// Apply impassable terrain color
-				float4 ImpassableDiffuse = float4( PdxTex2D( ImpassableTerrainTexture, float2( ParalaxCoord.x * 2.0f, 1.0f - ParalaxCoord.z ) * _ImpassableTerrainTiling ).rgb,  AlternateColor.r );
+				float4 ImpassableDiffuse = float4( PdxTex2D( ImpassableTerrainTexture, float2( ParallaxCoord.x * 2.0f, 1.0f - ParallaxCoord.z ) * _ImpassableTerrainTiling ).rgb,  AlternateColor.r );
 				ImpassableDiffuse.rgb = Lighten( ImpassableDiffuse.rgb, _ImpassableTerrainColor.rgb );
 				float ImpassableMask = ImpassableDiffuse.a * _ImpassableTerrainColor.a * ( 1.0f - _FlatmapLerp );
 
@@ -321,7 +311,7 @@ PixelShader = {
 			else
 			{
 				float2 MapTextureUvSize = _FlatmapLerp < 0.5f ? _MapPaintingTextureTiling : _MapPaintingFlatmapTextureTiling;
-				float2 MapTextureUv = float2( ParalaxCoord.x * 2.0f, 1.0f - ParalaxCoord.z ) * MapTextureUvSize;
+				float2 MapTextureUv = float2( ParallaxCoord.x * 2.0f, 1.0f - ParallaxCoord.z ) * MapTextureUvSize;
 
 				// Offset rows horizontally
 				MapTextureUv.x += MAPMODE_UV_ROW_OFFSET * int( mod( MapTextureUv.y, MAPMODE_UV_ROW_COUNT ) );
@@ -376,13 +366,21 @@ PixelShader = {
 				#endif
 			#endif
 
-			if ( _UseStripeOccupation == true )
+			if( _CoaConstants._Enabled )
 			{
-				ApplyStripeColorBlend( ColorMapCoords, ParalaxCoord.xz, ColorOverlay, PreLightingBlend );
+				if ( _UseStripeOccupation == true )
+				{
+					ApplyStripeColorBlend( ColorMapCoords, ParallaxCoord.xz, ColorOverlay, PreLightingBlend, PostLightingBlend );
+				}
+				else
+				{
+					ApplyCoaColorBlend( ColorMapCoords, ParallaxCoord.xz, ColorOverlay, PreLightingBlend, PostLightingBlend );
+				}
 			}
-			else
+
+			if ( _EnableMapPowerBloc == true )
 			{
-				ApplyCoaColorBlend( ColorMapCoords, ParalaxCoord.xz, ColorOverlay, PreLightingBlend );
+				ApplyPowerBlocOverlay( ColorOverlay, ProvinceOverlayColorWithAlpha.a, ColorMapCoords, WorldSpacePos.xz );
 			}
 
 			PreLightingBlend *= _OverlayOpacity;

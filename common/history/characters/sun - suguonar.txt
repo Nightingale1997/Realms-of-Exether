@@ -1,6 +1,7 @@
 ﻿CHARACTERS = {
 	c:SUN = {
 		create_character = {
+<<<<<<< HEAD:common/history/characters/sun - suguonar.txt
 			first_name = "Tewfik"
 			last_name = "Konushevci"
 			historical = yes
@@ -12,13 +13,24 @@
 				persistent
 			}
 		}
+=======
+			template = ZUL_dingane
+		}	
+
+>>>>>>> f55cedb6 (1.7):common/history/characters/zul - zulu.txt
 		create_character = {
 			first_name = "Izet"
 			last_name = "Konushevci"
 			historical = yes
 			heir = yes
+<<<<<<< HEAD:common/history/characters/sun - suguonar.txt
 			age = 8
 			interest_group = ig_landowners
+=======
+			age = 38
+			dna = dna_mpande
+			interest_group = ig_armed_forces
+>>>>>>> f55cedb6 (1.7):common/history/characters/zul - zulu.txt
 			ideology = ideology_traditionalist
 			traits = {
 				trait_child

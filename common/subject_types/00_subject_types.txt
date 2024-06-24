@@ -11,12 +11,13 @@
 	overlord_must_be_same_country_type = no
 	use_for_release_country = no
 	gives_prestige_to_overlord = yes
-	subservient_to_overlord = yes
 	can_offer_to_become_in_sway_offers = yes
-	convoy_contribution = 0.5
 		
 	diplomatic_action = protectorate
 	
+    autonomy_level = 3
+    category = same_as_puppet
+
 	lower_autonomy_subject_type_alternatives = {
 		subject_type_dominion
 	}
@@ -70,11 +71,12 @@ subject_type_puppet = {
 	overlord_must_be_same_country_type = no
 	use_for_release_country = yes
 	gives_prestige_to_overlord = yes
-	subservient_to_overlord = yes
-	convoy_contribution = 0.75
 	
 	diplomatic_action = puppet
 	
+    autonomy_level = 1
+    category = same_as_puppet
+
 	higher_autonomy_subject_type_alternatives = {
 		subject_type_dominion
 	}
@@ -128,12 +130,13 @@ subject_type_tributary = {
 	overlord_must_be_same_country_type = no
 	use_for_release_country = no
 	gives_prestige_to_overlord = yes
-	subservient_to_overlord = yes
 	can_offer_to_become_in_sway_offers = yes
-	convoy_contribution = 0.5
 	
 	diplomatic_action = tributary
 	
+    autonomy_level = 3
+    category = same_as_vassal
+
 	lower_autonomy_subject_type_alternatives = {
 		subject_type_vassal
 	}
@@ -185,10 +188,11 @@ subject_type_vassal = {
 	overlord_must_be_same_country_type = no
 	use_for_release_country = yes
 	gives_prestige_to_overlord = yes
-	subservient_to_overlord = yes
-	convoy_contribution = 0.5
 		
 	diplomatic_action = vassal
+
+	autonomy_level = 1
+	category = same_as_vassal
 
 	higher_autonomy_subject_type_alternatives = {
 		subject_type_tributary
@@ -241,11 +245,12 @@ subject_type_dominion = {
 	overlord_must_be_same_country_type = no
 	use_for_release_country = no
 	gives_prestige_to_overlord = yes
-	subservient_to_overlord = yes
-	convoy_contribution = 0.75
 	
 	diplomatic_action = dominion
 	
+	autonomy_level = 2
+	category = same_as_personal_union
+
 	higher_autonomy_subject_type_alternatives = {
 		subject_type_protectorate
 	}
@@ -302,12 +307,13 @@ subject_type_personal_union = {
 	overlord_must_be_same_country_type = no
 	use_for_release_country = no
 	gives_prestige_to_overlord = yes
-	subservient_to_overlord = yes
 	can_target_with_transfer_wargoal = no
-	convoy_contribution = 0.5
 	can_be_used_in_sway_offers = no
 	
 	diplomatic_action = personal_union
+
+	autonomy_level = 2
+	category = same_as_personal_union
 
 	higher_autonomy_subject_type_alternatives = {
 		subject_type_protectorate
@@ -360,6 +366,7 @@ subject_type_personal_union = {
 		value = 1.1
 	}
 }
+<<<<<<< HEAD
 
 subject_type_customs_union = {
 	allow_change_country_flag = no
@@ -471,3 +478,5 @@ subject_type_subsidiary = {
 		value = 1.25
 	}
 }
+=======
+>>>>>>> f55cedb6 (1.7)
