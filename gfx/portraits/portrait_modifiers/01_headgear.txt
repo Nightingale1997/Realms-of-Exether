@@ -257,7 +257,8 @@
                 has_dlc_feature = ep1_cosmetics
 
                 scope:character ?= {
-                    has_template = PER_reza_pahlavi
+                    always = no
+                    #has_template = PER_reza_pahlavi
                 }
             }
         }
@@ -282,7 +283,8 @@
 
                 scope:character ?= {
                     age > 12
-                    has_template = per_nasir_al_din_qajar_template
+                    always = no
+                    #has_template = per_nasir_al_din_qajar_template
                     is_ruler = yes
                 }
             }
@@ -556,7 +558,7 @@
                 add = 100
                 OR = {
                     AND = {
-                        c:USA ?= {
+                        c:VAI ?= {
                             has_technology_researched = rifling
                             NOT = { has_technology_researched = bolt_action_rifles }
                         }
@@ -1686,7 +1688,8 @@
                             }
                             is_ruler = no
                         }
-                        has_template = usa_lincoln_character_template
+                        always = no
+                    #has_template = usa_lincoln_character_template
                     }
                 }
             }
@@ -2009,7 +2012,7 @@
                     is_ruler = yes
                     is_female = no
                     OR = {
-                        has_culture = cu:amanzi
+                        has_culture = cu:zemvelo
                     }
                 }
             }
@@ -2489,8 +2492,9 @@
                 exists = scope:character
 
                 scope:character ?= {
-                    religion = rel:catholic
-                    NOT = { has_template = FRA_francois-rene_de_chateaubriand }
+                    religion = {
+                        has_discrimination_trait = uriks_pantheon
+                    }
                     OR = {
                         AND = {
                             politician_clothes_trigger = yes 
@@ -2524,7 +2528,7 @@
 
                 scope:pop ?= {
                     is_pop_type = clergymen
-                    religion = rel:catholic
+                    religion = { has_discrimination_trait = uriks_pantheon }
                 }
             }
         }

@@ -154,7 +154,11 @@
                 add = 100
                 
                 scope:pop ?= {
-                    culture = cu:persian
+                    OR = {
+                        culture = cu:thiralian
+                        culture = cu:astreval
+                    }
+                    
                 }
             }
         }

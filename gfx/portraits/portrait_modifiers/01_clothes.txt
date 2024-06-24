@@ -530,7 +530,6 @@
     }
 
 
-
 ### END OF AGITATORS. ###
 
 ## HISTORICAL CHARACTER SCRIPTED CLOTHING ###
@@ -1580,6 +1579,8 @@
         }
     }
 
+
+
     naser_qajar_clothes = {
         dna_modifiers = {
             accessory = {
@@ -1920,9 +1921,6 @@
                             scope:character ?= {
                                 OR = {
                                     culture = {
-                                        has_discrimination_trait = hasalian
-                                    }
-                                    culture = {
                                         has_discrimination_trait = halfling_heritage
                                     }
                                 }
@@ -1969,9 +1967,7 @@
                     european_clothes_trigger = yes
                     scope:character ?= {
                         OR = {
-                            culture = {
-                                has_discrimination_trait = hasalian
-                            }
+
                             culture = {
                                 has_discrimination_trait = halfling_heritage
                             }
@@ -2021,9 +2017,7 @@
                             exists = scope:character
                             scope:character ?= {
                                 OR = {
-                                    culture = {
-                                        has_discrimination_trait = hasalian
-                                    }
+
                                     culture = {
                                         has_discrimination_trait = halfling_heritage
                                     }
@@ -2111,9 +2105,7 @@
                             exists = scope:character
                             scope:character ?= {
                                 OR = {
-                                    culture = {
-                                        has_discrimination_trait = hasalian
-                                    }
+
                                     culture = {
                                         has_discrimination_trait = halfling_heritage
                                     }
@@ -2240,15 +2232,6 @@
                 french_empire_clothes_trigger = no
                 OR = {
                     european_clothes_trigger = yes
-                    AND = {
-                        exists = scope:character
-                        scope:character = {
-                            OR = {
-                                culture = cu:cherokee
-                                culture = cu:muskogean
-                            }
-                        }
-                    }
                     african_diaspora_clothes_trigger = yes
                 }
                 OR = {
@@ -2326,12 +2309,6 @@
 
                 OR = {
                     european_clothes_trigger = yes
-                    scope:character ?= {
-                        OR = {
-                            culture = cu:cherokee
-                            culture = cu:muskogean
-                        }
-                    }
                     african_diaspora_clothes_trigger = yes
                 }
                 scope:character = {
@@ -2400,12 +2377,6 @@
 
                 OR = {
                     european_clothes_trigger = yes
-                    scope:character ?= {
-                        OR = {
-                            culture = cu:cherokee
-                            culture = cu:muskogean
-                        }
-                    }
                     african_diaspora_clothes_trigger = yes
                 }
                 scope:character = {
@@ -3050,10 +3021,9 @@
             modifier = {
                 add = 10000
 
-                exists = c:EGY
                 scope:pop ?= {
-                    owner ?= {
-                        c:EGY = this
+                    culture = {
+                        has_discrimination_trait = thalorian_culture_group
                     }
                 }
                 OR = {
@@ -3069,11 +3039,11 @@
 
                 NOT = { has_dlc_feature = ep1_cosmetics }
 
-                exists = c:EGY
+
                 scope:character ?= {
                     is_female = no
-                    owner ?= {
-                        c:EGY = this
+                    culture = {
+                        has_discrimination_trait = thalorian_culture_group
                     }
                     OR = {
                         has_role = general
@@ -3109,11 +3079,10 @@
 
                 has_dlc_feature = ep1_cosmetics
 
-                exists = c:EGY
                 scope:character ?= {
                     is_female = no
-                    owner ?= {
-                        c:EGY = this
+                    culture = {
+                        has_discrimination_trait = thalorian_culture_group
                     }
                     OR = {
                         has_role = general
@@ -3126,6 +3095,7 @@
             }
         }
     }
+
 
     russian_military_clothes = {
         dna_modifiers = {
@@ -3210,8 +3180,9 @@
 
                 scope:character ?= {
                     age >= define:NCharacters|ADULT_AGE
-                    culture = {
-                        has_discrimination_trait = caucasus_group
+                    OR = {
+                        religion = rel:horse_worship
+                        culture = cu:yanger
                     }
                 }
                 OR = {
@@ -3236,29 +3207,9 @@
                 scope:pop ?= {
                     OR = {
                         AND = {
-                            culture = {
-                                has_discrimination_trait = caucasus_group
-                            }
                             OR = {
-                                is_pop_type = soldiers
-                                is_pop_type = officers
-                                is_pop_type = farmers
-                            }
-                        }
-                        AND = {
-                            culture = {
-                                has_discrimination_trait = east_slavic
-                            }
-                            state = {
-                                OR = {
-                                    state_region = s:STATE_KUBAN
-                                    state_region = s:STATE_STAVROPOL
-                                    state_region = s:STATE_DAGESTAN
-                                    state_region = s:STATE_NORTH_CAUCASUS
-                                    state_region = s:STATE_ROSTOV
-                                    state_region = s:STATE_KALMYKIA
-                                    state_region = s:STATE_ASTRAKHAN
-                                }
+                                religion = rel:horse_worship
+                                culture = cu:yanger
                             }
                             OR = {
                                 is_pop_type = soldiers
@@ -3276,11 +3227,13 @@
 
                 scope:character ?= {
                     age >= define:NCharacters|ADULT_AGE
-                    culture = {
-                        has_discrimination_trait = east_slavic
+                    OR = {
+                        religion = rel:horse_worship
+                        culture = cu:yanger
                     }
+                    
                     owner ?= {
-                        c:RUS ?= this
+                        c:DUM ?= this
                     }
                     is_ruler = no
                     is_heir = no
@@ -3548,7 +3501,7 @@
         }
     }
 
-        japanese_officers_clothes = {
+    japanese_officers_clothes = {
         dna_modifiers = {
             accessory = {
                 mode = add
@@ -3636,15 +3589,6 @@
                 AND = {
                     OR = {
                         european_clothes_trigger = yes
-                        AND = {
-                            exists = scope:character
-                            scope:character = {
-                                OR = {
-                                    culture = cu:cherokee
-                                    culture = cu:muskogean
-                                }
-                            }
-                        }
                         african_diaspora_clothes_trigger = yes
                     }
                     politician_clothes_trigger = yes
@@ -3708,15 +3652,6 @@
                 AND = {
                     OR = {
                         european_clothes_trigger = yes
-                        AND = {
-                            exists = scope:character
-                            scope:character ?= {
-                                OR = {
-                                    culture = cu:qinnaat
-                                    culture = cu:azmaraan
-                                }
-                            }
-                        }
                         african_diaspora_clothes_trigger = yes
                     }
                     politician_clothes_trigger = yes
@@ -4170,7 +4105,7 @@
                     scope:character ?= {
                         age > 10
                         culture = {
-                            has_discrimination_trait = hasalian
+                            has_discrimination_trait = ogre_heritage
                         }
                     }
                     OR = {
@@ -4230,30 +4165,6 @@
                     }
                 }
 
-                }
-           }
-        }
-    }
-arabic_clothes = {
-    dna_modifiers = {
-        accessory = {
-            mode = add
-            gene = outfits
-            template = arabic_outfits
-            range = { 0 1 } # For the randomness to work correctly
-        }
-    }
-    weight = {
-        base = 0
-        modifier = {
-            add = 100
-            agitator_character_trigger = no
-            OR = {
-                arabic_clothes_trigger = yes
-                scope:character ?= {
-                    culture = {
-                        has_discrimination_trait = qiin_culture_group
-                    }
                 }
            }
         }
@@ -4399,6 +4310,7 @@ arabic_clothes = {
             }
         }
     }
+
     indian_royal_clothes = {
         dna_modifiers = {
             accessory = {
@@ -4423,7 +4335,7 @@ arabic_clothes = {
                 template = indian_necklaces
                 range = { 0 1 } # For the randomness to work correctly
             }
-
+        
     }
     weight = {
         base = 0
@@ -4450,7 +4362,7 @@ arabic_clothes = {
                     }
                 }
             }
-
+            }
         }
     }
 
@@ -4635,7 +4547,7 @@ arabic_clothes = {
             }
         }
     }
-
+    
     circumpolar_clothes = {
         dna_modifiers = {
             accessory = {
@@ -4806,6 +4718,7 @@ indigenous_oceanic_high_clothes_recognized = {
                             upper_clothes_pop_trigger = yes
                             middle_clothes_pop_trigger = no
                             officers_clothes_pop_trigger = no
+                            armed_forces_clothes_trigger = no
                             scope:pop ?= {
                                 culture = {
                                     has_discrimination_trait = hasalian
@@ -4821,6 +4734,7 @@ indigenous_oceanic_high_clothes_recognized = {
                 recognized_country_pop_trigger = yes
             }
         }
+    }
     }
 
     south_american_clothes = {
@@ -5317,13 +5231,6 @@ indigenous_oceanic_high_clothes_recognized = {
                         middle_clothes_pop_trigger = yes
                     }
                     AND = {
-                        exists = scope:pop
-                        scope:pop = { 
-                            OR = {
-                                culture = cu:qinnaat 
-                                culture = cu:azmaraan
-                            }
-                        }
                         OR = {
                             middle_clothes_pop_trigger = yes
                             upper_clothes_pop_trigger = yes
@@ -5712,10 +5619,7 @@ indigenous_oceanic_high_clothes_recognized = {
                 AND = {
                     scope:character ?= {
                         age >= define:NCharacters|ADULT_AGE
-                        culture = cu:japanese
-                        owner ?= {
-                            has_variable = meiji_restoration_complete
-                        }
+                        culture = cu:jazamandroso
                     }
                     OR = {
                         military_clothes_trigger = yes
@@ -5806,12 +5710,13 @@ indigenous_oceanic_high_clothes_recognized = {
             modifier = {
                 add = 10000
                 AND = {
+                    recognized_country_trigger = yes
                     scope:character ?= {
                         age >= define:NCharacters|ADULT_AGE
-                        culture = cu:korean
-                        owner ?= {
-                            has_variable = KOR_korean_empire_declared
+                        culture = {
+                            has_discrimination_trait = ogre_heritage
                         }
+                       
                     }
                     OR = {
                         military_clothes_trigger = yes
@@ -5854,10 +5759,10 @@ indigenous_oceanic_high_clothes_recognized = {
             modifier = {
                 add = 10000
                 AND = {
+                    recognized_country_trigger = yes
                     scope:pop ?= {
-                        culture = cu:korean
-                        owner ?= {
-                            has_variable = KOR_korean_empire_declared
+                        culture = {
+                            has_discrimination_trait = ogre_heritage
                         }
                     }
                     OR = {
@@ -6271,12 +6176,6 @@ indigenous_oceanic_high_clothes_recognized = {
             add = 1000
                 AND = {
                     native_american_clothes_pop_trigger = yes
-                    scope:pop = { 
-                        NOR = { 
-                            culture = cu:qinnaat 
-                            culture = cu:azmaraan
-                        } 
-                    }
                     OR = {
                         middle_clothes_pop_trigger = yes
                         upper_clothes_pop_trigger = yes
@@ -6351,11 +6250,6 @@ indigenous_oceanic_high_clothes_recognized = {
                 }
                 scope:character ?= {
                     is_female = no
-                    NOR = { 
-                        culture = cu:glethach 
-                        culture = cu:qinnaat
-                        culture = cu:azmaraan
-                    }
                 }
             }
         }
@@ -6411,13 +6305,6 @@ indigenous_oceanic_high_clothes_recognized = {
                 native_american_clothes_trigger = yes
                 scope:character ?= {
                     is_ruler = no
-                    NOT = { 
-                        OR = {
-                            culture = cu:glethach
-                            culture = cu:qinnaat
-                            culture = cu:azmaraan
-                        }
-                    }
                 }
             }
         }
@@ -6445,12 +6332,16 @@ christian_religious_clothes = {
                 christian_clothes_pop_trigger = yes
                 NOT = {
                     scope:pop ?= {
-                        religion = rel:cult_of_the_sun
+                        religion = {
+                            has_discrimination_trait = uriks_pantheon
+                        }
                     }
                 }
                 clergy_clothes_pop_trigger = yes
             }
-        } 
+        }
+    }
+} 
 
 semitic_religious_clothes = {
     dna_modifiers = {
@@ -6520,6 +6411,8 @@ buddhist_religious_clothes = {
         }
     }
 
+}
+
 
 slavik_kokoshnik_clothes = {
     dna_modifiers = {
@@ -6562,6 +6455,7 @@ slavik_kokoshnik_clothes = {
             }
         }
     }
+}
 
     hindu_diwali_clothes = {
         dna_modifiers = {
@@ -6597,6 +6491,7 @@ slavik_kokoshnik_clothes = {
             }
         }
     }
+}
 
 midsummer_clothes = {
     dna_modifiers = {
@@ -6606,6 +6501,7 @@ midsummer_clothes = {
            template = female_outfit_midsummer
            range = { 1 1 }
         }
+    }
 
     weight = {
         base = 0
@@ -6649,10 +6545,11 @@ midsummer_clothes = {
                     }
                 }
             }
-
+        }
         }
     }
 
+    
     pierrot_clothing = {
         dna_modifiers = {
            accessory = {
@@ -6687,6 +6584,7 @@ midsummer_clothes = {
 
         }
     }
+}
 
     gaucho_clothes = {
         dna_modifiers = {
@@ -6843,12 +6741,21 @@ midsummer_clothes = {
                 add = 10000
 
                 scope:character ?= {
-                    exists = owner
-                    exists = c:TUR
-                    owner ?= {
-                        c:TUR = this
+                    culture = {
+                        has_discrimination_trait = hasalian
                     }
-                    monarchy_clothes_trigger = yes
+                    OR = {
+                        military_clothes_trigger = yes
+                        monarchy_clothes_trigger = yes
+                        AND = {
+                            armed_forces_clothes_trigger = yes
+                            politician_clothes_trigger = yes
+                        }
+                        AND = {
+                            ruler_clothes_trigger = yes
+                            armed_forces_clothes_trigger = yes
+                        }
+                    } 
                     is_female = no
                 }
             }
@@ -6888,13 +6795,12 @@ midsummer_clothes = {
                 add = 10000
                 OR = {
                     AND = {
-                        exists = c:TUR
                         scope:character ?= {
                             age >= define:NCharacters|ADULT_AGE
                             is_ruler = no
-                            owner ?= {
-                                c:TUR = this
-                            }
+                            culture = {
+                                has_discrimination_trait = hasalian
+                              }
                         }
                         OR = {
                             military_clothes_trigger = yes
@@ -6905,11 +6811,11 @@ midsummer_clothes = {
                         }   
                     }
                     AND = {
-                        exists = c:TUR
+                        
                         scope:pop ?= {
-                            owner ?= {
-                                c:TUR = this
-                            }
+                          culture = {
+                            has_discrimination_trait = hasalian
+                          }
                         }
                         officers_clothes_pop_trigger = yes
                     }
@@ -6976,7 +6882,6 @@ midsummer_clothes = {
             }
         }
     }
-}
 
 ottoman_sultan_clothes = {
     dna_modifiers = {

@@ -318,57 +318,25 @@
         weight = {
             base = 0
             modifier = {
-                add = 90000
-                scope:character ?= {
-                    has_template = fra_napoleon_iii_character_template
-                    monarchy_clothes_trigger = yes
-                }
-            }
-            modifier = {
                 add = 10000
 
-                c:PER ?= {
-                    NOT = { has_technology_researched = bolt_action_rifles }
-                }
 
                 scope:character ?= {
-                    OR = {
-                        AND = {
-                            exists = c:PER
-                            home_country ?= c:PER
-                        } 
+                    culture = {
+                        has_discrimination_trait = hasalian
                     }
-                    is_ruler = no
                     OR = {
-                        has_role = general
+                        military_clothes_trigger = yes
+                        monarchy_clothes_trigger = yes
                         AND = {
-                            has_role = politician
-                            is_interest_group_type = ig_armed_forces
+                            armed_forces_clothes_trigger = yes
+                            politician_clothes_trigger = yes
                         }
-                    }
-                }
-            }
-            modifier = {
-                add = 10000
-
-                scope:character ?= {
-                    exists = owner
-                    exists = c:TUR
-                    owner ?= {
-                        c:TUR = this
-                    }
-                    monarchy_clothes_trigger = yes
-                    is_female = no
-                }
-            }
-            modifier = {
-                add = 90000
-                scope:character ?= {
-                    has_template = usa_emperor_norton_character_template
-                    NOR = {
-                        has_role = general
-                        has_role = admiral
-                    }
+                        AND = {
+                            ruler_clothes_trigger = yes
+                            armed_forces_clothes_trigger = yes
+                        }
+                    } 
                 }
             }
         }
@@ -469,12 +437,12 @@
             modifier = { # I am forcing American generals to wear commander accessories
                 add = 90000
 
-                c:USA ?= {
+                c:VAI ?= {
                     NOT = { has_technology_researched = bolt_action_rifles }
                 }
 
                 scope:character ?= {
-                    owner ?= c:USA
+                    owner ?= c:VAI
                     has_role = general
                     is_ruler = no
                 }
@@ -508,11 +476,10 @@
             modifier = {
                 add = 10000
 
-                exists = c:EGY
                 scope:character ?= {
                     is_female = no
-                    owner ?= {
-                        c:EGY = this
+                    culture = {
+                        has_discrimination_trait = thalorian_culture_group
                     }
                     OR = {
                         has_role = general
@@ -612,13 +579,6 @@
                 monarchy_clothes_trigger = yes
                 OR = {
                     european_clothes_trigger = yes
-                    scope:character ?= {
-                        OR = {
-                            culture = cu:malagasy
-                            culture = cu:cherokee
-                            culture = cu:muskogean
-                        }
-                    }
                     african_diaspora_clothes_trigger = yes
                 }
                 scope:character ?= {
@@ -846,15 +806,6 @@
 
                 OR = {
                     european_clothes_trigger = yes
-                    AND = {
-                        exists = scope:character
-                        scope:character = {
-                            OR = {
-                                culture = cu:cherokee
-                                culture = cu:muskogean
-                            }
-                        }
-                    }
                     african_diaspora_clothes_trigger = yes
                 }
 
@@ -876,13 +827,6 @@
                 monarchy_clothes_trigger = yes
                 OR = {
                     european_clothes_trigger = yes
-                    scope:character ?= {
-                        OR = {
-                            culture = cu:malagasy
-                            culture = cu:cherokee
-                            culture = cu:muskogean
-                        }
-                    }
                     african_diaspora_clothes_trigger = yes
                 }
             }
@@ -893,15 +837,6 @@
 
                 OR = {
                     european_clothes_trigger = yes
-                    AND = {
-                        exists = scope:character
-                        scope:character = {
-                            OR = {
-                                culture = cu:cherokee
-                                culture = cu:muskogean
-                            }
-                        }
-                    }
                     african_diaspora_clothes_trigger = yes
                 }
 
@@ -983,13 +918,6 @@
                 monarchy_clothes_trigger = yes
                 OR = {
                     european_clothes_trigger = yes
-                    scope:character ?= {
-                        OR = {
-                            culture = cu:malagasy
-                            culture = cu:cherokee
-                            culture = cu:muskogean
-                        }
-                    }
                     african_diaspora_clothes_trigger = yes
                 }
             }
@@ -1036,13 +964,6 @@
                 monarchy_clothes_trigger = yes
                 OR = {
                     european_clothes_trigger = yes
-                    scope:character ?= {
-                        OR = {
-                            culture = cu:malagasy
-                            culture = cu:cherokee
-                            culture = cu:muskogean
-                        }
-                    }
                     african_diaspora_clothes_trigger = yes
                 }
             }
@@ -1097,13 +1018,6 @@
                 monarchy_clothes_trigger = yes
                 OR = {
                     european_clothes_trigger = yes
-                    scope:character ?= {
-                        OR = {
-                            culture = cu:malagasy
-                            culture = cu:cherokee
-                            culture = cu:muskogean
-                        }
-                    }
                     african_diaspora_clothes_trigger = yes
                 }
             }
@@ -1150,13 +1064,6 @@
                 monarchy_clothes_trigger = yes
                 OR = {
                     european_clothes_trigger = yes
-                    scope:character ?= {
-                        OR = {
-                            culture = cu:malagasy
-                            culture = cu:cherokee
-                            culture = cu:muskogean
-                        }
-                    }
                     african_diaspora_clothes_trigger = yes
                 }
             }
@@ -1211,13 +1118,6 @@
                 monarchy_clothes_trigger = yes
                 OR = {
                     european_clothes_trigger = yes
-                    scope:character ?= {
-                        OR = {
-                            culture = cu:malagasy
-                            culture = cu:cherokee
-                            culture = cu:muskogean
-                        }
-                    }
                     african_diaspora_clothes_trigger = yes
                 }
             }
@@ -1264,13 +1164,6 @@
                 monarchy_clothes_trigger = yes
                 OR = {
                     european_clothes_trigger = yes
-                    scope:character ?= {
-                        OR = {
-                            culture = cu:malagasy
-                            culture = cu:cherokee
-                            culture = cu:muskogean
-                        }
-                    }
                     african_diaspora_clothes_trigger = yes
                 }
             }
@@ -1324,13 +1217,6 @@
                 monarchy_clothes_trigger = yes
                 OR = {
                     european_clothes_trigger = yes
-                    scope:character ?= {
-                        OR = {
-                            culture = cu:malagasy
-                            culture = cu:cherokee
-                            culture = cu:muskogean
-                        }
-                    }
                     african_diaspora_clothes_trigger = yes
                 }
             }
@@ -1376,13 +1262,6 @@
                 monarchy_clothes_trigger = yes
                 OR = {
                     european_clothes_trigger = yes
-                    scope:character ?= {
-                        OR = {
-                            culture = cu:malagasy
-                            culture = cu:cherokee
-                            culture = cu:muskogean
-                        }
-                    }
                     african_diaspora_clothes_trigger = yes
                 }
             }
@@ -1436,13 +1315,6 @@
                 monarchy_clothes_trigger = yes
                 OR = {
                     european_clothes_trigger = yes
-                    scope:character ?= {
-                        OR = {
-                            culture = cu:malagasy
-                            culture = cu:cherokee
-                            culture = cu:muskogean
-                        }
-                    }
                     african_diaspora_clothes_trigger = yes
                 }
             }
@@ -1860,15 +1732,6 @@
                     is_ruler = yes
                     OR = {
                         european_clothes_trigger = yes
-                        AND = {
-                            exists = scope:character
-                            scope:character = {
-                                OR = {
-                                    culture = cu:cherokee
-                                    culture = cu:muskogean
-                                }
-                            }
-                        }
                         african_diaspora_clothes_trigger = yes
                     }
 
@@ -1973,13 +1836,6 @@
                 republic_clothes_trigger = yes
                 OR = {
                     european_clothes_trigger = yes
-                    scope:character ?= {
-                        OR = {
-                            culture = cu:malagasy
-                            culture = cu:cherokee
-                            culture = cu:muskogean
-                        }
-                    }
                     african_diaspora_clothes_trigger = yes
                 }
                 monarchy_clothes_trigger = no
@@ -2021,13 +1877,6 @@
                 republic_clothes_trigger = yes
                 OR = {
                     european_clothes_trigger = yes
-                    scope:character ?= {
-                        OR = {
-                            culture = cu:malagasy
-                            culture = cu:cherokee
-                            culture = cu:muskogean
-                        }
-                    }
                     african_diaspora_clothes_trigger = yes
                 }
                 monarchy_clothes_trigger = no
@@ -2069,13 +1918,6 @@
                 republic_clothes_trigger = yes
                 OR = {
                     european_clothes_trigger = yes
-                    scope:character ?= {
-                        OR = {
-                            culture = cu:malagasy
-                            culture = cu:cherokee
-                            culture = cu:muskogean
-                        }
-                    }
                     african_diaspora_clothes_trigger = yes
                 }
                 monarchy_clothes_trigger = no
@@ -2117,13 +1959,6 @@
                 republic_clothes_trigger = yes
                 OR = {
                     european_clothes_trigger = yes
-                    scope:character ?= {
-                        OR = {
-                            culture = cu:malagasy
-                            culture = cu:cherokee
-                            culture = cu:muskogean
-                        }
-                    }
                     african_diaspora_clothes_trigger = yes
                 }
                 monarchy_clothes_trigger = no
@@ -2165,13 +2000,6 @@
                 republic_clothes_trigger = yes
                 OR = {
                     european_clothes_trigger = yes
-                    scope:character ?= {
-                        OR = {
-                            culture = cu:malagasy
-                            culture = cu:cherokee
-                            culture = cu:muskogean
-                        }
-                    }
                     african_diaspora_clothes_trigger = yes
                 }
                 monarchy_clothes_trigger = no

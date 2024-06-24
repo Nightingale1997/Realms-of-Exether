@@ -185,7 +185,7 @@ native_american_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
 		culture = {
-			has_discrimination_trait = wood_gnome
+			has_discrimination_trait = gnome_heritage
 		}
 	}
 }
@@ -193,7 +193,7 @@ native_american_clothes_trigger = {
 native_north_american_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
-		culture = cu:lake_thalorian
+always = no
 	}
 }
 
@@ -456,7 +456,6 @@ european_clothes_trigger = {
 			OR = {
 				culture = {
 					OR = {
-						has_discrimination_trait = thalorian_culture_group
 						has_discrimination_trait = qiin_culture_group
 					}
 					
@@ -510,9 +509,6 @@ american_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
 			OR = {
-				culture = {
-					has_discrimination_trait = thalorian_culture_group
-				}
 				AND = {
 					exists = c:VAI
 					exists = home_country
@@ -535,9 +531,6 @@ american_clothes_pop_trigger = {
 	scope:pop = {
 		OR = {
 	
-			culture = {
-				has_discrimination_trait = thalorian_culture_group
-			}
 			AND = {
 				exists = c:VAI
 				exists = home_country
@@ -729,9 +722,7 @@ european_clothes_pop_trigger = {
 	exists = scope:pop
 	scope:pop = {
 		OR = {
-			culture = {
-				has_discrimination_trait = hasalian
-			}
+
 			culture = {
 				OR = {
 					AND = {
@@ -816,12 +807,7 @@ indigenous_oceanic_clothes_trigger = {
 					}
 
 					culture = cu:castaway_dwarf
-					AND = {
-						culture = {
-							ruler_clothes_trigger = no
-							has_discrimination_trait = hasalian
-						}
-					}
+
 
 			}
 		}
@@ -864,7 +850,6 @@ african_clothes_pop_trigger = {
 	scope:pop = {
 		culture = {
 			OR = {
-
 				has_discrimination_trait = namkhazen_heritage
 				has_discrimination_trait = wood_elf
 		}
@@ -893,18 +878,14 @@ south_east_asia_clothes_pop_trigger = {
 south_american_clothes_character_trigger = {
 	exists = scope:character
 	scope:character = {
-		culture = {
-			has_discrimination_trait = thalorian_culture_group
-		} 
+		culture = cu:beithaven
 	}
 }
 
 south_american_clothes_pop_trigger = {
 	exists = scope:pop
 	scope:pop = {
-		culture = {
-			has_discrimination_trait = thalorian_culture_group
-		}  
+		culture = cu:beithaven
 	}
 }
 
@@ -996,19 +977,7 @@ slavic_clothes_pop_trigger = {
 
 slavic_clothes_trigger = {
 	scope:character ?= {
-		culture = {
-			OR = {
-				has_discrimination_trait = thalorian_culture_group
-			}
-		}   
-	}
-}
-
-nordic_clothes_pop_trigger = {
-	scope:pop ?= {
-		culture = {
-			has_discrimination_trait = hasalian	
-		}   
+		culture = cu:thiralian
 	}
 }
 
