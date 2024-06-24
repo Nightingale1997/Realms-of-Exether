@@ -117,7 +117,7 @@ types sea_region_panel_types
 				}
 			}
 			tab_buttons = {
-				on_start = "[InformationPanel.SelectTab('default')]"
+				#on_start = "[InformationPanel.SelectTab('default')]"
 				datacontext = "[GetScriptedGui('is_sky_state')]"
 				visible = "[GetScriptedGui('is_sky_state').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('node_state', Province.GetStateRegion.MakeScope).End)]"
 					

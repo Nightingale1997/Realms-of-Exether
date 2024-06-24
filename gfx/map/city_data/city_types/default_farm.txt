@@ -1,27 +1,9 @@
-﻿wild_west_farm = {
+﻿default_farm = {
 	city_type = farm
-	center_building_mesh = "wild_west_town_mesh"
+	center_building_mesh = "european_rural_center_piece_01_mesh"
 	center_building_size = { 2 2 }
-
-	trigger = {
-		has_american_buildings_dlc_trigger = yes
-		any_scope_state = {
-			owner = {
-				OR = {
-					country_has_primary_culture = cu:vairian
-					country_has_primary_culture = cu:lake_thalorian
-					country_has_primary_culture = cu:west_thalorian
-				}
-			}
-			OR = {
-				region = sr:region_vairia
-				region = sr:region_old_thaloria
-				region = sr:region_hasals_mirror
-			}
-		}
-	}
-
-	weight = 1
+	
+	weight = -1 #default farm is always down prioritized
 		
 	min_residential_buildings = 4
 	max_residential_buildings = 50
@@ -43,8 +25,8 @@
 		"european_rural_building_mid_03_mesh"
 	}
 	mid_building_offsets = {
-		position = 0.0
-		rotation = 0.0
+		position = 0.1
+		rotation = 180.0
 	}
 	poor_building_meshes = {
 		"european_rural_building_poor_01_mesh"
@@ -56,8 +38,8 @@
 		rotation = 360.0
 	}
 	building_offsets = {	#offsets for regular buildings
-		position = 0.0
-		rotation = 0.0
+		position = 0.2
+		rotation = 360.0
 	}
 	
 	building_rye_farm = {
@@ -84,18 +66,19 @@
 		"european_province_farm_01_mesh"
 		"european_province_farm_02_mesh"
 	}
-	building_livestock_ranch = {"european_rural_ranch_01_mesh"}
+	building_livestock_ranch = {
+		"european_rural_ranch_01_mesh"}
 	
-	building_coffee_plantation = {"southern_plantation_mesh"}
-	building_silk_plantation = {"southern_plantation_mesh"}	
-	building_cotton_plantation = {"southern_plantation_mesh"}
-	building_dye_plantation = {"southern_plantation_mesh"}
-	building_opium_plantation = {"southern_plantation_mesh"}
-	building_tea_plantation = {"southern_plantation_mesh"}
-	building_tobacco_plantation = {"southern_plantation_mesh"}
-	building_sugar_plantation = {"southern_plantation_mesh"}
-	building_banana_plantation = {"southern_plantation_mesh"}
-	building_vineyard_plantation = {"southern_plantation_mesh"}
+	building_coffee_plantation = {"european_rural_plantation_01_mesh"}
+	building_silk_plantation = {"european_rural_plantation_01_mesh"}	
+	building_cotton_plantation = {"european_rural_plantation_01_mesh"}
+	building_dye_plantation = {"european_rural_plantation_01_mesh"}
+	building_opium_plantation = {"european_rural_plantation_01_mesh"}
+	building_tea_plantation = {"european_rural_plantation_01_mesh"}
+	building_tobacco_plantation = {"european_rural_plantation_01_mesh"}
+	building_sugar_plantation = {"european_rural_plantation_01_mesh"}
+	building_banana_plantation = {"european_rural_plantation_01_mesh"}
+	building_vineyard_plantation = {"european_rural_plantation_01_mesh"}
 
 	building_manor_house = {"european_rural_manorhouse_01_mesh"}
 }
