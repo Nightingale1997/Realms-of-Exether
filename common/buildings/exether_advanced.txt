@@ -12,19 +12,21 @@
 	production_method_groups = {
 		pmg_base_building_adventuring_guild
 		pmg_adventuring_focus
-		pmg_ownership_building_adventuring_guild
+		
 	}
 	
 	texture = "gfx/interface/icons/building_icons/adventuring_guild.dds"
 
 	required_construction = construction_cost_medium
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 }
 
 building_airship_dock = {
 	building_group = bg_public_infrastructure
 	city_type = city
 	texture = "gfx/interface/icons/building_icons/airship_dock.dds"
-
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 	enable_air_connection = yes
 
 	has_max_level = yes

@@ -15,8 +15,13 @@
 		pmg_arcane_building_cloud_collector
 		pmg_steam_automation_building_iron_mine
 		pmg_train_automation_building_iron_mine
-		pmg_ownership_capital_building_cloud_collector
+		
 	}
+
+	
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
  }
 
  building_wishstone_mine = {
@@ -37,8 +42,12 @@
 		pmg_mines_potions
 		pmg_steam_automation_building_wishstone_mine
 		pmg_train_automation_building_wishstone_mine
-		pmg_ownership_capital_building_wishstone_mine
+		
 	}
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
 }
 
 building_wishstone_mine_depletable = {
@@ -58,8 +67,12 @@ building_wishstone_mine_depletable = {
 		pmg_mines_potions
 		pmg_steam_automation_building_wishstone_mine
 		pmg_train_automation_building_wishstone_mine
-		pmg_ownership_capital_building_wishstone_mine
+		
 	}
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
 }
 
 building_wishstone_fields = {
@@ -78,6 +91,10 @@ building_wishstone_fields = {
 	production_method_groups = {
 		pmg_base_building_wishstone_fields
 	}
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
 }
 
 building_wishstone_reefs = {
@@ -94,7 +111,7 @@ building_wishstone_reefs = {
 	production_method_groups = {
 		pmg_base_building_oil_rig
 		pmg_transportation_building_oil_rig
-		pmg_ownership_capital_building_oil_rig
+		
 	}
 
 	possible = {
@@ -118,7 +135,7 @@ building_blubber_plants = {
 	production_method_groups = {
 		pmg_blubber
 		pmg_blubber_military_production
-		pmg_ownership_capital_building_synthetics_plants
+		
 	}
 	
 	required_construction = construction_cost_very_high
@@ -145,7 +162,7 @@ building_squid_squad = {
 		pmg_base_building_squid_squad
 		pmg_monster_hunters_squids
 		pmg_refrigeration_building_fishing_wharf
-		pmg_ownership_capital_building_fishing_wharf
+		
 	}
 		
 	possible = {
@@ -154,6 +171,10 @@ building_squid_squad = {
 			is_sea_adjacent = yes
 		}
 	}
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
 }
 
 building_seasnake_wharf = {
@@ -166,7 +187,7 @@ building_seasnake_wharf = {
 		pmg_base_building_seasnake_wharf
 		pmg_protective_equipment
 		pmg_refrigeration_building_seasnake_wharf
-		pmg_ownership_capital_building_seasnake_wharf
+		
 	}
 	
 	possible = {
@@ -175,6 +196,10 @@ building_seasnake_wharf = {
 			is_sea_adjacent = yes
 		}
 	}
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
 }
 building_krakeneer_outpost = { 
 	building_group = bg_fishing
@@ -186,7 +211,7 @@ building_krakeneer_outpost = {
 		pmg_base_building_seasnake_wharf
 		pmg_protective_equipment
 		pmg_refrigeration_building_seasnake_wharf
-		pmg_ownership_capital_building_seasnake_wharf
+		
 	}
 	
 	possible = {
@@ -195,6 +220,10 @@ building_krakeneer_outpost = {
 			is_sea_adjacent = yes
 		}
 	}
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
 }
 building_medium_sea_monster_outpost = { #sharks?  hydro-hydras??
 	building_group = bg_fishing
@@ -206,7 +235,7 @@ building_medium_sea_monster_outpost = { #sharks?  hydro-hydras??
 		pmg_base_building_seasnake_wharf
 		pmg_protective_equipment
 		pmg_refrigeration_building_seasnake_wharf
-		pmg_ownership_capital_building_seasnake_wharf
+		
 	}
 	
 	possible = {
@@ -215,6 +244,10 @@ building_medium_sea_monster_outpost = { #sharks?  hydro-hydras??
 			is_sea_adjacent = yes
 		}
 	}
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
 }
 building_leviathan_outpost = {
 	building_group = bg_whaling
@@ -226,7 +259,7 @@ building_leviathan_outpost = {
 		pmg_base_building_leviathan_outpost
 		pmg_protective_equipment
 		pmg_refrigeration_building_leviathan_outpost
-		pmg_ownership_capital_building_leviathan_outpost
+		
 	}
 	
 	possible = {
@@ -235,6 +268,10 @@ building_leviathan_outpost = {
 			is_sea_adjacent = yes
 		}
 	}
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
 }
 
 building_fishing_wharf_irontails = {
@@ -247,8 +284,12 @@ building_fishing_wharf_irontails = {
 		pmg_base_building_fishing_wharf
 		pmg_irontails
 		pmg_refrigeration_building_fishing_wharf
-		pmg_ownership_capital_building_fishing_wharf
+		
 	}
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
 }
 
 building_fishing_wharf_blubberfish = {
@@ -261,8 +302,12 @@ building_fishing_wharf_blubberfish = {
 		pmg_base_building_fishing_wharf
 		pmg_blubberfish
 		pmg_refrigeration_building_fishing_wharf
-		pmg_ownership_capital_building_fishing_wharf
+		
 	}
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
 }
 
 building_fishing_wharf_goldfish = {
@@ -275,8 +320,12 @@ building_fishing_wharf_goldfish = {
 		pmg_base_building_fishing_wharf
 		pmg_goldfish
 		pmg_refrigeration_building_fishing_wharf
-		pmg_ownership_capital_building_fishing_wharf
+		
 	}
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
 }
 
 building_fishing_wharf_glowfish = {
@@ -289,6 +338,10 @@ building_fishing_wharf_glowfish = {
 		pmg_base_building_fishing_wharf
 		pmg_glowfish
 		pmg_refrigeration_building_fishing_wharf
-		pmg_ownership_capital_building_fishing_wharf
+		
 	}
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
 }

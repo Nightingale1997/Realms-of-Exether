@@ -12,7 +12,7 @@
 		pmg_base_building_gizmo_workshop
 		#pmg_automobile_production #what could gizmo workshops produce as an alternate output?
 		pmg_automation_building_gizmo_workshop
-		pmg_ownership_capital_building_motor_industry
+		
 	}
 	
 	required_construction = construction_cost_very_high
@@ -27,6 +27,12 @@
 			}
 		}
 	}
+
+	ai_value = 1000 
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
 }
 
 building_potion_distillery = {
@@ -44,7 +50,7 @@ building_potion_distillery = {
 		pmg_base_liquid_potion
 		pmg_cosmetic_potion_production
 		pmg_automation_building_potion_distillery
-		pmg_ownership_capital_building_motor_industry
+		
 	}
 	
 	required_construction = construction_cost_high #very high?
@@ -59,4 +65,8 @@ building_potion_distillery = {
 			}
 		}
 	}
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
 }
