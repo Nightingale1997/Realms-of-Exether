@@ -18,7 +18,7 @@ idle = {
 
 	                scope:character ?= {
 	                    age >= define:NCharacters|ADULT_AGE # always refer to the Defines entry rather than set an arbitrary figure, just to keep things consistent
-
+						no_portrait_trigger = no
 	                    OR = {
 		                    has_trait = grifter
 		                    has_trait = expensive_tastes
