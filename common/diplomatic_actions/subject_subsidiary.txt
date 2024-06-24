@@ -1,14 +1,8 @@
-<<<<<<< HEAD:common/diplomatic_actions/subject_subsidiary.txt
 ﻿subsidiary = {
 	can_select = no
-=======
-﻿dominion = {
 	groups= {
 		general # for breaking only
 	}
-	show_in_lens = no
->>>>>>> f55cedb6 (1.7):common/diplomatic_actions/21_subject_dominion.txt
-
 	potential = { # Only created through diplomatic plays
 		always = no
 	}
@@ -18,10 +12,6 @@
 	
 		has_junior_participant = yes
 		recipient_pays_maintenance = no
-<<<<<<< HEAD:common/diplomatic_actions/subject_subsidiary.txt
-		is_customs_union = no
-=======
->>>>>>> f55cedb6 (1.7):common/diplomatic_actions/21_subject_dominion.txt
 		income_transfer = 0.25
 		second_country_gets_income_transfer = no
 		income_transfer_based_on_second_country = yes

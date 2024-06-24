@@ -12,13 +12,8 @@ widget = {
 		### network interaction
 		button = {
 			alwaystransparent = yes
-<<<<<<< HEAD
 				size = { 250% 250%% }
 			alpha = 0.2
-=======
-			size = { 250% 250% }
-			alpha = 0.8
->>>>>>> f55cedb6 (1.7)
 			texture ="gfx/interface/map_markers/round_highlight_orange.dds"
 			visible = "[And(SeaNodeMarker.IsValidInteractionNode ,SeaNodeMarker.IsActiveInteractionNode)]"
 			onclick = "[SeaNodeMarker.SelectInteractionClick]"

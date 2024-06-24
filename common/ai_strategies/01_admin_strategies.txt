@@ -311,52 +311,12 @@ ai_strategy_industrial_expansion = {
 			}
 			add = 20
 		}
-<<<<<<< HEAD
-	
-=======
-		
-		if = {
-			limit = {
-				has_variable = japan_forced_to_open_market
-			}
-			add = 1000
-		}		
-
-		if = {
-			limit = { 
-				exists = c:FRA
-				c:FRA = this
-				ruler = {
-					OR = {
-						has_variable = orleanist_leader
-						has_variable = bonapartist_leader
-					}
-				}
-			}
-			add = 20
-		}
-
-		if = {
-			limit = {
-				has_radical_leftist_government = yes
-				NOT = {
-					ig:ig_rural_folk ?= {
-						is_powerful = yes
-						is_in_government = yes
-					}
-				}
-			}
-			add = 50
-		}	
-		
 		if = {
 			limit = {
 				has_law = law_type:law_command_economy	
 			}
 			multiply = 2
 		}	
->>>>>>> f55cedb6 (1.7)
-		
 		if = {
 			limit = { is_country_type = unrecognized }
 			multiply = 0.25

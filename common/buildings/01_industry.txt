@@ -304,19 +304,11 @@ building_shipyards = {
 	required_construction = construction_cost_high
 	
 	possible = {
-<<<<<<< HEAD
-		error_check = {
-			severity = fail
-			exether_is_coastal = yes
-		}
-	}	
-=======
-		is_coastal = yes
+		exether_is_coastal = yes
 	}
 	ownership_type = self
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_harbour.dds"
->>>>>>> f55cedb6 (1.7)
 }
 
 building_military_shipyards = {
@@ -337,19 +329,11 @@ building_military_shipyards = {
 	required_construction = construction_cost_very_high
 	
 	possible = {
-<<<<<<< HEAD
-		error_check = {
-			severity = fail
-			exether_is_coastal = yes
-		}
-	}	
-=======
-		is_coastal = yes
+		exether_is_coastal = yes
 	}
 	ownership_type = self
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_harbour.dds"
->>>>>>> f55cedb6 (1.7)
 }
 
 building_war_machine_industry = {

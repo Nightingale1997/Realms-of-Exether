@@ -219,16 +219,7 @@ communism.2 = {
 	}
 	option = { # communism
 		name = communism.2.b
-<<<<<<< HEAD
-=======
 		default_option = yes
-		trigger = {
-			OR = {
-				NOT = { exists = c:RUS }
-				NOT = { c:RUS = ROOT }
-			}
-		}
->>>>>>> f55cedb6 (1.7)
 		ig:ig_trade_unions = {
 			set_variable = chose_communism
 		}

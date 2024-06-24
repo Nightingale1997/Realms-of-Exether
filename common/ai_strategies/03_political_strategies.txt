@@ -94,28 +94,12 @@
 			
 			add = 10
 		}	
-<<<<<<< HEAD
-=======
-
-		if = {
-			limit = { 
-				exists = c:FRA
-				c:FRA = this
-				ruler = {
-					has_variable = orleanist_leader
-				}
-			}
-			add = 10
-		}
-		
 		if = {
 			limit = {
 				has_radical_leftist_government = yes	
 			}
 			multiply = 0.25
 		}	
-		
->>>>>>> f55cedb6 (1.7)
 	}
 }
 
@@ -713,98 +697,3 @@ ai_strategy_nationalist_agenda = {
 		}		
 	}
 }
-<<<<<<< HEAD
-=======
-
-ai_strategy_maintain_mandate_of_heaven = {
-	icon = "gfx/interface/icons/ai_strategy_icons/reactionary_agenda.dds"
-	
-	type = political
-
-	revolution_aversion = {
-		value = 100
-	}
-	
-	min_law_chance_to_pass = {
-		value = 50
-		if = {
-			limit = { ai_has_reasons_to_not_oppose_law = yes }			
-			multiply = 0.25
-		}		
-	}
-	
-	max_progressiveness = {
-		value = 25
-	}
-	
-	max_regressiveness = {
-		value = 2
-	}
-	
-	change_law_chance = { 
-		value = 1
-		
-		if = {
-			limit = { 
-				OR = {
-					has_journal_entry = je_government_petition  
-					has_journal_entry = je_law_imposition
-				}
-			}
-			add = 10
-		}		
-	}	
-
-	pro_interest_groups = {
-		ig_landowners
-		ig_armed_forces
-	}
-	
-	anti_interest_groups ={
-		ig_industrialists
-		ig_trade_unions
-		ig_intelligentsia
-	}
-	
-	institution_scores = {
-		institution_colonial_affairs = {	
-			value = 50			
-		}				
-		institution_social_security = {	
-			value = 50			
-		}
-		institution_workplace_safety = {	
-			value = 50			
-		}		
-		institution_schools = {	
-			value = 50			
-		}		
-		institution_police = {	
-			value = 200			
-		}		
-		institution_health_system = {	
-			value = 50		
-		}		
-		institution_home_affairs = {	
-			value = 200			
-		}				
-	}	
-	
-	possible = {
-		exists = c:CHI
-		this = c:CHI
-		is_country_type = unrecognized
-		has_law = law_type:law_monarchy
-	}
-	
-	weight = {
-		value = 100
-		if = {
-			limit = {
-				has_variable = lost_opium_wars
-			}
-			multiply = 0.05
-		}
-	}
-}
->>>>>>> f55cedb6 (1.7)

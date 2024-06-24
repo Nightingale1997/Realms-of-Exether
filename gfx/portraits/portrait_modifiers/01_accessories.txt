@@ -215,27 +215,7 @@
                add = 10000
                 agitator_character_trigger = no
                 scope:character ?= {
-<<<<<<< HEAD
-                    age > 12
-=======
-                    exists = home_country
-                    home_country = {
-                        OR = {
-                            c:PRU ?= this
-                            was_formed_from = PRU
-                        }
-                    }
                     age > define:NCharacters|ADULT_AGE
-                    NOR = {
-                        has_template = agitator_jules_brunet
-                        has_template = rus_leon_trotsky_character_template
-                        has_template = agitator_nestor_makhno
-                        has_template = fra_georges_boulanger_character_template
-                        has_template = agitator_louise_michel
-                        has_template = agitator_susan_b_anthony
-                        has_template = agitator_emiliano_zapata
-                    }
->>>>>>> f55cedb6 (1.7)
                 }
                 OR = {
                     military_clothes_trigger = yes
@@ -296,20 +276,7 @@
                     monarchy_clothes_trigger = yes
                 }
                 scope:character ?= {
-<<<<<<< HEAD
-                    age > 12
-=======
                     age > define:NCharacters|ADULT_AGE
-                    NOR = {
-                        has_template = agitator_jules_brunet
-                        has_template = rus_leon_trotsky_character_template
-                        has_template = agitator_nestor_makhno
-                        has_template = fra_georges_boulanger_character_template
-                        has_template = agitator_louise_michel
-                        has_template = agitator_susan_b_anthony
-                        has_template = agitator_emiliano_zapata
-                    }
->>>>>>> f55cedb6 (1.7)
                 }
             }
         }
@@ -448,20 +415,7 @@
                 european_clothes_trigger = yes
                 republic_clothes_trigger = no
                 scope:character = {
-<<<<<<< HEAD
-                    age > 12
-=======
                     age > define:NCharacters|ADULT_AGE
-                    NOR = {
-                        has_template = agitator_jules_brunet
-                        has_template = rus_leon_trotsky_character_template
-                        has_template = agitator_nestor_makhno
-                        has_template = fra_georges_boulanger_character_template
-                        has_template = agitator_louise_michel
-                        has_template = agitator_susan_b_anthony
-                        has_template = agitator_emiliano_zapata
-                    }
->>>>>>> f55cedb6 (1.7)
                 }
                 OR = {
                     military_clothes_trigger = yes

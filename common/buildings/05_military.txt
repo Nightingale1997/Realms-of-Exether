@@ -65,14 +65,7 @@ building_naval_base = {
 	
 	# Can only build naval bases on the coast
 	possible = {
-<<<<<<< HEAD
-		error_check = {
-			severity = fail
-			exether_is_coastal = yes
-		}
-=======
-		is_coastal = yes
->>>>>>> f55cedb6 (1.7)
+		exether_is_coastal = yes
 	}
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_military.dds"

@@ -35,25 +35,26 @@ idle = {
 		# POP Animations  #
 		###################################
 
-<<<<<<< HEAD
 		2d_pop_idle = {
 			animation = { head = "idle_entry" torso = "idle_entry" }
-=======
-		hatacademic_pop_idle = {
-			animation = { head = "idle_head_pop_hatacademic" torso = "idle_body_hatacademic" }
->>>>>>> f55cedb6 (1.7)
 
 			weight = {
 				base = 0
 
 				modifier = {
-<<<<<<< HEAD
 					add = 1000
 					no_portrait_trigger = yes
 				}
 			}
-		}	
-=======
+		}
+
+		hatacademic_pop_idle = {
+			animation = { head = "idle_head_pop_hatacademic" torso = "idle_body_hatacademic" }
+
+			weight = {
+				base = 0
+
+				modifier = {
 					add = 200
 
 				    exists = scope:pop
@@ -82,7 +83,6 @@ idle = {
 				}
 			}
 		}
->>>>>>> f55cedb6 (1.7)
 
 		basket_pop_idle = {
 			animation = { head = "idle_head_pop_basket" torso = "idle_body_basket" }

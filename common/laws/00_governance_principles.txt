@@ -192,21 +192,11 @@ law_presidential_republic = {
 	ai_enact_weight_modifier = {
 		value = 0		
 		if = {
-<<<<<<< HEAD
 			limit = { 
 				has_journal_entry = je_government_petition
 				has_variable = desired_law_var
                 scope:law = var:desired_law_var
 			}
-=======
-			limit = {
-				has_journal_entry = je_pedro_republic
-			}
-			add = 100
-		}
-		if = {
-			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
->>>>>>> f55cedb6 (1.7)
 			add = 750
 		}
 	}
@@ -538,7 +528,6 @@ law_council_republic = {
 			add = 750
 		}
 	}
-<<<<<<< HEAD
 }
 
 law_magocracy = {
@@ -597,8 +586,9 @@ law_magocracy = {
                 scope:law = var:desired_law_var
 			}
 			add = 750
-=======
-	
+		}
+	}
+
 	ai_impose_chance = {
 		value = 0
 		
@@ -610,7 +600,6 @@ law_magocracy = {
 			
 			add = base_impose_law_weight
 			multiply = 5.0
->>>>>>> f55cedb6 (1.7)
 		}
 	}
 }

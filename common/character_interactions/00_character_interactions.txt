@@ -790,27 +790,6 @@ invite_exile = {
 			remove_modifier = in_exile_modifier
 		}
 		hidden_effect = {
-<<<<<<< HEAD
-=======
-			if = {
-				limit = {
-					has_variable = mazzini_var
-					has_dlc_feature = voice_of_the_people_content
-				}
-				scope:actor ?= {
-					trigger_event = { id = historical_agitators.7 days = 3 }
-				}
-			}
-			if = {
-				limit = {
-					has_variable = garibaldi_var
-					has_dlc_feature = voice_of_the_people_content
-				}
-				set_variable = {
-					name = garibaldi_cooldown_var
-					months = short_modifier_time
-				}
-			}
 			if = {
 				limit = {
 					NOT = {
@@ -846,7 +825,6 @@ invite_exile = {
 					}
 				}
 			}
->>>>>>> f55cedb6 (1.7)
 		}
 	}
 

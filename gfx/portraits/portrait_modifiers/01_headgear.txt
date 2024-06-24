@@ -501,7 +501,6 @@
         }
     }
 
-<<<<<<< HEAD
     pierrot_headgear = {
         dna_modifiers = {
            accessory = {
@@ -533,163 +532,13 @@
                             religion = rel:creed_of_hasal
                         }
                     }
-=======
-    vivandiere_headgear = {
-        dna_modifiers = {
-            accessory = {
-                mode = add
-                gene = headgear
-                template = vivandiere_headgear
-                range = { 0 1 } # For the randomness to work correctly
-           
-            } 
-        }
-        weight = {
-            base = 0
-            modifier = {
-                add = 10000
-
-                OR = {
-                    european_clothes_trigger = yes
-                    scope:character ?= {
-                        OR = {
-                            culture = cu:cherokee
-                            culture = cu:muskogean
-                        }
-                    }
-                    african_diaspora_clothes_trigger = yes
-                }
-                scope:character ?= {
-                    is_female = yes
-
-                    OR = {
-                        has_role = general
-                        has_role = admiral
-                        AND = {
-                            is_interest_group_type = ig_armed_forces
-                            has_role = politician
-                            OR = {  # A monarch shouldn't wear this, but a republican ruler can
-                                AND = {
-                                    is_ruler = no
-                                    home_country ?= {
-                                        has_law = law_type:law_monarchy
-                                    }
-                                }
-                                AND = {
-                                    is_ruler = yes
-                                    home_country ?= {
-                                        NOT = { has_law = law_type:law_monarchy }
-                                    }
-                                }
-                            }
-                        }
-                        AND = {
-                            has_role = agitator
-                            is_interest_group_type = ig_armed_forces
-                        }
-                    }
-                    owner ?= {
-                        NOT = { has_technology_researched = bolt_action_rifles }
-                    }
->>>>>>> f55cedb6 (1.7)
                 }
             }
         }
     }
 
-<<<<<<< HEAD
 
 
-=======
-    female_military_late_headgear = {
-        dna_modifiers = {
-            accessory = {
-                mode = add
-                gene = headgear
-                template = female_headgear_european_common_02
-                range = { 0 1 } # For the randomness to work correctly
-           
-            } 
-        }
-        weight = {
-            base = 0
-            modifier = {
-                add = 10000
-
-                OR = {
-                    european_clothes_trigger = yes
-                    scope:character ?= {
-                        OR = {
-                            culture = cu:cherokee
-                            culture = cu:muskogean
-                        }
-                    }
-                    african_diaspora_clothes_trigger = yes
-                }
-                scope:character ?= {
-                    is_female = yes
-
-                    OR = {
-                        has_role = general
-                        has_role = admiral
-                        AND = {
-                            is_interest_group_type = ig_armed_forces
-                            has_role = politician
-                            OR = {  # A monarch shouldn't wear this, but a republican ruler can
-                                AND = {
-                                    is_ruler = no
-                                    home_country ?= {
-                                        has_law = law_type:law_monarchy
-                                    }
-                                }
-                                AND = {
-                                    is_ruler = yes
-                                    home_country ?= {
-                                        NOT = { has_law = law_type:law_monarchy }
-                                    }
-                                }
-                            }
-                        }
-                        AND = {
-                            has_role = agitator
-                            is_interest_group_type = ig_armed_forces
-                        }
-                    }
-                    owner ?= {
-                        has_technology_researched = bolt_action_rifles
-                    }
-                }
-            }
-        }
-    }
-
-    american_military_early_headgear = {
-        # when updating triggers on this, please update american_military_hairstyles in game\gfx\portraits\portrait_modifiers\01_headgear.txt as well so that triggers continue to match up
-        dna_modifiers = {
-            accessory = {
-                mode = add
-                gene = headgear
-                template = black_cap
-                range = { 0 1 }
-            }
-        }
-        weight = {
-            base = 0
-            modifier = {
-                add = 10000
-
-                c:USA ?= {
-                    NOT = { has_technology_researched = rifling }
-                }
-                american_clothes_pop_trigger = yes
-                OR = {
-                    officers_clothes_pop_trigger = yes
-                    soldier_clothes_pop_trigger = yes
-                }
-            }
-        }
-    }
->>>>>>> f55cedb6 (1.7)
 
     american_military_headgear = {
         # when updating triggers on this, please update american_military_hairstyles in game\gfx\portraits\portrait_modifiers\01_headgear.txt as well so that triggers continue to match up
@@ -1253,14 +1102,9 @@
             modifier = {
                 add = 1000
                 scope:character ?= {
-<<<<<<< HEAD
                     #exists = c:BRZ
                     always = no
                     home_country = {
-=======
-                    exists = c:BRZ
-                    home_country ?= {
->>>>>>> f55cedb6 (1.7)
                         OR = {
                             AND = {
                               #  c:BRZ = this
@@ -1812,7 +1656,6 @@
                 OR = {
                     european_clothes_pop_trigger = yes
                     AND = {
-<<<<<<< HEAD
                         OR = {
                             european_clothes_pop_trigger = yes
                             AND = {
@@ -1823,13 +1666,6 @@
                                         culture = cu:qinnaat
                                     }
                                 }
-=======
-                        exists = scope:pop
-                        scope:pop = { 
-                            OR = {
-                                culture = cu:cherokee 
-                                culture = cu:muskogean
->>>>>>> f55cedb6 (1.7)
                             }
                         }
                     }
@@ -2155,9 +1991,6 @@
             }
         }
 
-<<<<<<< HEAD
-    
-=======
     zulu_ruler_headgear = {
         dna_modifiers = {
             accessory = {
@@ -2176,9 +2009,7 @@
                     is_ruler = yes
                     is_female = no
                     OR = {
-                        has_culture = cu:zulu
-                        has_culture = cu:nguni
-                        has_culture = cu:xhosa
+                        has_culture = cu:amanzi
                     }
                 }
             }
@@ -2202,9 +2033,7 @@
                 OR = {
                     scope:pop ?= {
                         OR = {
-                            culture = cu:zulu
-                            culture = cu:nguni
-                            culture = cu:xhosa
+                            culture = cu:zemvelo
                         }
                         OR = {
                             is_pop_type = aristocrats
@@ -2219,9 +2048,7 @@
                             has_role = general
                         }
                         OR = {
-                            has_culture = cu:zulu
-                            has_culture = cu:nguni
-                            has_culture = cu:xhosa
+                            has_culture = cu:zemvelo
                         }                    
                     }
                 }
@@ -2702,5 +2529,4 @@
             }
         }
     }
->>>>>>> f55cedb6 (1.7)
 }

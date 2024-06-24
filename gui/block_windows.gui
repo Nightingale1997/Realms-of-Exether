@@ -1001,9 +1001,5 @@ template fullscreen_show {
 }
 
 template fullscreen_hide {
-<<<<<<< HEAD
-	visible = "[Not(Or(Or(Or(Or(InformationPanelBar.IsPanelOpen('politics'), InformationPanelBar.IsPanelOpen('politics_panel_change_law')), InformationPanelBar.IsPanelOpen('tech_tree')), InformationPanelBar.IsPanelOpen('pop_browser')), InformationPanelBar.IsPanelOpen('countries')))]"
-=======
 	visible = "[Not(Or(Or(Or(Or(Or(InformationPanelBar.IsPanelOpen('politics'), InformationPanelBar.IsPanelOpen('politics_panel_change_law')), InformationPanelBar.IsPanelOpen('tech_tree')), InformationPanelBar.IsPanelOpen('pop_browser')), InformationPanelBar.IsPanelOpen('building_browser')), InformationPanelBar.IsPanelOpen('countries')))]"
->>>>>>> f55cedb6 (1.7)
 }

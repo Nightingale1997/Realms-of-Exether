@@ -148,38 +148,9 @@
             base = 0
             modifier = {
                 add = 100
-<<<<<<< HEAD
                 european_clothes_trigger = yes
                 NAND = {
                     south_american_clothes_character_trigger = yes
-=======
-                OR = {
-                    AND = {
-                        european_clothes_trigger = yes
-                        NAND = {
-                            south_american_clothes_character_trigger = yes
-                            scope:character ?= {
-                                NOR = { 
-                                    culture = cu:paulista 
-                                    culture = cu:sulista
-                                }
-                            }
-                        }
-                        slavic_clothes_trigger = no
-                        agitator_character_trigger = yes
-                    }
-                    AND = {
-                        exists = scope:character
-                        scope:character = {
-                            OR = {
-                                culture = cu:cherokee
-                                culture = cu:muskogean
-                            }
-                        }
-                        ruler_clothes_trigger = yes
-                        republic_clothes_trigger = yes
-                    }
->>>>>>> f55cedb6 (1.7)
                 }
             }
         }
@@ -497,7 +468,6 @@
              }
  
              accessory = {
-<<<<<<< HEAD
                  mode = add
                  gene = legwear
                  template = european_legwear_colors
@@ -505,20 +475,6 @@
              }
          }
  
-=======
-                mode = add
-                gene = medals
-                template = all_medals
-                range = { 0.41 0.59 } # I only want male_medals_generic_01_03
-            }
-            accessory = {
-                mode = add
-                gene = legwear
-                template = european_legwear_colors
-                accessory = male_legwear_european_01_black
-            }
-        }
->>>>>>> f55cedb6 (1.7)
 
         weight = {
             base = 0
@@ -539,212 +495,6 @@
     
     halfling_rich_clothes = {
 
-<<<<<<< HEAD
-=======
-            accessory = {
-                mode = add
-                gene = legwear
-                template = european_legwear_colors
-                accessory = male_legwear_european_01_red
-            }
-        }
-
-        weight = {
-            base = 0
-            modifier = {
-                add = 90000
-                scope:character ?= {
-                    has_template = fra_georges_boulanger_character_template
-                }
-            }
-        }
-    }
-
-    historical_charles_maurras_clothes = {
-        dna_modifiers = {
-           accessory = {
-               mode = add
-               gene = coats
-               template = agitator_maurras
-               range = { 0 1 } # For the randomness to work correctly
-            }
-
-           accessory = {
-               mode = add
-               gene = waistcoats
-               template = historical_waistcoats_maurras
-               range = { 0 1 } # For the randomness to work correctly
-            }
-
-            accessory = {
-                mode = add
-                gene = legwear
-                template = european_legwear_colors
-                accessory = male_legwear_european_01_black
-            }
-        }
-
-        weight = {
-            base = 0
-            modifier = {
-                add = 90000
-                scope:character ?= {
-                    has_template = fra_maurras_character_template
-                    NOR = {
-                        has_role = general
-                        has_role = admiral
-                    }
-                }
-            }
-        }
-    }
-
-    historical_charles_dickens_clothes = {
-        dna_modifiers = {
-           accessory = {
-               mode = add
-               gene = coats
-               template = agitator_dickens
-               range = { 0 1 } # For the randomness to work correctly
-            }
-
-           accessory = {
-               mode = add
-               gene = waistcoats
-               template = historical_waistcoats_dickens
-               range = { 0 1 } # For the randomness to work correctly
-            }
-
-            accessory = {
-                mode = add
-                gene = legwear
-                template = european_legwear_colors
-                accessory = male_legwear_european_01_black
-            }
-        }
-
-        weight = {
-            base = 0
-            modifier = {
-                add = 90000
-                scope:character ?= {
-                    has_template = gbr_charles_dickens_character_template
-                    NOR = {
-                        has_role = general
-                        has_role = admiral
-                    }
-                }
-            }
-        }
-    }
-
-    historical_douglass_clothes = {
-        dna_modifiers = {
-
-           accessory = {
-               mode = add
-               gene = civilian_coats
-               template = all_civilian_coats
-               range = { 0 0.1 }
-            }
-
-           accessory = {
-               mode = add
-               gene = waistcoats
-               template = european_waistcoats
-               range = { 0.45 0.55 }
-            }
-
-           accessory = {
-               mode = add
-               gene = shirt
-               template = no_shirts
-               range = { 0 1 }
-            }
-
-            accessory = {
-                mode = add
-                gene = legwear
-                template = european_legwear_colors
-                accessory = male_legwear_european_01_black
-            }
-        }
-
-        weight = {
-            base = 0
-            modifier = {
-                add = 90000
-                scope:character ?= {
-                    has_template = agitator_frederick_douglass
-                    NOR = {
-                        has_role = general
-                        has_role = admiral
-                    }
-                }
-            }
-        }
-    }
-
-    historical_emmeline_pankhurst_clothes = {
-        dna_modifiers = {
-
-           accessory = {
-               mode = add
-               gene = outfits
-               template = european_outfits_agitator
-               range = { 0 0.1 }
-            }
-        }
-
-        weight = {
-            base = 0
-            modifier = {
-                add = 90000
-                scope:character ?= {
-                    has_template = gbr_pankhurst_character_template
-                    NOR = {
-                        has_role = general
-                        has_role = admiral
-                    }
-                }
-            }
-        }
-    }
-
-    historical_emperor_norton_clothes = {
-        dna_modifiers = {
-           accessory = {
-               mode = add
-               gene = coats
-               template = american_coats
-               range = { 0 0.1 }
-            }
-
-            accessory = {
-                mode = add
-                gene = legwear
-                template = european_legwear_colors
-                accessory = male_legwear_european_01_black
-            }
-        }
-
-        weight = {
-            base = 0
-            modifier = {
-                add = 90000
-                scope:character ?= {
-                    has_template = usa_emperor_norton_character_template
-                    NOR = {
-                        has_role = general
-                        has_role = admiral
-                    }
-                }
-            }
-        }
-    }
-
-    historical_francesc_pi_i_margall_clothes = {
->>>>>>> f55cedb6 (1.7)
         dna_modifiers = {
             accessory = {
                mode = add
@@ -786,8 +536,6 @@
 ## HISTORICAL CHARACTER SCRIPTED CLOTHING ###
 
 
-<<<<<<< HEAD
-=======
     historical_gabriele_dannunzio_clothes = {
         dna_modifiers = {
            accessory = {
@@ -817,7 +565,9 @@
             modifier = {
                 add = 90000
                 scope:character ?= {
-                    has_template = agitator_gabriele_d_annunzio
+                    
+                    always = no
+                    #has_template = agitator_gabriele_d_annunzio
                     NOR = {
                         has_role = general
                         has_role = admiral
@@ -849,7 +599,8 @@
             modifier = {
                 add = 90000
                 scope:character ?= {
-                    has_template = fra_georges_sorel_character_template
+                    always = no
+                    #has_template = fra_georges_sorel_character_template
                     NOR = {
                         has_role = general
                         has_role = admiral
@@ -888,7 +639,8 @@
             modifier = {
                 add = 90000
                 scope:character ?= {
-                    has_template = agitator_giovanni_gentile
+                    always = no
+                    #has_template = agitator_giovanni_gentile
                     NOR = {
                         has_role = general
                         has_role = admiral
@@ -920,7 +672,8 @@
             modifier = {
                 add = 90000
                 scope:character ?= {
-                    has_template = rus_jaroslaw_dabrowski_character_template
+                    always = no
+                    #has_template = rus_jaroslaw_dabrowski_character_template
                     NOR = {
                         has_role = general
                         has_role = admiral
@@ -952,7 +705,8 @@
             modifier = {
                 add = 90000
                 scope:character ?= {
-                    has_template = usa_john_brown_character_template
+                    always = no
+                    #has_template = usa_john_brown_character_template
                     NOR = {
                         has_role = general
                         has_role = admiral
@@ -984,7 +738,8 @@
             modifier = {
                 add = 90000
                 scope:character ?= {
-                    has_template = agitator_john_stuart_mill
+                    always = no
+                    #has_template = agitator_john_stuart_mill
                     NOR = {
                         has_role = general
                         has_role = admiral
@@ -1044,7 +799,8 @@
             modifier = {
                 add = 90000
                 scope:character ?= {
-                    has_template = agitator_karl_liebknecht
+                    always = no
+                    #has_template = agitator_karl_liebknecht
                     NOR = {
                         has_role = general
                         has_role = admiral
@@ -1083,7 +839,8 @@
             modifier = {
                 add = 90000
                 scope:character ?= {
-                    has_template = rus_pyotr_kropotkin_character_template
+                    always = no
+                    #has_template = rus_pyotr_kropotkin_character_template
                     NOR = {
                         has_role = general
                         has_role = admiral
@@ -1115,7 +872,8 @@
             modifier = {
                 add = 90000
                 scope:character ?= {
-                    has_template = pru_ferdinand_lassalle_character_template
+                    always = no
+                    #has_template = pru_ferdinand_lassalle_character_template
                     NOR = {
                         has_role = general
                         has_role = admiral
@@ -1147,7 +905,8 @@
             modifier = {
                 add = 90000
                 scope:character ?= {
-                    has_template = fra_delescluze_character_template
+                    always = no
+                    #has_template = fra_delescluze_character_template
                     NOR = {
                         has_role = general
                         has_role = admiral
@@ -1172,7 +931,8 @@
             modifier = {
                 add = 90000
                 scope:character ?= {
-                    has_template = agitator_louise_michel
+                    always = no
+                    #has_template = agitator_louise_michel
                 }
             }
         }
@@ -1202,7 +962,8 @@
             modifier = {
                 add = 90000
                 scope:character ?= {
-                    has_template = brz_luis_gama_character_template
+                    always = no
+                    #has_template = brz_luis_gama_character_template
                     NOR = {
                         has_role = general
                         has_role = admiral
@@ -1236,7 +997,8 @@
             modifier = {
                 add = 90000
                 scope:character ?= {
-                    has_template = agitator_nestor_makhno
+                    always = no
+                    #has_template = agitator_nestor_makhno
                 }
             }
         }
@@ -1284,7 +1046,8 @@
             modifier = {
                 add = 90000
                 scope:character ?= {
-                    has_template = agitator_errico_malatesta
+                    always = no
+                    #has_template = agitator_errico_malatesta
                     NOR = {
                         has_role = general
                         has_role = admiral
@@ -1395,7 +1158,8 @@
             modifier = {
                 add = 90000
                 scope:character ?= {
-                    has_template = agitator_dmitry_ivanovich_pisarev
+                    always = no
+                    #has_template = agitator_dmitry_ivanovich_pisarev
                     NOR = {
                         has_role = general
                         has_role = admiral
@@ -1438,7 +1202,8 @@
             modifier = {
                 add = 90000
                 scope:character ?= {
-                    has_template = agitator_pierre_joseph_proudhon
+                    always = no
+                    #has_template = agitator_pierre_joseph_proudhon
                     NOR = {
                         has_role = general
                         has_role = admiral
@@ -1472,7 +1237,8 @@
             modifier = {
                 add = 90000
                 scope:character ?= {
-                    has_template = chi_sun_yat_sen_character_template
+                    always = no
+                    #has_template = chi_sun_yat_sen_character_template
                     NOR = {
                         has_role = general
                         has_role = admiral
@@ -1497,7 +1263,8 @@
             modifier = {
                 add = 90000
                 scope:character ?= {
-                    has_template = agitator_susan_b_anthony
+                    always = no
+                    #has_template = agitator_susan_b_anthony
                 }
             }
         }
@@ -1525,7 +1292,8 @@
             modifier = {
                 add = 90000
                 scope:character ?= {
-                    has_template = rus_leon_trotsky_character_template
+                    always = no
+                    #has_template = rus_leon_trotsky_character_template
                 }
             }
         }
@@ -1560,7 +1328,8 @@
             modifier = {
                 add = 90000
                 scope:character ?= {
-                    has_template = fra_victor_hugo_character_template
+                    always = no
+                    #has_template = fra_victor_hugo_character_template
                     NOR = {
                         has_role = general
                         has_role = admiral
@@ -1606,7 +1375,8 @@
             modifier = {
                 add = 90000
                 scope:character ?= {
-                    has_template = agitator_emiliano_zapata
+                    always = no
+                    #has_template = agitator_emiliano_zapata
                 }
             }
         }
@@ -1642,7 +1412,8 @@
             modifier = {
                 add = 90000
                 scope:character ?= {
-                    has_template = agitator_manuel_ruiz_zorrilla
+                    always = no
+                    #has_template = agitator_manuel_ruiz_zorrilla
                     NOR = {
                         has_role = general
                         has_role = admiral
@@ -1651,7 +1422,6 @@
             }
         }
     }
->>>>>>> f55cedb6 (1.7)
 
     historical_lampiao = {
         dna_modifiers = {
@@ -1752,7 +1522,8 @@
                 has_dlc_feature = ep1_cosmetics
 
                 scope:character ?= {
-                    has_template = PER_reza_pahlavi
+                    always = no
+                    #has_template = PER_reza_pahlavi
                     # he will wear this regardless of whether he's a ruler, agitator, ig leader, general, admiral, or township clerk of dexter township in michigan
                 }
             }
@@ -1851,7 +1622,8 @@
                 has_dlc_feature = ep1_cosmetics
 
                 scope:character ?= {
-                    has_template = per_nasir_al_din_qajar_template
+                    always = no
+                    #has_template = per_nasir_al_din_qajar_template
                     age >= define:NCharacters|ADULT_AGE
                 }
             }
@@ -1884,7 +1656,8 @@
                 has_dlc_feature = ep1_cosmetics
 
                 scope:character ?= {
-                    has_template = gbr_george_curzon
+                    always = no
+                    #has_template = gbr_george_curzon
                 }
             }
             modifier = {
@@ -1924,7 +1697,8 @@
                 has_dlc_feature = ep1_cosmetics
 
                 scope:character ?= {
-                    has_template = KOR_empress_myeongseong
+                    always = no
+                    #has_template = KOR_empress_myeongseong
                 }
             }
         }
@@ -2240,7 +2014,6 @@
             base = 0
             modifier = {
                 add = 1000
-<<<<<<< HEAD
                 AND = {
                     OR = {
                         european_clothes_trigger = yes
@@ -2265,23 +2038,6 @@
                         exists = scope:character
                         scope:character ?= {
                             is_female = no
-=======
-
-                scope:character ?= {
-                    is_female = no
-
-                    age >= define:NCharacters|ADULT_AGE
-
-                    owner ?= {
-                        OR = {
-                            is_in_power_bloc = no
-                            AND = {
-                                is_in_power_bloc = yes
-                                power_bloc ?= {
-                                    NOT = { has_identity = identity:identity_military_treaty_organization }
-                                }
-                            }
->>>>>>> f55cedb6 (1.7)
                         }
                     }
                 }
@@ -2753,29 +2509,11 @@
 
                 american_clothes_pop_trigger = yes
                 OR = {
-<<<<<<< HEAD
                     AND = {
                         c:VAI ?= {
                             NOT = { has_technology_researched = bolt_action_rifles }
                         }
                         american_clothes_pop_trigger = yes
-=======
-                    officers_clothes_pop_trigger = yes
-                    soldier_clothes_pop_trigger = yes
-                }
-            }
-            modifier = {
-                add = 10000
-
-                american_clothes_trigger = yes
-                scope:character ?= {
-                    age >= define:NCharacters|ADULT_AGE
-                    is_female = no
-                }
-                OR = {
-                    monarchy_clothes_trigger = yes
-                    scope:character ?= {
->>>>>>> f55cedb6 (1.7)
                         OR = {
                             has_role = general
                             has_role = admiral
@@ -2808,13 +2546,8 @@
         weight = {
             base = 0
             modifier = {
-<<<<<<< HEAD
                 add = 10000
                 c:VAI ?= {
-=======
-                add = 20000
-                c:USA ?= {
->>>>>>> f55cedb6 (1.7)
                     has_technology_researched = bolt_action_rifles
                 }
                 american_clothes_pop_trigger = yes
@@ -2941,13 +2674,8 @@
                 OR = {
                     AND = {
                         exists = scope:character
-<<<<<<< HEAD
                         scope:character ?= {
-                            age > 10
-=======
-                        scope:character = {
                             age >= define:NCharacters|ADULT_AGE
->>>>>>> f55cedb6 (1.7)
 							exists = home_country
                             home_country = c:PND
                             OR = {
@@ -3631,16 +3359,10 @@
                 OR = {
                     AND = {
                         scope:character ?= {
-<<<<<<< HEAD
-                            age > 10
+                            age >= define:NCharacters|ADULT_AGE
                            # exists = c:BRZ
                            always = no
                             home_country = {
-=======
-                            age >= define:NCharacters|ADULT_AGE
-                            exists = c:BRZ
-                            home_country ?= {
->>>>>>> f55cedb6 (1.7)
                                 OR = {
                                     AND = {
                                         always = no
@@ -3746,21 +3468,7 @@
                 scope:pop ?= {
                     home_country = {
                         any_scope_character = {
-<<<<<<< HEAD
                             always = no
-=======
-                            OR = {
-                                has_variable = garibaldi_var # Garibaldi can be an agitator or general or politician, it's all valid
-                                has_template = garibaldi_character_template # redunant double-check
-                            }
-                        }
-                        OR = {
-                            is_unification_candidate = ITA
-                            AND = {
-                                exists = c:ITA
-                                c:ITA = this
-                            }
->>>>>>> f55cedb6 (1.7)
                         }
                     }
                 }
@@ -4062,18 +3770,11 @@
                 scope:character ?= {
 					exists = home_country
                     home_country = {
-<<<<<<< HEAD
                         exists = c:CER
                         c:CER = this
                     }
                     scope:character ?= {
-                        age > 10
-=======
-                        OR = {
-                            c:PRU ?= this
-                            was_formed_from = PRU
-                        }
->>>>>>> f55cedb6 (1.7)
+                        age >= define:NCharacters|ADULT_AGE
                     }
                     age >= define:NCharacters|ADULT_AGE
                     OR = {
@@ -4157,8 +3858,10 @@
 
                 scope:character ?= {
                     OR = {
-                        has_template = egy_muhammad_ali_template
-                        has_template = egy_ibrahim_alawi_template
+                        always = no
+                    #has_template = egy_muhammad_ali_template
+                        always = no
+                    #has_template = egy_ibrahim_alawi_template
                     }
                 }
             }
@@ -4529,7 +4232,6 @@
 
                 }
            }
-<<<<<<< HEAD
         }
     }
 arabic_clothes = {
@@ -4551,16 +4253,6 @@ arabic_clothes = {
                 scope:character ?= {
                     culture = {
                         has_discrimination_trait = qiin_culture_group
-=======
-           modifier = {
-                add = 1000
-                AND = {
-                    exists = scope:character
-                    scope:character = {
-                        has_culture = cu:korean
-                        age >= 10
-                        has_template = KOR_empress_myeongseong
->>>>>>> f55cedb6 (1.7)
                     }
                 }
            }
@@ -4732,7 +4424,6 @@ arabic_clothes = {
                 range = { 0 1 } # For the randomness to work correctly
             }
 
-<<<<<<< HEAD
     }
     weight = {
         base = 0
@@ -4756,24 +4447,6 @@ arabic_clothes = {
                             hindu_clothes_pop_trigger = yes
                             clergy_clothes_pop_trigger = yes
                         }
-=======
-        }
-        weight = {
-            base = 0
-            modifier = {
-                add = 200
-                scope:character ?= {
-                    age >= define:NCharacters|ADULT_AGE
-                }
-                OR = {
-                    AND = {
-                        indian_clothes_trigger = yes
-                        monarchy_clothes_trigger = yes
-                    }
-                    AND = {
-                        hindu_clothes_pop_trigger = yes
-                        clergy_clothes_pop_trigger = yes
->>>>>>> f55cedb6 (1.7)
                     }
                 }
             }
@@ -4849,12 +4522,7 @@ arabic_clothes = {
                 add = 5000
                 military_clothes_trigger = no
                 exists = scope:character
-<<<<<<< HEAD
                 scope:character ?= {
-=======
-                scope:character = {
-                    NOT = { has_template = FRA_francois-rene_de_chateaubriand }
->>>>>>> f55cedb6 (1.7)
                     OR = {
                         AND = {
                             politician_clothes_trigger = yes  
@@ -5035,7 +4703,6 @@ indigenous_oceanic_pop_clothes = {
 }
 
 # consolidated with general pop clothes, but scripting left in if we want to quickly re-enable this stuff
-<<<<<<< HEAD
 indigenous_oceanic_mid_clothes = {
     dna_modifiers = {
         accessory = {
@@ -5152,121 +4819,6 @@ indigenous_oceanic_high_clothes_recognized = {
             OR = {
                 recognized_country_trigger = yes
                 recognized_country_pop_trigger = yes
-=======
-#indigenous_oceanic_mid_clothes = {
-#    dna_modifiers = {
-#        accessory = {
-#            mode = add
-#            gene = outfits
-#            template = polynesian_outfits
-#            range = { 0 0.5 } # For the randomness to work correctly
-#        }
-#        accessory = {
-#            mode = add
-#            gene = necklaces
-#            template = polynesian_necklaces
-#            range = { 0 1 } # For the randomness to work correctly
-#        }
-#    } 
-#    weight = {
-#        base = 0
-#        modifier = {
-#            add = 500
-#            indigenous_oceanic_clothes_trigger = yes
-#            middle_clothes_pop_trigger = yes
-#        }
-#    }
-#}
-    indigenous_oceanic_high_clothes_unrecognized = {
-        dna_modifiers = {
-            accessory = {
-                mode = add
-                gene = outfits
-                template = peasant_outfits
-                range = { 0.5 1 } # For the randomness to work correctly
-            }
-            accessory = {
-                mode = add
-                gene = legwear
-                template = polynesian_legwear
-                range = { 0 1 } # For the randomness to work correctly
-            }
-        }
-        weight = {
-            base = 0
-            modifier = {
-                add = 500
-                indigenous_oceanic_clothes_trigger = yes
-                upper_clothes_pop_trigger = yes
-                recognized_country_trigger = no
-            }
-        }
-    }
-    indigenous_oceanic_high_clothes_recognized = {
-        dna_modifiers = {
-            accessory = {
-                mode = add
-                gene = outfits
-                template = polynesian_outfits
-                range = { 0.5 1 } # For the randomness to work correctly
-            }
-            accessory = {
-                mode = add
-                gene = legwear
-                template = polynesian_legwear
-                range = { 0 1 } # For the randomness to work correctly
-            }
-        }
-        weight = {
-            base = 0
-            modifier = {
-                add = 1000
-                indigenous_oceanic_clothes_trigger = yes
-                OR = {
-                    upper_clothes_pop_trigger = yes
-                    middle_clothes_pop_trigger = yes
-                    scope:character ?= {
-                        is_in_exile_pool = yes
-                    }
-                    AND = {
-                        scope:character ?= {
-                            home_country ?= {
-                                exists = c:HAW
-                                c:HAW = this
-                            }
-                        }
-                        OR = {
-                            ruler_clothes_trigger = yes
-                            politician_clothes_trigger = yes
-                        }                
-                    }
-                }
-                OR = {
-                    recognized_country_trigger = yes
-                    recognized_country_pop_trigger = yes
-                    OR = { # Hawaii does not need to be recognized in order for characters and pops to wear these clothes
-                        AND = {
-                            exists = scope:pop
-                            scope:pop = {
-                                home_country = {
-                                    exists = c:HAW
-                                    c:HAW = this
-                                }                        
-                            }
-                        }
-                        AND = {
-                            exists = scope:character
-                            scope:character = {
-    							exists = home_country
-                                home_country = {
-                                    exists = c:HAW
-                                    c:HAW = this
-                                }                        
-                            }
-                        }
-                    }
-                }
->>>>>>> f55cedb6 (1.7)
             }
         }
     }
@@ -5503,50 +5055,12 @@ indigenous_oceanic_high_clothes_recognized = {
                 AND = {
                     indian_clothes_pop_trigger = yes
                     OR = {
-<<<<<<< HEAD
                         upper_clothes_pop_trigger = yes
                         officers_clothes_pop_trigger = yes
                     }
                 }
                 AND = {
                     clergy_clothes_pop_trigger = yes
-=======
-                        middle_clothes_pop_trigger = yes
-                        soldier_clothes_pop_trigger = yes
-                    }
-                }
-            }
-        }
-    }
-
-    indian_upper_clothes = {
-        dna_modifiers = {
-            accessory = {
-                mode = add
-                gene = outfits
-                template = indian_high_outfits
-                range = { 0 1 } # For the randomness to work correctly
-            } 
-        } 
-        weight = {
-            base = 0
-            modifier = {
-                add = 500
-                OR = {
-                    AND = {
-                        indian_clothes_pop_trigger = yes
-                        OR = {
-                            upper_clothes_pop_trigger = yes
-                            officers_clothes_pop_trigger = yes
-                        }
-                    }
-                    AND = {
-                        clergy_clothes_pop_trigger = yes
-                        scope:pop = {
-                            religion = rel:sikh
-                        }
-                    }
->>>>>>> f55cedb6 (1.7)
                 }
             }
         }
@@ -6001,11 +5515,7 @@ indigenous_oceanic_high_clothes_recognized = {
         }
     }
 
-<<<<<<< HEAD
-        french_soldier_clothes = { 
-=======
     british_empire_soldier_mid_clothes = { 
->>>>>>> f55cedb6 (1.7)
         dna_modifiers = {
             accessory = {
                 mode = add
@@ -6041,7 +5551,7 @@ indigenous_oceanic_high_clothes_recognized = {
                 british_empire_clothes_pop_trigger = yes
                 soldier_clothes_pop_trigger = yes
 
-                c:GBR ?= {
+                c:DUM ?= {
                     OR = {
                         NOT = { has_dlc_feature = ep1_cosmetics }
                         AND = {
@@ -6157,20 +5667,11 @@ indigenous_oceanic_high_clothes_recognized = {
             base = 0
             modifier = {
                 add = 10000
-<<<<<<< HEAD
-                AND = {
-                   french_empire_clothes_pop_trigger = yes
-                OR = {
-                        soldier_clothes_pop_trigger = yes
-                        officers_clothes_pop_trigger = yes
-                    }
-                    
-=======
 
                 british_empire_clothes_pop_trigger = yes
                 officers_clothes_pop_trigger = yes
 
-                c:GBR ?= {
+                c:DUM ?= {
                     NOT = { has_technology_researched = bolt_action_rifles } # Defaults to khaki in era 4
                 }
             }
@@ -6224,16 +5725,12 @@ indigenous_oceanic_high_clothes_recognized = {
                             politician_clothes_trigger = yes
                         }
                     }   
->>>>>>> f55cedb6 (1.7)
                 }
                 
                 
            }
         }
     }
-<<<<<<< HEAD
-        prussian_soldier_clothes = { 
-=======
 
     japanese_meiji_soldier_clothes = { 
         dna_modifiers = {
@@ -6264,9 +5761,8 @@ indigenous_oceanic_high_clothes_recognized = {
                 add = 10000
                 AND = {
                     scope:pop ?= {
-                        culture = cu:japanese
-                        owner ?= {
-                            has_variable = meiji_restoration_complete
+                        culture = {
+                            has_discrimination_trait = south_elf
                         }
                     }
                     OR = {
@@ -6374,7 +5870,6 @@ indigenous_oceanic_high_clothes_recognized = {
     }
 
     prussian_soldier_clothes = { 
->>>>>>> f55cedb6 (1.7)
         dna_modifiers = {
             accessory = {
                 mode = add
@@ -6417,13 +5912,8 @@ indigenous_oceanic_high_clothes_recognized = {
                     }
                     AND = {
                         exists = scope:character
-<<<<<<< HEAD
                         scope:character ?= {
-                            age > 10
-=======
-                        scope:character = {
                             age >= define:NCharacters|ADULT_AGE
->>>>>>> f55cedb6 (1.7)
                             OR = {
                                 has_role = general
                                 has_role = admiral
@@ -6627,9 +6117,7 @@ indigenous_oceanic_high_clothes_recognized = {
                     is_ruler = yes
                     is_female = no
                     OR = {
-                        has_culture = cu:zulu
-                        has_culture = cu:nguni
-                        has_culture = cu:xhosa
+                        has_culture = cu:zemvelo
                     }
                 }
             }
@@ -6656,9 +6144,7 @@ indigenous_oceanic_high_clothes_recognized = {
                     is_heir = yes
                     is_female = no
                     OR = {
-                        has_culture = cu:zulu
-                        has_culture = cu:nguni
-                        has_culture = cu:xhosa
+                        has_culture = cu:zemvelo
                     }
                 }
             }
@@ -6690,9 +6176,7 @@ indigenous_oceanic_high_clothes_recognized = {
                 OR = {
                     scope:pop ?= {
                         OR = {
-                            culture = cu:zulu
-                            culture = cu:nguni
-                            culture = cu:xhosa
+                            culture = cu:zemvelo
                         }
                         OR = {
                             is_pop_type = aristocrats
@@ -6704,9 +6188,7 @@ indigenous_oceanic_high_clothes_recognized = {
                         has_role = general
                         is_ruler = no
                         OR = {
-                            has_culture = cu:zulu
-                            has_culture = cu:nguni
-                            has_culture = cu:xhosa
+                            has_culture = cu:zemvelo
                         }                    
                     }
                 }
@@ -6945,7 +6427,6 @@ indigenous_oceanic_high_clothes_recognized = {
 
 #Religion Clothes
 
-<<<<<<< HEAD
 christian_religious_clothes = {
     dna_modifiers = {
         accessory = {
@@ -6968,19 +6449,9 @@ christian_religious_clothes = {
                     }
                 }
                 clergy_clothes_pop_trigger = yes
-=======
-    christian_religious_clothes = {
-        dna_modifiers = {
-            accessory = {
-                mode = add
-                gene = outfits
-                template = christian_outfits
-                range = { 0 1 } # For the randomness to work correctly
->>>>>>> f55cedb6 (1.7)
             }
         } 
 
-<<<<<<< HEAD
 semitic_religious_clothes = {
     dna_modifiers = {
         accessory = {
@@ -7044,122 +6515,11 @@ buddhist_religious_clothes = {
             OR = {
                 AND = {
                     buddhist_clothes_pop_trigger = yes
-=======
-        weight = {
-            base = 0
-            modifier = {
-                add = 5000
-                AND = {
-                    christian_clothes_pop_trigger = yes
-                    NOT = {
-                        scope:pop ?= {
-                            religion = rel:oriental_orthodox
-                        }
-                    }
-                    clergy_clothes_pop_trigger = yes
                 }
             }
         }
     }
 
-    semitic_religious_clothes = {
-        dna_modifiers = {
-            accessory = {
-                mode = add
-                gene = outfits
-                template = arabic_upper_outfits
-                range = { 0 1 } # For the randomness to work correctly
-            }
-        } 
-
-        weight = {
-            base = 0
-            modifier = {
-                add = 1000
-                AND = {
-                    OR = {
-                        muslim_clothes_pop_trigger = yes
-                        scope:pop ?= {
-                            religion = rel:oriental_orthodox
-                        }
-                        AND = {
-                            european_clothes_pop_trigger = no
-                            jewish_clothes_pop_trigger = yes
-                        }
-                    }
-                    clergy_clothes_pop_trigger = yes
-                }
-            }
-        }
-    }
-
-    european_semitic_religious_clothes = {
-        dna_modifiers = {
-            accessory = {
-                mode = add
-                gene = outfits
-                template = semitic_upper_outfits
-                range = { 0 1 } # For the randomness to work correctly
-            }
-        } 
-
-        weight = {
-            base = 0
-            modifier = {
-                add = 1000
-                AND = {
-                    european_clothes_pop_trigger = yes
-                    jewish_clothes_pop_trigger = yes
-                    clergy_clothes_pop_trigger = yes
-                }
-            }
-        }
-    }
-
-    buddhist_religious_clothes = {
-        dna_modifiers = {
-            accessory = {
-                mode = add
-                gene = outfits
-                template = chinese_common_outfits
-                range = { 0 1 } # For the randomness to work correctly
-            }
-        } 
-
-        weight = {
-            base = 0
-            modifier = {
-                add = 1000
-                OR = {
-                    AND = {
-                        buddhist_clothes_pop_trigger = yes
-                        japanese_clothes_pop_trigger = no
-                        clergy_clothes_pop_trigger = yes
-                    }
-                    AND = {
-                        exists = scope:character
-                        scope:character = {
-                            is_ruler = yes
-                            OR = {
-                                religion = {
-                                    has_discrimination_trait = buddhist
-                                }
-                                #religion = rel:sikh
-                                religion = rel:shinto
-                            }
-    						exists = home_country
-                            home_country = {
-                                has_law = law_type:law_theocracy
-                            }
-                        }
-                    }
->>>>>>> f55cedb6 (1.7)
-                }
-            }
-        }
-    }
-
-<<<<<<< HEAD
 
 slavik_kokoshnik_clothes = {
     dna_modifiers = {
@@ -7196,66 +6556,6 @@ slavik_kokoshnik_clothes = {
                             AND = {
                                 has_discrimination_trait = southern_elf
                            }
-=======
-    slavik_kokoshnik_clothes = {
-        dna_modifiers = {
-           accessory = {
-               mode = add
-               gene = outfits
-               template = slavic_outfits_kokoshnik
-               range = { 0 1 }
-            }
-
-            accessory = {
-                mode = add
-                gene = legwear
-                template = south_american_legwear
-                range = { 0 1 }
-            }
-        }
-
-        weight = {
-            base = 0
-            modifier = {
-                add = 11000 # this should trump the midsummer clothes
-                has_cosmetic_dlc = "Dawn of Wonder"
-                OR = {
-                    AND = {
-                        scope:character ?= {
-                            culture = {
-                                has_discrimination_trait = east_slavic
-                            }
-                            is_female = yes
-                            OR = {
-                                has_variable = getting_married
-                                has_modifier = marriage_popularity
-                            }
-                        }
-                    }
-                    AND = {
-                        upper_clothes_pop_trigger = yes
-                        scope:pop ?= { # Wear this clothing either during Midsummer or during a Royal Wedding
-                            culture = {
-                                has_discrimination_trait = east_slavic
-                            }
-                            OR = {
-                                scope:pop ?= {
-                                    month = 5 # June. The trigger for months is on a 0-11 scale.
-                                }
-                                owner ?= {
-                                    OR = {
-                                        has_modifier = royal_marriage
-                                        any_scope_character = {
-                                            OR = {
-                                                is_ruler = yes
-                                                is_heir = yes
-                                            }
-                                            has_modifier = marriage_popularity
-                                        }
-                                    }
-                                }
-                            }
->>>>>>> f55cedb6 (1.7)
                         }
                     }
                 }
@@ -7273,7 +6573,6 @@ slavik_kokoshnik_clothes = {
             }
         }
 
-<<<<<<< HEAD
     weight = {
         base = 0
         modifier = {
@@ -7293,39 +6592,12 @@ slavik_kokoshnik_clothes = {
                     scope:character ?= {
                         is_female = yes
                         religion = rel:house_of_fate
-=======
-        weight = {
-            base = 0
-            modifier = {
-                add = 2000
-                has_cosmetic_dlc = "Dawn of Wonder"
-                OR = {
-                    AND = {
-                        indian_clothes_pop_trigger = yes
-                        hindu_clothes_pop_trigger = yes
-                        OR = {
-                            middle_clothes_pop_trigger = yes
-                            upper_clothes_pop_trigger = yes
-                        }
-                        scope:pop ?= {
-                            month = 10 # November. The trigger for months is on a 0-11 scale.
-                        }
-                    }
-                    AND = {
-                        indian_clothes_trigger = yes
-                        scope:character ?= {
-                            is_female = yes
-                            religion = rel:hindu
-                            month = 10 # November. The trigger for months is on a 0-11 scale.
-                        }
->>>>>>> f55cedb6 (1.7)
                     }
                 }
             }
         }
     }
 
-<<<<<<< HEAD
 midsummer_clothes = {
     dna_modifiers = {
        accessory = {
@@ -7333,25 +6605,8 @@ midsummer_clothes = {
            gene = outfits
            template = female_outfit_midsummer
            range = { 1 1 }
-=======
-    midsummer_clothes = {
-        dna_modifiers = {
-           accessory = {
-               mode = add
-               gene = outfits
-               template = female_outfit_midsummer
-               range = { 0 1 }
-            }
-            accessory = {
-                mode = add
-                gene = legwear
-                template = south_american_legwear
-                range = { 0 1 }
-            }
->>>>>>> f55cedb6 (1.7)
         }
 
-<<<<<<< HEAD
     weight = {
         base = 0
         modifier = {
@@ -7392,23 +6647,6 @@ midsummer_clothes = {
                            }
                         }
                     }
-=======
-        weight = {
-            base = 0
-            modifier = {
-                add = 2000
-                has_cosmetic_dlc = "Dawn of Wonder"
-                OR = {
-                    slavic_clothes_pop_trigger = yes
-                    nordic_clothes_pop_trigger = yes
-                }
-                OR = {
-                    middle_clothes_pop_trigger = yes
-                    upper_clothes_pop_trigger = yes
-                }
-                scope:pop ?= {
-                    month = 5 # June. The trigger for months is on a 0-11 scale.
->>>>>>> f55cedb6 (1.7)
                 }
             }
 
@@ -7425,7 +6663,6 @@ midsummer_clothes = {
             }
         }
 
-<<<<<<< HEAD
     weight = {
         base = 0
         modifier = {
@@ -7448,28 +6685,6 @@ midsummer_clothes = {
                 }
             }
 
-=======
-        weight = {
-            base = 0
-            modifier = {
-                add = 11000
-                has_cosmetic_dlc = "Dawn of Wonder"
-                OR = {
-                    european_clothes_pop_trigger = yes
-                    south_american_clothes_pop_trigger = yes
-                }
-
-                OR = {
-                    middle_clothes_pop_trigger = yes
-                    upper_clothes_pop_trigger = yes
-                }
-
-                scope:pop ?= {
-                    religion = rel:catholic
-                    month = 1 # Carnival is /usually/ in February
-                }
-            }
->>>>>>> f55cedb6 (1.7)
         }
     }
 
@@ -7499,39 +6714,10 @@ midsummer_clothes = {
             modifier = {
                 add = 10000
 
-<<<<<<< HEAD
-            OR = {
-                scope:character ?= { # Sulista, Platinean, Argentine and Uruguayan RF & TU leaders and Brazilian RF & TU leaders post-Sulista integration should wear this
-                    OR = {
-                        culture = {
-                            has_discrimination_trait = thalorian_culture_group
-=======
                 OR = {
                     scope:character ?= { # Sulista, Platinean, Argentine and Uruguayan RF & TU leaders and Brazilian RF & TU leaders post-Sulista integration should wear this
-                        OR = {
-                            AND = {
-                                exists = cu:sulista
-                                culture = cu:sulista
-                            }
-                            AND = {
-                                exists = cu:platinean
-                                culture = cu:platinean
-                            }
-                            AND = {
-                                exists = cu:argentine
-                                culture = cu:argentine
-                            }
-                            AND = {
-                                exists = cu:uruguayan
-                                culture = cu:uruguayan
-                            }
-                            culture = cu:afro_brazilian
-                            AND = {
-                                culture = cu:brazilian
-                                home_country ?= {
-                                    has_variable = sulistas_integrated
-                                }
-                            }
+                        culture = {
+                            has_discrimination_trait = thalorian_culture_group
                         }
                         has_role = politician
                         OR = {
@@ -7546,35 +6732,12 @@ midsummer_clothes = {
                                     NOT = { has_law = law_type:law_monarchy}
                                 }
                             }
->>>>>>> f55cedb6 (1.7)
                         }
                     }
                     scope:pop ?= {
-                        OR = {
-                            AND = {
-                                exists = cu:sulista
-                                culture = cu:sulista
-                            }
-                            AND = {
-                                exists = cu:platinean
-                                culture = cu:platinean
-                            }
-                            AND = {
-                                exists = cu:argentine
-                                culture = cu:argentine
-                            }
-                            AND = {
-                                exists = cu:uruguayan
-                                culture = cu:uruguayan
-                            }
-                            culture = cu:afro_brazilian
-                            AND = {
-                                culture = cu:brazilian
-                                owner ?= {
-                                    has_variable = sulistas_integrated
-                                }
-                            }
-                        }
+                        culture = {
+                            has_discrimination_trait = thalorian_culture_group
+                          }
                         OR = {
                             is_pop_type = farmers
                             is_pop_type = laborers
@@ -7583,25 +6746,9 @@ midsummer_clothes = {
                     }
                     scope:character ?= { # All Sulista and Brazilian exiles (even pre-integration) should have this look.
                         is_in_exile_pool = yes
-                        OR = {
-                            AND = {
-                                exists = cu:sulista
-                                culture = cu:sulista
-                            }
-                            AND = {
-                                exists = cu:platinean
-                                culture = cu:platinean
-                            }
-                            AND = {
-                                exists = cu:argentine
-                                culture = cu:argentine
-                            }
-                            AND = {
-                                exists = cu:uruguayan
-                                culture = cu:uruguayan
-                            }
-                            culture = cu:brazilian
-                        }
+                        culture = {
+                            has_discrimination_trait = thalorian_culture_group
+                          }
                     }
                 }
             }
@@ -7797,14 +6944,6 @@ midsummer_clothes = {
 
                 OR = {
                     european_clothes_trigger = yes
-                    AND = {
-                        scope:character ?= {
-                            OR = {
-                                culture = cu:cherokee
-                                culture = cu:muskogean
-                            }
-                        }
-                    }
                     african_diaspora_clothes_trigger = yes
                 }
                 politician_clothes_trigger = yes
@@ -7828,38 +6967,16 @@ midsummer_clothes = {
                             is_in_power_bloc = no # I am NOT scripting exceptions to all those sashes to accomodate greatcoats
                         }
                     }
-<<<<<<< HEAD
-                }
-                scope:pop ?= {
-                    OR = {
-                        culture = {
-                            has_discrimination_trait = thalorian_culture_group
-                        }
-
-                    }
-                    OR = {
-                        is_pop_type = farmers
-                        is_pop_type = laborers
-                        is_pop_type = peasants
-                    }
-                }
-                scope:character ?= { # All Sulista and Brazilian exiles (even pre-integration) should have this look.
-                    is_in_exile_pool = yes
-                    OR = {
-                        has_discrimination_trait = thalorian_culture_group
-=======
                     is_heir = no
                     OR = {  # November to February
                         month < 3
                         month > 10
->>>>>>> f55cedb6 (1.7)
                     }
                 }
             }
         }
     }
 }
-<<<<<<< HEAD
 
 ottoman_sultan_clothes = {
     dna_modifiers = {
@@ -7970,5 +7087,3 @@ ottoman_military_clothes = {
 
 
 }
-=======
->>>>>>> f55cedb6 (1.7)

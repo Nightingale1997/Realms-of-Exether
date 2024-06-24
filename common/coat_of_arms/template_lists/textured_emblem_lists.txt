@@ -18,67 +18,11 @@ textured_emblem_texture_lists = {
 				coa_def_monarchy_flag_trigger = yes
 			}
 			100 = "te_crown.dds"
-<<<<<<< HEAD
 		}					
 		
 
 
 		
-=======
-		}	
-		special_selection = {
-			trigger = { 
-				coa_def_theocracy_flag_trigger = yes
-			}
-			100 = "te_keys_st_peter.dds"
-		}			
-		# Prussia (Brandenburg)
-		# Would actually need a trigger to check that the state in question is not just a conquered state but the capital
-		special_selection = {
-				trigger = {
-					exists = scope:target
-					scope:target ?= {					
-						owns_entire_state_region = STATE_BRANDENBURG
-				}
-			}	
-			1000 = "te_eagle_prussia_monogram_crown.dds"
-		}	
-		# Spain (Toledo)
-		special_selection = {
-				trigger = {
-					exists = scope:target
-					scope:target ?= {					
-						owns_entire_state_region = STATE_TOLEDO
-				}
-			}	
-			1000 = "te_coa_spain.dds"
-		}			
-		# PORTUGAL (Estremadura)
-		special_selection = {
-				trigger = {
-					exists = scope:target
-					scope:target ?= {					
-						owns_entire_state_region = STATE_ESTREMADURA
-				}
-			}	
-			100 = "te_coa_portugal.dds"			
-		}
-		
-		special_selection = {
-			trigger = { 
-				coa_def_buddhist_trigger = yes
-			}
-			25 = "te_peacock.dds"
-			25 = "te_dharmachakra_sikkim.dds"
-			# endless knot with ribbon
-			# dharma chakra with ribbon
-			# elephant decorated
-			# golden fishes
-			
-			# add : elephant and peacock can be used for all of SE asia regardless of faith
-			# possibly make this a separate asian template for specific patterns (per bend, stripes)
-		}
->>>>>>> f55cedb6 (1.7)
 	}
     power_bloc_top = {
         20 = "pb_top_00.dds"

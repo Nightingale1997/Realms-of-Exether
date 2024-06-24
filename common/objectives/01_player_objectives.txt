@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 ﻿objective_settler_coast = {
 	background = "gfx/interface/icons/objectives/humans.dds"
-=======
-﻿objective_economic_dominance = {
-	enabled_background = "gfx/interface/icons/objectives/economic_dominance_illu.dds"
->>>>>>> f55cedb6 (1.7)
 	icon = "gfx/interface/icons/objectives/economic_dominance.dds"
 	
 	recommended_tags = { ARR DUM VOZ AHO }	
@@ -21,13 +16,8 @@
 
 }
 
-<<<<<<< HEAD
 objective_wilds_of_locari = {
 	background = "gfx/interface/icons/objectives/locari.dds"
-=======
-objective_hegemon = {
-	enabled_background = "gfx/interface/icons/objectives/hegemon_illu.dds"
->>>>>>> f55cedb6 (1.7)
 	icon = "gfx/interface/icons/objectives/hegemon.dds"
 	
 	recommended_tags = { SSC PAY AZI }	
@@ -42,15 +32,10 @@ objective_hegemon = {
 		start_tutorial_lesson = { tutorial_lesson = exether_lesson }
 	}
 	
-<<<<<<< HEAD
 }
 
 objective_ravik_undead = {
 	background = "gfx/interface/icons/objectives/soulwrought.dds"
-=======
-objective_egalitarian_society = {
-	enabled_background = "gfx/interface/icons/objectives/egalitarian_society_illu.dds"
->>>>>>> f55cedb6 (1.7)
 	icon = "gfx/interface/icons/objectives/egalitarian_society.dds"
 	
 	recommended_tags = { RAV DIS VAI }	
@@ -64,7 +49,6 @@ objective_egalitarian_society = {
 	on_start = {
 		start_tutorial_lesson = { tutorial_lesson = exether_lesson }
 	}
-<<<<<<< HEAD
 
 }
 
@@ -85,45 +69,3 @@ objective_the_scaletides = {
 	}
 
 }
-=======
-}
-
-objective_great_game = {
-	enabled_background = "gfx/interface/icons/objectives/great_game_illu.dds"
-	disabled_background = "gfx/interface/icons/objectives/great_game_illu_dis.dds"
-	icon = "gfx/interface/icons/objectives/great_game.dds"
-	
-	recommended_tags = { RUS GBR PER KAB HER KAN }
-	available_for_all_countries = no
-	
-	objective_subgoals = {
-		sg_great_game
-		sg_maintain_afghan_protectorate
-		sg_consolidate_afghanistan
-		sg_unify_afghanistan
-		sg_disrupt_russian_caucasus
-		sg_counter_russian_pacific_influence
-		sg_consolidate_british_india
-		sg_repulse_russian_pamirs
-		sg_secure_persian_border
-		sg_pacify_kazakh_steppe
-		sg_codify_chinese_border
-		sg_consolidate_central_asia
-		sg_acquire_chinese_concessions
-		sg_acquire_korean_protectorate
-		sg_expand_eastern_frontier
-		sg_secure_influence_over_persia
-		sg_consolidate_persia
-		sg_achieve_sovereignty
-		sg_secure_tibet
-	}
-	
-	final_subgoal = sg_great_game
-	
-	on_start = {
-
-	}
-	
-	required_dlc_feature = ep1_content
-}
->>>>>>> f55cedb6 (1.7)

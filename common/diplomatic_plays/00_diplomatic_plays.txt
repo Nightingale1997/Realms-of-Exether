@@ -364,11 +364,7 @@ dp_leave_power_bloc = {
 			}
 		}
 		NOT = { is_country_type = decentralized }
-<<<<<<< HEAD
-		NOT = { is_country_type = consortium }
-=======
 		diplomatic_play_has_no_relations_blockers = yes	
->>>>>>> f55cedb6 (1.7)
 	}
 
 	ai_acceptance_max = 100
@@ -438,7 +434,6 @@ dp_take_treaty_port = {
 		diplomatic_play_has_no_relations_blockers = yes	
 	}
 	
-<<<<<<< HEAD
 	on_weekly_pulse = {}
 	
 	on_war_begins = {}
@@ -503,9 +498,6 @@ dp_reduce_autonomy = {
 		aggressive_diplomatic_plays_permitted = yes
 		scope:target_country = { is_subject = yes }
 	}
-=======
-	ai_acceptance_max = 100
->>>>>>> f55cedb6 (1.7)
 	
 	on_weekly_pulse = {}
 	
@@ -675,7 +667,6 @@ dp_annex_subject = {
 			}
 		}
 	}
-<<<<<<< HEAD
 	
 	possible = {
 		OR = {
@@ -706,8 +697,6 @@ dp_annex_subject = {
 	on_weekly_pulse = {}
 	
 	on_war_begins = {}
-=======
->>>>>>> f55cedb6 (1.7)
 
 	on_war_end = {}
 }
@@ -1298,7 +1287,6 @@ dp_leadership_thaloria = {
 	}	
 	
 	possible = {
-<<<<<<< HEAD
 		OR = {
 			has_strategic_land_adjacency = scope:target_country
 			AND = {
@@ -1314,19 +1302,6 @@ dp_leadership_thaloria = {
 			}
 		}
 		has_technology_researched = nationalism			
-=======
-		has_technology_researched = pan-nationalism			
-	}
-}
-
-dp_humiliation = {
-	war_goal = humiliation
-	
-	texture = "gfx/interface/icons/war_goals/humiliation.dds"
-	
-	possible = {	
-		aggressive_diplomatic_plays_permitted = yes		
->>>>>>> f55cedb6 (1.7)
 	}
 	
 	on_weekly_pulse = {}
