@@ -34,7 +34,8 @@
             modifier = {
                 add = 90000
                 scope:character ?= {
-                    has_template = PER_reza_pahlavi
+                    always = no
+                    #has_template = PER_reza_pahlavi
                     is_ruler = no
                 }
             }
@@ -65,7 +66,8 @@
             modifier = {
                 add = 90000
                 scope:character ?= {
-                    has_template = PER_reza_pahlavi
+                    always = no
+                    #has_template = PER_reza_pahlavi
                     is_ruler = yes
                     owner ?= {
                         NOT = { has_law = law_type:law_monarchy }
@@ -108,7 +110,8 @@
             modifier = {
                 add = 90000
                 scope:character ?= {
-                    has_template = PER_reza_pahlavi
+                    always = no
+                    #has_template = PER_reza_pahlavi
                     is_ruler = yes
                     owner ?= {
                         has_law = law_type:law_monarchy
@@ -216,6 +219,7 @@
                 agitator_character_trigger = no
                 scope:character ?= {
                     age > define:NCharacters|ADULT_AGE
+                    culture = cu:ceraunian
                 }
                 OR = {
                     military_clothes_trigger = yes
@@ -299,7 +303,8 @@
                 has_dlc_feature = ep1_cosmetics
 
                 scope:character ?= {
-                    has_template = per_nasir_al_din_qajar_template
+                    always = no
+                    #has_template = per_nasir_al_din_qajar_template
                     age > define:NCharacters|ADULT_AGE
                 }
             }
@@ -1746,25 +1751,34 @@
 
                     NOR = {
                         ### the Cuirass does not work with agitator_blanqui coat ###
-                        has_template = fra_blanqui_character_template
-                        has_template = agitator_alexandru_bogdan_pitesti
-                        has_template = agitator_francesc_pi_i_margall
-                        has_template = agitator_john_stuart_mill
+                        always = no
+                    #has_template = fra_blanqui_character_template
+                        always = no
+                    #has_template = agitator_alexandru_bogdan_pitesti
+                        always = no
+                    #has_template = agitator_francesc_pi_i_margall
+                        always = no
+                    #has_template = agitator_john_stuart_mill
                         has_variable = is_stirner_var
-                        has_template = rus_leon_trotsky_character_template
+                        always = no
+                    #has_template = rus_leon_trotsky_character_template
                         AND = {
-                            has_template = fra_napoleon_iii_character_template
+                            always = no
+                    #has_template = fra_napoleon_iii_character_template
                             monarchy_clothes_trigger = no
                         }
 
                         ### the Cuirass does not work with agitator_john_brown coat ###
-                        has_template = usa_john_brown_character_template
+                        always = no
+                    #has_template = usa_john_brown_character_template
 
                         ### the Cuirass does not work with agitator_maurras coat ###
-                        has_template = fra_maurras_character_template
+                        always = no
+                    #has_template = fra_maurras_character_template
 
                         ### the Cuirass does not work with late military uniforms ###
-                        has_template = PER_reza_pahlavi
+                        always = no
+                    #has_template = PER_reza_pahlavi
                     }
                 }
             }
