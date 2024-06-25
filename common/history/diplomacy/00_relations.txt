@@ -40,15 +40,5 @@
 		set_relations = { country = c:QON value = -10 }
 		set_relations = { country = c:ZHU value = -10 }
 	}
-	c:KAB ?= {
-		set_relations = { country = c:GBR value = -20 }
-		set_relations = { country = c:BIC value = -20 }
-		set_relations = { country = c:RUS value = 20 }
-		set_relations = { country = c:HER value = -10 }
-		set_relations = { country = c:KAN value = -20 }
-	}
-	c:KAN ?= {
-		set_relations = { country = c:RUS value = 10 }
-		set_relations = { country = c:HER value = -20 }
-	}
+
 }
