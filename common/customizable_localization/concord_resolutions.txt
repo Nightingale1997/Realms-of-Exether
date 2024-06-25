@@ -14,9 +14,9 @@
 	}
 	text = {
 		trigger = {
-			has_journal_entry = je_consortium_intervention
+			has_journal_entry = je_concord_intervention
 		}
-		localization_key = "je_consortium_intervention_gui"
+		localization_key = "je_concord_intervention_gui"
 	}
 	text = {
 		trigger = {
@@ -48,21 +48,21 @@ pending_resolution_loc_concord = {
 	}
 }
 
-consortium_voting_balance = {
+concord_voting_balance = {
 	type = country
 	text = {
 		trigger = {
 			supporting_value_total_concord >= opposing_value_total_concord
 		}
-		localization_key = "CONSORTIUM_WINNING_BALANCE"
+		localization_key = "CONCORD_WINNING_BALANCE"
 	}
 	text = {
 		trigger = {
 			opposing_value_total_concord >= supporting_value_total_concord
 		}
-		localization_key = "CONSORTIUM_LOSING_BALANCE"
+		localization_key = "CONCORD_LOSING_BALANCE"
 	}
 	text = {
-		localization_key = "CONSORTIUM_NONE_BALANCE"
+		localization_key = "CONCORD_NONE_BALANCE"
 	}
 }

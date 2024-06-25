@@ -1,87 +1,97 @@
 ﻿POWER_BLOCS = {
-	c:DUM = {
+	#c:DIS = {
+	#	create_power_bloc = {
+	#		name = METTERNICH_SYSTEM
+	#
+	#		map_color = { 219 211 157 }
+	#
+	#		founding_date = 1015.6.9 
+	#		identity = identity_trade_league
+	#		principle = principle_external_trade_1
+	#	}
+	#	if = {
+	#		limit = {
+	#			has_dlc_feature = power_bloc_features
+	#		}
+	#		power_bloc = {
+	#			add_principle = principle_freedom_of_movement_1
+	#		}
+	#	}
+	#}
+
+	c:RAV = {
 		create_power_bloc = {
-			name = BRITISH_EMPIRE
-			map_color = hsv{ 0.99  0.7  0.9 }
+			name = THIRD_CRUSADE
 
-			founding_date = 1784.5.12 # Treaty of Paris (1783) comes into effect
-			identity = identity_sovereign_empire
-			principle = principle_vassalization_1
+			map_color = { 219 211 157 }
 
-			# subjects are automatically part of the bloc
+			founding_date = 1015.6.9 
+			identity = identity_military_treaty_organization
+			principle = principle_aggressive_coordination_1
 		}
 		if = {
 			limit = {
 				has_dlc_feature = power_bloc_features
 			}
 			power_bloc = {
-				add_principle = principle_colonial_offices_2
-			}
-		}
-	}
-
-	c:YUL = {
-		create_power_bloc = {
-			name = CEFENG_SYSTEM
-			map_color = hsv{ 0.99  0.7  0.9 }
-
-			founding_date = 1784.5.12 # Treaty of Paris (1783) comes into effect
-			identity = identity_sovereign_empire
-			principle = principle_vassalization_1
-
-			# subjects are automatically part of the bloc
-		}
-		if = {
-			limit = {
-				has_dlc_feature = power_bloc_features
-			}
-			power_bloc = {
-				add_principle = principle_colonial_offices_2
+				#add_principle = principle_freedom_of_movement_1
 			}
 		}
 	}
 
 	c:VAI = {
 		create_power_bloc = {
-			name = METTERNICH_SYSTEM
+			name = ICEBREAKER_FLEETS
 
 			map_color = { 219 211 157 }
 
-			founding_date = 1815.6.9 # Final agreement of the 1814 Congress of Vienna
-			identity = identity_ideological_union
-			principle = principle_creative_legislature_1
+			founding_date = 1015.6.9 
+			identity = identity_trade_league
+			principle = principle_external_trade_1
 
-
-			# Habsburg leaders in Italy and Italian states held up by direct Austrian intervention
 			member = c:WHX
-			member = c:XXP
 		}
 		if = {
 			limit = {
 				has_dlc_feature = power_bloc_features
 			}
 			power_bloc = {
-				add_principle = principle_defensive_cooperation_1
+				add_principle = principle_freedom_of_movement_1
 			}
 		}
 	}
 
-	# Zollverein (German customs union)
-	# Note: Countries were taken from old customs union pacts
-	c:CER = {
+	c:DUM = {
 		create_power_bloc = {
-			name =  ZOLLVEREIN
+			name = FELLOWSHIP_OF_MAN
+			map_color = hsv{ 0.99  0.7  0.9 }
 
-			map_color = { 147 130 110 }
+			founding_date = 784.5.12
+			identity = identity_sovereign_empire
+			principle = principle_vassalization_1
 
-			founding_date = 1834.01.01
-			identity = identity_trade_league
-			principle = principle_internal_trade_1
-			
-			member = c:SMA # After 1836, but member for gameplay balance reasons
+			# subjects are automatically part of the bloc
+		}
+		if = {
+			limit = {
+				has_dlc_feature = power_bloc_features
+			}
+			power_bloc = {
+				add_principle = principle_sacred_civics_2
+			}
+		}
+	}
 
+	c:YUL = {
+		create_power_bloc = {
+			name = GARKAL_SYSTEM
+			map_color = hsv{ 0.6  0.6  0.6 }
 
-			# Steuerverein- separate from the Zollverein. Would include HAN, BRA, OLD
+			founding_date = 984.5.12 
+			identity = identity_sovereign_empire
+			principle = principle_exploit_members_1
+
+			# subjects are automatically part of the bloc
 		}
 		if = {
 			limit = {
@@ -93,49 +103,34 @@
 		}
 	}
 
-	c:THI = {
+
+
+
+	c:ARR = {
 		create_power_bloc = {
-			name = ROSSIYSKAYA_IMPERIYA
+			name =  ASTRAL_CONSORTIUM
 
-			map_color = { 78 134 62 }
+			map_color = { 190 190 0 }
 
-			founding_date = 1825.12.1 # Coronation of Nicholas I
-			identity = identity_sovereign_empire
-			principle = principle_vassalization_1
-
-			# subjects are automatically part of the bloc
+			founding_date = 1063.03.04
+			identity = identity_trade_league
+			principle = principle_internal_trade_1
+			
+			member = c:SLB
+			member = c:CLR
+			member = c:PRI
+			member = c:GRH
+			member = c:FTH
+			member = c:BRB
 		}
 		if = {
 			limit = {
 				has_dlc_feature = power_bloc_features
 			}
 			power_bloc = {
-				add_principle = principle_defensive_cooperation_1
+				add_principle = principle_advanced_research_1
 			}
 		}
 	}
 
-	# America gets no power bloc because it's 1836
-
-	# Ottomans: "Exhalted State", Devlet-i 'Aliye. Using an irregular character for ', ʿ, in loc.
-	c:DIS = {
-		create_power_bloc = {
-			name = DEVLET_I__ALIYE
-
-			map_color = { 170 206 162 }
-
-			founding_date = 1453.5.29
-			identity = identity_sovereign_empire
-			principle = principle_vassalization_1
-
-			member = c:ORO		}
-		if = {
-			limit = {
-				has_dlc_feature = power_bloc_features
-			}
-			power_bloc = {
-				add_principle = principle_external_trade_1
-			}
-		}
-	}	
 }

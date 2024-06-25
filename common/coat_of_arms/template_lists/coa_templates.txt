@@ -314,10 +314,10 @@ coat_of_arms_template_lists = {
 
 		special_selection = {
 			trigger = { 
-				exists = c:GBR
-				ROOT.power_bloc_leader = c:GBR
+				exists = c:ARR
+				ROOT.power_bloc_leader = c:ARR
 			}
-			90000 = gbr_power_bloc_1
+			90000 = arr_power_bloc_1
 		}	
 		special_selection = {
 			trigger = { 
@@ -346,6 +346,13 @@ coat_of_arms_template_lists = {
 				ROOT.power_bloc_leader = c:TUR
 			}
 			90000 = tur_power_bloc_1
+		}
+		special_selection = {
+			trigger = { 
+				exists = c:YUL
+				ROOT.power_bloc_leader = c:YUL
+			}
+			90000 = yul_power_bloc
 		}	
 	}
 }
