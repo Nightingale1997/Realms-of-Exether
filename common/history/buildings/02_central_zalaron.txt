@@ -1122,13 +1122,14 @@
 	}
 		
 	s:STATE_CAM_RINNARA = {
-		create_building={
-			building="building_barracks"
-			level=10
-			reserves=1
-			activate_production_methods={ "pm_no_organization" }
-		}
+
 		region_state:CLL = {
+			create_building={
+				building="building_barracks"
+				level=10
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+			}
 			create_building={
 				building="building_wheat_farm"
 				level=5
