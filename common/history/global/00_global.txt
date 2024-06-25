@@ -357,6 +357,14 @@ GLOBAL = {
 		}
 	}
 
+	#Declaration of Independence
+	every_country = {
+		limit = {
+			is_subject = yes
+		}
+		set_variable = declaration_of_independence_ach_possible
+	}
+
 	#Event Variables
 	
 	set_global_variable = {

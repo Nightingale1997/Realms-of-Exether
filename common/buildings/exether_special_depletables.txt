@@ -14,6 +14,10 @@
 	production_method_groups = {
 		pmg_base_building_ship_graveyard
 	}
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
 }
 building_nonmagical_comet = {   
 	building_group = bg_nonmagical_comet
@@ -25,6 +29,10 @@ building_nonmagical_comet = {
 	production_method_groups = {
 		pmg_base_building_nonmagical_comet
 	}
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
 }
 building_wishstone_comet = { 
 	building_group = bg_wishstone_comet
@@ -38,6 +46,9 @@ building_wishstone_comet = {
 		pmg_base_building_wishstone_comet
 	}
 
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
 }
 building_feywild_reserve = {
 building_group = bg_feywild_reserve
@@ -51,8 +62,12 @@ building_group = bg_feywild_reserve
 		pmg_base_building_feywild_reserve
 		pmg_equipment
 		pmg_transportation_building_logging_camp
-		pmg_ownership_capital_building_logging_camp
+		
 	}
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
 }
 building_jellyfish_wharf = { 
 	building_group = bg_flammable_jellyfish
@@ -70,4 +85,8 @@ building_jellyfish_wharf = {
 	production_method_groups = {
 		pmg_base_building_jellyfish_wharf
 	}
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
 }

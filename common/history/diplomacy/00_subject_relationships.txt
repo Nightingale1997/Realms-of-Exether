@@ -32,6 +32,12 @@
 	c:RAV = {
 
 	}
+	c:BDB = {
+		create_diplomatic_pact = {
+			country = c:RTD
+			type = protectorate
+		}
+	}
 	c:ARR = {
 		create_diplomatic_pact = {
 			country = c:CLR
@@ -84,4 +90,18 @@
 			type = puppet
 		}
 	}
+
+	
+	
+	# Starting liberty desire
+	#c:BIC = {
+	#	add_liberty_desire = -30
+	#}
+	
+	#c:BIC ?= {
+	#	every_subject_or_below = {
+	#		 set_relations = { country = c:BIC value = 50 }
+	#		 add_liberty_desire = -20
+	#	}
+	#}	
 }

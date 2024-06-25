@@ -239,6 +239,58 @@
         }
     }
 
+    historical_reza_pahlavi_headgear = {
+        dna_modifiers = {
+            accessory = {
+               mode = add
+               gene = headgear
+               template = reza_shah_pahlavi_cap
+               range = { 0 1.0 } 
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 90000
+
+                has_dlc_feature = ep1_cosmetics
+
+                scope:character ?= {
+                    always = no
+                    #has_template = PER_reza_pahlavi
+                }
+            }
+        }
+    }
+
+    naser_qajar_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = arabic_naser_qajar
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 90000
+
+                has_dlc_feature = ep1_cosmetics
+
+                scope:character ?= {
+                    age > 12
+                    always = no
+                    #has_template = per_nasir_al_din_qajar_template
+                    is_ruler = yes
+                }
+            }
+        }
+    }
+
 ### END OF HISTORICAL CLOTHING ###
 
  
@@ -504,15 +556,34 @@
             base = 0
             modifier = {
                 add = 100
-                american_clothes_trigger = yes
-                agitator_character_trigger = no
                 OR = {
-                    scope:character = {
-                        has_role = general
+                    AND = {
+                        c:VAI ?= {
+                            has_technology_researched = rifling
+                            NOT = { has_technology_researched = bolt_action_rifles }
+                        }
+                        american_clothes_pop_trigger = yes
+                        OR = {
+                            officers_clothes_pop_trigger = yes
+                            soldier_clothes_pop_trigger = yes
+                        }
                     }
                     AND = {
-                        politician_clothes_trigger = yes
-                        armed_forces_clothes_trigger = yes
+                        american_clothes_trigger = yes
+                        agitator_character_trigger = no
+                        OR = {
+                            scope:character ?= {
+                                has_role = general
+                                is_female = no
+                            }
+                            AND = {
+                                politician_clothes_trigger = yes
+                                armed_forces_clothes_trigger = yes
+                                scope:character ?= {
+                                    is_female = no
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -549,6 +620,7 @@
                         agitator_character_trigger = no
                         scope:character = {
                             has_role = general
+                            is_female = no
                         }
                     }
                 }
@@ -611,7 +683,7 @@
                 mode = add
                 gene = headgear
                 template = british_military_headgear
-                range = { 0 0.5 } # For the randomness to work correctly
+                range = { 0 0.5 }
             }
         }
         weight = {
@@ -633,7 +705,120 @@
         }
     }
 
-    british_military_pupet_headgear = {
+    british_military_soldier_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = gb_01
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 500
+
+                scope:pop ?= {
+                    culture = {
+                        has_discrimination_trait = european_heritage
+                    }
+                    owner = {
+                        c:GBR ?= this
+                    }
+                }
+                OR = {
+                    soldier_clothes_pop_trigger = yes
+                    officers_clothes_pop_trigger = yes
+                }
+
+                c:GBR ?= {
+                    NOT = { has_technology_researched = repeaters }
+                }
+            }
+        }
+    }
+
+    british_military_soldier_mid_late_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = european_military_headgear
+                accessory = male_headgear_european_military_09
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 500
+
+                scope:pop ?= {
+                    culture = {
+                        has_discrimination_trait = european_heritage
+                    }
+                    owner = {
+                        c:GBR ?= this
+                    }
+                }
+                OR = {
+                    soldier_clothes_pop_trigger = yes
+                    officers_clothes_pop_trigger = yes
+                }
+
+                c:GBR ?= {
+                    has_technology_researched = repeaters
+                }
+            }
+        }
+    }
+
+    british_military_headgear_late = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = late_military_cap
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 20000
+
+                has_dlc_feature = ep1_cosmetics
+
+                british_empire_clothes_pop_trigger = yes
+                officers_clothes_pop_trigger = yes
+
+                c:GBR ?= {
+                    has_technology_researched = bolt_action_rifles
+                }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 20000
+
+                has_dlc_feature = ep1_cosmetics
+
+                british_empire_clothes_trigger = yes
+
+                scope:character ?= {
+                    age >= define:NCharacters|ADULT_AGE
+                    has_role = general
+                }
+
+                c:GBR ?= {
+                    has_technology_researched = bolt_action_rifles
+                }
+            }
+        }
+    }
+
+    british_military_puppet_headgear = {
         dna_modifiers = {
             accessory = {
                 mode = add
@@ -684,6 +869,33 @@
                             officers_clothes_pop_trigger = yes
                         }
                     }
+                }
+            }
+        }
+    }
+
+    french_military_headgear_late = { # only officers wear the horizon blue cylindrical kepi, for now
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = european_late_military_headgear
+                accessory = male_headgear_european_military_cap_french_01
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 20000
+
+                has_dlc_feature = ep1_cosmetics
+                has_dlc_feature = voice_of_the_people_content
+
+                french_empire_clothes_pop_trigger = yes
+                officers_clothes_pop_trigger = yes
+
+                c:FRA ?= {
+                    has_technology_researched = automatic_machine_guns
                 }
             }
         }
@@ -760,6 +972,70 @@
                     }
                 }
                 agitator_character_trigger = no
+            }
+        }
+    }
+
+    russian_military_headgear_soldier = {
+        dna_modifiers = {
+             accessory = {
+                mode = add
+                gene = headgear
+                template = russian_military_headgear
+                accessory = male_headgear_russian_military_01
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 10000
+
+                has_dlc_feature = ep1_cosmetics
+
+                russian_empire_clothes_pop_trigger = yes
+                OR = {
+                    soldier_clothes_pop_trigger = yes
+                    officers_clothes_pop_trigger = yes
+                }
+            }
+        }
+    }
+
+    russian_military_late_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = russian_military_headgear
+                accessory = male_headgear_european_military_03_late_russian
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 15000
+
+                has_dlc_feature = ep1_cosmetics # the hat isn't DLC material but it doesn't make sense without DLC outfits
+
+                c:RUS ?= {
+                    has_technology_researched = bolt_action_rifles
+                }
+                OR = {
+                    AND = {
+                        russian_empire_clothes_pop_trigger = yes
+                        OR = {
+                            officers_clothes_pop_trigger = yes
+                            soldier_clothes_pop_trigger = yes
+                        }
+                    }
+                    AND = {
+                        russian_empire_clothes_trigger = yes
+                        agitator_character_trigger = no
+                        scope:character = {
+                            has_role = general
+                        }
+                    }
+                }
             }
         }
     }
@@ -1128,7 +1404,46 @@
                 add = 200
                 AND = {
                     arabic_clothes_trigger = yes
+                    scope:character ?= {
+                        culture = {
+                            NOT = { has_discrimination_trait = central_asian_heritage }
+                        }
+                    }
                     arabic_fez_trigger = yes
+                }
+            }
+            modifier = {
+                add = 10000
+
+                exists = c:EGY
+                OR = {
+                    AND = {
+                        scope:pop ?= {
+                            owner ?= {
+                                c:EGY = this
+                            }
+                        }
+                        OR = {
+                            officers_clothes_pop_trigger = yes
+                            soldier_clothes_pop_trigger = yes
+                        }
+                    }
+                    AND = {
+                        scope:character ?= {
+                            owner ?= {
+                                c:EGY = this
+                            }
+                            OR = {
+                                has_role = general
+                                is_ruler = yes
+                                is_heir = yes
+                                AND = {
+                                    armed_forces_clothes_trigger = yes
+                                    politician_clothes_trigger = yes
+                                }
+                            }
+                        }
+                    }
                 }
             }
             modifier = {
@@ -1338,10 +1653,9 @@
             base = 0
             modifier = {
                 add = 100
+                upper_clothes_pop_trigger = yes
                 OR = {
-                    scope:character ?= {
-                       has_variable = THE_NEFARIOUS_TOP_HAT
-                    }
+                    european_clothes_pop_trigger = yes
                     AND = {
                         OR = {
                             european_clothes_pop_trigger = yes
@@ -1355,8 +1669,34 @@
                                 }
                             }
                         }
-                        upper_clothes_pop_trigger = yes
                     }
+                }
+            }
+            modifier = {
+                add = 1000
+                european_clothes_trigger = yes
+                scope:character ?= {
+                    age >= define:NCharacters|ADULT_AGE
+                    OR = {
+                        AND = {
+                            is_interest_group_type = ig_landowners
+                            has_role = politician
+                            NOR = {
+                                has_role = general
+                                has_role = admiral
+                            }
+                            is_ruler = no
+                        }
+                        always = no
+                    #has_template = usa_lincoln_character_template
+                    }
+                }
+            }
+            modifier = {
+                add = 10000
+
+                scope:character ?= {
+                   has_variable = THE_NEFARIOUS_TOP_HAT
                 }
             }
         }
@@ -1429,15 +1769,15 @@
             accessory = {
                 mode = add
                 gene = headgear
-                template = american_military_headgear
-                range = { 0 0.8 } # For the randomness to work correctly
+                template = native_american_common_headgear
+                range = { 0 1 }
             }
         }
 
         weight = {
             base = 0
             modifier = {
-                add = 100
+                add = 101
                 native_north_american_clothes_trigger = yes
                 ruler_clothes_trigger = yes
                 scope:character = {
@@ -1653,5 +1993,543 @@
             }
         }
 
-    
+    zulu_ruler_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = zulu_impi_headgear
+                accessory = male_headgear_zulu_impi_02
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000
+
+                scope:character ?= {
+                    is_ruler = yes
+                    is_female = no
+                    OR = {
+                        has_culture = cu:zemvelo
+                    }
+                }
+            }
+        }
+    }
+
+    zulu_impi_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = zulu_impi_headgear
+                accessory = male_headgear_zulu_impi_01
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000
+
+                OR = {
+                    scope:pop ?= {
+                        OR = {
+                            culture = cu:zemvelo
+                        }
+                        OR = {
+                            is_pop_type = aristocrats
+                            is_pop_type = soldiers
+                            is_pop_type = officers
+                        }
+                    }
+                    scope:character ?={
+                        is_ruler = no
+                        OR = {
+                            is_heir = yes
+                            has_role = general
+                        }
+                        OR = {
+                            has_culture = cu:zemvelo
+                        }                    
+                    }
+                }
+            }
+        }
+    }
+
+    persian_landowners_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = arabic_landowners_hat
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 5000
+
+                has_dlc_feature = ep1_cosmetics
+
+                OR = {
+                    scope:pop ?= {
+                        is_pop_type = aristocrats
+                        culture = {
+                            has_discrimination_trait = iranian_turanian_culture_group
+                            has_discrimination_trait = middle_eastern_heritage
+                        }
+                    }
+                    scope:character ?= {
+                        is_interest_group_type = ig_landowners
+                        age > 12
+                        has_role = politician
+                        NAND = {    # monarchs never wear this hat
+                            is_ruler = yes
+                            owner ?={
+                                has_law = law_type:law_monarchy
+                            }
+                        }
+                        culture = {
+                            has_discrimination_trait = iranian_turanian_culture_group
+                            has_discrimination_trait = middle_eastern_heritage
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    persian_monarch_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = male_headgear_arabic_royal_01
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 5000
+
+                has_dlc_feature = ep1_cosmetics
+
+                scope:character ?= {
+                    is_ruler = yes
+                    owner ?= {
+                        c:PER ?= this
+                        has_law = law_type:law_monarchy
+                    }
+                }
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 5000
+
+                has_dlc_feature = ep1_cosmetics
+
+                scope:pop ?= {
+                    owner ?= {
+                        c:PER ?= this
+                    }
+                    OR = {
+                        is_pop_type = soldiers
+                        is_pop_type = officers
+                    }
+                }
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 5000
+
+                has_dlc_feature = ep1_cosmetics
+
+                c:PER ?= {
+                    NOT = { has_technology_researched = bolt_action_rifles }
+                }
+
+                scope:character ?= {
+                    OR = {
+                        AND = {
+                            exists = c:PER
+                            home_country ?= c:PER
+                        } 
+                    }
+                    is_ruler = no
+                    OR = {
+                        has_role = general
+                        AND = {
+                            has_role = politician
+                            is_interest_group_type = ig_armed_forces
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    persian_agitator_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = male_headgear_arabic_sattar_khan
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 10000
+
+                has_dlc_feature = ep1_cosmetics
+
+                scope:character ?= {
+                    has_role = agitator
+                    is_ruler = no
+                    culture = {
+                        has_discrimination_trait = iranian_turanian_culture_group
+                        has_discrimination_trait = middle_eastern_heritage
+                    }
+                }
+            }
+        }
+    }
+
+    dost_mohammad_khan_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = arabic_turban_mohammad_khan
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 10000
+
+                has_dlc_feature = ep1_cosmetics
+
+                scope:character ?= {
+                    is_ruler = yes
+                    owner ?= {
+                        has_law = law_type:law_monarchy
+                        OR = {
+                            c:AFG ?= this
+                            can_form_nation = AFG
+                        }
+                    }
+                    culture = {
+                        has_discrimination_trait = iranian_turanian_culture_group
+                        has_discrimination_trait = central_asian_heritage
+                    }
+                }
+            }
+        }
+    }
+
+    chokha_cherkeska_cossack_clothes = {
+        dna_modifiers = {
+             accessory = {
+                mode = add
+                gene = headgear
+                template = cossack_headgear
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 10000
+                scope:character ?= {
+                    age > 12
+                    culture = {
+                        has_discrimination_trait = caucasus_group
+                    }
+                }
+                OR = {
+                    scope:character ?= {
+                        is_ruler = yes
+                        owner ?= {
+                            has_law = law_type:law_monarchy
+                        }
+                    }
+                    military_clothes_trigger = yes
+                    AND = {
+                        armed_forces_clothes_trigger = yes
+                        politician_clothes_trigger = yes
+                    }
+                }
+            }
+            modifier = {
+                add = 20000
+                scope:pop ?= {
+                    OR = {
+                        AND = {
+                            culture = {
+                                has_discrimination_trait = caucasus_group
+                            }
+                            OR = {
+                                is_pop_type = soldiers
+                                is_pop_type = officers
+                                is_pop_type = farmers
+                            }
+                        }
+                        AND = {
+                            culture = {
+                                has_discrimination_trait = east_slavic
+                            }
+                            state = {
+                                OR = {
+                                    state_region = s:STATE_KUBAN
+                                    state_region = s:STATE_STAVROPOL
+                                    state_region = s:STATE_DAGESTAN
+                                    state_region = s:STATE_NORTH_CAUCASUS
+                                    state_region = s:STATE_ROSTOV
+                                    state_region = s:STATE_KALMYKIA
+                                    state_region = s:STATE_ASTRAKHAN
+                                }
+                            }
+                            OR = {
+                                is_pop_type = soldiers
+                                is_pop_type = officers
+                                is_pop_type = farmers
+                            }
+                        }
+                    }
+                }
+            }
+            modifier = {
+                add = 20000
+                scope:character ?= {
+                    age > 12
+                    culture = {
+                        has_discrimination_trait = east_slavic
+                    }
+                    owner ?= {
+                        c:RUS ?= this
+                    }
+                    is_ruler = no
+                    is_heir = no
+                    OR = {
+                        has_trait = bandit
+                        AND = {
+                            has_role = general
+                            OR = {
+                                has_trait = celebrity_commander
+                                has_trait = pillager
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    academic_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = academic_cap
+                range = { 0 1 } # For the randomness to work correctly
+            } 
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000
+                academics_clothes_pop_trigger = yes
+                OR = {
+                    european_clothes_pop_trigger = yes
+                    african_diaspora_pop_clothes_trigger = yes
+                }
+                slavic_clothes_pop_trigger = no
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 90000
+                OR = {
+                    european_clothes_trigger = yes
+                    african_diaspora_clothes_trigger = yes
+                }
+                ruler_clothes_trigger = yes
+                scope:character ?= {
+                    OR = {
+                        AND = {
+                            has_trait = erudite
+                            owner ?= {
+                                is_in_power_bloc = yes
+                                power_bloc ?= {
+                                    has_principle = principle:principle_advanced_research_1
+                                }
+                            }
+                        }
+                        AND = {
+                            OR = {
+                                has_trait = erudite
+                                has_trait = literary
+                                has_trait = master_bureaucrat
+                            }
+                            owner ?= {
+                                is_in_power_bloc = yes
+                                power_bloc ?= {
+                                    has_principle = principle:principle_advanced_research_2
+                                }
+                            }
+                        }
+                        owner ?= {
+                            is_in_power_bloc = yes
+                            power_bloc ?= {
+                                has_principle = principle:principle_advanced_research_3
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    power_bloc_crown = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = crown
+                range = { 0 1 } # For the randomness to work correctly
+            } 
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000
+                academics_clothes_pop_trigger = yes
+                OR = {
+                    european_clothes_pop_trigger = yes
+                    african_diaspora_pop_clothes_trigger = yes
+                }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 90000
+
+                OR = {
+                    european_clothes_trigger = yes
+                    african_diaspora_clothes_trigger = yes
+                }
+                monarchy_clothes_trigger = yes
+                scope:character ?= {
+                    is_ruler = yes
+                    is_female = yes
+
+                    owner ?= {
+                        is_in_power_bloc = yes
+                    }
+                }
+            }
+        }
+    }
+
+    papal_headgear = {
+        dna_modifiers = {
+           accessory = {
+               mode = add
+               gene = headgear
+               template = european_Catholic_headgear
+               range = { 0 1 }
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 2000
+                
+                scope:character ?= {
+                    owner ?= {
+                        c:PAP ?= this
+                        has_law = law_type:law_theocracy
+                    }
+                    is_ruler = yes
+                }
+            }
+        }
+    }
+
+    catholic_clergy_headgear = {
+        dna_modifiers = {
+           accessory = {
+               mode = add
+               gene = headgear
+               template = catholic_clergy_headgear
+               range = { 0 1 }
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 5000
+
+                military_clothes_trigger = no
+                exists = scope:character
+
+                scope:character ?= {
+                    religion = {
+                        has_discrimination_trait = uriks_pantheon
+                    }
+                    OR = {
+                        AND = {
+                            politician_clothes_trigger = yes 
+                            monarchy_clothes_trigger = no
+                            OR = {
+                                devout_clothes_trigger = yes
+                                AND = {
+                                    exists = scope:character
+                                    exists = c:PAP
+                                    scope:character = {
+                                        exists = home_country
+                                        home_country = c:PAP
+                                        has_ideology = ideology:ideology_theocrat
+                                    }
+                                }
+                            }
+                        }
+                        AND = {
+                            christian_clothes_trigger = yes
+                            ruler_clothes_trigger = yes
+                            exists = home_country
+                            home_country = {
+                                has_law = law_type:law_theocracy
+                            }
+                        }
+                    }
+                }  
+            }
+            modifier = {
+                add = 5000
+
+                scope:pop ?= {
+                    is_pop_type = clergymen
+                    religion = { has_discrimination_trait = uriks_pantheon }
+                }
+            }
+        }
+    }
 }

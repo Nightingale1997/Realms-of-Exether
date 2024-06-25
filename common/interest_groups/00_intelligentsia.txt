@@ -65,6 +65,19 @@
 				remove_ideology = ideology_anti_clerical
 			}
 		}
+		# Britain and other Constitutionalists
+		else_if = {
+			limit = {
+				OR = {
+					c:GBR ?= THIS
+					c:JAP ?= THIS
+				}
+			}
+			ig:ig_intelligentsia = {
+				remove_ideology = ideology_republican
+				add_ideology = ideology_constitutionalist
+			}
+		}
 		
 		if = {
 			limit = {
