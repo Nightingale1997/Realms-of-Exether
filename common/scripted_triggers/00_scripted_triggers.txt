@@ -36,19 +36,45 @@ country_has_voting_franchise = {
 	}
 }
 
-country_can_form_power_bloc = {
-	AND = {
-		is_revolutionary = no
-		country_rank >= rank_value:major_power
-	}
-	
-}
-
 power_bloc_is_weak = {
 	power_bloc_leader = {
 		country_rank < rank_value:great_power
 	}
 }
+
+country_can_form_power_bloc = {
+    is_revolutionary = no
+    
+    trigger_if = {
+        limit = {
+            NOT = {
+                is_country_type = unrecognized
+            }
+        }
+        country_rank >= rank_value:major_power
+    }
+    trigger_else = {
+        country_rank >= rank_value:unrecognized_major_power
+        OR = {
+            is_country_type = recognized # Just to make it clear to the user that it's an option
+            prestige >= { # Within 25% of prestige of top unrecognized country
+                add = {
+                    ordered_country = {
+                        limit = {
+                            is_country_type = unrecognized
+                        }
+                        order_by = prestige
+                        position = 0
+                        
+                        add = prestige
+                        multiply = 0.75
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 country_is_in_different_power_bloc = {
 	is_in_power_bloc = yes
