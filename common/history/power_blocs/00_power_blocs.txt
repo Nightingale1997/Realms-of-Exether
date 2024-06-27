@@ -1,23 +1,24 @@
 ﻿POWER_BLOCS = {
-	#c:DIS = {
-	#	create_power_bloc = {
-	#		name = METTERNICH_SYSTEM
-	#
-	#		map_color = { 219 211 157 }
-	#
-	#		founding_date = 1015.6.9 
-	#		identity = identity_trade_league
-	#		principle = principle_external_trade_1
-	#	}
-	#	if = {
-	#		limit = {
-	#			has_dlc_feature = power_bloc_features
-	#		}
-	#		power_bloc = {
-	#			add_principle = principle_freedom_of_movement_1
-	#		}
-	#	}
-	#}
+	c:DIS = {
+		create_power_bloc = {
+			name = ASHEN_PACT
+	
+			map_color = { 111 111 111 }
+	
+			founding_date = 1015.6.9 
+			identity = identity_military_treaty_organization
+			principle = principle_defensive_cooperation_1
+		}
+
+		if = {
+			limit = {
+				has_dlc_feature = power_bloc_features
+			}
+			power_bloc = {
+				add_principle = principle_vassalization_1
+			}
+		}
+	}
 
 	c:RAV = {
 		create_power_bloc = {
