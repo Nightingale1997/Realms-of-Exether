@@ -34,7 +34,7 @@ onaction_concord_application = {
     # CONCORD Applications
     if = {
         limit = {
-            has_variable = application_progress_consortium
+            has_variable = application_progress_concord
         }
         add_to_global_variable_list = {
             name = concord_application_list
@@ -43,41 +43,41 @@ onaction_concord_application = {
     }
     if = {
         limit = {
-            has_variable = application_progress_consortium
-            application_progress_consortium <= 100
+            has_variable = application_progress_concord
+            application_progress_concord <= 100
         }
         change_variable = {
-            name = application_progress_consortium
+            name = application_progress_concord
             add = 3
         }
     }
     if = {
         limit = {
-            has_variable = application_progress_consortium
-            application_progress_consortium <= 100
-            supporting_countries_concord > required_support_consortium
+            has_variable = application_progress_concord
+            application_progress_concord <= 100
+            supporting_countries_concord > required_support_concord
         }
         change_variable = {
-            name = application_progress_consortium
+            name = application_progress_concord
             add = 2
         }
     }
     if = {
         limit = {
-            has_variable = application_progress_consortium
-            application_progress_consortium >= 100
-            application_progress_consortium <= 150
+            has_variable = application_progress_concord
+            application_progress_concord >= 100
+            application_progress_concord <= 150
         }
         change_variable = {
-            name = application_progress_consortium
+            name = application_progress_concord
             add = 1
         }
     }
     if = {
         limit = {
-            has_variable = application_progress_consortium
-            var:application_progress_consortium >= 100
-            supporting_countries_concord >= required_support_consortium
+            has_variable = application_progress_concord
+            var:application_progress_concord >= 100
+            supporting_countries_concord >= required_support_concord
         }
         effect_concord_application_approved = yes
         rebuild_concord_memberlist = yes
@@ -85,10 +85,10 @@ onaction_concord_application = {
     }
     if = {
         limit = {
-            has_variable = application_progress_consortium
-            var:application_progress_consortium >= 150
+            has_variable = application_progress_concord
+            var:application_progress_concord >= 150
             not = {
-                supporting_countries_concord >= required_support_consortium
+                supporting_countries_concord >= required_support_concord
             }
         }
         effect_concord_application_rejected = yes

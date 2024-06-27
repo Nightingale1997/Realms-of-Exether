@@ -305,3 +305,22 @@ mapmode_extra = {
 		after_lighting_blend =		1
 	}
 }
+
+powerbloc = {
+	gradient_water_borders_zoom = @zoom_step_flatmap
+
+	gradient_parameters = {
+		zoom_step = @zoom_step_flatmap
+
+		gradient_alpha_inside = 	1.0
+		gradient_alpha_outside = 	0.75
+		gradient_width = 			0.8
+		gradient_color_mult =		1.0
+		edge_width = 				0.03
+		edge_sharpness = 			0.01
+		edge_alpha = 				1
+		edge_color_mult = 			0.5
+		before_lighting_blend =		0
+		after_lighting_blend =		1
+	}
+}

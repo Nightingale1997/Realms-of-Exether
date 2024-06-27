@@ -323,7 +323,7 @@
 				size = 42000
 			}
 			create_pop = {
-				culture = lacertian
+				culture = east_lacertian
 				size = 100000
 			}
 		}
@@ -459,10 +459,6 @@
 				size = 4900
 			}
 		}
-	}
-
-	s:STATE_RICO = {
-
 	}
 
 	s:STATE_APAFONTE = {
@@ -848,28 +844,6 @@
 		}
 	}
 
-	s:STATE_BANGALINIS = {
-		region_state:MYK = {
-			create_pop = {
-				culture = akmuociai
-				size = 88000
-			}
-			create_pop = {
-				culture = hulutit
-				size = 9996
-			}
-			create_pop = {
-				pop_type = slaves
-				culture = west_lacertian
-				size = 2400
-			}
-			create_pop = {
-				culture = west_lacertian
-				size = 27996
-			}
-		}
-	}
-
 	s:STATE_LIUTUKATAL = {
 		region_state:KUM = {
 			create_pop = {
@@ -1023,14 +997,10 @@
 	s:STATE_VEDAMALA = {
 		region_state:COC = {
 			create_pop = {
-				culture = giff
+				culture = cithrel
 				size = 750000
 			}
 		}
-	}
-
-	s:STATE_BHALCHANDRA = {
-
 	}
 
 	s:STATE_MADHURIYA = {
@@ -1072,7 +1042,7 @@
 	s:STATE_MANASI = {
 		region_state:COC = {
 			create_pop = {
-				culture = giff
+				culture = cithrel
 				size = 60000
 			}
 			create_pop = {

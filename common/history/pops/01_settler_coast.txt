@@ -12,9 +12,17 @@
   s:STATE_SHARINDLARS_NEEDLE = {
 		  region_state:EME = {
 			    create_pop = {
-				      culture = ocelian 
-				      size = 280744
+				      culture = enelli
+				      size = 130744
 			    }
+				create_pop = {
+					culture = ocelian 
+					size = 100223
+			  }
+				create_pop = {
+					culture = vozi
+					size = 50744
+				}
 			    create_pop = {
 				      culture = aridrun
 				      size = 20881
@@ -30,11 +38,11 @@
 			    }
 			    create_pop = {
 				      culture = vozi
-				      size = 113312
+				      size = 50312
 			    }				    
 			    create_pop = {
 				      culture = aridrun
-				      size = 50312
+				      size = 113312
 			    }			         
 		  }
   }
@@ -398,8 +406,12 @@ s:STATE_CAEL_VALEN_2 = {
   s:STATE_RIVER_MEDDEN = {
 	region_state:MID = {
 		create_pop = {
+			culture =rivierling
+			size = 400989
+		}
+		create_pop = {
 			culture = coast_halfling
-			size = 600989
+			size = 200989
 		}
 		create_pop = {
 			culture = mousefolk
@@ -427,15 +439,200 @@ s:STATE_CAEL_VALEN_2 = {
   }
 
   s:STATE_VOZMEAD_BORDERLANDS = {
+	region_state:TLD = {
+		create_pop = {
+			culture = enelli
+			size = 245953
+		}
+		create_pop = {
+			culture = tolorr
+			size = 1204215
+		}
+		create_pop = {
+			culture = ocelian
+			size = 1401
+		}
+		create_pop = {
+			culture = mutant
+			size = 4646
+		}
+		create_pop = {
+			culture = ceraunian
+			size = 32020
+		}
+	}
+	region_state:CDW = {
+		create_pop = {
+			culture = tolorr
+			size = 18124
+		}
+		create_pop = {
+			culture = ceraunian
+			size = 262139
+		}
+		create_pop = {
+			culture = mutant
+			size = 304
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = plaguedweller
+			size = 9281
+		}
+	}
+  }
+
+  s:STATE_SERBINELLE = {
+	region_state:SEB = {
+		create_pop = {
+			culture = enelli
+			size = 504084
+		}
+		create_pop = {
+			culture = ocelian
+			size = 20032
+		}
+		create_pop = {
+			culture = tolorr
+			size = 4072
+		}
+	}
 
   }
 
   s:STATE_EASTERN_PLAGUEWOOD = {
+	region_state:RTD = {
+		create_pop = {
+			culture = plaguedweller
+			size = 636096
+		}
+		create_pop = {
+			culture = rivierling
+			size = 167500
+		}
+		create_pop = {
+			culture = ceraunian
+			size = 88400
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = rivierling
+			size = 30200
+		}
+	}
+  }
 
+  s:STATE_EASTERN_PLAGUEWOOD_2 = {
+	region_state:RTD = {
+		create_pop = {
+			culture = plaguedweller
+			size = 798000
+		}
+		create_pop = {
+			culture = ceraunian
+			size = 49000
+		}
+		create_pop = {
+			culture = rivierling
+			size = 294312
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = rivierling
+			size = 5000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = ceraunian
+			size = 13000
+		}
+	}
   }
 
   s:STATE_FORESTS_HEART = {
+	region_state:BDB = {
+		create_pop = {
+			culture = plaguedweller
+			size = 553996
+		}
+		create_pop = {
+			culture = korkaz
+			size = 68000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = ceraunian
+			size = 30000
+		}
+	}
+  }
 
+  s:STATE_FORESTS_HEART_2 = {
+	region_state:BDB = {
+		create_pop = {
+			culture = plaguedweller
+			size = 1059596
+		}
+		create_pop = {
+			culture = korkaz
+			size = 68000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = plaguedweller
+			size = 50000
+		}
+	}
+  }
+
+  s:STATE_FORESTS_HEART_3 = {
+	region_state:BDB = {
+		create_pop = {
+			culture = plaguedweller
+			size = 408000
+		}
+		create_pop = {
+			culture = plaguedweller
+			religion = animist
+			size = 18000
+		}
+		create_pop = {
+			culture = korkaz
+			size = 218400
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = plaguedweller
+			size = 40000
+		}
+	}
+  }
+
+  s:STATE_FORESTS_HEART_3_2 = {
+	region_state:RTD = {
+		create_pop = {
+			culture = plaguedweller
+			size = 340024
+		}
+		create_pop = {
+			culture = rivierling
+			size = 24832
+		}
+		create_pop = {
+			culture = ceraunian
+			size = 69000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = ceraunian
+			size = 11004
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = tolorr
+			size = 4000
+		}
+	}
   }
 
   s:STATE_PLAGUEWOOD_HINTERLANDS = {
@@ -455,7 +652,65 @@ s:STATE_CAEL_VALEN_2 = {
 	}
   }
 
+  s:STATE_PLAGUEWOOD_HINTERLANDS_2 = {
+	region_state:BDB = {
+		create_pop = {
+			culture = plaguedweller
+			size = 787900
+		}
+		create_pop = {
+			culture = bossardi
+			size = 12400
+		}
+		create_pop = {
+			culture = korkaz
+			size = 415600
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = astreval
+			size = 40000
+		}
+	}
+  }
+
   s:STATE_ASHWICK = {
+	region_state:ASW = {
+		create_pop = {
+			culture = plaguedweller
+			size = 64000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = bossardi
+			size = 8000
+		}
+		create_pop = {
+			culture = korkaz
+			size = 4000
+		}
+	}
+  }
+
+  s:STATE_ASHWICK_2 = {
+	region_state:ASW = {
+		create_pop = {
+			culture = plaguedweller
+			size = 56000
+		}
+		create_pop = {
+			culture = bossardi
+			size = 4000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = bossardi
+			size = 4000
+		}
+	}
+  }
+
+  s:STATE_ASHWICK_3 = {
 
   }
 
@@ -483,14 +738,36 @@ s:STATE_CAEL_VALEN_2 = {
 	region_state:MID = {
 		create_pop = {
 			culture = coast_halfling 
-			size = 224197
+			size = 202197
+		}
+		create_pop = {
+			culture = rivierling
+			size = 24186
 		}
 
 	}
   }
 
   s:STATE_OUTER_MOORWEALD_2 = {
-	
+	region_state:SMA = {
+		create_pop = {
+			culture = coast_halfling
+			size = 842331
+		}
+		create_pop = {
+			culture = coast_halfling
+			religion = church_of_man
+			size = 327009
+		}
+		create_pop = {
+			culture = mousefolk
+			size = 26531
+		}
+		create_pop = {
+			culture = wealder
+			size = 34143
+		}
+	}
   }
 
   
@@ -516,6 +793,19 @@ s:STATE_CAEL_VALEN_2 = {
 		create_pop = {
 			culture = wealder
 			size = 25000
+		}
+	}
+  }
+
+  s:STATE_DEEPWOODS = {
+	region_state:MOO = {
+		create_pop = {
+			culture = coast_halfling
+			size = 212000
+		}
+		create_pop = {
+			culture = wealder
+			size = 14000
 		}
 	}
   }
@@ -662,6 +952,27 @@ s:STATE_THE_AMBER_RUN_3 = {
 			}
 		}
   }
+
+  s:STATE_MISTREACH_2 = {
+	region_state:PRI = {
+		create_pop = {
+			culture = bossardi
+			size = 304908
+		}
+		create_pop = {
+			culture = yelfi
+			size = 3196
+		}
+		create_pop = {
+			culture = wealder
+			size = 372400
+		}
+		create_pop = {
+			culture = dorite
+			size = 183996
+		}
+	}
+}
 
   s:STATE_VICEROYS_PEARL = {
 		region_state:ARR = {
@@ -1018,15 +1329,77 @@ s:STATE_FAR_SHORE_2 = {
   }
 
   s:STATE_HORSELORDS_DEMESNE = {
-
+	region_state:PFL = {
+		create_pop = {
+			culture = changeling
+			size = 897396
+		}
+		create_pop = {
+			culture = changeling
+			religion = cult_of_knowledge
+			size = 32000
+		}
+		create_pop = {
+			culture = eberri
+			size = 112400
+		}
+		create_pop = {
+			culture = achonian
+			size = 20000
+		}
+		create_pop = {
+			culture = dorite
+			size = 8000
+		}
+	}
   }
 
   s:STATE_ROCHENSTONE = {
-
+	region_state:PFL = {
+		create_pop = {
+			culture = changeling
+			size = 1057396
+		}
+		create_pop = {
+			culture = changeling
+			religion = cult_of_knowledge
+			size = 24000
+		}
+		create_pop = {
+			culture = achonian
+			size = 119212
+		}
+		create_pop = {
+			culture = eberri
+			size = 88000
+		}
+		create_pop = {
+			culture = dorite
+			size = 20000
+		}
+	}
   }
 
   s:STATE_SJETTSZCEK_MIRE = {
-
+	region_state:AHO = {
+		create_pop = {
+			culture = changeling
+			size = 1040004
+		}
+		create_pop = {
+			culture = changeling
+			religion = cult_of_knowledge
+			size = 740004
+		}
+		create_pop = {
+			culture = eberri
+			size = 28000
+		}
+		create_pop = {
+			culture = achonian
+			size = 288000
+		}
+	}
   }
 
   s:STATE_THUNDERSPELL_COAST = {
@@ -1503,6 +1876,26 @@ s:STATE_FAR_SHORE_2 = {
 		create_pop = {
 			culture = wealder
 			size = 136000
+		}
+	}
+	region_state:ASW = {
+		create_pop = {
+			culture = plaguedweller
+			size = 123996
+		}
+		create_pop = {
+			culture = mousefolk
+			size = 47440
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = bossardi
+			size = 10000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = mousefolk
+			size = 10000
 		}
 	}
   }

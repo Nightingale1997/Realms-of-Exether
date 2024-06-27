@@ -1,7 +1,37 @@
-﻿dp_open_market = {
+﻿# This play is only used as a 'default diplomatic play' for certain triggers etc, and potentially for scripted content
+# It can never actually be launched in the normal way
+dp_war_reparations = {
+	war_goal = war_reparations
+	
+	texture = "gfx/interface/icons/war_goals/war_reparations.dds"
+
+	selectable_in_lens = {
+		always = no
+	}	
+
+	possible = {
+		always = no
+	}
+
+	ai_acceptance_max = 100
+	
+	on_weekly_pulse = {}
+
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+
+dp_open_market = {
 	war_goal = open_market
 	
 	texture = "gfx/interface/icons/war_goals/open_market.dds"
+	
+	selectable_in_lens = {
+		# Replaced by foreign investment rights
+		NOT = { has_dlc_feature = foreign_investment }
+	}
 
 	possible = {
 		OR = {
@@ -19,16 +49,18 @@
 			}
 		}
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = consortium }
+		NOT = { is_country_type = organization_tag }
 		aggressive_diplomatic_plays_permitted = yes
 		NOT = { is_subject_of = scope:target_country }		
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = consortium }
+		NOT = { is_country_type = organization_tag }
 			NOT = { is_subject_of = root }
 		}
 	}
 
+	ai_acceptance_max = 100
+	
 	on_weekly_pulse = {}
 
 	on_war_begins = {}
@@ -58,14 +90,16 @@ dp_regime_change = {
 			}
 		}
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = consortium }
+		NOT = { is_country_type = organization_tag }
 		aggressive_diplomatic_plays_permitted = yes
 		NOT = { is_subject_of = scope:target_country }	
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = consortium }
+		NOT = { is_country_type = organization_tag }
 		}	
 	}
+	
+	ai_acceptance_max = 90
 
 	on_weekly_pulse = {}
 
@@ -95,15 +129,17 @@ dp_ban_slavery = {
 			}
 		}
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = consortium }
+		NOT = { is_country_type = organization_tag }
 		aggressive_diplomatic_plays_permitted = yes
 		NOT = { is_subject_of = scope:target_country }	
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = consortium }
+		NOT = { is_country_type = organization_tag }
 		}	
 	}
 
+	ai_acceptance_max = 90
+	
 	on_weekly_pulse = {}
 
 	on_war_begins = {}
@@ -133,16 +169,18 @@ dp_conquer_state = {
 		}
 
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = consortium }
+		NOT = { is_country_type = organization_tag }
 		aggressive_diplomatic_plays_permitted = yes
 		NOT = { is_subject_of = scope:target_country }
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
-			NOT = { is_country_type = consortium }
+			NOT = { is_country_type = organization_tag }
 			NOT = { is_subject_of = root }
 		}	
 		diplomatic_play_has_no_relations_blockers = yes		
 	}
+	
+	ai_acceptance_max = 75
 	
 	on_weekly_pulse = {}
 	
@@ -174,16 +212,18 @@ dp_return_state = {
 			}
 		}
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = consortium }
+		NOT = { is_country_type = organization_tag }
 		aggressive_diplomatic_plays_permitted = yes
 		NOT = { is_subject_of = scope:target_country }	
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = consortium }
+		NOT = { is_country_type = organization_tag }
 			NOT = { is_subject_of = root }
 		}
 		diplomatic_play_has_no_relations_blockers = yes
 	}
+	
+	ai_acceptance_max = 90
 	
 	on_weekly_pulse = {}
 	
@@ -213,18 +253,20 @@ dp_liberate_subject = {
 			}
 		}
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = consortium }
+		NOT = { is_country_type = organization_tag }
 		aggressive_diplomatic_plays_permitted = yes
 		NOT = { is_subject_of = scope:target_country }	
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = consortium }
+		NOT = { is_country_type = organization_tag }
 			is_subject = yes
 			NOT = { is_subject_of = root }
 		}
 		diplomatic_play_has_no_relations_blocker_with_overlord = yes
 	}
 
+	ai_acceptance_max = 90
+	
 	on_weekly_pulse = {}
 
 	on_war_begins = {}
@@ -253,12 +295,14 @@ dp_liberate_country = {
 			}
 		}
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = consortium }
+		NOT = { is_country_type = organization_tag }
 		aggressive_diplomatic_plays_permitted = yes
 		NOT = { is_subject_of = scope:target_country }	
 		diplomatic_play_has_no_relations_blockers = yes
 	}
 
+	ai_acceptance_max = 90
+	
 	on_weekly_pulse = {}
 
 	on_war_begins = {}
@@ -272,6 +316,37 @@ dp_independence = {
 	war_goal = independence
 
 	texture = "gfx/interface/icons/war_goals/independence.dds"
+	confirmation_sound = "event:/SFX/UI/SubjectInteractions/subject_button_small_independence"
+	possible = {
+		NOT = { is_country_type = decentralized }
+		OR = {
+			can_increase_autonomy = no
+			custom_tooltip = {
+				text = "REQUEST_AUTONOMY_RECENTLY_DENIED"
+				any_diplomatic_catalyst = {
+					is_diplomatic_catalyst_type = catalyst_autonomy_increase_denied
+					target = scope:target_country
+				}
+			}
+		}
+		diplomatic_play_has_no_relations_blockers = yes
+	}
+
+	ai_acceptance_max = 100
+	
+	on_weekly_pulse = {}
+
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+dp_leave_power_bloc = {
+	requires_interest_marker = no
+
+	war_goal = leave_power_bloc
+
+	texture = "gfx/interface/icons/war_goals/leave_power_bloc.dds"
 
 	possible = {
 		OR = {
@@ -289,11 +364,38 @@ dp_independence = {
 			}
 		}
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = consortium }
+		diplomatic_play_has_no_relations_blockers = yes	
 	}
 
+	ai_acceptance_max = 100
+	
 	on_weekly_pulse = {}
 
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+dp_increase_autonomy = {
+	war_goal = increase_autonomy
+	
+	requires_interest_marker = no
+	
+	texture = "gfx/interface/icons/war_goals/increase_autonomy.dds"
+	
+	possible = {
+		is_subject = yes	
+		custom_tooltip = {
+			text = "REQUEST_AUTONOMY_RECENTLY_DENIED"
+			any_diplomatic_catalyst = {
+				is_diplomatic_catalyst_type = catalyst_autonomy_increase_denied
+				target = scope:target_country
+			}
+		}			
+	}
+	
+	on_weekly_pulse = {}
+	
 	on_war_begins = {}
 
 	on_war_end = {}
@@ -321,12 +423,12 @@ dp_take_treaty_port = {
 			}
 		}
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = consortium }
+		NOT = { is_country_type = organization_tag }
 		aggressive_diplomatic_plays_permitted = yes
 		NOT = { is_subject_of = scope:target_country }
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = consortium }
+		NOT = { is_country_type = organization_tag }
 			NOT = { is_subject_of = root }
 		}
 		diplomatic_play_has_no_relations_blockers = yes	
@@ -427,6 +529,8 @@ dp_make_tributary = {
 		aggressive_diplomatic_plays_permitted = yes	
 	}
 	
+	ai_acceptance_max = 90
+	
 	on_weekly_pulse = {}
 	
 	on_war_begins = {}
@@ -457,6 +561,8 @@ dp_make_protectorate = {
 		aggressive_diplomatic_plays_permitted = yes				
 	}
 	
+	ai_acceptance_max = 90
+	
 	on_weekly_pulse = {}
 	
 	on_war_begins = {}
@@ -485,17 +591,19 @@ dp_transfer_subject = {
 			}
 		}	
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = consortium }
+		NOT = { is_country_type = organization_tag }
 		aggressive_diplomatic_plays_permitted = yes
 		NOT = { is_subject_of = scope:target_country }	
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = consortium }
+		NOT = { is_country_type = organization_tag }
 			is_subject = yes
 			NOT = { is_subject_of = root }
 		}
 		diplomatic_play_has_no_relations_blocker_with_overlord = yes			
 	}
+	
+	ai_acceptance_max = 90
 	
 	on_weekly_pulse = {}
 	
@@ -508,7 +616,7 @@ dp_annex_subject = {
 	war_goal = annex_country
 	
 	texture = "gfx/interface/icons/war_goals/annex_country.dds"
-	
+	confirmation_sound = "event:/SFX/UI/SubjectInteractions/subject_button_small_annex"
 	possible = {
 		OR = {
 			has_strategic_land_adjacency = scope:target_country
@@ -525,12 +633,13 @@ dp_annex_subject = {
 			}
 		}
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = consortium }
+		NOT = { is_country_type = organization_tag }
 		aggressive_diplomatic_plays_permitted = yes
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = consortium }
+		NOT = { is_country_type = organization_tag }
 			is_direct_subject_of = root
+			liberty_desire < 25
 			OR = {
 				has_diplomatic_pact = { who = root type = puppet }
 				has_diplomatic_pact = { who = root type = vassal }
@@ -538,22 +647,25 @@ dp_annex_subject = {
 		}		
 	}
 	
+	ai_acceptance_max = 75
+
 	on_weekly_pulse = {}
 	
-	on_war_begins = {}
-
-	on_war_end = {}
-}
-
-dp_force_recognition = {
-	requires_interest_marker = no
-	
-	war_goal = force_recognition
-	
-	texture = "gfx/interface/icons/war_goals/force_recognition.dds"
-	
-	selectable_in_lens = {
-		is_country_type = unrecognized
+	on_war_begins = {
+		scope:initiator = {
+			every_subject_or_below = {
+				limit = {
+					is_direct_subject_of = scope:initiator
+					NOT = { this = scope:target_country }
+				}
+				add_liberty_desire = 25
+				add_modifier = {
+					name = modifier_has_annexed_another_subject
+					months = 60
+					is_decaying = no
+				}
+			}
+		}
 	}
 	
 	possible = {
@@ -629,7 +741,7 @@ dp_revolution = {
 
 	additional_involvement_trigger = {
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = consortium }
+		NOT = { is_country_type = organization_tag }
 		aggressive_diplomatic_plays_permitted = yes
 	
 		scope:target_country = {
@@ -698,7 +810,7 @@ dp_secession = {
 
 	additional_involvement_trigger = {
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = consortium }
+		NOT = { is_country_type = organization_tag }
 		aggressive_diplomatic_plays_permitted = yes
 	
 		scope:target_country = {
@@ -747,12 +859,12 @@ dp_contain_threat = {
 			}
 		}
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = consortium }
+		NOT = { is_country_type = organization_tag }
 		aggressive_diplomatic_plays_permitted = yes
 		NOT = { is_subject_of = scope:target_country }
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
-			NOT = { is_country_type = consortium }
+			NOT = { is_country_type = organization_tag }
 			NOT = { is_subject_of = root }
 		}	
 		custom_tooltip = {
@@ -767,10 +879,12 @@ dp_contain_threat = {
 
 	additional_involvement_trigger = {
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = consortium }
+		NOT = { is_country_type = organization_tag }
 		country_rank >= rank_value:great_power
 		aggressive_diplomatic_plays_permitted = yes
 	}
+	
+	ai_acceptance_max = 100
 	
 	on_weekly_pulse = {}
 
@@ -779,6 +893,83 @@ dp_contain_threat = {
 	on_war_end = {}
 }
 
+
+dp_join_power_bloc = {
+	war_goal = join_power_bloc
+	texture = "gfx/interface/icons/war_goals/join_power_bloc.dds"
+	
+	possible = {
+		NOT = { is_country_type = decentralized }
+		aggressive_diplomatic_plays_permitted = yes
+		is_power_bloc_leader = yes # Also checked by wargoal, but here for performance reasons
+		custom_tooltip = {
+			text = dp_join_power_bloc_must_have_declined_invite
+			any_diplomatic_catalyst = {
+				is_diplomatic_catalyst_type = catalyst_declined_bloc_invite
+				target = scope:target_country
+			}			
+		}
+	}
+	
+	ai_acceptance_max = 100
+	
+	on_weekly_pulse = {}
+	
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+dp_force_nationalization = {
+	requires_interest_marker = no
+
+	war_goal = force_nationalization
+	texture = "gfx/interface/icons/war_goals/force_nationalization.dds"
+	
+	possible = {
+		NOT = { is_country_type = decentralized }
+		aggressive_diplomatic_plays_permitted = yes
+		diplomatic_play_has_no_relations_blockers = yes
+	}
+	
+	selectable_in_lens = {
+		has_dlc_feature = foreign_investment
+	}
+	
+	ai_acceptance_max = 100
+	
+	on_weekly_pulse = {}
+	
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+dp_give_foreign_investment_rights = {
+	war_goal = foreign_investment_rights
+	
+	requires_interest_marker = yes
+	
+	texture = "gfx/interface/icons/war_goals/foreign_investment_rights.dds"
+	
+	possible = {
+		NOT = { is_country_type = decentralized }
+		aggressive_diplomatic_plays_permitted = yes
+		diplomatic_play_has_no_relations_blockers = yes
+	}
+	
+	selectable_in_lens = {
+		has_dlc_feature = foreign_investment
+	}
+	
+	ai_acceptance_max = 100
+	
+	on_weekly_pulse = {}
+	
+	on_war_begins = {}
+
+	on_war_end = {}
+}
 
 dp_native_uprising = {
 	war_goal = colonization_rights
@@ -842,6 +1033,8 @@ dp_annex_war = {
 				}
 			}
 		}}
+	
+	ai_acceptance_max = 75
 	
 	on_weekly_pulse = {}
 	
@@ -910,7 +1103,7 @@ dp_unify_khus = {
 		}
 		NOT = { exists = c:NEK }
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = consortium }
+		NOT = { is_country_type = organization_tag }
 		has_technology_researched = nationalism
 	}
 	
@@ -951,7 +1144,7 @@ dp_unify_gavkhan = {
 		}
 		NOT = { exists = c:GAV }
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = consortium }
+		NOT = { is_country_type = organization_tag }
 		has_technology_researched = nationalism
 	}
 	
@@ -992,7 +1185,7 @@ dp_unify_thaloria = {
 		}
 		NOT = { exists = c:TLA }
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = consortium }
+		NOT = { is_country_type = organization_tag }
 		has_technology_researched = nationalism
 	}
 	
@@ -1033,7 +1226,7 @@ dp_unify_nagabumi = {
 		}
 		NOT = { exists = c:NBI }
 		NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = consortium }
+		NOT = { is_country_type = organization_tag }
 		has_technology_researched = nationalism
 	}
 	

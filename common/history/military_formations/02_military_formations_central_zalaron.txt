@@ -1,5 +1,110 @@
 ﻿MILITARY_FORMATIONS = {
-	c:FIS = {
+
+	c:OPA ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_geyser_plateau
+			name = Wasteguard
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KASHANIR
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_SC5
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_SC5
+				count = 8
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_SC7
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_SC10
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_SC8
+				count = 5
+			}
+		}
+
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_geyser_plateau
+			name = Paradiels_Outriders
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_SC10
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_SC6
+				count = 5
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_SC5
+				count = 5
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_KASHANIR
+				count = 3
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_KASHANIR
+				count = 2
+			}
+			save_scope_as = syria_arm_egy
+		}
+
+		scope:ahmad_gen = {
+			transfer_to_formation = scope:syria_arm_egy
+		}
+
+		create_character = { # Joseph Anthelme Sève
+			is_general = yes
+			first_name = Soliman
+			last_name = al-Faransawi
+			historical = yes
+			culture = cu:french
+			religion = sunni
+			age = 48
+			hq = region_anatolia
+			traits = {	
+			}
+			save_scope_as = soliman_gen
+		}
+
+		scope:soliman_gen = {
+			transfer_to_formation = scope:syria_arm_egy
+		}
+	}
+
+
+	c:FIS ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_gnomehome
@@ -23,7 +128,7 @@
 			transfer_to_formation = scope:fis_army
 		}
 	}
-	c:SEE = {
+	c:SEE ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_steepcliff
@@ -47,7 +152,7 @@
 			transfer_to_formation = scope:see_army
 		}
 	}
-	c:HOU = {
+	c:HOU ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_steepcliff
@@ -71,7 +176,7 @@
 			transfer_to_formation = scope:hou_army
 		}
 	}
-	c:VAI = {
+	c:VAI ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_vairia
@@ -270,7 +375,7 @@
 			transfer_to_formation = scope:vai_fleet_2
 		}
 	}
-	c:WHX = {
+	c:WHX ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_steepcliff
@@ -339,7 +444,7 @@
 			transfer_to_formation = scope:whx_fleet
 		}
 	}
-	c:XXP = {
+	c:XXP ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_vairia
@@ -413,7 +518,7 @@
 			transfer_to_formation = scope:xxp_fleet
 		}
 	}
-	c:LIS = {
+	c:LIS ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_shimmering_coast

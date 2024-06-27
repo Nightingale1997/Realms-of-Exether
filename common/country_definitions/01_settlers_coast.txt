@@ -2,7 +2,7 @@
 XXG = {
 	color = { 150 150 0 }
 
-	country_type = consortium
+	country_type = organization_tag
 
 	tier = kingdom
 
@@ -46,6 +46,17 @@ EBR = {
 	capital = STATE_RUNEPORT_GALESTRUM
 }
 
+#Pefril
+PFL = {
+	color = { 105  82  228 }
+
+	country_type = recognized 
+
+	tier = principality
+
+	cultures = { changeling } 
+	capital = STATE_ROCHENSTONE
+}
 
 #Anwarth
 ANW = {
@@ -91,7 +102,7 @@ MID = {
 
 	tier = grand_principality
 
-	cultures = { coast_halfling } 
+	cultures = { coast_halfling rivierling } 
 	capital = STATE_RIVER_MEDDEN
 }
 
@@ -263,7 +274,7 @@ FTH = {
 
 #Saltboot Borough
 SLB = {
-	color = rgb{ 100  90  200 } 
+	color = rgb{ 190  180  80 } 
 
 	country_type = recognized
 
@@ -317,7 +328,7 @@ ASW  = {
 
 	tier = principality
 
-	cultures = { dumonian } 
+	cultures = { plaguedweller } 
 	capital = STATE_ASHWICK
 }
 
@@ -353,8 +364,8 @@ SEB = {
 
 	tier = principality
 
-	cultures = { ocelian } 
-	capital = STATE_VOZMEAD_BORDERLANDS
+	cultures = { enelli } 
+	capital = STATE_SERBINELLE
 }
 
 #Rotdrinker
@@ -379,7 +390,7 @@ BDB = {
 	tier = principality
 
 	cultures = { plaguedweller } 
-	capital = STATE_FORESTS_HEART
+	capital = STATE_FORESTS_HEART_2
 }
 
 #Plaguemonger

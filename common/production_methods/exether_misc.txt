@@ -378,7 +378,7 @@ pm_ghost_hunters = {
 pm_exorcists = {
 	texture = "gfx/interface/icons/production_method_icons/saw_mills.dds"
 	unlocking_technologies = {
-		steelworking
+		supernatural_pursuit
 	}				
 
 	building_modifiers = {
@@ -662,5 +662,167 @@ pm_early_wishstone_constructed_buildings = {  #not sure if we want a magic const
 		workforce_scaled = {
 			state_construction_mult = 0.0056
 		}	
+	}
+}
+
+
+pm_simple_hunting = {
+	texture = "gfx/interface/icons/production_method_icons/spears.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_monster_essence_add = 20
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 4500
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_adventurer_coverage_add = 5
+		}
+	}
+}
+
+pm_firearms_hunting= {
+	texture = "gfx/interface/icons/production_method_icons/guns.dds"
+	unlocking_technologies = {
+		monster_hunters
+	}				
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_small_arms_add = 5
+			
+			# output goods
+			goods_output_monster_essence_add = 30
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 4000
+			building_employment_adventurers_add = 500
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_adventurer_coverage_add = 10
+		}
+	}
+}	
+
+pm_heavy_weapons_hunting = {
+	texture = "gfx/interface/icons/production_method_icons/bullets_skull.dds"
+	unlocking_technologies = {
+		hero_worship
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_small_arms_add = 10
+			goods_input_ammunition_add = 5
+			
+			# output goods
+			goods_output_monster_essence_add = 50 
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 3000
+			building_employment_adventurers_add = 1000
+			building_employment_heroes_add = 500
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_adventurer_coverage_add = 15
+		}
+	}
+
+	required_input_goods = ammunition
+}
+
+pm_no_hunting_meat = {
+	texture = "gfx/interface/icons/production_method_icons/no_meat.dds"
+}
+
+pm_hunting_meat = {
+	texture = "gfx/interface/icons/production_method_icons/meat.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods										
+			goods_output_monster_essence_add = -12
+			goods_output_meat_add = 10
+		}
+	}
+}
+
+pm_increased_hunting_meat = {
+	texture = "gfx/interface/icons/production_method_icons/increased_meat.dds"
+
+	unlocking_production_methods = {
+		pm_firearms_hunting
+		pm_heavy_weapons_hunting
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_monster_essence_add = -20
+			goods_output_meat_add = 20
+		}
+	}
+}
+
+
+pm_no_equipment_hunting_lodges = {
+	texture = "gfx/interface/icons/production_method_icons/no_automation.dds"
+}
+
+pm_tracking_tools = {
+	texture = "gfx/interface/icons/production_method_icons/compass.dds"
+	
+	unlocking_technologies = {
+		supernatural_pursuit
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_thaumacores_add = 1
+			goods_input_wishstone_add = 4
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = -1000
+		}
+	}
+}
+
+pm_beast_divination = {
+	texture = "gfx/interface/icons/production_method_icons/smell_goggles.dds"
+	unlocking_technologies = {
+		advanced_contraptions
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_gizmos_add = 10
+			goods_input_oil_add = 5
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = -1500
+			building_employment_hedge_wizards_add = 400
+		}
 	}
 }

@@ -118,7 +118,7 @@ adopt_random_antigovernment_ideology = {
 			100 = {
 				trigger = {
 					owner = {
-						has_technology_researched = socialism
+						has_technology_researched = political_agitation
 						NOT = {
 							ruler = {
 								has_ideology = ideology:ideology_vanguardist	
@@ -1789,6 +1789,7 @@ enact_preferred_governance_principle_new = {
 }
 
 exile_character_with_martyrdom = {
+	save_scope_as = martyred_exile_scope
 	if = {
 		limit = {
 			NOT = {
@@ -1797,59 +1798,51 @@ exile_character_with_martyrdom = {
 		}
 		add_modifier = modifier_political_martyr
 	}
-	clean_up_exile_character_roles = yes
-	exile_character = yes
-}
-
-do_risorgimento_math = {
-	set_variable = { name = italian_states_pop_total value = 0 }
-	set_variable = { name = italian_states_radicals_total value = 0 }
-	every_scope_state = {
+	if = {
 		limit = {
-			state_region = {
-				OR = {
-					is_homeland = cu:qinnaat
-					is_homeland = cu:azmaraan
+			owner = {
+				NOT = {
+					any_primary_culture = {
+						this = scope:martyred_exile_scope.culture
+					}
 				}
 			}
 		}
-		set_variable = { name = italian_state_pop_radicals value = this.turmoil }
-		change_variable = { name = italian_state_pop_radicals multiply = this.state_population }
-		ROOT = {
-			change_variable = { name = italian_states_pop_total add = prev.state_population }
-			change_variable = { name = italian_states_radicals_total add = prev.var:italian_state_pop_radicals }
+		if = {
+			limit = {
+				any_country = {
+					NOT = {
+						this = scope:martyred_exile_scope.owner
+					}
+					any_primary_culture = {
+						this = scope:martyred_exile_scope.culture
+					}
+				}
+			}
+			ordered_country = {
+				limit = {
+					NOT = {
+						this = scope:martyred_exile_scope.owner
+					}
+					any_primary_culture = {
+						this = scope:martyred_exile_scope.culture
+					}
+				}
+				order_by = country_rank
+				create_diplomatic_catalyst = {
+					type = catalyst_exiled_culture_member
+					target = scope:martyred_exile_scope.owner
+				}
+			}
 		}
 	}
-	set_variable = { name = italian_states_radicals_total_bar value = var:italian_states_radicals_total }
-	change_variable = { name = italian_states_radicals_total_bar divide = var:italian_states_pop_total }
-	change_variable = { name = italian_states_radicals_total_bar multiply = 100 }
+	clean_up_exile_character_roles = yes
+	exile_character = yes
 }
 
 ### Communism
 
 calculate_communism_progress = {
-	set_variable = { name = communism_progress_var_next value = 0 }
-	set_variable = { name = communism_progress_from_radicals value = 0 }
-	every_scope_state = {
-		limit = {
-			is_incorporated = yes
-			turmoil >= 0.10
-		}
-		ROOT = {
-			change_variable = { name = communism_progress_from_radicals add = prev.turmoil }
-		}
-	}
-	set_variable = { name = communism_progress_from_loyalists value = 0 }
-	every_scope_state = {
-		limit = {
-			is_incorporated = yes
-			loyalty >= 0.10
-		}
-		ROOT = {
-			change_variable = { name = communism_progress_from_loyalists add = prev.loyalty }
-		}
-	}
-	change_variable = { name = communism_progress_from_loyalists multiply = -1 }
 	#From Poverty
 	set_variable = { name = communism_progress_from_poverty value = 0 }
 	every_scope_state = {
@@ -1864,34 +1857,7 @@ calculate_communism_progress = {
 			change_variable = { name = communism_progress_from_poverty add = prev.var:temp_sol }
 		}
 	}
-	#From Characters
-	set_variable = { name = communism_progress_from_characters value = 0 }
-	every_scope_character = {
-		limit = {
-			OR = {
-				has_ideology = ideology:ideology_communist
-				has_ideology = ideology:ideology_vanguardist
-				has_ideology = ideology:ideology_anarchist
-			}
-		}
-		ROOT = {
-			change_variable = { name = communism_progress_from_characters add = prev.popularity }
-		}
-	}
-	change_variable = { name = communism_progress_from_characters divide = 100 }
-	# From Interest Groups
-	set_variable = { name = communism_progress_from_igs value = 0 }
-	every_interest_group = {
-		limit = {
-			law_stance = {
-				law = law_type:law_council_republic
-				value > neutral
-			}
-		}
-		ROOT = {
-			set_variable = { name = communism_progress_from_igs value = prev.ig_clout }
-		}
-	}
+	
 	# From Laws
 	set_variable = { name = communism_progress_from_laws value = 0 }
 	# Cops
@@ -1961,38 +1927,16 @@ calculate_communism_progress = {
 		change_variable = { name = communism_progress_from_laws add = var:temp_ha_var_contribution }
 		remove_variable = temp_ha_var_contribution
 	}
-
-	# Compilation
-	change_variable = { name = communism_progress_var_next add = var:communism_progress_from_radicals }
-	change_variable = { name = communism_progress_var_next add = var:communism_progress_from_loyalists }
-	change_variable = { name = communism_progress_var_next add = var:communism_progress_from_poverty }
-	change_variable = { name = communism_progress_var_next add = var:communism_progress_from_igs }
-	change_variable = { name = communism_progress_var_next add = var:communism_progress_from_characters }
-	change_variable = { name = communism_progress_var_next add = var:communism_progress_from_laws }
-	change_variable = { name = communism_progress_var_next add = var:communism_progress_var_add }
-}
-
-add_communism_progress = {
-	change_variable = { name = communism_je_1_var add = var:communism_progress_var_next }
 }
 
 set_communism_vars = {
-	set_variable = { name = communism_progress_from_radicals value = 0 }
-	set_variable = { name = communism_progress_from_loyalists value = 0 }
 	set_variable = { name = communism_progress_from_poverty value = 0 }
-	set_variable = { name = communism_progress_from_igs value = 0 }
-	set_variable = { name = communism_progress_from_characters value = 0 }
 	set_variable = { name = communism_progress_from_laws value = 0 }
 	set_variable = { name = communism_progress_var_add value = 0 }
 }
 
 clear_communism_vars = {
-	remove_variable = communism_progress_var_next
-	remove_variable = communism_progress_from_radicals
-	remove_variable = communism_progress_from_loyalists
 	remove_variable = communism_progress_from_poverty
-	remove_variable = communism_progress_from_igs
-	remove_variable = communism_progress_from_characters
 	remove_variable = communism_progress_from_laws
 	remove_variable = communism_progress_var_add
 }
@@ -2203,36 +2147,6 @@ clear_national_identity_vars = {
 	remove_variable = national_identity_progress_from_prestige
 	remove_variable = national_identity_progress_from_homelands
 	remove_variable = national_identity_progress_var_add
-}
-
-remove_pedropoint_effect = {
-	custom_tooltip = {
-		text = remove_pedropoint
-		change_variable = {
-			name = pedropoints
-			add = -1
-		}
-	}
-}
-
-add_pedropoint_effect = {
-	custom_tooltip = {
-		text = add_pedropoint
-		change_variable = {
-			name = pedropoints
-			add = 1
-		}
-	}
-}
-			
-add_pedropoint_effect_3 = {
-	custom_tooltip = {
-		text = add_3_pedropoint
-		change_variable = {
-			name = pedropoints
-			add = 3
-		}
-	}
 }
 
 replicate_laws_from_root = {
@@ -2532,308 +2446,12 @@ capitulate_to_revolution = {
 			months = normal_modifier_time
 			is_decaying = yes
 		}
-		add_ruling_interest_group = yes
-	}
-}
-
-calculate_brazil_slavery_progress = {
-	set_variable = { name = brz_slavery_next value = 0 }
-	if = {
-		limit = {
-			NOT = {
-				any_political_movement = {
-					is_political_movement_type = movement_to_preserve
-					OR = {
-						this.desired_law = law_type:law_legacy_slavery
-						this.desired_law = law_type:law_debt_slavery
-						this.desired_law = law_type:law_slave_trade
-					}
-				}
-			}
-		}
-		 # Towards Slaveowner Domination
 		if = {
 			limit = {
-				ig:ig_landowners = {
-					is_in_government = yes
-				}
+				is_insurrectionary = no
 			}
-			change_variable = {
-				name = brz_slavery_next
-				add = -1
-			}
+			add_ruling_interest_group = yes
 		}
-		if = {
-			limit = {
-				ig:ig_landowners = {
-					is_powerful = yes
-				}
-			}
-			change_variable = {
-				name = brz_slavery_next
-				add = -1
-			}
-		}
-		if = {
-			limit = {
-				has_modifier = brz_regency
-			}
-			change_variable = {
-				name = brz_slavery_next
-				add = -1
-			}
-		}
-		if = {
-			limit = {
-				ruler = {
-					OR = {
-						interest_group = {
-							is_interest_group_type = ig_landowners
-						}
-						has_ideology = ideology:ideology_slaver
-					}
-				}
-			}
-			change_variable = {
-				name = brz_slavery_next
-				add = -1
-			}
-		}
-		if = {
-			limit = {
-				any_scope_character = {
-					filter = {
-						OR = {
-							has_role = admiral
-							has_role = general
-						}
-					}
-					OR = {
-						has_ideology = ideology:ideology_slaver
-						interest_group = {
-							is_interest_group_type = ig_landowners
-						}
-					}
-					percent >= 0.5
-				}
-			}
-			change_variable = {
-				name = brz_slavery_next
-				add = -1
-			}
-		}
-		if = {
-			limit = {
-				ig:ig_landowners = {
-					is_marginal = yes
-				}
-			}
-			change_variable = {
-				name = brz_slavery_next
-				add = 1
-			}
-		}
-		if = {
-			limit = {
-				ig:ig_intelligentsia = {
-					is_in_government = yes
-				}
-			}
-			change_variable = {
-				name = brz_slavery_next
-				add = 1
-			}
-		}
-		if = {
-			limit = {
-				NOT = { 
-					has_law = law_type:law_slave_trade
-				}
-			}
-			change_variable = {
-				name = brz_slavery_next
-				add = 1
-			}
-		}
-		if = {
-			limit = {
-				NOT = { 
-					has_modifier = brz_regency 
-				}
-			}
-			change_variable = {
-				name = brz_slavery_next
-				add = 1
-			}
-		}
-		if = {
-			limit = {
-				has_variable = isabel_confirmed_heir_var
-			}
-			change_variable = {
-				name = brz_slavery_next
-				add = 1
-			}
-		}
-	}
-}
-
-calculate_caudillo_progress = {
-	set_variable = { name = caudillo_next value = 0 }
-	if = {
-		limit = {
-			ig:ig_armed_forces = {
-				is_powerful = yes
-			}
-		}
-		change_variable = {
-			name = caudillo_next
-			add = 1
-		}
-	}
-	if = {
-		limit = {
-			ig:ig_armed_forces = {
-				is_in_government = yes
-			}
-		}
-		change_variable = {
-			name = caudillo_next
-			add = 1
-		}
-	}
-	if = {
-		limit = {
-			OR = {
-				has_law = law_type:law_autocracy
-				has_law = law_type:law_technocracy
-				has_law = law_type:law_oligarchy
-				has_law = law_type:law_single_party_state
-			}
-		}
-		change_variable = {
-			name = caudillo_next
-			add = 1
-		}
-	}
-	if = {
-		limit = {
-			ig:ig_armed_forces = {
-				is_marginal = yes
-			}
-		}
-		change_variable = {
-			name = caudillo_next
-			add = -1
-		}
-	}
-	if = {
-		limit = {
-			ig:ig_armed_forces = {
-				is_in_government = no
-			}
-		}
-		change_variable = {
-			name = caudillo_next
-			add = -1
-		}
-	}
-	if = {
-		limit = {
-			any_scope_character = {
-				OR = {
-					has_role = general
-					has_role = admiral
-				}
-				popularity >= 50 # Loved
-			}
-		}
-		change_variable = {
-			name = caudillo_next
-			add = 1
-		}
-	}
-	if = {
-		limit = {
-			any_scope_character = {
-				has_role = politician
-				NOT = { has_role = general }
-				popularity >= 50 # Loved
-				interest_group = {
-					is_powerful = yes
-					AND = {
-						law_stance = {
-							law = law_type:law_autocracy
-							value <= neutral
-						}
-						law_stance = {
-							law = law_type:law_technocracy
-							value >= neutral
-						}
-						law_stance = {
-							law = law_type:law_oligarchy
-							value >= neutral
-						}
-						law_stance = {
-							law = law_type:law_single_party_state
-							value >= neutral
-						}
-					}
-				}
-			}
-			NOT = {
-				any_scope_character = {
-					has_role = general
-					popularity >= 50 # Loved
-				}
-			}
-		}
-		change_variable = {
-			name = caudillo_next
-			add = -1
-		}
-	}
-	if = {
-		limit = {
-			any_scope_character = {
-				is_ruler = yes
-				has_ideology = ideology:ideology_authoritarian
-			}
-		}
-		change_variable = {
-			name = caudillo_next
-			add = 1
-		}
-	}
-	if = {
-		limit = {
-			OR = {
-				has_law = law_type:law_census_voting
-				has_law = law_type:law_universal_suffrage
-			}
-		}
-		change_variable = {
-			name = caudillo_next
-			add = -1
-		}
-	}
-}
-
-chi_add_1_fragile_unity = { # Actually subtracts from the bar
-	custom_tooltip = chi_add_1_fragile_unity_tt
-	post_notification = warlord_china_explosion_point_remove
-	change_variable = {
-		name = china_warlord_explosion
-		subtract = 1
-	}
-}
-
-chi_remove_1_fragile_unity = { # Actually adds to the bar
-	custom_tooltip = chi_remove_1_fragile_unity_tt
-	post_notification = warlord_china_explosion_point_add
-	change_variable = {
-		name = china_warlord_explosion
-		add = 1
 	}
 }
 
@@ -2891,4 +2509,298 @@ handle_revolutionary_sps = {
 			add_ruling_interest_group = yes
 		}
 	}
+}
+
+generate_pro_lobby_diplomatic_pact_opportunity = {
+	random_list = {
+		20 = {
+			trigger = {
+				can_create_diplomatic_pact = { target = scope:relevant_country type = trade_agreement }
+				NOT = {
+					has_diplomatic_pact = {
+						who = scope:relevant_country
+						type = trade_agreement
+					}
+				}
+			}
+			set_variable = pro_lobby_proposal_trade_agreement
+		}
+		20 = {
+			trigger = {
+				can_create_diplomatic_pact = { target = scope:relevant_country type = defensive_pact }
+				NOT = {
+					has_diplomatic_pact = {
+						who = scope:relevant_country
+						type = defensive_pact
+					}
+				}
+			}
+			set_variable = pro_lobby_proposal_defensive_pact
+		}
+		20 = {
+			trigger = {
+				can_create_diplomatic_pact = { target = scope:relevant_country type = alliance }
+				NOT = {
+					has_diplomatic_pact = {
+						who = scope:relevant_country
+						type = alliance
+					}
+				}
+			}
+			set_variable = pro_lobby_proposal_alliance
+		}
+		20 = {
+			trigger = {
+				OR = {
+					can_create_diplomatic_pact = { target = scope:relevant_country type = foreign_investment_agreement }
+					can_create_diplomatic_pact = { target = scope:relevant_country type = foreign_investment_rights }
+				}
+				NOR = {
+					has_diplomatic_pact = {
+						who = scope:relevant_country
+						type = foreign_investment_rights
+					}
+					has_diplomatic_pact = {
+						who = scope:relevant_country
+						type = foreign_investment_agreement
+					}
+				}
+			}
+			set_variable = pro_lobby_proposal_investment_agreement
+		}
+		20 = {
+			trigger = {
+				scope:relevant_country = {
+					is_power_bloc_leader = yes
+				}
+				can_create_diplomatic_pact = { target = scope:relevant_country type = join_power_bloc }
+				NOT = {
+					is_in_same_power_bloc = scope:relevant_country
+				}
+			}
+			set_variable = pro_lobby_proposal_power_bloc
+		}
+		20 = {
+			trigger = {
+				is_power_bloc_leader = yes
+				can_create_diplomatic_pact = { target = scope:relevant_country type = invite_to_power_bloc }
+				NOT = {
+					is_in_same_power_bloc = scope:relevant_country
+				}
+			}
+			set_variable = pro_lobby_proposal_power_bloc_invite
+		}
+	}
+}
+
+generate_pro_lobby_diplomatic_pact_proposal = {
+	random_list = {
+		20 = { # Break an alliance
+			trigger = {
+				can_break_diplomatic_pact = { target = scope:third_party_country type = alliance }
+			}
+			set_variable = pro_lobby_proposal_break_alliance
+		}
+		20 = { # Break a trade agreement
+			trigger = {
+				can_break_diplomatic_pact = { target = scope:third_party_country type = trade_agreement }
+			}
+			set_variable = pro_lobby_proposal_break_trade_agreement
+		}
+		20 = { # Break a defensive pact
+			trigger = {
+				can_break_diplomatic_pact = { target = scope:third_party_country type = defensive_pact }
+			}
+			set_variable = pro_lobby_proposal_break_defensive_pact
+		}
+		20 = { # Do a rivalry
+			trigger = {
+				can_create_diplomatic_pact = { target = scope:third_party_country type = rivalry }
+			}
+			set_variable = pro_lobby_proposal_rivalry
+		}
+		20 = { # Do an embargo
+			trigger = {
+				can_create_diplomatic_pact = { target = scope:third_party_country type = embargo }
+			}
+			set_variable = pro_lobby_proposal_embargo
+		}
+		20 = { # Do a war
+			trigger = {
+				pro_lobby_war_valid_check = yes
+			}
+			set_variable = pro_lobby_proposal_war
+		}
+		20 = { # Leave Power Bloc
+			trigger = {
+				pro_lobby_leave_power_bloc_valid_check = yes
+			}
+			set_variable = pro_lobby_proposal_leave_power_bloc
+		}
+	}
+}
+
+generate_anti_lobby_diplomatic_pact_opportunity = {
+	random_list = {
+		20 = {
+			trigger = {
+				can_create_diplomatic_pact = { target = scope:third_party_country type = trade_agreement }
+				NOT = {
+					has_diplomatic_pact = {
+						who = scope:third_party_country
+						type = trade_agreement
+					}
+				}
+			}
+			set_variable = anti_lobby_proposal_trade_agreement
+		}
+		20 = {
+			trigger = {
+				can_create_diplomatic_pact = { target = scope:third_party_country type = defensive_pact }
+				NOT = {
+					has_diplomatic_pact = {
+						who = scope:third_party_country
+						type = defensive_pact
+					}
+				}
+			}
+			set_variable = anti_lobby_proposal_defensive_pact
+		}
+		20 = {
+			trigger = {
+				can_create_diplomatic_pact = { target = scope:third_party_country type = alliance }
+				NOT = {
+					has_diplomatic_pact = {
+						who = scope:third_party_country
+						type = alliance
+					}
+				}
+			}
+			set_variable = anti_lobby_proposal_alliance
+		}
+		20 = {
+			trigger = {
+				OR = {
+					can_create_diplomatic_pact = { target = scope:relevant_country type = foreign_investment_agreement }
+					can_create_diplomatic_pact = { target = scope:relevant_country type = foreign_investment_rights }
+				}
+				NOR = {
+					has_diplomatic_pact = {
+						who = scope:third_party_country
+						type = foreign_investment_rights
+					}
+					has_diplomatic_pact = {
+						who = scope:third_party_country
+						type = foreign_investment_agreement
+					}
+				}
+			}
+			set_variable = anti_lobby_proposal_investment_agreement
+		}
+		20 = {
+			trigger = {
+				scope:third_party_country = {
+					is_power_bloc_leader = yes
+				}
+				can_create_diplomatic_pact = { target = scope:third_party_country type = join_power_bloc }
+				NOT = {
+					is_in_same_power_bloc = scope:third_party_country
+				}
+			}
+			set_variable = anti_lobby_proposal_power_bloc
+		}
+		20 = {
+			trigger = {
+				is_power_bloc_leader = yes
+				can_create_diplomatic_pact = { target = scope:third_party_country type = invite_to_power_bloc }
+				NOT = {
+					is_in_same_power_bloc = scope:third_party_country
+				}
+			}
+			set_variable = anti_lobby_proposal_power_bloc_invite
+		}
+	}
+}
+
+generate_anti_lobby_diplomatic_pact_proposal = {
+	random_list = {
+		20 = { # Break an alliance
+			trigger = {
+				can_break_diplomatic_pact = { target = scope:relevant_country type = alliance }
+			}
+			set_variable = anti_lobby_proposal_break_alliance
+		}
+		20 = { # Break a trade agreement
+			trigger = {
+				can_break_diplomatic_pact = { target = scope:relevant_country type = trade_agreement }
+			}
+			set_variable = anti_lobby_proposal_break_trade_agreement
+		}
+		20 = { # Break a defensive pact
+			trigger = {
+				can_break_diplomatic_pact = { target = scope:relevant_country type = defensive_pact }
+			}
+			set_variable = anti_lobby_proposal_break_defensive_pact
+		}
+		20 = { # Do a rivalry
+			trigger = {
+				can_create_diplomatic_pact = { target = scope:relevant_country type = rivalry }
+			}
+			set_variable = anti_lobby_proposal_rivalry
+		}
+		20 = { # Do an embargo
+			trigger = {
+				can_create_diplomatic_pact = { target = scope:relevant_country type = embargo }
+			}
+			set_variable = anti_lobby_proposal_embargo
+		}
+		20 = { # Do a war
+			trigger = {
+				anti_lobby_war_valid_check = yes
+			}
+			set_variable = anti_lobby_proposal_war
+		}
+		20 = { # Leave Power Bloc
+			trigger = {
+				anti_lobby_leave_power_bloc_valid_check = yes
+			}
+			set_variable = anti_lobby_proposal_leave_power_bloc
+		}
+	}
+}
+
+clear_anti_lobby_vars = {
+	remove_variable = anti_lobby_proposal_break_alliance
+	remove_variable = anti_lobby_proposal_break_trade_agreement
+	remove_variable = anti_lobby_proposal_break_defensive_pact
+	remove_variable = anti_lobby_proposal_rivalry
+	remove_variable = anti_lobby_proposal_embargo
+	remove_variable = anti_lobby_proposal_war
+	remove_variable = anti_lobby_proposal_leave_power_bloc
+	remove_variable = anti_lobby_proposal_defensive_pact
+	remove_variable = anti_lobby_proposal_alliance
+	remove_variable = anti_lobby_proposal_trade_agreement
+	remove_variable = anti_lobby_proposal_power_bloc
+	remove_variable = anti_lobby_proposal_power_bloc_invite
+	remove_variable = anti_lobby_proposal_investment_agreement
+	remove_variable = anti_lobby_opportunity_target
+	remove_variable = anti_lobby_demand_target
+}
+
+clear_pro_lobby_vars = {
+	remove_variable = pro_lobby_proposal_defensive_pact
+	remove_variable = pro_lobby_proposal_alliance
+	remove_variable = pro_lobby_proposal_trade_agreement
+	remove_variable = pro_lobby_proposal_power_bloc
+	remove_variable = pro_lobby_proposal_power_bloc_invite
+	remove_variable = pro_lobby_proposal_investment_agreement
+	remove_variable = pro_lobby_proposal_break_alliance
+	remove_variable = pro_lobby_proposal_break_trade_agreement
+	remove_variable = pro_lobby_proposal_break_defensive_pact
+	remove_variable = pro_lobby_proposal_rivalry
+	remove_variable = pro_lobby_proposal_embargo
+	remove_variable = pro_lobby_proposal_war
+	remove_variable = pro_lobby_proposal_leave_power_bloc
+	remove_variable = pro_lobby_demand_target
+	remove_variable = pro_lobby_opportunity_target
 }

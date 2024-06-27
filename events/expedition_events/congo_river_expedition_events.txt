@@ -325,9 +325,12 @@ expedition_events.612 = { #Failed expedition
 		default_option = yes
 		trigger = {
 			OR = {
-				NOR = { 
+				NOT = { 
 					exists = var:expedition_progress
-					var:expedition_progress >= 6 
+				}
+				AND = {
+					exists = var:expedition_progress
+					var:expedition_progress < 6 
 				}
 				is_ai = yes
 			}
@@ -346,6 +349,7 @@ expedition_events.612 = { #Failed expedition
 		name = expedition_events.612.b
 		default_option = yes
 		trigger = {
+			exists = var:expedition_progress
 			var:expedition_progress >= 6
 		}
 		add_modifier = {
