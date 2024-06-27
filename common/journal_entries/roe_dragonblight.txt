@@ -1,0 +1,91 @@
+﻿je_dragonblight = {
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	group = je_group_internal_affairs
+	
+	immediate = {
+
+	}
+
+	#scripted_button = je_positivist_movement_embrace_positivism_button
+
+
+	on_weekly_pulse = {
+		effect = {
+			# clamp_variable = {
+			# 	name = positivism_progress_var
+			# 	max = 100
+			# 	min = 0
+			# }
+		}
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:illvasaari
+				}
+				change_pop_culture = {
+					target = cu:kotskarvi
+					value = 0.00145 # je failure graph y = 0.998755^x where y = proportion of dragonborn population and x = months from start
+				}
+			}
+			every_scope_state = {
+				limit = {
+					has_modifier = modifier_active_dragonblight_outbreak
+				}
+				every_scope_pop = {
+					limit = {
+						culture = cu:illvasaari
+					}
+					change_pop_culture = {
+						target = cu:kotskarvi
+						value = 0.0029
+					}
+				}
+			}	
+		}
+		random_events = {
+			# 100 = 0
+			# 10 = positivism_pulse.1
+			# 10 = positivism_pulse.2
+			# 10 = positivism_pulse.3
+			# 10 = positivism_pulse.4
+			# 10 = positivism_pulse.5
+			# 10 = bp1_misc.3
+		}
+	}
+
+	complete = {
+		NOT= {
+			any_scope_state = {
+				has_modifier = modifier_active_dragonblight_outbreak
+			}
+		}
+		has_variable = dragonblight_cured #todo
+	}	
+
+	on_complete = {
+		remove_modifier = dragonblight_blues #todo
+		trigger_event = {
+		#	id = dragonblight.not
+		}
+	}
+
+	
+
+	# current_value = {
+	# 	#value = root.var:positivism_progress_var
+	# }
+
+	# goal_add_value = {
+	# 	add = 100
+	# }
+
+	weight = 100
+
+	progressbar = yes
+
+	should_be_pinned_by_default = yes
+}
