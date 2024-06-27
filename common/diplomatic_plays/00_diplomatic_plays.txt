@@ -95,7 +95,8 @@ dp_regime_change = {
 		NOT = { is_subject_of = scope:target_country }	
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = organization_tag }
+			NOT = { is_country_type = organization_tag }
+			NOT = { is_subject_of = root }
 		}	
 	}
 	
@@ -134,7 +135,8 @@ dp_ban_slavery = {
 		NOT = { is_subject_of = scope:target_country }	
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
-		NOT = { is_country_type = organization_tag }
+			NOT = { is_country_type = organization_tag }
+			NOT = { is_subject_of = root }
 		}	
 	}
 

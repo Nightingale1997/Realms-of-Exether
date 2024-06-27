@@ -1398,6 +1398,7 @@ NWar = {
 	OCCUPATION_STATE_DEFENSIVE_BATTLE_VICTORY_SCORE = 100 # How many occupation "points" each country receives after winning a defensive battle
 	OCCUPATION_STATE_CLEAR_OCCUPATION_FRACTION = 0.5 # Fraction of occupation score dedicated to clear occupation from your own States (if any).
 	NAVAL_INVASION_MAX_LAND_BATTLE_DEFEATS_AT_ZERO_OCCUPATION = 3 # At this number of land defeats with zero occupation you fail the naval invasion.
+	NAVAL_INVASION_MIN_POWER_PROJECTION_RATIO_TO_BLOCK_LANDING = 0.25 	# How powerful a fleet must be to be considered as "blocking" a naval invading flee
 
 	STATE_CONQUEST_HOMELAND_AND_CLAIM_RADICALIZATION = 0.1
 	STATE_CONQUEST_HOMELAND_AND_CLAIM_DEMILITARIZATION = 0.25

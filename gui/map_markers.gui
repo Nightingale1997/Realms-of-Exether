@@ -1380,7 +1380,7 @@ button = {
 		}
 
 		textbox = {
-			raw_text = "@construction! [State.GetCountry.GetNumBuildingsUnderConstructionInState(State.Self)|v]"
+			raw_text = "@construction! [GetPlayer.GetNumBuildingsUnderConstructionInState(State.Self)|v]"
 			autoresize = yes
 			align = nobaseline
 			margin = { 9 4 }

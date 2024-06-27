@@ -4,6 +4,8 @@
 		power_bloc_mandate_progress_per_great_power_member_add = 10
 		power_bloc_mandate_progress_per_major_power_member_add = 5
 		power_bloc_mandate_progress_per_minor_power_member_add = 2
+		power_bloc_mandate_progress_per_unrecognized_major_power_member_add = 2
+		power_bloc_mandate_progress_per_unrecognized_regional_power_member_add = 1
 		power_bloc_cohesion_per_member_add = -1
 		power_bloc_invite_acceptance_great_power_add = -15
 	}
@@ -164,12 +166,13 @@ identity_sovereign_empire = {
 		power_bloc_mandate_progress_per_great_power_member_add = 10
 		power_bloc_mandate_progress_per_major_power_member_add = 5
 		power_bloc_mandate_progress_per_minor_power_member_add = 2
+		power_bloc_mandate_progress_per_unrecognized_major_power_member_add = 2
+		power_bloc_mandate_progress_per_unrecognized_regional_power_member_add = 1
+		power_bloc_invite_acceptance_great_power_add = -20
+		power_bloc_invite_acceptance_major_power_add = -10
+		power_bloc_invite_acceptance_unrecognized_major_power_add = -10
+		power_bloc_invite_acceptance_add = -30
 		power_bloc_cohesion_per_member_add = -3
-		power_bloc_invite_acceptance_great_power_add = -50
-		power_bloc_invite_acceptance_major_power_add = -40
-		power_bloc_invite_acceptance_unrecognized_major_power_add = -40
-		power_bloc_invite_acceptance_minor_power_add = -30
-		power_bloc_invite_acceptance_unrecognized_regional_power_add = -30  
 	}
 
 	leader_modifier = {
@@ -302,6 +305,8 @@ identity_ideological_union = {
 		power_bloc_mandate_progress_per_great_power_member_add = 10
 		power_bloc_mandate_progress_per_major_power_member_add = 5
 		power_bloc_mandate_progress_per_minor_power_member_add = 2
+		power_bloc_mandate_progress_per_unrecognized_major_power_member_add = 2
+		power_bloc_mandate_progress_per_unrecognized_regional_power_member_add = 1
 		power_bloc_cohesion_per_member_add = -2
 	}
 
@@ -404,11 +409,13 @@ identity_ideological_union = {
 		}
 		else_if = {
 		 	limit = { "scope:power_bloc.power_bloc_worst_progressiveness_difference_government_type" != 0 }
-		 	add = scope:power_bloc.power_bloc_worst_progressiveness_difference_government_type
-		 	divide = 200 # bad progressiveness difference is usually around 100
-		 	multiply = -1
-		 	multiply = define:NPowerBlocs|COHESION_TARGET_MAX
-		 	desc = POWER_BLOC_COHESION_WORST_PROGRESSIVENESS_DIFFERENCE
+		 	add = {
+				add = scope:power_bloc.power_bloc_worst_progressiveness_difference_government_type
+				divide = 200 # bad progressiveness difference is usually around 100
+				multiply = -1
+				multiply = define:NPowerBlocs|COHESION_TARGET_MAX
+				desc = POWER_BLOC_COHESION_WORST_PROGRESSIVENESS_DIFFERENCE
+			}
 		}
 	}
 	
@@ -459,6 +466,8 @@ identity_military_treaty_organization = {
 		power_bloc_mandate_progress_per_great_power_member_add = 10
 		power_bloc_mandate_progress_per_major_power_member_add = 5
 		power_bloc_mandate_progress_per_minor_power_member_add = 2
+		power_bloc_mandate_progress_per_unrecognized_major_power_member_add = 2
+		power_bloc_mandate_progress_per_unrecognized_regional_power_member_add = 1
 		power_bloc_invite_acceptance_great_power_add = -15
 		power_bloc_cohesion_per_member_add = -2
 	}
@@ -598,6 +607,8 @@ identity_religious = {
 		power_bloc_mandate_progress_per_great_power_member_add = 10
 		power_bloc_mandate_progress_per_major_power_member_add = 5
 		power_bloc_mandate_progress_per_minor_power_member_add = 2
+		power_bloc_mandate_progress_per_unrecognized_major_power_member_add = 2
+		power_bloc_mandate_progress_per_unrecognized_regional_power_member_add = 1
 		power_bloc_cohesion_per_member_add = -2
 	}
 

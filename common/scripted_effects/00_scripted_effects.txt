@@ -14,18 +14,24 @@
 #
 
 relations_hit_with_power_bloc_leaders = {
-	every_power_bloc = {
-		limit = { 
-			NOT = { scope:power_bloc ?= this }
+	if = {
+		limit = {
+			has_game_started = yes
 		}
-		power_bloc_leader = {
-			root = {
-				change_relations = { 
-					country = prev
-					value = -30
+		
+		every_power_bloc = {
+			limit = { 
+				NOT = { scope:power_bloc ?= this }			
+			}
+			power_bloc_leader = {
+				root = {
+					change_relations = { 
+						country = prev
+						value = -30
+					}
 				}
 			}
-		}
+		}		
 	}
 }
 

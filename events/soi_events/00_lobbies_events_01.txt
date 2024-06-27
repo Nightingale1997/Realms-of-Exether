@@ -24,6 +24,7 @@ lobby_events.21 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		any_interest_group = {
 			is_member_of_any_lobby = no
 			leader = {
@@ -38,6 +39,9 @@ lobby_events.21 = {
 			is_political_lobby_type = lobby_pro_country
 			target = {
 				any_diplomatically_relevant_country = {
+					NOT = { 
+						this = root 
+					}
 					OR = {
 						has_diplomatic_pact = {
 							who = root
@@ -80,6 +84,9 @@ lobby_events.21 = {
 				is_political_lobby_type = lobby_pro_country
 				target = {
 					any_diplomatically_relevant_country = {
+						NOT = { 
+							this = root 
+						}
 						OR = {
 							has_diplomatic_pact = {
 								who = root
@@ -105,6 +112,9 @@ lobby_events.21 = {
 			target = {
 				random_diplomatically_relevant_country = {
 					limit = {
+						NOT = { 
+							this = root 
+						}
 						OR = {
 							has_diplomatic_pact = {
 								who = root
@@ -203,6 +213,7 @@ lobby_events.22 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		OR = {
 			country_has_voting_franchise = no
 			has_law = law_type:law_landed_voting
@@ -448,6 +459,7 @@ lobby_events.23 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		OR = {
 			AND = { # Autrocratic or Enlightened monarch
 				any_interest_group = {
@@ -692,6 +704,7 @@ lobby_events.24 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		any_interest_group = {
 			is_member_of_any_lobby = no
 			is_interest_group_type = ig_armed_forces
@@ -816,6 +829,7 @@ lobby_events.25 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		any_interest_group = {
 			is_member_of_any_lobby = no
 			law_stance = {
@@ -902,6 +916,7 @@ lobby_events.26 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		any_interest_group = {
 			is_member_of_any_lobby = no
 			leader = {
@@ -1015,6 +1030,7 @@ lobby_events.27 = { #
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		NOT = {
 			has_law = law_type:law_council_republic
 		}
@@ -1114,6 +1130,7 @@ lobby_events.28 = { #
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		OR = {
 			has_law = law_type:law_state_religion
 			has_law = law_type:law_freedom_of_conscience
@@ -1239,6 +1256,7 @@ lobby_events.29 = { #
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		any_interest_group = {
 			is_member_of_any_lobby = no
 			law_stance = {
@@ -1327,6 +1345,7 @@ lobby_events.30 = { #
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		any_interest_group = {
 			is_member_of_any_lobby = no
 			law_stance = {
