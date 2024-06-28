@@ -201,3 +201,94 @@ dragonblight.2 = { #outbreaks states receive this event + the other one for 5% t
 				## potentially -20% if greater than 20% kobolds in state
 			#leads to either success event 12 or failure event 13.  if killed, the state he died in becomes a kobold homeland.  if he is NOT killed, this state will not,
 			#but every other he enters from now on will become a kobold homeland
+
+	dragonblight_pulse.1 = { #trade route event
+				type = country_event
+				placement = ROOT
+			
+				title = dragonblight_pulse.1.t
+				desc = dragonblight_pulse.1.d
+				flavor = dragonblight_pulse.1.f
+			
+				duration = 3
+			
+				event_image = {
+					video = "europenorthamerica_opium_smoker"
+				}
+			
+				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			
+				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+			
+				trigger = {
+					any_trade_route = {
+						OR = {
+							importer.owner = {
+								country_has_primary_culture = cu:kotskarvi
+							}
+							exporter.owner = {
+								country_has_primary_culture = cu:kotskarvi
+							}
+						}
+					}	
+				}	
+
+				immediate = {
+					random_scope_state = {
+						limit = {
+							NOT = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+						}
+						add_modifier = modifier_active_dragonblight_outbreak
+					}
+				}
+			}	
+
+			dragonblight_pulse.2 = { #trade route event
+				type = country_event
+				placement = ROOT
+			
+				title = dragonblight_pulse.2.t
+				desc = dragonblight_pulse.2.d
+				flavor = dragonblight_pulse.2.f
+			
+				duration = 3
+			
+				event_image = {
+					video = "europenorthamerica_opium_smoker"
+				}
+			
+				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			
+				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+			
+				# trigger = {
+				# 	any_trade_route = {
+				# 		OR = {
+				# 			importer.owner = {
+				# 				country_has_primary_culture = cu:kotskarvi
+				# 			}
+				# 			exporter.owner = {
+				# 				country_has_primary_culture = cu:kotskarvi
+				# 			}
+				# 		}
+				# 	}	
+				# }	
+
+				immediate = {
+					random_scope_state = {
+						limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+						}
+						save_scope_as = spreader_state
+
+					random_scope_state = {
+						limit = {
+							is_adjacent_to_state = scope:spreader_state
+						}
+						add_modifier = modifier_active_dragonblight_outbreak
+					}
+				}
+			}			
