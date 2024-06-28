@@ -369,12 +369,28 @@
                 add = 90000
 
                 has_dlc_feature = ep1_cosmetics
-
+                
                 scope:character ?= {
-                    always = no
-                    #has_template = per_nasir_al_din_qajar_template
-                    age > define:NCharacters|ADULT_AGE
+                    culture = cu:vozi
+                        OR = {
+                            AND = {
+                                is_ruler = yes
+                                home_country ?= {
+                                    has_law = law_type:law_monarchy
+                                }
+                            }
+                            AND = {
+                                is_ruler = yes
+                                 is_interest_group_type = ig_armed_forces
+                            }
+                            AND = {
+                                has_role = agitator
+                                is_interest_group_type = ig_armed_forces
+                            }
+                        }
+                        age > define:NCharacters|ADULT_AGE
                 }
+
             }
         }
     }
