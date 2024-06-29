@@ -24,6 +24,7 @@ lobby_events.40 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		OR = {
 			AND = {
 				is_enacting_law = law_type:law_graduated_taxation
@@ -211,6 +212,7 @@ lobby_events.31 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		OR = {
 			AND = { # IG with progressive or liberal IG leader joins lobby that has a conservative or reactionary member
 				any_interest_group = {
@@ -480,6 +482,7 @@ lobby_events.32 = {
 	
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		any_interest_group = {
 			is_member_of_any_lobby = no
 			is_marginal = no
@@ -611,6 +614,7 @@ lobby_events.33 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		any_political_lobby = {
 			OR = {
 				is_political_lobby_type = lobby_pro_country
@@ -731,6 +735,7 @@ lobby_events.34 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		has_law = law_type:law_slavery_banned
 		any_political_lobby = {
 			is_political_lobby_type = lobby_anti_country
@@ -847,6 +852,7 @@ lobby_events.35 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		any_interest_group = {
 			is_member_of_any_lobby = no
 			leader = {
@@ -979,6 +985,7 @@ lobby_events.36 = {
 
 	trigger = { # Check if free trade is being enacted
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		is_enacting_law = law_type:law_free_trade
 		any_interest_group = {
 			is_member_of_any_lobby = no
@@ -1087,6 +1094,7 @@ lobby_events.37 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		OR = {
 			AND = {
 				is_enacting_law = law_type:law_universal_suffrage
@@ -1263,6 +1271,7 @@ lobby_events.38 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		OR = {
 			AND = {
 				is_enacting_law = law_type:law_universal_suffrage
@@ -1446,6 +1455,7 @@ lobby_events.39 = {
 
 	trigger = {
 		has_dlc_feature = lobbies	
+		is_revolutionary = no
 		is_enacting_law = law_type:law_free_trade
 		any_interest_group = {
 			is_member_of_any_lobby = no
@@ -1549,6 +1559,7 @@ lobby_events.51 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		has_technology_researched = mass_communication
 		any_political_lobby = {
 			any_lobby_member = {
@@ -1627,6 +1638,7 @@ lobby_events.52 = {
 	trigger = {
 		government_legitimacy < 75
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		any_political_lobby = {
 			any_lobby_member = {
 				leader = {
@@ -1706,6 +1718,7 @@ lobby_events.53 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		has_technology_researched = mass_communication
 		any_political_lobby = {
 			OR = {
@@ -1800,6 +1813,7 @@ lobby_events.54 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		any_scope_character = {
 			has_role = agitator
 			exists = home_country
@@ -1893,6 +1907,7 @@ lobby_events.55 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		NOT = { has_law = law_type:law_no_police }
 		any_political_lobby = {
 			OR = {
@@ -1995,6 +2010,7 @@ lobby_events.56 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		government_legitimacy < 75
 		any_political_lobby = { # Any lobby type
 			any_lobby_member = { 
@@ -2092,6 +2108,7 @@ lobby_events.57 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		any_political_lobby = {
 			OR = {
 				is_political_lobby_type = lobby_pro_country
@@ -2275,6 +2292,7 @@ lobby_events.58 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		government_legitimacy < 75
 		any_scope_state = {
 			is_capital = yes
@@ -2381,6 +2399,7 @@ lobby_events.59 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		has_technology_researched = mass_communication
 		NOT = {
 			OR = {
@@ -2474,6 +2493,7 @@ lobby_events.60 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		has_technology_researched = mass_communication
 		any_political_lobby = {
 			OR = {

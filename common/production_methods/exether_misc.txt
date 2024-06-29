@@ -671,11 +671,12 @@ pm_simple_hunting = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_monster_essence_add = 20
+			goods_output_monster_essence_add = 30
 		}
 
 		level_scaled = {
 			# employment
+			building_employment_adventurers_add = 500
 			building_employment_laborers_add = 4500
 		}
 	}
@@ -699,13 +700,14 @@ pm_firearms_hunting= {
 			goods_input_small_arms_add = 5
 			
 			# output goods
-			goods_output_monster_essence_add = 30
+			goods_output_monster_essence_add = 60
 		}
 
 		level_scaled = {
 			# employment
-			building_employment_laborers_add = 4000
 			building_employment_adventurers_add = 500
+			building_employment_laborers_add = 4000
+			building_employment_soldiers_add = 500
 		}
 	}
 
@@ -729,14 +731,14 @@ pm_heavy_weapons_hunting = {
 			goods_input_ammunition_add = 5
 			
 			# output goods
-			goods_output_monster_essence_add = 50 
+			goods_output_monster_essence_add = 100 
 		}
 
 		level_scaled = {
 			# employment
-			building_employment_laborers_add = 3000
 			building_employment_adventurers_add = 1000
-			building_employment_heroes_add = 500
+			building_employment_laborers_add = 3000
+			building_employment_soldiers_add = 1000
 		}
 	}
 

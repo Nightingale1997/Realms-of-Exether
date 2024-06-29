@@ -1219,7 +1219,14 @@
         }	
         create_building={
           building="building_arts_academy"
-          level=3
+		  add_ownership={
+			building={
+				type="building_wizard_tower"
+				country="c:ARR"
+				levels=3
+				region="STATE_VICEROYS_PEARL"
+			}
+		}
           reserves=1
           activate_production_methods={ "pm_traditional_art" }
         }			
@@ -1297,7 +1304,14 @@
         }
 		create_building={
 			building="building_adventuring_guild"
-			level=1
+			add_ownership={
+				building={
+					type="building_tavern"
+					country="c:ARR"
+					levels=1
+					region="STATE_VICEROYS_PEARL"
+				}
+			}
 			reserves=1
 			activate_production_methods={ "pm_traditional_adventuring" "pm_trophy_hunting" }
 		  }

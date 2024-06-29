@@ -60,7 +60,7 @@
 		}
 		OR = {
 			AND = {
-				NOT = { is_pop_type = wizards }
+				NOT = { is_pop_type = hedge_wizards }
 				OR = {
 					pop_employment_building_group = bg_agriculture
 					pop_employment_building_group = bg_ranching
@@ -72,7 +72,7 @@
 				}
 			}
 			AND = {
-				is_pop_type = wizards
+				is_pop_type = hedge_wizards
 				owner = {
 					has_law = law_type:law_druidic_circles
 				}
@@ -105,7 +105,7 @@
 			desc = "DRUIDIC_LAW"
 			if = {
 				limit = {
-					is_pop_type = wizards
+					is_pop_type = hedge_wizards
 					owner = {
 						has_law = law_type:law_druidic_circles
 					}

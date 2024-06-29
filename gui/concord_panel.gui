@@ -316,7 +316,7 @@ types concord_panel
 							parentanchor = hcenter					
 							textbox = {
 								autoresize = yes
-								raw_text = "#t Observer States#!"
+								raw_text = "#t Uninvoled Nations#!"
 								using = header_font_fancy
 								using = fontsize_mega
 							}
@@ -513,12 +513,12 @@ types concord_panel
 											size = { 715 25 }					
 											blockoverride "negative_min_max_values" {
 												min = 0
-												max = "[FixedPointToFloat(GetPlayer.MakeScope.ScriptValue('doubleprogressbar_max'))]"
+												max = "[FixedPointToFloat(GetPlayer.MakeScope.ScriptValue('doubleprogressbar_max_concord'))]"
 											}
 					
 											blockoverride "positive_min_max_values" {
 												min = 0
-												max = "[FixedPointToFloat(GetPlayer.MakeScope.ScriptValue('doubleprogressbar_max'))]"
+												max = "[FixedPointToFloat(GetPlayer.MakeScope.ScriptValue('doubleprogressbar_max_concord'))]"
 											}
 											
 											blockoverride "value_left" {
@@ -840,7 +840,7 @@ types concord_panel
 								direction = vertical
 								tab_button = {
 									size = { 250 60 }
-									raw_text = "Environment & Technology"
+									raw_text = "Environment & Magic"
 								}
 								scrollbox = {
 									minimumsize = { 250 400 }

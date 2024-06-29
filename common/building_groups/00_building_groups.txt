@@ -675,6 +675,22 @@ bg_financial_districts = {
 # Needed for autonomous investment to track investments separately from other ownership buildings
 bg_manor_houses = {
 	parent_group = bg_owner_buildings
+	
+	infrastructure_usage_per_level = 0.0
+}
+
+# Needed for autonomous investment to track investments separately from other ownership buildings
+bg_wizard_towers = {
+	parent_group = bg_owner_buildings
+	
+	infrastructure_usage_per_level = 0.0
+}
+
+# Needed for autonomous investment to track investments separately from other ownership buildings
+bg_taverns = {
+	parent_group = bg_owner_buildings
+	
+	infrastructure_usage_per_level = 0.0
 }
 
 bg_owner_buildings = {

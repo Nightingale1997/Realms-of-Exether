@@ -248,16 +248,10 @@ japanese_imperial_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
 		is_ruler = yes
-		exists = home_country
      	home_country = {
      		has_law = law_type:law_monarchy
      	}
-		culture = {
-			AND = {
-				has_discrimination_trait = vandori
-				has_discrimination_trait = nomadic
-			}
-		}
+		culture = cu:vandori
 	}
 }
 
@@ -269,9 +263,18 @@ chinese_imperial_clothes_trigger = {
      	home_country = {
      		has_law = law_type:law_monarchy
      	}
-		OR = {
-			has_culture = cu:shkemger
+		culture = {
+			AND = {
+				NOT = { 
+					has_discrimination_trait = hobgoblin
+				}
+				has_discrimination_trait = goblin_heritage
+				NOT = {
+					has_discrimination_trait = gavkhani_culture_group
+				}
+			}
 		}
+
 	}
 }
 
@@ -281,7 +284,9 @@ chinese_manchu_queue_hairstyle_character_trigger = { # hairsyle for Manchu chara
 		exists = home_country
 		home_country = { 
 			ruler = { 
-				has_culture = cu:khanaruk
+				culture = {
+					has_discrimination_trait = hobgoblin
+				}
 			}
 			NOT = { 
 				has_law = law_type:law_multicultural
@@ -295,7 +300,9 @@ chinese_manchu_queue_hairstyle_pops_trigger = { # hairsyle for Manchu pops not l
 	scope:pop = {
 		home_country = { 
 			ruler = { 
-				has_culture = cu:khanaruk
+				culture = {
+					has_discrimination_trait = hobgoblin
+				}
 			}
 			NOT = { 
 				has_law = law_type:law_multicultural
@@ -308,13 +315,16 @@ chinese_court_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
 		culture = {
-			OR = {
 				AND = {
-					NOT = { this = cu:khanaruk }
-					has_discrimination_trait = goblin_heritage
+					NOT = { has_discrimination_trait = hobgoblin }
+					AND = {
+						has_discrimination_trait = goblin_heritage
+						NOT = {
+							has_discrimination_trait = gavkhani_culture_group
+						}
+					}
 				}
 				
-			}
 		}
 	}	
 }
@@ -323,10 +333,13 @@ chinese_court_clothes_pop_trigger = {
 	exists = scope:pop
 	scope:pop = {
 		culture = {
-			OR = {
-				NOT = { this = cu:khanaruk }
-				has_discrimination_trait = goblin_heritage
-			}
+				NOT = { has_discrimination_trait = hobgoblin }
+				AND = {
+					has_discrimination_trait = goblin_heritage
+					NOT = {
+						has_discrimination_trait = gavkhani_culture_group
+					}
+				}
 		}
 	}	
 }
@@ -416,12 +429,9 @@ arabic_clothes_trigger = {
 ethiopian_clothes_trigger = {
 	exists = scope:character
 
-	NOT = {
-		has_cosmetic_dlc = "Dawn of Wonder"
-	}
 	scope:character = {
 		culture = {
-			has_discrimination_trait = elf_heritage
+			has_discrimination_trait = gavkhani_culture_group
 		}
 	}
 }
@@ -690,8 +700,11 @@ east_asian_clothes_pop_trigger = {
 	exists = scope:pop
 	scope:pop = {
 		culture = {
-			OR = {
+			AND = {
 				has_discrimination_trait = goblin_heritage
+				NOT = {
+					has_discrimination_trait = gavkhani_culture_group
+				}
 			}
 		}   
 	}
@@ -924,14 +937,7 @@ cold_clothes_pop_trigger = {
 japanese_clothes_pop_trigger = {
 	exists = scope:pop
 	scope:pop = {
-		OR = {
-					culture = {
-						AND = {
-							has_discrimination_trait = vandori
-							has_discrimination_trait = nomadic
-						}
-		}
-		}
+		culture = cu:vandori
 	}
 }
 
@@ -939,14 +945,7 @@ japanese_clothes_pop_trigger = {
 japanese_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
-          OR = {
-					culture = {
-						AND = {
-							has_discrimination_trait = vandori
-							has_discrimination_trait = nomadic
-						}
-		}
-          }
+		culture = cu:vandori
 	}
 }
 
@@ -1130,20 +1129,13 @@ christian_clothes_pop_trigger = {
 }
 
 buddhist_clothes_pop_trigger = {
-	OR = {
-		AND = {
-			exists = scope:character
-			scope:character = {
-				culture = cu:anwarthi
-			}
+     exists = scope:pop
+     scope:pop = {
+  		OR = {
+
+			culture = cu:anwarthi
 		}
-		AND = {
-			exists = scope:pop
-			scope:pop = {
-				culture = cu:anwarthi
-		   }
-		}
-	}
+     }
 }
 
 

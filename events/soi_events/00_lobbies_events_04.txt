@@ -744,6 +744,7 @@ lobby_events.1 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		NOT = {
 			has_law = law_type:law_council_republic
 		}
@@ -981,6 +982,7 @@ lobby_events.2 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		any_interest_group = {
 			is_marginal = no
 			is_member_of_any_lobby = no
@@ -1147,6 +1149,7 @@ lobby_events.3 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		any_interest_group = {
 			OR = {
 				has_ideology = ideology:ideology_modernizer
@@ -1296,6 +1299,7 @@ lobby_events.4 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		any_political_lobby = {
 			save_temporary_scope_as = temp_lobby
 			is_political_lobby_type = lobby_pro_country
@@ -1448,6 +1452,7 @@ lobby_events.5 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		any_interest_group = {
 			OR = {
 				has_ideology = ideology:ideology_market_liberal
@@ -1644,6 +1649,7 @@ lobby_events.6 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		any_political_lobby = {
 			is_political_lobby_type = lobby_pro_country
 			target = {
@@ -1773,6 +1779,7 @@ lobby_events.7 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		any_interest_group = {
 			law_stance = {
 				law = law_type:law_council_republic
@@ -1980,6 +1987,7 @@ lobby_events.8 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		any_active_party = {
 			any_member = {
 				is_member_of_any_lobby = yes
@@ -2116,6 +2124,7 @@ lobby_events.9 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		any_interest_group = {
 			OR = {
 				is_interest_group_type = ig_armed_forces
@@ -2485,6 +2494,7 @@ lobby_events.10 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		is_country_type = unrecognized
 		any_interest_group = {
 			is_member_of_any_lobby = no
@@ -2717,6 +2727,7 @@ lobby_events.11 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		is_country_type = recognized
 		country_is_in_europe = yes
 		any_interest_group = {
@@ -3025,6 +3036,7 @@ lobby_events.12 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		any_interest_group = {
 			is_interest_group_type = ig_intelligentsia
 			is_member_of_any_lobby = no
@@ -3332,6 +3344,7 @@ lobby_events.13 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		any_political_lobby = {
 			any_lobby_member = {
 				OR = {
@@ -3450,6 +3463,7 @@ lobby_events.14 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		any_interest_group = {
 			OR = {
 				has_ideology = ideology:ideology_market_liberal
@@ -3733,6 +3747,7 @@ lobby_events.15 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		any_interest_group = {
 			is_marginal = no
 			is_member_of_any_lobby = no
@@ -3933,6 +3948,7 @@ lobby_events.16 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		any_political_lobby = {
 			is_political_lobby_type = lobby_pro_country
 			target = {
@@ -4035,6 +4051,7 @@ lobby_events.17 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		any_political_lobby = {
 			any_lobby_member = {
 				lobby_join_weight:PREV <= 75
@@ -4119,6 +4136,7 @@ lobby_events.18 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		any_interest_group = {
 			OR = {
 				has_ideology = ideology:ideology_jingoist
@@ -4343,6 +4361,7 @@ lobby_events.19 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		is_country_type = unrecognized
 		any_interest_group = {
 			NOT = {
@@ -4661,6 +4680,7 @@ lobby_events.20 = {
 
 	trigger = {
 		has_dlc_feature = lobbies
+		is_revolutionary = no
 		any_interest_group = {
 			any_political_lobby = {
 				count >= 2

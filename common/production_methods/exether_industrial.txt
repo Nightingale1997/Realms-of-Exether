@@ -5,12 +5,13 @@
 		workforce_scaled = {
 			# input goods
 			goods_input_wood_add = 30
-			
+
 			# output goods
-			goods_output_gizmos_add = 25
+			goods_output_gizmos_add = 30
 		}
 
 		level_scaled = {
+			building_employment_shopkeepers_add = 500
 			building_employment_laborers_add = 4500
 		}
 	}
@@ -26,16 +27,17 @@ pm_plastic_gizmos = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_blubber_add = 30
-			goods_input_steel_add = 25
+			goods_input_rubber_add = 10
+			goods_input_godsblood_add = 30
 			
 			# output goods
-			goods_output_gizmos_add = 90
+			goods_output_gizmos_add = 110
 		}
 
 		level_scaled = {
+			building_employment_shopkeepers_add = 500
 			building_employment_laborers_add = 3000
-			building_employment_machinists_add = 1000
+			building_employment_hedge_wizards_add = 1000
 			building_employment_engineers_add = 500
 		}
 	}
@@ -44,22 +46,23 @@ pm_plastic_gizmos = {
 pm_steel_gizmos = {
 	texture = "gfx/interface/icons/production_method_icons/bessemer_process.dds"
 	unlocking_technologies = {
-		mechanical_tools
-	}
+		steelworking
+	}	
+	
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_wood_add = 30
-			goods_input_steel_add = 20
+			goods_input_wishstone_add = 30
+			goods_input_trinkets_add = 20
 			
 			# output goods
 			goods_output_gizmos_add = 60
 		}
 
 		level_scaled = {
-			building_employment_laborers_add = 3500
-			building_employment_machinists_add = 500
-			building_employment_engineers_add = 500
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 4000
+			building_employment_hedge_wizards_add = 500
 		}
 	}
 }
@@ -72,16 +75,17 @@ pm_rubber_gizmos = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_rubber_add = 30
-			goods_input_steel_add = 25
+			goods_input_wishstone_add = 30
+			goods_input_thaumacores_add = 20
 			
 			# output goods
-			goods_output_gizmos_add = 90
+			goods_output_gizmos_add = 80
 		}
 
 		level_scaled = {
-			building_employment_laborers_add = 3000
-			building_employment_machinists_add = 1000
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 3500
+			building_employment_hedge_wizards_add = 500
 			building_employment_engineers_add = 500
 		}
 	}

@@ -10,17 +10,6 @@
 	}
 }
 
-pmg_ownership_capital_building_cloud_collector = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
-	production_methods = {
-		pm_merchant_guilds_building_cloud_collector
-		pm_privately_owned_building_cloud_collector
-		pm_publicly_traded_building_cloud_collector
-		pm_government_run_building_cloud_collector
-		pm_worker_cooperative_building_cloud_collector
-	}
-}
-
 pmg_arcane_building_cloud_collector = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
@@ -141,16 +130,5 @@ pmg_train_automation_building_wishstone_mine = {
 	production_methods = {
 		pm_road_carts
 		pm_rail_transport_mine
-	}
-}
-
-pmg_ownership_capital_building_wishstone_mine = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
-	production_methods = {
-		pm_merchant_guilds_building_coal_mine
-		pm_privately_owned_building_coal_mine
-		pm_publicly_traded_building_coal_mine
-		pm_government_run_building_coal_mine
-		pm_worker_cooperative_building_coal_mine
 	}
 }

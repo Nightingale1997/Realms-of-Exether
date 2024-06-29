@@ -45,7 +45,7 @@ state_building_shipyards_max_level_add = {
 }
 
 building_goods_output_mult = {
-	good = no
+	color=bad
 	percent = yes
 	game_data={
 		ai_value=0
@@ -79,9 +79,9 @@ state_adventurer_coverage_add = {
 }
 
 state_veil_integrity_contribution = {
-	good = no
+	color=bad
 	percent = no
-	num_decimals = 1
+	decimals = 1
 	game_data={
 		ai_value=0
 	}
@@ -97,7 +97,7 @@ state_adventurer_coverage_mult = {
 }
 
 building_adventurers_mortality_mult = {
-	good = no
+	color=bad
 	percent = yes
 	decimals=0
 	game_data={
@@ -105,6 +105,40 @@ building_adventurers_mortality_mult = {
 	}
 }
 
+building_employment_adventurers_add = {
+	color=good
+	percent = no
+	decimals = 0
+	game_data={
+		ai_value=0
+	}
+}
 
+building_employment_heroes_add = {
+	color=good
+	percent = no
+	decimals = 0
+	game_data={
+		ai_value=0
+	}
+}
+
+building_employment_wizards_add = {
+	color=good
+	percent = no
+	decimals = 0
+	game_data={
+		ai_value=0
+	}
+}
+
+building_employment_hedge_wizards_add = {
+	color=good
+	percent = no
+	decimals = 0
+	game_data={
+		ai_value=0
+	}
+}
 
 
