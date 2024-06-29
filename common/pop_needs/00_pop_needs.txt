@@ -196,8 +196,16 @@ popneed_intoxicants = {
 	
 	entry = {
 		goods = opium
+		 
+		weight = 1.5
+		max_supply_share = 0.75
+		min_supply_share = 0.0
+	}
+	
+	entry = {
+		goods = wine
 		
-		weight = 1
+		weight = 0.5
 		max_supply_share = 0.75
 		min_supply_share = 0.0
 	}
@@ -227,6 +235,14 @@ popneed_luxury_drinks = {
 		
 		weight = 1
 		max_supply_share = 0.75
+		min_supply_share = 0.0
+	}
+
+	entry = {
+		goods = luxury_potions
+		
+		weight = 1
+		max_supply_share = 0.25
 		min_supply_share = 0.0
 	}
 }
@@ -335,24 +351,25 @@ popneed_luxury_items = {
 	}
 
 	entry = {
+		goods = luxury_potions
+		
+		weight = 1
+		max_supply_share = 0.5
+		min_supply_share = 0.1
+	}
+
+	entry = {
 		goods = radios
 		
 		weight = 1
 		max_supply_share = 0.5
 		min_supply_share = 0.0
 	}
+
 }
 
-popneed_leisure = {
-	default = entertainment
-
-	entry = {
-		goods = entertainment
-		
-		weight = 0.1
-		max_supply_share = 1.0
-		min_supply_share = 0.0
-	}
+popneed_art = {
+	default = fine_art
 	
 	entry = {
 		goods = fine_art
@@ -366,6 +383,26 @@ popneed_leisure = {
 		goods = trinkets
 		
 		weight = 4
+		max_supply_share = 1.0
+		min_supply_share = 0.0
+	}
+
+	entry = {
+		goods = gizmos
+		
+		weight = 4
+		max_supply_share = 0.25
+		min_supply_share = 0.0
+	}
+}
+
+popneed_leisure = {
+	default = entertainment
+
+	entry = {
+		goods = entertainment
+		
+		weight = 1
 		max_supply_share = 1.0
 		min_supply_share = 0.0
 	}

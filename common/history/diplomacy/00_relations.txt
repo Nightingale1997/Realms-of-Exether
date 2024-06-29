@@ -1,4 +1,11 @@
 ﻿DIPLOMACY = {
+	c:OPA = {
+		set_relations = { country = c:XXP value = 30 }
+		set_relations = { country = c:ZUB value = 30 }
+	}
+	c:DUM = {
+		set_relations = { country = c:LAR value = 30 }
+	}
 	c:TEF = {
 		set_relations = { country = c:CLL value = 30 }
 		set_relations = { country = c:SET value = 50 }
@@ -33,4 +40,8 @@
 		set_relations = { country = c:QON value = -10 }
 		set_relations = { country = c:ZHU value = -10 }
 	}
+	c:VOZ = {
+		set_relations = { country = c:DRO value = 50 }
+	}
+
 }

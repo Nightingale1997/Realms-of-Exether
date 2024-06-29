@@ -1,0 +1,137 @@
+﻿POWER_BLOCS = {
+	c:DIS = {
+		create_power_bloc = {
+			name = ASHEN_PACT
+	
+			map_color = { 111 111 111 }
+	
+			founding_date = 1015.6.9 
+			identity = identity_military_treaty_organization
+			principle = principle_defensive_cooperation_1
+		}
+
+		if = {
+			limit = {
+				has_dlc_feature = power_bloc_features
+			}
+			power_bloc = {
+				add_principle = principle_vassalization_1
+			}
+		}
+	}
+
+	c:RAV = {
+		create_power_bloc = {
+			name = THIRD_CRUSADE
+
+			map_color = { 219 211 157 }
+
+			founding_date = 1015.6.9 
+			identity = identity_military_treaty_organization
+			principle = principle_aggressive_coordination_1
+		}
+		if = {
+			limit = {
+				has_dlc_feature = power_bloc_features
+			}
+			power_bloc = {
+				#add_principle = principle_freedom_of_movement_1
+			}
+		}
+	}
+
+	c:VAI = {
+		create_power_bloc = {
+			name = ICEBREAKER_FLEETS
+
+			map_color = { 219 211 157 }
+
+			founding_date = 1015.6.9 
+			identity = identity_trade_league
+			principle = principle_external_trade_1
+
+			member = c:WHX
+		}
+		if = {
+			limit = {
+				has_dlc_feature = power_bloc_features
+			}
+			power_bloc = {
+				add_principle = principle_freedom_of_movement_1
+			}
+		}
+	}
+
+	c:DUM = {
+		create_power_bloc = {
+			name = FELLOWSHIP_OF_MAN
+			map_color = hsv{ 0.99  0.7  0.9 }
+
+			founding_date = 784.5.12
+			identity = identity_sovereign_empire
+			principle = principle_vassalization_1
+
+			# subjects are automatically part of the bloc
+		}
+		if = {
+			limit = {
+				has_dlc_feature = power_bloc_features
+			}
+			power_bloc = {
+				add_principle = principle_sacred_civics_2
+			}
+		}
+	}
+
+	c:YUL = {
+		create_power_bloc = {
+			name = GARKAL_SYSTEM
+			map_color = hsv{ 0.6  0.6  0.6 }
+
+			founding_date = 984.5.12 
+			identity = identity_sovereign_empire
+			principle = principle_exploit_members_1
+
+			# subjects are automatically part of the bloc
+		}
+		if = {
+			limit = {
+				has_dlc_feature = power_bloc_features
+			}
+			power_bloc = {
+				add_principle = principle_police_coordination_1
+			}
+		}
+	}
+
+
+
+
+	c:ARR = {
+		create_power_bloc = {
+			name =  ASTRAL_CONSORTIUM
+
+			map_color = { 190 190 0 }
+
+			founding_date = 1063.03.04
+			identity = identity_trade_league
+			principle = principle_internal_trade_1
+			
+			member = c:SLB
+			member = c:CLR
+			member = c:PRI
+			member = c:GRH
+			member = c:FTH
+			member = c:BRB
+		}
+		if = {
+			limit = {
+				has_dlc_feature = power_bloc_features
+			}
+			power_bloc = {
+				add_principle = principle_advanced_research_1
+			}
+		}
+	}
+
+}

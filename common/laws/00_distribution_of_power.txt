@@ -61,6 +61,19 @@ law_autocracy = {
 		law_single_party_state
 	}
 
+	can_impose = {
+		OR = {
+			AND = {
+				is_in_same_power_bloc = scope:target_country
+				AND = {
+					modifier:country_can_impose_same_lawgroup_distribution_of_power_in_power_bloc_bool = yes
+					has_law = scope:law
+				}
+			}
+			can_impose_law_default = yes
+		}
+	}
+	
 	pop_support = {
 		value = 0
 		add = {
@@ -90,12 +103,33 @@ law_autocracy = {
 		value = 0
 		
 		if = {
-			limit = { 
-				has_journal_entry = je_government_petition
-				has_variable = desired_law_var
-                scope:law = var:desired_law_var
-			}
+			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
 			add = 750
+		}
+	}
+	
+	ai_impose_chance = {
+		value = 0
+		
+		if = {
+			limit = {
+				has_law = law_type:law_autocracy
+				OR = {
+					AND = {
+						power_bloc ?= { has_identity = identity:identity_ideological_union }
+						has_strategy = ai_strategy_conservative_agenda					
+					}
+					has_strategy = ai_strategy_reactionary_agenda
+				}
+				scope:target_country = { 
+					NOR = { # Is their law different enough from what we want to impose?
+						has_law = law_type:law_oligarchy
+						has_law = law_type:law_landed_voting
+					}
+				}
+			}
+			
+			add = base_impose_law_weight
 		}
 	}
 }
@@ -148,6 +182,19 @@ law_technocracy = {
 		law_single_party_state
 	}
 
+	can_impose = {
+		OR = {
+			AND = {
+				is_in_same_power_bloc = scope:target_country
+				AND = {
+					modifier:country_can_impose_same_lawgroup_distribution_of_power_in_power_bloc_bool = yes
+					has_law = scope:law
+				}
+			}
+			can_impose_law_default = yes
+		}
+	}
+	
 	pop_support = {
 		value = 0
 		add = {
@@ -177,14 +224,26 @@ law_technocracy = {
 		value = 0
 		
 		if = {
-			limit = { 
-				has_journal_entry = je_government_petition
-				has_variable = desired_law_var
-                scope:law = var:desired_law_var
-			}
+			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
 			add = 750
 		}
 	}
+	
+	ai_impose_chance = {
+		value = 0
+		
+		if = {
+			limit = {
+				has_law = law_type:law_technocracy
+				"ai_ideological_opinion(scope:target_country)" >= 25 # Only want to do this on ideologically similar countries
+				scope:target_country = { # Is their law different enough from what we want to impose?
+					NOT = { has_law = law_type:law_single_party_state }
+				}
+			}
+			
+			add = base_impose_law_weight
+		}
+	}	
 }
 
 law_oligarchy = {
@@ -242,6 +301,19 @@ law_oligarchy = {
 		law_single_party_state
 	}
 
+	can_impose = {
+		OR = {
+			AND = {
+				is_in_same_power_bloc = scope:target_country
+				AND = {
+					modifier:country_can_impose_same_lawgroup_distribution_of_power_in_power_bloc_bool = yes
+					has_law = scope:law
+				}
+			}
+			can_impose_law_default = yes
+		}
+	}
+	
 	pop_support = {
 		value = 0
 		add = {
@@ -274,14 +346,35 @@ law_oligarchy = {
 		value = 0
 		
 		if = {
-			limit = { 
-				has_journal_entry = je_government_petition
-				has_variable = desired_law_var
-                scope:law = var:desired_law_var
-			}
+			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
 			add = 750
 		}
 	}
+	
+	ai_impose_chance = {
+		value = 0
+		
+		if = {
+			limit = {
+				has_law = law_type:law_oligarchy
+				OR = {
+					AND = {
+						power_bloc ?= { has_identity = identity:identity_ideological_union }
+						has_strategy = ai_strategy_conservative_agenda					
+					}
+					has_strategy = ai_strategy_reactionary_agenda
+				}
+				scope:target_country = { 
+					NOR = { # Is their law different enough from what we want to impose?
+						has_law = law_type:law_autocracy
+						has_law = law_type:law_landed_voting
+					}
+				}
+			}
+			
+			add = base_impose_law_weight
+		}
+	}		
 }
 
 law_elder_council = {
@@ -354,11 +447,7 @@ law_elder_council = {
 		value = 0
 		
 		if = {
-			limit = { 
-				has_journal_entry = je_government_petition
-				has_variable = desired_law_var
-                scope:law = var:desired_law_var
-			}
+			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
 			add = 750
 		}
 	}
@@ -407,6 +496,20 @@ law_landed_voting = {
 		clear_legal_single_party = yes
 	}
 	
+	can_impose = {
+		country_has_voting_franchise = yes # modification of the standard trigger, only countries with a voting franchise can impose democracy on others
+		OR = {
+			AND = {
+				is_in_same_power_bloc = scope:target_country
+				AND = {
+					modifier:country_can_impose_same_lawgroup_distribution_of_power_in_power_bloc_bool = yes
+					has_law = scope:law
+				}
+			}
+			can_impose_law_default = yes
+		}
+	}
+	
 	pop_support = {
 		value = 0
 
@@ -440,14 +543,35 @@ law_landed_voting = {
 		value = 0
 		
 		if = {
-			limit = { 
-				has_journal_entry = je_government_petition
-				has_variable = desired_law_var
-                scope:law = var:desired_law_var
-			}
+			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
 			add = 750
 		}
 	}
+	
+	ai_impose_chance = {
+		value = 0
+		
+		if = {
+			limit = {
+				has_law = law_type:law_landed_voting
+				OR = {
+					AND = {
+						power_bloc ?= { has_identity = identity:identity_ideological_union }
+						has_strategy = ai_strategy_conservative_agenda					
+					}
+					has_strategy = ai_strategy_reactionary_agenda
+				}
+				scope:target_country = { 
+					NOR = { # Is their law different enough from what we want to impose?
+						has_law = law_type:law_oligarchy
+						has_law = law_type:law_autocracy
+					}
+				}
+			}
+			
+			add = base_impose_law_weight
+		}
+	}		
 }
 
 law_wealth_voting = {
@@ -489,6 +613,20 @@ law_wealth_voting = {
 		clear_legal_single_party = yes
 	}
 	
+	can_impose = {
+		country_has_voting_franchise = yes # modification of the standard trigger, only countries with a voting franchise can impose democracy on others
+		OR = {
+			AND = {
+				is_in_same_power_bloc = scope:target_country
+				AND = {
+					modifier:country_can_impose_same_lawgroup_distribution_of_power_in_power_bloc_bool = yes
+					has_law = scope:law
+				}
+			}
+			can_impose_law_default = yes
+		}
+	}
+	
 	pop_support = {
 		value = 0
 
@@ -518,14 +656,29 @@ law_wealth_voting = {
 		value = 0
 		
 		if = {
-			limit = { 
-				has_journal_entry = je_government_petition
-				has_variable = desired_law_var
-                scope:law = var:desired_law_var
-			}
+			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
 			add = 750
 		}
 	}
+	
+	ai_impose_chance = {
+		value = 0
+		
+		if = {
+			limit = {
+				has_law = law_type:law_wealth_voting
+				has_strategy = ai_strategy_progressive_agenda	
+				scope:target_country = { # Is their law different enough from what we want to impose?
+					NOR = { 
+						has_law = law_type:law_census_voting 
+						has_law = law_type:law_landed_voting 
+					}
+				}
+			}
+			
+			add = base_impose_law_weight
+		}
+	}	
 }
 
 law_census_voting = {
@@ -567,6 +720,20 @@ law_census_voting = {
 		clear_legal_single_party = yes
 	}
 	
+	can_impose = {
+		country_has_voting_franchise = yes # modification of the standard trigger, only countries with a voting franchise can impose democracy on others
+		OR = {
+			AND = {
+				is_in_same_power_bloc = scope:target_country
+				AND = {
+					modifier:country_can_impose_same_lawgroup_distribution_of_power_in_power_bloc_bool = yes
+					has_law = scope:law
+				}
+			}
+			can_impose_law_default = yes
+		}
+	}
+	
 	pop_support = {
 		value = 0
 
@@ -595,12 +762,27 @@ law_census_voting = {
 		value = 0
 		
 		if = {
-			limit = { 
-				has_journal_entry = je_government_petition
-				has_variable = desired_law_var
-                scope:law = var:desired_law_var
-			}
+			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
 			add = 750
+		}
+	}
+	
+	ai_impose_chance = {
+		value = 0
+		
+		if = {
+			limit = {
+				has_law = law_type:law_census_voting
+				has_strategy = ai_strategy_progressive_agenda			
+				scope:target_country = { # Is their law different enough from what we want to impose?
+					NOR = { 
+						has_law = law_type:law_wealth_voting 
+						has_law = law_type:law_universal_suffrage 
+					}
+				}
+			}
+			
+			add = base_impose_law_weight
 		}
 	}
 }
@@ -638,6 +820,20 @@ law_universal_suffrage = {
 	on_activate = {
 		scripted_effect_parties_emergence = yes
 		clear_legal_single_party = yes
+	}
+	
+	can_impose = {
+		country_has_voting_franchise = yes # modification of the standard trigger, only countries with a voting franchise can impose democracy on others
+		OR = {
+			AND = {
+				is_in_same_power_bloc = scope:target_country
+				AND = {
+					modifier:country_can_impose_same_lawgroup_distribution_of_power_in_power_bloc_bool = yes
+					has_law = scope:law
+				}
+			}
+			can_impose_law_default = yes
+		}
 	}
 	
 	pop_support = {
@@ -680,12 +876,27 @@ law_universal_suffrage = {
 		value = 0
 		
 		if = {
-			limit = { 
-				has_journal_entry = je_government_petition
-				has_variable = desired_law_var
-                scope:law = var:desired_law_var
-			}
+			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
 			add = 750
+		}
+	}
+	
+	ai_impose_chance = {
+		value = 0
+		
+		if = {
+			limit = {
+				has_law = law_type:law_universal_suffrage
+				has_strategy = ai_strategy_egalitarian_agenda	
+				scope:target_country = { # Is their law different enough from what we want to impose?
+					NOR = { 
+						has_law = law_type:law_census_voting				 
+						has_law = law_type:law_anarchy
+					}
+				}
+			}
+			
+			add = base_impose_law_weight
 		}
 	}
 }
@@ -735,6 +946,22 @@ law_anarchy = {
 		}
 	}
 	
+	can_impose = {
+		OR = {
+			AND = {
+				is_in_same_power_bloc = scope:target_country
+				AND = {
+					modifier:country_can_impose_same_lawgroup_distribution_of_power_in_power_bloc_bool = yes
+					has_law = scope:law
+				}
+			}
+			AND = { # modification of the standard trigger, only other anarchic countries can impose anarchy on their subjects
+				has_law = scope:law
+				can_impose_law_default = yes
+			}
+		}
+	}
+	
 	pop_support = {
 		value = 0
 
@@ -754,12 +981,24 @@ law_anarchy = {
 		value = 0
 		
 		if = {
-			limit = { 
-				has_journal_entry = je_government_petition
-				has_variable = desired_law_var
-                scope:law = var:desired_law_var
-			}
+			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
 			add = 750
+		}
+	}
+	
+	ai_impose_chance = {
+		value = 0
+		
+		if = {
+			limit = {
+				has_law = law_type:law_anarchy
+				has_strategy = ai_strategy_egalitarian_agenda	
+				scope:target_country = { # Is their law different enough from what we want to impose?
+					NOT = { has_law = law_type:law_universal_suffrage }
+				}
+			}
+			
+			add = base_impose_law_weight
 		}
 	}
 }
@@ -871,6 +1110,21 @@ law_single_party_state = {
 			}
 		}
 	}
+	can_impose = {
+		OR = {
+			AND = {
+				is_in_same_power_bloc = scope:target_country
+				AND = {
+					modifier:country_can_impose_same_lawgroup_distribution_of_power_in_power_bloc_bool = yes
+					has_law = scope:law
+				}
+			}
+			AND = { # modification of the standard trigger, only other single-party states countries can impose single-party states on their subjects
+				has_law = scope:law
+				can_impose_law_default = yes
+			}
+		}
+	}
 	
 	pop_support = {
 		value = 0
@@ -913,12 +1167,25 @@ law_single_party_state = {
 		value = 0
 		
 		if = {
-			limit = { 
-				has_journal_entry = je_government_petition
-				has_variable = desired_law_var
-                scope:law = var:desired_law_var
-			}
+			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
 			add = 750
 		}
 	}
+	
+	ai_impose_chance = {
+		value = 0
+		
+		if = {
+			limit = {
+				has_law = law_type:law_single_party_state
+				"ai_ideological_opinion(scope:target_country)" >= 25 # Only want to do this on ideologically similar countries
+				scope:target_country = { # Is their law different enough from what we want to impose?
+					NOT = { has_law = law_type:law_technocracy }
+				}				
+			}
+			
+			add = base_impose_law_weight
+		}
+	}
 }
+

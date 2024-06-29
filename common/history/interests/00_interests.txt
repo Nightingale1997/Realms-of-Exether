@@ -1,4 +1,12 @@
 ﻿INTERESTS = {
+	c:SMA ?= {
+		add_declared_interest = region_equine_plains
+		add_declared_interest = region_nogi_desert
+	}
+	c:OPA ?= {
+		add_declared_interest = region_vairia
+		add_declared_interest = region_shimmering_coast
+	}
 	c:ARR ?= {
 		add_declared_interest = region_new_dumonia
 		add_declared_interest = region_west_kailando
@@ -29,9 +37,6 @@
 		add_declared_interest = region_yanger_steppe
 	}
 	c:RIS ?= {
-		add_declared_interest = region_east_everfrost
-	}
-	c:BFU ?= {
 		add_declared_interest = region_east_everfrost
 	}
 }

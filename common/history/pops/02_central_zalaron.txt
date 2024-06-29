@@ -1,27 +1,209 @@
 ﻿POPS = {
 
   s:STATE_SC5 = {
-
+	region_state:OPA = {
+		create_pop = {
+			culture = kashtarnel
+			size = 307600
+		}
+		create_pop = {
+			culture = misri
+			size = 1992
+		}
+		create_pop = {
+			culture = timari
+			size = 344100
+		}
+		create_pop = {
+			culture = nightwalker
+			size = 127896
+		}
+		create_pop = {
+			culture = wastecrawler
+			size = 64004
+		}
+		create_pop = {
+			culture = lumvareth
+			size = 60000
+		}
+		create_pop = {
+			culture = azmaraan
+			size = 16000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = wastecrawler
+			size = 228000
+		}
+	}
   }
     
   s:STATE_SC6 = {
-
+	region_state:OPA = {
+		create_pop = {
+			culture = kashtarnel
+			size = 75764
+		}
+		create_pop = {
+			culture = kashtarnel
+			religion = marktarian
+			size = 64000
+		}
+		create_pop = {
+			culture = timari
+			size = 15900
+		}
+		create_pop = {
+			culture = lumvareth
+			size = 32000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = wastecrawler
+			size = 4200
+		}
+	}
   }
     
   s:STATE_SC7 = {
-
+	region_state:OPA = {
+		create_pop = {
+			culture = kashtarnel
+			size = 270062
+		}
+		create_pop = {
+			culture = kashtarnel
+			religion = marktarian
+			size = 24002
+		}
+		create_pop = {
+			culture = lumvareth
+			size = 33596
+		}
+		create_pop = {
+			culture = timari
+			size = 5023
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = wastecrawler
+			size = 1400
+		}
+	}
   }
     
   s:STATE_SC8 = {
-
+	region_state:OPA = {
+		create_pop = {
+			culture = kashtarnel
+			size = 156000
+		}
+		create_pop = {
+			culture = lumvareth
+			size = 40004
+		}
+		create_pop = {
+			culture = tefereti
+			size = 82000
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = wastecrawler
+			size = 86000
+		}
+	}
   }
     
   s:STATE_SC9 = {
-
+	region_state:OPA = {
+		create_pop = {
+			culture = kashtarnel
+			size = 2318347
+		}
+		create_pop = {
+			culture = kashtarnel
+			religion = marktarian
+			size = 132050
+		}
+		create_pop = {
+			culture = tefereti
+			pop_type = aristocrats
+			size = 20755
+		}
+		create_pop = {
+			culture = tefereti
+			pop_type = bureaucrats
+			size = 7591
+		}
+		create_pop = {
+			culture = tefereti
+			pop_type = officers
+			size = 520
+		}
+		create_pop = {
+			culture = timari
+			size = 55588
+		}
+		create_pop = {
+			culture = lumvareth
+			size = 7126
+		}
+		create_pop = {
+			culture = nightwalker
+			size = 36410
+		}
+		create_pop = {
+			culture = vandori
+			size = 2741
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = wastecrawler
+			size = 79230
+		}
+	}
   }
     
   s:STATE_SC10 = {
-
+	region_state:OPA = {
+		create_pop = {
+			culture = kashtarnel
+			size = 942937
+		}
+		create_pop = {
+			culture = kashtarnel
+			religion = marktarian
+			size = 176001
+		}
+		create_pop = {
+			culture = tefereti
+			pop_type = aristocrats
+			size = 4030
+		}
+		create_pop = {
+			culture = tefereti
+			pop_type = bureaucrats
+			size = 502
+		}
+		create_pop = {
+			culture = lumvareth
+			size = 13020
+		}
+		create_pop = {
+			culture = timari
+			size = 2602
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = wastecrawler
+			size = 2601
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = wastecrawler
+			size = 16210
+		}
+	}
   }
     
   s:STATE_KORO = {
@@ -2012,7 +2194,40 @@
   }
     
   s:STATE_KASHANIR = {
-
+	region_state:OPA = {
+		create_pop = {
+			culture = kashtarnel
+			size = 320008
+		}
+		create_pop = {
+			culture = nightwalker
+			size = 27996
+		}
+		create_pop = {
+			culture = kashtarnel
+			religion = marktarian
+			size = 37215
+		}
+		create_pop = {
+			culture = tefereti
+			pop_type = aristocrats
+			size = 1001
+		}
+		create_pop = {
+			culture = tefereti
+			pop_type = bureaucrats
+			size = 402
+		}
+		create_pop = {
+			culture = wastecrawler
+			size = 1021
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = wastecrawler
+			size = 4102
+		}
+	}
   }
     
   s:STATE_ALZAHRUD = {
@@ -2273,7 +2488,37 @@
   }
     
   s:STATE_HANALLA = {
+	region_state:WTH = {
+		create_pop = {
+			culture = vandori
+			size = 20642
+		}
+		create_pop = {
+			culture = beithaven
+			size = 13000
+		}
+		create_pop = {
+			culture = lumvareth
+			size = 10000
+		}
+	}
+  }
 
+  s:STATE_HANALLA_2 = {
+	region_state:WTH = {
+		create_pop = {
+			culture = vandori
+			size = 42992
+		}
+		create_pop = {
+			culture = koshiri
+			size = 196
+		}
+		create_pop = {
+			culture = lumvareth 
+			size = 1600
+		}
+	}
   }
     
   s:STATE_SUKONCO = {
@@ -2281,16 +2526,6 @@
   }
 
   s:STATE_SUKONCO_2 = {
-  region_state:EAH = {
-			create_pop = {
-				culture = vandori
-				size = 170504
-			}
-			create_pop = {
-				culture = koshiri
-				size = 116549
-			}
-    }
   region_state:KAM = {
     create_pop = {
 				culture = koshiri
@@ -2304,91 +2539,110 @@
     }
   }
   s:STATE_SUKONCO_3 = {
-  region_state:EAH = {
-			create_pop = {
-				culture = vandori
-				size = 504504
-			}
-			create_pop = {
-				culture = koshiri
-				size = 176949
-			}
-      create_pop = {
-				culture = beithaven
-				size = 74683
-			}
-    }
+	region_state:EAH = {
+		create_pop = {
+			culture = vandori
+			size = 30000
+		}
+		create_pop = {
+			culture = koshiri
+			size = 2000
+		}
+	}
   }
   s:STATE_INAMGI = {
-    region_state:CHR = {
-			create_pop = {
-				culture = vandori
-				size = 976507
-			}
-			create_pop = {
-				culture = koshiri
-				size = 83005
-			}
-      create_pop = {
-				culture = beithaven
-				size = 325784
-			}
-    }
+	region_state:CHR = {
+		create_pop = {
+			culture = vandori
+			size = 2455124
+		}
+		create_pop = {
+			culture = beithaven
+			religion = astral_path
+			size = 100004
+		}
+		create_pop = {
+			culture = beithaven
+			size = 642996
+		}
+		create_pop = {
+			culture = grunhain
+			size = 220000
+		}
+	}
   }
 
   s:STATE_INAMGI_2 = {
-    region_state:CHR = {
-			create_pop = {
-				culture = vandori
-				size = 744504
-			}
-			create_pop = {
-				culture = koshiri
-				size = 256446
-			}
-      create_pop = {
-				culture = beithaven
-				size = 95784
-			}
-    }
+	region_state:EAH = {
+		create_pop = {
+			culture = vandori
+			size = 50000
+		}
+		create_pop = {
+			culture = koshiri
+			size = 4000
+		}
+		create_pop = {
+			culture = grunhain
+			size = 1200
+		}
+	}
   } 
   s:STATE_INAMGI_3 = {
-    region_state:CHR = {
-			create_pop = {
-				culture = vandori
-				size = 594504
-			}
-			create_pop = {
-				culture = beithaven
-				size = 207246
-      }
-      create_pop = {
-				culture = koshiri
-				size = 66984
-			}
-    }
+	region_state:CHR = {
+		create_pop = {
+			culture = vandori
+			size = 1903944
+		}
+		create_pop = {
+			culture = grunhain
+			size = 6000
+		}
+		create_pop = {
+			culture = beithaven
+			size = 16000
+		}
+		create_pop = {
+			culture = beithaven
+			religion = astral_path
+			size = 20000
+		}
+	}
   } 
   s:STATE_KUNCHI = {
 
   }
     
   s:STATE_SANGARI = {
-
+	region_state:STH = {
+		create_pop = {
+			culture = beithaven
+			size = 3580
+		}
+		create_pop = {
+			culture = vandori
+			size = 6044
+		}
+		create_pop = {
+			culture = tqalt
+			size = 96
+		}
+	}
   }
   s:STATE_SANGARI_2 = {
-  region_state:STH = {
-			create_pop = {
-				culture = vandori
-				size = 254544
-			}
-			create_pop = {
-				culture = beithaven
-				size = 1267486
-    }
-    create_pop = {
-				culture = morastlinge
-				size = 22381
-    }
-  }
+	region_state:STH = {
+		create_pop = {
+			culture = vandori
+			size = 63008
+		}
+		create_pop = {
+			culture = grunhain
+			size = 6400
+		}
+		create_pop = {
+			culture = beithaven
+			size = 15400
+		}
+	}
   }
   }

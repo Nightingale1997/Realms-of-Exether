@@ -157,13 +157,39 @@ pmg_transportation_haunted_grounds = {
 	}
 }
 
-pmg_ownership_capital_building_haunted_grounds = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+
+pmg_base_building_hunting_lodge = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		pm_merchant_guilds_building_logging_camp
-		pm_privately_owned_building_logging_camp
-		pm_publicly_traded_building_logging_camp
-		pm_government_run_building_logging_camp
-		pm_worker_cooperative_building_logging_camp
+		pm_simple_hunting
+		pm_firearms_hunting
+		pm_heavy_weapons_hunting
+	}
+}
+
+pmg_hunting_meat = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_no_hunting_meat
+		pm_hunting_meat
+		pm_increased_hunting_meat
+	}
+}
+
+pmg_hunting_equipment = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_no_equipment_hunting_lodges
+		pm_tracking_tools
+		pm_beast_divination
+	}
+}
+
+pmg_transportation_hunting_lodges = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_rail_transport_building_logging_camp
+		pm_log_carts
 	}
 }

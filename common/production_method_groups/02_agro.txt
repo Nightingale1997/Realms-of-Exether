@@ -30,17 +30,6 @@ pmg_harvesting_process_building_rye_farm = {
 	}
 }
 
-pmg_ownership_land_building_rye_farm = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
-	production_methods = {
-		pm_privately_owned
-		pm_publicly_traded
-		pm_homesteading
-		pm_government_run
-		pm_worker_cooperative_farm
-	}
-}
-
 pmg_base_building_wheat_farm = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
@@ -72,17 +61,6 @@ pmg_harvesting_process_building_wheat_farm = {
 	}
 }
 
-pmg_ownership_land_building_wheat_farm = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
-	production_methods = {
-		pm_privately_owned
-		pm_publicly_traded
-		pm_homesteading
-		pm_government_run
-		pm_worker_cooperative_farm
-	}
-}
-
 pmg_base_building_rice_farm = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
@@ -111,18 +89,17 @@ pmg_harvesting_process_building_rice_farm = {
 	}
 }
 
-pmg_ownership_land_building_rice_farm = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+pmg_base_building_mountain_maize_farm = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		pm_privately_owned
-		pm_publicly_traded
-		pm_homesteading
-		pm_government_run
-		pm_worker_cooperative_farm
+		pm_simple_farming
+		pm_soil_enriching_farming
+		pm_fertilization
+		pm_chemical_fertilizer
 	}
 }
 
-pmg_base_building_mountain_maize_farm = {
+pmg_base_building_maize_farm = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_simple_farming
@@ -150,17 +127,6 @@ pmg_harvesting_process_building_mountain_maize_farm = {
 		pm_seedspinners
 		pm_tractors
 		pm_compression_ignition_tractors
-	}
-}
-
-pmg_ownership_land_building_mountain_maize_farm = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
-	production_methods = {
-		pm_privately_owned
-		pm_publicly_traded
-		pm_homesteading
-		pm_government_run
-		pm_worker_cooperative_farm
 	}
 }
 
@@ -192,17 +158,6 @@ pmg_harvesting_process_building_millet_farm = {
 		pm_seedspinners
 		pm_tractors
 		pm_compression_ignition_tractors
-	}
-}
-
-pmg_ownership_land_building_millet_farm = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
-	production_methods = {
-		pm_privately_owned
-		pm_publicly_traded
-		pm_homesteading
-		pm_government_run
-		pm_worker_cooperative_farm
 	}
 }
 
@@ -245,19 +200,6 @@ pmg_refrigeration_building_livestock_ranch = {
 	}
 }
 
-pmg_ownership_land_building_livestock_ranch = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
-	production_methods = {
-		pm_privately_owned
-		pm_publicly_traded
-		pm_homesteading
-		pm_government_run
-		pm_worker_cooperative_farm
-	}
-}
-
-
-
 pmg_base_building_mountain_maize_farm = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
@@ -284,16 +226,5 @@ pmg_harvesting_process_building_mountain_maize_farm = {
 		pm_steam_threshers
 		pm_tractors
 		pm_compression_ignition_tractors
-	}
-}
-
-pmg_ownership_land_building_mountain_maize_farm = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
-	production_methods = {
-		pm_privately_owned
-		pm_publicly_traded
-		pm_homesteading
-		pm_government_run
-		pm_worker_cooperative_farm
 	}
 }

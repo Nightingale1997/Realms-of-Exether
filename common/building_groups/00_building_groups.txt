@@ -38,6 +38,7 @@ bg_manufacturing = {
 	}
 	
 	economy_of_scale_ai_factor = 2.0
+	foreign_investment_ai_factor = 0.25
 }
 
 bg_light_industry = {
@@ -114,6 +115,7 @@ bg_agriculture = {
 	}
 	
 	economy_of_scale_ai_factor = 1.5
+	foreign_investment_ai_factor = 0.75
 }
 
 bg_rye_farms = {
@@ -204,6 +206,7 @@ bg_ranching = {
 	}
 	
 	economy_of_scale_ai_factor = 1.5
+	foreign_investment_ai_factor = 0.75
 }
 
 bg_livestock_ranches = {
@@ -253,6 +256,7 @@ bg_plantations = {
 	}
 	
 	economy_of_scale_ai_factor = 1.5
+	foreign_investment_ai_factor = 1.25
 }
 
 bg_coffee_plantations = {
@@ -332,6 +336,7 @@ bg_mining = {
 	}
 	
 	economy_of_scale_ai_factor = 2.0
+	foreign_investment_ai_factor = 1.0
 }
 
 bg_gold_fields = {
@@ -344,6 +349,8 @@ bg_gold_fields = {
 	depletable_resource = yes
 	
 	pays_taxes = no
+
+	infrastructure_usage_per_level = 0
 
 	default_building = building_gold_fields
 	
@@ -415,6 +422,7 @@ bg_logging = {
 	}
 	
 	economy_of_scale_ai_factor = 1.5
+	foreign_investment_ai_factor = 1.0
 }
 
 bg_rubber = {
@@ -444,6 +452,7 @@ bg_rubber = {
 	}
 	
 	economy_of_scale_ai_factor = 1.5
+	foreign_investment_ai_factor = 1.0
 }
 
 # Fishing
@@ -469,6 +478,7 @@ bg_whaling = {
 	}
 	
 	economy_of_scale_ai_factor = 2.0
+	foreign_investment_ai_factor = 0.75
 }
 
 bg_fishing = {
@@ -492,6 +502,7 @@ bg_fishing = {
 	}
 	
 	economy_of_scale_ai_factor = 1.5
+	foreign_investment_ai_factor = 0.75
 }
 
 # Oil Extraction
@@ -519,6 +530,7 @@ bg_oil_extraction = {
 	}
 	
 	economy_of_scale_ai_factor = 2.0
+	foreign_investment_ai_factor = 1.0
 }
 
 # Service
@@ -558,6 +570,7 @@ bg_urban_facilities = {
 	}
 	
 	economy_of_scale_ai_factor = 2.0
+	foreign_investment_ai_factor = 0.25
 }
 
 bg_arts = {
@@ -581,6 +594,7 @@ bg_power = {
 	}
 	
 	economy_of_scale_ai_factor = 1.5
+	foreign_investment_ai_factor = 0.5
 
 	infrastructure_usage_per_level = 2
 	
@@ -623,6 +637,8 @@ bg_trade = {
 
 	always_possible = yes	
 	
+	subsidized = yes
+	
 	created_by_trade_routes = yes
 	
 	auto_place_buildings = yes
@@ -651,6 +667,73 @@ bg_trade = {
 	}
 }
 
+# Needed for autonomous investment to track investments separately from other ownership buildings
+bg_financial_districts = {
+	parent_group = bg_owner_buildings
+}
+
+# Needed for autonomous investment to track investments separately from other ownership buildings
+bg_manor_houses = {
+	parent_group = bg_owner_buildings
+	
+	infrastructure_usage_per_level = 0.0
+}
+
+# Needed for autonomous investment to track investments separately from other ownership buildings
+bg_wizard_towers = {
+	parent_group = bg_owner_buildings
+	
+	infrastructure_usage_per_level = 0.0
+}
+
+# Needed for autonomous investment to track investments separately from other ownership buildings
+bg_taverns = {
+	parent_group = bg_owner_buildings
+	
+	infrastructure_usage_per_level = 0.0
+}
+
+bg_owner_buildings = {
+	parent_group = bg_urban_facilities
+	
+	min_productivity_to_hire = 10.0
+
+	category = urban
+
+	lens = trade
+
+	always_possible = yes
+	
+	can_use_slaves = yes
+
+	auto_place_buildings = yes
+
+	owns_other_buildings = yes
+
+	min_hiring_rate = 1.0
+	max_hiring_rate = 1.0
+
+	ignores_productivity_when_hiring = yes
+
+	proportionality_limit = 1.0
+
+	economy_of_scale = no
+
+	default_building = building_financial_district
+
+	cash_reserves_max = 10000
+
+	urbanization = 0
+
+	infrastructure_usage_per_level = 0.1
+
+	fired_pops_become_radical = no
+
+	should_auto_expand = {
+		always = no
+	}
+}
+
 # Infrastructure
 
 bg_infrastructure = {
@@ -663,6 +746,7 @@ bg_infrastructure = {
 	stateregion_max_level = yes
 	
 	economy_of_scale_ai_factor = 1.5
+	foreign_investment_ai_factor = 0.75
 }
 
 bg_public_infrastructure = {

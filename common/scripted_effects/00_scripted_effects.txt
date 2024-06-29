@@ -13,6 +13,28 @@
 #	}
 #
 
+relations_hit_with_power_bloc_leaders = {
+	if = {
+		limit = {
+			has_game_started = yes
+		}
+		
+		every_power_bloc = {
+			limit = { 
+				NOT = { scope:power_bloc ?= this }			
+			}
+			power_bloc_leader = {
+				root = {
+					change_relations = { 
+						country = prev
+						value = -30
+					}
+				}
+			}
+		}		
+	}
+}
+
 save_neighbor_with_state = {
 	random_neighbouring_state = {
 		limit = {
@@ -343,7 +365,6 @@ clean_up_exile_character_roles = { # scope: character
 		limit = {
 			has_role = politician
 		}
-		set_as_interest_group_leader = no
 		remove_character_role = politician
 	}
 	if = {

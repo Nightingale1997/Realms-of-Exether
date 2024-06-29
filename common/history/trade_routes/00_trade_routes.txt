@@ -377,7 +377,54 @@
 			target = c:VAI.market
 		}
 	}
+	c:DUM ?= {
+		create_trade_route = {
+			goods = sugar
+			level = 3
+			direction = import
+			target = c:LAR.market
+		}
+	}
+
 	#Settler Coast
+	c:SMA?= {
+		create_trade_route = {
+			goods = tools
+			level = 4
+			direction = import
+			target = c:ARR.market
+		}
+		create_trade_route = {
+			goods = hardwood
+			level = 3
+			direction = import
+			target = c:SLB.market
+		}
+		create_trade_route = {
+			goods = hardwood
+			level = 3
+			direction = import
+			target = c:CER.market
+		}
+		create_trade_route = {
+			goods = fabric
+			level = 5
+			direction = import
+			target = c:WHI.market
+		}
+		create_trade_route = {
+			goods = silk
+			level = 4
+			direction = import
+			target = c:RDM.market
+		}
+		create_trade_route = {
+			goods = dye
+			level = 3
+			direction = import
+			target = c:VOZ.market
+		}
+	}
 	c:ARR ?= {
 		create_trade_route = {
 			goods = silk
@@ -399,6 +446,32 @@
 		}
 	}
 	#Central Zalaron
+	c:OPA ?= {
+		create_trade_route = {
+			goods = artillery
+			level = 2
+			direction = import
+			target = c:XXP.market
+		}
+		create_trade_route = {
+			goods = iron
+			level = 1
+			direction = import
+			target = c:XXP.market
+		}
+		create_trade_route = {
+			goods = iron
+			level = 1
+			direction = import
+			target = c:ZUB.market
+		}
+		create_trade_route = {
+			goods = grain
+			level = 2
+			direction = import
+			target = c:ZUB.market
+		}
+	}
 	c:TEF ?= {
 		create_trade_route = {
 			goods = dye
