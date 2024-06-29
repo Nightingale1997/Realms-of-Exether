@@ -356,7 +356,24 @@ GLOBAL = {
 
 		}
 
+		
 
-
+		#Union of the Sands JE
+		set_global_variable = {
+			name = yavira_scope
+			value = c:DRO
+		}
+		set_global_variable = {
+			name = vozmead_scope
+			value = c:VOZ
+		}
+		set_global_variable = {
+			name = yavira_gdp
+			value = c:DRO.gdp
+		}
+		set_global_variable = {
+			name = vozmead_gdp
+			value = c:VOZ.gdp
+		}
 
 }

@@ -1,0 +1,22 @@
+﻿union_of_the_sands_progress_bar = {
+	name = "union_of_the_sands_progress_bar_name"
+	desc = "union_of_the_sands_progress_bar_yavira_desc"
+	second_desc = "union_of_the_sands_progress_bar_vozmead_desc"
+
+	double_sided_gold = yes
+
+	weekly_progress = {
+		add = {
+		   desc = "union_of_the_sands_progress_bar_yavira_gdp"
+		   value = global_var:yavira_gdp
+	   	}
+		subtract = {
+		   desc = "union_of_the_sands_progress_bar_vozmead_gdp"
+		   value = global_var:vozmead_gdp
+	   }
+	}
+
+	start_value = 500000
+	min_value = 0
+	max_value = 1000000
+}
