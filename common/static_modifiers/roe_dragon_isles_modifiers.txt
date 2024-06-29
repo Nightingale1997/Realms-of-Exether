@@ -1,0 +1,28 @@
+﻿charity_for_the_sick = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	interest_group_pop_attraction_mult = 0.125
+	interest_group_pol_str_mult = 0.05
+}
+
+dragon_sickhouses = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	state_mortality_mult = -0.02
+	state_poor_standard_of_living_add = 1
+}
+
+industrialists_sickhouses_ignored = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	interest_group_approval_add = -2
+}
+
+modifier_active_dragonblight_outbreak = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	state_mortality_mult = 0.035
+	state_radicals_from_discrimination_mult = 0.2
+}
+
+dragonblight_forced_charity = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	interest_group_approval_add = -5
+	interest_group_pol_str_mult = -0.075
+}

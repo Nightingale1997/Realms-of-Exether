@@ -205,7 +205,9 @@ dragonblight.2 = { #outbreaks states receive this event + the other one for 5% t
 	dragonblight_pulse.1 = { #trade route event
 				type = country_event
 				placement = ROOT
-			
+
+				cooldown = { months = 40 }
+
 				title = dragonblight_pulse.1.t
 				desc = dragonblight_pulse.1.d
 				flavor = dragonblight_pulse.1.f
@@ -223,11 +225,17 @@ dragonblight.2 = { #outbreaks states receive this event + the other one for 5% t
 				trigger = {
 					any_trade_route = {
 						OR = {
-							importer.owner = {
-								country_has_primary_culture = cu:kotskarvi
+							AND = {	
+								importer.owner = root
+								exporter.owner = {
+									country_has_primary_culture = cu:kotskarvi
+								}
 							}
-							exporter.owner = {
-								country_has_primary_culture = cu:kotskarvi
+							AND = {	
+								importer.owner = {
+									country_has_primary_culture = cu:kotskarvi
+								}
+								exporter.owner = root
 							}
 						}
 					}	
@@ -245,10 +253,12 @@ dragonblight.2 = { #outbreaks states receive this event + the other one for 5% t
 				}
 			}	
 
-			dragonblight_pulse.2 = { #trade route event
+			dragonblight_pulse.2 = { #adjacent spread
 				type = country_event
 				placement = ROOT
-			
+
+				cooldown = { months = 40 }
+
 				title = dragonblight_pulse.2.t
 				desc = dragonblight_pulse.2.d
 				flavor = dragonblight_pulse.2.f
@@ -282,13 +292,231 @@ dragonblight.2 = { #outbreaks states receive this event + the other one for 5% t
 								has_modifier = modifier_active_dragonblight_outbreak
 							}
 						}
-						save_scope_as = spreader_state
+						random_neighbouring_state = {
+							limit = {
+								owner = root
+								NOT = { has_modifier = modifier_active_dragonblight_outbreak }
+							#	NOT = { has_decree = fake_decree }
+							}
+							
+							add_modifier = modifier_active_dragonblight_outbreak
+						}
+				}
+			}
+			
+			dragonblight_pulse.3 = { #woe be upon ye
+				type = country_event
+				placement = ROOT
 
+				cooldown = { months = 180 }
+
+				title = dragonblight_pulse.3.t
+				desc = dragonblight_pulse.3.d
+				flavor = dragonblight_pulse.3.f
+			
+				duration = 3
+			
+				event_image = {
+					video = "europenorthamerica_opium_smoker"
+				}
+			
+				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			
+				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+			
+				# trigger = { #todo add dragonblight cure
+				# 	any_trade_route = {
+				# 		OR = {
+				# 			importer.owner = {
+				# 				country_has_primary_culture = cu:kotskarvi
+				# 			}
+				# 			exporter.owner = {
+				# 				country_has_primary_culture = cu:kotskarvi
+				# 			}
+				# 		}
+				# 	}	
+				# }	
+
+				immediate = {
 					random_scope_state = {
 						limit = {
-							is_adjacent_to_state = scope:spreader_state
+							owner = root
+							NOT = { has_modifier = modifier_active_dragonblight_outbreak }
 						}
 						add_modifier = modifier_active_dragonblight_outbreak
 					}
+
 				}
-			}			
+			}
+
+			dragonblight_pulse.4 = { #shoulda took the decision lmao nerd
+				type = country_event
+				placement = ROOT
+
+				cooldown = { months = 40 }
+
+				title = dragonblight_pulse.4.t
+				desc = dragonblight_pulse.4.d
+				flavor = dragonblight_pulse.4.f
+			
+				duration = 3
+			
+				event_image = {
+					video = "europenorthamerica_opium_smoker"
+				}
+			
+				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			
+				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+			
+				trigger = {
+					NOT = {
+						has_modifier = dragonblight_port_controls
+					}
+				}	
+
+				immediate = {
+					random_scope_state = {
+						limit = {
+							owner = root
+							NOT = { has_modifier = modifier_active_dragonblight_outbreak }
+						}
+						add_modifier = modifier_active_dragonblight_outbreak
+					}
+
+				}
+			}
+
+			dragonblight_pulse.5 = { #adjacent spread, no health system
+				type = country_event
+				placement = ROOT
+
+				cooldown = { months = 40 }
+
+				title = dragonblight_pulse.5.t
+				desc = dragonblight_pulse.5.d
+				flavor = dragonblight_pulse.5.f
+			
+				duration = 3
+			
+				event_image = {
+					video = "europenorthamerica_opium_smoker"
+				}
+			
+				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			
+				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+			
+				trigger = {
+					any_scope_state = {
+								has_modifier = modifier_active_dragonblight_outbreak
+						}
+					NOT = {
+						has_institution = institution_health_system
+						}	
+				}	
+
+				immediate = {
+					random_scope_state = {
+						limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+						}
+						random_neighbouring_state = {
+							limit = {
+								owner = root
+								NOT = { has_modifier = modifier_active_dragonblight_outbreak }
+							#	NOT = { has_decree = fake_decree }
+							}
+							
+							add_modifier = modifier_active_dragonblight_outbreak
+						}
+				}
+			}
+			dragonblight_pulse.11 = { 
+				type = country_event
+				placement = ROOT
+
+				cooldown = { months = 40 }
+
+				title = dragonblight_pulse.11.t
+				desc = dragonblight_pulse.11.d
+				flavor = dragonblight_pulse.11.f
+			
+				duration = 3
+			
+				event_image = {
+					video = "europenorthamerica_opium_smoker"
+				}
+			
+				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			
+				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+			
+				trigger = {
+					any_scope_state = {
+								has_modifier = modifier_active_dragonblight_outbreak
+						}
+				}	
+
+				option = {
+					name = dragonblight_pulse.11.a
+					default_option = yes
+					
+					ig:ig_industrialists = {
+						add_modifier = {
+							name = charity_for_the_sick
+							months = short_modifier_time
+						}
+					}
+					random_scope_state = {
+						limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							add_modifier = {
+								name = dragon_sickhouses
+								months = 48	
+							}	
+						}
+					}
+
+				option = {
+					name = dragonblight_pulse.11.b
+					default_option = yes
+					
+					ig:ig_industrialists = {
+						add_modifier = {
+							name = industrialists_sickhouses_ignored
+							months = short_modifier_time
+						}
+					}
+					random_scope_state = {
+						limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+						add_modifier = {
+							name = dragon_sickhouses
+							months = 48	
+						}
+					}	
+				}
+				option = {
+					name = dragonblight_pulse.11.c
+					default_option = yes
+					
+					ig:ig_industrialists = {
+						add_modifier = {
+							name = dragonblight_forced_charity
+							months = short_modifier_time
+						}
+					}
+					random_scope_state = {
+						count = 3
+						add_modifier = {
+							name = dragon_sickhouses
+							months = 48	
+						}
+					}			
+				}
+			}
+				
