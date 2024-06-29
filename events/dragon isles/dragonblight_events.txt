@@ -324,18 +324,11 @@ dragonblight.2 = { #outbreaks states receive this event + the other one for 5% t
 			
 				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 			
-				# trigger = { #todo add dragonblight cure
-				# 	any_trade_route = {
-				# 		OR = {
-				# 			importer.owner = {
-				# 				country_has_primary_culture = cu:kotskarvi
-				# 			}
-				# 			exporter.owner = {
-				# 				country_has_primary_culture = cu:kotskarvi
-				# 			}
-				# 		}
-				# 	}	
-				# }	
+				trigger = { #todo add dragonblight cure
+				NOT = {
+					has_variable = dragonblight_cured
+				}
+				}	
 
 				immediate = {
 					random_scope_state = {
@@ -433,15 +426,217 @@ dragonblight.2 = { #outbreaks states receive this event + the other one for 5% t
 						}
 				}
 			}
-			dragonblight_pulse.11 = { 
+
+			dragonblight_pulse.6 = { #heal-by-decree
+				type = country_event
+				placement = ROOT
+
+				cooldown = { months = 30 }
+
+				title = dragonblight_pulse.6.t
+				desc = dragonblight_pulse.6.d
+				flavor = dragonblight_pulse.6.f
+			
+				duration = 3
+			
+				event_image = {
+					video = "europenorthamerica_opium_smoker"
+				}
+			
+				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			
+				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+			
+				trigger = {
+					any_scope_state = {
+								has_modifier = modifier_active_dragonblight_outbreak
+								has_decree = fake_decree
+						}
+	
+				}	
+
+				immediate = {
+					random_scope_state = {
+						limit = {
+							has_modifier = modifier_active_dragonblight_outbreak
+							has_decree = fake_decree
+							}
+						remove_modifier = modifier_active_dragonblight_outbreak
+					}	
+				}
+			}
+
+			dragonblight_pulse.7 = { #heal-by-decree-and-also-a-health-system
+				type = country_event
+				placement = ROOT
+
+				cooldown = { months = 30 }
+
+				title = dragonblight_pulse.7.t
+				desc = dragonblight_pulse.7.d
+				flavor = dragonblight_pulse.7.f
+			
+				duration = 3
+			
+				event_image = {
+					video = "europenorthamerica_opium_smoker"
+				}
+			
+				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			
+				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+			
+				trigger = {
+					any_scope_state = {
+								has_modifier = modifier_active_dragonblight_outbreak
+								has_decree = fake_decree
+								has_institution = institution_health_system
+						}
+	
+				}	
+
+				immediate = {
+					random_scope_state = {
+						limit = {
+							has_modifier = modifier_active_dragonblight_outbreak
+							has_decree = fake_decree
+							}
+						remove_modifier = modifier_active_dragonblight_outbreak
+					}	
+				}
+			}
+
+			dragonblight_pulse.8 = { #dragonblight cured
+				type = country_event
+				placement = ROOT
+
+				cooldown = { months = 12 }
+
+				title = dragonblight_pulse.7.t
+				desc = dragonblight_pulse.7.d
+				flavor = dragonblight_pulse.7.f
+			
+				duration = 3
+			
+				event_image = {
+					video = "europenorthamerica_opium_smoker"
+				}
+			
+				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			
+				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+			
+				trigger = {
+					has_institution = institution_health_system
+					has_variable = dragonblight_cured
+					any_scope_state = {
+								has_modifier = modifier_active_dragonblight_outbreak
+								has_decree = fake_decree
+						}
+	
+				}	
+
+				immediate = {
+					random_scope_state = {
+						limit = {
+							has_modifier = modifier_active_dragonblight_outbreak
+							has_decree = fake_decree
+							}
+						remove_modifier = modifier_active_dragonblight_outbreak
+					}	
+				}
+			}
+
+			dragonblight_pulse.9 = { #cure + decree
+				type = country_event
+				placement = ROOT
+
+				cooldown = { months = 12 }
+
+				title = dragonblight_pulse.9.t
+				desc = dragonblight_pulse.9.d
+				flavor = dragonblight_pulse.9.f
+			
+				duration = 3
+			
+				event_image = {
+					video = "europenorthamerica_opium_smoker"
+				}
+			
+				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			
+				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+			
+				trigger = {
+
+					has_variable = dragonblight_cured
+					any_scope_state = {
+								has_modifier = modifier_active_dragonblight_outbreak
+								has_decree = fake_decree
+						}
+	
+				}	
+
+				immediate = {
+					random_scope_state = {
+						limit = {
+							has_modifier = modifier_active_dragonblight_outbreak
+							has_decree = fake_decree
+							}
+						remove_modifier = modifier_active_dragonblight_outbreak
+					}	
+				}
+			}
+
+			dragonblight_pulse.11 = { #cure
+				type = country_event
+				placement = ROOT
+
+				cooldown = { months = 12 }
+
+				title = dragonblight_pulse.11.t
+				desc = dragonblight_pulse.11.d
+				flavor = dragonblight_pulse.11.f
+			
+				duration = 3
+			
+				event_image = {
+					video = "europenorthamerica_opium_smoker"
+				}
+			
+				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			
+				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+			
+				trigger = {
+
+					has_variable = dragonblight_cured
+					any_scope_state = {
+								has_modifier = modifier_active_dragonblight_outbreak
+						}
+	
+				}	
+
+				immediate = {
+					random_scope_state = {
+						limit = {
+							has_modifier = modifier_active_dragonblight_outbreak
+							}
+						remove_modifier = modifier_active_dragonblight_outbreak
+					}	
+				}
+			}
+
+
+			dragonblight_pulse.15 = { 
 				type = country_event
 				placement = ROOT
 
 				cooldown = { months = 40 }
 
-				title = dragonblight_pulse.11.t
-				desc = dragonblight_pulse.11.d
-				flavor = dragonblight_pulse.11.f
+				title = dragonblight_pulse.15.t
+				desc = dragonblight_pulse.15.d
+				flavor = dragonblight_pulse.15.f
 			
 				duration = 3
 			
@@ -511,12 +706,23 @@ dragonblight.2 = { #outbreaks states receive this event + the other one for 5% t
 						}
 					}
 					random_scope_state = {
-						count = 3
 						add_modifier = {
 							name = dragon_sickhouses
 							months = 48	
 						}
-					}			
+					}
+					random_scope_state = {
+						add_modifier = {
+							name = dragon_sickhouses
+							months = 48	
+						}
+					}		
+					random_scope_state = {
+						add_modifier = {
+							name = dragon_sickhouses
+							months = 48	
+						}
+					}					
 				}
 			}
 				
