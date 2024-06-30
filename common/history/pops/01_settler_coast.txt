@@ -461,6 +461,8 @@ s:STATE_CAEL_VALEN_2 = {
 			size = 32020
 		}
 	}
+  }
+  s:STATE_CRAGGEDWYN = {
 	region_state:CDW = {
 		create_pop = {
 			culture = tolorr
@@ -471,7 +473,7 @@ s:STATE_CAEL_VALEN_2 = {
 			size = 262139
 		}
 		create_pop = {
-			culture = mutant
+			culture = mutant #these will assimilate overnight
 			size = 304
 		}
 		create_pop = {
