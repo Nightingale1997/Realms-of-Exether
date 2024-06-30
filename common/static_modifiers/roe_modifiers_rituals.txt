@@ -124,23 +124,25 @@ country_ritual_divine_5_cost = {
 
 country_ritual_antimagic_1 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	
+	country_suppression_cost_mult = -0.25
 }
 country_ritual_antimagic_2 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	
+	country_weekly_innovation_mult = 0.05
+	country_weekly_innovation_max_add = 10
 }
 country_ritual_antimagic_3 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	
+	political_movement_radicalism_mult = -0.2
 }
 country_ritual_antimagic_4 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_authority_mult = 0.1
 	
 }
 country_ritual_antimagic_5 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	
+	state_veil_integrity_contribution = -1000
 }
 country_ritual_dark_1 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
