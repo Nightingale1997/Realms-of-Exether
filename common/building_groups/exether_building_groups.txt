@@ -39,11 +39,13 @@ bg_cloud_collecting = {
 }
 
 bg_wishstone_mining = { 
+	parent_group = bg_mining
+
 	category = rural
 
-	capped_by_resources = yes
-	
 	economy_of_scale = yes
+
+	capped_by_resources = yes
 	
 	discoverable_resource = yes
 	
@@ -63,6 +65,7 @@ bg_wishstone_mining = {
 	can_use_slaves = yes
 
 	economy_of_scale_ai_factor = 2.0
+	foreign_investment_ai_factor = 1.0
 }
 
 bg_wishstone_extraction_sea = {
@@ -113,6 +116,7 @@ bg_chimesilt_mounds = {
 	}
 	
 	economy_of_scale_ai_factor = 1.5
+	foreign_investment_ai_factor = 0.75
 }
 
 bg_special_depletables = {  #use with resource_depletion and resource_discovery settings
