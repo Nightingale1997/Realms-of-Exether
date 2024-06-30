@@ -146,23 +146,23 @@ country_ritual_antimagic_5 = {
 }
 country_ritual_dark_1 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	
+	state_working_adult_ratio_add = 0.05
 }
 country_ritual_dark_2 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	
+	unit_morale_loss_mult = -0.05
 }
 country_ritual_dark_3 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	
+	state_conversion_mult = 0.2
 }
 country_ritual_dark_4 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	
+	country_minting_mult = 0.1
 }
 country_ritual_dark_5 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	
+	state_veil_integrity_contribution = 1000
 }
 country_ritual_astrology_1 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
@@ -230,11 +230,13 @@ country_ritual_druidic_5 = {
 }
 country_ritual_divine_1 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	
+	state_dependent_wage_mult = 0.05
+	state_dependent_political_participation_add = 0.01
 }
 country_ritual_divine_2 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	
+	country_legitimacy_base_add = 5
+	interest_group_in_government_attraction_mult = 0.1
 }
 country_ritual_divine_3 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
