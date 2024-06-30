@@ -184,23 +184,25 @@ country_ritual_astrology_5 = {
 }
 country_ritual_artificer_1 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	
+	state_infrastructure_from_population_add = 1
+	state_infrastructure_from_population_max_add = 10
 }
 country_ritual_artificer_2 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	
+	country_bureaucracy_mult = 0.05
 }
 country_ritual_artificer_3 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	
+	state_radicals_from_sol_change_mult = -0.05
+	state_loyalists_from_sol_change_mult = 0.05
 }
 country_ritual_artificer_4 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	
+	country_company_construction_efficiency_bonus_add = 0.05
 }
 country_ritual_artificer_5 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	
+	building_group_bg_manufacturing_throughput_add = 0.05
 }
 country_ritual_druidic_1 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
