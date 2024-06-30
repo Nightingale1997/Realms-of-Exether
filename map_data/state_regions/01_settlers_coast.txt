@@ -1328,6 +1328,7 @@ STATE_VYNDERVOHT = {
         bg_lead_mining = 81
         bg_cloud_collecting = 51
         bg_logging = 27
+        bg_monuments = 1
     }
 
 }
@@ -1734,6 +1735,7 @@ STATE_SKYPIERCER_PEAK = {
         bg_logging = 6
         bg_coal_mining = 45
         bg_iron_mining = 75
+        bg_monuments = 1
     }
     naval_exit_id = 3213
 }
@@ -1881,6 +1883,11 @@ STATE_KORO = {
     farm = x71B2DF
     mine = x74D2E8
     port = x74EDE0
+
+    capped_resources = {
+        bg_monuments = 1
+    }
+
     naval_exit_id = 3145
 }
 

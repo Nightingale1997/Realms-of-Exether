@@ -173,7 +173,12 @@
 	}
 		
 	s:STATE_KORO = {
-
+		region_state:KAM={
+        create_building={
+			building="building_dwarf_tunnels"
+			level=1
+		  }
+		}
 	}
 		
 	s:STATE_SC12 = {
@@ -3684,7 +3689,12 @@
 	}
 		
 	s:STATE_ALQADIM = {
-
+		region_state:BSK={
+			create_building={
+				building="building_dwarf_tunnels"
+				level=1
+			  }
+			}
 	}
 		
 	s:STATE_ZAHRIFAR = {
