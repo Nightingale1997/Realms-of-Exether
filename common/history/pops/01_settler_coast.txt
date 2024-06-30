@@ -461,6 +461,8 @@ s:STATE_CAEL_VALEN_2 = {
 			size = 32020
 		}
 	}
+  }
+  s:STATE_CRAGGEDWYN = {
 	region_state:CDW = {
 		create_pop = {
 			culture = tolorr
@@ -471,7 +473,7 @@ s:STATE_CAEL_VALEN_2 = {
 			size = 262139
 		}
 		create_pop = {
-			culture = mutant
+			culture = mutant #these will assimilate overnight
 			size = 304
 		}
 		create_pop = {
@@ -674,6 +676,23 @@ s:STATE_CAEL_VALEN_2 = {
 	}
   }
 
+  s:STATE_PLAGUEWOOD_HINTERLANDS_3 = {
+	region_state:DRO = {
+		create_pop = {
+			culture = aridrun
+			size = 79992
+		}
+		create_pop = {
+			culture = plaguedweller
+			size = 400621
+		}
+		create_pop = {
+			culture = korkaz
+			size = 100621
+		}
+	}
+  }
+
   s:STATE_ASHWICK = {
 	region_state:ASW = {
 		create_pop = {
@@ -711,7 +730,20 @@ s:STATE_CAEL_VALEN_2 = {
   }
 
   s:STATE_ASHWICK_3 = {
-
+	region_state:DRO = {
+		create_pop = {
+			culture = aridrun
+			size = 418404
+		}
+		create_pop = {
+			culture = korkaz
+			size = 616427
+		}
+		create_pop = {
+			culture = plaguedweller
+			size = 202435
+		}
+	}
   }
 
   s:STATE_OUTER_MOORWEALD = {

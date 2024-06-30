@@ -503,6 +503,8 @@
 			activate_production_methods={ "pm_no_organization" }
 		}
 	}
+  }
+  s:STATE_CRAGGEDWYN = {
 	region_state:CDW={
 		create_building={
 			building="building_government_administration"
@@ -783,8 +785,101 @@
 	}
   }
 
+  s:STATE_PLAGUEWOOD_HINTERLANDS_3 = {
+	region_state:DRO={
+		create_building={
+			building="building_livestock_ranch"
+			add_ownership={
+				building={
+					type="building_manor_house"
+					country="c:DRO"
+					levels=5
+					region="PLAGUEWOOD_HINTERLANDS_3"
+				}
+			}
+			reserves=1
+			activate_production_methods={ "pm_open_air_stockyards" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated"  }
+		}
+	}
+  }
+
   s:STATE_ASHWICK = {
 
+  }
+
+  
+  s:STATE_ASHWICK_3 = {
+	region_state:DRO={
+		create_building={
+			building="building_rice_farm"
+			add_ownership={
+				building={
+					type="building_manor_house"
+					country="c:DRO"
+					levels=2
+					region="STATE_ASHWICK_3"
+				}
+				building={
+					type="building_manor_house"
+					country="c:DRO"
+					levels=2
+					region="STATE_ASHWICK_3"
+				}
+			}
+			reserves=1
+			activate_production_methods={ "pm_simple_farming_building_rice_farm"  "pm_tools_disabled" "pm_fig_orchards_building_rice_farm" }
+		}
+		create_building={
+			building="building_livestock_ranch"
+			add_ownership={
+				building={
+					type="building_manor_house"
+					country="c:DRO"
+					levels=1
+					region="STATE_ASHWICK_3"
+				}
+			}
+			reserves=1
+			activate_production_methods={ "pm_open_air_stockyards" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated"  }
+		}
+		create_building={
+			building="building_tobacco_plantation"
+			add_ownership={
+				building={
+					type="building_manor_house"
+					country="c:DRO"
+					levels=3
+					region="STATE_ASHWICK_3"
+				}
+			}
+			reserves=1
+			activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
+		}
+		create_building={
+			building="building_sugar_plantation"
+			add_ownership={
+				building={
+					type="building_manor_house"
+					country="c:DRO"
+					levels=2
+					region="STATE_ASHWICK_3"
+				}
+			}
+			reserves=1
+			activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts"  }
+		}
+		create_building={
+			building="building_port"
+			add_ownership={
+				country={
+					country="c:DRO"
+					levels=1
+				}
+			}
+			reserves=1
+			activate_production_methods={ "pm_basic_port" }
+		}
+	}
   }
 
   s:STATE_OUTER_MOORWEALD = {
@@ -2355,6 +2450,10 @@
 			reserves=1
 			activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts" }
 		}
+		create_building={
+			building="building_dwarf_tunnels"
+			level=1
+		  }
     	}
   }
   s:STATE_SHIFTING_SCAR = {
@@ -3003,6 +3102,10 @@
 
   s:STATE_SKYPIERCER_PEAK = {
 	region_state:VOZ={
+		create_building={
+			building="building_dwarf_tunnels"
+			level=1
+		  }
 		create_building={
 			building="building_government_administration"
 			level=3

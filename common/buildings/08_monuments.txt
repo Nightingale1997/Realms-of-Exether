@@ -74,3 +74,38 @@ building_power_bloc_statue = {
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 }
+
+building_dwarf_tunnels = {
+	building_group = bg_monuments
+	texture = "gfx/interface/icons/building_icons/dwarf_halls.dds"
+	expandable = no
+	buildable = no
+	downsizeable = no
+	unique = no
+	
+	entity_not_constructed = { }
+	entity_under_construction = { }
+	entity_constructed = { }
+	
+	production_method_groups = {
+		pmg_base_building_dwarf_tunnels
+	}
+	
+	possible = {
+		OR = {
+			state_region = s:STATE_LIGHTSCOURGE
+			state_region = s:STATE_SKYPIERCER_PEAK
+			state_region = s:STATE_ELDBERG
+			state_region = s:STATE_VYNDERVOHT
+			state_region = s:STATE_KORO
+			state_region = s:STATE_KEENAVOK
+			state_region = s:STATE_BAZKA
+			state_region = s:STATE_ALQADIM
+		}
+
+	}
+	
+	required_construction = construction_cost_monument
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}

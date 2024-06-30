@@ -2179,9 +2179,9 @@
                 scope:character = {
                     NOT = {
                         AND = {
-                            exists = c:PRU
+                            exists = c:CER
                             exists = home_country
-                            home_country = c:PRU 
+                            home_country = c:CER 
                         }
                     }
                     owner ?= {
@@ -2892,7 +2892,7 @@
 
                 scope:pop ?= {
                     owner ?= {
-                        c:HOR ?= this
+                        c:OAZ ?= this
                     }
                     OR = {
                         is_pop_type = soldiers
@@ -2903,15 +2903,15 @@
             modifier = {
                 add = 10000
 
-                c:HOR ?= {
+                c:OAZ ?= {
                     NOT = { has_technology_researched = bolt_action_rifles }
                 }
 
                 scope:character ?= {
                     OR = {
                         AND = {
-                            exists = c:HOR
-                            home_country ?= c:HOR
+                            exists = c:OAZ
+                            home_country ?= c:OAZ
                         } 
                     }
                     is_ruler = no
@@ -3679,7 +3679,7 @@
                     scope:pop ?= {
                         is_pop_type = aristocrats
                         culture = {
-                            has_discrimination_trait = iranian_turanian_culture_group
+                            has_discrimination_trait = new_khussite_culture_group
                         }
                     }
                     scope:character ?= {
@@ -3693,16 +3693,14 @@
                             }
                         }
                         culture = {
-                            has_discrimination_trait = iranian_turanian_culture_group
-                            has_discrimination_trait = middle_eastern_heritage
+                            has_discrimination_trait = new_khussite_culture_group
                         }
                     }
                     scope:character ?= {
                         is_ruler = yes
                         age >= define:NCharacters|ADULT_AGE
                         culture = {
-                            has_discrimination_trait = iranian_turanian_culture_group
-                            has_discrimination_trait = central_asian_heritage
+                            has_discrimination_trait = new_khussite_culture_group
                         }
                     }
                 }
@@ -3766,12 +3764,11 @@
                     is_ruler = yes
                     is_female = no
                     owner ?= {
-                        c:HOR ?= this
+                        c:OAZ ?= this
                         has_law = law_type:law_monarchy
                     }
                     culture = {
-                        has_discrimination_trait = iranian_turanian_culture_group
-                        has_discrimination_trait = middle_eastern_heritage
+                        has_discrimination_trait = new_khussite_culture_group
                     }
                 }
             }
