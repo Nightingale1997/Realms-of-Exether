@@ -816,7 +816,7 @@ STATE_RIVER_SOLILOQUE_2 = {
     port = xA4EE72
     naval_exit_id = 3153
 }
-STATE_CAM_CLOCHRAN = {
+STATE_LILLESO = {
     id = 4264
     subsistence_building = "building_subsistence_farms"
     provinces = { "x91F2E5" "x97EDE6" "x98C6B2" "xC7A8BF" "xD8F8C1" "xE263F8" "xE2ECF1" "xE9B164" "xF8A956" "xFD61F3" }
@@ -825,9 +825,17 @@ STATE_CAM_CLOCHRAN = {
     farm = x97EDE6
     mine = x98C6B2
     port = xB695AA
+    arable_land = 84
+    arable_resources = {
+        "bg_livestock_ranches" "bg_wheat_farms"
+    }
+    capped_resources = {
+        bg_coal_mining = 6
+        bg_logging = 23
+    }
     naval_exit_id = 3151
 }
-STATE_ZEPHYRSTILL = {
+STATE_KLIPPEBJERG = {
     id = 4265
     subsistence_building = "building_subsistence_farms"
     provinces = { "x2DEEFC" "x84BEF1" "x98F6F9" "xB453FE" "xC091F3" "xE3968C" "xE64CCC" "xEBAE6D" "xED977B" "xF2A366" "xF4C18D" "xFE74C0" "xFEFC09" }
@@ -838,10 +846,19 @@ STATE_ZEPHYRSTILL = {
     farm = x98D1CB
     mine = x98F6F9
     port = xB453FE
+    arable_land = 63
+    arable_resources = {
+        "bg_livestock_ranches" "bg_wheat_farms"
+    }
+    capped_resources = {
+        bg_iron_mining = 28
+        bg_lead_mining = 8
+        bg_logging = 6
+    }
 
     naval_exit_id = 3151
 }
-STATE_ZEPHYRSTILL_2 = {
+STATE_HOJLAND = {
     id = 3790
     subsistence_building = "building_subsistence_farms"
     provinces = { "x5DD8FC" "x67E0CE" "x73D1D4" "x98D1CB" "xB695AA" "xBDD7CF" "xCAF835" "xCB59D7" "xD0CCAD" "xDAA3F5" "xE2B2B9" "xE447D6" "xE9DFEB" "xECCC76" "xF0E726" "xF0EC19" "xF6F677" "xFC80AB" "xFD50D1" }
@@ -852,6 +869,15 @@ STATE_ZEPHYRSTILL_2 = {
     farm = x98D1CB
     mine = x98F6F9
     port = xB453FE
+    arable_land = 56
+    arable_resources = {
+        "bg_livestock_ranches" "bg_wheat_farms"
+    }
+    capped_resources = {
+        bg_coal_mining = 32
+        bg_sulfur_mining = 23
+        bg_logging = 9
+    }
 
     naval_exit_id = 3151
 }
@@ -2903,7 +2929,7 @@ STATE_HANALLA = {
     }
     naval_exit_id = 3137
 }
-STATE_SUKONCO = {
+STATE_SLETTEJUNGEL = {
     id = 4409
     subsistence_building = "building_subsistence_pastures"
     provinces = { "x50EECA" "x5AE5DA" "x75FEF9" "x82F6DB" "x85B3DA" "x9294F6" "x92F988" "x97C6E3" "xA280FB" "xA3DB99" "xAD86E9" "xAFFA5B" "xB5FCE6" "xB997C5" "xC4C9F6" "xC4DAEC" "xDFC1AB" "xE1EA7B" "xE497F5" "xE9F6DA" "xEB38EE" "xECEA23" "xECED5E" "xF145D1" "xF154D8" "xF54CF0" "xF8EF7D" }
@@ -2912,6 +2938,14 @@ STATE_SUKONCO = {
     farm = x50EECA
     mine = x61DAC2
     port = x639AF9
+    arable_land = 76
+    arable_resources = {
+        "bg_livestock_ranches" "bg_wheat_farms"
+    }
+    capped_resources = {
+        bg_iron_mining = 24
+        bg_logging = 27
+    }
     naval_exit_id = 3149
 }
 STATE_INAMGI = {
@@ -3022,11 +3056,22 @@ STATE_SUKONCO_3 = {
     }
     naval_exit_id = 3147
 }
-STATE_SUKONCO_4 = {
+STATE_BJERGHOLM = {
     id = 4417
     provinces = { "x3EDAFA" "x69EEC8" "x8CD6C9" "x93FDC0" "x9AE7DA" "xC38EC5" "xD9C367" "xDDF694" "xDE55E1" "xE254E4" "xE98EE2" "xEADA32" "xEAE196" "xF1E641" "xF4ECBB" }
     impassable = { "xEADA32" "xC38EC5" "xeae196" "x9AE7DA" "xDE55E1" "xF1E641" "xF4ECBB" }
     traits = { "state_trait_crescent_range" }
+    arable_land = 48
+    arable_resources = {
+        "bg_livestock_ranches" "bg_wheat_farms"
+    }
+    capped_resources = {
+        bg_coal_mining = 12
+        bg_iron_mining = 34
+        bg_lead_mining = 21
+        bg_wishstone_mining = 4
+        bg_logging = 3
+    }
 
 }
 STATE_SANGARI_2 = {

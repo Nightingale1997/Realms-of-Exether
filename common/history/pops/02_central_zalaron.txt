@@ -768,12 +768,39 @@
 
   }
     
-  s:STATE_CAM_CLOCHRAN = {
+  s:STATE_LILLESO = {
+	region_state:MNN = {
+		create_pop = {
+			culture = grunhain
+			size = 573737
+		}
+	}
+  }
 
+  s:STATE_BJERGHOLM = {
+	region_state:MNN = {
+		create_pop = {
+			culture = grunhain
+			size = 718982
+		}
+	}
   }
     
-  s:STATE_ZEPHYRSTILL = {
-
+  s:STATE_HOJLAND = {
+	region_state:MNN = {
+		create_pop = {
+			culture = grunhain
+			size = 971632
+		}
+	}
+  }
+  s:STATE_KLIPPEBJERG = {
+	region_state:MNN = {
+		create_pop = {
+			culture = grunhain
+			size = 634738
+		}
+	}
   }
     
   s:STATE_EISENMORA = {
@@ -2521,8 +2548,13 @@
 	}
   }
     
-  s:STATE_SUKONCO = {
-
+  s:STATE_SLETTEJUNGEL = {
+  region_state:MNN = {
+	create_pop = {
+		culture = grunhain
+		size = 858942
+	}
+  }
   }
 
   s:STATE_SUKONCO_2 = {
