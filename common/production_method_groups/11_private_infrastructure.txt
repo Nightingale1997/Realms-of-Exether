@@ -63,6 +63,27 @@ pmg_additional_ownership_building_manor_house = {
 	production_methods = {
 		pm_manor_house_clergy_ownership
 		pm_manor_house_bureaucrat_ownership
+		pm_manor_house_hedge_wizard_ownership
+	}
+}
+
+pmg_ownership_building_wizard_tower = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_wizard_tower_privately_owned
+	}
+}
+
+pmg_additional_ownership_building_wizard_tower = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_wizard_tower_clergy_ownership
+		pm_wizard_tower_hedge_wizard_ownership
+		pm_wizard_tower_adventurer_ownership
 	}
 }
 
@@ -76,3 +97,24 @@ pmg_ownership_building_financial_district = {
 		pm_financial_district_principle_divine_economics_2
 	}
 }
+
+pmg_ownership_building_tavern = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_tavern_watering_hole
+		pm_tavern_rumor_hub
+	}
+}
+
+pmg_additional_ownership_building_tavern = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_tavern_adventurer_ownership
+		pm_tavern_soldier_ownership
+	}
+}
+

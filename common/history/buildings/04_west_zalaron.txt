@@ -1709,6 +1709,10 @@
   s:STATE_KEENAVOK = {
 	region_state:KHD={
 		create_building={
+			building="building_dwarf_tunnels"
+			level=1
+		  }
+		create_building={
 			building="building_food_industry"
 			level=1
 			reserves=1

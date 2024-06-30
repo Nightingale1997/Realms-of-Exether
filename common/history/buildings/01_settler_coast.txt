@@ -503,6 +503,8 @@
 			activate_production_methods={ "pm_no_organization" }
 		}
 	}
+  }
+  s:STATE_CRAGGEDWYN = {
 	region_state:CDW={
 		create_building={
 			building="building_government_administration"
@@ -783,8 +785,101 @@
 	}
   }
 
+  s:STATE_PLAGUEWOOD_HINTERLANDS_3 = {
+	region_state:DRO={
+		create_building={
+			building="building_livestock_ranch"
+			add_ownership={
+				building={
+					type="building_manor_house"
+					country="c:DRO"
+					levels=5
+					region="PLAGUEWOOD_HINTERLANDS_3"
+				}
+			}
+			reserves=1
+			activate_production_methods={ "pm_open_air_stockyards" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated"  }
+		}
+	}
+  }
+
   s:STATE_ASHWICK = {
 
+  }
+
+  
+  s:STATE_ASHWICK_3 = {
+	region_state:DRO={
+		create_building={
+			building="building_rice_farm"
+			add_ownership={
+				building={
+					type="building_manor_house"
+					country="c:DRO"
+					levels=2
+					region="STATE_ASHWICK_3"
+				}
+				building={
+					type="building_manor_house"
+					country="c:DRO"
+					levels=2
+					region="STATE_ASHWICK_3"
+				}
+			}
+			reserves=1
+			activate_production_methods={ "pm_simple_farming_building_rice_farm"  "pm_tools_disabled" "pm_fig_orchards_building_rice_farm" }
+		}
+		create_building={
+			building="building_livestock_ranch"
+			add_ownership={
+				building={
+					type="building_manor_house"
+					country="c:DRO"
+					levels=1
+					region="STATE_ASHWICK_3"
+				}
+			}
+			reserves=1
+			activate_production_methods={ "pm_open_air_stockyards" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated"  }
+		}
+		create_building={
+			building="building_tobacco_plantation"
+			add_ownership={
+				building={
+					type="building_manor_house"
+					country="c:DRO"
+					levels=3
+					region="STATE_ASHWICK_3"
+				}
+			}
+			reserves=1
+			activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
+		}
+		create_building={
+			building="building_sugar_plantation"
+			add_ownership={
+				building={
+					type="building_manor_house"
+					country="c:DRO"
+					levels=2
+					region="STATE_ASHWICK_3"
+				}
+			}
+			reserves=1
+			activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts"  }
+		}
+		create_building={
+			building="building_port"
+			add_ownership={
+				country={
+					country="c:DRO"
+					levels=1
+				}
+			}
+			reserves=1
+			activate_production_methods={ "pm_basic_port" }
+		}
+	}
   }
 
   s:STATE_OUTER_MOORWEALD = {
@@ -1096,19 +1191,25 @@
   }
 
   s:STATE_THE_AMBER_RUN = {
-		region_state:EMP={
-			create_building={
-				building="building_government_administration"
-				level=3
-				reserves=1
-				activate_production_methods={ "pm_vertical_filing_cabinets" }
-			}			
+		region_state:EMP={			
 			create_building={
 				building="building_paper_mills"
 				level=5
 				reserves=1
 				activate_production_methods={ "pm_sulfite_pulping" "pm_automation_disabled" }
-			}				
+			}		
+			create_building={
+				building="building_coal_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_atmospheric_engine_pump_building_coal_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+		  }		
+		  create_building={
+			building="building_barracks"
+			level=6
+			reserves=1
+			activate_production_methods={ "pm_no_organization" }
+		}
 			create_building={
 				building="building_furniture_manufacturies"
 				level=2
@@ -1132,6 +1233,36 @@
 
   s:STATE_MISTREACH = {
 		region_state:KRC={
+			create_building={
+				building="building_government_administration"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_vertical_filing_cabinets" }
+			}
+			create_building={
+				building="building_barracks"
+				level=6
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+			}
+			create_building={
+				building="building_arms_industry"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_muskets" "pm_automation_disabled" }
+			}
+			create_building={
+				building="building_artillery_foundries"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_cannons" "pm_automation_disabled" }
+			}
+			create_building={
+				building="building_iron_mine"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
 			create_building={
 				building="building_food_industry"
 				level=6
@@ -1206,7 +1337,7 @@
 		}
 	}
 }
-
+ 
   s:STATE_VICEROYS_PEARL = {
       region_state:ARR={
         create_building={
@@ -1217,7 +1348,14 @@
         }	
         create_building={
           building="building_arts_academy"
-          level=3
+		  add_ownership={
+			building={
+				type="building_wizard_tower"
+				country="c:ARR"
+				levels=3
+				region="STATE_VICEROYS_PEARL"
+			}
+		}
           reserves=1
           activate_production_methods={ "pm_traditional_art" }
         }			
@@ -1295,7 +1433,14 @@
         }
 		create_building={
 			building="building_adventuring_guild"
-			level=1
+			add_ownership={
+				building={
+					type="building_tavern"
+					country="c:ARR"
+					levels=1
+					region="STATE_VICEROYS_PEARL"
+				}
+			}
 			reserves=1
 			activate_production_methods={ "pm_traditional_adventuring" "pm_trophy_hunting" }
 		  }
@@ -1362,6 +1507,35 @@
 		}
   }
 
+  s:STATE_FAR_SHORE_2 = {
+	region_state:THI={
+		create_building={
+			building="building_furniture_manufacturies"
+			level=4
+			reserves=1
+			activate_production_methods={ "pm_handcrafted_furniture" "pm_automation_disabled" "pm_luxury_furniture" }
+		}
+		create_building={
+			building="building_vineyard_plantation"
+			level=4
+			reserves=1
+			activate_production_methods={ "default_building_vineyard_plantation"  }
+		}
+		create_building={
+			building="building_silk_plantation"
+			level=2
+			reserves=1
+			activate_production_methods={ "default_building_silk_plantation" "pm_road_carts"  }
+		}
+		create_building={
+			building="building_logging_camp"
+			level=6
+			reserves=1
+			activate_production_methods={ "pm_saw_mills" "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
+		}
+	}
+  }
+
   s:STATE_DURANS_LAND = {
 		region_state:ARR={
 			create_building={
@@ -1390,7 +1564,28 @@
 			}
 		}
   }
-
+  s:STATE_DURANS_LAND_2 = {
+	region_state:ARR={
+		create_building={
+			building="building_textile_mills"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_dye_workshops" "pm_craftsman_sewing" "pm_traditional_looms" }
+		}
+		create_building={
+			building="building_wheat_farm"
+			level=7
+			reserves=1
+			activate_production_methods={ "pm_simple_farming" "pm_tools_disabled"  }
+		}
+		create_building={
+			building="building_livestock_ranch"
+			level=2
+			reserves=1
+			activate_production_methods={ "pm_sheep_farms" "pm_slaughterhouses" "pm_standard_fences" "pm_unrefrigerated"  }
+		}
+	}
+}
   s:STATE_FIRST_BOROUGH = {
 	region_state:SLB={
 		create_building={
@@ -2255,6 +2450,10 @@
 			reserves=1
 			activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts" }
 		}
+		create_building={
+			building="building_dwarf_tunnels"
+			level=1
+		  }
     	}
   }
   s:STATE_SHIFTING_SCAR = {
@@ -2791,7 +2990,62 @@
   }
 
   s:STATE_HAZELDEEP = {
+	region_state:EMP={	
+	create_building={
+		building="building_government_administration"
+		level=2
+		reserves=1
+		activate_production_methods={ "pm_vertical_filing_cabinets" }
+	}
+	create_building={
+		building="building_barracks"
+		level=4
+		reserves=1
+		activate_production_methods={ "pm_no_organization" }
+	}
+	create_building={
+		building="building_logging_camp"
+		level=2
+		reserves=1
+		activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts" }
+	}
+	create_building={
+		building="building_rye_farm"
+		level=6
+		reserves=1
+		activate_production_methods={  "pm_no_secondary" "pm_tools" "pm_soil_enriching_farming" }
+	  }
+	}
+  }
 
+  s:STATE_THE_AMBER_RUN_3 = {
+	region_state:EMP={
+		create_building={
+			building="building_barracks"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_no_organization" }
+		}
+		create_building={
+			building="building_vineyard_plantation"
+			level=2
+			reserves=1
+			activate_production_methods={ "default_building_vineyard_plantation"  }
+		}
+
+	}
+  }
+
+  s:STATE_THE_AMBER_RUN_2 = {
+	region_state:EMP={
+		create_building={
+			building="building_barracks"
+			level=2
+			reserves=1
+			activate_production_methods={ "pm_no_organization" }
+		}
+
+	}
   }
 
   s:STATE_AZURETHORN = {
@@ -2848,6 +3102,10 @@
 
   s:STATE_SKYPIERCER_PEAK = {
 	region_state:VOZ={
+		create_building={
+			building="building_dwarf_tunnels"
+			level=1
+		  }
 		create_building={
 			building="building_government_administration"
 			level=3
@@ -2983,6 +3241,18 @@
 
   s:STATE_TARBANK = {
 		region_state:EMP={	
+			create_building={
+				building="building_government_administration"
+				level=3
+				reserves=1
+				activate_production_methods={ "pm_vertical_filing_cabinets" }
+			}
+			create_building={
+				building="building_barracks"
+				level=4
+				reserves=1
+				activate_production_methods={ "pm_no_organization" }
+			}
 			create_building={
 				building="building_tooling_workshops"
 				level=4

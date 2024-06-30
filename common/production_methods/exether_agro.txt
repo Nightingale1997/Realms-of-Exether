@@ -1,9 +1,9 @@
 ﻿pm_farms_no_enhancement = {
-
+texture = "gfx/interface/icons/production_method_icons/no_potion_sap.dds"
 }
 
 pm_farms_basic_earth_shaping = {
-	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
 	
 	unlocking_laws = {
 		#druid shit idk
@@ -29,7 +29,7 @@ pm_farms_basic_earth_shaping = {
 }
 
 pm_farms_mass_plant_growth = {  #could also be "hastened growth cycles"
-	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
 	
 	unlocking_laws = {
 		#druid shit idk
@@ -63,7 +63,7 @@ pm_rice_farms_no_enhancement = {
 }
 
 pm_rice_farms_basic_earth_shaping = {
-	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
 	
 	unlocking_laws = {
 		#druid shit idk
@@ -89,7 +89,7 @@ pm_rice_farms_basic_earth_shaping = {
 }
 
 pm_rice_farms_mass_plant_growth = {  #could also be "hastened growth cycles"
-	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
 	
 	unlocking_laws = {
 		#druid shit idk
@@ -119,11 +119,11 @@ pm_rice_farms_mass_plant_growth = {  #could also be "hastened growth cycles"
 }
 
 pm_livestock_no_enhancement = {
-
+	texture = "gfx/interface/icons/production_method_icons/no_potion_sap.dds"
 }
 
 pm_livestock_fertility_rites = {
-	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
 	
 	unlocking_laws = {
 		#druid shit idk
@@ -149,7 +149,7 @@ pm_livestock_fertility_rites = {
 }
 
 pm_livestock_magical_selection = {  #magical selection is a METAL fucking name omg
-	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
 	
 	unlocking_laws = {
 		#druid shit idk
@@ -179,7 +179,7 @@ pm_livestock_magical_selection = {  #magical selection is a METAL fucking name o
 }
 
 pm_seedshooters = {
-	texture = "gfx/interface/icons/production_method_icons/harvesting_tools.dds"
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
 	
 	state_modifiers = {
 		workforce_scaled = {
@@ -200,7 +200,7 @@ pm_seedshooters = {
 }
 
 pm_seedspinners = {
-	texture = "gfx/interface/icons/production_method_icons/tractors.dds"
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
 
 	state_modifiers = {
 		workforce_scaled = {
@@ -226,7 +226,7 @@ pm_seedspinners = {
 }
 
 pm_ricerooters = {
-	texture = "gfx/interface/icons/production_method_icons/harvesting_tools.dds"
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
 	
 	building_modifiers = {
 		workforce_scaled = {
@@ -241,12 +241,12 @@ pm_ricerooters = {
 }
 
 pm_no_regional = {
-	texture = "gfx/interface/icons/production_method_icons/no_orchards.dds"
+	texture = "gfx/interface/icons/production_method_icons/no_potion_sap.dds"
 
 }
 
 pm_tree_of_life_orchards_no_harvesting = {
-	texture = "gfx/interface/icons/production_method_icons/no_orchards.dds"
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
 	state_modifiers = {
 		unscaled = {
 			state_mortality_mult = -0.1
@@ -256,7 +256,7 @@ pm_tree_of_life_orchards_no_harvesting = {
 }
 
 pm_tree_of_life_orchards_harvesting = {
-	texture = "gfx/interface/icons/production_method_icons/no_orchards.dds"
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
 	
 	
 	building_modifiers = {
@@ -274,7 +274,7 @@ pm_tree_of_life_orchards_harvesting = {
 }
 
 pm_honeybee_hives = {
-	texture = "gfx/interface/icons/production_method_icons/potatoes.dds"
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
 	
 	building_modifiers = {
 		workforce_scaled = {
@@ -286,7 +286,7 @@ pm_honeybee_hives = {
 }
 
 pm_songberry_groves = {
-	texture = "gfx/interface/icons/production_method_icons/orchards.dds"
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
 	
 	building_modifiers = {
 		workforce_scaled = {
@@ -299,7 +299,7 @@ pm_songberry_groves = {
 }
 
 pm_sweetsmoke = {
-	texture = "gfx/interface/icons/production_method_icons/orchards.dds"
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
 	
 	building_modifiers = {
 		workforce_scaled = {
@@ -312,7 +312,7 @@ pm_sweetsmoke = {
 }
 
 pm_i_dont_think_that_was_pipeweed_bro = {
-	texture = "gfx/interface/icons/production_method_icons/orchards.dds"
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
 	
 	building_modifiers = {
 		workforce_scaled = {
@@ -324,7 +324,7 @@ pm_i_dont_think_that_was_pipeweed_bro = {
 }
 
 pm_traditional_cooladjective_herb_gardens = {
-	texture = "gfx/interface/icons/production_method_icons/orchards.dds"
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
 	
 	building_modifiers = {
 		workforce_scaled = {
@@ -336,7 +336,7 @@ pm_traditional_cooladjective_herb_gardens = {
 }
 
 pm_leechgardens = { #for rice
-	texture = "gfx/interface/icons/production_method_icons/orchards.dds"
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
 	
 	building_modifiers = {
 		workforce_scaled = {

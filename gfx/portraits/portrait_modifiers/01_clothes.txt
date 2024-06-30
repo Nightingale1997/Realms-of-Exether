@@ -346,7 +346,12 @@
                 add = 100
                 scope:character ?= {
                     culture = {
-                        has_discrimination_trait = goblin_heritage
+                        AND = {
+                            has_discrimination_trait = goblin_heritage
+                            NOT = {
+                                has_discrimination_trait = gavkhani_culture_group
+                            }
+                        }
                     }
                 }
                 agitator_character_trigger = yes 
@@ -381,15 +386,7 @@
             modifier = {
                 add = 100
                 scope:character ?= {
-                    culture = {
-                        AND = {
-                            has_discrimination_trait = goblin_heritage
-                            NOT = {
-                                has_discrimination_trait = hobgoblin
-                            }
-                        }
-                        
-                    }
+                    culture = cu:vandori
                 }
                 agitator_character_trigger = yes 
             }
@@ -744,7 +741,7 @@
             modifier = {
                 add = 90000
                 scope:character ?= {
-                    has_template = agitator_jules_brunet
+                    always = no
                 }
             }
         }
@@ -1493,63 +1490,33 @@
                 add = 90000
 
                 has_dlc_feature = ep1_cosmetics
-
                 scope:character ?= {
-                    always = no
-                    #has_template = PER_reza_pahlavi
-                    # he will wear this regardless of whether he's a ruler, agitator, ig leader, general, admiral, or township clerk of dexter township in michigan
-                }
-            }
-
-            modifier = {
-                add = 10000
-
-                has_dlc_feature = ep1_cosmetics
-
-                OR = {
-                    AND = {
-                        scope:pop ?= {
-                            exists = c:PER
-                            owner = c:PER
-                        }
+                    culture = {
                         OR = {
-                            soldier_clothes_pop_trigger = yes
-                            officers_clothes_pop_trigger = yes
+                            has_discrimination_trait = gavkhani_culture_group
+                            has_discrimination_trait = orc_heritage
                         }
+                     
                     }
-                    AND = {
-                        scope:character ?= {
-                            home_country ?= { 
-                                c:PER ?= this
-                            }
-                            OR = {
-                                has_role = general
-                                AND = {
-                                    has_role = politician
-                                    is_interest_group_type = ig_armed_forces
-                                }
-                                AND = {
-                                    is_ruler = yes
-                                    home_country ?= { # Junta leaders get to wear the late uniform
-                                        has_law = law_type:law_presidential_republic
-                                        country_has_voting_franchise = no
-                                        OR = {
-                                            has_law = law_type:law_mass_conscription
-                                            has_law = law_type:law_professional_army
-                                        }
-                                        ig:ig_armed_forces = {
-                                            is_in_government = yes
-                                        }
-                                    }
-                                }
-                            }
+                    agitator_character_trigger = no
+                    OR = {
+                        scope:character = {
+                            has_role = general
+                            is_ruler = no
                         }
+                        AND = {
+                            armed_forces_clothes_trigger = yes
+                            politician_clothes_trigger = yes
+                        }
+                        officers_clothes_pop_trigger = yes
+                    }  
+                    owner ?= {
+                        has_technology_researched = bolt_action_rifles
                     }
-                }
-                c:PER ?= {
-                    has_technology_researched = bolt_action_rifles
                 }
             }
+
+
         }
     }
 
@@ -1597,9 +1564,23 @@
                 has_dlc_feature = ep1_cosmetics
 
                 scope:character ?= {
-                    always = no
-                    #has_template = per_nasir_al_din_qajar_template
-                    age >= define:NCharacters|ADULT_AGE
+                    culture = cu:vozi
+                        OR = {
+                            AND = {
+                                is_ruler = yes
+                                home_country ?= {
+                                    has_law = law_type:law_monarchy
+                                }
+                            }
+                            AND = {
+                                is_ruler = yes
+                                 is_interest_group_type = ig_armed_forces
+                            }
+                            AND = {
+                                has_role = agitator
+                                is_interest_group_type = ig_armed_forces
+                            }
+                        }
                 }
             }
         }
@@ -1631,24 +1612,24 @@
                 has_dlc_feature = ep1_cosmetics
 
                 scope:character ?= {
-                    always = no
-                    #has_template = gbr_george_curzon
-                }
-            }
-            modifier = {
-                add = 10000
-
-                has_dlc_feature = ep1_cosmetics
-
-                scope:character ?= {
-                    is_ruler = yes
-                    owner ?= {
-                        NOT = { has_law = law_type:law_monarchy }
-                        c:BIC ?= this
-                        is_subject_type = subject_type_puppet # Only when it's the British Raj, not the British East India Company
-                        exists = c:GBR
-                        is_subject_of = c:GBR
-                    }
+                    culture = cu:tefereti
+                        OR = {
+                            AND = {
+                                is_ruler = yes
+                                home_country ?= {
+                                    has_law = law_type:law_monarchy
+                                }
+                            }
+                            AND = {
+                                is_ruler = yes
+                                 is_interest_group_type = ig_armed_forces
+                            }
+                            AND = {
+                                has_role = agitator
+                                is_interest_group_type = ig_armed_forces
+                            }
+                        }
+                        age > define:NCharacters|ADULT_AGE
                 }
             }
         }
@@ -1742,30 +1723,7 @@
         }
     }
 
-    chinese_court_clothes = {
-        dna_modifiers = {
-            accessory = {
-                mode = add
-                gene = outfits
-                template = chinese_court_outfits
-                range = { 0 1 } # For the randomness to work correctly
-            }
-        }
-        weight = {
-            base = 0
-            modifier = {
-                add = 1000
-                OR = {
-                    chinese_court_clothes_trigger = yes
-                    AND = {
-                        chinese_court_clothes_pop_trigger = yes
-                        officers_clothes_pop_trigger = yes
-                    }
-                }
-                agitator_character_trigger = no
-            }
-        }
-    }
+
 
     chinese_common_clothes = {
         dna_modifiers = {
@@ -2221,9 +2179,9 @@
                 scope:character = {
                     NOT = {
                         AND = {
-                            exists = c:PRU
+                            exists = c:CER
                             exists = home_country
-                            home_country = c:PRU 
+                            home_country = c:CER 
                         }
                     }
                     owner ?= {
@@ -2934,7 +2892,7 @@
 
                 scope:pop ?= {
                     owner ?= {
-                        c:PER ?= this
+                        c:OAZ ?= this
                     }
                     OR = {
                         is_pop_type = soldiers
@@ -2945,15 +2903,15 @@
             modifier = {
                 add = 10000
 
-                c:PER ?= {
+                c:OAZ ?= {
                     NOT = { has_technology_researched = bolt_action_rifles }
                 }
 
                 scope:character ?= {
                     OR = {
                         AND = {
-                            exists = c:PER
-                            home_country ?= c:PER
+                            exists = c:OAZ
+                            home_country ?= c:OAZ
                         } 
                     }
                     is_ruler = no
@@ -3157,6 +3115,7 @@
                     OR = {
                         religion = rel:horse_worship
                         culture = cu:yanger
+                        culture = cu:nivaskyan
                     }
                 }
                 OR = {
@@ -3184,6 +3143,7 @@
                             OR = {
                                 religion = rel:horse_worship
                                 culture = cu:yanger
+                                culture = cu:nivaskyan
                             }
                             OR = {
                                 is_pop_type = soldiers
@@ -3204,6 +3164,7 @@
                     OR = {
                         religion = rel:horse_worship
                         culture = cu:yanger
+                        culture = cu:nivaskyan
                     }
                     
                     owner ?= {
@@ -3440,15 +3401,7 @@
                     AND = {
                         exists = scope:pop
                         scope:pop = {
-                            culture = {
-                                AND = {
-                                    has_discrimination_trait = goblin_heritage
-                                    NOT = {
-                                        has_discrimination_trait = hobgoblin
-                                    }
-                                }
-                                
-                            }
+                            culture = cu:vandori
                         }
                         OR = {
                             soldier_clothes_pop_trigger = yes
@@ -3458,15 +3411,7 @@
                     AND = {
                         exists = scope:character
                         scope:character ?= {
-                            culture = {
-                                AND = {
-                                    has_discrimination_trait = goblin_heritage
-                                    NOT = {
-                                        has_discrimination_trait = hobgoblin
-                                    }
-                                }
-                                
-                            }
+                            culture = cu:vandori
                             monarchy_clothes_trigger = yes
                         }
                     }
@@ -3734,7 +3679,7 @@
                     scope:pop ?= {
                         is_pop_type = aristocrats
                         culture = {
-                            has_discrimination_trait = iranian_turanian_culture_group
+                            has_discrimination_trait = new_khussite_culture_group
                         }
                     }
                     scope:character ?= {
@@ -3748,16 +3693,14 @@
                             }
                         }
                         culture = {
-                            has_discrimination_trait = iranian_turanian_culture_group
-                            has_discrimination_trait = middle_eastern_heritage
+                            has_discrimination_trait = new_khussite_culture_group
                         }
                     }
                     scope:character ?= {
                         is_ruler = yes
                         age >= define:NCharacters|ADULT_AGE
                         culture = {
-                            has_discrimination_trait = iranian_turanian_culture_group
-                            has_discrimination_trait = central_asian_heritage
+                            has_discrimination_trait = new_khussite_culture_group
                         }
                     }
                 }
@@ -3821,12 +3764,11 @@
                     is_ruler = yes
                     is_female = no
                     owner ?= {
-                        c:PER ?= this
+                        c:OAZ ?= this
                         has_law = law_type:law_monarchy
                     }
                     culture = {
-                        has_discrimination_trait = iranian_turanian_culture_group
-                        has_discrimination_trait = middle_eastern_heritage
+                        has_discrimination_trait = new_khussite_culture_group
                     }
                 }
             }
@@ -3940,27 +3882,22 @@
             }
         }
 
-         weight = {
+        weight = {
             base = 0
             modifier = {
                 add = 100
                 AND = {
-                    exists = scope:character
+                    agitator_character_trigger = no
                     scope:character ?= {
+                        AND = {
+                            has_culture = cu:vandori
+                            monarchy_clothes_trigger = no
+                        }
                         OR = {
                             AND = {
-                                culture = {
-                                    AND = {
-                                        has_discrimination_trait = goblin_heritage
-                                        NOT = {
-                                            has_discrimination_trait = hobgoblin
-                                        }
-                                    }
-                                    
-                                }
-                                monarchy_clothes_trigger = no
+                                has_culture = cu:vandori
+                                devout_clothes_trigger = yes
                             }
-                            has_culture = cu:rethrashar
                         }
                     }
                 }
@@ -4189,7 +4126,7 @@
                         arabic_clothes_pop_trigger = yes
                         scope:pop ?= {
                             culture = {
-                                has_discrimination_trait = ethiopian
+                                has_discrimination_trait = gavkhani_culture_group
                             }
                         }
                     }
@@ -4318,7 +4255,16 @@
 
             OR = {
                 scope:pop ?= {
-                    is_pop_type = wizards
+                    OR = {
+                        AND = {
+                            culture = {
+                                has_discrimination_trait = ogre_heritage
+                            }
+                            clergy_clothes_pop_trigger = yes
+                        }
+                           is_pop_type = wizards
+                    }
+                 
                 }
                 AND = {
                     scope:character ?= {
@@ -4332,6 +4278,14 @@
                         AND = {
                             hindu_clothes_pop_trigger = yes
                             clergy_clothes_pop_trigger = yes
+                        }
+                        scope:character ?= {
+                            AND = {
+                                culture = {
+                                    has_discrimination_trait = ogre_heritage
+                                }
+                                clergy_clothes_pop_trigger = yes
+                            }
                         }
                     }
                 }
@@ -5026,6 +4980,31 @@ indigenous_oceanic_high_clothes_recognized = {
         }
     }
 
+    chinese_court_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = chinese_court_outfits
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000
+                OR = {
+                    chinese_court_clothes_trigger = yes
+                    AND = {
+                        chinese_court_clothes_pop_trigger = yes
+                        officers_clothes_pop_trigger = yes
+                    }
+                }
+                agitator_character_trigger = no
+            }
+        }
+    }
+
 #Arabic
     arabic_poor_clothes = {
         dna_modifiers = {
@@ -5593,7 +5572,9 @@ indigenous_oceanic_high_clothes_recognized = {
                 AND = {
                     scope:character ?= {
                         age >= define:NCharacters|ADULT_AGE
-                        culture = cu:jazamandroso
+                        culture = {
+                            has_discrimination_trait = khussite_culture_group
+                        }
                     }
                     OR = {
                         military_clothes_trigger = yes
@@ -5637,17 +5618,22 @@ indigenous_oceanic_high_clothes_recognized = {
             base = 0
             modifier = {
                 add = 10000
-                AND = {
-                    scope:pop ?= {
-                        culture = {
-                            has_discrimination_trait = south_elf
+                OR = {
+                    AND = {
+                        scope:pop ?= {
+                            culture = {
+                                has_discrimination_trait = khussite_culture_group
+                            }
                         }
-                    }
-                    OR = {
-                        soldier_clothes_pop_trigger = yes
-                        officers_clothes_pop_trigger = yes
-                    }
-                } 
+                        OR = {
+                            soldier_clothes_pop_trigger = yes
+                            officers_clothes_pop_trigger = yes
+                        }
+                    } 
+
+
+                }
+
             }
         }
     }
@@ -6381,6 +6367,7 @@ buddhist_religious_clothes = {
                 AND = {
                     buddhist_clothes_pop_trigger = yes
                 }
+
             }
         }
     }

@@ -162,11 +162,7 @@ opium_wars.1 = {
 		}
 		add_radicals = {
 			value = medium_radicals
-		}		
-		if = {
-			limit = { has_journal_entry = je_warlord_china }
-			chi_remove_1_fragile_unity = yes
-		}				
+		}					
 		ai_chance = {
 			base = 10
 		}
@@ -346,10 +342,6 @@ opium_wars.3 = {
 				save_scope_as = opium_wars_aggressor_country
 			}
 		}
-		if = {
-			limit = { has_journal_entry = je_warlord_china }
-			chi_add_1_fragile_unity = yes
-		}
 		hidden_effect = { add_banned_goods = g:opium }
 	}
 
@@ -474,11 +466,6 @@ opium_wars.4 = {
 					save_scope_as = treaty_port_state
 				}
 			}
-		}
-		if = {
-			limit = { has_journal_entry = je_warlord_china }
-			set_variable = lost_opium_wars
-			chi_remove_1_fragile_unity = yes
 		}
 	}
 

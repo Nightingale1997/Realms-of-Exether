@@ -1,78 +1,78 @@
-﻿wandcarving = {
-
-	era = era_1
-	texture = "gfx/interface/icons/invention_icons/gunsmithing.dds"
-	category = military
-	
-	unlocking_technologies = {
-		standing_army
-	}
-	
-	ai_weight = {
-		value = 2 # Important tech in general
-	}
-}
-
-siege_golems = {
-
-	era = era_1
-	texture = "gfx/interface/icons/invention_icons/gunsmithing.dds"
-	category = military
-	
-	unlocking_technologies = {
-		wandcarving
-	}
-	
-	ai_weight = {
-		value = 2 # Important tech in general
-	}
-}
-
-battlemages = {
-
-	era = era_1
-	texture = "gfx/interface/icons/invention_icons/gunsmithing.dds"
-	category = military
-	
-	unlocking_technologies = {
-		wandcarving
-	}
-	
-	ai_weight = {
-		value = 1
-	}
-}
-
-necromancers = {
-
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/gunsmithing.dds"
-	category = military
-	
-	unlocking_technologies = {
-		general_staff
-		triage
-	}
-	
-	ai_weight = {
-		value = 1
-	}
-}
-
-wishstone_lining = {
-
-	era = era_2
-	texture = "gfx/interface/icons/invention_icons/gunsmithing.dds"
-	category = military
-	
-	unlocking_technologies = {
-		wandcarving
-	}
-	
-	ai_weight = {
-		value = 1
-	}
-}
+﻿#wandcarving = {
+#
+#	era = era_1
+#	texture = "gfx/interface/icons/invention_icons/gunsmithing.dds"
+#	category = military
+#	
+#	unlocking_technologies = {
+#		standing_army
+#	}
+#	
+#	ai_weight = {
+#		value = 2 # Important tech in general
+#	}
+#}
+#
+#siege_golems = {
+#
+#	era = era_1
+#	texture = "gfx/interface/icons/invention_icons/gunsmithing.dds"
+#	category = military
+#	
+#	unlocking_technologies = {
+#		wandcarving
+#	}
+#	
+#	ai_weight = {
+#		value = 2 # Important tech in general
+#	}
+#}
+#
+#battlemages = {
+#
+#	era = era_1
+#	texture = "gfx/interface/icons/invention_icons/gunsmithing.dds"
+#	category = military
+#	
+#	unlocking_technologies = {
+#		wandcarving
+#	}
+#	
+#	ai_weight = {
+#		value = 1
+#	}
+#}
+#
+#necromancers = {
+#
+#	era = era_3
+#	texture = "gfx/interface/icons/invention_icons/gunsmithing.dds"
+#	category = military
+#	
+#	unlocking_technologies = {
+#		general_staff
+#		triage
+#	}
+#	
+#	ai_weight = {
+#		value = 1
+#	}
+#}
+#
+#wishstone_lining = {
+#
+#	era = era_2
+#	texture = "gfx/interface/icons/invention_icons/gunsmithing.dds"
+#	category = military
+#	
+#	unlocking_technologies = {
+#		wandcarving
+#	}
+#	
+#	ai_weight = {
+#		value = 1
+#	}
+#}
 
 airshipyards = {
 	era = era_2

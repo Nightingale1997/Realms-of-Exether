@@ -1,6 +1,6 @@
 ﻿NGame = {
-	START_DATE = "1178.1.1" 
-	END_DATE = "1278.1.1" 
+	START_DATE = "1178.1.1"
+	END_DATE = "1278.1.1"
 	SAVE_VERSION = 0
 	MP_LAG_TICKS_BOUNDS = 28 # Host will advance up to a week ahead of players ( 7 * 4 )
 	DEAD_OBJ_UNDESTROYED_DAYS = 22	# number of days "killed"/removed objects will persist in memory before ultimately destroyed as they are referenced by events etc. Needs to be bigger than MESSAGE_FEED_NUMBER_OF_DAYS_SHOWN in order to not risk notifications regarding dead people etc returning null_objs.
@@ -1441,9 +1441,9 @@ NTravelNetwork = {
 	FLEET_CONNECTION_DOCKING_COST = 10				# Fixed docking/undocking cost for going from a harbor node to a port node (overrides docking connection length)
 	FLEET_CONNECTION_STRAIT_CROSSING_COST = 100		# Fixed additional cost for crossing a strait connection (unused by fleets)
 
-	DIRECT_CONNECTION_NODE_MAX_NODES = 2			# Only search the closest X travel nodes for direct line map travel
-	DIRECT_CONNECTION_NODE_SEARCH_DISTANCE = 10	# Default distance allowed to pathfind in a direct line from a (start/target) map point to a travel node (if no valid are found, it is expanded)
-	DIRECT_CONNECTION_MAP_MAX_DISTANCE = 2 		# Maximum distance allowed to pathfind in a direct line between start and target map points directly
+	DIRECT_CONNECTION_NODE_MAX_NODES = 10			# Only search the closest X travel nodes for direct line map travel
+	DIRECT_CONNECTION_NODE_SEARCH_DISTANCE = 1200	# Default distance allowed to pathfind in a direct line from a (start/target) map point to a travel node (if no valid are found, it is expanded)
+	DIRECT_CONNECTION_MAP_MAX_DISTANCE = 200 		# Maximum distance allowed to pathfind in a direct line between start and target map points directly
 
 	STRAIT_CROSSING_NODE_CREATION_DISTANCE = 5		# Minimum distance between travel nodes, when considering to insert a new travel node for strait-connection
 

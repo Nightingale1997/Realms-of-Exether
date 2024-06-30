@@ -123,7 +123,7 @@
                 add = 1000
                 scope:character ?= {
                     culture = {
-                        has_discrimination_trait = elf_heritage
+                        has_discrimination_trait = qiin_culture_group
                     }
                 }
                 agitator_character_trigger = yes
@@ -257,8 +257,28 @@
                 has_dlc_feature = ep1_cosmetics
 
                 scope:character ?= {
-                    always = no
-                    #has_template = PER_reza_pahlavi
+                    culture = {
+                        OR = {
+                            has_discrimination_trait = gavkhani_culture_group
+                            has_discrimination_trait = orc_heritage
+                        }
+                     
+                    }
+                    agitator_character_trigger = no
+                    OR = {
+                        scope:character = {
+                            has_role = general
+                            is_ruler = no
+                        }
+                        AND = {
+                            armed_forces_clothes_trigger = yes
+                            politician_clothes_trigger = yes
+                        }
+                        officers_clothes_pop_trigger = yes
+                    }  
+                    owner ?= {
+                        has_technology_researched = bolt_action_rifles
+                    }
                 }
             }
         }
@@ -282,10 +302,24 @@
                 has_dlc_feature = ep1_cosmetics
 
                 scope:character ?= {
-                    age > 12
-                    always = no
-                    #has_template = per_nasir_al_din_qajar_template
-                    is_ruler = yes
+                    culture = cu:vozi
+                        OR = {
+                            AND = {
+                                is_ruler = yes
+                                home_country ?= {
+                                    has_law = law_type:law_monarchy
+                                }
+                            }
+                            AND = {
+                                is_ruler = yes
+                                 is_interest_group_type = ig_armed_forces
+                            }
+                            AND = {
+                                has_role = agitator
+                                is_interest_group_type = ig_armed_forces
+                            }
+                        }
+                        age > define:NCharacters|ADULT_AGE
                 }
             }
         }
@@ -721,10 +755,10 @@
 
                 scope:pop ?= {
                     culture = {
-                        has_discrimination_trait = european_heritage
+                        has_discrimination_trait = human_heritage
                     }
                     owner = {
-                        c:GBR ?= this
+                        c:DUM ?= this
                     }
                 }
                 OR = {
@@ -732,7 +766,7 @@
                     officers_clothes_pop_trigger = yes
                 }
 
-                c:GBR ?= {
+                c:DUM ?= {
                     NOT = { has_technology_researched = repeaters }
                 }
             }
@@ -755,10 +789,10 @@
 
                 scope:pop ?= {
                     culture = {
-                        has_discrimination_trait = european_heritage
+                        has_discrimination_trait = human_heritage
                     }
                     owner = {
-                        c:GBR ?= this
+                        c:DUM ?= this
                     }
                 }
                 OR = {
@@ -766,7 +800,7 @@
                     officers_clothes_pop_trigger = yes
                 }
 
-                c:GBR ?= {
+                c:DUM ?= {
                     has_technology_researched = repeaters
                 }
             }
@@ -792,7 +826,7 @@
                 british_empire_clothes_pop_trigger = yes
                 officers_clothes_pop_trigger = yes
 
-                c:GBR ?= {
+                c:DUM ?= {
                     has_technology_researched = bolt_action_rifles
                 }
             }
@@ -811,7 +845,7 @@
                     has_role = general
                 }
 
-                c:GBR ?= {
+                c:DUM ?= {
                     has_technology_researched = bolt_action_rifles
                 }
             }
@@ -917,7 +951,9 @@
                 OR = {
                     AND = {
                         scope:character ?= {
-                            culture = cu:jazamandroso
+                            culture = {
+                                has_discrimination_trait = khussite_culture_group
+                            }
                         }
                         OR = {
                             scope:character = {
@@ -935,7 +971,9 @@
                     }
                     AND = {
                         scope:pop ?= {
-                            culture = cu:jazamandroso
+                            culture = {
+                                has_discrimination_trait = khussite_culture_group
+                            }
                         }
                         OR = {
                             soldier_clothes_pop_trigger = yes
@@ -1495,10 +1533,7 @@
                 add = 100
                 scope:character ?= {
                     culture = {
-                        OR = {
-                            THIS = cu:anwarthi
-                            THIS = cu:xhurlob
-                        }
+                        has_discrimination_trait = saltwaste_survivor_culture_group
                        
                     }
                 }
@@ -1598,6 +1633,24 @@
                     }
                 }
       
+            }
+        }
+    }
+
+    chinese_imperial_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = chinese_imperial_headgear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+               add = 100
+               chinese_imperial_clothes_trigger = yes
             }
         }
     }
@@ -2078,8 +2131,7 @@
                     scope:pop ?= {
                         is_pop_type = aristocrats
                         culture = {
-                            has_discrimination_trait = iranian_turanian_culture_group
-                            has_discrimination_trait = middle_eastern_heritage
+                            has_discrimination_trait = new_khussite_culture_group
                         }
                     }
                     scope:character ?= {
@@ -2093,8 +2145,7 @@
                             }
                         }
                         culture = {
-                            has_discrimination_trait = iranian_turanian_culture_group
-                            has_discrimination_trait = middle_eastern_heritage
+                            has_discrimination_trait = new_khussite_culture_group
                         }
                     }
                 }
@@ -2121,7 +2172,7 @@
                 scope:character ?= {
                     is_ruler = yes
                     owner ?= {
-                        c:PER ?= this
+                        c:OAZ ?= this
                         has_law = law_type:law_monarchy
                     }
                 }
@@ -2137,7 +2188,7 @@
 
                 scope:pop ?= {
                     owner ?= {
-                        c:PER ?= this
+                        c:OAZ ?= this
                     }
                     OR = {
                         is_pop_type = soldiers
@@ -2154,15 +2205,15 @@
 
                 has_dlc_feature = ep1_cosmetics
 
-                c:PER ?= {
+                c:OAZ ?= {
                     NOT = { has_technology_researched = bolt_action_rifles }
                 }
 
                 scope:character ?= {
                     OR = {
                         AND = {
-                            exists = c:PER
-                            home_country ?= c:PER
+                            exists = c:OAZ
+                            home_country ?= c:OAZ
                         } 
                     }
                     is_ruler = no
@@ -2198,8 +2249,7 @@
                     has_role = agitator
                     is_ruler = no
                     culture = {
-                        has_discrimination_trait = iranian_turanian_culture_group
-                        has_discrimination_trait = middle_eastern_heritage
+                        has_discrimination_trait = new_khussite_culture_group
                     }
                 }
             }
@@ -2227,13 +2277,11 @@
                     owner ?= {
                         has_law = law_type:law_monarchy
                         OR = {
-                            c:AFG ?= this
-                            can_form_nation = AFG
+                            c:WAQ ?= this
                         }
                     }
                     culture = {
-                        has_discrimination_trait = iranian_turanian_culture_group
-                        has_discrimination_trait = central_asian_heritage
+                        has_discrimination_trait = qiin_culture_group
                     }
                 }
             }
@@ -2255,9 +2303,7 @@
                 add = 10000
                 scope:character ?= {
                     age > 12
-                    culture = {
-                        has_discrimination_trait = caucasus_group
-                    }
+                    culture = cu:yanger
                 }
                 OR = {
                     scope:character ?= {
@@ -2278,58 +2324,11 @@
                 scope:pop ?= {
                     OR = {
                         AND = {
-                            culture = {
-                                has_discrimination_trait = caucasus_group
-                            }
+                            culture = cu:yanger
                             OR = {
                                 is_pop_type = soldiers
                                 is_pop_type = officers
                                 is_pop_type = farmers
-                            }
-                        }
-                        AND = {
-                            culture = {
-                                has_discrimination_trait = east_slavic
-                            }
-                            state = {
-                                OR = {
-                                    state_region = s:STATE_KUBAN
-                                    state_region = s:STATE_STAVROPOL
-                                    state_region = s:STATE_DAGESTAN
-                                    state_region = s:STATE_NORTH_CAUCASUS
-                                    state_region = s:STATE_ROSTOV
-                                    state_region = s:STATE_KALMYKIA
-                                    state_region = s:STATE_ASTRAKHAN
-                                }
-                            }
-                            OR = {
-                                is_pop_type = soldiers
-                                is_pop_type = officers
-                                is_pop_type = farmers
-                            }
-                        }
-                    }
-                }
-            }
-            modifier = {
-                add = 20000
-                scope:character ?= {
-                    age > 12
-                    culture = {
-                        has_discrimination_trait = east_slavic
-                    }
-                    owner ?= {
-                        c:RUS ?= this
-                    }
-                    is_ruler = no
-                    is_heir = no
-                    OR = {
-                        has_trait = bandit
-                        AND = {
-                            has_role = general
-                            OR = {
-                                has_trait = celebrity_commander
-                                has_trait = pillager
                             }
                         }
                     }
@@ -2444,6 +2443,21 @@
                 }
             }
         }
+        weight = {
+            base = 0
+            modifier = {
+                add = 90000
+
+                scope:character ?= {
+                    owner ?= {
+                        c:ARR ?= this
+                        has_law = law_type:law_monarchy
+                    }
+                    is_female = yes
+                    is_ruler = yes
+                }
+            }
+        }
     }
 
     papal_headgear = {
@@ -2459,11 +2473,11 @@
         weight = {
             base = 0
             modifier = {
-                add = 2000
+                add = 20000
                 
                 scope:character ?= {
                     owner ?= {
-                        c:PAP ?= this
+                        c:AUM ?= this
                         has_law = law_type:law_theocracy
                     }
                     is_ruler = yes
