@@ -1636,6 +1636,12 @@ STATE_NIWKA = {
     farm = xABE0EC
     mine = xACE6D4
     port = xAECBB9
+    arable_land = 26
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_logging = 9
+        bg_wishstone_mining = 22
+    }
     naval_exit_id = 3017
 }
 STATE_CZERWIONKA = {
@@ -1651,6 +1657,7 @@ STATE_CZERWIONKA = {
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 9
+        bg_wishstone_mining = 22
     }
     naval_exit_id = 3017
 }
@@ -1687,6 +1694,7 @@ STATE_YGGHAMN = {
     capped_resources = {
         bg_iron_mining = 18
         bg_logging = 11
+        bg_wishstone_mining = 32
     }
     naval_exit_id = 3034
 }
