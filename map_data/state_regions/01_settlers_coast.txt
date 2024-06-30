@@ -1902,22 +1902,5 @@ STATE_SILVERTARGE = {
 }
 
 
-STATE_KORO = {
-    id = 4217
-    subsistence_building = "building_subsistence_farms"
-    provinces = { "x5ED1C9" "x71B2DF" "x74D2E8" "x8394E5" "x8AE9D3" "x8EF2D5" "x95B6D8" "x9A80DE" "xA4E5F8" "xB9F57F" "xBC6CF6" "xC366E9" "xCF64C7" "xD4DE9C" "xF199A3" "xF5F3AD" "xF6E899" "xF7FE85" "xFCAD58" }
-    impassable = { "xcf64c7" "x5ed1c9" "xfcad58" "x8394e5" "x95b6d8" }
-    traits = { "state_trait_crescent_range" }
-    city = x5ED1C9
-    wood = x6BFAD3
-    farm = x71B2DF
-    mine = x74D2E8
-    port = x74EDE0
 
-    capped_resources = {
-        bg_monuments = 1
-    }
-
-    naval_exit_id = 3145
-}
 
