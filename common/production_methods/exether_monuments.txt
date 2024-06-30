@@ -1,0 +1,31 @@
+﻿pm_default_building_dwarf_tunnels = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 50
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_throughput_add = 0.01
+			state_infrastructure_add = 5
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {	
+			goods_output_trinkets_add = 5
+			goods_output_cloudsilver_add = 5
+			goods_output_wood_add = 10
+			goods_output_hardwood_add = 5
+			goods_output_furniture_add = 5
+		}
+		level_scaled = {
+			building_employment_laborers_add = 3000
+			building_employment_clerks_add = 1500
+			building_employment_adventurers_add = 500
+		}
+	}
+}

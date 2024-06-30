@@ -1154,6 +1154,10 @@
   s:STATE_BAZKA = {
 	region_state:BRY={
 		create_building={
+			building="building_dwarf_tunnels"
+			level=1
+		  }
+		create_building={
 			building="building_government_administration"
 			level=2
 			reserves=1

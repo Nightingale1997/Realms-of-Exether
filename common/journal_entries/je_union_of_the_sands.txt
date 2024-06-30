@@ -1,0 +1,132 @@
+﻿je_union_of_the_sands = {
+
+	icon = "gfx/interface/icons/event_icons/event_diplomacy.dds"
+
+	group = je_group_historical_content
+
+	scripted_progress_bar = union_of_the_sands_progress_bar
+
+	on_weekly_pulse = {
+		effect = {
+			set_global_variable = {
+				name = yavira_gdp
+				value = c:DRO.gdp
+			}
+			set_global_variable = {
+				name = vozmead_gdp
+				value = c:VOZ.gdp
+			}
+		}
+	}
+
+	is_shown_when_inactive = {
+
+
+	exists = c:DRO
+	exists = c:VOZ
+	OR = {
+		root = c:DRO
+		root = c:VOZ
+	}
+	
+
+	}
+
+	can_deactivate = yes
+	
+	possible = {
+		c:DRO = {
+			has_law = law_type:law_monarchy
+		}
+		c:VOZ = {
+			has_law = law_type:law_monarchy
+		}
+		OR = {
+			AND = {
+				exists = c:DRO
+				root = c:DRO
+				exists = c:VOZ
+				c:VOZ = { 
+					relations:root > relations_threshold:cordial 
+				}
+			}
+			AND = {
+				exists = c:VOZ
+				root = c:VOZ
+				exists = c:DRO
+				c:DRO = { 
+					relations:root > relations_threshold:cordial 
+				}
+			}
+		}
+
+		OR = {
+			AND = {
+				c:DRO = {
+					ruler = {
+						is_female = yes
+					}
+				}
+				c:VOZ = {
+					ruler = {
+						is_female = no
+					}
+				}
+			}
+			AND = {
+				c:DRO = {
+					ruler = {
+						is_female = no
+					}
+				}
+				c:VOZ = {
+					ruler = {
+						is_female = yes
+					}
+				}
+			}
+		}
+
+	}
+
+	status_desc = {
+
+	}
+
+
+
+	should_be_pinned_by_default = yes
+	
+	weight = 2000
+
+	timeout = 1826
+
+	# effect which is executed when journal entry is timed out
+	on_timeout = {
+		if = {
+			limit = {
+				exists = c:DRO
+				c:DRO.gdp >= c:VOZ.gdp
+			}
+			c:DRO={
+				create_diplomatic_pact = {
+					country = c:VOZ
+					type = personal_union
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = c:VOZ
+				root = c:VOZ
+				root.VOZ > c:DRO.gdp
+			}
+			c:VOZ={
+				create_diplomatic_pact = {
+					country = c:DRO
+					type = personal_union
+				}
+			}
+		}
+	}
+}
