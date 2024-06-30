@@ -523,13 +523,13 @@ STATE_MIZPIRIKA = {
 STATE_OLABEGI = {
     id = 4652
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x54B1F2" "x799CFB" "xAAFA77" "xB5BCC3" "xB8B193" "xCA4FE8" "xD4EBA5" "xD4F984" "xD9BF66" "xDBC2B3" "xDEDD4C" "xE0B06A" "xE2C3D7" "xF0DD2E" "xF4E082" "xFE95C1" }
+    provinces = { "x799CFB" "xB5BCC3" "xCA4FE8" "xD4EBA5" "xD4F984" "xD9BF66" "xDEDD4C" "xE0B06A" "xE2C3D7" "xF4E082" "xFE95C1" }
     city = x48EEC6
     wood = x5DB1EB
     farm = x689BFC
     mine = x6EC0E0
     port = x799CFB
-    arable_land = 40
+    arable_land = 32
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_dye_plantations" "bg_sugar_plantations" "bg_silk_plantations" }
     capped_resources = {
         bg_sulfur_mining = 22
@@ -538,7 +538,7 @@ STATE_OLABEGI = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 60
+        undiscovered_amount = 42
     }
     naval_exit_id = 3059
 }
@@ -1011,16 +1011,17 @@ STATE_ARITZA = {
     #airship xBFE8F4
     id = 4674
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x5DF8CD" "x95FCA5" "x9DCBE1" "xA1BAC5" "xBFE8F4" "xC996D3" "xCDA697" "xD270D7" "xD4F977" "xD6F472" "xDBED37" "xE24DD6" "xEBA38D" "xF6EB25" "xFA4FF1" }
+    provinces = { "x54B1F2" "x5DF8CD" "x95FCA5" "x9DCBE1" "xA1BAC5" "xAAFA77" "xB8B193" "xBFE8F4" "xC996D3" "xCDA697" "xD270D7" "xD4F977" "xD6F472" "xDBC2B3" "xDBED37" "xE24DD6" "xEBA38D" "xF0DD2E" "xF6EB25" "xFA4FF1" }
     city = x5DF8CD
     wood = x95FCA5
     farm = x9DCBE1
     mine = xA1BAC5
     port = xA3F0D3
-    arable_land = 36
+    arable_land = 48
     arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
     capped_resources = {
-        bg_logging = 36
+        bg_logging = 40
+        bg_sulfur_mining = 4
     }
     resource = {
         type = "bg_rubber"
@@ -1028,7 +1029,7 @@ STATE_ARITZA = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 5
+        undiscovered_amount = 35
     }
     naval_exit_id = 3063
 }
@@ -1307,6 +1308,7 @@ STATE_BAZKA = {
         bg_iron_mining = 36
         bg_sulfur_mining = 32
         bg_logging = 24
+        bg_monuments = 1
     }
     naval_exit_id = 3064
 }

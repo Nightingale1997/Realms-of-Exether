@@ -120,7 +120,7 @@ widget = {
 		
 					### no supply
 					button = {
-						visible = "[ Not(SeaNodeMarker.HasActiveSupplyNetwork)]"
+						visible = "[Not(SeaNodeMarker.HasActiveSupplyNetwork)]"
 						onclick = "[SeaNodeMarker.SelectClick]"
 						texture = "gfx/interface/map_markers/sea_node.dds"
 						gfxtype = framedbuttongfx
@@ -245,7 +245,7 @@ widget = {
 		
 					### no supply
 					button = {
-						visible = "[ Not(SeaNodeMarker.HasActiveSupplyNetwork)]"
+						visible = "[Not(SeaNodeMarker.HasActiveSupplyNetwork)]"
 						onclick = "[SeaNodeMarker.SelectClick]"
 						texture = "gfx/interface/map_markers/sky_node.dds"
 						gfxtype = buttongfx
@@ -299,7 +299,7 @@ widget = {
 		
 					### no supply
 					button = {
-						visible = "[ Not(SeaNodeMarker.HasActiveSupplyNetwork)]"
+						visible = "[Not(SeaNodeMarker.HasActiveSupplyNetwork)]"
 						onclick = "[SeaNodeMarker.SelectClick]"
 						texture = "gfx/interface/map_markers/sea_node.dds"
 						gfxtype = buttongfx
