@@ -69,11 +69,13 @@ TLA = {
 	possible = {
 		OR = {
 			country_has_primary_culture = cu:west_thalorian
+			country_has_primary_culture = cu:central_thalorian
 			country_has_primary_culture = cu:lake_thalorian
 		}	
 		any_country = {
 			OR = {
 				country_has_primary_culture = cu:west_thalorian
+				country_has_primary_culture = cu:central_thalorian
 				country_has_primary_culture = cu:lake_thalorian
 			}	
 			has_technology_researched = nationalism	

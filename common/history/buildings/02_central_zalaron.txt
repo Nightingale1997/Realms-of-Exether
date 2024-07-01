@@ -294,6 +294,12 @@
 				activate_production_methods={ "pm_simple_farming"  "pm_tools_disabled" "pm_citrus_orchards" }
 			}
 			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_basic_port" }
+			}
+			create_building={
 				building="building_livestock_ranch"
 				level=1
 				reserves=1
@@ -909,6 +915,12 @@
 				activate_production_methods={ "pm_no_organization" }
 			}
 			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_basic_port" }
+			}
+			create_building={
 				building="building_fishing_wharf"
 				level=1
 				reserves=1
@@ -946,6 +958,12 @@
 				building="building_government_administration"
 				reserves=1
 				activate_production_methods={ "pm_simple_organization" }
+			}
+			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_basic_port" }
 			}
 			create_building={
 				building="building_cotton_plantation"
@@ -1098,6 +1116,12 @@
 				activate_production_methods={ "pm_simple_organization" }
 			}
 			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_basic_port" }
+			}
+			create_building={
 				building="building_cotton_plantation"
 				level=1
 				reserves=1
@@ -1162,12 +1186,221 @@
 
 	}
 		
-	s:STATE_CAM_CLOCHRAN = {
-
+	s:STATE_LILLESO = {
+		region_state:MNN = {
+			create_building = {
+				building="building_textile_mills"
+				add_ownership={
+					country={
+						country="c:MNN"
+						levels=3
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+				}
+			}
+			create_building = {
+				building="building_logging_camp"
+				add_ownership={
+					country={
+						country="c:MNN"
+						levels=4
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills" "pm_hardwood"
+				}
+			}
+			create_building = {
+				building="building_livestock_ranch"
+				add_ownership={
+					country={
+						country="c:MNN"
+						levels=1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+				}
+			}
+			create_building = {
+				building="building_food_industry"
+				add_ownership={
+					country={
+						country="c:MNN"
+						levels=2
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_pot_stills"
+				}
+			}
+			create_building = {
+				building="building_arms_industry"
+				add_ownership={
+					country={
+						country="c:MNN"
+						levels=1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+				}
+			}
+			create_building = {
+				building="building_paper_mills"
+				add_ownership={
+					country={
+						country="c:MNN"
+						levels=1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+				}
+			}
+		}
 	}
 		
-	s:STATE_ZEPHYRSTILL = {
+	s:STATE_KLIPPEBJERG = {
+		region_state:MNN = {
+			create_building = {
+				building="building_iron_mine"
+				add_ownership={
+					country={
+						country="c:MNN"
+						levels=3
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+				}
+			}
+			create_building = {
+				building="building_government_administration"
+				add_ownership={
+					country={
+						country="c:MNN"
+						levels=5
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+				}
+			}
+			create_building = {
+				building="building_logging_camp"
+				add_ownership={
+					country={
+						country="c:MNN"
+						levels=1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills"
+				}
+			}
+			create_building = {
+				building="building_tooling_workshops"
+				add_ownership={
+					country={
+						country="c:MNN"
+						levels=1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_pig_iron"
+				}
+			}
+			create_building = {
+				building="building_livestock_ranch"
+				add_ownership={
+					country={
+						country="c:MNN"
+						levels=2
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+				}
+			}
+		}
+	}
 
+	s:STATE_HOJLAND = {
+		region_state:MNN = {
+			create_building = {
+				building="building_iron_mine"
+				add_ownership={
+					country={
+						country="c:MNN"
+						levels=2
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+				}
+			}
+			create_building = {
+				building="building_livestock_ranch"
+				add_ownership={
+					country={
+						country="c:MNN"
+						levels=5
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+				}
+			}
+		}
+	}
+
+	s:STATE_BJERGHOLM = {
+		region_state:MNN = {
+			create_building = {
+				building="building_iron_mine"
+				add_ownership={
+					country={
+						country="c:MNN"
+						levels=4
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+				}
+			}
+			create_building = {
+				building="building_tooling_workshops"
+				add_ownership={
+					country={
+						country="c:MNN"
+						levels=2
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_pig_iron"
+				}
+			}
+			create_building = {
+				building="building_livestock_ranch"
+				add_ownership={
+					country={
+						country="c:MNN"
+						levels=3
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+				}
+			}
+		}
 	}
 		
 	s:STATE_EISENMORA = {
@@ -2811,6 +3044,12 @@
 				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
 			}
 			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_basic_port" }
+			}
+			create_building={
 				building="building_construction_sector"
 				level=1
 				reserves=1
@@ -3903,8 +4142,84 @@
 
 	}
 		
-	s:STATE_SUKONCO = {
-
+	s:STATE_SLETTEJUNGEL = {
+		region_state:MNN={
+			create_building = {
+				building="building_logging_camp"
+				add_ownership={
+					country={
+						country="c:MNN"
+						levels=3
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_saw_mills"
+				}
+			}
+			create_building = {
+				building="building_livestock_ranch"
+				add_ownership={
+					country={
+						country="c:MNN"
+						levels=4
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+				}
+			}
+			create_building = {
+				building="building_wheat_farm"
+				add_ownership={
+					country={
+						country="c:MNN"
+						levels=6
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_citrus_orchards"
+				}
+			}
+			create_building = {
+				building="building_furniture_manufacturies"
+				add_ownership={
+					country={
+						country="c:MNN"
+						levels=1
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+				}
+			}
+			create_building = {
+				building="building_tooling_workshops"
+				add_ownership={
+					country={
+						country="c:MNN"
+						levels=2
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+					"pm_pig_iron"
+				}
+			}
+			create_building = {
+				building="building_iron_mine"
+				add_ownership={
+					country={
+						country="c:MNN"
+						levels=2
+					}
+				}
+				reserves = 1
+				activate_production_methods = {
+				}
+			}
+		}
 	}
 		
 	s:STATE_INAMGI = {
