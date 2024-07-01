@@ -1,5 +1,5 @@
 ﻿MILITARY_FORMATIONS = {
-	c:DTH = {
+	c:DTH ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_tokalivar
@@ -49,7 +49,7 @@
 			transfer_to_formation = scope:dth_fleet
 		}
 	}
-	c:EKA = {
+	c:EKA ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_tokalivar
@@ -110,7 +110,7 @@
 			transfer_to_formation = scope:eka_fleet
 		}
 	}
-	c:ZIN = {
+	c:ZIN ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_tokalivar

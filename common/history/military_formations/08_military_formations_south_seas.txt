@@ -1,5 +1,5 @@
 ﻿MILITARY_FORMATIONS = {
-	c:PEL = {
+	c:PEL ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_vindon_narrows
@@ -33,7 +33,7 @@
 			transfer_to_formation = scope:pel_army
 		}
 	}
-	c:LEM = {
+	c:LEM ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_vindon_narrows
@@ -88,7 +88,7 @@
 			transfer_to_formation = scope:lem_fleet
 		}
 	}
-	c:COC = {
+	c:COC ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_lotus_isles
@@ -145,7 +145,7 @@
 			transfer_to_formation = scope:coc_fleet
 		}
 	}
-	c:XOC = {
+	c:XOC ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_sanbang

@@ -1,5 +1,5 @@
 ﻿MILITARY_FORMATIONS = {
-	c:VAR = {
+	c:VAR ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_south_toftir
@@ -60,7 +60,7 @@
 			transfer_to_formation = scope:var_fleet
 		}
 	}
-	c:ORO = {
+	c:ORO ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_exiles_burden
@@ -109,7 +109,7 @@
 			transfer_to_formation = scope:oro_fleet
 		}
 	}
-	c:NRA = {
+	c:NRA ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_exiles_burden
@@ -158,7 +158,7 @@
 			transfer_to_formation = scope:nra_fleet
 		}
 	}
-	c:KVA = {
+	c:KVA ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_amethyst_archipelago
@@ -201,7 +201,7 @@
 			transfer_to_formation = scope:kva_fleet
 		}
 	}
-	c:QAR = {
+	c:QAR ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_thawed_lands
@@ -244,7 +244,7 @@
 			transfer_to_formation = scope:qar_fleet
 		}
 	}
-	c:TPK = {
+	c:TPK ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_thawed_lands
@@ -267,7 +267,7 @@
 			transfer_to_formation = scope:tpk_army
 		}
 	}
-	c:DIS = {
+	c:DIS ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_west_dragon_isles
@@ -542,7 +542,7 @@
 			transfer_to_formation = scope:dis_fleet
 		}
 	}
-	c:IMR = {
+	c:IMR ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_west_dragon_isles
@@ -565,7 +565,7 @@
 			transfer_to_formation = scope:imr_army
 		}
 	}
-	c:MVI = {
+	c:MVI ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_amethyst_archipelago
@@ -588,7 +588,7 @@
 			transfer_to_formation = scope:imr_army
 		}
 	}
-	c:TKR = {
+	c:TKR ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_amethyst_archipelago
@@ -611,7 +611,7 @@
 			transfer_to_formation = scope:imr_army
 		}
 	}
-	c:RKO = {
+	c:RKO ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_west_dragon_isles

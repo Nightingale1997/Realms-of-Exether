@@ -1,5 +1,5 @@
 ﻿MILITARY_FORMATIONS = {
-	c:THK = {
+	c:THK ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_embervein_arroyo
@@ -22,7 +22,7 @@
 			transfer_to_formation = scope:thk_army
 		}
 	}
-	c:TSH = {
+	c:TSH ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_embervein_arroyo
@@ -50,7 +50,7 @@
 			transfer_to_formation = scope:tsh_army
 		}
 	}
-	c:HOZ = {
+	c:HOZ ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_rust_gorge
@@ -78,7 +78,7 @@
 			transfer_to_formation = scope:hoz_army
 		}
 	}
-	c:KHD = {
+	c:KHD ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_rust_gorge
@@ -111,7 +111,7 @@
 			transfer_to_formation = scope:khd_army
 		}
 	}
-	c:RUX = {
+	c:RUX ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_salt_wastes
@@ -149,7 +149,7 @@
 			transfer_to_formation = scope:rux_army
 		}
 	}
-	c:BLD = {
+	c:BLD ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_salt_wastes
@@ -182,7 +182,7 @@
 			transfer_to_formation = scope:bld_army
 		}
 	}
-	c:RSE = {
+	c:RSE ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_salt_wastes
@@ -215,7 +215,7 @@
 			transfer_to_formation = scope:rse_army
 		}
 	}
-	c:DRI = {
+	c:DRI ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_gnomehome
@@ -239,7 +239,7 @@
 			transfer_to_formation = scope:dri_army
 		}
 	}
-	c:RAV = {
+	c:RAV ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_ravik
@@ -296,7 +296,7 @@
 			transfer_to_formation = scope:rav_fleet
 		}
 	}
-	c:TLE = {
+	c:TLE ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_hasals_mirror
@@ -325,7 +325,7 @@
 			transfer_to_formation = scope:tle_army
 		}
 	}
-	c:ARD = {
+	c:ARD ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_verdant_shore
@@ -349,7 +349,7 @@
 			transfer_to_formation = scope:ard_army
 		}
 	}
-	c:GRA = {
+	c:GRA ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_old_thaloria
@@ -373,7 +373,7 @@
 			transfer_to_formation = scope:gra_army
 		}
 	}
-	c:DKO = {
+	c:DKO ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_old_thaloria
@@ -397,7 +397,7 @@
 			transfer_to_formation = scope:dko_army
 		}
 	}
-	c:BDT = {
+	c:BDT ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_verdant_shore
@@ -422,7 +422,7 @@
 			transfer_to_formation = scope:bdt_army
 		}
 	}
-	c:DHR = {
+	c:DHR ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_verdant_shore
@@ -452,7 +452,7 @@
 			transfer_to_formation = scope:dhr_army
 		}
 	}
-	c:SBH = {
+	c:SBH ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_old_thaloria
@@ -477,7 +477,7 @@
 			transfer_to_formation = scope:sbh_army
 		}
 	}
-	c:VOR = {
+	c:VOR ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_verdant_shore
@@ -502,7 +502,7 @@
 			transfer_to_formation = scope:vor_army
 		}
 	}
-	c:KVG = {
+	c:KVG ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_verdant_shore
@@ -526,7 +526,7 @@
 			transfer_to_formation = scope:kvg_army
 		}
 	}
-	c:MJE = {
+	c:MJE ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_gavkhan

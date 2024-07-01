@@ -1,6 +1,6 @@
 ﻿MILITARY_FORMATIONS = {
 	#Worlds end and Ravencliff armys and armadas	
-	c:JUR = {
+	c:JUR ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_worlds_end
@@ -62,7 +62,7 @@
 			transfer_to_formation = scope:incinerator_armada_fleet
 		}
 	}
-	c:DOV = {
+	c:DOV ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_central_noricum
@@ -137,7 +137,7 @@
 			transfer_to_formation = scope:dovedalian_fleet
 		}
 	}
-	c:RVC = {
+	c:RVC ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_ravencliff
@@ -192,7 +192,7 @@
 		}
 
 	}
-	c:AUM = {
+	c:AUM ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_central_noricum
@@ -242,7 +242,7 @@
 		}
 
 	}
-	c:ROF = {
+	c:ROF ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_worlds_end
@@ -302,7 +302,7 @@
 		}
 
 	}
-	c:FOX = {
+	c:FOX ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_ravencliff
@@ -362,7 +362,7 @@
 
 	}
 	#Yanger steppe armys and armadas	
-	c:EVR = {
+	c:EVR ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_yanger_steppe
@@ -386,7 +386,7 @@
 		}
 
 	}			
-	c:MBR = {
+	c:MBR ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_yanger_steppe
@@ -427,7 +427,7 @@
 		}
 
 	}
-	c:BIE = {
+	c:BIE ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_yanger_steppe
@@ -478,7 +478,7 @@
 		}
 
 	}
-	c:DRK = {
+	c:DRK ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_yanger_steppe
@@ -521,7 +521,7 @@
 	}	
 	#Coldreach armys and armadas	
 		# I think Srioman doesn't have army or armada, many territory, and only some pops
-	c:ICE = {
+	c:ICE ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_coldreach
@@ -580,7 +580,7 @@
 			}
 		}
 	}
-	c:CAO = {
+	c:CAO ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_coldreach
@@ -604,7 +604,7 @@
 			}
 		}
 	}
-	c:RIS = {
+	c:RIS ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_coldreach
@@ -629,7 +629,7 @@
 		}
 	}
 	#East Everfrost armys and armadas	
-	c:SRN = {
+	c:SRN ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_east_everfrost
@@ -655,7 +655,7 @@
 		}
 
 	}
-	c:CVE = {
+	c:CVE ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_east_everfrost
@@ -691,7 +691,7 @@
 		}
 
 	}
-	c:BRR = {
+	c:BRR ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_east_everfrost
@@ -732,7 +732,7 @@
 		}
 
 	}
-	c:OEX = {
+	c:OEX ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_east_everfrost
@@ -768,7 +768,7 @@
 		}
 
 	}
-	c:BFU = {
+	c:BFU ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_east_everfrost

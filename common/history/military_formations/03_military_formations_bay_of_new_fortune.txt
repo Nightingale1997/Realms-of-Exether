@@ -1,5 +1,5 @@
 ﻿MILITARY_FORMATIONS = {
-	c:PRO = {
+	c:PRO ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_hyena_plains
@@ -22,7 +22,7 @@
 			transfer_to_formation = scope:pro_army
 		}
 	}
-	c:GPK = {
+	c:GPK ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_south_chin_desert
@@ -45,7 +45,7 @@
 			transfer_to_formation = scope:gpk_army
 		}
 	}
-	c:HOR = {
+	c:HOR ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_north_chin_desert

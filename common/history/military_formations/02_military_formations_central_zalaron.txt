@@ -597,7 +597,7 @@
 			transfer_to_formation = scope:lis_fleet
 		}
 	}
-	c:ZUB = {
+	c:ZUB ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_shimmering_coast
@@ -661,7 +661,7 @@
 			transfer_to_formation = scope:zub_fleet
 		}
 	}
-	c:VER = {
+	c:VER ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_shimmering_coast
@@ -710,7 +710,7 @@
 			transfer_to_formation = scope:ver_fleet
 		}
 	}
-	c:SNM = {
+	c:SNM ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_shimmering_coast
@@ -759,7 +759,7 @@
 			transfer_to_formation = scope:snm_fleet
 		}
 	}
-	c:ZHR = {
+	c:ZHR ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_shimmering_coast
@@ -808,7 +808,7 @@
 			transfer_to_formation = scope:zhr_fleet
 		}
 	}
-	c:TIS = {
+	c:TIS ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_shimmering_coast
@@ -862,7 +862,7 @@
 			transfer_to_formation = scope:tis_fleet
 		}
 	}
-	c:OAZ = {
+	c:OAZ ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_shimmering_coast
