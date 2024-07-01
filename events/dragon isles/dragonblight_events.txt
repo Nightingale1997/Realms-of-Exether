@@ -273,19 +273,13 @@ dragonblight.2 = { #outbreaks states receive this event + the other one for 5% t
 			
 				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 			
-				# trigger = {
-				# 	any_trade_route = {
-				# 		OR = {
-				# 			importer.owner = {
-				# 				country_has_primary_culture = cu:kotskarvi
-				# 			}
-				# 			exporter.owner = {
-				# 				country_has_primary_culture = cu:kotskarvi
-				# 			}
-				# 		}
-				# 	}	
-				# }	
-
+				trigger = {
+					any_scope_state = {
+						limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+						}
+				}		
 				immediate = {
 					random_scope_state = {
 						limit = {
@@ -628,6 +622,123 @@ dragonblight.2 = { #outbreaks states receive this event + the other one for 5% t
 			}
 
 
+			dragonblight_pulse.12 = { #landowner or industrialist character gets caught violating dragonblight restrictions throwing birthday party for their mistress
+				type = country_event
+				placement = ROOT
+
+				cooldown = { months = 180 }
+
+				title = dragonblight_pulse.15.t
+				desc = dragonblight_pulse.15.d
+				flavor = dragonblight_pulse.15.f
+			
+				duration = 3
+			
+				event_image = {
+					video = "europenorthamerica_opium_smoker"
+				}
+			
+				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			
+				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+			
+				trigger = {
+					any_scope_state = {
+						limit = {
+							NOT = {
+							has_modifier = modifier_active_dragonblight_outbreak
+							}
+						}
+					}
+					OR = {
+					ig:ig_industrialists =	{
+						ig_clout >= 0.15
+						}
+						ig:ig_landowners =	{
+							ig_clout >= 0.15
+							}
+						}	
+					
+				}
+				immediate = {
+					random_scope_state = {
+						limit = {
+							NOT = {
+							has_modifier = modifier_active_dragonblight_outbreak
+							}
+						}
+						save_scope_as = party_time_state
+					}
+					if = {
+						limit = {
+							ig:ig_industrialists =	{ ig_clout >= 0.15 }
+						}
+						random_scope_character = {
+							limit = {
+								is_interest_group_type = ig_industrialists
+							}
+							save_scope_as = party_time_guy
+							ig:ig_industrialists = { save_scope_as = party_rockers }
+						}	
+					}
+					else = {
+						random_scope_character = {
+							limit = {
+								is_interest_group_type = ig_landowners
+							}
+							save_scope_as = party_time_guy
+							ig:ig_landowners = { save_scope_as = party_rockers }
+						}
+					}
+				}
+				option = {
+					name = dragonblight_pulse.12.a #What would we arrest them for?  Having fun?
+					
+					
+					scope:party_rockers = {
+						add_modifier = {
+							name = defended_birthday_party
+							months = 40
+						}
+					}
+					scope:party_time_state = {
+						add_modifier = modifier_active_dragonblight_outbreak
+					}	
+					}
+
+				option = {
+					name = dragonblight_pulse.12.b #a mild reprimand will be enough
+					default_option = yes
+					
+					scope:party_rockers = {
+						add_modifier = {
+							name = reprimanded_for_birthday_party
+							months = 40
+						}
+					}
+					scope:party_time_state = {
+						add_modifier = wealthy_abusing_disease_restrictions
+						months = 40
+					}	
+				}	
+				
+				option = {
+					name = dragonblight_pulse.12.c #believe it or not, jail
+				
+					hidden_effect = {
+						scope:party_time_guy = {
+							kill_character = yes
+						}
+					}
+					scope:party_rockers = {
+						add_modifier = {
+							name = arrested_for_birthday_party
+							months = 40
+						}
+					}
+				}
+			}
+			
 			dragonblight_pulse.15 = { 
 				type = country_event
 				placement = ROOT
@@ -655,7 +766,7 @@ dragonblight.2 = { #outbreaks states receive this event + the other one for 5% t
 				}	
 
 				option = {
-					name = dragonblight_pulse.11.a
+					name = dragonblight_pulse.15.a
 					default_option = yes
 					
 					ig:ig_industrialists = {
@@ -676,7 +787,7 @@ dragonblight.2 = { #outbreaks states receive this event + the other one for 5% t
 					}
 
 				option = {
-					name = dragonblight_pulse.11.b
+					name = dragonblight_pulse.15.b
 					default_option = yes
 					
 					ig:ig_industrialists = {
@@ -696,7 +807,7 @@ dragonblight.2 = { #outbreaks states receive this event + the other one for 5% t
 					}	
 				}
 				option = {
-					name = dragonblight_pulse.11.c
+					name = dragonblight_pulse.15.c
 					default_option = yes
 					
 					ig:ig_industrialists = {
@@ -725,4 +836,111 @@ dragonblight.2 = { #outbreaks states receive this event + the other one for 5% t
 					}					
 				}
 			}
+
+			dragonblight_pulse.16 = { #sailors are intentionally spending extra time at sea to avoid infection
+				type = country_event
+				placement = ROOT
+
+				cooldown = { months = 60 }
+
+				title = dragonblight_pulse.16.t
+				desc = dragonblight_pulse.16.d
+				flavor = dragonblight_pulse.16.f
+			
+				duration = 3
+			
+				event_image = {
+					video = "europenorthamerica_opium_smoker"
+				}
+			
+				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			
+				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+			
+				trigger = {
+					any_scope_state = {
+								has_modifier = modifier_active_dragonblight_outbreak
+						}
+				}	
+
+				option = {
+					name = dragonblight_pulse.16.a
+					default_option = yes
+					
+					add_modifier = {
+						name = handling_naval_logistics
+						months = 48	
+					}
+				}
+				option = {
+					name = dragonblight_pulse.16.b
+					default_option = yes
+					
+					add_modifier = {
+						name = sailing_in_fear
+						months = 48	
+					}
+				}
+
+			}
+
+			dragonblight_pulse.17 = { #workers are refusing to go to work
+				type = country_event
+				placement = ROOT
+
+				cooldown = { months = 40 }
+
+				title = dragonblight_pulse.17.t
+				desc = dragonblight_pulse.17.d
+				flavor = dragonblight_pulse.17.f
+			
+				duration = 3
+			
+				event_image = {
+					video = "europenorthamerica_opium_smoker"
+				}
+			
+				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			
+				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+			
+				immediate = {
+					random_scope_state = {
+								save_scope_as = workers_stay_home_state
+						}
+				}	
+
+
+				option = {
+					name = dragonblight_pulse.17.a
+					default_option = yes
+
+					add_modifier = {
+						name = forced_back_to_work
+						months = 36	
+						}
+					
+					scope:workers_stay_home_state = {
+					add_modifier = {
+						name = forced_back_to_work_state
+						months = 36	
+						}
+					}
+				}
+				option = {
+					name = dragonblight_pulse.17.b
+					default_option = yes
+					
+
+					scope:workers_stay_home_state = {
+						add_modifier = {
+							name = dragonborn_staying_home
+							months = 36	
+							}
+						}
+				}
+			
+		}
+
+			
 				
