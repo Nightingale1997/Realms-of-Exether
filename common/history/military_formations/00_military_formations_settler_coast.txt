@@ -38,7 +38,7 @@
 			save_scope_as = commanderarr_gen
 		}
 
-		scope:comanderarr_gen = {
+		scope:commanderarr_gen = {
 			transfer_to_formation = scope:secondcorparr
 		}
 
@@ -718,13 +718,13 @@
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_dragoons
-				state_region = s:STATESAINT_MER
+				state_region = s:STATE_SAINT_MER
 				count = 1
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATESAINT_MER
+				state_region = s:STATE_SAINT_MER
 				count = 1
 			}
 			save_scope_as = second_fist

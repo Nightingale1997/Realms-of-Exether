@@ -80,6 +80,22 @@
 			save_scope_as = syria_arm_egy
 		}
 
+		create_character = { 
+		is_general = yes
+		historical = yes
+		culture = cu:kashtarnel
+		interest_group = ig_armed_forces
+		ideology = ideology_royalist
+		hq = region_geyser_plateau
+		commander_rank = commander_rank_2
+		traits = {
+			basic_offensive_planner
+			cruel
+			experienced_colonial_administrator
+		}
+		save_scope_as = ahmad_gen
+	}
+
 		scope:ahmad_gen = {
 			transfer_to_formation = scope:syria_arm_egy
 		}
@@ -89,10 +105,9 @@
 			first_name = Soliman
 			last_name = al-Faransawi
 			historical = yes
-			culture = cu:french
-			religion = sunni
+			culture = cu:kashtarnel
 			age = 48
-			hq = region_anatolia
+			hq = region_geyser_plateau
 			traits = {	
 			}
 			save_scope_as = soliman_gen

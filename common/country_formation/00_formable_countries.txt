@@ -47,23 +47,6 @@ UTS = {
 	ai_will_do = { always = yes }
 }
 
-NTL = {
-	states = { 
-		STATE_NEWBANKS
-		STATE_UPPER_GOLDENLEAF
-		STATE_OVERBURROW
-	}
-
-	required_states_fraction = 1
-
-	ai_will_do = { always = yes }
-
-	possible = {
-		has_technology_researched = nationalism
-	}
-
-}
-
 #Grand Estate use for even bigger state that requires all halflings,
 # but add new halflings culture in arrador to bridge the gap first
 #GES = {

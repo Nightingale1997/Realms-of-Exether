@@ -98,7 +98,9 @@
 		}
 
 		create_character = {
-			template = DOV_alf_cobcroft
+			#template = DOV_alf_cobcroft
+			is_general = yes
+			commander_rank = commander_rank_4
 			save_scope_as = cobcroft_gen
 		}
 
@@ -126,7 +128,9 @@
 		}
 
 		create_character = {
-			template = DOV_stafford_clarke
+			#template = DOV_stafford_clarke
+			is_admiral = yes
+			commander_rank = commander_rank_2
 			save_scope_as = clarke_adm
 		}
 		scope:clarke_adm = {
