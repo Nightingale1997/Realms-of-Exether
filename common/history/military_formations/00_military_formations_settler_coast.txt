@@ -3,7 +3,7 @@
 
 		create_military_formation = {
 			type = army
-			hq_region = sr:region_arrandor
+			hq_region = sr:region_arrador
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_skirmish_infantry
@@ -33,6 +33,7 @@
 		}
 
 		create_character = {
+			is_general = yes
 			commander_rank = commander_rank_4
 			save_scope_as = commanderarr_gen
 		}
@@ -43,7 +44,7 @@
 
 		create_military_formation = {
 			type = army
-			hq_region = sr:region_arrandor
+			hq_region = sr:region_arrador
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_skirmish_infantry
@@ -72,6 +73,7 @@
 		}
 
 		create_character = {
+			is_general = yes
 			commander_rank = commander_rank_3
 			save_scope_as = commanderarr2_gen			
 		}
@@ -82,7 +84,7 @@
 
 		create_military_formation = {
 			type = army
-			hq_region = sr:region_arrandor
+			hq_region = sr:region_arrador
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_skirmish_infantry
@@ -117,7 +119,7 @@
 
 		create_military_formation = {
 			type = fleet
-			hq_region = sr:region_arrandor
+			hq_region = sr:region_arrador
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_man_o_war
@@ -626,7 +628,7 @@
 			first_name = Heino
 			last_name = Angelus
 			historical = yes
-			hq = region_saint_mer
+			hq = sr:region_lagoon_coast
 			commander_rank = commander_rank_3
 			age = 62
 			traits = {
