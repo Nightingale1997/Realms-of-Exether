@@ -2194,6 +2194,12 @@
 			activate_production_methods={ "pm_horizontal_drawer_cabinets" }
 		}
 		create_building={
+			building="building_livestock_ranch"
+			level=2
+			reserves=1
+			activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated"  }
+		}
+		create_building={
 			building="building_furniture_manufacturies"
 			level=1
 			reserves=1
@@ -2332,6 +2338,12 @@
 			level=1
 			reserves=1
 			activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" }
+		}
+		create_building={
+			building="building_livestock_ranch"
+			level=12
+			reserves=1
+			activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated"  }
 		}
 		create_building={
 			building="building_textile_mills"
@@ -3050,6 +3062,18 @@
 
   s:STATE_AZURETHORN = {
 	region_state:AHO={
+		create_building={
+			building="building_port"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_anchorage" }
+	  }
+	  create_building={
+		building="building_livestock_ranch"
+		level=1
+		reserves=1
+		activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated"  }
+	}
 	}
   }
 
