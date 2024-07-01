@@ -322,10 +322,11 @@ pm_oil-based_potions = {
 #pm_super-based_potions  probably a magical base, but something other than godsblood.   Unless????
 
 pm_no_cosmetic_potion_production = {
-
+texture = "gfx/interface/icons/production_method_icons/no_potion_sap.dds"
 }
 
 pm_base_cosmetic_potion_production = {
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
 	building_modifiers = {
 		workforce_scaled = {
 			
@@ -341,7 +342,7 @@ pm_base_cosmetic_potion_production = {
 }
 
 pm_advanced_cosmetic_potion_production = {
-
+texture = "gfx/interface/icons/production_method_icons/increased_potion_sap.dds"
 	unlocking_technologies = {
 		conveyors
 	}
