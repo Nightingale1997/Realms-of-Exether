@@ -41,8 +41,8 @@ on_yearly_pulse = { }
 on_monthly_pulse_country = {
 	events = {
 		communism.8 # Red Army
-		unable_to_enact.1
 		#colonial_administration_events.2 # African Colony Radicals
+
 		# Exile Agitators Events
 		yeet_agitator_events.1
 		yeet_agitator_events.2
@@ -63,13 +63,7 @@ on_monthly_pulse_country = {
 		concord_resolution_events.103
 	}
 	effect = {
-		every_character_in_exile_pool = {
-			limit = {
-				popularity <= 15
-			}
-			kill_character = yes
-		}
-		
+
 		change_global_variable = {
 			name = veil_integrity_var
 			add = var:veil_damage
@@ -152,23 +146,14 @@ on_monthly_pulse_country = {
 				}
 			}
 		}
-	
 
-
-
+		trigger_event = { id = unable_to_enact.1 }
 	}
-
 	on_actions = { # delay ensures events won't fire simultaneously
-	coup_monthly_events
-	#delay = { days = 4 }
-	#garibaldi_monthly_events
-	#delay = { days = 7 }
-	fund_lobbies_monthly_events
-}
-}
-
-on_yearly_pulse_country = { #Krakatoa special pulse
-
+		coup_monthly_events
+		#delay = { days = 7 }
+		fund_lobbies_monthly_events
+	}
 }
 
 on_yearly_pulse_country = {
@@ -226,7 +211,6 @@ on_yearly_pulse_country = {
 			}
 		}
 	}
-
 	on_actions = { # delay ensures events won't fire simultaneously
 		on_yearly_events
 		#delay = { days = 1 }
@@ -240,13 +224,7 @@ on_yearly_pulse_country = {
 		#delay = { days = 34 }
 	}
 }
-
-
-
-
-
 on_half_yearly_pulse_country = {
-
 	on_actions = { # delay ensures events won't fire simultaneously
 		on_half_yearly_events
 		#delay = { days = 4 }
@@ -258,7 +236,6 @@ on_half_yearly_pulse_country = {
 		#delay = { days = 20 }
 		movement_half_yearly_events
 	}
-
 }
 
 on_five_year_pulse_country = {
@@ -362,12 +339,7 @@ on_battle_ended = {}
 # scope:defender = defending commander
 # scope:state = location state
 on_battle_won = {
-	events = {
 
-	}
-	random_events = {
-		80 = 0
-	}
 }
 
 # Root = attacker or defender country
@@ -497,11 +469,6 @@ on_acquired_technology = {
 			}
 		}
 	}
-
-	events = {
-		historical_events.1
-		marx_events.1
-	}
 }
 
 # Root = The applicable country
@@ -518,7 +485,7 @@ on_spreading_technology = {
 # scope:target = Target of the play
 on_diplomatic_play_started = {
 	effect = {
-	
+		#Add unification code here
 	}
 }
 
@@ -541,8 +508,6 @@ on_character_death = {
 				trigger_event = expedition_events.110
 			}
 		}
-
-
 				### Force-generating female rulers if something goes wrong
 				if = {
 					limit = {
@@ -574,7 +539,16 @@ on_character_death = {
 # Root = Character
 on_new_ruler = {
 	effect = {
-		post_notification = new_ruler
+		if = {
+			limit = {
+				owner = {
+					NOT = {
+						has_variable = hide_ruler_change_notification
+					}
+				}
+			}
+			post_notification = new_ruler
+		}
 	}
 }
 
@@ -754,7 +728,6 @@ on_diplomatic_action_subject_increase_own_autonomy = {
 # Root = Diplomatic Action
 on_diplomats_expelled = {
 	effect = {
-
 	}
 }
 
@@ -799,6 +772,7 @@ on_country_released_as_independent = {
 # scope:target = Released Country
 on_country_released_as_own_subject = {
 	effect = {
+
 	}
 }
 
@@ -953,16 +927,6 @@ on_diplo_play_start_third_party = {
 on_diplo_play_back_down = {
 	effect = {
 		post_notification = diplo_play_back_down_notification
-		if = {
-			limit = {
-				scope:notification_target = {
-					is_player = yes
-				}
-				scope:actor = {
-					is_player = no
-				}
-			}
-		}
 	}
 }
 
@@ -1013,8 +977,7 @@ on_diplo_play_subject_released_overlord = {
 # country = Country switched to
 # previous = Country switched from
 on_diplo_play_switch_sides = {
-	effect = {
-	}
+
 }
 
 # Root = Diplomatic Play
@@ -1514,7 +1477,8 @@ on_law_enactment_ended = {
 # enacted. Therefore using the `currently_enacting_law` link will return the
 # null law
 on_law_activated = {
-
+	effect = {
+	}
 }
 
 # Root = Institution
@@ -1566,8 +1530,6 @@ on_revolution_end = {
 # Root = Country
 # scope:target = Uprising country
 on_secession_start = {
-	effect = {
-	}
 }
 
 # Root = Country
@@ -1730,7 +1692,46 @@ on_wargoal_enforced = {
             days = 1825
             value = yes
         }
-	}	
+		if = {
+			limit = {
+				scope:target = {
+					has_journal_entry = je_earn_recognition
+				}
+			}
+			scope:target = {
+				change_variable = {
+					name = recognition_progress_var
+					add = {
+						add = scope:wargoal_impact
+						multiply = -4
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					has_journal_entry = je_earn_recognition
+				}
+				scope:target = {
+					OR = {
+						is_country_type = recognized
+						is_country_type = colonial
+					}
+					country_rank >= rank_value:major_power
+				}
+			}
+			owner = {
+				change_variable = {
+					name = recognition_progress_var
+					add = {
+						add = scope:wargoal_impact
+						multiply = 4
+					}
+				}
+			}
+		}
+	}
 }
 
 # Root = Interest Group
