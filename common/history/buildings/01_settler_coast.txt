@@ -123,12 +123,19 @@
 
   s:STATE_VALSANG = {
 		  region_state:EME={ 
-			    create_building={
-				      building="building_vineyard_plantation"
-				      level=3
-				      reserves=1
-				      activate_production_methods={ "default_building_vineyard_plantation"  }
-			    }
+			create_building={
+				building="building_vineyard_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:SAF"
+						levels=4
+						region="STATE_VALSANG"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_vineyard_plantation"  }
+			}
 			create_building={
 				building="building_wheat_farm"
 				level=5
@@ -145,12 +152,16 @@
   }
   s:STATE_AZURSOL = {
 		  region_state:EME={ 
-			    create_building={
-				      building="building_vineyard_plantation"
-				      level=2
-				      reserves=1
-				      activate_production_methods={ "default_building_vineyard_plantation"  }
-			    }		   
+			create_building={
+				building="building_vineyard_plantation"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:SAF"
+						levels=3
+						region="STATE_AZURSOL"
+					}
+				}   
 			    create_building={
 				      building="building_government_administration"
 				      level=1

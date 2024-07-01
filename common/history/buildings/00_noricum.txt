@@ -40,7 +40,7 @@
 			}
 			create_building={
 				building="building_paper_mills"
-				level=5
+				level=4
 				reserves=1
 				activate_production_methods={ "pm_pulp_pressing" "pm_automation_disabled" }
 			}
@@ -69,10 +69,16 @@
     s:STATE_CALDAMUS = {
       region_state:DUM={
         create_building={
+          building="building_government_administration"
+          level=3
+          reserves=1
+          activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+        }
+        create_building={
           building="building_textile_mills"
           level=3
           reserves=1
-          activate_production_methods={ "pm_dye_workshops" "pm_traditional_looms" "pm_craftsman_sewing" }
+          activate_production_methods={ "pm_dye_workshops" "pm_traditional_looms" "pm_no_luxury_clothes" }
         }
         create_building={
           building="building_fishing_wharf"
@@ -82,13 +88,20 @@
         }
         create_building={
           building="building_rye_farm"
-          level=6
+          add_ownership={
+            building={
+              type="building_manor_house"
+              country="c:DUM"
+              levels=6
+              region="STATE_SERONTAIN"
+            }
+          }  
           reserves=1
           activate_production_methods={  "pm_tools_disabled" "pm_simple_farming" }
         }
         create_building={
           building="building_arms_industry"
-          level=5
+          level=2
           reserves=1
           activate_production_methods={ "pm_muskets" }
         }
@@ -194,7 +207,7 @@
       region_state:DUM={
         create_building={
           building="building_government_administration"
-          level=2
+          level=3
           reserves=1
           activate_production_methods={ "pm_horizontal_drawer_cabinets" }
         }
@@ -275,9 +288,9 @@
         }
         create_building={
           building="building_glassworks"
-          level=6
+          level=4
           reserves=1
-          activate_production_methods={ "pm_leaded_glass" "pm_disabled_ceramics" "pm_manual_glassblowing" }
+          activate_production_methods={ "pm_forest_glass" "pm_disabled_ceramics" "pm_manual_glassblowing" }
         }
         create_building={
           building="building_logging_camp"
@@ -368,7 +381,7 @@
         }
         create_building={
           building="building_iron_mine"
-          level=4
+          level=2
           reserves=1
           activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
         }	
@@ -408,12 +421,6 @@
 
     s:STATE_SLUDGE_COAST = {
       region_state:DUM={
-        create_building={
-          building="building_paper_mills"
-          level=1
-          reserves=1
-          activate_production_methods={ "pm_pulp_pressing" "pm_automation_disabled" }
-        }
         create_building={
           building="building_tooling_workshops"
           level=1
@@ -468,6 +475,14 @@
           reserves=1
           activate_production_methods={ "pm_simple_farming" "pm_tools_disabled"  }
         }
+
+        create_building={
+          building="building_shipyards"
+          level=2
+          reserves=1
+          activate_production_methods={ "pm_basic_shipbuilding" }
+        }
+
         create_building={
           building="building_livestock_ranch"
           level=3
@@ -494,7 +509,7 @@
       region_state:DUM={
         create_building={
           building="building_government_administration"
-          level=3
+          level=7
           reserves=1
           activate_production_methods={ "pm_horizontal_drawer_cabinets" }
         }
@@ -505,16 +520,10 @@
           activate_production_methods={ "pm_pulp_pressing" "pm_automation_disabled" }
         }
         create_building={
-          building="building_glassworks"
-          level=5
-          reserves=1
-          activate_production_methods={ "pm_forest_glass" "pm_manual_glassblowing" "pm_ceramics" }
-        }
-        create_building={
           building="building_textile_mills"
-          level=8
+          level=4
           reserves=1
-          activate_production_methods={ "pm_handsewn_clothes" "pm_traditional_looms" "pm_craftsman_sewing" }
+          activate_production_methods={ "pm_handsewn_clothes" "pm_traditional_looms" "pm_no_luxury_clothes" }
         }
         create_building={
           building="building_barracks"
@@ -604,7 +613,7 @@
 			}				
 			create_building={
 				building="building_arms_industry"
-				level=4
+				level=1
 				reserves=1
 				activate_production_methods={ "pm_muskets" }
 			}
@@ -616,7 +625,7 @@
 			}
 			create_building={
 				building="building_lead_mine"
-				level=4
+				level=1
 				reserves=1
 				activate_production_methods={ "pm_atmospheric_engine_pump_building_lead_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
 			}
