@@ -942,5 +942,273 @@ dragonblight.2 = { #outbreaks states receive this event + the other one for 5% t
 			
 		}
 
+		dragonblight_pulse.18 = { #dragon nimbys mad about a sickhouse
+		type = country_event
+		placement = ROOT
+
+		cooldown = { months = 40 }
+
+		title = dragonblight_pulse.18.t
+		desc = dragonblight_pulse.18.d
+		flavor = dragonblight_pulse.18.f
+	
+		duration = 3
+	
+		event_image = {
+			video = "europenorthamerica_opium_smoker"
+		}
+	
+		on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+		icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	
+		immediate = {
+			random_scope_state = {
+						save_scope_as = not_in_my_backyard
+				}
+		}	
+
+
+		option = {
+			name = dragonblight_pulse.18.a
+			default_option = yes
+
+			add_modifier = {
+				name = managing_hospital_reconstruction
+				months = 36	
+				}
 			
-				
+			scope:not_in_my_backyard = {
+			add_modifier = {
+				name = rebuilding_hospital_network
+				months = 36	
+				}
+			}
+		}
+		option = {
+			name = dragonblight_pulse.18.b
+			default_option = yes
+			
+
+			scope:not_in_my_backyard = {
+				add_modifier = {
+					name = yes_in_your_backyard
+					months = 36	
+					}
+				}
+		}
+		
+		option = {
+			name = dragonblight_pulse.18.c
+			default_option = yes
+			
+
+			scope:not_in_my_backyard = {
+				add_modifier = {
+					name = gave_into_sickhouse_protests
+					months = 36	
+					}
+				}
+		}
+}
+
+dragonblight_pulse.19 = { #dragon nimbys mad about a sickhouse
+		type = country_event
+		placement = ROOT
+
+		cooldown = { months = 40 }
+
+		title = dragonblight_pulse.19.t
+		desc = dragonblight_pulse.19.d
+		flavor = dragonblight_pulse.19.f
+	
+		duration = 3
+	
+		event_image = {
+			video = "europenorthamerica_opium_smoker"
+		}
+	
+		on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+		icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	
+		immediate = {
+			random_scope_state = {
+						save_scope_as = dragon_cultist_state
+				}
+		}	
+
+
+		option = {
+			name = dragonblight_pulse.19.a
+			default_option = yes
+
+			add_modifier = {
+				name = tolerated_conversion_cult
+				months = 36	
+				}
+			
+			scope:dragon_cultist_state = {
+			add_modifier = {
+				name = active_conversion_cult
+				months = 36	
+				}
+			}
+			set_variable = conversion_cult_active
+			
+		}
+		option = {
+			name = dragonblight_pulse.19.b
+			default_option = yes
+			
+			add_modifier = {
+				name = crushed_conversion_cult
+				months = 36	
+				}
+
+			scope:dragon_cultist_state = {
+				add_modifier = {
+					name = crushed_conversion_cult_state
+					months = 36	
+					}
+				}
+		}
+		
+
+}
+			
+dragonblight_pulse.20 = { #dragon nimbys mad about a sickhouse
+		type = country_event
+		placement = ROOT
+
+		cooldown = { months = 40 }
+
+		title = dragonblight_pulse.20.t
+		desc = dragonblight_pulse.20.d
+		flavor = dragonblight_pulse.20.f
+	
+		duration = 3
+	
+		event_image = {
+			video = "europenorthamerica_opium_smoker"
+		}
+	
+		on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+		icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	
+		immediate = {
+			random_interest_group = {
+				save_scope_as = friends_of_the_diseased
+				random_scope_character = {
+					limit = {
+						culture = cu:illvasaari 
+						NOT = { is_ruler = yes }
+					}
+					change_character_culture = cu:kotskarvi
+					save_scope_as = the_diseased_guy
+				}
+			} 
+		}	
+
+
+		option = {
+			name = dragonblight_pulse.20.a #no true dragonborn could ever become a kobold
+
+			scope:friends_of_the_diseased = {
+			add_modifier = {
+				name = scorned_sick_friend
+				months = 36	
+				}
+			}
+			scope:the_diseased_guy = {
+				add_trait = sickly
+			}
+			
+			
+			
+		}
+		option = {
+			name = dragonblight_pulse.20.b #send our regards
+			default_option = yes
+
+			scope:friends_of_the_diseased = {
+				add_modifier = {
+					name = sent_warm_regards
+					months = 36	
+					}
+				}
+		}
+		
+
+}			
+
+dragonblight_pulse.21 = { #dragon nimbys mad about a sickhouse
+		type = country_event
+		placement = ROOT
+
+		cooldown = { months = 25 }
+
+		title = dragonblight_pulse.21.t
+		desc = dragonblight_pulse.21.d
+		flavor = dragonblight_pulse.21.f
+	
+		duration = 3
+	
+		event_image = {
+			video = "europenorthamerica_opium_smoker"
+		}
+	
+		on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+		icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	
+		immediate = {
+			random_scope_state = {
+						save_scope_as = kobold_pogrom_state
+				}
+			scope:kobold_pogrom_state = {
+				kill_population = {
+					value = 0.02
+					culture = cu:kotskarvi
+				   }
+			}
+		}	
+
+
+		option = {
+			name = dragonblight_pulse.21.a #allow the pogroms
+			default_option = yes
+
+			add_modifier = {
+				name = tolerated_kobold_pogroms
+				months = 36	
+				}
+			
+			scope:kobold_pogrom_state = {
+				kill_population = {
+					value = 0.035
+					culture = cu:kotskarvi
+				   }
+			}
+			
+		}
+		option = {
+			name = dragonblight_pulse.21.b #stop the pogroms
+			default_option = yes
+			
+			add_modifier = {
+				name = stopped_kobold_pogroms
+				months = 36	
+				}
+
+			scope:kobold_pogrom_state = {
+				add_radicals_in_state = {
+					value = 0.05
+					strata = poor
+				}
+				}
+		}
+		
+
+}
